@@ -1,0 +1,14 @@
+{
+  "defaultViewMode": "source",
+  "foldHeading": false,
+  "showLineNumber": true,
+  "spellcheck": false,
+  "spellcheckLanguages": null,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "raw",
+  "attachmentFolderPath": "raw/assets",
+  "promptDelete": true,
+  "useMarkdownLinks": false,
+  "newLinkFormat": "shortest",
+  "alwaysUpdateLinks": true
+}
