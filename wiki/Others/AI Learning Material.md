@@ -1,0 +1,11 @@
+如果我要在90天内找到一份20万美元的AI工程师工作，我不会去读学位。 我会精通这10个GitHub仓库。 
+1. awesome-llm-apps 生产级AI指南。RAG、智能体、多模态应用，附完整代码。10.6万+ stars。 仓库 → [https://t.co/oXrD5A8K6a](https://t.co/B5aq9wmdlM) 
+2. LangChain 基础框架。被Klarna、Replit、Elastic及2026年大多数AI创业公司用于生产环境。 仓库 → [https://t.co/alIh6rDDIu](https://t.co/cpBkEpM0Ns) 
+3. LangGraph 驱动生产智能体的编排层。资深AI工程师岗位描述中的必备技能。 仓库 → [https://t.co/bzVBn9uecV](https://t.co/SZeU1nRh1X) 
+4. CrewAI 多智能体协调。财富500强团队首选框架。 仓库 → [https://t.co/0xohE065sD](https://t.co/JEgl4wm0IN) 
+5. Ollama 在自己机器上运行任何开源LLM。学习模型工作原理的最快方式。 仓库 → [https://t.co/gyZhUdzsnZ](https://t.co/R93oWzFPPK) 
+6. awesome-mcp-servers MCP是2026年所有主流AI实验室采用的标准。掌握它让你领先99%的工程师。 仓库 → [https://t.co/ejVOgkRJDX](https://t.co/HQJDbwt8jl)
+7. Qdrant 大规模生产RAG使用的向量数据库。嵌入和语义搜索是AI岗位的必需技能。 仓库 → [https://t.co/ziSSXW2dzZ](https://t.co/uuE41zJJJm) 
+8. AI-Agents-for-Beginners 微软免费12课程，教建立智能体。真实代码、真实练习、真实面试准备。 仓库 → [https://t.co/7dNsDw6bTj](https://t.co/HWjImNPc6f) 
+9. system-design-primer 生产级AI就是系统设计。FAANG工程师用来面试准备的仓库。 仓库 → [https://t.co/AypwqcL1Xz](https://t.co/IA4rXt1A5X) 
+10. awesome-claude-code 这个工具的使用指南，现被FAANG、OpenAI、Anthropic及大多数YC创业公司内部使用。 仓库 → [https://t.co/VhNjDoz7YM](https://t.co/O6Tf9ziSER)

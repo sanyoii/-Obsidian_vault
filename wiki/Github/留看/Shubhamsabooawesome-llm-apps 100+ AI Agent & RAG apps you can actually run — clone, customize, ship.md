@@ -1,0 +1,282 @@
+---
+title: "Shubhamsaboo/awesome-llm-apps: 100+ AI Agent & RAG apps you can actually run — clone, customize, ship."
+source: "https://github.com/Shubhamsaboo/awesome-llm-apps"
+author:
+published:
+created: 2026-05-10
+description: "100+ AI Agent & RAG apps you can actually run — clone, customize, ship. - Shubhamsaboo/awesome-llm-apps"
+tags:
+  - "clippings"
+---
+[![Unwind AI](https://github.com/Shubhamsaboo/awesome-llm-apps/raw/main/docs/banner/unwind_black.png)](http://www.theunwindai.com/)
+
+[Deutsch](https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=de) | [Español](https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=es) | [français](https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=fr) | [日本語](https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=ja) | [한국어](https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=ko) | [Português](https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=pt) | [Русский](https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=ru) | [中文](https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=zh)
+
+---
+
+## 🌟 Awesome LLM Apps
+
+**100+ AI Agent & RAG apps you can actually run — clone, customize, ship.**  
+AI Agents · Multi-agent Teams · MCP Agents · RAG · Voice Agents · Agent Skills · Fine-tuning
+
+**Free step-by-step tutorials on [Unwind AI](https://www.theunwindai.com/)**  
+**Works with Claude · Gemini · OpenAI · xAI · Qwen · Llama**
+
+[🚀 Quick Start](#-quick-start) [📂 Browse Templates](#-featured-ai-projects) [📚 Step-by-Step Tutorials](https://www.theunwindai.com/)
+
+[![Featured on Trendshift](https://camo.githubusercontent.com/0e8bcbdc4ca4a84c6fc958e8105c1ab40642f8c12df371b0af40305180694b10/68747470733a2f2f7472656e6473686966742e696f2f6170692f62616467652f7265706f7369746f726965732f39383736)](https://trendshift.io/repositories/9876)
+
+---
+
+## 💡 Why this exists
+
+You shouldn't have to rebuild the same RAG pipeline, agent loop, or MCP integration from scratch every time you start a new LLM project.
+
+**Awesome LLM Apps is a cookbook of ready-to-run templates** - starter code you can fork, customize, and ship as a production LLM app. Every template here is self-contained with full source code, not collected from elsewhere.
+
+- 🛠️ **Hand-built, not curated** - every template is original work, tested end-to-end before it ships.
+- 🧪 **Runs in 3 commands** - no broken `requirements.txt`, no "figure it out yourself" scaffolding.
+- 🧠 **Covers the modern AI stack** - AI Agents, Multi-agent Teams, MCP Agents, Voice AI Agents, RAG, Agent Skills, Fine-tuning.
+- 🌐 **Provider-agnostic** - switch between Claude, Gemini, GPT, Llama, Qwen, xAI and others with a config change.
+- 📚 **Step-by-step tutorials** - every featured template has a free walkthrough on [Unwind AI](https://www.theunwindai.com/).
+- 💸 **Apache-2.0** - fork it, ship it, sell it. No paywall, no signup, no telemetry.
+
+> ⭐ **If this saves you time, [star the repo](https://github.com/Shubhamsaboo/awesome-llm-apps/stargazers) - that's how the next developer discovers it.**
+
+## 🚀 Quick Start
+
+Run your first agent in **30 seconds**:
+
+```
+git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git
+cd awesome-llm-apps/starter_ai_agents/ai_travel_agent
+pip install -r requirements.txt
+streamlit run travel_agent.py
+```
+
+## 🔥 Featured This Month
+
+| Template | What it does | Stack |
+| --- | --- | --- |
+| [📡 Earnings Call Analyst Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/single_agent_apps/earnings_call_analyst_agent) | YouTube earnings calls become quote-synced analyst cards with ADK, Gemini, filings, and grounded market news | ADK + Gemini |
+| [🛡️ Insurance Claim Live Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/voice_ai_agents/insurance_claim_live_agent_team) | Real-time voice claim intake with Gemini Live and ADK | Voice + ADK |
+| [🏠 Home Renovation Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/ai_home_renovation_agent) | Photo → AI redesign with Nano Banana Pro | Vision + Multi-agent |
+| [♾️ Self-Improving Agent Skills](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/self-improving-agent-skills) | Automatically optimize agent skills using Gemini and ADK | Agent Skills + ADK |
+
+> 📬 [Subscribe on Unwind AI](https://www.theunwindai.com/) to get new template drops + tutorials in your inbox.
+
+## 📑 Table of Contents
+
+**13 categories · Click to expand**
+
+## 📂 Featured AI Projects
+
+### 🌱 Starter AI Agents
+
+*Single-file agents that run with just an API key - a great place to start.*
+
+- [🎙️ AI Blog to Podcast Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/starter_ai_agents/ai_blog_to_podcast_agent)
+- [❤️🩹 AI Breakup Recovery Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/starter_ai_agents/ai_breakup_recovery_agent)
+- [📊 AI Data Analysis Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/starter_ai_agents/ai_data_analysis_agent)
+- [🩻 AI Medical Imaging Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/starter_ai_agents/ai_medical_imaging_agent)
+- [😂 AI Meme Generator Agent (Browser)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/starter_ai_agents/ai_meme_generator_agent_browseruse)
+- [🎵 AI Music Generator Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/starter_ai_agents/ai_music_generator_agent)
+- [🛫 AI Travel Agent (Local & Cloud)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/starter_ai_agents/ai_travel_agent)
+- [✨ Gemini Multimodal Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/starter_ai_agents/gemini_multimodal_agent_demo)
+- [🔄 Mixture of Agents](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/starter_ai_agents/mixture_of_agents)
+- [📊 xAI Finance Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/starter_ai_agents/xai_finance_agent)
+- [🔍 OpenAI Research Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/starter_ai_agents/openai_research_agent)
+- [🕸️ Web Scraping AI Agent (Local & Cloud SDK)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/starter_ai_agents/web_scraping_ai_agent)
+
+### 🚀 Advanced AI Agents
+
+*Production-style agents with tools, memory, and multi-step reasoning.*
+
+- [🏚️ 🍌 AI Home Renovation Agent with Nano Banana Pro](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/ai_home_renovation_agent)
+- [🧠 DevPulse AI - Multi-Agent Signal Intelligence](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/devpulse_ai)
+- [🔍 AI Deep Research Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/single_agent_apps/ai_deep_research_agent)
+- [📊 AI VC Due Diligence Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_vc_due_diligence_agent_team)
+- [🔬 AI Research Planner & Executor (Google Interactions API)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/single_agent_apps/research_agent_gemini_interaction_api)
+- [🤝 AI Consultant Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/single_agent_apps/ai_consultant_agent)
+- [🏗️ AI System Architect Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/single_agent_apps/ai_system_architect_r1)
+- [💰 AI Financial Coach Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/ai_financial_coach_agent)
+- [🎬 AI Movie Production Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/single_agent_apps/ai_movie_production_agent)
+- [📈 AI Investment Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/single_agent_apps/ai_investment_agent)
+- [📡 Earnings Call Analyst Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/single_agent_apps/earnings_call_analyst_agent)
+- [🏋️♂️ AI Health & Fitness Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/single_agent_apps/ai_health_fitness_agent)
+- [🚀 AI Product Launch Intelligence Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/product_launch_intelligence_agent)
+- [🔍 AI Fraud Investigation Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/single_agent_apps/ai_fraud_investigation_agent)
+- [🗞️ AI Journalist Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/single_agent_apps/ai_journalist_agent)
+- [🧠 AI Mental Wellbeing Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/ai_mental_wellbeing_agent)
+- [📑 AI Meeting Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/single_agent_apps/ai_meeting_agent)
+- [🧬 AI Self-Evolving Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/ai_self_evolving_agent)
+- [👨🏻💼 AI Sales Intelligence Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_sales_intelligence_agent_team)
+- [🎧 AI Social Media News and Podcast Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/ai_news_and_podcast_agents)
+- [🌐 Openwork - Open Browser Automation Agent](https://github.com/accomplish-ai/openwork) <sub>↗ external</sub>
+- [🛡️ Trust-Gated Multi-Agent Research Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/trust_gated_agent_team)
+
+### 🎮 Autonomous Game-Playing Agents
+
+*Agents that play games end-to-end - reasoning, strategy, and action.*
+
+- [🎮 AI 3D Pygame Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/autonomous_game_playing_agent_apps/ai_3dpygame_r1)
+- [♜ AI Chess Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/autonomous_game_playing_agent_apps/ai_chess_agent)
+- [🎲 AI Tic-Tac-Toe Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/autonomous_game_playing_agent_apps/ai_tic_tac_toe_agent)
+
+### 🤝 Multi-agent Teams
+
+*Multiple agents collaborating to accomplish complex, cross-domain tasks.*
+
+- [🧲 AI Competitor Intelligence Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_competitor_intelligence_agent_team)
+- [💲 AI Finance Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_finance_agent_team)
+- [🎨 AI Game Design Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_game_design_agent_team)
+- [🧭 AG2 Adaptive Research Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/ag2_adaptive_research_team)
+- [👨⚖️ AI Legal Agent Team (Cloud & Local)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_legal_agent_team)
+- [💼 AI Recruitment Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_recruitment_agent_team)
+- [🏠 AI Real Estate Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_real_estate_agent_team)
+- [👨💼 AI Services Agency (CrewAI)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_services_agency)
+- [👨🏫 AI Teaching Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_teaching_agent_team)
+- [💻 Multimodal Coding Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/multimodal_coding_agent_team)
+- [✨ Multimodal Design Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/multimodal_design_agent_team)
+- [🎨 🍌 Multimodal UI/UX Feedback Agent Team with Nano Banana](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/multimodal_uiux_feedback_agent_team)
+- [🌏 AI Travel Planner Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_travel_planner_agent_team)
+
+### 🗣️ Voice AI Agents
+
+*Speech-in, speech-out agents using real-time voice APIs.*
+
+- [🗣️ AI Audio Tour Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/voice_ai_agents/ai_audio_tour_agent)
+- [📞 Customer Support Voice Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/voice_ai_agents/customer_support_voice_agent)
+- [🛡️ Insurance Claim Live Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/voice_ai_agents/insurance_claim_live_agent_team)
+- [🔊 Voice RAG Agent (OpenAI SDK)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/voice_ai_agents/voice_rag_openaisdk)
+- [🎙️ OpenSource Voice Dictation Agent (Wispr Flow clone)](https://github.com/akshayaggarwal99/jarvis-ai-assistant) <sub>↗ external</sub>
+
+### ♾️ MCP AI Agents
+
+*Agents that connect to external tools and data via Model Context Protocol.*
+
+- [♾️ Browser MCP Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/mcp_ai_agents/browser_mcp_agent)
+- [🐙 GitHub MCP Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/mcp_ai_agents/github_mcp_agent)
+- [📑 Notion MCP Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/mcp_ai_agents/notion_mcp_agent)
+- [🌍 AI Travel Planner MCP Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/mcp_ai_agents/ai_travel_planner_mcp_agent_team)
+- [🔀 Multi-MCP Agent Router](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/mcp_ai_agents/multi_mcp_agent_router)
+
+### 📀 RAG (Retrieval Augmented Generation)
+
+*Retrieval pipelines - from simple chains to agentic and multi-source.*
+
+- [🔥 Agentic RAG with Embedding Gemma](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/agentic_rag_embedding_gemma)
+- [🧐 Agentic RAG with Reasoning](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/agentic_rag_with_reasoning)
+- [📰 AI Blog Search (RAG)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/ai_blog_search)
+- [🔍 Autonomous RAG](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/autonomous_rag)
+- [🔄 Contextual AI RAG Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/contextualai_rag_agent)
+- [🔄 Corrective RAG (CRAG)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/corrective_rag)
+- [🐋 Deepseek Local RAG Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/deepseek_local_rag_agent)
+- [🤔 Gemini Agentic RAG](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/gemini_agentic_rag)
+- [👀 Hybrid Search RAG (Cloud)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/hybrid_search_rag)
+- [🔄 Llama 3.1 Local RAG](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/llama3.1_local_rag)
+- [🖥️ Local Hybrid Search RAG](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/local_hybrid_search_rag)
+- [🧬 Multimodal Agentic RAG](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/multimodal_agentic_rag)
+- [🦙 Local RAG Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/local_rag_agent)
+- [🧩 RAG-as-a-Service](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/rag-as-a-service)
+- [✨ RAG Agent with Cohere](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/rag_agent_cohere)
+- [⛓️ Basic RAG Chain](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/rag_chain)
+- [📠 RAG with Database Routing](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/rag_database_routing)
+- [🖼️ Vision RAG](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/vision_rag)
+- [🩺 RAG Failure Diagnostics Clinic](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/rag_failure_diagnostics_clinic)
+- [🕸️ Knowledge Graph RAG with Citations](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/rag_tutorials/knowledge_graph_rag_citations)
+
+### 🧩 Awesome Agent Skills
+
+*Ready-to-use agent skill files you can plug into any AI agent or LLM workflow.*
+
+- [♾️ Self-Improving Agent Skills](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/self-improving-agent-skills) - Automatically optimize agent skills using Gemini and ADK
+**📋 Browse all 19 skills**
+
+| Skill | Description |
+| --- | --- |
+| [🎓 Academic Researcher](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/academic-researcher) | Literature reviews, paper analysis, citation management |
+| [🔍 Code Reviewer](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/code-reviewer) | Automated code review with best-practice checks |
+| [✍️ Content Creator](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/content-creator) | Blog posts, social media, marketing copy |
+| [📊 Data Analyst](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/data-analyst) | Data exploration, statistical analysis, insights |
+| [🐛 Debugger](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/debugger) | Systematic bug hunting and root-cause analysis |
+| [🤔 Decision Helper](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/decision-helper) | Structured decision frameworks and trade-off analysis |
+| [🔬 Deep Research](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/deep-research) | Multi-source research with synthesis |
+| [📝 Editor](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/editor) | Proofreading, style, and clarity improvements |
+| [📧 Email Drafter](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/email-drafter) | Professional email composition |
+| [✅ Fact Checker](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/fact-checker) | Claim verification and source validation |
+| [💻 Fullstack Developer](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/fullstack-developer) | End-to-end web app development |
+| [📋 Meeting Notes](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/meeting-notes) | Meeting summaries, action items, follow-ups |
+| [📅 Project Planner](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/project-planner) | Roadmaps, milestones, resource planning |
+| [🐍 Python Expert](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/python-expert) | Pythonic code, packaging, performance |
+| [🏃 Sprint Planner](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/sprint-planner) | Agile sprint planning and backlog grooming |
+| [🧭 Strategy Advisor](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/strategy-advisor) | Business strategy and competitive analysis |
+| [📖 Technical Writer](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/technical-writer) | Documentation, API docs, guides |
+| [🎨 UX Designer](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/ux-designer) | UI/UX design feedback and wireframes |
+| [📈 Visualization Expert](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/awesome_agent_skills/visualization-expert) | Charts, dashboards, data storytelling |
+
+### 💾 LLM Apps with Memory Tutorials
+
+*Agents and chatbots that remember conversations and user state across sessions.*
+
+- [💾 AI ArXiv Agent with Memory](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/llm_apps_with_memory_tutorials/ai_arxiv_agent_memory)
+- [🛩️ AI Travel Agent with Memory](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/llm_apps_with_memory_tutorials/ai_travel_agent_memory)
+- [💬 Llama3 Stateful Chat](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/llm_apps_with_memory_tutorials/llama3_stateful_chat)
+- [📝 LLM App with Personalized Memory](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/llm_apps_with_memory_tutorials/llm_app_personalized_memory)
+- [🗄️ Local ChatGPT Clone with Memory](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/llm_apps_with_memory_tutorials/local_chatgpt_with_memory)
+- [🧠 Multi-LLM Application with Shared Memory](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/llm_apps_with_memory_tutorials/multi_llm_memory)
+
+### 💬 Chat with X Tutorials
+
+*Turn any data source into a chat interface.*
+
+- [💬 Chat with GitHub (GPT & Llama3)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/chat_with_X_tutorials/chat_with_github)
+- [📨 Chat with Gmail](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/chat_with_X_tutorials/chat_with_gmail)
+- [📄 Chat with PDF (GPT & Llama3)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/chat_with_X_tutorials/chat_with_pdf)
+- [📚 Chat with Research Papers (ArXiv) (GPT & Llama3)](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/chat_with_X_tutorials/chat_with_research_papers)
+- [📝 Chat with Substack](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/chat_with_X_tutorials/chat_with_substack)
+- [📽️ Chat with YouTube Videos](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/chat_with_X_tutorials/chat_with_youtube_videos)
+
+### 🎯 LLM Optimization Tools
+
+*Reduce token usage, context size, and API cost without losing quality.*
+
+- [🎯 Toonify Token Optimization](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/llm_optimization_tools/toonify_token_optimization) - Reduce LLM API costs by 30–60% using TOON format
+- [🧠 Headroom Context Optimization](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/llm_optimization_tools/headroom_context_optimization) - Reduce LLM API costs by 50–90%
+
+### 🔧 LLM Fine-tuning Tutorials
+
+*End-to-end fine-tuning recipes for open-source models.*
+
+- [Gemma 3 Fine-tuning](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/llm_finetuning_tutorials/gemma3_finetuning)
+- [Llama 3.2 Fine-tuning](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/advanced_llm_apps/llm_finetuning_tutorials/llama3.2_finetuning)
+
+### 🧑🏫 AI Agent Framework Crash Course
+
+*Deep-dive tutorials on the major agent frameworks.*
+
+[Google ADK Crash Course](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/ai_agent_framework_crash_course/google_adk_crash_course)
+
+- Starter agent; model‑agnostic (OpenAI, Claude)
+- Structured outputs (Pydantic)
+- Tools: built‑in, function, third‑party, MCP tools
+- Memory; callbacks; Plugins
+- Simple multi‑agent; Multi‑agent patterns
+
+[OpenAI Agents SDK Crash Course](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/ai_agent_framework_crash_course/openai_sdk_crash_course)
+
+## 🙏 Built by
+
+Created and maintained by [**Shubham Saboo**](https://twitter.com/Saboo_Shubham_) with contributions from the amazing community members.
+
+[![Top contributors](https://camo.githubusercontent.com/2f639b6e9ebf8e65432243e769352c08682657f41a4d17abccaf54014029814e/68747470733a2f2f636f6e747269622e726f636b732f696d6167653f7265706f3d5368756268616d7361626f6f2f617765736f6d652d6c6c6d2d61707073266d61783d343026636f6c756d6e733d313026616e6f6e3d30)](https://github.com/Shubhamsaboo/awesome-llm-apps/graphs/contributors)
+
+## ⭐ Star History
+
+[![Star History Chart](https://camo.githubusercontent.com/b7d71b88234f04db411a34e7c79c30212f812b3e6b04dcc0017dca59b17f1cb8/68747470733a2f2f6170692e737461722d686973746f72792e636f6d2f7376673f7265706f733d5368756268616d7361626f6f2f617765736f6d652d6c6c6d2d6170707326747970653d44617465)](https://star-history.com/#Shubhamsaboo/awesome-llm-apps&Date)
+
+> 🌟 **Don't miss future drops - [star the repo](https://github.com/Shubhamsaboo/awesome-llm-apps) to get notified when new templates ship.**
+
+## 📜 License
+
+Apache-2.0. See [LICENSE](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/LICENSE). Fork it, ship it, sell it.
