@@ -5,6 +5,29 @@
 
 ---
 
+## 2026-05-15
+
+**新增 wiki/Github/留看（13 個 repo）：**
+- `CloakBrowser`：C++ 層級指紋修改的隱匿瀏覽器
+- `GPT-Prompt-Hub/CLAUDE.md`：Claude 專用 Prompt Hub
+- `LichAmnesia/gemini-evolve`：Gemini CLI 自我進化指令系統
+- `LichAmnesia/lich-skills`：Lich Skills 合集
+- `LichAmnesia/llm-engineering-handbook`：構建生產級 AI 副本教程
+- `akseolabs-seo/cinematic-ui`：電影導演思維的 Web Design Skill
+- `datawhalechina/hello-agents`：從零開始構建智能體教程
+- `exo-explore/exo`：本地運行 frontier AI
+- `mattpocockskills`：Real Engineers 的 Skills 合集
+- `projectdiscovery/nuclei`：快速客製化漏洞掃描器
+- `sanyoii/awesome-codex-skills`：Codex skills 精選清單
+- `yamadashyrepomix`：Repomix — 將 repo 壓縮為 AI 友善單一檔案
+- `zarazhangruifollow-builders`：AI builders digest — X + YouTube 重混
+- AK-Threads-booster：數據驅動 Threads 寫文決策系統筆記
+
+**更新：**
+- `wiki/Github/留看/easychen/opc-methodology`：一人企業方法論筆記內容更新
+
+---
+
 ## 2026-05-14
 
 **新增 Clippings（1 篇）：**
