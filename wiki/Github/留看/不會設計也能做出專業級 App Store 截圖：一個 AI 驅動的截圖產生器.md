@@ -13,7 +13,9 @@ tags:
 
 你花了好幾個月開發一款 iOS App，功能完善、介面漂亮，但上架 App Store 時卻卡在「截圖」這一關。找設計師太貴、自己用 Figma 又不夠熟練，結果草草放了幾張模擬器截圖就上架了——這是許多獨立開發者的真實寫照。
 
-**App Store Screenshots Generator** 是一個專為 AI 程式碼助手（如 Claude Code、Cursor、Windsurf 等）設計的技能模組（Skill），它能幫你從零開始建立一個 Next.js 專案，自動設計「廣告級」的 App Store 截圖，並匯出 Apple 要求的所有解析度 PNG 檔。整個產生器只用一個 `page.tsx` 檔案就搞定，開發伺服器跑起來後，在瀏覽器點擊就能匯出截圖。
+**App Store Screenshots Generator** 是一個專為 AI 程式碼助手（如 Claude Code、Cursor、Windsurf 等）設計的技能模組（Skill），它能幫你從零開始建立一個 Next.js 專案，自動設計「廣告級」的截圖，並匯出所有要求的解析度 PNG 檔。整個產生器只用一個 `page.tsx` 檔案就搞定，開發伺服器跑起來後，在瀏覽器點擊就能匯出截圖。
+
+> **注意**：同時支援 **App Store（iOS）** 和 **Google Play（Android）** 兩個平台的截圖規格。使用 6.1" 模擬器截圖可避免後續調整。
 
 ## 操作畫面
 
