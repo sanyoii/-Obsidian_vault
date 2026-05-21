@@ -7,7 +7,7 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "raw",
   "attachmentFolderPath": "raw/assets",
-  "promptDelete": true,
+  "promptDelete": false,
   "useMarkdownLinks": false,
   "newLinkFormat": "shortest",
   "alwaysUpdateLinks": true
