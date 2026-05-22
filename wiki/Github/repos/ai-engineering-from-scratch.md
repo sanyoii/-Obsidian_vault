@@ -1,0 +1,815 @@
+---
+source: "https://github.com/rohitg00/ai-engineering-from-scratch"
+author:
+stars: "11,395"
+clipped: 2026-05-22
+tags:
+  - "github/repo"
+---
+# 
+
+> **出處：** [https://github.com/rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | ⭐ 11,395
+
+---
+
+## Description
+
+
+## README
+[![AI Engineering from Scratch — reference manual banner](/rohitg00/ai-engineering-from-scratch/raw/main/assets/banner.svg)](/rohitg00/ai-engineering-from-scratch/blob/main/assets/banner.svg)
+
+[![MIT License](https://camo.githubusercontent.com/b41709b5d57b0e5949475662fa054854ddefd3cfea737b7984693ce93287bb0c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d3161316131613f7374796c653d666c61742d737175617265266c6162656c436f6c6f723d666166616635)](/rohitg00/ai-engineering-from-scratch/blob/main/LICENSE) [![435 lessons](https://camo.githubusercontent.com/2a0e0dccc3b2311406c6917fe7c88ea9decf334141ddbfdd0de1571093020468/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6573736f6e732d3433352d3335353366663f7374796c653d666c61742d737175617265266c6162656c436f6c6f723d666166616635)](/rohitg00/ai-engineering-from-scratch/blob/main/ROADMAP.md) [![20 phases](https://camo.githubusercontent.com/60785a23ddc33e5351818031573934cbb92e6dc2e88ea9eefcf37338492fb03f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7068617365732d32302d3335353366663f7374796c653d666c61742d737175617265266c6162656c436f6c6f723d666166616635)](#contents) [![GitHub stars](https://camo.githubusercontent.com/8b3f46256f8245ced09e0b2d06e99a41f9dc6f3bc68a827368daa1ee35d8659b/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f726f6869746730302f61692d656e67696e656572696e672d66726f6d2d736372617463683f7374796c653d666c61742d737175617265266c6162656c436f6c6f723d66616661663526636f6c6f723d333535336666)](https://github.com/rohitg00/ai-engineering-from-scratch/stargazers) [![Website](https://camo.githubusercontent.com/d963e2f1389aa2615648dc08f7b86100c58eef75fad8fbf24a4b40b2d0866c38/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7765622d6169656e67696e656572696e6766726f6d736372617463682e636f6d2d3335353366663f7374796c653d666c61742d737175617265266c6162656c436f6c6f723d666166616635)](https://aiengineeringfromscratch.com)
+
+```
+░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
+```
+
+> **84% of students already use AI tools. Only 18% feel prepared to use them professionally.** This curriculum closes that gap.
+> 
+> 435 lessons. 20 phases. ~320 hours. Python, TypeScript, Rust, Julia. Every lesson ships a reusable artifact: a prompt, a skill, an agent, an MCP server. Free, open source, MIT.
+> 
+> You don't just learn AI. You build it. End-to-end. By hand.
+
+## How this worksMost AI material teaches in scattered pieces. A paper here, a fine-tuning post there, a flashy agent demo somewhere else. The pieces rarely line up. You ship a chatbot but can't explain its loss curve. You hook a function to an agent but can't say what attention does inside the model that's calling it.
+
+This curriculum is the spine. 20 phases, 435 lessons, four languages: Python, TypeScript, Rust, Julia. Linear algebra at one end, autonomous swarms at the other. Every algorithm gets built from raw math first. Backprop. Tokenizer. Attention. Agent loop. By the time PyTorch shows up, you already know what it's doing under the hood.
+
+Each lesson runs the same loop: read the problem, derive the math, write the code, run the test, keep the artifact. No five-minute videos, no copy-paste deploys, no hand-holding. Free, open source, and built to run on your own laptop.
+
+```
+░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
+```
+
+## The shape of the curriculumTwenty phases stack on top of each other. Math is the floor. Agents and production are the roof. Skip ahead if you already know the lower layers, but don't skip and then wonder why something at the top is breaking.
+
+<iframe title="File display" role="presentation" class="render-viewer" sandbox="allow-scripts allow-same-origin allow-top-navigation allow-popups" src="https://viewscreen.githubusercontent.com/markdown/mermaid?docs_host=https%3A%2F%2Fdocs.github.com&amp;color_mode=light#0c80fb99-6c48-4202-ab98-26435767cbdb" name="0c80fb99-6c48-4202-ab98-26435767cbdb" data-content="{&quot;data&quot;:&quot;%%{init: {'theme':'base','themeVariables':{'primaryColor':'#fafaf5','primaryTextColor':'#1a1a1a','primaryBorderColor':'#3553ff','lineColor':'#3553ff','fontFamily':'JetBrains Mono','fontSize':'12px'}}}%%\nflowchart TB\n  P0[\&quot;Phase 0 — Setup &amp;amp;amp; Tooling\&quot;] --&amp;gt; P1[\&quot;Phase 1 — Math Foundations\&quot;]\n  P1 --&amp;gt; P2[\&quot;Phase 2 — ML Fundamentals\&quot;]\n  P2 --&amp;gt; P3[\&quot;Phase 3 — Deep Learning Core\&quot;]\n  P3 --&amp;gt; P4[\&quot;Phase 4 — Vision\&quot;]\n  P3 --&amp;gt; P5[\&quot;Phase 5 — NLP\&quot;]\n  P3 --&amp;gt; P6[\&quot;Phase 6 — Speech &amp;amp;amp; Audio\&quot;]\n  P3 --&amp;gt; P9[\&quot;Phase 9 — RL\&quot;]\n  P5 --&amp;gt; P7[\&quot;Phase 7 — Transformers\&quot;]\n  P7 --&amp;gt; P8[\&quot;Phase 8 — GenAI\&quot;]\n  P7 --&amp;gt; P10[\&quot;Phase 10 — LLMs from Scratch\&quot;]\n  P10 --&amp;gt; P11[\&quot;Phase 11 — LLM Engineering\&quot;]\n  P10 --&amp;gt; P12[\&quot;Phase 12 — Multimodal\&quot;]\n  P11 --&amp;gt; P13[\&quot;Phase 13 — Tools &amp;amp;amp; Protocols\&quot;]\n  P13 --&amp;gt; P14[\&quot;Phase 14 — Agent Engineering\&quot;]\n  P14 --&amp;gt; P15[\&quot;Phase 15 — Autonomous Systems\&quot;]\n  P15 --&amp;gt; P16[\&quot;Phase 16 — Multi-Agent &amp;amp;amp; Swarms\&quot;]\n  P14 --&amp;gt; P17[\&quot;Phase 17 — Infrastructure &amp;amp;amp; Production\&quot;]\n  P15 --&amp;gt; P18[\&quot;Phase 18 — Ethics &amp;amp;amp; Alignment\&quot;]\n  P16 --&amp;gt; P19[\&quot;Phase 19 — Capstone Projects\&quot;]\n  P17 --&amp;gt; P19\n  P18 --&amp;gt; P19\n&quot;}"></iframe>
+
+Loading
+
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#fafaf5','primaryTextColor':'#1a1a1a','primaryBorderColor':'#3553ff','lineColor':'#3553ff','fontFamily':'JetBrains Mono','fontSize':'12px'}}}%%
+flowchart TB
+  P0\["Phase 0 — Setup &amp; Tooling"\] --> P1\["Phase 1 — Math Foundations"\]
+  P1 --> P2\["Phase 2 — ML Fundamentals"\]
+  P2 --> P3\["Phase 3 — Deep Learning Core"\]
+  P3 --> P4\["Phase 4 — Vision"\]
+  P3 --> P5\["Phase 5 — NLP"\]
+  P3 --> P6\["Phase 6 — Speech &amp; Audio"\]
+  P3 --> P9\["Phase 9 — RL"\]
+  P5 --> P7\["Phase 7 — Transformers"\]
+  P7 --> P8\["Phase 8 — GenAI"\]
+  P7 --> P10\["Phase 10 — LLMs from Scratch"\]
+  P10 --> P11\["Phase 11 — LLM Engineering"\]
+  P10 --> P12\["Phase 12 — Multimodal"\]
+  P11 --> P13\["Phase 13 — Tools &amp; Protocols"\]
+  P13 --> P14\["Phase 14 — Agent Engineering"\]
+  P14 --> P15\["Phase 15 — Autonomous Systems"\]
+  P15 --> P16\["Phase 16 — Multi-Agent &amp; Swarms"\]
+  P14 --> P17\["Phase 17 — Infrastructure &amp; Production"\]
+  P15 --> P18\["Phase 18 — Ethics &amp; Alignment"\]
+  P16 --> P19\["Phase 19 — Capstone Projects"\]
+  P17 --> P19
+  P18 --> P19
+
+```
+░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
+```
+
+## The shape of a lessonEach lesson lives in its own folder, with the same structure across the entire curriculum:
+
+```
+phases/<NN>-<phase-name>/<NN>-<lesson-name>/
+├── code/      runnable implementations (Python, TypeScript, Rust, Julia)
+├── docs/
+│   └── en.md  lesson narrative
+└── outputs/   prompts, skills, agents, or MCP servers this lesson produces
+```
+
+Every lesson follows six beats. The *Build It / Use It* split is the spine — you implement the algorithm from scratch first, then run the same thing through the production library. You understand what the framework is doing because you wrote the smaller version yourself.
+
+<iframe title="File display" role="presentation" class="render-viewer" sandbox="allow-scripts allow-same-origin allow-top-navigation allow-popups" src="https://viewscreen.githubusercontent.com/markdown/mermaid?docs_host=https%3A%2F%2Fdocs.github.com&amp;color_mode=light#5dc1df59-60ed-4dda-9033-b59aa4b293e0" name="5dc1df59-60ed-4dda-9033-b59aa4b293e0" data-content="{&quot;data&quot;:&quot;%%{init: {'theme':'base','themeVariables':{'primaryColor':'#fafaf5','primaryTextColor':'#1a1a1a','primaryBorderColor':'#3553ff','lineColor':'#3553ff','fontFamily':'JetBrains Mono','fontSize':'13px'}}}%%\nflowchart LR\n  M[\&quot;MOTTO&amp;lt;br/&amp;gt;&amp;lt;sub&amp;gt;one-line core idea&amp;lt;/sub&amp;gt;\&quot;] --&amp;gt; Pr[\&quot;PROBLEM&amp;lt;br/&amp;gt;&amp;lt;sub&amp;gt;concrete pain&amp;lt;/sub&amp;gt;\&quot;]\n  Pr --&amp;gt; C[\&quot;CONCEPT&amp;lt;br/&amp;gt;&amp;lt;sub&amp;gt;diagrams &amp;amp;amp; intuition&amp;lt;/sub&amp;gt;\&quot;]\n  C --&amp;gt; B[\&quot;BUILD IT&amp;lt;br/&amp;gt;&amp;lt;sub&amp;gt;raw math, no frameworks&amp;lt;/sub&amp;gt;\&quot;]\n  B --&amp;gt; U[\&quot;USE IT&amp;lt;br/&amp;gt;&amp;lt;sub&amp;gt;same thing in PyTorch / sklearn&amp;lt;/sub&amp;gt;\&quot;]\n  U --&amp;gt; S[\&quot;SHIP IT&amp;lt;br/&amp;gt;&amp;lt;sub&amp;gt;prompt · skill · agent · MCP&amp;lt;/sub&amp;gt;\&quot;]\n&quot;}"></iframe>
+
+Loading
+
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#fafaf5','primaryTextColor':'#1a1a1a','primaryBorderColor':'#3553ff','lineColor':'#3553ff','fontFamily':'JetBrains Mono','fontSize':'13px'}}}%%
+flowchart LR
+  M\["MOTTO<br/><sub>one-line core idea</sub>"\] --> Pr\["PROBLEM<br/><sub>concrete pain</sub>"\]
+  Pr --> C\["CONCEPT<br/><sub>diagrams &amp; intuition</sub>"\]
+  C --> B\["BUILD IT<br/><sub>raw math, no frameworks</sub>"\]
+  B --> U\["USE IT<br/><sub>same thing in PyTorch / sklearn</sub>"\]
+  U --> S\["SHIP IT<br/><sub>prompt · skill · agent · MCP</sub>"\]
+
+## Getting startedThree ways in. Pick one.
+
+**Option A — read.** Open any completed lesson on [aiengineeringfromscratch.com](https://aiengineeringfromscratch.com) or expand a phase under [Contents](#contents). No setup, no cloning.
+
+**Option B — clone and run.**
+
+git clone https://github.com/rohitg00/ai-engineering-from-scratch.git
+cd ai-engineering-from-scratch
+python phases/01-math-foundations/01-linear-algebra-intuition/code/vectors.py
+
+**Option C — find your level *(recommended)*.** Skip ahead intelligently. Inside Claude, Cursor, Codex, OpenClaw, Hermes, or any agent with SkillKit installed:
+
+/find-your-level
+
+Ten questions. Maps your knowledge to a starting phase, builds a personalized path with hour estimates. After each phase:
+
+/check-understanding 3        # quiz yourself on phase 3
+ls phases/03-deep-learning-core/05-loss-functions/outputs/
+# ├── prompt-loss-function-selector.md
+# └── prompt-loss-debugger.md
+
+### Prerequisites- You can write code (any language; Python helps).
+- You want to understand how AI **actually works**, not just call APIs.
+
+### Built-in agent skills (SkillKit / Claude, Cursor, Codex, OpenClaw, Hermes)| Skill | What it does |
+| --- | --- |
+| [`/find-your-level`](/rohitg00/ai-engineering-from-scratch/blob/main/.claude/skills/find-your-level/SKILL.md) | Ten-question placement quiz. Maps your knowledge to a starting phase and produces a personalized path with hour estimates. |
+| [`/check-understanding <phase>`](/rohitg00/ai-engineering-from-scratch/blob/main/.claude/skills/check-understanding/SKILL.md) | Per-phase quiz, eight questions, with feedback and specific lessons to review. |
+
+```
+░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
+```
+
+## Every lesson ships somethingOther curricula end with *"congratulations, you learned X."* Each lesson here ends with a **reusable tool** you can install or paste into your daily workflow.
+
+| [![FIG_001.A prompts](/rohitg00/ai-engineering-from-scratch/raw/main/site/assets/figures/001-a-prompts.svg)](/rohitg00/ai-engineering-from-scratch/blob/main/site/assets/figures/001-a-prompts.svg)   <sub>FIG_001 · A</sub>   **PROMPTS** | [![FIG_001.B skills](/rohitg00/ai-engineering-from-scratch/raw/main/site/assets/figures/001-b-skills.svg)](/rohitg00/ai-engineering-from-scratch/blob/main/site/assets/figures/001-b-skills.svg)   <sub>FIG_001 · B</sub>   **SKILLS** | [![FIG_001.C agents](/rohitg00/ai-engineering-from-scratch/raw/main/site/assets/figures/001-c-agents.svg)](/rohitg00/ai-engineering-from-scratch/blob/main/site/assets/figures/001-c-agents.svg)   <sub>FIG_001 · C</sub>   **AGENTS** | [![FIG_001.D MCP servers](/rohitg00/ai-engineering-from-scratch/raw/main/site/assets/figures/001-d-mcp-servers.svg)](/rohitg00/ai-engineering-from-scratch/blob/main/site/assets/figures/001-d-mcp-servers.svg)   <sub>FIG_001 · D</sub>   **MCP SERVERS** |
+| --- | --- | --- | --- |
+| Paste into any AI assistant for expert-level help on a narrow task. | Drop into Claude, Cursor, Codex, OpenClaw, Hermes, or any agent that reads `SKILL.md`. | Deploy as autonomous workers — you wrote the loop yourself in Phase 14. | Plug into any MCP-compatible client. Built end-to-end in Phase 13. |
+
+> Install the lot with [SkillKit](https://github.com/rohitg00/skillkit). Real tools, not homework. By the end of the curriculum, you have a portfolio of 435 artifacts you actually understand because you built them.
+
+### FIG\_002 · A worked samplePhase 14, lesson 1: the agent loop. ~120 lines of pure Python, no dependencies.
+
+| **`code/agent_loop.py`**   <sub><i>build it</i></sub>  def run(query, tools):     history \= \[user(query)\]     for step in range(MAX\_STEPS):         msg \= llm(history)         if msg.tool\_calls:             for call in msg.tool\_calls:                 result \= tools\[call.name\](\*\*call.args)                 history.append(tool\_result(call.id, result))             continue         return msg.content     raise StepLimitExceeded | **`outputs/skill-agent-loop.md`**   <sub><i>ship it</i></sub>  \--- name: agent-loop description: ReAct-style loop for any tool list phase: 14 lesson: 01 \---  Implement a minimal agent loop that...  **`outputs/prompt-debug-agent.md`**  You are an agent debugger. Given the trace of an agent run, identify the step where the agent went wrong and explain why... |
+| --- | --- |
+
+```
+░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
+```
+
+## ContentsTwenty phases. Click any phase to expand its lesson list.
+
+### Phase 0: Setup & Tooling `12 lessons`> Get your environment ready for everything that follows.
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [Dev Environment](/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/01-dev-environment) | Build | Python, TypeScript, Rust |
+| 02 | [Git & Collaboration](/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/02-git-and-collaboration) | Learn | — |
+| 03 | [GPU Setup & Cloud](/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/03-gpu-setup-and-cloud) | Build | Python |
+| 04 | [APIs & Keys](/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/04-apis-and-keys) | Build | Python, TypeScript |
+| 05 | [Jupyter Notebooks](/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/05-jupyter-notebooks) | Build | Python |
+| 06 | [Python Environments](/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/06-python-environments) | Build | Python |
+| 07 | [Docker for AI](/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/07-docker-for-ai) | Build | Python |
+| 08 | [Editor Setup](/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/08-editor-setup) | Build | — |
+| 09 | [Data Management](/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/09-data-management) | Build | Python |
+| 10 | [Terminal & Shell](/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/10-terminal-and-shell) | Learn | — |
+| 11 | [Linux for AI](/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/11-linux-for-ai) | Learn | — |
+| 12 | [Debugging & Profiling](/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/12-debugging-and-profiling) | Build | Python |
+
+**Phase 1 — Math Foundations**  `22 lessons`  *The intuition behind every AI algorithm, through code.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [Linear Algebra Intuition](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/01-linear-algebra-intuition) | Learn | Python, Julia |
+| 02 | [Vectors, Matrices & Operations](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/02-vectors-matrices-operations) | Build | Python, Julia |
+| 03 | [Matrix Transformations & Eigenvalues](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/03-matrix-transformations) | Build | Python, Julia |
+| 04 | [Calculus for ML: Derivatives & Gradients](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/04-calculus-for-ml) | Learn | Python |
+| 05 | [Chain Rule & Automatic Differentiation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/05-chain-rule-and-autodiff) | Build | Python |
+| 06 | [Probability & Distributions](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/06-probability-and-distributions) | Learn | Python |
+| 07 | [Bayes' Theorem & Statistical Thinking](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/07-bayes-theorem) | Build | Python |
+| 08 | [Optimization: Gradient Descent Family](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/08-optimization) | Build | Python |
+| 09 | [Information Theory: Entropy, KL Divergence](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/09-information-theory) | Learn | Python |
+| 10 | [Dimensionality Reduction: PCA, t-SNE, UMAP](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/10-dimensionality-reduction) | Build | Python |
+| 11 | [Singular Value Decomposition](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/11-singular-value-decomposition) | Build | Python, Julia |
+| 12 | [Tensor Operations](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/12-tensor-operations) | Build | Python |
+| 13 | [Numerical Stability](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/13-numerical-stability) | Build | Python |
+| 14 | [Norms & Distances](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/14-norms-and-distances) | Build | Python |
+| 15 | [Statistics for ML](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/15-statistics-for-ml) | Build | Python |
+| 16 | [Sampling Methods](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/16-sampling-methods) | Build | Python |
+| 17 | [Linear Systems](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/17-linear-systems) | Build | Python |
+| 18 | [Convex Optimization](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/18-convex-optimization) | Build | Python |
+| 19 | [Complex Numbers for AI](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/19-complex-numbers) | Learn | Python |
+| 20 | [The Fourier Transform](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/20-fourier-transform) | Build | Python |
+| 21 | [Graph Theory for ML](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/21-graph-theory) | Build | Python |
+| 22 | [Stochastic Processes](/rohitg00/ai-engineering-from-scratch/blob/main/phases/01-math-foundations/22-stochastic-processes) | Learn | Python |
+
+**Phase 2 — ML Fundamentals**  `18 lessons`  *Classical ML — still the backbone of most production AI.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [What Is Machine Learning](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/01-what-is-machine-learning) | Learn | Python |
+| 02 | [Linear Regression from Scratch](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/02-linear-regression) | Build | Python |
+| 03 | [Logistic Regression & Classification](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/03-logistic-regression) | Build | Python |
+| 04 | [Decision Trees & Random Forests](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/04-decision-trees) | Build | Python |
+| 05 | [Support Vector Machines](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/05-support-vector-machines) | Build | Python |
+| 06 | [KNN & Distance Metrics](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/06-knn-and-distances) | Build | Python |
+| 07 | [Unsupervised Learning: K-Means, DBSCAN](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/07-unsupervised-learning) | Build | Python |
+| 08 | [Feature Engineering & Selection](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/08-feature-engineering) | Build | Python |
+| 09 | [Model Evaluation: Metrics, Cross-Validation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/09-model-evaluation) | Build | Python |
+| 10 | [Bias, Variance & the Learning Curve](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/10-bias-variance) | Learn | Python |
+| 11 | [Ensemble Methods: Boosting, Bagging, Stacking](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/11-ensemble-methods) | Build | Python |
+| 12 | [Hyperparameter Tuning](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/12-hyperparameter-tuning) | Build | Python |
+| 13 | [ML Pipelines & Experiment Tracking](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/13-ml-pipelines) | Build | Python |
+| 14 | [Naive Bayes](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/14-naive-bayes) | Build | Python |
+| 15 | [Time Series Fundamentals](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/15-time-series) | Build | Python |
+| 16 | [Anomaly Detection](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/16-anomaly-detection) | Build | Python |
+| 17 | [Handling Imbalanced Data](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/17-imbalanced-data) | Build | Python |
+| 18 | [Feature Selection](/rohitg00/ai-engineering-from-scratch/blob/main/phases/02-ml-fundamentals/18-feature-selection) | Build | Python |
+
+**Phase 3 — Deep Learning Core**  `13 lessons`  *Neural networks from first principles. No frameworks until you build one.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [The Perceptron: Where It All Started](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/01-the-perceptron) | Build | Python |
+| 02 | [Multi-Layer Networks & Forward Pass](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/02-multi-layer-networks) | Build | Python |
+| 03 | [Backpropagation from Scratch](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/03-backpropagation) | Build | Python |
+| 04 | [Activation Functions: ReLU, Sigmoid, GELU & Why](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/04-activation-functions) | Build | Python |
+| 05 | [Loss Functions: MSE, Cross-Entropy, Contrastive](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/05-loss-functions) | Build | Python |
+| 06 | [Optimizers: SGD, Momentum, Adam, AdamW](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/06-optimizers) | Build | Python |
+| 07 | [Regularization: Dropout, Weight Decay, BatchNorm](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/07-regularization) | Build | Python |
+| 08 | [Weight Initialization & Training Stability](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/08-weight-initialization) | Build | Python |
+| 09 | [Learning Rate Schedules & Warmup](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/09-learning-rate-schedules) | Build | Python |
+| 10 | [Build Your Own Mini Framework](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/10-mini-framework) | Build | Python |
+| 11 | [Introduction to PyTorch](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/11-intro-to-pytorch) | Build | Python |
+| 12 | [Introduction to JAX](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/12-intro-to-jax) | Build | Python |
+| 13 | [Debugging Neural Networks](/rohitg00/ai-engineering-from-scratch/blob/main/phases/03-deep-learning-core/13-debugging-neural-networks) | Build | Python |
+
+**Phase 4 — Computer Vision**  `28 lessons`  *From pixels to understanding — image, video, 3D, VLMs, and world models.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [Image Fundamentals: Pixels, Channels, Color Spaces](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/01-image-fundamentals) | Learn | Python |
+| 02 | [Convolutions from Scratch](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/02-convolutions-from-scratch) | Build | Python |
+| 03 | [CNNs: LeNet to ResNet](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/03-cnns-lenet-to-resnet) | Build | Python |
+| 04 | [Image Classification](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/04-image-classification) | Build | Python |
+| 05 | [Transfer Learning & Fine-Tuning](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/05-transfer-learning) | Build | Python |
+| 06 | [Object Detection — YOLO from Scratch](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/06-object-detection-yolo) | Build | Python |
+| 07 | [Semantic Segmentation — U-Net](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/07-semantic-segmentation-unet) | Build | Python |
+| 08 | [Instance Segmentation — Mask R-CNN](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/08-instance-segmentation-mask-rcnn) | Build | Python |
+| 09 | [Image Generation — GANs](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/09-image-generation-gans) | Build | Python |
+| 10 | [Image Generation — Diffusion Models](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/10-image-generation-diffusion) | Build | Python |
+| 11 | [Stable Diffusion — Architecture & Fine-Tuning](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/11-stable-diffusion) | Build | Python |
+| 12 | [Video Understanding — Temporal Modeling](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/12-video-understanding) | Build | Python |
+| 13 | [3D Vision: Point Clouds, NeRFs](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/13-3d-vision-nerf) | Build | Python |
+| 14 | [Vision Transformers (ViT)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/14-vision-transformers) | Build | Python |
+| 15 | [Real-Time Vision: Edge Deployment](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/15-real-time-edge) | Build | Python, Rust |
+| 16 | [Build a Complete Vision Pipeline](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/16-vision-pipeline-capstone) | Build | Python |
+| 17 | [Self-Supervised Vision — SimCLR, DINO, MAE](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/17-self-supervised-vision) | Build | Python |
+| 18 | [Open-Vocabulary Vision — CLIP](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/18-open-vocab-clip) | Build | Python |
+| 19 | [OCR & Document Understanding](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/19-ocr-document-understanding) | Build | Python |
+| 20 | [Image Retrieval & Metric Learning](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/20-image-retrieval-metric) | Build | Python |
+| 21 | [Keypoint Detection & Pose Estimation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/21-keypoint-pose) | Build | Python |
+| 22 | [3D Gaussian Splatting from Scratch](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/22-3d-gaussian-splatting) | Build | Python |
+| 23 | [Diffusion Transformers & Rectified Flow](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/23-diffusion-transformers-rectified-flow) | Build | Python |
+| 24 | [SAM 3 & Open-Vocabulary Segmentation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/24-sam3-open-vocab-segmentation) | Build | Python |
+| 25 | [Vision-Language Models (ViT-MLP-LLM)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/25-vision-language-models) | Build | Python |
+| 26 | [Monocular Depth & Geometry Estimation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/26-monocular-depth) | Build | Python |
+| 27 | [Multi-Object Tracking & Video Memory](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/27-multi-object-tracking) | Build | Python |
+| 28 | [World Models & Video Diffusion](/rohitg00/ai-engineering-from-scratch/blob/main/phases/04-computer-vision/28-world-models-video-diffusion) | Build | Python |
+
+**Phase 5 — NLP: Foundations to Advanced**  `29 lessons`  *Language is the interface to intelligence.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [Text Processing: Tokenization, Stemming, Lemmatization](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/01-text-processing) | Build | Python |
+| 02 | [Bag of Words, TF-IDF & Text Representation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/02-bag-of-words-tfidf) | Build | Python |
+| 03 | [Word Embeddings: Word2Vec from Scratch](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/03-word-embeddings-word2vec) | Build | Python |
+| 04 | [GloVe, FastText & Subword Embeddings](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/04-glove-fasttext-subword) | Build | Python |
+| 05 | [Sentiment Analysis](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/05-sentiment-analysis) | Build | Python |
+| 06 | [Named Entity Recognition (NER)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/06-named-entity-recognition) | Build | Python |
+| 07 | [POS Tagging & Syntactic Parsing](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/07-pos-tagging-parsing) | Build | Python |
+| 08 | [Text Classification — CNNs & RNNs for Text](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/08-cnns-rnns-for-text) | Build | Python |
+| 09 | [Sequence-to-Sequence Models](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/09-sequence-to-sequence) | Build | Python |
+| 10 | [Attention Mechanism — The Breakthrough](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/10-attention-mechanism) | Build | Python |
+| 11 | [Machine Translation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/11-machine-translation) | Build | Python |
+| 12 | [Text Summarization](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/12-text-summarization) | Build | Python |
+| 13 | [Question Answering Systems](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/13-question-answering) | Build | Python |
+| 14 | [Information Retrieval & Search](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/14-information-retrieval-search) | Build | Python |
+| 15 | [Topic Modeling: LDA, BERTopic](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/15-topic-modeling) | Build | Python |
+| 16 | [Text Generation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/16-text-generation-pre-transformer) | Build | Python |
+| 17 | [Chatbots: Rule-Based to Neural](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/17-chatbots-rule-to-neural) | Build | Python |
+| 18 | [Multilingual NLP](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/18-multilingual-nlp) | Build | Python |
+| 19 | [Subword Tokenization: BPE, WordPiece, Unigram, SentencePiece](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/19-subword-tokenization) | Learn | Python |
+| 20 | [Structured Outputs & Constrained Decoding](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/20-structured-outputs-constrained-decoding) | Build | Python |
+| 21 | [NLI & Textual Entailment](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/21-nli-textual-entailment) | Learn | Python |
+| 22 | [Embedding Models Deep Dive](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/22-embedding-models-deep-dive) | Learn | Python |
+| 23 | [Chunking Strategies for RAG](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/23-chunking-strategies-rag) | Build | Python |
+| 24 | [Coreference Resolution](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/24-coreference-resolution) | Learn | Python |
+| 25 | [Entity Linking & Disambiguation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/25-entity-linking) | Build | Python |
+| 26 | [Relation Extraction & Knowledge Graph Construction](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/26-relation-extraction-kg) | Build | Python |
+| 27 | [LLM Evaluation: RAGAS, DeepEval, G-Eval](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/27-llm-evaluation-frameworks) | Build | Python |
+| 28 | [Long-Context Evaluation: NIAH, RULER, LongBench, MRCR](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/28-long-context-evaluation) | Learn | Python |
+| 29 | [Dialogue State Tracking](/rohitg00/ai-engineering-from-scratch/blob/main/phases/05-nlp-foundations-to-advanced/29-dialogue-state-tracking) | Build | Python |
+
+**Phase 6 — Speech & Audio**  `17 lessons`  *Hear, understand, speak.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [Audio Fundamentals: Waveforms, Sampling, FFT](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/01-audio-fundamentals) | Learn | Python |
+| 02 | [Spectrograms, Mel Scale & Audio Features](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/02-spectrograms-mel-features) | Build | Python |
+| 03 | [Audio Classification](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/03-audio-classification) | Build | Python |
+| 04 | [Speech Recognition (ASR)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/04-speech-recognition-asr) | Build | Python |
+| 05 | [Whisper: Architecture & Fine-Tuning](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/05-whisper-architecture-finetuning) | Build | Python |
+| 06 | [Speaker Recognition & Verification](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/06-speaker-recognition-verification) | Build | Python |
+| 07 | [Text-to-Speech (TTS)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/07-text-to-speech) | Build | Python |
+| 08 | [Voice Cloning & Voice Conversion](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/08-voice-cloning-conversion) | Build | Python |
+| 09 | [Music Generation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/09-music-generation) | Build | Python |
+| 10 | [Audio-Language Models](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/10-audio-language-models) | Build | Python |
+| 11 | [Real-Time Audio Processing](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/11-real-time-audio-processing) | Build | Python, Rust |
+| 12 | [Build a Voice Assistant Pipeline](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/12-voice-assistant-pipeline) | Build | Python |
+| 13 | [Neural Audio Codecs — EnCodec, SNAC, Mimi, DAC](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/13-neural-audio-codecs) | Learn | Python |
+| 14 | [Voice Activity Detection & Turn-Taking](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/14-voice-activity-detection-turn-taking) | Build | Python |
+| 15 | [Streaming Speech-to-Speech — Moshi, Hibiki](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/15-streaming-speech-to-speech-moshi-hibiki) | Learn | Python |
+| 16 | [Voice Anti-Spoofing & Audio Watermarking](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/16-anti-spoofing-audio-watermarking) | Build | Python |
+| 17 | [Audio Evaluation — WER, MOS, MMAU, Leaderboards](/rohitg00/ai-engineering-from-scratch/blob/main/phases/06-speech-and-audio/17-audio-evaluation-metrics) | Learn | Python |
+
+**Phase 7 — Transformers Deep Dive**  `14 lessons`  *The architecture that changed everything.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [Why Transformers: The Problems with RNNs](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/01-why-transformers) | Learn | Python |
+| 02 | [Self-Attention from Scratch](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/02-self-attention-from-scratch) | Build | Python |
+| 03 | [Multi-Head Attention](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/03-multi-head-attention) | Build | Python |
+| 04 | [Positional Encoding: Sinusoidal, RoPE, ALiBi](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/04-positional-encoding) | Build | Python |
+| 05 | [The Full Transformer: Encoder + Decoder](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/05-full-transformer) | Build | Python |
+| 06 | [BERT — Masked Language Modeling](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/06-bert-masked-language-modeling) | Build | Python |
+| 07 | [GPT — Causal Language Modeling](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/07-gpt-causal-language-modeling) | Build | Python |
+| 08 | [T5, BART — Encoder-Decoder Models](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/08-t5-bart-encoder-decoder) | Learn | Python |
+| 09 | [Vision Transformers (ViT)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/09-vision-transformers) | Build | Python |
+| 10 | [Audio Transformers — Whisper Architecture](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/10-audio-transformers-whisper) | Learn | Python |
+| 11 | [Mixture of Experts (MoE)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/11-mixture-of-experts) | Build | Python |
+| 12 | [KV Cache, Flash Attention & Inference Optimization](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/12-kv-cache-flash-attention) | Build | Python |
+| 13 | [Scaling Laws](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/13-scaling-laws) | Learn | Python |
+| 14 | [Build a Transformer from Scratch](/rohitg00/ai-engineering-from-scratch/blob/main/phases/07-transformers-deep-dive/14-build-a-transformer-capstone) | Build | Python |
+
+**Phase 8 — Generative AI**  `14 lessons`  *Create images, video, audio, 3D, and more.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [Generative Models: Taxonomy & History](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/01-generative-models-taxonomy-history) | Learn | Python |
+| 02 | [Autoencoders & VAE](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/02-autoencoders-vae) | Build | Python |
+| 03 | [GANs: Generator vs Discriminator](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/03-gans-generator-discriminator) | Build | Python |
+| 04 | [Conditional GANs & Pix2Pix](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/04-conditional-gans-pix2pix) | Build | Python |
+| 05 | [StyleGAN](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/05-stylegan) | Build | Python |
+| 06 | [Diffusion Models — DDPM from Scratch](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/06-diffusion-ddpm-from-scratch) | Build | Python |
+| 07 | [Latent Diffusion & Stable Diffusion](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/07-latent-diffusion-stable-diffusion) | Build | Python |
+| 08 | [ControlNet, LoRA & Conditioning](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/08-controlnet-lora-conditioning) | Build | Python |
+| 09 | [Inpainting, Outpainting & Editing](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/09-inpainting-outpainting-editing) | Build | Python |
+| 10 | [Video Generation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/10-video-generation) | Build | Python |
+| 11 | [Audio Generation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/11-audio-generation) | Build | Python |
+| 12 | [3D Generation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/12-3d-generation) | Build | Python |
+| 13 | [Flow Matching & Rectified Flows](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/13-flow-matching-rectified-flows) | Build | Python |
+| 14 | [Evaluation: FID, CLIP Score](/rohitg00/ai-engineering-from-scratch/blob/main/phases/08-generative-ai/14-evaluation-fid-clip-score) | Build | Python |
+
+**Phase 9 — Reinforcement Learning**  `12 lessons`  *The foundation of RLHF and game-playing AI.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [MDPs, States, Actions & Rewards](/rohitg00/ai-engineering-from-scratch/blob/main/phases/09-reinforcement-learning/01-mdps-states-actions-rewards) | Learn | Python |
+| 02 | [Dynamic Programming](/rohitg00/ai-engineering-from-scratch/blob/main/phases/09-reinforcement-learning/02-dynamic-programming) | Build | Python |
+| 03 | [Monte Carlo Methods](/rohitg00/ai-engineering-from-scratch/blob/main/phases/09-reinforcement-learning/03-monte-carlo-methods) | Build | Python |
+| 04 | [Q-Learning, SARSA](/rohitg00/ai-engineering-from-scratch/blob/main/phases/09-reinforcement-learning/04-q-learning-sarsa) | Build | Python |
+| 05 | [Deep Q-Networks (DQN)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/09-reinforcement-learning/05-dqn) | Build | Python |
+| 06 | [Policy Gradients — REINFORCE](/rohitg00/ai-engineering-from-scratch/blob/main/phases/09-reinforcement-learning/06-policy-gradients-reinforce) | Build | Python |
+| 07 | [Actor-Critic — A2C, A3C](/rohitg00/ai-engineering-from-scratch/blob/main/phases/09-reinforcement-learning/07-actor-critic-a2c-a3c) | Build | Python |
+| 08 | [PPO](/rohitg00/ai-engineering-from-scratch/blob/main/phases/09-reinforcement-learning/08-ppo) | Build | Python |
+| 09 | [Reward Modeling & RLHF](/rohitg00/ai-engineering-from-scratch/blob/main/phases/09-reinforcement-learning/09-reward-modeling-rlhf) | Build | Python |
+| 10 | [Multi-Agent RL](/rohitg00/ai-engineering-from-scratch/blob/main/phases/09-reinforcement-learning/10-multi-agent-rl) | Build | Python |
+| 11 | [Sim-to-Real Transfer](/rohitg00/ai-engineering-from-scratch/blob/main/phases/09-reinforcement-learning/11-sim-to-real-transfer) | Build | Python |
+| 12 | [RL for Games](/rohitg00/ai-engineering-from-scratch/blob/main/phases/09-reinforcement-learning/12-rl-for-games) | Build | Python |
+
+**Phase 10 — LLMs from Scratch**  `22 lessons`  *Build, train, and understand large language models.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [Tokenizers: BPE, WordPiece, SentencePiece](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/01-tokenizers) | Build | Python |
+| 02 | [Building a Tokenizer from Scratch](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/02-building-a-tokenizer) | Build | Python |
+| 03 | [Data Pipelines for Pre-Training](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/03-data-pipelines) | Build | Python |
+| 04 | [Pre-Training a Mini GPT (124M)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/04-pre-training-mini-gpt) | Build | Python |
+| 05 | [Distributed Training, FSDP, DeepSpeed](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/05-scaling-distributed) | Build | Python |
+| 06 | [Instruction Tuning — SFT](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/06-instruction-tuning-sft) | Build | Python |
+| 07 | [RLHF — Reward Model + PPO](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/07-rlhf) | Build | Python |
+| 08 | [DPO — Direct Preference Optimization](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/08-dpo) | Build | Python |
+| 09 | [Constitutional AI & Self-Improvement](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/09-constitutional-ai-self-improvement) | Build | Python |
+| 10 | [Evaluation — Benchmarks, Evals](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/10-evaluation) | Build | Python |
+| 11 | [Quantization: INT8, GPTQ, AWQ, GGUF](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/11-quantization) | Build | Python, Rust |
+| 12 | [Inference Optimization](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/12-inference-optimization) | Build | Python |
+| 13 | [Building a Complete LLM Pipeline](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/13-building-complete-llm-pipeline) | Build | Python |
+| 14 | [Open Models: Architecture Walkthroughs](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/14-open-models-architecture-walkthroughs) | Learn | Python |
+| 15 | [Speculative Decoding and EAGLE-3](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/15-speculative-decoding-eagle3) | Build | Python |
+| 16 | [Differential Attention (V2)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/16-differential-attention-v2) | Build | Python |
+| 17 | [Native Sparse Attention (DeepSeek NSA)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/17-native-sparse-attention) | Build | Python |
+| 18 | [Multi-Token Prediction (MTP)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/18-multi-token-prediction) | Build | Python |
+| 19 | [DualPipe Parallelism](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/19-dualpipe-parallelism) | Learn | Python |
+| 20 | [DeepSeek-V3 Architecture Walkthrough](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/20-deepseek-v3-walkthrough) | Learn | Python |
+| 21 | [Jamba — Hybrid SSM-Transformer](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/21-jamba-hybrid-ssm-transformer) | Learn | Python |
+| 22 | [Async and Hogwild! Inference](/rohitg00/ai-engineering-from-scratch/blob/main/phases/10-llms-from-scratch/22-async-hogwild-inference) | Build | Python |
+
+**Phase 11 — LLM Engineering**  `17 lessons`  *Put LLMs to work in production.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [Prompt Engineering: Techniques & Patterns](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/01-prompt-engineering) | Build | Python |
+| 02 | [Few-Shot, CoT, Tree-of-Thought](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/02-few-shot-cot) | Build | Python |
+| 03 | [Structured Outputs](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/03-structured-outputs) | Build | Python, TypeScript |
+| 04 | [Embeddings & Vector Representations](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/04-embeddings) | Build | Python |
+| 05 | [Context Engineering](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/05-context-engineering) | Build | Python, TypeScript |
+| 06 | [RAG: Retrieval-Augmented Generation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/06-rag) | Build | Python, TypeScript |
+| 07 | [Advanced RAG: Chunking, Reranking](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/07-advanced-rag) | Build | Python |
+| 08 | [Fine-Tuning with LoRA & QLoRA](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/08-fine-tuning-lora) | Build | Python |
+| 09 | [Function Calling & Tool Use](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/09-function-calling) | Build | Python |
+| 10 | [Evaluation & Testing](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/10-evaluation) | Build | Python |
+| 11 | [Caching, Rate Limiting & Cost](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/11-caching-cost) | Build | Python |
+| 12 | [Guardrails & Safety](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/12-guardrails) | Build | Python |
+| 13 | [Building a Production LLM App](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/13-production-app) | Build | Python |
+| 14 | [Model Context Protocol (MCP)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/14-model-context-protocol) | Build | Python |
+| 15 | [Prompt Caching & Context Caching](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/15-prompt-caching) | Build | Python |
+| 16 | [LangGraph: State Machines for Agents](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/16-langgraph-state-machines) | Build | Python |
+| 17 | [Agent Framework Tradeoffs](/rohitg00/ai-engineering-from-scratch/blob/main/phases/11-llm-engineering/17-agent-framework-tradeoffs) | Learn | Python |
+
+**Phase 12 — Multimodal AI**  `25 lessons`  *See, hear, read, and reason across modalities — from ViT patches to computer-use agents.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [Vision Transformers and the Patch-Token Primitive](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/01-vision-transformer-patch-tokens) | Learn | Python |
+| 02 | [CLIP and Contrastive Vision-Language Pretraining](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/02-clip-contrastive-pretraining) | Build | Python |
+| 03 | [BLIP-2 Q-Former as Modality Bridge](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/03-blip2-qformer-bridge) | Build | Python |
+| 04 | [Flamingo and Gated Cross-Attention](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/04-flamingo-gated-cross-attention) | Learn | Python |
+| 05 | [LLaVA and Visual Instruction Tuning](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/05-llava-visual-instruction-tuning) | Build | Python |
+| 06 | [Any-Resolution Vision — Patch-n'-Pack and NaFlex](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/06-any-resolution-patch-n-pack) | Build | Python |
+| 07 | [Open-Weight VLM Recipes: What Actually Matters](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/07-open-weight-vlm-recipes) | Learn | Python |
+| 08 | [LLaVA-OneVision: Single, Multi, Video](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/08-llava-onevision-single-multi-video) | Build | Python |
+| 09 | [Qwen-VL Family and Dynamic-FPS Video](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/09-qwen-vl-family-dynamic-fps) | Learn | Python |
+| 10 | [InternVL3 Native Multimodal Pretraining](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/10-internvl3-native-multimodal) | Learn | Python |
+| 11 | [Chameleon Early-Fusion Token-Only](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/11-chameleon-early-fusion-tokens) | Build | Python |
+| 12 | [Emu3 Next-Token Prediction for Generation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/12-emu3-next-token-for-generation) | Learn | Python |
+| 13 | [Transfusion Autoregressive + Diffusion](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/13-transfusion-autoregressive-diffusion) | Build | Python |
+| 14 | [Show-o Discrete-Diffusion Unified](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/14-show-o-discrete-diffusion-unified) | Learn | Python |
+| 15 | [Janus-Pro Decoupled Encoders](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/15-janus-pro-decoupled-encoders) | Build | Python |
+| 16 | [MIO Any-to-Any Streaming](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/16-mio-any-to-any-streaming) | Learn | Python |
+| 17 | [Video-Language Temporal Grounding](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/17-video-language-temporal-grounding) | Build | Python |
+| 18 | [Long-Video at Million-Token Context](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/18-long-video-million-token) | Build | Python |
+| 19 | [Audio-Language Models: Whisper to AF3](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/19-audio-language-whisper-to-af3) | Build | Python |
+| 20 | [Omni Models: Thinker-Talker Streaming](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/20-omni-models-thinker-talker) | Build | Python |
+| 21 | [Embodied VLAs: RT-2, OpenVLA, π0, GR00T](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/21-embodied-vlas-openvla-pi0-groot) | Learn | Python |
+| 22 | [Document and Diagram Understanding](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/22-document-diagram-understanding) | Build | Python |
+| 23 | [ColPali Vision-Native Document RAG](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/23-colpali-vision-native-rag) | Build | Python |
+| 24 | [Multimodal RAG and Cross-Modal Retrieval](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/24-multimodal-rag-cross-modal) | Build | Python |
+| 25 | [Multimodal Agents and Computer-Use (Capstone)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/12-multimodal-ai/25-multimodal-agents-computer-use) | Build | Python |
+
+**Phase 13 — Tools & Protocols**  `23 lessons`  *The interfaces between AI and the real world.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [The Tool Interface](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/01-the-tool-interface) | Learn | Python |
+| 02 | [Function Calling Deep Dive](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/02-function-calling-deep-dive) | Build | Python |
+| 03 | [Parallel and Streaming Tool Calls](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/03-parallel-and-streaming-tool-calls) | Build | Python |
+| 04 | [Structured Output](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/04-structured-output) | Build | Python |
+| 05 | [Tool Schema Design](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/05-tool-schema-design) | Learn | Python |
+| 06 | [MCP Fundamentals](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/06-mcp-fundamentals) | Learn | Python |
+| 07 | [Building an MCP Server](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/07-building-an-mcp-server) | Build | Python |
+| 08 | [Building an MCP Client](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/08-building-an-mcp-client) | Build | Python |
+| 09 | [MCP Transports](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/09-mcp-transports) | Learn | Python |
+| 10 | [MCP Resources and Prompts](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/10-mcp-resources-and-prompts) | Build | Python |
+| 11 | [MCP Sampling](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/11-mcp-sampling) | Build | Python |
+| 12 | [MCP Roots and Elicitation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/12-mcp-roots-and-elicitation) | Build | Python |
+| 13 | [MCP Async Tasks](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/13-mcp-async-tasks) | Build | Python |
+| 14 | [MCP Apps](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/14-mcp-apps) | Build | Python |
+| 15 | [MCP Security I — Tool Poisoning](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/15-mcp-security-tool-poisoning) | Learn | Python |
+| 16 | [MCP Security II — OAuth 2.1](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/16-mcp-security-oauth-2-1) | Build | Python |
+| 17 | [MCP Gateways and Registries](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/17-mcp-gateways-and-registries) | Learn | Python |
+| 18 | [MCP Auth in Production — DCR + JWKS on iii](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/18-mcp-auth-production) | Build | Python |
+| 19 | [A2A Protocol](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/19-a2a-protocol) | Build | Python |
+| 20 | [OpenTelemetry GenAI](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/20-opentelemetry-genai) | Build | Python |
+| 21 | [LLM Routing Layer](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/21-llm-routing-layer) | Learn | Python |
+| 22 | [Skills and Agent SDKs](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/22-skills-and-agent-sdks) | Learn | Python |
+| 23 | [Capstone — Tool Ecosystem](/rohitg00/ai-engineering-from-scratch/blob/main/phases/13-tools-and-protocols/23-capstone-tool-ecosystem) | Build | Python |
+
+**Phase 14 — Agent Engineering**  `42 lessons`  *Build agents from first principles — loop, memory, planning, frameworks, benchmarks, production, workbench.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [The Agent Loop](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/01-the-agent-loop) | Build | Python |
+| 02 | [ReWOO and Plan-and-Execute](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/02-rewoo-plan-and-execute) | Build | Python |
+| 03 | [Reflexion and Verbal Reinforcement Learning](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/03-reflexion-verbal-rl) | Build | Python |
+| 04 | [Tree of Thoughts and LATS](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/04-tree-of-thoughts-lats) | Build | Python |
+| 05 | [Self-Refine and CRITIC](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/05-self-refine-and-critic) | Build | Python |
+| 06 | [Tool Use and Function Calling](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/06-tool-use-and-function-calling) | Build | Python |
+| 07 | [Memory — Virtual Context and MemGPT](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/07-memory-virtual-context-memgpt) | Build | Python |
+| 08 | [Memory Blocks and Sleep-Time Compute](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/08-memory-blocks-sleep-time-compute) | Build | Python |
+| 09 | [Hybrid Memory — Mem0 Vector + Graph + KV](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/09-hybrid-memory-mem0) | Build | Python |
+| 10 | [Skill Libraries and Lifelong Learning — Voyager](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/10-skill-libraries-voyager) | Build | Python |
+| 11 | [Planning with HTN and Evolutionary Search](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/11-planning-htn-and-evolutionary) | Build | Python |
+| 12 | [Anthropic's Workflow Patterns](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/12-anthropic-workflow-patterns) | Build | Python |
+| 13 | [LangGraph — Stateful Graphs and Durable Execution](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/13-langgraph-stateful-graphs) | Build | Python |
+| 14 | [AutoGen v0.4 — Actor Model](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/14-autogen-actor-model) | Build | Python |
+| 15 | [CrewAI — Role-Based Crews and Flows](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/15-crewai-role-based-crews) | Build | Python |
+| 16 | [OpenAI Agents SDK — Handoffs, Guardrails, Tracing](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/16-openai-agents-sdk) | Build | Python |
+| 17 | [Claude Agent SDK — Subagents and Session Store](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/17-claude-agent-sdk) | Build | Python |
+| 18 | [Agno and Mastra — Production Runtimes](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/18-agno-and-mastra-runtimes) | Learn | Python, TypeScript |
+| 19 | [Benchmarks — SWE-bench, GAIA, AgentBench](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/19-benchmarks-swebench-gaia) | Learn | Python |
+| 20 | [Benchmarks — WebArena and OSWorld](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/20-benchmarks-webarena-osworld) | Learn | Python |
+| 21 | [Computer Use — Claude, OpenAI CUA, Gemini](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/21-computer-use-agents) | Build | Python |
+| 22 | [Voice Agents — Pipecat and LiveKit](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/22-voice-agents-pipecat-livekit) | Build | Python |
+| 23 | [OpenTelemetry GenAI Semantic Conventions](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/23-otel-genai-conventions) | Build | Python |
+| 24 | [Agent Observability — Langfuse, Phoenix, Opik](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/24-agent-observability-platforms) | Learn | Python |
+| 25 | [Multi-Agent Debate and Collaboration](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/25-multi-agent-debate) | Build | Python |
+| 26 | [Failure Modes — Why Agents Break](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/26-failure-modes-agentic) | Build | Python |
+| 27 | [Prompt Injection and the PVE Defense](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/27-prompt-injection-defense) | Build | Python |
+| 28 | [Orchestration Patterns — Supervisor, Swarm, Hierarchical](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/28-orchestration-patterns) | Build | Python |
+| 29 | [Production Runtimes — Queue, Event, Cron](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/29-production-runtimes) | Learn | Python |
+| 30 | [Eval-Driven Agent Development](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/30-eval-driven-agent-development) | Build | Python |
+| 31 | [Agent Workbench: Why Capable Models Still Fail](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/31-agent-workbench-why-models-fail) | Learn | Python |
+| 32 | [The Minimal Agent Workbench](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/32-minimal-agent-workbench) | Build | Python |
+| 33 | [Agent Instructions as Executable Constraints](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/33-instructions-as-executable-constraints) | Build | Python |
+| 34 | [Repo Memory and Durable State](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/34-repo-memory-and-state) | Build | Python |
+| 35 | [Initialization Scripts for Agents](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/35-initialization-scripts) | Build | Python |
+| 36 | [Scope Contracts and Task Boundaries](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/36-scope-contracts) | Build | Python |
+| 37 | [Runtime Feedback Loops](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/37-runtime-feedback-loops) | Build | Python |
+| 38 | [Verification Gates](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/38-verification-gates) | Build | Python |
+| 39 | [Reviewer Agent: Separate Builder from Marker](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/39-reviewer-agent) | Build | Python |
+| 40 | [Multi-Session Handoff](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/40-multi-session-handoff) | Build | Python |
+| 41 | [The Workbench on a Real Repo](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/41-workbench-for-real-repos) | Build | Python |
+| 42 | [Capstone: Ship a Reusable Agent Workbench Pack](/rohitg00/ai-engineering-from-scratch/blob/main/phases/14-agent-engineering/42-agent-workbench-capstone) | Build | Python |
+
+Each Phase 14 workbench lesson (31-42) ships a `mission.md` briefing the agent before it opens the full lesson docs.
+
+**Phase 15 — Autonomous Systems**  `22 lessons`  *Long-horizon agents, self-improvement, and the 2026 safety stack.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [From Chatbots to Long-Horizon Agents (METR)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/01-long-horizon-agents) | Learn | Python |
+| 02 | [STaR, V-STaR, Quiet-STaR: Self-Taught Reasoning](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/02-star-family-reasoning) | Learn | Python |
+| 03 | [AlphaEvolve: Evolutionary Coding Agents](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/03-alphaevolve-evolutionary-coding) | Learn | Python |
+| 04 | [Darwin Gödel Machine: Self-Modifying Agents](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/04-darwin-godel-machine) | Learn | Python |
+| 05 | [AI Scientist v2: Workshop-Level Research](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/05-ai-scientist-v2) | Learn | Python |
+| 06 | [Automated Alignment Research (Anthropic AAR)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/06-automated-alignment-research) | Learn | Python |
+| 07 | [Recursive Self-Improvement: Capability vs Alignment](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/07-recursive-self-improvement) | Learn | Python |
+| 08 | [Bounded Self-Improvement Designs](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/08-bounded-self-improvement) | Learn | Python |
+| 09 | [Autonomous Coding Agent Landscape (SWE-bench, CodeAct)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/09-coding-agent-landscape) | Learn | Python |
+| 10 | [Claude Code Permission Modes and Auto Mode](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/10-claude-code-permission-modes) | Learn | Python |
+| 11 | [Browser Agents and Indirect Prompt Injection](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/11-browser-agents) | Learn | Python |
+| 12 | [Durable Execution for Long-Running Agents](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/12-durable-execution) | Learn | Python |
+| 13 | [Action Budgets, Iteration Caps, Cost Governors](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/13-cost-governors) | Learn | Python |
+| 14 | [Kill Switches, Circuit Breakers, Canary Tokens](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/14-kill-switches-canaries) | Learn | Python |
+| 15 | [HITL: Propose-Then-Commit](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/15-propose-then-commit) | Learn | Python |
+| 16 | [Checkpoints and Rollback](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/16-checkpoints-rollback) | Learn | Python |
+| 17 | [Constitutional AI and Rule Overrides](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/17-constitutional-ai) | Learn | Python |
+| 18 | [Llama Guard and Input/Output Classification](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/18-llama-guard) | Learn | Python |
+| 19 | [Anthropic Responsible Scaling Policy v3.0](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/19-anthropic-rsp) | Learn | Python |
+| 20 | [OpenAI Preparedness Framework and DeepMind FSF](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/20-openai-preparedness-deepmind-fsf) | Learn | Python |
+| 21 | [METR Time Horizons and External Evaluation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/21-metr-external-evaluation) | Learn | Python |
+| 22 | [CAIS, CAISI, and Societal-Scale Risk](/rohitg00/ai-engineering-from-scratch/blob/main/phases/15-autonomous-systems/22-cais-caisi-societal-risk) | Learn | Python |
+
+**Phase 16 — Multi-Agent & Swarms**  `25 lessons`  *Coordination, emergence, and collective intelligence.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [Why Multi-Agent](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/01-why-multi-agent) | Learn | TypeScript |
+| 02 | [FIPA-ACL Heritage and Speech Acts](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/02-fipa-acl-heritage) | Learn | Python |
+| 03 | [Communication Protocols](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/03-communication-protocols) | Build | TypeScript |
+| 04 | [The Multi-Agent Primitive Model](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/04-primitive-model) | Learn | Python |
+| 05 | [Supervisor / Orchestrator-Worker Pattern](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/05-supervisor-orchestrator-pattern) | Build | Python |
+| 06 | [Hierarchical Architecture and Decomposition Drift](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/06-hierarchical-architecture) | Learn | Python |
+| 07 | [Society of Mind and Multi-Agent Debate](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/07-society-of-mind-debate) | Build | Python |
+| 08 | [Role Specialization — Planner / Critic / Executor / Verifier](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/08-role-specialization) | Build | Python |
+| 09 | [Parallel Swarm and Networked Architectures](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/09-parallel-swarm-networks) | Build | Python |
+| 10 | [Group Chat and Speaker Selection](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/10-group-chat-speaker-selection) | Build | Python |
+| 11 | [Handoffs and Routines (Stateless Orchestration)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/11-handoffs-and-routines) | Build | Python |
+| 12 | [A2A — The Agent-to-Agent Protocol](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/12-a2a-protocol) | Build | Python |
+| 13 | [Shared Memory and Blackboard Patterns](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/13-shared-memory-blackboard) | Build | Python |
+| 14 | [Consensus and Byzantine Fault Tolerance](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/14-consensus-and-bft) | Build | Python |
+| 15 | [Voting, Self-Consistency, and Debate Topology](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/15-voting-debate-topology) | Build | Python |
+| 16 | [Negotiation and Bargaining](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/16-negotiation-bargaining) | Build | Python |
+| 17 | [Generative Agents and Emergent Simulation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/17-generative-agents-simulation) | Build | Python |
+| 18 | [Theory of Mind and Emergent Coordination](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/18-theory-of-mind-coordination) | Build | Python |
+| 19 | [Swarm Optimization (PSO, ACO)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/19-swarm-optimization-pso-aco) | Build | Python |
+| 20 | [MARL — MADDPG, QMIX, MAPPO](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/20-marl-maddpg-qmix-mappo) | Learn | Python |
+| 21 | [Agent Economies, Token Incentives, Reputation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/21-agent-economies) | Learn | Python |
+| 22 | [Production Scaling — Queues, Checkpoints, Durability](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/22-production-scaling-queues-checkpoints) | Build | Python |
+| 23 | [Failure Modes — MAST, Groupthink, Monoculture](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/23-failure-modes-mast-groupthink) | Learn | Python |
+| 24 | [Evaluation and Coordination Benchmarks](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/24-evaluation-coordination-benchmarks) | Learn | Python |
+| 25 | [Case Studies and 2026 State of the Art](/rohitg00/ai-engineering-from-scratch/blob/main/phases/16-multi-agent-and-swarms/25-case-studies-2026-sota) | Learn | Python |
+
+**Phase 17 — Infrastructure & Production**  `28 lessons`  *Ship AI to the real world.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | Managed LLM Platforms — Bedrock, Azure OpenAI, Vertex AI | Learn | Python |
+| 02 | Inference Platform Economics — Fireworks, Together, Baseten, Modal | Learn | Python |
+| 03 | GPU Autoscaling on Kubernetes — Karpenter, KAI Scheduler | Learn | Python |
+| 04 | vLLM Serving Internals — PagedAttention, Continuous Batching, Chunked Prefill | Learn | Python |
+| 05 | EAGLE-3 Speculative Decoding in Production | Learn | Python |
+| 06 | SGLang and RadixAttention for Prefix-Heavy Workloads | Learn | Python |
+| 07 | TensorRT-LLM on Blackwell with FP8 and NVFP4 | Learn | Python |
+| 08 | Inference Metrics — TTFT, TPOT, ITL, Goodput, P99 | Learn | Python |
+| 09 | Production Quantization — AWQ, GPTQ, GGUF, FP8, NVFP4 | Learn | Python |
+| 10 | Cold Start Mitigation for Serverless LLMs | Learn | Python |
+| 11 | Multi-Region LLM Serving and KV Cache Locality | Learn | Python |
+| 12 | Edge Inference — ANE, Hexagon, WebGPU, Jetson | Learn | Python |
+| 13 | LLM Observability Stack Selection | Learn | Python |
+| 14 | Prompt Caching and Semantic Caching Economics | Learn | Python |
+| 15 | Batch APIs — the 50% Discount as Industry Standard | Learn | Python |
+| 16 | Model Routing as a Cost-Reduction Primitive | Learn | Python |
+| 17 | Disaggregated Prefill/Decode — NVIDIA Dynamo and llm-d | Learn | Python |
+| 18 | vLLM Production Stack with LMCache KV Offloading | Learn | Python |
+| 19 | AI Gateways — LiteLLM, Portkey, Kong, Bifrost | Learn | Python |
+| 20 | Shadow, Canary, and Progressive Deployment | Learn | Python |
+| 21 | A/B Testing LLM Features — GrowthBook and Statsig | Learn | Python |
+| 22 | Load Testing LLM APIs — k6, LLMPerf, GenAI-Perf | Build | Python |
+| 23 | SRE for AI — Multi-Agent Incident Response | Learn | Python |
+| 24 | Chaos Engineering for LLM Production | Learn | Python |
+| 25 | Security — Secrets, PII Scrubbing, Audit Logs | Learn | Python |
+| 26 | Compliance — SOC 2, HIPAA, GDPR, EU AI Act, ISO 42001 | Learn | Python |
+| 27 | FinOps for LLMs — Unit Economics and Multi-Tenant Attribution | Learn | Python |
+| 28 | Self-Hosted Serving Selection — llama.cpp, Ollama, TGI, vLLM, SGLang | Learn | Python |
+
+**Phase 18 — Ethics, Safety & Alignment**  `30 lessons`  *Build AI that helps humanity. Not optional.*  
+
+| # | Lesson | Type | Lang |
+| --- | --- | --- | --- |
+| 01 | [Instruction-Following as Alignment Signal](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/01-instruction-following-alignment-signal) | Learn | Python |
+| 02 | [Reward Hacking & Goodhart's Law](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/02-reward-hacking-goodhart) | Learn | Python |
+| 03 | [Direct Preference Optimization Family](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/03-direct-preference-optimization-family) | Learn | Python |
+| 04 | [Sycophancy as RLHF Amplification](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/04-sycophancy-rlhf-amplification) | Learn | Python |
+| 05 | [Constitutional AI & RLAIF](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/05-constitutional-ai-rlaif) | Learn | Python |
+| 06 | [Mesa-Optimization & Deceptive Alignment](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/06-mesa-optimization-deceptive-alignment) | Learn | Python |
+| 07 | [Sleeper Agents — Persistent Deception](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/07-sleeper-agents-persistent-deception) | Learn | Python |
+| 08 | [In-Context Scheming in Frontier Models](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/08-in-context-scheming-frontier-models) | Learn | Python |
+| 09 | [Alignment Faking](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/09-alignment-faking) | Learn | Python |
+| 10 | [AI Control — Safety Despite Subversion](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/10-ai-control-subversion) | Learn | Python |
+| 11 | [Scalable Oversight & Weak-to-Strong](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/11-scalable-oversight-weak-to-strong) | Learn | Python |
+| 12 | [Red-Teaming: PAIR & Automated Attacks](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/12-red-teaming-pair-automated-attacks) | Build | Python |
+| 13 | [Many-Shot Jailbreaking](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/13-many-shot-jailbreaking) | Learn | Python |
+| 14 | [ASCII Art & Visual Jailbreaks](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/14-ascii-art-visual-jailbreaks) | Build | Python |
+| 15 | [Indirect Prompt Injection](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/15-indirect-prompt-injection) | Build | Python |
+| 16 | [Red-Team Tooling: Garak, Llama Guard, PyRIT](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/16-red-team-tooling-garak-llamaguard-pyrit) | Build | Python |
+| 17 | [WMDP & Dual-Use Capability Evaluation](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/17-wmdp-dual-use-evaluation) | Learn | Python |
+| 18 | [Frontier Safety Frameworks — RSP, PF, FSF](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/18-frontier-safety-frameworks-rsp-pf-fsf) | Learn | — |
+| 19 | [Model Welfare Research](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/19-model-welfare-research) | Learn | Python |
+| 20 | [Bias & Representational Harm](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/20-bias-representational-harm) | Build | Python |
+| 21 | [Fairness Criteria: Group, Individual, Counterfactual](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/21-fairness-criteria-group-individual-counterfactual) | Learn | Python |
+| 22 | [Differential Privacy for LLMs](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/22-differential-privacy-for-llms) | Build | Python |
+| 23 | [Watermarking: SynthID, Stable Signature, C2PA](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/23-watermarking-synthid-stable-signature-c2pa) | Build | Python |
+| 24 | [Regulatory Frameworks: EU, US, UK, Korea](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/24-regulatory-frameworks-eu-us-uk-korea) | Learn | — |
+| 25 | [EchoLeak & CVEs for AI](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/25-echoleak-cves-for-ai) | Learn | Python |
+| 26 | [Model, System & Dataset Cards](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/26-model-system-dataset-cards) | Build | Python |
+| 27 | [Data Provenance & Training-Data Governance](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/27-data-provenance-training-governance) | Learn | Python |
+| 28 | [Alignment Research Ecosystem: MATS, Redwood, Apollo, METR](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/28-alignment-research-ecosystem) | Learn | — |
+| 29 | [Moderation Systems: OpenAI, Perspective, Llama Guard](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/29-moderation-systems-openai-perspective-llamaguard) | Build | Python |
+| 30 | [Dual-Use Risk: Cyber, Bio, Chem, Nuclear](/rohitg00/ai-engineering-from-scratch/blob/main/phases/18-ethics-safety-alignment/30-dual-use-risk-cyber-bio-chem-nuclear) | Learn | — |
+
+**Phase 19 — Capstone Projects**  `17 projects`  *2026 end-to-end shippable products, 20-40 hours each.*  
+
+| # | Project | Combines | Lang |
+| --- | --- | --- | --- |
+| 01 | [Terminal-Native Coding Agent](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/01-terminal-native-coding-agent) | P0 P5 P7 P10 P11 P13 P14 P15 P17 P18 | TypeScript, Python |
+| 02 | [RAG over Codebase (Cross-Repo Semantic Search)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/02-rag-over-codebase) | P5 P7 P11 P13 P17 | Python, TypeScript |
+| 03 | [Real-Time Voice Assistant (ASR → LLM → TTS)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/03-realtime-voice-assistant) | P6 P7 P11 P13 P14 P17 | Python, TypeScript |
+| 04 | [Multimodal Document QA (Vision-First)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/04-multimodal-document-qa) | P4 P5 P7 P11 P12 P17 | Python, TypeScript |
+| 05 | [Autonomous Research Agent (AI-Scientist Class)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/05-autonomous-research-agent) | P0 P2 P3 P7 P10 P14 P15 P16 P18 | Python |
+| 06 | [DevOps Troubleshooting Agent for Kubernetes](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/06-devops-troubleshooting-agent) | P11 P13 P14 P15 P17 P18 | Python, TypeScript |
+| 07 | [End-to-End Fine-Tuning Pipeline](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/07-end-to-end-fine-tuning-pipeline) | P2 P3 P7 P10 P11 P17 P18 | Python |
+| 08 | [Production RAG Chatbot (Regulated Vertical)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/08-production-rag-chatbot) | P5 P7 P11 P12 P17 P18 | Python, TypeScript |
+| 09 | [Code Migration Agent (Repo-Level Upgrade)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/09-code-migration-agent) | P5 P7 P11 P13 P14 P15 P17 | Python, TypeScript |
+| 10 | [Multi-Agent Software Engineering Team](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/10-multi-agent-software-team) | P11 P13 P14 P15 P16 P17 | Python, TypeScript |
+| 11 | [LLM Observability & Eval Dashboard](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/11-llm-observability-dashboard) | P11 P13 P17 P18 | TypeScript, Python |
+| 12 | [Video Understanding Pipeline (Scene → QA)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/12-video-understanding-pipeline) | P4 P6 P7 P11 P12 P17 | Python, TypeScript |
+| 13 | [MCP Server with Registry and Governance](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/13-mcp-server-with-registry) | P11 P13 P14 P17 P18 | Python, TypeScript |
+| 14 | [Speculative-Decoding Inference Server](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/14-speculative-decoding-server) | P3 P7 P10 P17 | Python |
+| 15 | [Constitutional Safety Harness + Red-Team Range](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/15-constitutional-safety-harness) | P10 P11 P13 P14 P18 | Python |
+| 16 | [GitHub Issue-to-PR Autonomous Agent](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/16-github-issue-to-pr-agent) | P11 P13 P14 P15 P17 | Python, TypeScript |
+| 17 | [Personal AI Tutor (Adaptive, Multimodal)](/rohitg00/ai-engineering-from-scratch/blob/main/phases/19-capstone-projects/17-personal-ai-tutor) | P5 P6 P11 P12 P14 P17 P18 | Python, TypeScript |
+
+```
+░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
+```
+
+## The toolkitEvery lesson produces a reusable artifact. By the end you have:
+
+```
+outputs/
+├── prompts/      prompt templates for every AI task
+└── skills/       SKILL.md files for AI coding agents
+```
+
+Install them with [SkillKit](https://github.com/rohitg00/skillkit). Plug them into Claude, Cursor, Codex, OpenClaw, Hermes, or any MCP-compatible agent. Real tools, not homework.
+
+### Install every course skill into your agentThe repo ships 378 skills and 99 prompts under `phases/**/outputs/`. `scripts/install_skills.py` walks every artifact, parses YAML frontmatter, and copies the matching files into a target directory in the layout your agent expects.
+
+python3 scripts/install\_skills.py ~/.claude/skills                 # every skill, SkillKit layout
+python3 scripts/install\_skills.py ./out --type all                 # skills + prompts + agents
+python3 scripts/install\_skills.py ./out --phase 14                 # one phase only
+python3 scripts/install\_skills.py ./out --tag rag                  # filter by tag
+python3 scripts/install\_skills.py ./out --layout flat              # flat files instead of SkillKit
+python3 scripts/install\_skills.py ./out --dry-run                  # preview without writing
+python3 scripts/install\_skills.py ./out --force                    # overwrite existing files
+
+By default the script refuses to overwrite an existing destination and exits with code 1 after listing every colliding path. Use `--dry-run` to preview collisions or `--force` to overwrite. Every non-dry-run run writes a `manifest.json` in the target with the full inventory grouped by type and phase. Pick the layout your agent reads:
+
+| `--layout` | Path written |
+| --- | --- |
+| `skillkit` | `<target>/<name>/SKILL.md` (Claude / Cursor / SkillKit) |
+| `by-phase` | `<target>/phase-NN/<name>.md` |
+| `flat` | `<target>/<name>.md` |
+
+### Drop the agent workbench into your own repoThe Phase 14 capstone ships a reusable Agent Workbench pack (AGENTS.md, schemas, init / verify / handoff scripts). Scaffold it into any repo with:
+
+python3 scripts/scaffold\_workbench.py path/to/your-repo            # full pack + seeds
+python3 scripts/scaffold\_workbench.py path/to/your-repo --minimal  # skip docs/
+python3 scripts/scaffold\_workbench.py path/to/your-repo --dry-run  # preview only
+python3 scripts/scaffold\_workbench.py path/to/your-repo --force    # overwrite
+
+You get the seven workbench surfaces wired up, a starter `task_board.json`, and a fresh `agent_state.json` at `schema_version: 1`. From there: edit the task, edit `AGENTS.md`, run `scripts/init_agent.py`, hand the contract to your agent. The pack source lives at `phases/14-agent-engineering/42-agent-workbench-capstone/outputs/agent-workbench-pack/`.
+
+### Browse the entire course as JSON`scripts/build_catalog.py` walks every phase, every lesson, every artifact on disk and writes `catalog.json` at the repo root. One file, every course truth.
+
+python3 scripts/build\_catalog.py               # writes <repo>/catalog.json
+python3 scripts/build\_catalog.py --stdout      # to stdout, do not touch repo
+python3 scripts/build\_catalog.py --out path/to/file.json
+
+The catalog is filesystem-derived, not README-derived, so counts always match what is actually on disk. Use it for site builds, downstream tooling, or to verify the README counts have not drifted. Schema is documented at the top of the script.
+
+A GitHub Action (`.github/workflows/curriculum.yml`) rebuilds `catalog.json` on every PR and fails the build if the committed file is stale. After editing any lesson, run `python3 scripts/build_catalog.py` and commit the result, or CI will reject the PR. The same workflow runs `audit_lessons.py` in warn-only mode (so existing drift does not block contributors).
+
+### Smoke-check every lesson's Python code`scripts/lesson_run.py` byte-compiles every `.py` file under each lesson's `code/` directory. Default mode is syntax-check only — no execution, no API keys, no heavy ML deps required. Catches the regressions contributors introduce most often (bad indentation, broken f-strings, stray edits).
+
+python3 scripts/lesson\_run.py                  # syntax-check the whole curriculum
+python3 scripts/lesson\_run.py --phase 14       # one phase only
+python3 scripts/lesson\_run.py --json           # JSON report on stdout
+python3 scripts/lesson\_run.py --strict         # exit 1 if any lesson fails
+python3 scripts/lesson\_run.py --execute        # actually run, 10s timeout per lesson
+
+`--execute` runs each lesson's `code/main.py` (or the first `.py` file) with a 10-second timeout. Lessons whose entry file starts with a `# requires: pkg1, pkg2` comment listing non-stdlib deps are skipped with reason `needs <deps>`. The script is opt-in and not wired into CI.
+
+Stdlib only, Python 3.10+. Set `LINK_CHECK_SKIP=domain1,domain2` to override the default skip-list (`twitter.com`, `x.com`, `linkedin.com`, `instagram.com`, `medium.com` — domains that aggressively block automated HEAD/GET).
+
+## Where to start| Background | Start at | Estimated time |
+| --- | --- | --- |
+| New to programming and AI | Phase 0 — Setup | ~306 hours |
+| Know Python, new to ML | Phase 1 — Math Foundations | ~270 hours |
+| Know ML, new to deep learning | Phase 3 — Deep Learning Core | ~200 hours |
+| Know deep learning, want LLMs and agents | Phase 10 — LLMs from Scratch | ~100 hours |
+| Senior engineer, only want agent engineering | Phase 14 — Agent Engineering | ~60 hours |
+
+```
+░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
+```
+
+## Why this matters now| <sub>FIG_003 · A</sub>   **THE INDUSTRY SIGNAL** | <sub>FIG_003 · B</sub>   **FOUNDATIONAL PAPERS COVERED** |
+| --- | --- |
+| > *"The hottest new programming language is English."*   > — **Andrej Karpathy** ([tweet](https://x.com/karpathy/status/1617979122625712128))  > *"Software engineering is being remade in front of our eyes."*   > — **Boris Cherny**, creator of Claude Code  > *"Models will keep getting better. The skill that compounds is **knowing what to build**."*   > — Industry consensus, 2026 | - *Attention Is All You Need* — Vaswani et al., 2017 → [Phase 7](#phase-7) - *Language Models are Few-Shot Learners* (GPT-3) → [Phase 10](#phase-10) - *Denoising Diffusion Probabilistic Models* → [Phase 8](#phase-8) - *InstructGPT / RLHF* → [Phase 10](#phase-10) - *Direct Preference Optimization* → [Phase 10](#phase-10) - *Chain-of-Thought Prompting* → [Phase 11](#phase-11) - *ReAct: Reasoning + Acting in LLMs* → [Phase 14](#phase-14) - *Model Context Protocol* — Anthropic → [Phase 13](#phase-13) |
+
+```
+░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
+```
+
+## Contributing| Goal | Read |
+| --- | --- |
+| Contribute a lesson or fix | [CONTRIBUTING.md](/rohitg00/ai-engineering-from-scratch/blob/main/CONTRIBUTING.md) |
+| Fork for your team or school | [FORKING.md](/rohitg00/ai-engineering-from-scratch/blob/main/FORKING.md) |
+| Lesson template | [LESSON\_TEMPLATE.md](/rohitg00/ai-engineering-from-scratch/blob/main/LESSON_TEMPLATE.md) |
+| Track progress | [ROADMAP.md](/rohitg00/ai-engineering-from-scratch/blob/main/ROADMAP.md) |
+| Glossary | [glossary/terms.md](/rohitg00/ai-engineering-from-scratch/blob/main/glossary/terms.md) |
+| Code of conduct | [CODE\_OF\_CONDUCT.md](/rohitg00/ai-engineering-from-scratch/blob/main/CODE_OF_CONDUCT.md) |
+
+Before submitting a lesson, run the invariant check:
+
+python3 scripts/audit\_lessons.py           # full curriculum
+python3 scripts/audit\_lessons.py --phase 14  # single phase
+python3 scripts/audit\_lessons.py --json    # CI-friendly output
+
+Exit code is non-zero when any rule fails. Rules (L001–L010) validate directory shape, `docs/en.md` presence + H1, `code/` non-emptiness, `quiz.json` schema (rejects the legacy `q/choices/answer` keys that caused issue #102), and relative links inside lesson docs.
+
+```
+░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
+```
+
+## Sponsor the workFree, MIT-licensed, 435 lessons. The curriculum is maintained on sponsorship alone. Cash only.
+
+**Reach (verified 2026-05-14):** 55,593 monthly visitors · 90,709 page views · 7.5K stars · Twitter/X is the #1 acquisition channel.
+
+| Tier | $/mo | What you get |
+| --- | --- | --- |
+| Backer | $25 | Name in BACKERS.md |
+| Bronze | $250 | Text-only row in README sponsor block + launch-day tweet |
+| Silver | $750 | Small logo in README + listed as one supported provider in API lessons |
+| Gold | $2,000 | Medium logo in README + sponsor page + quarterly X / LinkedIn co-feature |
+| Platinum | $5,000 | Hero logo above the fold + one dedicated integration lesson, max 1 partner |
+
+Full rate card, hard rules, pricing anchors, and reach data: [SPONSORS.md](/rohitg00/ai-engineering-from-scratch/blob/main/SPONSORS.md). Sign up via [GitHub Sponsors](https://github.com/sponsors/rohitg00).
+
+```
+░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
+```
+
+## Star history [![Star history](https://camo.githubusercontent.com/d32e273863ca553ccbda38165c8dc875089aed4fb34308b3f19a1654d8312dc5/68747470733a2f2f6170692e737461722d686973746f72792e636f6d2f7376673f7265706f733d726f6869746730302f61692d656e67696e656572696e672d66726f6d2d7363726174636826747970653d44617465)](https://star-history.com/#rohitg00/ai-engineering-from-scratch&Date)
+
+If this manual helped you, star the repo. It keeps the project alive.
+
+## LicenseMIT. Use it however you want — fork it, teach it, sell it, ship it. Attribution appreciated, not required.
+
+Maintained by [Rohit Ghumare](https://github.com/rohitg00) and the community.
+
+<sub><a href="https://x.com/ghumare64" rel="nofollow">@ghumare64</a> &nbsp;·&nbsp; <a href="https://aiengineeringfromscratch.com" rel="nofollow">aiengineeringfromscratch.com</a> &nbsp;·&nbsp; <a href="https://github.com/rohitg00/ai-engineering-from-scratch/issues/new/choose">Report / Suggest</a></sub>
