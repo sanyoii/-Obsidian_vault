@@ -37,6 +37,13 @@ date: 2026-05-24
 | **Scrapling** | `import scrapling` 或 `scrapling` CLI | 網頁爬蟲（含繞 Cloudflare、瀏覽器自動化） |
 | **Recursive Mode** | 專案內執行 bootstrap.ps1 → `Implement the run` | 大型複雜任務的七階段結構化工作流程 |
 
+## 外部工具與 API 服務
+
+| 網站 | URL | 說明 |
+|------|-----|------|
+| **Browse.sh** | https://browse.sh | AI Agent 瀏覽器自動化技能目錄，內含 500+ 預製技能（搜尋商品、查航班、追包裹等），支援本地或 Browserbase 雲端執行 |
+| **Superior APIs** | https://superiorapis.cteam.com.tw/ | 台灣 cteam 團隊的 API + MCP Server 整合平台，提供現成 API 服務與 MCP 工具供 Claude 直接呼叫 |
+
 ### gbrain 詳細用法
 
 ```powershell
