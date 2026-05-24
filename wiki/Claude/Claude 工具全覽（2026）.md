@@ -72,6 +72,8 @@ MCP Servers 讓 Claude 可以直接呼叫外部工具。設定於 `~/.claude/set
 | **codegraph** | `~/.claude.json` | 程式碼知識圖譜：符號搜尋、呼叫鏈、影響分析 | 查詢「誰呼叫了 X」、重構前影響分析 |
 | **context7** | `~/.claude.json` | 查詢任意函式庫最新文件 | 問「Next.js 最新 API 怎麼用」、「Tailwind v4 怎麼設定」|
 | **chrome-devtools** | `settings.json`（目前停用）| 控制 Chrome：截圖、console、network | 需要瀏覽器自動化、截圖時 |
+| **GitNexus** ⚡ | 備用（未安裝）| 16 工具 + hooks + 執行流程追蹤，Claude Code 最深整合 | 超過 1000 檔的複雜專案，或需要 Process 追蹤 |
+| **codebase-memory-mcp** 🚀 | 備用（未安裝）| 純 C 引擎，155 語言，內建語意搜尋，速度最快 | 超大 codebase（>5000 檔）或需跨服務 HTTP/gRPC 路由追蹤 |
 
 > **注意：** gbrain 是 CLI 工具（`gbrain search`），不是 MCP Server。Ruflo/ruv-swarm 是 session-level 工具，透過 Claude Code 框架掛載，非本機設定的 MCP。
 
@@ -89,6 +91,70 @@ codegraph_files      → 列出目錄下的符號
 ```
 
 **使用時機：** 進入陌生程式碼前、重構前確認影響範圍、找 bug 呼叫鏈
+
+---
+
+### GitNexus（備用，未安裝）
+
+> **定位：** codegraph 的進化版，對 Claude Code 整合最深，適合中大型專案。  
+> **授權：** PolyForm Noncommercial（個人使用免費，商業需另取授權）  
+> **安裝：** `npm install -g gitnexus` → `npx gitnexus analyze` → `npx gitnexus setup`
+
+**16 MCP 工具：**
+
+```
+query          → BM25 + 語意 + RRF 混合搜尋（比 codegraph 更準）
+context        → 360 度符號視圖，含 process 參與情況
+impact         → Blast radius 分析（含信心度）
+detect_changes → git diff → 受影響 process 對應
+rename         → graph-aware 多檔同步重命名
+cypher         → 原始 Cypher 圖查詢
+group_*        → 跨 repo 群組查詢 / 合約提取
+```
+
+**GitNexus 獨有功能：**
+- **Process/Execution Flow 追蹤** — 理解完整業務執行路徑，不只是誰呼叫誰
+- **Claude Code PostToolUse hook** — commit 後自動偵測索引過時，提醒重新 index
+- **Skill 自動生成** — 根據 code community 自動產生 repo 專屬 skill files
+- **Code Wiki 生成** — `gitnexus wiki`（需 LLM API key）
+- **Web UI** — [gitnexus.vercel.app](https://gitnexus.vercel.app) 瀏覽器版 3D 圖，不用安裝
+
+**何時考慮安裝：** 專案超過 1000 檔、有複雜跨服務呼叫鏈、或想要 Process 流程視覺化時。
+
+---
+
+### codebase-memory-mcp（備用，未安裝）
+
+> **定位：** 速度與規模最強，純 C 引擎，適合超大 codebase。  
+> **授權：** MIT（完全自由）  
+> **安裝：** PowerShell 一行 `irm https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.ps1 | iex`
+
+**核心優勢（vs codegraph）：**
+
+| 面向 | 差異 |
+|------|------|
+| 語言覆蓋 | **155 語言**（含 Docker/K8s manifest）vs codegraph 主流語言 |
+| 索引速度 | Linux kernel 28M 行 → **3 分鐘**（RAM-first C pipeline）|
+| 語意搜尋 | ✅ 內建 Nomic embedding，**不需 API key** |
+| Token 效率 | 5 個結構查詢 ~3,400 tokens（vs grep 探索 ~412,000）|
+| 跨服務連結 | ✅ HTTP/gRPC/GraphQL/tRPC 路由 ↔ call-site 對應 |
+| 死程式碼偵測 | ✅ `detect_dead_code` |
+| ADR 管理 | ✅ `manage_adr` 跨 session 保存架構決策 |
+| 團隊共享索引 | ✅ `.zst` 壓縮 SQLite 可 commit，隊友 clone 直接用 |
+
+**14 MCP 工具（重點）：**
+
+```
+search_graph    → regex 模式、label 過濾、degree 範圍搜尋
+semantic_query  → 語意向量搜尋（不需 API key）
+trace_call_path → 呼叫鏈追蹤（inbound / outbound）
+get_architecture → 語言/packages/routes/hotspot 一次回傳
+detect_changes  → git diff → 受影響符號 + 風險分類
+manage_adr      → Architecture Decision Records 跨 session 記憶
+cypher_query    → Cypher 圖查詢
+```
+
+**何時考慮安裝：** 專案超過 5000 檔、需要跨服務 HTTP 路由追蹤、或多人協作需共享索引時。
 
 ---
 
@@ -244,7 +310,9 @@ python app.py
 要做什麼？
 │
 ├─ 寫程式/開發 → Claude Code + 對應 Skill（debugging/TDD/review）
-│                + 需要了解架構？→ CodeGraph MCP
+│                + 需要了解架構？→ CodeGraph MCP（<1000 檔）
+│                               → GitNexus（中大型，需 Process 追蹤）
+│                               → codebase-memory-mcp（超大型 / 跨服務）
 │                + 需要看文件？→ context7-mcp
 │
 ├─ 設計/視覺 → huashu-design（原型）/ gpt-image-2（圖片）/ guizang-ppt（簡報）
