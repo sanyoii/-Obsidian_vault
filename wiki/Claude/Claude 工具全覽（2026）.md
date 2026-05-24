@@ -67,13 +67,13 @@ gbrain list                        # 列出所有已索引文件
 
 MCP Servers 讓 Claude 可以直接呼叫外部工具。設定於 `~/.claude/settings.json`。
 
-| MCP Server | 用途 | 何時自動啟用 |
-|-----------|------|------------|
-| **codegraph** | 程式碼知識圖譜：符號搜尋、呼叫鏈、影響分析 | 查詢「誰呼叫了 X」、重構前影響分析 |
-| **chrome-devtools** | 控制 Chrome：截圖、console、network、Puppeteer | 需要瀏覽器自動化、截圖時 |
-| **context7** | 查詢任意函式庫最新文件 | 問「Next.js 最新 API 怎麼用」、「Tailwind v4 怎麼設定」|
-| **gbrain** | 個人知識腦查詢 | 查詢個人筆記、課程、知識庫時 |
-| **Ruflo** | 多 Agent 協調、記憶、embeddings | 複雜 Agent 任務編排 |
+| MCP Server | 設定位置 | 用途 | 何時自動啟用 |
+|-----------|---------|------|------------|
+| **codegraph** | `~/.claude.json` | 程式碼知識圖譜：符號搜尋、呼叫鏈、影響分析 | 查詢「誰呼叫了 X」、重構前影響分析 |
+| **context7** | `~/.claude.json` | 查詢任意函式庫最新文件 | 問「Next.js 最新 API 怎麼用」、「Tailwind v4 怎麼設定」|
+| **chrome-devtools** | `settings.json`（目前停用）| 控制 Chrome：截圖、console、network | 需要瀏覽器自動化、截圖時 |
+
+> **注意：** gbrain 是 CLI 工具（`gbrain search`），不是 MCP Server。Ruflo/ruv-swarm 是 session-level 工具，透過 Claude Code 框架掛載，非本機設定的 MCP。
 
 ### CodeGraph 重要指令
 
@@ -98,7 +98,7 @@ codegraph_files      → 列出目錄下的符號
 |------|------|------|------|
 | **social-monitor** | `d:\Claude\social-monitor\` | ✅ 運作中 | X/Threads/IG 定時海巡，Task Scheduler 10:30+22:00 |
 | **job-crawler** | `d:\Claude\job-crawler\` | ✅ Phase 1 完成 | 104/web3/cryptojobs 職缺爬蟲 + Flask UI + Gmail 通知 |
-| **careerbot** | `d:\Claude\careerbot\` | ⚠️ 待設定 | 求職助手，需填 context + resume.pdf |
+| **careerbot** | `d:\Claude\careerbot\` | ✅ 進行中 | 求職助手，20家 in-review，/find-roles 待執行，Web UI: localhost:3000 |
 | **obsidian** | `d:\Claude\obsidian\` | ✅ 活躍 | Obsidian vault，git 備份至 sanyoii/-Obsidian_vault |
 | **open-slide** | `d:\Claude\open-slide\` | 🔍 未用 | 投影片工具（待評估） |
 | **autohedge-env** | `d:\Claude\autohedge-env\` | ⚠️ 待設定 | 需填 API Keys + Solana 錢包私鑰 |
@@ -128,7 +128,7 @@ python app.py
 
 ---
 
-## Agency-Agents（144個）
+## Agency-Agents（162個）
 
 安裝位置：`C:\Users\sanyo\.claude\agents\`
 來源：[msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents)
@@ -192,7 +192,6 @@ python app.py
 | **設計**          | `huashu-design`                  | 做個好看的原型 / HTML Demo                |
 |                 | `gpt-image-2`                    | 生成一張圖 / 做封面圖                       |
 |                 | `guizang-ppt`                    | 雜誌風簡報 / 橫滑 deck                    |
-|                 | `nuwa-skill`                     | 幫我做一個 XXX 的 Skill                  |
 | **開發**          | `repomix-explorer`               | 分析這個 repo / 整個專案結構                 |
 |                 | `context7-mcp`                   | 查最新 Next.js / Prisma / Tailwind 文件 |
 |                 | `claude-api`                     | 用 Claude API 做 / Anthropic SDK     |
