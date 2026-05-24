@@ -258,6 +258,8 @@ python app.py
 | **設計**          | `huashu-design`                  | 做個好看的原型 / HTML Demo                |
 |                 | `gpt-image-2`                    | 生成一張圖 / 做封面圖                       |
 |                 | `guizang-ppt`                    | 雜誌風簡報 / 橫滑 deck                    |
+|                 | `excalidraw-diagram`             | 畫 Excalidraw 圖（流程圖/思維導圖/動畫）       |
+|                 | `mermaid-visualizer`             | 畫 Mermaid 圖（自動防語法錯誤）              |
 | **開發**          | `repomix-explorer`               | 分析這個 repo / 整個專案結構                 |
 |                 | `context7-mcp`                   | 查最新 Next.js / Prisma / Tailwind 文件 |
 |                 | `claude-api`                     | 用 Claude API 做 / Anthropic SDK     |
@@ -285,7 +287,8 @@ python app.py
 |                 | `qimen-dunjia`                   | 奇門排盤                               |
 | **Obsidian**    | `obsidian-markdown`              | Obsidian wikilink/callout 語法       |
 |                 | `obsidian-bases`                 | 建立 Bases 資料庫視圖                     |
-|                 | `json-canvas`                    | 編輯 .canvas 畫布                      |
+|                 | `obsidian-canvas-creator`        | 文字→Canvas（MindMap / Freeform 佈局）  |
+|                 | `json-canvas`                    | 低階編輯現有 .canvas 節點/邊               |
 | **Prompt**      | `prompt-master`                  | 幫我寫一個 prompt / 為 Midjourney 寫提示詞   |
 | **Meta**        | `nuwa-skill`                     | 幫我做一個人物/角色的 Skill                  |
 |                 | `skill-creator`                  | 建立新 Skill                          |
