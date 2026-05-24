@@ -96,6 +96,7 @@ codegraph_files      → 列出目錄下的符號
 | **open-slide** | `d:\Claude\open-slide\` | 🔍 未用 | 投影片工具（待評估） |
 | **autohedge-env** | `d:\Claude\autohedge-env\` | ⚠️ 待設定 | 需填 API Keys + Solana 錢包私鑰 |
 | **brain-docs** | `d:\Claude\brain-docs\` | ✅ 已匯入 | gbrain 文件暫存區，課程字幕已全數匯入 |
+| **hd-decode** | `d:\Claude\hd-decode\` | ✅ 運作中 | 人類圖解讀器，純 HTML 離線工具，雙擊 index.html 即用 |
 
 ### social-monitor 日常操作
 
@@ -177,46 +178,46 @@ python app.py
 
 ### 最常用的 Skills（觸發詞）
 
-| 分類 | Skill | 觸發詞 |
-|------|-------|--------|
-| **文件** | `pdf` | 讀/合併/拆分 PDF |
-| | `pptx` / `docx` / `xlsx` | 做 PowerPoint / Word / Excel |
-| **設計** | `huashu-design` | 做個好看的原型 / HTML Demo |
-| | `gpt-image-2` | 生成一張圖 / 做封面圖 |
-| | `guizang-ppt` | 雜誌風簡報 / 橫滑 deck |
-| | `nuwa-skill` | 幫我做一個 XXX 的 Skill |
-| **開發** | `repomix-explorer` | 分析這個 repo / 整個專案結構 |
-| | `context7-mcp` | 查最新 Next.js / Prisma / Tailwind 文件 |
-| | `claude-api` | 用 Claude API 做 / Anthropic SDK |
-| | `mcp-builder` | 把這個 API 包成 MCP Server |
-| **除錯** | `systematic-debugging` | 幫我 debug / 這裡有問題 |
-| | `diagnose` | 找 root cause |
-| | `recursive-debugging` | 插入 Phase 1.5 修 bug |
-| **測試** | `test-driven-development` | 用 TDD 模式實作 |
-| | `webapp-testing` | 寫 Playwright E2E 測試 |
-| **Git** | `contextual-commit` | 每次 git commit 自動使用 |
-| | `using-git-worktrees` | 並行開發分支管理 |
-| | `finishing-a-development-branch` | 處理 merge/PR |
-| **Code Review** | `requesting-code-review` | 送 review 前 pre-check |
-| | `receiving-code-review` | 處理 review 回饋 |
-| **規劃** | `writing-plans` | 把任務拆成可執行清單 |
-| | `brainstorming` | 幫我想想 / 設計討論 |
-| | `to-prd` | 自動生成 PRD |
-| | `to-issues` | 把計畫拆成 Issues |
-| **知識管理** | `notebooklm-skill` | 查 NotebookLM / 從我的筆記本找 |
-| | `obsidian-cli` | 搜尋 vault / 讀寫 Obsidian 筆記 |
-| | `defuddle` | 讀取這篇文章（網址） |
-| | `kb-retriever` | 本地知識庫查詢 |
-| **命理** | `bazi` / `bazi-skill` | 排八字 / 看命盤 |
-| | `ziwei-doushu` | 排紫微 |
-| | `qimen-dunjia` | 奇門排盤 |
-| **Obsidian** | `obsidian-markdown` | Obsidian wikilink/callout 語法 |
-| | `obsidian-bases` | 建立 Bases 資料庫視圖 |
-| | `json-canvas` | 編輯 .canvas 畫布 |
-| **Prompt** | `prompt-master` | 幫我寫一個 prompt / 為 Midjourney 寫提示詞 |
-| **Meta** | `nuwa-skill` | 幫我做一個人物/角色的 Skill |
-| | `skill-creator` | 建立新 Skill |
-| | `ssc` | 建立 Agent / Hook |
+| 分類              | Skill                            | 觸發詞                                |
+| --------------- | -------------------------------- | ---------------------------------- |
+| **文件**          | `pdf`                            | 讀/合併/拆分 PDF                        |
+|                 | `pptx` / `docx` / `xlsx`         | 做 PowerPoint / Word / Excel        |
+| **設計**          | `huashu-design`                  | 做個好看的原型 / HTML Demo                |
+|                 | `gpt-image-2`                    | 生成一張圖 / 做封面圖                       |
+|                 | `guizang-ppt`                    | 雜誌風簡報 / 橫滑 deck                    |
+|                 | `nuwa-skill`                     | 幫我做一個 XXX 的 Skill                  |
+| **開發**          | `repomix-explorer`               | 分析這個 repo / 整個專案結構                 |
+|                 | `context7-mcp`                   | 查最新 Next.js / Prisma / Tailwind 文件 |
+|                 | `claude-api`                     | 用 Claude API 做 / Anthropic SDK     |
+|                 | `mcp-builder`                    | 把這個 API 包成 MCP Server              |
+| **除錯**          | `systematic-debugging`           | 幫我 debug / 這裡有問題                   |
+|                 | `diagnose`                       | 找 root cause                       |
+|                 | `recursive-debugging`            | 插入 Phase 1.5 修 bug                 |
+| **測試**          | `test-driven-development`        | 用 TDD 模式實作                         |
+|                 | `webapp-testing`                 | 寫 Playwright E2E 測試                |
+| **Git**         | `contextual-commit`              | 每次 git commit 自動使用                 |
+|                 | `using-git-worktrees`            | 並行開發分支管理                           |
+|                 | `finishing-a-development-branch` | 處理 merge/PR                        |
+| **Code Review** | `requesting-code-review`         | 送 review 前 pre-check               |
+|                 | `receiving-code-review`          | 處理 review 回饋                       |
+| **規劃**          | `writing-plans`                  | 把任務拆成可執行清單                         |
+|                 | `brainstorming`                  | 幫我想想 / 設計討論                        |
+|                 | `to-prd`                         | 自動生成 PRD                           |
+|                 | `to-issues`                      | 把計畫拆成 Issues                       |
+| **知識管理**        | `notebooklm-skill`               | 查 NotebookLM / 從我的筆記本找             |
+|                 | `obsidian-cli`                   | 搜尋 vault / 讀寫 Obsidian 筆記          |
+|                 | `defuddle`                       | 讀取這篇文章（網址）                         |
+|                 | `kb-retriever`                   | 本地知識庫查詢                            |
+| **命理**          | `bazi` / `bazi-skill`            | 排八字 / 看命盤                          |
+|                 | `ziwei-doushu`                   | 排紫微                                |
+|                 | `qimen-dunjia`                   | 奇門排盤                               |
+| **Obsidian**    | `obsidian-markdown`              | Obsidian wikilink/callout 語法       |
+|                 | `obsidian-bases`                 | 建立 Bases 資料庫視圖                     |
+|                 | `json-canvas`                    | 編輯 .canvas 畫布                      |
+| **Prompt**      | `prompt-master`                  | 幫我寫一個 prompt / 為 Midjourney 寫提示詞   |
+| **Meta**        | `nuwa-skill`                     | 幫我做一個人物/角色的 Skill                  |
+|                 | `skill-creator`                  | 建立新 Skill                          |
+|                 | `ssc`                            | 建立 Agent / Hook                    |
 
 ---
 
@@ -224,10 +225,10 @@ python app.py
 
 位置：`C:\Users\sanyo\.claude\commands\`
 
-| Command | 輸入方式 | 用途 |
-|---------|---------|------|
-| `/threads-to-fb` | 對話中輸入 | Threads 貼文 → 繁中 Facebook 貼文 |
-| `/generate-cover` | 對話中輸入 | 生成 1200×1200 社群封面圖 |
+| Command           | 輸入方式  | 用途                          |
+| ----------------- | ----- | --------------------------- |
+| `/threads-to-fb`  | 對話中輸入 | Threads 貼文 → 繁中 Facebook 貼文 |
+| `/generate-cover` | 對話中輸入 | 生成 1200×1200 社群封面圖          |
 
 ---
 
