@@ -1099,7 +1099,7 @@ Skills 位置：
 
   
 
-目前共 **118 個 Skills**（含 Understand-Anything 8 個），分為以下類別：
+目前共 **96 個 Skills**（含 Understand-Anything 8 個），分為以下類別：
 
   
 
