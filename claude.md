@@ -12,6 +12,13 @@
 
 ---
 
+## 來源文件入庫規則
+
+**Obsidian Clippings / Inbox → raw/sources/**
+- `Clippings/` 和 `Inbox/` 是剪報暫存區，不是最終位置
+- 要進入知識庫前，先手動（或執行 `/compile`）將檔案移至 `raw/sources/`
+- 移入後原 Clippings 檔案刪除，避免重複
+
 ## raw/ 目錄結構
 
 ```
@@ -37,11 +44,12 @@ raw/
 讀取 `raw/` 中尚未處理的文件，執行以下步驟：
 1. 先掃描 `raw/notebooklm/` 的未處理文件 → 以其結構為概念文章骨架
 2. 再掃描 `raw/sources/` 的未處理文件 → 補充細節、引述原文
-3. 在 `wiki/concepts/` 建立或合併概念文章
-4. 更新 `wiki/_index.md` 加入新條目
+3. 在 `wiki/` 對應分類下建立或合併概念文章
+4. 更新 `wiki/_index.md` 加入新條目（同時更新日期與總文章數）
 5. 更新 `wiki/_summaries.md` 加入摘要
 6. 更新 `wiki/_graph.md` 補充反向連結
 7. 在原始文件第一行加上 `<!-- processed: YYYY-MM-DD -->` 標記
+8. **在 `wiki/log.md` 追加一筆記錄**，格式：`YYYY-MM-DD HH:MM | COMPILE | 來源檔 → 產出文章` | 備註
 
 概念文章格式見 `wiki/concepts/_template.md`。
 
@@ -55,15 +63,17 @@ raw/
 5. 將答案存至 `output/queries/YYYY-MM-DD_<簡短標題>.md`
 6. **將 NotebookLM 補充的新資訊存至 `raw/notebooklm/YYYY-MM-DD_query-supplement_<標題>.md`**，等待下次 `/compile` 納入 wiki
 7. 若答案揭示新連結，更新 `wiki/_graph.md`
+8. **在 `wiki/log.md` 追加一筆記錄**，格式：`YYYY-MM-DD HH:MM | QUERY | 問題關鍵字 → output/queries/標題.md` | 備註
 
 > NotebookLM 在這裡扮演「線上擴充資料庫」角色，查詢結果自動回流 raw/ → 下次 compile 進入 wiki，形成持續成長的迴圈。
 
 ### `/lint` — 維護知識庫
-掃描 `wiki/concepts/` 執行：
+掃描 `wiki/` 執行：
 1. 找出資料不一致（同一概念有多個互相矛盾的描述）
 2. 找出缺失資訊（文章中的 `TODO:` 或空白段落）
 3. 發現未連結的相關概念，在 `wiki/_graph.md` 補充建議連結
 4. 提出 3–5 個值得深入探索的問題，存至 `output/lint_<日期>.md`
+5. **在 `wiki/log.md` 追加一筆記錄**，格式：`YYYY-MM-DD HH:MM | LINT | wiki/ → output/lint_日期.md` | 發現問題摘要
 
 ### `/slide <主題>` — 產生投影片
 從 wiki 萃取內容，產生 Marp 格式投影片存至 `output/slides/`。
@@ -89,17 +99,21 @@ raw/
 ```
 Obsidian Web Clipper / PDF
         ↓
+  Clippings/ 或 Inbox/   ← 暫存，需手動移入 raw/
+        ↓
    raw/sources/
         ↓
 NotebookLM 匯出 (FAQ/Study Guide)
         ↓
   raw/notebooklm/
-        ↓ /compile
-    wiki/concepts/
-        ↓ /query
-  output/queries/  ──→  raw/notebooklm/ (新補充)
-        ↓ /lint
-  wiki 持續成長
+        ↓ /compile ──→  wiki/log.md (追加記錄)
+    wiki/
+        ↓ /query  ──→  output/queries/  ──→  raw/notebooklm/ (新補充)
+        ↓              wiki/log.md (追加記錄)
+       /lint ──→  output/lint_日期.md
+                  wiki/log.md (追加記錄)
+        ↓
+  wiki 持續成長，log.md 記錄全程
 ```
 
 ---

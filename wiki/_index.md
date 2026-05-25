@@ -1,8 +1,8 @@
 # 知識庫主索引
 
-> 最後更新：2026-05-08
-> 文章數量：19 篇
-> 原始文件：1 份已處理
+> 最後更新：2026-05-26
+> 文章數量：149 篇
+> 原始文件：持續累積中
 
 ---
 
@@ -10,6 +10,7 @@
 
 - [[_summaries|所有文章摘要]]
 - [[_graph|概念連結圖]]
+- [[log|操作日誌（Karpathy 模式）]]
 - [[課程總覽|課程總覽（入口）]]
 
 ---
@@ -59,7 +60,7 @@
 
 ## 如何新增知識
 
-1. 將文章、PDF、網頁剪報放入 `raw/sources/`
-   或將 NotebookLM 匯出放入 `raw/notebooklm/`
-2. 在 Claude Code 輸入 `/compile`
-3. 索引自動更新
+1. 用 Obsidian Web Clipper 剪報 → 存到 `Clippings/` 或 `Inbox/`
+2. 手動將檔案移至 `raw/sources/`（或 NotebookLM 匯出放 `raw/notebooklm/`）
+3. 在 Claude Code 輸入 `/compile`
+4. 索引與 `log.md` 自動更新
