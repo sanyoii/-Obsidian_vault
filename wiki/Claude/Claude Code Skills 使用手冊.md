@@ -969,4 +969,140 @@ npx ruflo@latest autopilot start --goal "describe goal"
 
 ---
 
-*更新日期：2026-05-14 | Skills 總數：103 | Ruflo 命令：70+ | 已安裝 CLI：repomix v1.14.0、defuddle v0.18.1*
+---
+
+## 💡 CCPlugins 指令（2026-05-25 新增）
+
+來源：[brennercruvinel/CCPlugins](https://github.com/brennercruvinel/CCPlugins)
+
+安裝位置：`C:\Users\sanyo\.claude\commands\`（14 個，含原有 2 個）
+
+這些是比 Skills 更輕量的「Slash Commands」，每個都是結構化 prompt，有 session 記憶和斷點續傳機制。
+
+### `/review`
+**用途：** 派出安全/效能/品質/架構四個 subagent 進行全面 code review。
+```
+「/review」← 對當前專案進行全方位 review
+```
+
+### `/security-scan`
+**用途：** 安全漏洞掃描，掃描結果存到 `security-scan/plan.md`，下次可 resume。
+```
+「/security-scan」← 全專案安全掃描
+「/security-scan src/auth」← 只掃描 auth 目錄
+「/security-scan resume」← 繼續上次未完成的掃描
+```
+
+### `/predict-issues`
+**用途：** 預測代碼中未來可能出問題的地方（複雜度熱點、效能瓶頸、維護難度）。
+```
+「/predict-issues」← 預測專案潛在風險
+```
+
+### `/refactor`
+**用途：** 系統性重構，每步驟自動驗證不破壞功能，session 記憶支援跨對話繼續。
+```
+「/refactor src/utils」← 重構指定目錄
+「/refactor resume」← 繼續上次重構
+```
+
+### `/implement`
+**用途：** 從 URL、本機路徑、或描述實作功能，自動適配專案模式。
+```
+「/implement https://github.com/someuser/feature」← 從 GitHub 實作
+「/implement 新增深色模式切換」← 從描述實作
+```
+
+### `/understand-project`
+**用途：** 深度分析整個專案架構，輸出架構圖、元件地圖、資料流說明。
+```
+「/understand-project」← 分析整個專案
+```
+
+### `/scaffold`
+**用途：** 依照現有專案模式生成新功能骨架（含測試、整合點、文件）。
+```
+「/scaffold user-profile」← 生成 user-profile 功能骨架
+```
+
+### `/commit`
+**用途：** 分析改動，自動生成符合 conventional commit 規範的 commit 訊息。
+```
+「/commit」← 智慧 commit
+```
+
+### `/session-start` / `/session-end`
+**用途：** 工作階段記錄，整合 Claude Code 的 CLAUDE.md 記憶系統。
+```
+「/session-start」← 告訴 Claude 今天的目標
+「/session-end」← 記錄完成事項，準備下次繼續
+```
+
+### `/undo`
+**用途：** 還原上一個操作（優先用 git，再找 project backup）。
+
+### `/todos-to-issues`
+**用途：** 掃描代碼中的 TODO/FIXME/HACK 並自動建立 GitHub Issues（需 gh CLI 登入）。
+```
+「/todos-to-issues」← 批量建立 Issues
+```
+
+---
+
+## 🔬 Understand Anything（2026-05-25 新增）
+
+來源：[Lum1104/Understand-Anything](https://github.com/Lum1104/Understand-Anything)
+
+安裝位置：`C:\Users\sanyo\.claude\skills\`（8 個 Skills）
+
+### `/understand`
+**用途：** 主分析 — 多 agent pipeline 掃描整個專案，建立知識圖譜。
+```
+「/understand」← 掃描分析專案（支援 --language zh-TW）
+```
+
+### `/understand-dashboard`
+**用途：** 開啟互動式 Web Dashboard，視覺化探索程式架構與模組關係。
+```
+「/understand-dashboard」← 啟動瀏覽器視覺化界面
+```
+
+### `/understand-chat`
+**用途：** 用自然語言問任何關於 codebase 的問題，AI 直接回答。
+```
+「/understand-chat 這個專案的認證流程是怎麼運作的？」
+```
+
+### `/understand-diff`
+**用途：** 分析當前 git diff，找出改動影響到哪些模組（code review 前用）。
+```
+「/understand-diff」← 在 commit 前確認改動範圍
+```
+
+### `/understand-explain`
+**用途：** 深度解釋特定檔案或函式的設計邏輯與依賴關係。
+```
+「/understand-explain src/auth/middleware.ts」
+```
+
+### `/understand-onboard`
+**用途：** 為新加入的成員自動生成 onboarding 指南（含架構、關鍵模組、開發流程）。
+```
+「/understand-onboard」← 生成新人入門文件
+```
+
+### `/understand-domain`
+**用途：** 提取業務邏輯，輸出 domains / flows / steps 層級結構。
+```
+「/understand-domain」← 梳理業務邏輯架構
+```
+
+### `/understand-knowledge`
+**用途：** 分析 Karpathy 風格 wiki 知識庫，建立知識索引。
+```
+「/understand-knowledge」← 分析知識文件結構
+```
+
+---
+
+*更新日期：2026-05-25 | Skills 總數：103 + 8 Understand-Anything | CCPlugins Commands：12 | Ruflo 命令：70+ | 已安裝 CLI：repomix v1.14.0、defuddle v0.18.1、ccr（claude-code-router）*

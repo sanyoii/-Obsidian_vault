@@ -1,4 +1,4 @@
-> 最後更新：2026-05-13（新增 5 個 Skills：kepano/obsidian-skills，Skills 總數 103）
+> 最後更新：2026-05-25（新增 Claude Code Router、CCPlugins 12 個指令、Claude Code Action、Understand Anything 8 個 Skills）
 
 > Skills 在 **Claude Code** 和 **Claude Cowork** 中均可使用，Claude 一般網頁版不支援。
 
@@ -21,6 +21,8 @@
 - [已安裝的 Skills](#已安裝的-skills)
 
 - [已安裝的 Commands](#已安裝的-commands)
+
+- [操作建議：按任務選工具](#操作建議按任務選工具)
 
 - [目錄結構](#目錄結構)
 
@@ -450,53 +452,7 @@ claude --chrome
 
   
 
-### 2. Open Design（`open-design/`）
-
-  
-
-**用途：** 開源設計工具，替代 Claude Design。自動偵測電腦上的 AI CLI，將其轉為設計引擎。支援 31 種設計模式、72 種品牌設計系統，可匯出 HTML、PDF、PPTX、ZIP。
-
-  
-
-**啟動：**
-
-```powershell
-
-cd d:\Claude\open-design
-
-pnpm tools-dev start web
-
-```
-
-啟動後開啟輸出的 `web:` 網址（每次 port 隨機）。
-
-  
-
-| 指令 | 說明 |
-
-|------|------|
-
-| `pnpm tools-dev start web` | 背景啟動 |
-
-| `pnpm tools-dev stop` | 停止 |
-
-| `pnpm tools-dev status` | 查看狀態 |
-
-| `pnpm tools-dev logs` | 查看 log |
-
-| `pnpm tools-dev restart` | 重啟 |
-
-  
-
-資料儲存於 `open-design/.od/`。
-
-  
-
----
-
-  
-
-### 3. Repomix（全域 npm）
+### 2. Repomix（全域 npm）
 
   
 
@@ -520,55 +476,7 @@ repomix --remote facebook/react --compress --output /tmp/out.xml  # 大型倉�
 
   
 
-### 4. AI Website Cloner（`ai-website-cloner/`）
-
-  
-
-**用途：** 把任何網站「克隆」成乾淨的 Next.js 程式碼。自動截圖、提取設計 tokens、重建所有區塊。
-
-  
-
-**使用方法：**
-
-```powershell
-
-# 1. 進入專案
-
-cd d:\Claude\ai-website-cloner
-
-  
-
-# 2. 啟動 Claude Code（需要 Chrome）
-
-claude --chrome
-
-  
-
-# 3. 在對話中執行
-
-/clone-website https://目標網站.com
-
-  
-
-# 4. 啟動開發伺服器查看結果
-
-npm run dev
-
-```
-
-開啟 `http://localhost:3000` 查看重建結果。
-
-  
-
-適合用途：平台搬遷、學習網站設計、程式碼復原。
-
-  
-
----
-
-  
-
-### 5. AutoHedge（`autohedge-env/`）
+### 3. AutoHedge（`autohedge-env/`）
 
   
 
@@ -634,7 +542,7 @@ autohedge
 
   
 
-### 6. Scrapling（全域 Python 套件）
+### 4. Scrapling（全域 Python 套件）
 
   
 
@@ -882,7 +790,7 @@ scrapling shell
 
   
 
-### 7. OpenSpec（全域 npm 套件）
+### 5. OpenSpec（全域 npm 套件）
 
   
 
@@ -988,7 +896,29 @@ openspec schemas           # 列出可用的工作流程 schema
 
   
 
-### 8. Recursive Mode（Claude Code Skills）
+### 6. Claude Code Router（全域 npm）
+
+**用途：** 按任務類型將 Claude Code 的請求路由到不同模型。背景/輕量任務走 Gemini Flash（省費用），主要對話仍用 Claude Sonnet（保品質）。
+
+**設定檔：** `C:\Users\sanyo\.claude-code-router\config.json`
+
+```powershell
+ccr start    # 啟動路由服務（port 3456）
+ccr code     # 透過路由啟動 Claude Code
+ccr status   # 查看狀態
+ccr ui       # 開啟 Web UI 管理介面
+ccr stop     # 停止服務
+```
+
+**路由規則：**
+- 背景任務 → `gemini-2.5-flash`（快速、便宜）
+- 主要對話 → Claude Sonnet（預設）
+
+> 平常直接用 `claude` 即可；要省 token 或測試 Gemini 時用 `ccr code` 啟動。
+
+---
+
+### 7. Recursive Mode（Claude Code Skills）
 
   
 
@@ -1090,6 +1020,69 @@ Phase 7    Closeout        — 歸檔，更新記憶
 
   
 
+### 8. Social Monitor（`social-monitor/`）
+
+**用途：** 定時抓取 X (Twitter) / Threads / Instagram 熱門話題，輸出 Markdown 報告，並可 Gmail 通知。Task Scheduler 設定於 10:30 + 22:00 自動執行。
+
+```powershell
+cd d:\Claude\social-monitor
+python run.bat         # 手動執行一次
+```
+
+報告輸出至 `d:\Claude\obsidian\wiki\Social\社群海巡 YYYY-MM-DD-HHMM.md`
+
+---
+
+### 9. Job Crawler（`job-crawler/`）
+
+**用途：** 定時從多個求職平台（104、CryptoJobsList、Web3Career）抓取職缺，自動去重、過濾、Email 通知，並提供 Flask Web UI 瀏覽與追蹤。
+
+```powershell
+cd d:\Claude\job-crawler
+python app.py          # 啟動 Web UI（預設 http://localhost:5000）
+python crawler.py      # 手動抓取一次
+```
+
+---
+
+### 10. AI Video Pipeline（`ai-video-pipeline/`）
+
+**用途：** AI 影片全自動化 Pipeline，6 個處理階段：腳本生成 → 素材搜集 → 影片生成（fal.ai）→ 旁白合成（OpenAI TTS）→ 字幕 → FFmpeg 合成。
+
+依賴：`FAL_KEY`（fal.ai）、`OPENAI_API_KEY`、FFmpeg（需手動安裝）
+
+---
+
+### 11. CareerBot（`careerbot/`）
+
+**用途：** AI 求職助手。研究目標公司、找出符合偏好的職缺、從 Answer Bank 自動草擬各平台申請表答案（Why us、自我介紹等），可重複跨申請複用。
+
+```powershell
+cd d:\Claude\careerbot
+# 先填入 context 和放入 resume.pdf，再執行 /onboard
+```
+
+---
+
+### 12. HD Decode（`hd-decode/`）
+
+**用途：** 人類圖（Human Design）深度分析工具。讀取個人圖表，輸出類型、策略、權威、通道、PHS 等完整解析報告。
+
+---
+
+### 13. Open Slide（`open-slide/`）
+
+**用途：** React 元件式投影片工具。每張投影片是一個 `slides/<id>/index.tsx`，由 `@open-slide/core` 處理排版、縮放、導覽與全螢幕播放。
+
+```powershell
+cd d:\Claude\open-slide
+npm run dev            # 啟動預覽伺服器
+```
+
+---
+
+  
+
 ## 已安裝的 Skills
 
   
@@ -1106,7 +1099,7 @@ Skills 位置：
 
   
 
-目前共 **103 個 Skills**，分為以下類別：
+目前共 **116 個 Skills**（含 Understand-Anything 8 個），分為以下類別：
 
   
 
@@ -2066,15 +2059,146 @@ Commands 位置：`C:\Users\sanyo\.claude\commands\`
 
   
 
+### 原有指令（2 個）
+
 | Command | 用途 |
-
 |---------|------|
-
 | `/threads-to-fb` | 將 Threads 貼文轉換為繁中 Facebook 貼文（含格式、Emoji、Hashtag） |
-
 | `/generate-cover` | 生成 1200×1200 社群封面圖（支援 Threads/X/LinkedIn/Reddit，深色/淺色版） |
 
-  
+### CCPlugins（12 個，2026-05-25）
+
+來源：[brennercruvinel/CCPlugins](https://github.com/brennercruvinel/CCPlugins)
+
+| Command | 用途 |
+|---------|------|
+| `/review` | 多 subagent 全面 code review（安全/效能/品質/架構） |
+| `/security-scan` | 安全漏洞掃描，有 session 記憶可 resume |
+| `/predict-issues` | 預測未來潛在問題（複雜度、效能、維護性） |
+| `/refactor` | 系統性重構，有 session 記憶，每步驟自動驗證 |
+| `/implement` | 從 URL/路徑/描述實作功能，有 session 記憶 |
+| `/understand-project` | 分析整個專案架構，輸出架構圖與關鍵元件說明 |
+| `/scaffold` | 依照現有專案模式生成新功能骨架 |
+| `/commit` | 智慧 git commit，生成 conventional commit 訊息 |
+| `/session-start` | 開始工作階段，記錄目標到 CLAUDE.md |
+| `/session-end` | 結束階段，總結完成事項與待辦 |
+| `/undo` | 還原上一個操作（git 或 project backup） |
+| `/todos-to-issues` | 掃描代碼 TODO 並建立 GitHub Issues |
+
+### Understand Anything Plugin（8 個 Skills，2026-05-25）
+
+來源：[Lum1104/Understand-Anything](https://github.com/Lum1104/Understand-Anything)
+Plugin 位置：`C:\Users\sanyo\.claude\plugins\marketplaces\understand-anything\`
+
+| Skill | 用途 |
+|-------|------|
+| `/understand` | 主分析：多 agent 掃描專案，建立知識圖譜（支援 --language zh-TW） |
+| `/understand-dashboard` | 開啟互動式 Web Dashboard，視覺化探索架構 |
+| `/understand-chat` | 用自然語言問任何關於 codebase 的問題 |
+| `/understand-diff` | 分析當前改動影響到哪些地方（code review 前用） |
+| `/understand-explain` | 深度解釋特定檔案或函式 |
+| `/understand-onboard` | 為新成員生成 onboarding 指南 |
+| `/understand-domain` | 提取業務邏輯（domains/flows/steps） |
+| `/understand-knowledge` | 分析 Karpathy 風格 wiki 知識庫 |
+
+### Claude Code Action（GitHub Actions）
+
+在 GitHub PR/Issue 留言 `@claude` 即可呼叫 Claude 自動處理。已設定於 `sanyoii/claude-setup`。
+需在 GitHub Secrets 設定 `ANTHROPIC_API_KEY`。
+
+---
+
+## 操作建議：按任務選工具
+
+### 📦 評估 / 探索陌生 Repo
+
+| 需求 | 做法 |
+|------|------|
+| 快速判斷值不值得裝（幾秒） | 直接說「用 /repomix-explorer 分析 https://github.com/user/repo」 |
+| 深入理解架構（幾分鐘，有 Dashboard） | 「幫我把這個 repo clone 到暫存，再用 /understand 分析」 |
+
+> **建議流程：先 repomix 篩選，有興趣再 clone + understand 深入。**
+
+---
+
+### 💻 日常開發工作流
+
+```
+/session-start   ← 開始前說明今天目標，Claude 記錄到 CLAUDE.md
+/implement       ← 描述需求或貼 URL，Claude 幫你實作
+/understand-diff ← commit 前確認改動影響範圍
+/review          ← 全面 code review（安全/效能/架構）
+/commit          ← 自動生成 conventional commit 訊息
+/session-end     ← 記錄完成事項和待辦，下次繼續
+```
+
+> 複雜、跨多天的任務：改用 `Recursive Mode`（`Implement the run`），強制 7 個 phase，跨對話保持上下文。
+
+---
+
+### 🔧 各程式使用時機
+
+| 程式 | 何時用 | 快速啟動 |
+|------|--------|---------|
+| **Claude Code Router** | 要省 token 或測試 Gemini 路由時 | `ccr code`（替代 `claude`） |
+| **Repomix** | 讓 AI 讀整個 codebase，或打包給外部分析 | `/repomix-explorer` 或 `repomix --remote user/repo` |
+| **Social Monitor** | 已自動 10:30/22:00 執行，要手動跑時 | `cd d:\Claude\social-monitor && python run.bat` |
+| **Job Crawler** | 查看最新職缺、追蹤申請狀態 | `cd d:\Claude\job-crawler && python app.py`（Flask UI at port 5000） |
+| **CareerBot** | 草擬求職申請表、Why Us 答案 | `cd d:\Claude\careerbot`（⚠️ 需先執行 `/onboard`） |
+| **HD Decode** | 讀取人類圖報告、查詢通道或中心說明 | `cd d:\Claude\hd-decode` |
+| **Open Slide** | 製作 React 元件式投影片 | `cd d:\Claude\open-slide && npm run dev` |
+| **AI Video Pipeline** | 全自動影片生成（⚠️ 需先申請 FAL_KEY） | `cd d:\Claude\ai-video-pipeline` |
+| **AutoHedge** | Solana 鏈上自動對沖（⚠️ 真實資金） | `cd d:\Claude\autohedge-env && .\Scripts\Activate.ps1 && autohedge` |
+| **Scrapling** | Python 網頁爬蟲，繞過 Cloudflare | `from scrapling.fetchers import Fetcher` |
+| **OpenSpec** | AI 輔助需求規格管理，開始新功能前用 | `cd 專案 && openspec init`，再用 `/opsx:propose` |
+
+---
+
+### 🧠 Skills 按情境速查
+
+**寫文件 / 格式轉換**
+- `pdf` / `docx` / `pptx` / `xlsx` — 直接說「幫我把這個整理成 Word/PDF」
+- `obsidian-cli` — 搜尋 vault、讀寫筆記、管理 Daily Note
+
+**程式碼分析 / 理解**
+- `/repomix-explorer` — 快速分析任何 repo（支援 URL）
+- `/understand` → `/understand-dashboard` — 深度知識圖譜（需先 clone）
+- `/understand-explain` — 解釋特定檔案或函式
+- `/understand-chat` — 用自然語言問 codebase 任何問題
+
+**開發流程**
+- `/implement` — 從描述/URL/路徑實作功能
+- `/scaffold` — 依現有模式生成新功能骨架
+- `/refactor` — 系統性重構（有 session 記憶）
+- `/commit` — 自動 conventional commit 訊息
+
+**品質 / 安全**
+- `/review` — 多 agent 全面 code review
+- `/security-scan` — 安全漏洞掃描（可 resume）
+- `/predict-issues` — 預測潛在問題
+- `/understand-diff` — commit 前確認改動影響
+
+**術數命理**
+- `bazi` / `bazi-skill` — 八字命盤分析
+- `ziwei-doushu` — 紫微斗數
+- `qimen-dunjia` — 奇門遁甲
+- `nuwa-skill` / `huashu-design` — 女媧術數 / 花術設計
+
+**視覺 / 設計**
+- `mermaid-visualizer` — 流程圖、架構圖、時序圖（Mermaid 語法）
+- `excalidraw-diagram` — 手繪風格流程圖
+- `algorithmic-art` / `canvas-design` — 生成藝術 / 視覺創作
+- `json-canvas` — 編輯 Obsidian 畫布
+
+**Obsidian 整合**
+- `obsidian-cli` — 搜尋/讀寫/管理筆記
+- `obsidian-markdown` — Wikilink、Callout、Frontmatter 語法
+- `obsidian-bases` — 建立資料庫視圖
+- `notebooklm-skill` — 查詢 NotebookLM Notebook 補充資訊
+
+**AI 研究 / 資料擷取**
+- `defuddle` — 從網址擷取乾淨 Markdown（省 token）
+- `repomix-explorer` — 分析 GitHub repo 結構
 
 ---
 
