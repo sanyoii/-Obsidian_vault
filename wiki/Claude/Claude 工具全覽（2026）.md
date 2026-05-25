@@ -160,16 +160,16 @@ cypher_query    → Cypher 圖查詢
 
 ## 本機專案 Repos
 
-| 專案 | 路徑 | 狀態 | 用途 |
-|------|------|------|------|
-| **social-monitor** | `d:\Claude\social-monitor\` | ✅ 運作中 | X/Threads/IG 定時海巡，Task Scheduler 10:30+22:00 |
-| **job-crawler** | `d:\Claude\job-crawler\` | ✅ Phase 1 完成 | 104/web3/cryptojobs 職缺爬蟲 + Flask UI + Gmail 通知 |
-| **careerbot** | `d:\Claude\careerbot\` | ✅ 進行中 | 求職助手，20家 in-review，/find-roles 待執行，Web UI: localhost:3000 |
-| **obsidian** | `d:\Claude\obsidian\` | ✅ 活躍 | Obsidian vault，git 備份至 sanyoii/-Obsidian_vault |
-| **open-slide** | `d:\Claude\open-slide\` | 🔍 未用 | 投影片工具（待評估） |
-| **autohedge-env** | `d:\Claude\autohedge-env\` | ⚠️ 待設定 | 需填 API Keys + Solana 錢包私鑰 |
-| **brain-docs** | `d:\Claude\brain-docs\` | ✅ 已匯入 | gbrain 文件暫存區，課程字幕已全數匯入 |
-| **hd-decode** | `d:\Claude\hd-decode\` | ✅ 運作中 | 人類圖解讀器，純 HTML 離線工具，雙擊 index.html 即用 |
+| 專案                 | 路徑                          | 狀態           | 用途                                                        |
+| ------------------ | --------------------------- | ------------ | --------------------------------------------------------- |
+| **social-monitor** | `d:\Claude\social-monitor\` | ✅ 運作中        | X/Threads/IG 定時海巡，Task Scheduler 10:30+22:00              |
+| **job-crawler**    | `d:\Claude\job-crawler\`    | ✅ Phase 1 完成 | 104/web3/cryptojobs 職缺爬蟲 + Flask UI + Gmail 通知            |
+| **careerbot**      | `d:\Claude\careerbot\`      | ✅ 進行中        | 求職助手，20家 in-review，/find-roles 待執行，Web UI: localhost:3000 |
+| **obsidian**       | `d:\Claude\obsidian\`       | ✅ 活躍         | Obsidian vault，git 備份至 sanyoii/-Obsidian_vault            |
+| **open-slide**     | `d:\Claude\open-slide\`     | 🔍 未用        | 投影片工具（待評估）<br>可以參考 : https://open-slide.dev/              |
+| **autohedge-env**  | `d:\Claude\autohedge-env\`  | ⚠️ 待設定       | 需填 API Keys + Solana 錢包私鑰                                 |
+| **brain-docs**     | `d:\Claude\brain-docs\`     | ✅ 已匯入        | gbrain 文件暫存區，課程字幕已全數匯入                                    |
+| **hd-decode**      | `d:\Claude\hd-decode\`      | ✅ 運作中        | 人類圖解讀器，純 HTML 離線工具，雙擊 index.html 即用                       |
 
 ### social-monitor 日常操作
 

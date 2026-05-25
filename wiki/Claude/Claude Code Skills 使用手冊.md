@@ -1,6 +1,6 @@
 # Claude Code Skills 使用手冊
 
-> 共 103 個 Skills + 70+ 個 Ruflo/Claude Flow 命令，按使用情境分類。
+> 共 118 個 Skills + 70+ 個 Ruflo/Claude Flow 命令，按使用情境分類。
 > 觸發方式：直接在對話中說出觸發詞，或輸入 `/skill-name`。
 
 ---
@@ -24,6 +24,7 @@
 - [🔍 代碼分析](#-代碼分析)
 - [📚 知識查詢](#-知識查詢)
 - [💬 溝通與品牌](#-溝通與品牌)
+- [✍️ 寫作品質](#️-寫作品質)
 - [🛠 Meta Skills](#-meta-skills)
 - [🦊 Ruflo 多 Agent 協調](#-ruflo-多-agent-協調)
 
@@ -682,6 +683,27 @@ learned(passport): 需明確加上 offline_access scope
 
 ---
 
+## ✍️ 寫作品質
+
+### `stop-slop`
+**用途：** 去掉 AI 腔、AI 感，讓文字更像人寫的。移除填充詞、被動語態、陳腔濫調與公式化句型。
+**觸發：** 說「幫我去掉AI腔」、「這段太 AI 感了」、「去掉AI味」、"remove AI patterns"、"make this sound more human"
+```
+「這段文字太 AI 感了，幫我去掉AI腔」
+「Remove AI writing patterns from this paragraph」
+```
+> 評分維度：Directness / Rhythm / Trust / Authenticity / Density（各 1-10，低於 35/50 需重寫）
+
+### `agent-hygiene`
+**用途：** 審查 Claude prompt 與 agent 指令，找出低效模式（過度強調、冗贅指示、矛盾設定）。
+**觸發：** 明確呼叫 `/agent-hygiene`，不自動觸發（explicit-only）
+```
+「/agent-hygiene」← 審查目前 CLAUDE.md 或 system prompt
+```
+> 輸出：問題清單 + 改善建議，需安裝 Python 腳本（`scripts/audit_agent_hygiene.py`）
+
+---
+
 ## 🛠 Meta Skills
 
 ### `write-a-skill`（Matt Pocock 版）
@@ -1105,4 +1127,4 @@ npx ruflo@latest autopilot start --goal "describe goal"
 
 ---
 
-*更新日期：2026-05-25 | Skills 總數：103 + 8 Understand-Anything | CCPlugins Commands：12 | Ruflo 命令：70+ | 已安裝 CLI：repomix v1.14.0、defuddle v0.18.1、ccr（claude-code-router）*
+*更新日期：2026-05-25 | Skills 總數：118（含 Understand-Anything 8 個、stop-slop、agent-hygiene）| CCPlugins Commands：12 | Ruflo 命令：70+ | 已安裝 CLI：repomix v1.14.0、defuddle v0.18.1、ccr（claude-code-router）*

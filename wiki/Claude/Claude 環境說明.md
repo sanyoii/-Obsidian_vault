@@ -1099,7 +1099,7 @@ Skills 位置：
 
   
 
-目前共 **116 個 Skills**（含 Understand-Anything 8 個），分為以下類別：
+目前共 **118 個 Skills**（含 Understand-Anything 8 個），分為以下類別：
 
   
 
@@ -1190,6 +1190,20 @@ Skills 位置：
 | `brand-guidelines` | Anthropic 品牌規範應用 |
 
 | `internal-comms` | 內部溝通文件撰寫指引 |
+
+  
+
+#### 寫作品質（2 個）
+
+  
+
+| Skill | 用途 |
+
+|-------|------|
+
+| `stop-slop` | 去掉 AI 腔/AI 感，讓文字更像人寫的（觸發：「幫我去掉AI腔」） |
+
+| `agent-hygiene` | 審查 Claude prompt/agent 指令，找出低效模式（需明確呼叫 `/agent-hygiene`） |
 
   
 
@@ -2260,7 +2274,7 @@ d:\Claude\
 
   
 
-全域 Skills 位置：`C:\Users\sanyo\.claude\skills\`（103 個）
+全域 Skills 位置：`C:\Users\sanyo\.claude\skills\`（118 個）
 
 全域 Commands 位置：`C:\Users\sanyo\.claude\commands\`（2 個）
 
