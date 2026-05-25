@@ -27,15 +27,15 @@ date: 2026-05-24
 
 ## 程式與工具
 
-| 工具 | 啟動方式 | 使用時機 |
-|------|---------|---------|
-| **Claude Code** | `claude`（終端）或 VSCode 擴充 | 日常 AI 輔助開發、寫程式、分析 |
-| **gbrain** | `gbrain search "關鍵字"` | 查詢個人知識腦、語意搜尋筆記/課程 |
-| **Repomix** | `repomix`（全域 npm） | 把整個 codebase 打包給 AI 分析 |
-| **OpenSpec** | `openspec init` → `/opsx:propose` | 複雜功能開發前先對齊規格 |
-| **AutoHedge** | `cd autohedge-env && autohedge` | AI 自主 Solana 鏈上交易（⚠️ 真實資金） |
-| **Scrapling** | `import scrapling` 或 `scrapling` CLI | 網頁爬蟲（含繞 Cloudflare、瀏覽器自動化） |
-| **Recursive Mode** | 專案內執行 bootstrap.ps1 → `Implement the run` | 大型複雜任務的七階段結構化工作流程 |
+| 工具                 | 啟動方式                                      | 使用時機                       |
+| ------------------ | ----------------------------------------- | -------------------------- |
+| **Claude Code**    | `claude`（終端）或 VSCode 擴充                   | 日常 AI 輔助開發、寫程式、分析          |
+| **gbrain**         | `gbrain search "關鍵字"`                     | 查詢個人知識腦、語意搜尋筆記/課程          |
+| **Repomix**        | `repomix`（全域 npm）                         | 把整個 codebase 打包給 AI 分析     |
+| **OpenSpec**       | `openspec init` → `/opsx:propose`         | 複雜功能開發前先對齊規格               |
+| **AutoHedge**      | `cd autohedge-env && autohedge`           | AI 自主 Solana 鏈上交易（⚠️ 真實資金） |
+| **Scrapling**      | `import scrapling` 或 `scrapling` CLI      | 網頁爬蟲（含繞 Cloudflare、瀏覽器自動化） |
+| **Recursive Mode** | 專案內執行 bootstrap.ps1 → `Implement the run` | 大型複雜任務的七階段結構化工作流程          |
 
 ## 外部工具與 API 服務
 
@@ -258,8 +258,8 @@ python run_web.py
 | **設計**          | `huashu-design`                  | 做個好看的原型 / HTML Demo                |
 |                 | `gpt-image-2`                    | 生成一張圖 / 做封面圖                       |
 |                 | `guizang-ppt`                    | 雜誌風簡報 / 橫滑 deck                    |
-|                 | `excalidraw-diagram`             | 畫 Excalidraw 圖（流程圖/思維導圖/動畫）       |
-|                 | `mermaid-visualizer`             | 畫 Mermaid 圖（自動防語法錯誤）              |
+|                 | `excalidraw-diagram`             | 畫 Excalidraw 圖（流程圖/思維導圖/動畫）        |
+|                 | `mermaid-visualizer`             | 畫 Mermaid 圖（自動防語法錯誤）               |
 | **開發**          | `repomix-explorer`               | 分析這個 repo / 整個專案結構                 |
 |                 | `context7-mcp`                   | 查最新 Next.js / Prisma / Tailwind 文件 |
 |                 | `claude-api`                     | 用 Claude API 做 / Anthropic SDK     |
@@ -287,8 +287,8 @@ python run_web.py
 |                 | `qimen-dunjia`                   | 奇門排盤                               |
 | **Obsidian**    | `obsidian-markdown`              | Obsidian wikilink/callout 語法       |
 |                 | `obsidian-bases`                 | 建立 Bases 資料庫視圖                     |
-|                 | `obsidian-canvas-creator`        | 文字→Canvas（MindMap / Freeform 佈局）  |
-|                 | `json-canvas`                    | 低階編輯現有 .canvas 節點/邊               |
+|                 | `obsidian-canvas-creator`        | 文字→Canvas（MindMap / Freeform 佈局）   |
+|                 | `json-canvas`                    | 低階編輯現有 .canvas 節點/邊                |
 | **Prompt**      | `prompt-master`                  | 幫我寫一個 prompt / 為 Midjourney 寫提示詞   |
 | **Meta**        | `nuwa-skill`                     | 幫我做一個人物/角色的 Skill                  |
 |                 | `skill-creator`                  | 建立新 Skill                          |
