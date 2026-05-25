@@ -39,10 +39,10 @@ date: 2026-05-24
 
 ## 外部工具與 API 服務
 
-| 網站 | URL | 說明 |
-|------|-----|------|
-| **Browse.sh** | https://browse.sh | AI Agent 瀏覽器自動化技能目錄，內含 500+ 預製技能（搜尋商品、查航班、追包裹等），支援本地或 Browserbase 雲端執行 |
-| **Superior APIs** | https://superiorapis.cteam.com.tw/ | 台灣 cteam 團隊的 API + MCP Server 整合平台，提供現成 API 服務與 MCP 工具供 Claude 直接呼叫 |
+| 網站                | URL                                | 說明                                                                     |
+| ----------------- | ---------------------------------- | ---------------------------------------------------------------------- |
+| **Browse.sh**     | https://browse.sh                  | AI Agent 瀏覽器自動化技能目錄，內含 500+ 預製技能（搜尋商品、查航班、追包裹等），支援本地或 Browserbase 雲端執行 |
+| **Superior APIs** | https://superiorapis.cteam.com.tw/ | 台灣 cteam 團隊的 API + MCP Server 整合平台，提供現成 API 服務與 MCP 工具供 Claude 直接呼叫    |
 
 ### gbrain 詳細用法
 
@@ -188,7 +188,7 @@ ls d:\Claude\obsidian\wiki\Social\
 ```powershell
 # 啟動 Flask UI
 cd d:\Claude\job-crawler
-python app.py
+python run_web.py
 # 開啟 http://localhost:5000
 ```
 
