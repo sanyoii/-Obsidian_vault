@@ -216,7 +216,7 @@ node "$dst\plugin\scripts\smart-install.js"
 
 # 複製 claude-mem skills
 
-$skills = @('do','knowledge-agent','make-plan','mem-search','pathfinder','smart-explore','timeline-report','version-bump')
+$skills = @('do','make-plan','mem-search','pathfinder','smart-explore','timeline-report','version-bump')
 
 foreach ($s in $skills) {
 
@@ -1926,8 +1926,6 @@ npx @praha/byethrow-docs search "查詢關鍵字"
 | `make-plan` | 建立分階段實作計畫（帶文件探索） |
 
 | `do` | 執行 make-plan 產出的計畫，協調 subagent |
-
-| `knowledge-agent` | 知識圖譜管理，儲存和查詢結構化知識 |
 
 | `smart-explore` | 智慧探索程式碼庫，找相關檔案和脈絡 |
 
