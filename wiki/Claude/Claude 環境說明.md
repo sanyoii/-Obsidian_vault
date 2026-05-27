@@ -1,4 +1,4 @@
-> 最後更新：2026-05-25（新增 Claude Code Router、CCPlugins 12 個指令、Claude Code Action、Understand Anything 8 個 Skills）
+> 最後更新：2026-05-28（新增 7-Agent 工廠 Agents × 8 類別、水球流 Contract + Bug 路由 + 策略模式、Agents 同步至 setup.ps1）
 
 > Skills 在 **Claude Code** 和 **Claude Cowork** 中均可使用，Claude 一般網頁版不支援。
 
@@ -17,6 +17,8 @@
 - [換電腦恢復步驟](#換電腦恢復步驟)
 
 - [已安裝的程式](#已安裝的程式)
+
+- [已安裝的 Agents（7-Agent 工作流）](#已安裝的-agents7-agent-工作流)
 
 - [已安裝的 Skills](#已安裝的-skills)
 
@@ -62,7 +64,7 @@ git clone https://github.com/sanyoii/claude-setup D:\Claude
 
   
 
-# 2. 一鍵恢復（自動安裝 103 Skills、claude-mem、所有工具）
+# 2. 一鍵恢復（自動安裝 120+ Skills、7-Agent Agents、claude-mem、所有工具）
 
 pwsh -ExecutionPolicy Bypass -File D:\Claude\setup.ps1
 
@@ -94,7 +96,7 @@ git clone https://github.com/sanyoii/claude-setup ~/Claude
 
   
 
-# 2. 一鍵恢復（自動安裝 Homebrew、103 Skills、claude-mem、所有工具）
+# 2. 一鍵恢復（自動安裝 Homebrew、120+ Skills、7-Agent Agents、claude-mem、所有工具）
 
 chmod +x ~/Claude/setup.sh && ~/Claude/setup.sh
 
@@ -166,21 +168,23 @@ git clone https://github.com/sanyoii/claude-setup d:\Claude
 
   
 
-### 步驟 4：恢復全域 Skills
+### 步驟 4：恢復全域 Skills 與 Agents
 
   
 
 ```powershell
 
+# Skills
 New-Item -ItemType Directory -Force "C:\Users\$env:USERNAME\.claude\skills"
-
 Copy-Item "d:\Claude\.claude\skills\*" "C:\Users\$env:USERNAME\.claude\skills\" -Recurse -Force
 
-  
+# Agents（7-Agent 工作流等 8 類別）
+New-Item -ItemType Directory -Force "C:\Users\$env:USERNAME\.claude\agents\workflow"
+Copy-Item "d:\Claude\.claude\agents\*" "C:\Users\$env:USERNAME\.claude\agents\" -Recurse -Force
 
-# 驗證數量（應為 98，含 claude-mem 的 8 個）
-
-(Get-ChildItem "C:\Users\$env:USERNAME\.claude\skills" -Directory).Count
+# 驗證
+(Get-ChildItem "C:\Users\$env:USERNAME\.claude\skills" -Directory).Count     # 應 120+
+(Get-ChildItem "C:\Users\$env:USERNAME\.claude\agents\workflow" -Filter "*.md").Count  # 應 7+
 
 ```
 
@@ -274,14 +278,6 @@ python -m playwright install
 
   
 
-# Open Design
-
-cd d:\Claude\open-design
-
-pnpm install
-
-  
-
 # AutoHedge（建虛擬環境）
 
 cd d:\Claude
@@ -297,14 +293,6 @@ pip install autohedge
 Copy-Item d:\Claude\autohedge.env.example d:\Claude\autohedge-env\.env
 
 notepad d:\Claude\autohedge-env\.env
-
-  
-
-# AI Website Cloner
-
-cd d:\Claude\ai-website-cloner
-
-npm install
 
 ```
 
@@ -346,7 +334,7 @@ python -c "import scrapling; print(scrapling.__version__)"
 
 cd d:\Claude
 
-git add .claude/skills/ README.md settings.json
+git add .claude/skills/ .claude/agents/ README.md
 
 git commit -m "更新: <說明>"
 
@@ -1083,6 +1071,60 @@ npm run dev            # 啟動預覽伺服器
 
   
 
+## 已安裝的 Agents（7-Agent 工作流）
+
+Agents 是比 Skills 更強大的 AI 協作單元，每個 Agent 有獨立職責、明確的輸入/輸出契約（Contract）和交接規範。
+
+**位置：**
+- 全域（任何專案）：`C:\Users\sanyo\.claude\agents\`
+- 備份（git-tracked）：`d:\Claude\.claude\agents\`
+
+**8 個類別：**
+
+| 類別 | 說明 |
+|------|------|
+| `workflow/` | 7-Agent 工廠流程（本節重點） |
+| `engineering/` | 後端/前端/DevOps/測試相關 |
+| `analysis/` | 程式碼分析、code review |
+| `architecture/` | 系統設計 |
+| `github/` | Git workflow |
+| `sparc/` | SPARC 方法論 |
+| `swarm/` | Ruflo 多 Agent 協調 |
+| `specialized/` | 其他雜項 |
+
+### 7-Agent 工廠工作流（`workflow/` 類別）
+
+7 個 agents 按軟體工廠流程設計，每個 agent 只做一層，錯誤不跨層：
+
+| # | Agent | 職責 | 不做什麼 |
+|---|-------|------|---------|
+| ① | `researcher` | 技術可行性、競品調研 | 不寫程式 |
+| ② | `story-writer` | 整理 User Stories + 驗收條件 | 不做技術規格 |
+| ③ | `spec-writer` | API 合約、資料模型、分工邊界 | 不實作 |
+| ④a | `backend-builder` | 後端 API + unit tests | 不碰前端 |
+| ④b | `frontend-builder` | UI 元件 + 串 API | 不碰後端 |
+| ⑤ | `test-verifier` | 整合測試 + Bug 路由決策 | 不寫新功能 |
+| ⑥ | `validator` | Code review + PR 準備 | 不加新功能 |
+
+**3 個策略（視任務複雜度選擇）：**
+
+| 策略 | 適用 | Agent 組合 |
+|------|------|-----------|
+| `minimal` | 單一腳本、小幅後端改動 | spec → backend → test |
+| `standard` | 一般全棧功能（預設） | 完整 7 agents |
+| `research-heavy` | 新領域、未知技術 | researcher（多輪）→ spec → backend → test |
+
+**觸發方式：**
+```
+用 researcher agent 調研：[描述你的需求]
+用 backend-builder agent 依照技術規格實作後端
+用 validator agent 做 code review
+```
+
+詳細說明與 Bug 路由機制見：[[7-Agent 工廠工作流 SOP]]
+
+---
+
 ## 已安裝的 Skills
 
   
@@ -1099,7 +1141,7 @@ Skills 位置：
 
   
 
-目前共 **96 個 Skills**（含 Understand-Anything 8 個），分為以下類別：
+目前共 **120+ 個 Skills**（含 Understand-Anything 8 個），分為以下類別：
 
   
 
@@ -1901,7 +1943,7 @@ npx @praha/byethrow-docs search "查詢關鍵字"
 
   
 
-### claude-mem（記憶系統，8 個）
+### claude-mem（記憶系統，7 個）
 
   
 
@@ -1909,7 +1951,7 @@ npx @praha/byethrow-docs search "查詢關鍵字"
 
   
 
-這是一個完整的 Plugin（不只是 Skills），包含：Worker Service（port 37777）、SQLite 記憶庫、自動 Hooks、以及 8 個 Skills。
+這是一個完整的 Plugin（不只是 Skills），包含：Worker Service（port 37777）、SQLite 記憶庫、自動 Hooks、以及 7 個 Skills。
 
   
 
@@ -2230,49 +2272,42 @@ d:\Claude\
 
 ├── settings.json               # Claude Code 設定（含 enabledPlugins）
 
-├── open-design\                # Open Design 設計工具
-
-├── ai-website-cloner\          # AI 網站克隆工具
-
-├── autohedge-env\              # AutoHedge 虛擬環境（含 .env 設定）
-
-│                               # Scrapling 安裝於全域 Python（直接 import 使用）
-
-│                               # OpenSpec 安裝於全域 npm（openspec 指令）
-
-├── hindsight\                  # Hindsight 記憶系統（部分可用：retain ✅ recall ⚠️）
-
-├── my-marketplace\             # 個人 Skill Marketplace（可推 GitHub 分享）
-
-│   ├── .claude-plugin\
-
-│   │   └── marketplace.json
-
-│   └── skills\                 # 放你的 SKILL.md 檔
-
+├── autohedge-env\              # AutoHedge 虛擬環境（含 .env 設定）
+├── careerbot\                  # AI 求職助手（含專屬 agents）
+├── social-monitor\             # 社群海巡（X/Threads/IG，含專屬 agents）
+├── ai-video-pipeline\          # AI 影片全自動 Pipeline
+├── job-crawler\                # 職缺海巡系統
+├── hd-decode\                  # 人類圖分析工具
+├── open-slide\                 # React 元件式投影片工具
+├── my-marketplace\             # 個人 Skill Marketplace
+│   ├── .claude-plugin\
+│   │   └── marketplace.json
+│   └── skills\
 ├── .claude\
-
-│   └── skills\                 # 本目錄的 Skills 副本
-
-├── Skill_origin\               # Skills 原始 zip 檔（含 claude-mem-main）
-
-├── plugins\                    # Plugin 資料夾
-
-├── projects\                   # Claude Code 專案
-
-├── sessions\                   # 對話記錄
-
-├── history.jsonl               # 指令歷史
-
-├── prompt_master_studio.html   # Prompt 工具頁面
-
-└── prompt_master_studio_v2.html
+│   ├── skills\                 # Skills 備份（git-tracked）
+│   ├── agents\                 # Agents 備份（git-tracked）
+│   │   ├── workflow\           # 7-Agent 工廠流程
+│   │   ├── engineering\
+│   │   ├── analysis\
+│   │   ├── architecture\
+│   │   ├── github\
+│   │   ├── sparc\
+│   │   ├── swarm\
+│   │   └── specialized\
+│   ├── commands\
+│   └── rules\                  # Path-scoped rules（子專案 context）
+├── obsidian\                   # Obsidian Vault
+├── brain-docs\                 # 待匯入 gbrain 的文件
+├── Skill_origin\               # Skills 原始 zip 檔（含 claude-mem-main）
+└── projects\                   # Claude Code 對話記錄
 
 ```
 
   
 
-全域 Skills 位置：`C:\Users\sanyo\.claude\skills\`（118 個）
+全域 Skills 位置：`C:\Users\sanyo\.claude\skills\`（120+）
+
+全域 Agents 位置：`C:\Users\sanyo\.claude\agents\`（8 類別）
 
 全域 Commands 位置：`C:\Users\sanyo\.claude\commands\`（2 個）
 
