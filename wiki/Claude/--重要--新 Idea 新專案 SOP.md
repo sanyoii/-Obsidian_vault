@@ -30,7 +30,7 @@ contextual-commit → 更新 rules → 值得記的存 gbrain
    - 一句話描述即可，不求完整
 2. 存好後跑一個指令搞定（import + embed + 自動移到 `wiki/Ideas/`）：
    ```powershell
-   D:\Claude\gbrain-inbox.ps1
+   D:\Claude\tools\gbrain-inbox.ps1
    ```
 
 > **注意：** `_README.md` 等底線開頭的檔案不會被移動。`wiki/Ideas/` = 已進 gbrain 待 Phase 1 處理。
