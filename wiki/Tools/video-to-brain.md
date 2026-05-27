@@ -10,8 +10,8 @@ date: 2026-05-27
 
 # 影片轉文字 → gbrain 匯入工具
 
-> 腳本位置：`D:\Claude\video-to-brain.py`
-> 輔助腳本：`D:\Claude\cleanup-gemini-files.py`（清除 Gemini File API 殘留）
+> 腳本位置：`D:\Claude\tools\video-to-brain.py`
+> 輔助腳本：`D:\Claude\tools\cleanup-gemini-files.py`（清除 Gemini File API 殘留）
 
 將本機或 Google Drive 的課程影片批次轉錄成 Markdown，並匯入 gbrain 個人知識腦。
 
@@ -21,13 +21,13 @@ date: 2026-05-27
 
 ```powershell
 # 從本機資料夾轉錄
-python D:\Claude\video-to-brain.py --source "D:\路徑\影片資料夾"
+python D:\Claude\tools\video-to-brain.py --source "D:\路徑\影片資料夾"
 
 # 從 Google Drive 下載後轉錄
-python D:\Claude\video-to-brain.py
+python D:\Claude\tools\video-to-brain.py
 
 # 略過下載，只轉錄已存在的影片
-python D:\Claude\video-to-brain.py --skip-dl
+python D:\Claude\tools\video-to-brain.py --skip-dl
 ```
 
 轉錄完成後，手動執行 gbrain import 匯入：

@@ -9,7 +9,7 @@ date: 2026-05-27
 
 # Markdown → PDF 轉換工具
 
-> 腳本位置：`d:\Claude\md_to_pdf.py`
+> 腳本位置：`d:\Claude\tools\md_to_pdf.py`
 
 將 Markdown 檔案轉換為排版整潔的 PDF，支援繁體中文、日文等 CJK 字元。
 
@@ -33,7 +33,7 @@ for name in [
 
 ```powershell
 $env:PYTHONIOENCODING="utf-8"
-python d:\Claude\md_to_pdf.py
+python d:\Claude\tools\md_to_pdf.py
 ```
 
 PDF 會輸出在與 MD 檔案相同的資料夾。
