@@ -1,6 +1,6 @@
 # 新 Idea / 新專案 SOP
 
-> 最後更新：2026-05-20
+> 最後更新：2026-05-28（整合 7-Agent 工廠工作流）
 > 適用：有新想法、要開新功能、要建新專案時的標準流程
 
 ---
@@ -9,14 +9,19 @@
 
 ```
 [有 idea]
-    ↓ brain-docs/ 或 Obsidian 記下來
-[新對話] → Claude 訪談你 → SPEC.md
-    ↓
-[新對話] plan mode → 探索 codebase + gbrain search → 實作計畫
-    ↓
-離開 plan mode → 實作（有驗證）→ 喊停糾偏 → /clear 換題
-    ↓
-contextual-commit → 更新 rules → 值得記的存 gbrain
+    ↓ Obsidian Inbox → gbrain-inbox.ps1
+Phase 0  → 捕捉存檔
+
+Phase 1  → researcher（調研）→ [人工確認] → story-writer（User Stories）→ [人工確認]
+                ↑ 選策略：minimal / standard / research-heavy
+
+Phase 2  → spec-writer（技術規格：資料模型 + API 合約 + 分工邊界）
+
+Phase 3  → backend-builder + frontend-builder（平行）
+         → test-verifier（整合測試 + Bug 路由）
+         → validator（Code review + PR 準備）→ [人工 Review]
+
+Phase 4  → contextual-commit → 更新 rules → 值得記的存 gbrain
 ```
 
 ---
@@ -37,59 +42,85 @@ contextual-commit → 更新 rules → 值得記的存 gbrain
 
 ---
 
-## Phase 1 — 訪談釐清需求（新對話）
+## Phase 1 — 調研釐清需求（新對話）
 
-開一個**全新對話**（context 乾淨），讓 Claude 問你問題：
+開一個**全新對話**（context 乾淨），先選策略，再用 researcher 開始：
+
+**先選策略（[[7-Agent 工廠工作流 SOP#策略選擇]]）：**
+
+| 策略 | 選它，當... |
+|------|-----------|
+| `minimal` | 只改一層（後端 or 前端），需求已明確 |
+| `standard` | 前後端都要改的新功能（預設） |
+| `research-heavy` | 完全沒用過的技術，或需要先做架構選型 |
+
+**然後讓 researcher agent 做調研：**
 
 ```
 我想做 [一句話描述]。
-用 AskUserQuestion tool 訪問我，問清楚：
-技術實作、UI/UX、edge cases、tradeoff、你沒想到的地方。
-訪問完後把結論寫成 SPEC.md。
+用 researcher agent 調研：技術選型、競品、可行性。
 ```
+
+researcher 完成後，你確認方向，再讓 story-writer 整理 User Stories。
 
 > **這步最重要。** 模糊的 idea 直接進 code，90% 會走冤枉路。
 
 ---
 
-## Phase 2 — 探索 + 計畫（plan mode）
+## Phase 2 — 技術規格（spec-writer）
 
 ```powershell
 # 先查 gbrain，看有沒有相關知識或過去筆記
 gbrain search "相關關鍵字"
 ```
 
-開**新對話**，帶著 SPEC.md 進 plan mode：
+人工確認 User Stories 後，讓 spec-writer 產出技術規格：
 
 ```
-Ctrl+P（進入 plan mode）
-
-"讀 SPEC.md，探索現有 codebase，
-告訴我需要改哪些檔案，給我一個完整實作計畫。"
+用 spec-writer agent，根據確認的 User Stories 寫技術規格。
+需要包含：資料模型、API 合約、後端/前端分工邊界。
 ```
 
-- 計畫出來後按 `Ctrl+G` 在編輯器裡確認方向
-- 確認沒問題再進 Phase 3
+spec-writer 的輸出就是過去的 SPEC.md，但格式更嚴謹（有 Contract 定義）。
+
+- 規格出來後在編輯器裡確認（`Ctrl+G`）
+- 重點確認：分工邊界清不清楚？API 合約完整嗎？
+- 確認後進 Phase 3
 
 ---
 
-## Phase 3 — 實作
+## Phase 3 — 實作 + 驗收
 
-離開 plan mode，開始 coding：
+**Step 3a — 建構（平行或單層，視策略）**
 
 ```
-"按照計畫實作。每個功能完成後跑測試確認。"
+用 backend-builder agent 依照技術規格實作後端。
+（若有前端）同時用 frontend-builder agent 實作前端。
 ```
-
-**原則：**
 
 | 做 | 不做 |
 |---|---|
-| 每個功能都要有驗證（測試/截圖/command output） | 沒有驗證就跳下一個 |
 | 發現跑偏立刻按 `Esc` 喊停 | 讓 Claude 繼續錯下去 |
 | 改多個檔案前先確認方向 | 直接讓 Claude 改一堆再說 |
 | `/clear` 換主題時用 | 把不相干的任務混在同一個對話 |
-| 糾正兩次還不對就 `/clear` 重來 | 一直在同個 context 裡糾正 |
+
+**Step 3b — 測試驗收（test-verifier）**
+
+```
+用 test-verifier agent 依照 User Stories 的驗收條件逐一測試。
+```
+
+- test-verifier 會自動做 Bug 路由（spec 問題 / 後端問題 / 前端問題）
+- 等 P0 Bug 全修完，驗收條件 100% PASS 再往下
+
+**Step 3c — 品質審查（validator）**
+
+```
+用 validator agent 做 code review 和安全檢查，準備 PR 描述。
+```
+
+- validator 輸出審查清單 + PR 描述草稿
+- 你確認沒問題後，這是**人工檢查點 3**，決定是否 merge
 
 ---
 
@@ -118,6 +149,7 @@ gbrain embed --stale
 
 ## 相關文件
 
+- [[7-Agent 工廠工作流 SOP]] — Phase 3 實作時的 Agent 分工標準流程
 - [[Claude 環境說明]] — 路徑與工具總覽
 - [[知識庫操作手冊]] — gbrain 使用方法
 - [[開發常用指令]] — git、gbrain、Claude Code 指令速查
