@@ -5,6 +5,19 @@
 
 ---
 
+## 2026-05-28
+
+**更新 `wiki/Claude/Karpathy 最高遵守原則 — AI 行為準則.md`：**
+- 新增「擴充規則（2026-05-28）」章節，加入 R8 / R10 / R12 三條規則
+- 來源：文章《Karpathy's 4 CLAUDE.md rules cut Claude mistakes from 41% to 11%. After 30 codebases, I added 8 more》
+- R8 寫之前先讀、R10 多步驟 Checkpoint、R12 失敗要大聲說
+- 記錄未採用的 5 條及理由
+
+**同步修改 `d:\Claude\CLAUDE.md`：**
+- 全域行為規則從 63 行增加到 79 行
+
+---
+
 ## 2026-05-15
 
 **新增 wiki/Github/留看（13 個 repo）：**

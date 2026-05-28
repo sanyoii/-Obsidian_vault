@@ -90,6 +90,64 @@ Karpathy 對 LLM 編程行為的核心批評：
 
 ---
 
+## 擴充規則（2026-05-28）
+
+> 來源：[Karpathy's 4 CLAUDE.md rules cut Claude mistakes from 41% to 11%. After 30 codebases, I added 8 more](https://x.com/Mnilax/status/...)
+> 作者在 30 個 codebase、6 週測試中，把 4 條規則擴充到 12 條，錯誤率從 41% 降到 3%。
+> 本系統採用其中與 7-agent 工廠最相關的 3 條（R8 / R10 / R12）。
+
+### R8 — 寫之前先讀（Read Before Write）
+
+**在某個檔案新增程式碼前，先理解現有結構。**
+
+- 先讀：① 該檔案的現有結構與 exports、② 直接呼叫者、③ 顯而易見的 shared utilities
+- 「看起來不相關」是最危險的四個字
+- 不確定現有程式碼為什麼這樣設計時，問而不是直接加
+
+> 典型失敗案例：在既有函數旁邊加了一個一模一樣的函數，兩者因 import 順序不同而互相覆蓋，舊的才是 6 個月的 source of truth。
+
+### R10 — 多步驟任務打 Checkpoint
+
+**每完成一個有意義的步驟後，摘要狀態。**
+
+格式：
+```
+✅ 已完成：[做了什麼]
+✅ 已驗證：[怎麼確認的]
+⬜ 還剩：[下一步]
+```
+
+- 不能描述目前狀態就不能繼續前進
+- 卡住時先停下來重新陳述，不要堆疊在不確定的狀態上繼續執行
+- 多 agent 工廠流程尤其重要：每個 agent 交接前應有明確的 checkpoint
+
+> 典型失敗案例：6 步重構在第 4 步出錯，但第 5、6 步已在錯誤狀態上繼續執行，解開的時間比重做整個流程更長。
+
+### R12 — 失敗要大聲說（Fail Loud）
+
+**不確定的部分要明確說出來，不要藏在成功訊息後面。**
+
+- 「完成」不代表沒有靜默跳過任何項目
+- 「測試通過」不代表跳過的 edge case 也通過
+- 「任務結束」不代表輸出是正確的
+- **自動排程任務尤其重要**：沒有使用者在場，靜默失敗等於無聲消失
+
+> 典型失敗案例：DB migration「成功完成」，但 14% 的資料因 constraint 靜默跳過，11 天後報表異常才發現。
+
+---
+
+### 未採用的擴充規則（及理由）
+
+| 規則 | 不採用原因 |
+|------|-----------|
+| R5 Model for judgment only | 7-agent 分工本身就是 routing-by-specialization，架構層已解決 |
+| R6 Token budgets | Compact 機制已存在；「超出要明說」被 R12 涵蓋 |
+| R7 Surface conflicts | 成熟 codebase + linting，與 R3 重疊 |
+| R9 Tests verify intent | test-verifier agent 在工廠流程的職責已涵蓋 |
+| R11 Match conventions | R3「風格要跟現有一致」已涵蓋 |
+
+---
+
 ## 違規警示指標
 
 - Diff 裡出現沒被要求的改動
@@ -110,6 +168,13 @@ Karpathy 對 LLM 編程行為的核心批評：
 | 建立 `/karpathy-audit` 審查命令 | `C:\Users\sanyo\.claude\commands\karpathy-audit.md` |
 | 備份至 git-tracked 位置 | `d:\Claude\.claude\commands\karpathy-audit.md` |
 | `karpathy-guidelines` skill 已安裝 | `C:\Users\sanyo\.claude\skills\` |
+
+### 已完成（2026-05-28）
+
+| 設定項 | 位置 |
+|--------|------|
+| 新增 R8 / R10 / R12 三條規則 | `d:\Claude\CLAUDE.md`（63→79 行） |
+| 來源：文章《After 30 codebases, I added 8 more》| 選用最符合 7-agent 工廠痛點的 3 條 |
 
 ### 定期審查
 
