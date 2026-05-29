@@ -1,4 +1,4 @@
-> 最後更新：2026-05-28（新增 7-Agent 工廠 Agents × 8 類別、水球流 Contract + Bug 路由 + 策略模式、Agents 同步至 setup.ps1）
+> 最後更新：2026-05-29（新增 ai-workshop/ 工作坊素材庫與 path-scoped rules）
 
 > Skills 在 **Claude Code** 和 **Claude Cowork** 中均可使用，Claude 一般網頁版不支援。
 
@@ -1065,6 +1065,18 @@ cd d:\Claude\careerbot
 ```powershell
 cd d:\Claude\open-slide
 npm run dev            # 啟動預覽伺服器
+```
+
+---
+
+### 14. AI Workshop（`ai-workshop/`）
+
+**用途：** 企業 AI 教學工作坊素材庫。每場工作坊一個子資料夾（`workshops/YYYY-MM-DD_主題/`），包含 guizang-ppt 電子雜誌風格投影片（HTML + Marp 兩種格式）、公司說明書模板、踩坑筆記。CLAUDE.md 記錄三個已知問題解法（CJK/ASCII 對齊、flex overflow、Practice 統一基準）。
+
+```powershell
+cd d:\Claude\ai-workshop
+# 準備新工作坊：複製上一場 slides，搜尋 CloudPay 替換示範情境
+# 使用說明見 CLAUDE.md 和各場 README.md
 ```
 
 ---
@@ -2201,6 +2213,7 @@ Plugin 位置：`C:\Users\sanyo\.claude\plugins\marketplaces\understand-anything
 | **CareerBot** | 草擬求職申請表、Why Us 答案 | `cd d:\Claude\careerbot`（⚠️ 需先執行 `/onboard`） |
 | **HD Decode** | 讀取人類圖報告、查詢通道或中心說明 | `cd d:\Claude\hd-decode` |
 | **Open Slide** | 製作 React 元件式投影片 | `cd d:\Claude\open-slide && npm run dev` |
+| **AI Workshop** | 準備/修改教學工作坊投影片 | `cd d:\Claude\ai-workshop`（詳見 `CLAUDE.md`） |
 | **AI Video Pipeline** | 全自動影片生成（⚠️ 需先申請 FAL_KEY） | `cd d:\Claude\ai-video-pipeline` |
 | **AutoHedge** | Solana 鏈上自動對沖（⚠️ 真實資金） | `cd d:\Claude\autohedge-env && .\Scripts\Activate.ps1 && autohedge` |
 | **Scrapling** | Python 網頁爬蟲，繞過 Cloudflare | `from scrapling.fetchers import Fetcher` |
@@ -2279,6 +2292,7 @@ d:\Claude\
 ├── job-crawler\                # 職缺海巡系統
 ├── hd-decode\                  # 人類圖分析工具
 ├── open-slide\                 # React 元件式投影片工具
+├── ai-workshop\               # AI 教學工作坊素材庫（含 CLAUDE.md path-scoped rules）
 ├── my-marketplace\             # 個人 Skill Marketplace
 │   ├── .claude-plugin\
 │   │   └── marketplace.json
