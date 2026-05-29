@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
@@ -391,11 +391,101 @@
         <div><div class="h-md" style="color:#3D5BE0;margin-bottom:0.5vh;">03 — Prompt 怎麼寫才有效</div><p class="lead" style="opacity:0.65;">RCTF 框架、常見錯誤、進階技巧、迭代心態。</p></div>
       </div>
     </div>
-    <div class="foot"><span>讓 AI 真正為你所用</span><span>02 / 23</span></div>
+    <div class="foot"><span>讓 AI 真正為你所用</span><span>02 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
-  <!-- 03 Part 1  hero dark -->
+  <!-- 03 名詞速查  light -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide light" data-slide="3">
+    <div class="kicker">名詞速查</div>
+    <h2 class="h-xl" style="margin-bottom:3vh;">今天會常聽到的 6 個詞</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2.5vw;flex:1;min-height:0;align-items:start;margin-top:1vh;">
+      <div style="padding:2.5vh 2vw;background:rgba(61,91,224,0.06);border-radius:10px;border-top:3px solid #3D5BE0;">
+        <div style="font-family:var(--sans);font-weight:700;font-size:clamp(0.9rem,1.4vw,1.1rem);color:#3D5BE0;margin-bottom:0.8vh;">LLM<span style="font-weight:400;color:var(--ink);opacity:0.85;"> 大型語言模型</span></div>
+        <p style="font-size:clamp(0.8rem,1.15vw,0.92rem);line-height:1.6;opacity:0.72;">ChatGPT、Claude 的技術核心，用海量文字訓練出來的語言理解引擎。</p>
+      </div>
+      <div style="padding:2.5vh 2vw;background:rgba(61,91,224,0.06);border-radius:10px;border-top:3px solid #3D5BE0;">
+        <div style="font-family:var(--sans);font-weight:700;font-size:clamp(0.9rem,1.4vw,1.1rem);color:#3D5BE0;margin-bottom:0.8vh;">Prompt<span style="font-weight:400;color:var(--ink);opacity:0.85;"> 提示詞</span></div>
+        <p style="font-size:clamp(0.8rem,1.15vw,0.92rem);line-height:1.6;opacity:0.72;">你輸入給 AI 的問題或指令。Prompt 品質直接決定回應品質。</p>
+      </div>
+      <div style="padding:2.5vh 2vw;background:rgba(61,91,224,0.06);border-radius:10px;border-top:3px solid #3D5BE0;">
+        <div style="font-family:var(--sans);font-weight:700;font-size:clamp(0.9rem,1.4vw,1.1rem);color:#3D5BE0;margin-bottom:0.8vh;">Token<span style="font-weight:400;color:var(--ink);opacity:0.85;"> 令牌</span></div>
+        <p style="font-size:clamp(0.8rem,1.15vw,0.92rem);line-height:1.6;opacity:0.72;">AI 計算文字的基本單位。中文約 1 字 ≈ 2 tokens；英文約 1 詞 ≈ 1 token。</p>
+      </div>
+      <div style="padding:2.5vh 2vw;background:rgba(61,91,224,0.06);border-radius:10px;border-top:3px solid #3D5BE0;">
+        <div style="font-family:var(--sans);font-weight:700;font-size:clamp(0.9rem,1.4vw,1.1rem);color:#3D5BE0;margin-bottom:0.8vh;">Context Window<span style="font-weight:400;color:var(--ink);opacity:0.85;"> 上下文視窗</span></div>
+        <p style="font-size:clamp(0.8rem,1.15vw,0.92rem);line-height:1.6;opacity:0.72;">AI 單次對話中能「記住」的資訊上限，超過就開始遺忘前段對話。</p>
+      </div>
+      <div style="padding:2.5vh 2vw;background:rgba(61,91,224,0.06);border-radius:10px;border-top:3px solid #3D5BE0;">
+        <div style="font-family:var(--sans);font-weight:700;font-size:clamp(0.9rem,1.4vw,1.1rem);color:#3D5BE0;margin-bottom:0.8vh;">System Prompt<span style="font-weight:400;color:var(--ink);opacity:0.85;"> 系統指令</span></div>
+        <p style="font-size:clamp(0.8rem,1.15vw,0.92rem);line-height:1.6;opacity:0.72;">對話開始前設定 AI 角色、語氣與行為限制的「底層設定」。</p>
+      </div>
+      <div style="padding:2.5vh 2vw;background:rgba(61,91,224,0.06);border-radius:10px;border-top:3px solid #3D5BE0;">
+        <div style="font-family:var(--sans);font-weight:700;font-size:clamp(0.9rem,1.4vw,1.1rem);color:#3D5BE0;margin-bottom:0.8vh;">RAG<span style="font-weight:400;color:var(--ink);opacity:0.85;"> 知識庫串接</span></div>
+        <p style="font-size:clamp(0.8rem,1.15vw,0.92rem);line-height:1.6;opacity:0.72;">讓 AI 讀取外部文件（如公司資料）來回答問題，不用重新訓練模型。</p>
+      </div>
+    </div>
+    <div class="foot"><span>名詞速查</span><span>03 / 25</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 04 工具大觀  light -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide light" data-slide="4">
+    <div class="kicker">工具大觀</div>
+    <h2 class="h-xl" style="margin-bottom:3vh;">你可能聽過的那幾個 AI</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3vw;flex:1;min-height:0;align-items:stretch;margin-top:0.5vh;">
+
+      <!-- ChatGPT -->
+      <div style="display:flex;flex-direction:column;border-radius:12px;border:1px solid rgba(16,163,127,0.25);border-top:4px solid #10A37F;overflow:hidden;">
+        <div style="padding:2.5vh 2vw 0;">
+          <div style="font-family:var(--sans);font-size:clamp(1.1rem,1.7vw,1.4rem);font-weight:700;color:#10A37F;margin-bottom:0.3vh;">ChatGPT</div>
+          <div style="font-size:clamp(0.75rem,1.1vw,0.88rem);opacity:0.5;margin-bottom:1.8vh;">by OpenAI</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.9vh;padding:0;">
+            <li style="font-size:clamp(0.8rem,1.15vw,0.92rem);opacity:0.78;padding-left:1.1em;position:relative;"><span style="position:absolute;left:0;color:#10A37F;">▸</span>通用能力最強，幾乎什麼都能做</li>
+            <li style="font-size:clamp(0.8rem,1.15vw,0.92rem);opacity:0.78;padding-left:1.1em;position:relative;"><span style="position:absolute;left:0;color:#10A37F;">▸</span>最多教學資源與社群討論</li>
+            <li style="font-size:clamp(0.8rem,1.15vw,0.92rem);opacity:0.78;padding-left:1.1em;position:relative;"><span style="position:absolute;left:0;color:#10A37F;">▸</span>適合快速試驗新想法</li>
+          </ul>
+        </div>
+        <div style="margin-top:auto;padding:1.5vh 2vw;background:rgba(16,163,127,0.06);font-size:clamp(0.75rem,1.05vw,0.85rem);opacity:0.55;">最多人用的入門首選</div>
+      </div>
+
+      <!-- Claude -->
+      <div style="display:flex;flex-direction:column;border-radius:12px;border:1px solid rgba(61,91,224,0.25);border-top:4px solid #3D5BE0;overflow:hidden;">
+        <div style="padding:2.5vh 2vw 0;">
+          <div style="font-family:var(--sans);font-size:clamp(1.1rem,1.7vw,1.4rem);font-weight:700;color:#3D5BE0;margin-bottom:0.3vh;">Claude</div>
+          <div style="font-size:clamp(0.75rem,1.1vw,0.88rem);opacity:0.5;margin-bottom:1.8vh;">by Anthropic</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.9vh;padding:0;">
+            <li style="font-size:clamp(0.8rem,1.15vw,0.92rem);opacity:0.78;padding-left:1.1em;position:relative;"><span style="position:absolute;left:0;color:#3D5BE0;">▸</span>長文分析與細膩推理表現優異</li>
+            <li style="font-size:clamp(0.8rem,1.15vw,0.92rem);opacity:0.78;padding-left:1.1em;position:relative;"><span style="position:absolute;left:0;color:#3D5BE0;">▸</span>繁體中文回應品質佳</li>
+            <li style="font-size:clamp(0.8rem,1.15vw,0.92rem);opacity:0.78;padding-left:1.1em;position:relative;"><span style="position:absolute;left:0;color:#3D5BE0;">▸</span>指令遵循精準，適合複雜任務</li>
+          </ul>
+        </div>
+        <div style="margin-top:auto;padding:1.5vh 2vw;background:rgba(61,91,224,0.06);font-size:clamp(0.75rem,1.05vw,0.85rem);opacity:0.55;">今天課程使用的工具</div>
+      </div>
+
+      <!-- Gemini -->
+      <div style="display:flex;flex-direction:column;border-radius:12px;border:1px solid rgba(234,67,53,0.2);border-top:4px solid #EA4335;overflow:hidden;">
+        <div style="padding:2.5vh 2vw 0;">
+          <div style="font-family:var(--sans);font-size:clamp(1.1rem,1.7vw,1.4rem);font-weight:700;color:#EA4335;margin-bottom:0.3vh;">Gemini</div>
+          <div style="font-size:clamp(0.75rem,1.1vw,0.88rem);opacity:0.5;margin-bottom:1.8vh;">by Google</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.9vh;padding:0;">
+            <li style="font-size:clamp(0.8rem,1.15vw,0.92rem);opacity:0.78;padding-left:1.1em;position:relative;"><span style="position:absolute;left:0;color:#EA4335;">▸</span>與 Google 搜尋深度整合</li>
+            <li style="font-size:clamp(0.8rem,1.15vw,0.92rem);opacity:0.78;padding-left:1.1em;position:relative;"><span style="position:absolute;left:0;color:#EA4335;">▸</span>Gmail、Docs、Sheets 場景首選</li>
+            <li style="font-size:clamp(0.8rem,1.15vw,0.92rem);opacity:0.78;padding-left:1.1em;position:relative;"><span style="position:absolute;left:0;color:#EA4335;">▸</span>需要即時資訊時特別有用</li>
+          </ul>
+        </div>
+        <div style="margin-top:auto;padding:1.5vh 2vw;background:rgba(234,67,53,0.05);font-size:clamp(0.75rem,1.05vw,0.85rem);opacity:0.55;">Google Workspace 用戶首選</div>
+      </div>
+
+    </div>
+    <div class="callout" style="margin-top:2.5vh;font-size:clamp(0.82rem,1.2vw,0.95rem);">三者都能完成今天的練習，選自己習慣的就好。本課程示範以 Claude 為主。</div>
+    <div class="foot"><span>工具大觀</span><span>04 / 25</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 05 Part 1  hero dark -->
   <!-- ══════════════════════════════════════ -->
   <section class="slide hero dark" data-slide="3">
     <div style="position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;height:100%;">
@@ -404,7 +494,7 @@
       <div class="accent-bar"></div>
       <p class="lead" style="color:rgba(242,245,255,0.5);max-width:42ch;margin-top:2vh;">理解 AI 如何處理資訊，是寫好 Prompt 的第一步。</p>
     </div>
-    <div class="foot"><span>讓 AI 真正為你所用</span><span>03 / 23</span></div>
+    <div class="foot"><span>讓 AI 真正為你所用</span><span>05 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -447,7 +537,7 @@
         </div>
       </div>
     </div>
-    <div class="foot"><span>Part 01 — AI 的資料結構設計</span><span>04 / 23</span></div>
+    <div class="foot"><span>Part 01 — AI 的資料結構設計</span><span>06 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -483,7 +573,7 @@
       </div>
     </div>
     <div class="callout" style="margin-top:3vh;">三層給得越完整，AI 理解你的意圖就越準確，回答品質越高。</div>
-    <div class="foot"><span>Part 01 — AI 的資料結構設計</span><span>05 / 23</span></div>
+    <div class="foot"><span>Part 01 — AI 的資料結構設計</span><span>07 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -544,7 +634,7 @@
         </div>
       </div>
     </div>
-    <div class="foot"><span>Part 01 — AI 的資料結構設計</span><span>06 / 23</span></div>
+    <div class="foot"><span>Part 01 — AI 的資料結構設計</span><span>08 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -581,7 +671,7 @@
       </div>
     </div>
     <div class="callout" style="margin-top:2vh;font-size:clamp(0.82rem,1.2vw,0.95rem);">STEP 02 — 把三層內容加在 Prompt 前面，再問一次，比較兩次回應有什麼不同。</div>
-    <div class="foot"><span>Part 01 — 課堂練習</span><span>07 / 23</span></div>
+    <div class="foot"><span>Part 01 — 課堂練習</span><span>09 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -605,7 +695,7 @@
         <p class="lead" style="opacity:0.42;font-size:clamp(0.75rem,1.05vw,0.82rem);font-style:italic;">越具體越好。存成模板，之後每次對話直接貼用。</p>
       </div>
     </div>
-    <div class="foot"><span>Part 01 — 範例</span><span>08 / 23</span></div>
+    <div class="foot"><span>Part 01 — 範例</span><span>10 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -618,7 +708,7 @@
       <div class="accent-bar warm"></div>
       <p class="lead" style="color:rgba(242,245,255,0.5);max-width:42ch;margin-top:2vh;">一份好的公司說明書，讓你每次和 AI 對話都不用重頭解釋。</p>
     </div>
-    <div class="foot"><span>讓 AI 真正為你所用</span><span>09 / 23</span></div>
+    <div class="foot"><span>讓 AI 真正為你所用</span><span>11 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -645,7 +735,7 @@
       </div>
     </div>
     <div class="callout" style="margin-top:3vh;">解法：自己寫一份「公司說明書」給 AI，每次對話帶著走。</div>
-    <div class="foot"><span>Part 02 — 讓 AI 秒懂你的公司</span><span>10 / 23</span></div>
+    <div class="foot"><span>Part 02 — 讓 AI 秒懂你的公司</span><span>12 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -697,7 +787,7 @@
 你是我們公司的 _________，
 你的職責是幫助我 ________。</div>
     </div>
-    <div class="foot"><span>Part 02 — 讓 AI 秒懂你的公司</span><span>11 / 23</span></div>
+    <div class="foot"><span>Part 02 — 讓 AI 秒懂你的公司</span><span>13 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -723,7 +813,7 @@
         <div class="step-desc" style="margin-top:1.5vh;">上傳公司文件、產品手冊，讓 AI 即時搜尋查詢，回答更精準。<br><br><span class="tag" style="font-size:0.62rem;">需技術支援</span><span class="tag" style="font-size:0.62rem;">長期效益最高</span></div>
       </div>
     </div>
-    <div class="foot"><span>Part 02 — 讓 AI 秒懂你的公司</span><span>12 / 23</span></div>
+    <div class="foot"><span>Part 02 — 讓 AI 秒懂你的公司</span><span>14 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -758,7 +848,7 @@ support@company.com</div>
         <p class="lead" style="margin-top:2vh;opacity:0.6;font-size:clamp(0.78rem,1.1vw,0.9rem);">AI 已知產品、流程、聯絡方式，直接給出可用的回覆。</p>
       </div>
     </div>
-    <div class="foot"><span>Part 02 — 讓 AI 秒懂你的公司</span><span>13 / 23</span></div>
+    <div class="foot"><span>Part 02 — 讓 AI 秒懂你的公司</span><span>15 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -794,7 +884,7 @@ support@company.com</div>
       </div>
     </div>
     <p class="lead" style="margin-top:2vh;opacity:0.32;font-size:clamp(0.75rem,1.05vw,0.82rem);font-style:italic;">5 分鐘填寫 — 填完後貼到 Claude 或 ChatGPT 測試一次，感受差異。</p>
-    <div class="foot"><span>Part 02 — 課堂練習</span><span>14 / 23</span></div>
+    <div class="foot"><span>Part 02 — 課堂練習</span><span>16 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -818,7 +908,7 @@ support@company.com</div>
         <p class="lead" style="opacity:0.42;font-size:clamp(0.75rem,1.05vw,0.82rem);font-style:italic;">術語 2–5 個就夠。完成後設成 System Prompt 永久有效。</p>
       </div>
     </div>
-    <div class="foot"><span>Part 02 — 範例</span><span>15 / 23</span></div>
+    <div class="foot"><span>Part 02 — 範例</span><span>17 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -831,7 +921,7 @@ support@company.com</div>
       <div class="accent-bar"></div>
       <p class="lead" style="color:var(--ink);opacity:0.5;max-width:42ch;margin-top:2vh;">一個框架，四個要素，讓每次提問都有精準的回應。</p>
     </div>
-    <div class="foot"><span>讓 AI 真正為你所用</span><span>16 / 23</span></div>
+    <div class="foot"><span>讓 AI 真正為你所用</span><span>18 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -866,7 +956,7 @@ support@company.com</div>
         <div class="code-block" style="font-size:0.72rem;padding:1vh 0.8vw;">「300 字以內，正式但誠懇語氣，段落分明」</div>
       </div>
     </div>
-    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>17 / 23</span></div>
+    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>19 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -897,7 +987,7 @@ support@company.com</div>
 段落分明。</div>
       </div>
     </div>
-    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>18 / 23</span></div>
+    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>20 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -932,7 +1022,7 @@ support@company.com</div>
         <div class="code-block" style="font-size:0.7rem;padding:1vh 0.8vw;">「以新客戶角度，這份說明是否清楚？」</div>
       </div>
     </div>
-    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>19 / 23</span></div>
+    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>21 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -975,7 +1065,7 @@ support@company.com</div>
         <p class="lead" style="font-size:clamp(0.72rem,1.05vw,0.82rem);opacity:0.38;margin-top:1vh;font-style:italic;">→ 繼續追問、修正、迭代</p>
       </div>
     </div>
-    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>20 / 23</span></div>
+    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>22 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -1000,7 +1090,7 @@ support@company.com</div>
         </div>
       </div>
     </div>
-    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>21 / 23</span></div>
+    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>23 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -1035,7 +1125,7 @@ support@company.com</div>
       </div>
     </div>
     <p class="lead" style="margin-top:1.5vh;opacity:0.32;font-size:clamp(0.75rem,1.05vw,0.82rem);font-style:italic;">5 分鐘改造，完成後現場貼進 AI 測試，感受回應品質的提升。</p>
-    <div class="foot"><span>Part 03 — 課堂練習</span><span>22 / 23</span></div>
+    <div class="foot"><span>Part 03 — 課堂練習</span><span>24 / 25</span></div>
   </section>
 
   <!-- ══════════════════════════════════════ -->
@@ -1079,7 +1169,7 @@ Format：________ 字以內，
         <p class="lead" style="margin-top:2vh;opacity:0.35;font-size:clamp(0.75rem,1.05vw,0.85rem);font-style:italic;">寫完和旁邊的人交換看看，互相給回饋。</p>
       </div>
     </div>
-    <div class="foot"><span>讓 AI 真正為你所用 · Prompt 設計工作坊</span><span>23 / 23</span></div>
+    <div class="foot"><span>讓 AI 真正為你所用 · Prompt 設計工作坊</span><span>25 / 25</span></div>
   </section>
 
 </main>
