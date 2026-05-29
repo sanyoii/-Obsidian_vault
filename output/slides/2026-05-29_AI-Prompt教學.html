@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>讓 AI 真正為你所用 · Prompt 設計工作坊</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=IBM+Plex+Mono:wght@300;400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0B1740;
+      --paper: #F2F5FF;
+      --paper-tint: #E0E8FF;
+      --ink-tint: #253B87;
+      --accent: #3D5BE0;
+      --accent-warm: #E06B3D;
+      --accent-light: #7B9CFF;
+      --serif: 'Playfair Display', 'Noto Serif SC', serif;
+      --sans: 'Inter', 'Noto Sans SC', sans-serif;
+      --mono: 'IBM Plex Mono', monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: var(--ink); }
+
+    #deck {
+      display: flex;
+      width: 100%; height: 100vh;
+      overflow-x: auto; overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+    #deck::-webkit-scrollbar { display: none; }
+
+    .slide {
+      flex: 0 0 100vw; height: 100vh;
+      scroll-snap-align: start;
+      position: relative;
+      display: flex; flex-direction: column;
+      padding: 5vh 6vw;
+      overflow: hidden;
+    }
+    .slide.hero { padding: 8vh 8vw; }
+
+    .slide.dark { background: var(--ink); color: var(--paper); }
+    .slide.light { background: var(--paper); color: var(--ink); }
+
+    .slide.hero.dark::before,
+    .slide.hero.light::before {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+    }
+    .slide.hero.dark::before {
+      background:
+        radial-gradient(ellipse 80% 60% at 72% 28%, rgba(61,91,224,0.28) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 80% at 8% 82%, rgba(224,107,61,0.14) 0%, transparent 50%),
+        radial-gradient(ellipse 30% 40% at 50% 0%, rgba(123,156,255,0.1) 0%, transparent 40%);
+    }
+    .slide.hero.light::before {
+      background:
+        radial-gradient(ellipse 70% 50% at 80% 20%, rgba(61,91,224,0.1) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 70% at 20% 90%, rgba(61,91,224,0.07) 0%, transparent 55%);
+    }
+
+    /* ── Typography ── */
+    .h-hero {
+      font-family: var(--serif); font-size: clamp(3rem, 6.5vw, 5.8rem);
+      font-weight: 900; line-height: 1.04; letter-spacing: -0.02em;
+    }
+    .h-xl {
+      font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 700; line-height: 1.1;
+    }
+    .h-sub {
+      font-family: var(--serif); font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+      font-weight: 400; font-style: italic;
+    }
+    .h-md {
+      font-family: var(--sans); font-size: clamp(1rem, 1.8vw, 1.45rem);
+      font-weight: 700; line-height: 1.3;
+    }
+    .lead {
+      font-family: var(--sans); font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+      font-weight: 400; line-height: 1.65;
+    }
+    .kicker {
+      font-family: var(--mono); font-size: clamp(0.65rem, 0.9vw, 0.8rem);
+      font-weight: 400; letter-spacing: 0.16em; text-transform: uppercase;
+      margin-bottom: 1.5vh;
+    }
+    .slide.dark .kicker { color: var(--accent-light); opacity: 0.75; }
+    .slide.light .kicker { color: var(--ink-tint); }
+
+    .foot {
+      position: absolute; bottom: 3vh; left: 6vw; right: 6vw;
+      font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.09em;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .slide.dark .foot { color: rgba(242,245,255,0.3); }
+    .slide.light .foot { color: rgba(11,23,64,0.35); }
+    .slide.hero .foot { left: 8vw; right: 8vw; }
+
+    .accent-bar {
+      width: 2.8rem; height: 3px; background: var(--accent); margin: 2vh 0;
+    }
+    .accent-bar.warm { background: var(--accent-warm); }
+
+    /* ── Layouts ── */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3vw; align-items: start; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2vw; align-items: start; }
+    .grid-4 { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 2vh 2.5vw; }
+
+    /* ── Pipeline ── */
+    .pipeline { display: flex; gap: 0; align-items: stretch; }
+    .step { flex: 1; padding: 2vh 1.8vw; }
+    .step + .step { border-left: 1px solid; }
+    .slide.dark .step + .step { border-color: rgba(242,245,255,0.15); }
+    .slide.light .step + .step { border-color: rgba(11,23,64,0.12); }
+    .step-nb {
+      font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em;
+      margin-bottom: 1vh; opacity: 0.5;
+    }
+    .step-title {
+      font-family: var(--sans); font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+      font-weight: 700; margin-bottom: 0.5vh;
+    }
+    .step-desc {
+      font-family: var(--sans); font-size: clamp(0.75rem, 1.1vw, 0.88rem);
+      line-height: 1.55; opacity: 0.72;
+    }
+
+    /* ── Cards ── */
+    .card {
+      padding: 2.2vh 1.8vw; border-radius: 2px;
+      border: 1px solid;
+    }
+    .slide.dark .card { border-color: rgba(242,245,255,0.14); background: rgba(255,255,255,0.03); }
+    .slide.light .card { border-color: rgba(11,23,64,0.12); background: rgba(61,91,224,0.03); }
+
+    /* ── Callout ── */
+    .callout {
+      padding: 2vh 2vw; border-left: 3px solid var(--accent);
+      font-family: var(--sans); font-size: clamp(0.9rem, 1.4vw, 1.1rem); line-height: 1.6;
+    }
+    .slide.dark .callout { background: rgba(61,91,224,0.13); border-color: var(--accent-light); }
+    .slide.light .callout { background: rgba(61,91,224,0.05); }
+
+    /* ── Code block ── */
+    .code-block {
+      font-family: var(--mono); font-size: clamp(0.7rem, 1.1vw, 0.85rem);
+      line-height: 1.75; padding: 2vh 1.8vw; border-radius: 3px;
+      white-space: pre; overflow: auto;
+    }
+    .slide.dark .code-block { background: rgba(255,255,255,0.05); color: rgba(210,225,255,0.85); }
+    .slide.light .code-block { background: rgba(11,23,64,0.04); color: var(--ink); border: 1px solid rgba(11,23,64,0.1); }
+
+    /* ── Tag ── */
+    .tag {
+      display: inline-block; font-family: var(--mono); font-size: 0.68rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.3em 0.75em; border: 1px solid; border-radius: 2px;
+      margin-right: 0.5em; margin-bottom: 0.4em; opacity: 0.65;
+    }
+    .slide.dark .tag { border-color: rgba(242,245,255,0.3); }
+    .slide.light .tag { border-color: rgba(11,23,64,0.3); }
+
+    /* ── Icon row ── */
+    .icon-row { display: flex; gap: 1.2vw; align-items: flex-start; }
+    .icon-row svg { flex-shrink: 0; margin-top: 0.3em; }
+
+    /* ── Before/After borders ── */
+    .ba-before { border-top: 3px solid rgba(210, 70, 70, 0.55); padding-top: 2vh; }
+    .ba-after  { border-top: 3px solid var(--accent); padding-top: 2vh; }
+    .slide.dark .ba-after { border-color: var(--accent-light); }
+
+    /* ── Navigation dots ── */
+    #nav-dots {
+      position: fixed; bottom: 2.8vh; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 0.55rem; z-index: 200; pointer-events: all;
+    }
+    .dot {
+      width: 5px; height: 5px; border-radius: 50%; cursor: pointer;
+      background: rgba(255,255,255,0.28); transition: all 0.25s;
+    }
+    .dot.active { background: rgba(255,255,255,0.85); transform: scale(1.4); }
+    body.on-light .dot { background: rgba(11,23,64,0.2); }
+    body.on-light .dot.active { background: rgba(11,23,64,0.65); }
+
+    /* ── Vertical pipeline (slide 17) ── */
+    .v-pipeline { display: flex; flex-direction: column; }
+    .v-step { padding: 2vh 0 2vh 2vw; border-left: 2px solid; }
+    .slide.light .v-step { border-color: rgba(11,23,64,0.15); }
+    .slide.dark .v-step { border-color: rgba(242,245,255,0.15); }
+    .v-step + .v-step { margin-top: 0; }
+
+    /* ── Stat number ── */
+    .stat-nb {
+      font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 900; line-height: 1; color: var(--accent);
+    }
+    .slide.dark .stat-nb { color: var(--accent-light); }
+
+    /* ── Desk Viz (Slide 4) ── */
+    .desk-viz {
+      border: 1px solid rgba(11,23,64,0.14);
+      border-radius: 6px;
+      padding: 2.2vh 2vw;
+      background: rgba(61,91,224,0.03);
+      display: flex; flex-direction: column; gap: 1.4vh;
+      font-family: var(--mono);
+    }
+    .desk-title {
+      font-size: clamp(0.65rem, 0.9vw, 0.78rem);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      opacity: 0.45; text-align: center;
+      padding-bottom: 1.2vh; border-bottom: 1px solid rgba(11,23,64,0.1);
+    }
+    .desk-rows { display: flex; flex-direction: column; gap: 1vh; }
+    .desk-row {
+      display: flex; align-items: center; gap: 1.2vw;
+      padding: 1.1vh 1vw; border-radius: 4px;
+      background: rgba(11,23,64,0.04); border: 1px solid rgba(11,23,64,0.07);
+      transition: background 0.2s;
+    }
+    .desk-row:hover { background: rgba(61,91,224,0.07); }
+    .desk-icon { font-size: 1.05rem; flex-shrink: 0; width: 1.8rem; text-align: center; }
+    .desk-label { flex: 1; font-size: clamp(0.76rem, 1.05vw, 0.88rem); }
+    .desk-layer {
+      font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); padding: 0.2em 0.65em;
+      border: 1px solid rgba(61,91,224,0.35); border-radius: 2px; flex-shrink: 0;
+    }
+    .desk-sep { border: none; border-top: 1px solid rgba(11,23,64,0.08); }
+    .desk-hint {
+      font-size: clamp(0.65rem, 0.9vw, 0.75rem); letter-spacing: 0.05em;
+      text-align: center; opacity: 0.42;
+    }
+    .desk-token { display: flex; align-items: center; gap: 0.8vw; font-size: 0.68rem; opacity: 0.6; }
+    .token-bar {
+      flex: 1; height: 5px; background: rgba(11,23,64,0.1);
+      border-radius: 3px; overflow: hidden;
+    }
+    .token-fill {
+      height: 100%; width: 80%; background: var(--accent);
+      border-radius: 3px; transition: width 1s ease 0.8s;
+    }
+    .slide.is-active .token-fill { width: 80%; }
+    .slide:not(.is-active) .token-fill { width: 0; }
+
+    /* ── Animations ── */
+    @keyframes enterUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes enterLeft {
+      from { opacity: 0; transform: translateX(-20px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes enterFade {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes enterScale {
+      from { opacity: 0; transform: scale(0.94); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes barGrow {
+      from { transform: scaleX(0); transform-origin: left; }
+      to   { transform: scaleX(1); transform-origin: left; }
+    }
+
+    /* Default: elements are invisible */
+    .slide .kicker,
+    .slide .h-hero, .slide .h-xl,
+    .slide .h-sub, .slide .accent-bar,
+    .slide .grid-2, .slide .grid-3, .slide .grid-4,
+    .slide .pipeline, .slide .v-pipeline,
+    .slide .callout, .slide .desk-viz,
+    .slide > div > p.lead,
+    .slide > div > .code-block {
+      opacity: 0;
+    }
+
+    /* Hero slides */
+    .slide.hero.is-active .kicker {
+      animation: enterFade 0.4s ease-out 0s both;
+    }
+    .slide.hero.is-active .h-hero {
+      animation: enterLeft 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+    }
+    .slide.hero.is-active .h-sub {
+      animation: enterUp 0.5s ease-out 0.25s both;
+    }
+    .slide.hero.is-active .accent-bar {
+      animation: enterFade 0.4s ease-out 0.3s both;
+    }
+    .slide.hero.is-active > div > p.lead,
+    .slide.hero.is-active > div > div > p.lead {
+      animation: enterUp 0.5s ease-out 0.38s both;
+    }
+    .slide.hero.is-active > div > div:last-child {
+      animation: enterFade 0.5s ease-out 0.48s both;
+    }
+
+    /* Content slides – kicker + title */
+    .slide:not(.hero).is-active .kicker {
+      animation: enterFade 0.4s ease-out 0s both;
+    }
+    .slide:not(.hero).is-active .h-xl {
+      animation: enterUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+    }
+
+    /* Content slides – main content blocks */
+    .slide:not(.hero).is-active .grid-2,
+    .slide:not(.hero).is-active .grid-3,
+    .slide:not(.hero).is-active .grid-4 {
+      animation: enterUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
+    }
+    .slide:not(.hero).is-active .pipeline,
+    .slide:not(.hero).is-active .v-pipeline {
+      animation: enterUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
+    }
+    .slide:not(.hero).is-active .callout {
+      animation: enterUp 0.5s ease-out 0.38s both;
+    }
+    .slide:not(.hero).is-active .desk-viz {
+      animation: enterScale 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.28s both;
+    }
+    .slide:not(.hero).is-active > div > p.lead,
+    .slide:not(.hero).is-active > div > div > p.lead {
+      animation: enterUp 0.5s ease-out 0.22s both;
+    }
+    .slide:not(.hero).is-active > div > .code-block,
+    .slide:not(.hero).is-active .code-block {
+      animation: enterScale 0.5s ease-out 0.28s both;
+    }
+
+    /* Slide 18 special – grid children */
+    [data-slide="18"].is-active > div > div:first-child {
+      animation: enterUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+      opacity: 0;
+    }
+    [data-slide="18"].is-active > div > div:last-child {
+      animation: enterUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav-dots"></nav>
+
+<main id="deck">
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 01 Cover  hero dark -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide hero dark" data-slide="1">
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;justify-content:space-between;height:100%;">
+      <div class="kicker" style="opacity:0.45;">AI 工作坊 · Prompt 設計</div>
+      <div>
+        <div class="kicker" style="letter-spacing:0.22em;">WORKSHOP</div>
+        <h1 class="h-hero" style="max-width:14ch;margin-bottom:2vh;white-space:nowrap;">讓 AI 真正<br>為你所用</h1>
+        <p class="h-sub" style="color:rgba(242,245,255,0.55);margin-bottom:3vh;">Prompt 設計工作坊</p>
+        <div class="accent-bar"></div>
+      </div>
+      <div>
+        <span class="tag">01 AI 資料結構</span>
+        <span class="tag">02 公司說明書</span>
+        <span class="tag">03 Prompt 技巧</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 02 Agenda  light -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide light" data-slide="2">
+    <div class="kicker">今日課程</div>
+    <h2 class="h-xl" style="margin-bottom:4vh;">三個關鍵問題</h2>
+    <div style="flex:1;display:flex;flex-direction:column;gap:3vh;justify-content:center;">
+      <div class="icon-row">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D5BE0" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <div><div class="h-md" style="color:#3D5BE0;margin-bottom:0.5vh;">01 — AI 的資料結構設計</div><p class="lead" style="opacity:0.65;">AI 怎麼讀資料？Context Window 是什麼？三層架構如何設計？</p></div>
+      </div>
+      <div class="icon-row">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D5BE0" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        <div><div class="h-md" style="color:#3D5BE0;margin-bottom:0.5vh;">02 — 讓 AI 秒懂你的公司</div><p class="lead" style="opacity:0.65;">為什麼 AI 不認識你的業務？公司說明書怎麼寫、怎麼用？</p></div>
+      </div>
+      <div class="icon-row">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D5BE0" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div><div class="h-md" style="color:#3D5BE0;margin-bottom:0.5vh;">03 — Prompt 怎麼寫才有效</div><p class="lead" style="opacity:0.65;">RCTF 框架、常見錯誤、進階技巧、迭代心態。</p></div>
+      </div>
+    </div>
+    <div class="foot"><span>讓 AI 真正為你所用</span><span>02 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 03 Part 1  hero dark -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide hero dark" data-slide="3">
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;height:100%;">
+      <div class="kicker" style="letter-spacing:0.22em;">PART 01</div>
+      <h2 class="h-hero" style="max-width:10ch;line-height:1.06;margin-bottom:2vh;">AI 的<br>資料結構<br>設計</h2>
+      <div class="accent-bar"></div>
+      <p class="lead" style="color:rgba(242,245,255,0.5);max-width:42ch;margin-top:2vh;">理解 AI 如何處理資訊，是寫好 Prompt 的第一步。</p>
+    </div>
+    <div class="foot"><span>讓 AI 真正為你所用</span><span>03 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 04 Context Window  light -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide light" data-slide="4">
+    <div class="kicker">Context Window</div>
+    <h2 class="h-xl" style="margin-bottom:3vh;">AI 的「工作桌」</h2>
+    <div class="grid-2" style="flex:1;gap:5vw;align-items:start;">
+      <div>
+        <p class="lead" style="opacity:0.8;margin-bottom:2.5vh;">AI 不像人類有長期記憶。每次對話，AI 只能看到一個有限的工作空間——這就是 <strong>Context Window</strong>。</p>
+        <div class="callout">放什麼、怎麼放，<br>決定了 AI 的表現好壞。</div>
+        <p class="lead" style="margin-top:2.5vh;opacity:0.55;font-size:clamp(0.82rem,1.2vw,0.95rem);">Token 是 AI 的計量單位。Context 有大小上限——精準放資料比全部塞進去更重要。</p>
+      </div>
+      <div class="desk-viz">
+        <div class="desk-title">AI 的工作桌（有限空間）</div>
+        <div class="desk-rows">
+          <div class="desk-row">
+            <span class="desk-icon">📋</span>
+            <span class="desk-label">公司背景說明</span>
+            <span class="desk-layer">系統層</span>
+          </div>
+          <div class="desk-row">
+            <span class="desk-icon">📚</span>
+            <span class="desk-label">產品知識 / 術語</span>
+            <span class="desk-layer">知識層</span>
+          </div>
+          <div class="desk-row">
+            <span class="desk-icon">✉️</span>
+            <span class="desk-label">你今天的問題</span>
+            <span class="desk-layer">任務層</span>
+          </div>
+        </div>
+        <div class="desk-sep"></div>
+        <div class="desk-hint">← 放越清楚，AI 理解越快 →</div>
+        <div class="desk-token">
+          <span style="white-space:nowrap;">Token 用量</span>
+          <div class="token-bar"><div class="token-fill"></div></div>
+          <span>80%</span>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>Part 01 — AI 的資料結構設計</span><span>04 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 05 Three-Layer  dark -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide dark" data-slide="5">
+    <div class="kicker">三層資料架構</div>
+    <h2 class="h-xl" style="margin-bottom:4vh;">像員工一樣理解 AI</h2>
+    <div class="pipeline" style="flex:1;align-items:stretch;">
+      <div class="step">
+        <div class="step-nb">LAYER 01</div>
+        <div class="step-title">系統層 System</div>
+        <div class="step-desc" style="margin-top:1.5vh;">
+          公司背景<br>AI 的角色定義<br>行為限制<br><br>
+          <em style="opacity:0.45;">類比：員工手冊</em>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-nb">LAYER 02</div>
+        <div class="step-title">知識層 Knowledge</div>
+        <div class="step-desc" style="margin-top:1.5vh;">
+          產品介紹<br>SOP 流程<br>術語定義<br><br>
+          <em style="opacity:0.45;">類比：專業訓練</em>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-nb">LAYER 03</div>
+        <div class="step-title">任務層 Task</div>
+        <div class="step-desc" style="margin-top:1.5vh;">
+          今天的具體問題<br>輸出格式要求<br>特定限制條件<br><br>
+          <em style="opacity:0.45;">類比：今日工作單</em>
+        </div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:3vh;">三層給得越完整，AI 理解你的意圖就越準確，回答品質越高。</div>
+    <div class="foot"><span>Part 01 — AI 的資料結構設計</span><span>05 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 06 Good vs Bad  light -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide light" data-slide="6">
+    <div class="kicker">結構對比</div>
+    <h2 class="h-xl" style="margin-bottom:4vh;">同樣的問題，不同的結果</h2>
+    <div class="grid-2" style="flex:1;gap:4vw;align-items:start;">
+      <div class="ba-before">
+        <div class="kicker" style="color:rgba(190,60,60,0.85);margin-bottom:1.5vh;">結構差的做法</div>
+        <div style="display:flex;flex-direction:column;gap:1.8vh;">
+          <div class="icon-row" style="gap:0.8vw;align-items:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(200,60,60,0.8)" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            <p class="lead" style="font-size:clamp(0.85rem,1.3vw,1rem);">一大段沒有標題的文字</p>
+          </div>
+          <div class="icon-row" style="gap:0.8vw;align-items:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(200,60,60,0.8)" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            <p class="lead" style="font-size:clamp(0.85rem,1.3vw,1rem);">全部資訊一次塞進去</p>
+          </div>
+          <div class="icon-row" style="gap:0.8vw;align-items:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(200,60,60,0.8)" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            <p class="lead" style="font-size:clamp(0.85rem,1.3vw,1rem);">沒有定義 AI 的角色</p>
+          </div>
+          <div class="icon-row" style="gap:0.8vw;align-items:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(200,60,60,0.8)" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            <p class="lead" style="font-size:clamp(0.85rem,1.3vw,1rem);">術語沒有解釋</p>
+          </div>
+          <div class="icon-row" style="gap:0.8vw;align-items:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(200,60,60,0.8)" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            <p class="lead" style="font-size:clamp(0.85rem,1.3vw,1rem);">沒有指定輸出格式</p>
+          </div>
+        </div>
+      </div>
+      <div class="ba-after">
+        <div class="kicker" style="color:#3D5BE0;margin-bottom:1.5vh;">結構好的做法</div>
+        <div style="display:flex;flex-direction:column;gap:1.8vh;">
+          <div class="icon-row" style="gap:0.8vw;align-items:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3D5BE0" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <p class="lead" style="font-size:clamp(0.85rem,1.3vw,1rem);">有 <code style="background:var(--paper-tint);padding:0 5px;border-radius:2px;"># 標題</code> 的分類文件</p>
+          </div>
+          <div class="icon-row" style="gap:0.8vw;align-items:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3D5BE0" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <p class="lead" style="font-size:clamp(0.85rem,1.3vw,1rem);">分層次依需要提供</p>
+          </div>
+          <div class="icon-row" style="gap:0.8vw;align-items:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3D5BE0" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <p class="lead" style="font-size:clamp(0.85rem,1.3vw,1rem);">明確告訴 AI「你是誰」</p>
+          </div>
+          <div class="icon-row" style="gap:0.8vw;align-items:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3D5BE0" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <p class="lead" style="font-size:clamp(0.85rem,1.3vw,1rem);">附上術語表</p>
+          </div>
+          <div class="icon-row" style="gap:0.8vw;align-items:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3D5BE0" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <p class="lead" style="font-size:clamp(0.85rem,1.3vw,1rem);">指定字數、格式、語氣</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>Part 01 — AI 的資料結構設計</span><span>06 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 07 Part 2  hero dark -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide hero dark" data-slide="7">
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;height:100%;">
+      <div class="kicker" style="letter-spacing:0.22em;">PART 02</div>
+      <h2 class="h-hero" style="max-width:10ch;line-height:1.06;margin-bottom:2vh;">讓 AI<br>秒懂<br>你的公司</h2>
+      <div class="accent-bar warm"></div>
+      <p class="lead" style="color:rgba(242,245,255,0.5);max-width:42ch;margin-top:2vh;">一份好的公司說明書，讓你每次和 AI 對話都不用重頭解釋。</p>
+    </div>
+    <div class="foot"><span>讓 AI 真正為你所用</span><span>07 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 08 Why AI doesn't know  light -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide light" data-slide="8">
+    <div class="kicker">根本原因</div>
+    <h2 class="h-xl" style="margin-bottom:4vh;">為什麼 AI「不認識」你的公司？</h2>
+    <div class="grid-3" style="flex:1;align-items:start;">
+      <div class="card">
+        <div class="stat-nb" style="margin-bottom:1.5vh;">01</div>
+        <div class="h-md" style="margin-bottom:0.8vh;">訓練資料有截止點</div>
+        <p class="lead" style="font-size:clamp(0.8rem,1.2vw,0.95rem);opacity:0.68;">AI 的知識來自公開資料，你的內部系統、最新業務不在其中。</p>
+      </div>
+      <div class="card">
+        <div class="stat-nb" style="margin-bottom:1.5vh;">02</div>
+        <div class="h-md" style="margin-bottom:0.8vh;">內部術語 AI 不懂</div>
+        <p class="lead" style="font-size:clamp(0.8rem,1.2vw,0.95rem);opacity:0.68;">你的產品名稱、流程縮寫、客戶分類——AI 從來沒聽過。</p>
+      </div>
+      <div class="card">
+        <div class="stat-nb" style="margin-bottom:1.5vh;">03</div>
+        <div class="h-md" style="margin-bottom:0.8vh;">公開資訊可能過時</div>
+        <p class="lead" style="font-size:clamp(0.8rem,1.2vw,0.95rem);opacity:0.68;">就算 AI 知道你的公司，資訊可能是幾年前的舊版本。</p>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:3vh;">解法：自己寫一份「公司說明書」給 AI，每次對話帶著走。</div>
+    <div class="foot"><span>Part 02 — 讓 AI 秒懂你的公司</span><span>08 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 09 Company Profile Template  dark -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide dark" data-slide="9">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4vw;flex:1;align-items:start;padding-bottom:6vh;">
+      <div style="display:flex;flex-direction:column;gap:2.5vh;">
+        <div>
+          <div class="kicker">公司說明書模板</div>
+          <h2 class="h-xl" style="margin-bottom:2vh;">你的 AI 員工入職手冊</h2>
+        </div>
+        <p class="lead" style="opacity:0.72;">把這份模板填完，貼在每次對話的開頭——或設定在 System Prompt 裡，一次設定永久有效。</p>
+        <div style="display:flex;flex-direction:column;gap:1.5vh;margin-top:1vh;">
+          <div class="icon-row" style="gap:1vw;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <p class="lead" style="font-size:clamp(0.8rem,1.2vw,0.92rem);opacity:0.68;">填寫時間：約 10–15 分鐘</p>
+          </div>
+          <div class="icon-row" style="gap:1vw;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <p class="lead" style="font-size:clamp(0.8rem,1.2vw,0.92rem);opacity:0.68;">存成文字檔方便複製</p>
+          </div>
+          <div class="icon-row" style="gap:1vw;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <p class="lead" style="font-size:clamp(0.8rem,1.2vw,0.92rem);opacity:0.68;">每季更新一次確保正確</p>
+          </div>
+        </div>
+      </div>
+      <div class="code-block" style="height:100%;overflow:auto;"># 公司基本資料
+- 公司名稱：_______________
+- 產業：__________________
+- 核心業務：（1–2 句話說明）
+  ________________________
+- 目標客群：_______________
+
+# 核心產品 / 服務
+- [產品 A]：（一句話說明）
+- [產品 B]：（一句話說明）
+
+# 常用術語對照表
+- [內部術語]：[實際意思]
+- [縮寫]：[全名 + 說明]
+
+# 溝通語氣
+- 風格：正式 / 友善 / 專業
+- 禁忌：（不說什麼）
+
+# AI 的角色定義
+你是我們公司的 _________，
+你的職責是幫助我 ________。</div>
+    </div>
+    <div class="foot"><span>Part 02 — 讓 AI 秒懂你的公司</span><span>09 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 10 How to Apply  light -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide light" data-slide="10">
+    <div class="kicker">三種使用方式</div>
+    <h2 class="h-xl" style="margin-bottom:4vh;">從今天可以做到未來規劃</h2>
+    <div class="pipeline" style="flex:1;align-items:stretch;">
+      <div class="step">
+        <div class="step-nb">立即可做</div>
+        <div class="step-title">每次手動貼入</div>
+        <div class="step-desc" style="margin-top:1.5vh;">開始新對話時，把公司說明書貼在最前面再問問題。<br><br><span class="tag" style="font-size:0.62rem;">今天就能做</span><span class="tag" style="font-size:0.62rem;">免費</span></div>
+      </div>
+      <div class="step">
+        <div class="step-nb">建議建立</div>
+        <div class="step-title">設定 System Prompt</div>
+        <div class="step-desc" style="margin-top:1.5vh;">在 Claude / ChatGPT 的「自訂指示」設定說明書，每次對話自動帶入。<br><br><span class="tag" style="font-size:0.62rem;">一次設定</span><span class="tag" style="font-size:0.62rem;">永久有效</span></div>
+      </div>
+      <div class="step">
+        <div class="step-nb">未來進階</div>
+        <div class="step-title">建立知識庫（RAG）</div>
+        <div class="step-desc" style="margin-top:1.5vh;">上傳公司文件、產品手冊，讓 AI 即時搜尋查詢，回答更精準。<br><br><span class="tag" style="font-size:0.62rem;">需技術支援</span><span class="tag" style="font-size:0.62rem;">長期效益最高</span></div>
+      </div>
+    </div>
+    <div class="foot"><span>Part 02 — 讓 AI 秒懂你的公司</span><span>10 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 11 Before/After  dark -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide dark" data-slide="11">
+    <div class="kicker">實際效果對比</div>
+    <h2 class="h-xl" style="margin-bottom:2vh;">加說明書前 vs 後</h2>
+    <p class="lead" style="opacity:0.55;margin-bottom:3vh;font-size:clamp(0.85rem,1.3vw,1rem);">問題：「幫我回覆客戶詢問產品升級的問題」</p>
+    <div class="grid-2" style="flex:1;gap:3.5vw;align-items:start;">
+      <div style="border-top:3px solid rgba(200,70,70,0.5);padding-top:2vh;">
+        <div class="kicker" style="color:rgba(210,120,120,0.9);margin-bottom:2vh;">沒有說明書</div>
+        <div class="code-block" style="background:rgba(200,60,60,0.07);border:1px solid rgba(200,60,60,0.18);color:rgba(242,245,255,0.65);">AI 回覆：
+
+請問您是指哪個產品？
+升級的費用和方式因方
+案而異，請提供更多
+資訊...</div>
+        <p class="lead" style="margin-top:2vh;opacity:0.45;font-size:clamp(0.78rem,1.1vw,0.9rem);">AI 不知道你的產品，只能反問。</p>
+      </div>
+      <div style="border-top:3px solid rgba(123,156,255,0.6);padding-top:2vh;">
+        <div class="kicker" style="color:var(--accent-light);margin-bottom:2vh;">有說明書</div>
+        <div class="code-block" style="background:rgba(61,91,224,0.1);border:1px solid rgba(123,156,255,0.22);color:rgba(242,245,255,0.85);">AI 回覆：
+
+您好！感謝詢問 [產品名]
+升級方案。目前 Standard
+→ Pro 可於後台一鍵升
+級，費用按比例計算剩
+餘天數，立即生效。
+如需協助請聯絡
+support@company.com</div>
+        <p class="lead" style="margin-top:2vh;opacity:0.6;font-size:clamp(0.78rem,1.1vw,0.9rem);">AI 已知產品、流程、聯絡方式，直接給出可用的回覆。</p>
+      </div>
+    </div>
+    <div class="foot"><span>Part 02 — 讓 AI 秒懂你的公司</span><span>11 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 12 Part 3  hero light -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide hero light" data-slide="12">
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;height:100%;">
+      <div class="kicker" style="color:#3D5BE0;letter-spacing:0.22em;">PART 03</div>
+      <h2 class="h-hero" style="max-width:10ch;line-height:1.06;margin-bottom:2vh;color:var(--ink);">Prompt<br>怎麼寫<br>才有效</h2>
+      <div class="accent-bar"></div>
+      <p class="lead" style="color:var(--ink);opacity:0.5;max-width:42ch;margin-top:2vh;">一個框架，四個要素，讓每次提問都有精準的回應。</p>
+    </div>
+    <div class="foot"><span>讓 AI 真正為你所用</span><span>12 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 13 RCTF  light -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide light" data-slide="13">
+    <div class="kicker">RCTF 框架</div>
+    <h2 class="h-xl" style="margin-bottom:4vh;">一個好 Prompt 的四個要素</h2>
+    <div class="grid-4" style="flex:1;align-items:start;">
+      <div class="card">
+        <div style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;color:var(--accent);line-height:1;margin-bottom:1vh;">R</div>
+        <div class="h-md" style="margin-bottom:0.8vh;">Role 角色</div>
+        <p class="lead" style="font-size:clamp(0.8rem,1.2vw,0.92rem);opacity:0.68;margin-bottom:1.5vh;">告訴 AI 扮演誰。</p>
+        <div class="code-block" style="font-size:0.72rem;padding:1vh 0.8vw;">「你是一位資深客服主管」</div>
+      </div>
+      <div class="card">
+        <div style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;color:var(--accent);line-height:1;margin-bottom:1vh;">C</div>
+        <div class="h-md" style="margin-bottom:0.8vh;">Context 背景</div>
+        <p class="lead" style="font-size:clamp(0.8rem,1.2vw,0.92rem);opacity:0.68;margin-bottom:1.5vh;">提供必要的情境說明。</p>
+        <div class="code-block" style="font-size:0.72rem;padding:1vh 0.8vw;">「我們公司是 B2B SaaS，客戶是企業 IT 主管…」</div>
+      </div>
+      <div class="card">
+        <div style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;color:var(--accent);line-height:1;margin-bottom:1vh;">T</div>
+        <div class="h-md" style="margin-bottom:0.8vh;">Task 任務</div>
+        <p class="lead" style="font-size:clamp(0.8rem,1.2vw,0.92rem);opacity:0.68;margin-bottom:1.5vh;">明確說要做什麼。</p>
+        <div class="code-block" style="font-size:0.72rem;padding:1vh 0.8vw;">「幫我草擬一封道歉信，包含事件描述和改善措施」</div>
+      </div>
+      <div class="card">
+        <div style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;color:var(--accent);line-height:1;margin-bottom:1vh;">F</div>
+        <div class="h-md" style="margin-bottom:0.8vh;">Format 格式</div>
+        <p class="lead" style="font-size:clamp(0.8rem,1.2vw,0.92rem);opacity:0.68;margin-bottom:1.5vh;">指定輸出形式。</p>
+        <div class="code-block" style="font-size:0.72rem;padding:1vh 0.8vw;">「300 字以內，正式但誠懇語氣，段落分明」</div>
+      </div>
+    </div>
+    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>13 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 14 Prompt Makeover  dark -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide dark" data-slide="14">
+    <div class="kicker">Prompt 改造示範</div>
+    <h2 class="h-xl" style="margin-bottom:3vh;">同一個需求，差距有多大</h2>
+    <div class="grid-2" style="flex:1;gap:4vw;align-items:start;">
+      <div>
+        <div class="kicker" style="color:rgba(210,110,110,0.9);margin-bottom:1.5vh;">改造前（模糊）</div>
+        <div class="code-block" style="background:rgba(200,60,60,0.08);border:1px solid rgba(200,60,60,0.2);font-size:clamp(0.9rem,1.4vw,1.05rem);padding:2.5vh 2vw;margin-bottom:2vh;">幫我寫一封信</div>
+        <p class="lead" style="opacity:0.48;font-size:clamp(0.8rem,1.2vw,0.92rem);">AI 不知道給誰、說什麼、多長——只能給通用模板。</p>
+      </div>
+      <div>
+        <div class="kicker" style="color:var(--accent-light);margin-bottom:1.5vh;">改造後（RCTF）</div>
+        <div class="code-block" style="font-size:clamp(0.78rem,1.15vw,0.88rem);line-height:1.85;padding:2.5vh 2vw;"><span style="color:rgba(123,156,255,0.65);">[角色]</span> 你是我們公司的客服主管。
+
+<span style="color:rgba(123,156,255,0.65);">[背景]</span> 我們的 SaaS 平台昨天發生
+2 小時服務中斷，影響約 50 位
+企業客戶。
+
+<span style="color:rgba(123,156,255,0.65);">[任務]</span> 請草擬一封道歉暨說明信，
+包含：事件描述、影響範圍、後
+續改善措施。
+
+<span style="color:rgba(123,156,255,0.65);">[格式]</span> 正式但誠懇，300 字以內，
+段落分明。</div>
+      </div>
+    </div>
+    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>14 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 15 Advanced Techniques  light -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide light" data-slide="15">
+    <div class="kicker">進階技巧</div>
+    <h2 class="h-xl" style="margin-bottom:4vh;">讓 Prompt 更精準的四招</h2>
+    <div class="grid-4" style="flex:1;align-items:start;">
+      <div class="card">
+        <div class="kicker" style="color:var(--accent);margin-bottom:0.8vh;">技巧 01</div>
+        <div class="h-md" style="margin-bottom:0.8vh;">給範例（Few-shot）</div>
+        <p class="lead" style="font-size:clamp(0.78rem,1.2vw,0.9rem);opacity:0.68;margin-bottom:1.5vh;">告訴 AI 你要什麼格式。</p>
+        <div class="code-block" style="font-size:0.7rem;padding:1vh 0.8vw;">「請用以下格式回覆：<br>[範例輸出]」</div>
+      </div>
+      <div class="card">
+        <div class="kicker" style="color:var(--accent);margin-bottom:0.8vh;">技巧 02</div>
+        <div class="h-md" style="margin-bottom:0.8vh;">限制範圍</div>
+        <p class="lead" style="font-size:clamp(0.78rem,1.2vw,0.9rem);opacity:0.68;margin-bottom:1.5vh;">防止 AI 超出範疇回答。</p>
+        <div class="code-block" style="font-size:0.7rem;padding:1vh 0.8vw;">「只回答與我們產品相關的問題，其他說不知道」</div>
+      </div>
+      <div class="card">
+        <div class="kicker" style="color:var(--accent);margin-bottom:0.8vh;">技巧 03</div>
+        <div class="h-md" style="margin-bottom:0.8vh;">要求思考過程</div>
+        <p class="lead" style="font-size:clamp(0.78rem,1.2vw,0.9rem);opacity:0.68;margin-bottom:1.5vh;">讓 AI 解釋推理，品質更高。</p>
+        <div class="code-block" style="font-size:0.7rem;padding:1vh 0.8vw;">「請一步一步解釋你的推理，再給答案」</div>
+      </div>
+      <div class="card">
+        <div class="kicker" style="color:var(--accent);margin-bottom:0.8vh;">技巧 04</div>
+        <div class="h-md" style="margin-bottom:0.8vh;">角色扮演驗證</div>
+        <p class="lead" style="font-size:clamp(0.78rem,1.2vw,0.9rem);opacity:0.68;margin-bottom:1.5vh;">換角度審查 AI 的輸出。</p>
+        <div class="code-block" style="font-size:0.7rem;padding:1vh 0.8vw;">「以新客戶角度，這份說明是否清楚？」</div>
+      </div>
+    </div>
+    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>15 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 16 Common Mistakes  dark -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide dark" data-slide="16">
+    <div class="kicker">常見錯誤</div>
+    <h2 class="h-xl" style="margin-bottom:4vh;">四個 Prompt 地雷</h2>
+    <div class="grid-4" style="flex:1;align-items:start;">
+      <div style="border-top:2px solid rgba(200,80,80,0.5);padding-top:2vh;">
+        <div style="display:flex;align-items:center;gap:0.8vw;margin-bottom:1.5vh;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(220,80,80,0.75)" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          <div class="h-md" style="font-size:clamp(0.9rem,1.4vw,1.1rem);">一次問太多</div>
+        </div>
+        <p class="lead" style="font-size:clamp(0.78rem,1.2vw,0.9rem);opacity:0.62;">同時問 5 件事，AI 每件都只答一半。</p>
+        <p class="lead" style="font-size:clamp(0.72rem,1.05vw,0.82rem);opacity:0.38;margin-top:1vh;font-style:italic;">→ 分開問，每次只問一件事</p>
+      </div>
+      <div style="border-top:2px solid rgba(200,80,80,0.5);padding-top:2vh;">
+        <div style="display:flex;align-items:center;gap:0.8vw;margin-bottom:1.5vh;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(220,80,80,0.75)" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          <div class="h-md" style="font-size:clamp(0.9rem,1.4vw,1.1rem);">沒說輸出給誰</div>
+        </div>
+        <p class="lead" style="font-size:clamp(0.78rem,1.2vw,0.9rem);opacity:0.62;">AI 不知道對象，只能給通用版本。</p>
+        <p class="lead" style="font-size:clamp(0.72rem,1.05vw,0.82rem);opacity:0.38;margin-top:1vh;font-style:italic;">→「給不懂技術的主管看」</p>
+      </div>
+      <div style="border-top:2px solid rgba(200,80,80,0.5);padding-top:2vh;">
+        <div style="display:flex;align-items:center;gap:0.8vw;margin-bottom:1.5vh;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(220,80,80,0.75)" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          <div class="h-md" style="font-size:clamp(0.9rem,1.4vw,1.1rem);">期待 AI 猜背景</div>
+        </div>
+        <p class="lead" style="font-size:clamp(0.78rem,1.2vw,0.9rem);opacity:0.62;">沒說的事 AI 不知道，說了才會用。</p>
+        <p class="lead" style="font-size:clamp(0.72rem,1.05vw,0.82rem);opacity:0.38;margin-top:1vh;font-style:italic;">→ 把背景寫進去</p>
+      </div>
+      <div style="border-top:2px solid rgba(200,80,80,0.5);padding-top:2vh;">
+        <div style="display:flex;align-items:center;gap:0.8vw;margin-bottom:1.5vh;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(220,80,80,0.75)" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          <div class="h-md" style="font-size:clamp(0.9rem,1.4vw,1.1rem);">第一次就算完</div>
+        </div>
+        <p class="lead" style="font-size:clamp(0.78rem,1.2vw,0.9rem);opacity:0.62;">第一個答案幾乎都不是最好的。</p>
+        <p class="lead" style="font-size:clamp(0.72rem,1.05vw,0.82rem);opacity:0.38;margin-top:1vh;font-style:italic;">→ 繼續追問、修正、迭代</p>
+      </div>
+    </div>
+    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>16 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 17 Iteration Mindset  light -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide light" data-slide="17">
+    <div class="kicker">迭代心態</div>
+    <h2 class="h-xl" style="margin-bottom:3vh;">Prompt 不是一次到位的</h2>
+    <div class="grid-2" style="flex:1;gap:5vw;align-items:center;">
+      <div class="v-pipeline">
+        <div class="v-step"><div class="step-nb">STEP 01</div><div class="step-title">你的第一個 Prompt</div><div class="step-desc" style="margin-top:0.5vh;">用 RCTF 框架寫出第一版</div></div>
+        <div class="v-step"><div class="step-nb">STEP 02</div><div class="step-title">AI 的回應</div><div class="step-desc" style="margin-top:0.5vh;">通常不會完美，但是好的起點</div></div>
+        <div class="v-step"><div class="step-nb">STEP 03</div><div class="step-title">你的追問 / 修正</div><div class="step-desc" style="margin-top:0.5vh;">「把第二段改得更口語」「再加一個案例」「換成條列式」</div></div>
+        <div class="v-step" style="border-color:var(--accent);"><div class="step-nb" style="opacity:1;color:var(--accent);">RESULT</div><div class="step-title" style="color:var(--accent);">越來越接近你要的結果</div><div class="step-desc" style="margin-top:0.5vh;color:var(--accent);opacity:0.75;">通常 2–3 輪就能到位</div></div>
+      </div>
+      <div>
+        <div class="callout" style="font-size:clamp(1rem,1.8vw,1.3rem);padding:3vh 2.5vw;line-height:1.5;">跟 AI 對話就像跟實習生工作——<br><strong>需要引導，不是命令。</strong></div>
+        <div style="margin-top:3vh;display:flex;flex-direction:column;gap:1.5vh;">
+          <div class="icon-row" style="gap:0.8vw;align-items:center;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><p class="lead" style="font-size:clamp(0.82rem,1.2vw,0.95rem);opacity:0.7;">第一次不夠好是正常的</p></div>
+          <div class="icon-row" style="gap:0.8vw;align-items:center;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><p class="lead" style="font-size:clamp(0.82rem,1.2vw,0.95rem);opacity:0.7;">每次修正都在讓 AI 更懂你</p></div>
+          <div class="icon-row" style="gap:0.8vw;align-items:center;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><p class="lead" style="font-size:clamp(0.82rem,1.2vw,0.95rem);opacity:0.7;">好的 Prompt 是練出來的</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>Part 03 — Prompt 怎麼寫才有效</span><span>17 / 18</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- 18 Summary + Practice  hero dark -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="slide hero dark" data-slide="18">
+    <div style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:6vw;height:100%;align-items:center;padding-bottom:6vh;">
+      <div>
+        <div class="kicker" style="letter-spacing:0.18em;">今日三大重點</div>
+        <h2 class="h-xl" style="margin-bottom:3vh;">記住這三件事</h2>
+        <div style="display:flex;flex-direction:column;gap:2.5vh;">
+          <div style="padding:1.8vh 2vw;border-left:3px solid var(--accent);">
+            <div style="font-family:var(--mono);font-size:0.7rem;color:var(--accent-light);letter-spacing:0.1em;margin-bottom:0.5vh;">01</div>
+            <div class="h-md" style="font-size:clamp(0.95rem,1.5vw,1.15rem);margin-bottom:0.5vh;">三層結構</div>
+            <p class="lead" style="font-size:clamp(0.78rem,1.1vw,0.9rem);opacity:0.55;">系統層（角色）→ 知識層（公司）→ 任務層（今日任務）</p>
+          </div>
+          <div style="padding:1.8vh 2vw;border-left:3px solid var(--accent);">
+            <div style="font-family:var(--mono);font-size:0.7rem;color:var(--accent-light);letter-spacing:0.1em;margin-bottom:0.5vh;">02</div>
+            <div class="h-md" style="font-size:clamp(0.95rem,1.5vw,1.15rem);margin-bottom:0.5vh;">公司說明書</div>
+            <p class="lead" style="font-size:clamp(0.78rem,1.1vw,0.9rem);opacity:0.55;">讓 AI 秒懂你的業務，System Prompt 一次設定</p>
+          </div>
+          <div style="padding:1.8vh 2vw;border-left:3px solid var(--accent-warm);">
+            <div style="font-family:var(--mono);font-size:0.7rem;color:rgba(224,165,100,0.8);letter-spacing:0.1em;margin-bottom:0.5vh;">03</div>
+            <div class="h-md" style="font-size:clamp(0.95rem,1.5vw,1.15rem);margin-bottom:0.5vh;">RCTF 框架</div>
+            <p class="lead" style="font-size:clamp(0.78rem,1.1vw,0.9rem);opacity:0.55;">Role × Context × Task × Format — 每個 Prompt 的骨架</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="kicker" style="letter-spacing:0.18em;margin-bottom:1.8vh;">PRACTICE</div>
+        <p class="lead" style="opacity:0.65;margin-bottom:2.5vh;font-size:clamp(0.85rem,1.3vw,1rem);">試著為你的工作場景寫一個 Prompt：</p>
+        <div class="code-block" style="font-size:clamp(0.75rem,1.1vw,0.88rem);line-height:1.9;">Role：你是一位 _____________
+
+Context：我們公司 __________，
+目前遇到的情況是 ___________
+
+Task：請幫我 _______________
+
+Format：________ 字以內，
+語氣 _________，格式為 ______</div>
+        <p class="lead" style="margin-top:2vh;opacity:0.35;font-size:clamp(0.75rem,1.05vw,0.85rem);font-style:italic;">寫完和旁邊的人交換看看，互相給回饋。</p>
+      </div>
+    </div>
+    <div class="foot"><span>讓 AI 真正為你所用 · Prompt 設計工作坊</span><span>18 / 18</span></div>
+  </section>
+
+</main>
+
+<script>
+  const deck = document.getElementById('deck');
+  const slides = [...document.querySelectorAll('.slide')];
+  const navDots = document.getElementById('nav-dots');
+  let current = 0;
+
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    navDots.appendChild(d);
+  });
+
+  // Trigger entry animations on a slide
+  function animateIn(slideEl) {
+    // Selectors that are animated
+    const targets = slideEl.querySelectorAll(
+      '.kicker, .h-hero, .h-xl, .h-sub, .accent-bar, ' +
+      '.grid-2, .grid-3, .grid-4, .pipeline, .v-pipeline, ' +
+      '.callout, .desk-viz, ' +
+      ':scope > div > p.lead, :scope > div > div > p.lead, ' +
+      ':scope > div > .code-block'
+    );
+    // Force reflow to restart animations
+    targets.forEach(el => {
+      el.style.animation = 'none';
+      void el.offsetWidth;
+      el.style.animation = '';
+    });
+    // Special: also reset the grid children for slide 18
+    slideEl.querySelectorAll('[data-slide="18"] > div > div').forEach(el => {
+      el.style.animation = 'none';
+      void el.offsetWidth;
+      el.style.animation = '';
+    });
+  }
+
+  function goTo(n) {
+    const prev = current;
+    current = Math.max(0, Math.min(n, slides.length - 1));
+    if (current === prev) return;
+    deck.scrollTo({ left: current * window.innerWidth, behavior: 'smooth' });
+    updateState();
+  }
+
+  function updateState() {
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    document.body.classList.toggle('on-light', slides[current].classList.contains('light'));
+
+    // Activate current slide, deactivate others
+    slides.forEach((s, i) => {
+      if (i === current) {
+        if (!s.classList.contains('is-active')) {
+          s.classList.add('is-active');
+          animateIn(s);
+        }
+      } else {
+        s.classList.remove('is-active');
+      }
+    });
+  }
+
+  document.addEventListener('keydown', e => {
+    if (['ArrowRight','ArrowDown',' '].includes(e.key)) { e.preventDefault(); goTo(current + 1); }
+    else if (['ArrowLeft','ArrowUp'].includes(e.key)) { e.preventDefault(); goTo(current - 1); }
+  });
+
+  let wt;
+  deck.addEventListener('wheel', e => {
+    e.preventDefault();
+    clearTimeout(wt);
+    wt = setTimeout(() => goTo(current + (e.deltaY > 30 ? 1 : e.deltaY < -30 ? -1 : 0)), 60);
+  }, { passive: false });
+
+  let tx = 0;
+  deck.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+  deck.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 50) goTo(current + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+
+  let st;
+  deck.addEventListener('scroll', () => {
+    clearTimeout(st);
+    st = setTimeout(() => {
+      const idx = Math.round(deck.scrollLeft / window.innerWidth);
+      if (idx !== current) { current = idx; updateState(); }
+    }, 100);
+  });
+
+  // Init: activate first slide
+  updateState();
+</script>
+</body>
+</html>
