@@ -1,7 +1,7 @@
 # 知識庫主索引
 
-> 最後更新：2026-05-26
-> 文章數量：149 篇
+> 最後更新：2026-05-30
+> 文章數量：150 篇
 > 原始文件：持續累積中
 
 ---
@@ -22,6 +22,10 @@
 #### 系統
 - [[Claude/知識庫操作手冊|LLM 知識庫 — Claude Code 操作手冊]] — /compile、/query、/lint、/slide、/search 指令集與知識迴圈 `#系統`
 - [[Claude/Claude環境操作手冊|D:\Claude 環境操作手冊]] — Skills 76 個、Ruflo、子專案、日常維護指令 `#系統`
+
+#### Agent 設計
+- [[Claude/Karpathy 最高遵守原則 — AI 行為準則|Karpathy 最高遵守原則 — AI 行為準則]] — 5 大原則，套用至 CLAUDE.md，/karpathy-audit 命令 `#agent-design #karpathy`
+- [[Claude/Karpathy program.md Skill 設計哲學 — 讓 Agent 可靠工作的六個原則|Karpathy program.md Skill 設計哲學 — 讓 Agent 可靠工作的六個原則]] — CAN/CANNOT 邊界、單一指標、品味量化 if-then、baseline 先行、Checkpoint、三段式結構 `#agent-design #skills #karpathy`
 
 ---
 
@@ -55,6 +59,16 @@
 
 #### 課程索引
 - [[課程總覽|課程總覽]] — Ch 1–10 章節地圖與全模式索引
+
+---
+
+### Tools（工具使用手冊）
+
+- [[Tools/liteparse|LiteParse]] — 本地 PDF 解析工具（Rust/PDFium），`pip install liteparse`，CLI + Python API，支援批次轉換與截圖 `#tools #pdf`
+- [[Tools/video-to-brain|影片轉文字 → gbrain]] — 課程影片批次轉錄 Markdown，Gemini API + gbrain import `#tools #video`
+- [[Tools/gbrain-inbox|gbrain Inbox 快速匯入]] — Obsidian Inbox 一鍵 import + 移至 wiki/Ideas `#tools #gbrain`
+- [[Tools/md-to-pdf|Markdown 轉 PDF]] — `#tools`
+- [[Tools/cleanup-transcripts|清理逐字稿]] — `#tools`
 
 ---
 

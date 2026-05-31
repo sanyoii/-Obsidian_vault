@@ -7,6 +7,7 @@
 | Repo                              | 重點                                                                   |
 | --------------------------------- | -------------------------------------------------------------------- |
 | **ruvnet/ruflo**                  | Claude 的 multi-agent 協調平台，已安裝為 Ruflo，提供 swarm、SPARC、MCP 等 210+ 工具    |
+| **activeloopai/hivemind**         | 跨 Agent 共享記憶 + 自動 Skillify（Deeplake），全量捕捉 session 上雲，團隊用才值得，**不推薦獨立開發者** |
 | **crewAI/crewAI**                 | 角色扮演自主 AI agents 協調框架，適合構建 multi-role 工作流                            |
 | **langchain-ai/langgraph**        | TypeScript 版 graph-based agent 框架，節點即狀態，適合需要分支/回路的複雜流程               |
 | **datawhalechina/hello-agents**   | 中文智能體原理與實踐教程（書）《從零開始構建智能體》，偏理論入門                                     |
@@ -82,6 +83,9 @@
 
 |Repo|重點|
 |---|---|
+|**karpathy/autoresearch**|AI agent 自主 LLM 訓練研究框架：改 train.py → 跑 5 min → 比 val_bpb → 循環。需 NVIDIA GPU，**不推薦無 GPU 者安裝**；`program.md` skill 設計哲學值得借鑒|
+|**rohitg00/ai-engineering-from-scratch**|20 phase AI 工程完整課程（2722 檔），Phase 13–16 最值得看：MCP/A2A/Claude Code Permission Modes/Swarm；前段教科書式可略讀|
+|**HKUDS/LightRAG**|知識圖譜增強 RAG 框架，5 種查詢模式（mix 最強），支援 Gemini embedding，**有條件值得安裝**：補充 gbrain 的專題深度問答，不取代|
 |**LichAmnesia/llm-engineering-handbook**|10 章構建生產級「AI 副本（LLM Twin）」教程，從 RAG 到 FTI pipeline 完整落地|
 
 ---

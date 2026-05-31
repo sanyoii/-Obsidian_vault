@@ -7,6 +7,14 @@
 
 ## 2026-05
 
+### 2026-05-30 | COMPILE
+- `2026-05-30 | COMPILE | repomix HKUDS/LightRAG → wiki/Github/留看repos/已整理/HKUDSLightRAG.md` | 知識圖譜增強 RAG，5 種查詢模式，Gemini 支援，結論：補充 gbrain 專題問答（不取代）
+- `2026-05-30 | COMPILE | repomix rohitg00/ai-engineering-from-scratch → wiki/Github/留看repos/已整理/rohitg00ai-engineering-from-scratch.md` | 20 phase AI 工程課程，2722 檔，Phase 13–16（MCP/Agent/Claude Code Permission Modes/Swarm）最值得選讀
+- `2026-05-30 | COMPILE | repomix karpathy/autoresearch → wiki/Github/留看repos/已整理/karpathyautoresearch.md` | 8 檔案極小 repo，AI agent 自主做 LLM 訓練研究，結論：需 NVIDIA GPU，非日常工具；program.md skill 設計哲學值得借鑒
+- `2026-05-30 | COMPILE | repomix activeloopai/hivemind → wiki/Github/留看repos/已整理/activeloopaiHivemind.md` | 分析跨 Agent 共享記憶系統（405 檔，356K tokens），結論：不推薦獨立開發者（全量上雲 + 功能重疊 + 無團隊）；加入 Repo 整理索引表
+- `2026-05-30 | COMPILE | pip install liteparse → wiki/Tools/liteparse.md` | repomix 分析 run-llama/liteparse，建立工具文件（CLI/Python API/支援格式/使用場景）；同步新增 _index.md Tools 區塊，計數 149→150
+- `2026-05-30 | COMPILE | karpathy/autoresearch program.md → wiki/Claude/Karpathy program.md Skill 設計哲學.md` | 六個 agent 可靠工作原則，含品味量化 if-then、CAN/CANNOT、checkpoint 設計
+
 ### 2026-05-26 | 系統建置
 - `2026-05-26 | SETUP | — → wiki/log.md` | 依 Karpathy LLM Wiki 模式建立 append-only 日誌；同步更新 CLAUDE.md workflow、_index.md 計數（19→149）
 
