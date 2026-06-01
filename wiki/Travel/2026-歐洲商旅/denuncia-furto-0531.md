@@ -25,8 +25,8 @@ La borsa è di colore verde. All'interno si trovavano due passaporti taiwanesi, 
 Nome: LU LI WEI
 Numero ID: F124841214
 Numero passaporto: 360476466
-Data di rilascio: 26 giugno 2022
-Data di scadenza: 26 giugno 2027
+Data di rilascio: 26 luglio 2022
+Data di scadenza: 26 luglio 2027
 Data di nascita: 1 novembre 1979
 Luogo di nascita: New Taipei City
 
