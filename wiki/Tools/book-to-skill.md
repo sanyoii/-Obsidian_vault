@@ -13,8 +13,7 @@
 - ✅ 已安裝（2026-06-02）
 - Active path: `C:\Users\sanyo\.claude\skills\book-to-skill\`
 - Backup path: `d:\Claude\.claude\skills\book-to-skill\`
-- Python deps: `PyPDF2`, `pdfminer.six`（已 pip install）
-- 技術書（含表格/程式碼）需另裝：`pip install docling`
+- Python deps: 全部已裝（見下方）
 
 ---
 
@@ -52,15 +51,36 @@
 
 ## 依賴工具（PDF 提取）
 
-| 書籍類型 | 工具 | 安裝 | 速度 |
+| 書籍類型 | 工具 | 狀態 | 速度 |
 |---------|------|------|------|
-| 純文字書 | `pdftotext`（poppler） | 需手動裝 | ⚡ 即時 |
-| 純文字書 fallback | `PyPDF2` | ✅ 已裝 | ⚡ 即時 |
-| 純文字書 fallback | `pdfminer.six` | ✅ 已裝 | ⚡ 即時 |
-| **技術書（含表格/程式碼）** | **`docling`** | `pip install docling` | ~1.5s/頁 |
+| 純文字書 | `pdftotext`（poppler） | ⚠️ 需手動裝 | ⚡ 即時 |
+| 純文字書 fallback | `PyPDF2 3.0.1` | ✅ 已裝 | ⚡ 即時 |
+| 純文字書 fallback | `pdfminer.six 20260107` | ✅ 已裝 | ⚡ 即時 |
+| **技術書（含表格/程式碼）** | **`docling 2.96.1`** | ✅ 已裝 | ~1.5s/頁 |
 
-EPUB: `pip install ebooklib beautifulsoup4`
-DOCX: `pip install python-docx`
+EPUB: `pip install ebooklib beautifulsoup4`（尚未裝）
+DOCX: `python-docx 1.2.0` ✅（docling 附帶安裝）
+
+### docling 2.96.1 附帶安裝的主要套件
+
+| 套件 | 版本 | 用途 |
+|------|------|------|
+| `torch` | 2.12.0 | ML 模型推理 |
+| `torchvision` | 0.27.0 | 影像處理 |
+| `opencv-python` | 4.13.0.92 | 影像前處理 |
+| `pypdfium2` | 5.9.0 | PDF 渲染 |
+| `rapidocr` | 3.8.1 | OCR |
+| `python-docx` | 1.2.0 | DOCX 支援 |
+| `openpyxl` | 3.1.5 | XLSX 支援 |
+
+### 技術書提取效能基準（103 頁 PDF）
+
+| 方式 | 時間 | 表格 | 程式碼區塊 |
+|------|------|------|---------|
+| pdftotext | 0.1s | 0 | 0 |
+| **docling** | **~164s** | **48** | **36** |
+
+跑 `/book-to-skill` 時選「**technical**」會自動使用 docling。
 
 ---
 
