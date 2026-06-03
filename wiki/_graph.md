@@ -1,6 +1,6 @@
 # 概念連結圖
 
-> 最後更新：2026-05-08
+> 最後更新：2026-06-03
 
 ---
 
@@ -91,6 +91,16 @@
 - **控制反轉 (IoC)** — 在[[樣板方法]]中提及，值得獨立說明與 DI 的關係
 
 ---
+
+### [[Claude/Command Center Plugin — Obsidian 指揮中心]] → [[Claude/知識庫操作手冊]]
+**關係：** 延伸（自動化觸發層）
+**說明：** Command Center 是知識庫操作手冊所定義指令的 GUI 觸發層；/compile /lint 透過 Ribbon 按鈕一鍵呼叫 headless Claude 執行
+**建立於：** 2026-06-03（compile）
+
+### [[Claude/Command Center Plugin — Obsidian 指揮中心]] → social-monitor + job-crawler
+**關係：** 整合（Morning Briefing 資料源）
+**說明：** Morning Briefing 按鈕串接 d:\Claude\social-monitor\reports\ 和 d:\Claude\job-crawler\jobs.db，把既有自動化系統的輸出彙整進 wiki/Daily/
+**建立於：** 2026-06-03（compile）
 
 ### [[wiki/Claude/知識庫操作手冊]] → 所有 wiki 文章
 **關係：** 根文件（隱性依賴）

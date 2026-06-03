@@ -1,0 +1,21 @@
+filters:
+  and:
+    - file.inFolder("wiki/Social")
+
+formulas:
+  hours_ago: '(now() - file.mtime).hours.round(0)'
+
+properties:
+  file.mtime:
+    displayName: "產生時間"
+  formula.hours_ago:
+    displayName: "幾小時前"
+
+views:
+  - type: table
+    name: "社群動態"
+    limit: 20
+    order:
+      - file.name
+      - formula.hours_ago
+      - file.mtime

@@ -1,0 +1,10 @@
+{
+  "id": "command-center",
+  "name": "Command Center",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "One-click automations: Morning Briefing, Compile Vault, Lint Vault, Quick Capture",
+  "author": "sanyoii",
+  "authorUrl": "",
+  "isDesktopOnly": true
+}

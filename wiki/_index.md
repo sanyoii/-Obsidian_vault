@@ -1,7 +1,7 @@
 # 知識庫主索引
 
-> 最後更新：2026-05-30
-> 文章數量：150 篇
+> 最後更新：2026-06-03
+> 文章數量：151 篇
 > 原始文件：持續累積中
 
 ---
@@ -20,8 +20,9 @@
 ### Claude
 
 #### 系統
-- [[Claude/知識庫操作手冊|LLM 知識庫 — Claude Code 操作手冊]] — /compile、/query、/lint、/slide、/search 指令集與知識迴圈 `#系統`
+- [[Claude/知識庫操作手冊|LLM 知識庫 — Claude Code 操作手冊]] — /compile、/query、/lint、/morning、/slide、/search 指令集與知識迴圈 `#系統`
 - [[Claude/Claude環境操作手冊|D:\Claude 環境操作手冊]] — Skills 76 個、Ruflo、子專案、日常維護指令 `#系統`
+- [[Claude/Command Center Plugin — Obsidian 指揮中心|Command Center Plugin — Obsidian 指揮中心]] — 4 個 Ribbon 按鈕：Morning Briefing、Compile、Lint、Quick Capture；串接 social-monitor + job-crawler `#系統 #obsidian #automation`
 
 #### Agent 設計
 - [[Claude/Karpathy 最高遵守原則 — AI 行為準則|Karpathy 最高遵守原則 — AI 行為準則]] — 5 大原則，套用至 CLAUDE.md，/karpathy-audit 命令 `#agent-design #karpathy`

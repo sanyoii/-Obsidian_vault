@@ -5,6 +5,13 @@
 
 ---
 
+## 2026-06
+
+### 2026-06-03 | COMPILE
+- `2026-06-03 08:48 | COMPILE | Chase AI YouTube教學 + NotebookLM → wiki/Claude/Command Center Plugin — Obsidian 指揮中心.md` | 建立自製 Obsidian Plugin（4 個 Ribbon 按鈕：Morning Briefing/Compile/Lint/Quick Capture）；串接 social-monitor + job-crawler；新增 wiki/Daily/ 分類；更新 CLAUDE.md 加入 /morning 指令；_index 計數 150→151
+
+---
+
 ## 2026-05
 
 ### 2026-05-30 | COMPILE

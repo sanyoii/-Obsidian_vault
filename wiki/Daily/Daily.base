@@ -1,0 +1,24 @@
+filters:
+  and:
+    - file.inFolder("wiki/Daily")
+
+formulas:
+  days_ago: '(now() - file.ctime).days.round(0)'
+
+properties:
+  date:
+    displayName: "日期"
+  file.mtime:
+    displayName: "更新"
+  formula.days_ago:
+    displayName: "幾天前"
+
+views:
+  - type: table
+    name: "每日早報"
+    limit: 30
+    order:
+      - file.name
+      - date
+      - formula.days_ago
+      - file.mtime

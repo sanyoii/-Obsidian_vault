@@ -1,6 +1,13 @@
 # 文章摘要總覽
 
-> 最後更新：2026-05-26
+> 最後更新：2026-06-03
+
+---
+
+## [[Claude/Command Center Plugin — Obsidian 指揮中心|Command Center Plugin — Obsidian 指揮中心]]
+**標籤：** `#Claude` `#系統` `#obsidian` `#automation` `#plugin`
+**摘要：** 自製 Obsidian Plugin，在 Ribbon 提供 4 個一鍵按鈕：☀️ Morning Briefing（彙整 social-monitor 報告 + job-crawler 職缺 → wiki/Daily/）、📚 Compile Vault（headless claude /compile）、🔍 Lint Vault（headless claude /lint）、✏️ Quick Capture（Inbox 新筆記）。使用 pwsh.exe 執行 PowerShell 腳本，可輕鬆新增按鈕。
+**建立：** 2026-06-03
 
 ---
 
