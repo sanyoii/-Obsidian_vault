@@ -5,6 +5,20 @@
 
 ---
 
+## 2026-06-03
+
+**Command Center Plugin v3.1 — 新增 iThome RSS 全寬面板：**
+- `scripts/fetch-dashboard-data.ps1`：新增 Section 9 iThome RSS 抓取（`https://www.ithome.com.tw/rss`，15 筆）
+- `.obsidian/plugins/command-center/main.js`：新增 `renderiThome()` + ITHOME NEWS 全寬面板 HTML + 點擊事件
+- `.obsidian/plugins/command-center/styles.css`：新增 `.cc-ithome-panel` 與 2 欄 grid 排版樣式
+- `data/dashboard.json`：新增 `ithome` 陣列（rank/title/url/date/author）
+- `wiki/Claude/Command Center Plugin.md`：更新版面圖示至 v3.1
+
+**修正：**
+- 刪除 Obsidian vault 左側欄亂碼資料夾（`D：Claudeobsidiandata`，U+F03A PUA 字元，意外建立的空資料夾）
+
+---
+
 ## 2026-05-28
 
 **更新 `wiki/Claude/Karpathy 最高遵守原則 — AI 行為準則.md`：**

@@ -362,6 +362,26 @@
     text-overflow: ellipsis;
 }
 
+/* ── iThome News ─────────────────────────────────────────────────────────── */
+.cc-ithome-panel {
+    background: #080808;
+    border: 1px solid #1c1c1c;
+    border-radius: 3px;
+    padding: 10px 12px;
+    margin-top: 10px;
+}
+.cc-ithome-list-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+.cc-ithome-list-inner .cc-item {
+    border-right: 1px solid #111;
+}
+.cc-ithome-list-inner .cc-item:nth-child(even) {
+    border-right: none;
+}
+
 /* Light theme compat */
 .theme-light .cc-dashboard,
 .theme-light .cc-dashboard-container { background: #111; }

@@ -3,7 +3,7 @@
 > **分類：** Claude / 系統
 > **標籤：** `#Claude` `#系統` `#obsidian` `#automation` `#plugin`
 > **建立：** 2026-06-03
-> **最後更新：** 2026-06-03（v3 — Dashboard 四欄 + 互動）
+> **最後更新：** 2026-06-03（v3.1 — 新增 iThome RSS 全寬面板）
 > **來源：** Chase AI YouTube 教學 + 本地整合
 
 ---
@@ -42,7 +42,7 @@
 
 ---
 
-## Dashboard 版面（v3）
+## Dashboard 版面（v3.1）
 
 點 ⚙️ Ribbon 按鈕或 Command Palette → "Open Dashboard" 開啟，顯示為主內容區新 Tab。
 
@@ -54,6 +54,10 @@
 │  PRODUCT HUNT    │  LOBSTERS        │
 │  點擊 → 開產品頁 │  點擊 → 開原文   │
 ├──────────────────┴──────────────────┤
+│  ITHOME NEWS（全寬，15 則）          │
+│  台灣 IT 新聞 · 作者 · 日期          │
+│  點擊 → 開原文                       │
+├─────────────────────────────────────┤
 │  MORNING BRIEF                      │
 │  [☀️早報][📚Compile][🔍Lint]        │
 │  [✏️捕捉][📅日曆][📧Email][🔄更新]  │
@@ -71,7 +75,7 @@
 
 ---
 
-## 四個資訊來源
+## 五個資訊來源
 
 | 來源 | API | 更新頻率 | 特殊功能 |
 |------|-----|---------|---------|
@@ -79,6 +83,7 @@
 | **Hacker News** | Firebase API（免費）| 手動更新 | 點擊 → 開原文或 HN 討論 |
 | **Product Hunt** | GraphQL API（需免費 token）| 手動更新 | 點擊 → 開產品頁 |
 | **Lobsters** | lobste.rs JSON API（免費）| 手動更新 | 點擊 → 開原文 |
+| **iThome News** | RSS Feed（免費）| 手動更新 | 點擊 → 開原文；全寬 2 欄排版，15 則 |
 
 > Product Hunt token 存放：`data/ph_token.txt`（.gitignore 保護，不 commit）
 
@@ -117,7 +122,7 @@
 
 | 腳本 | 說明 |
 |------|------|
-| `scripts/fetch-dashboard-data.ps1` | 抓取 GitHub/HN/PH/Lobsters + 職缺/社群/token + 讀 calendar.json，輸出 `data/dashboard.json` |
+| `scripts/fetch-dashboard-data.ps1` | 抓取 GitHub/HN/PH/Lobsters/iThome RSS + 職缺/社群/token + 讀 calendar.json，輸出 `data/dashboard.json` |
 | `scripts/fetch-calendar.ps1` | headless Claude（`--dangerously-skip-permissions`）呼叫 Google Calendar MCP，輸出 `data/calendar.json` |
 | `scripts/fetch-email-brief.ps1` | headless Claude 呼叫 Gmail MCP，評估重要程度 + 萃取 Todo，輸出 `data/email-brief.json` |
 | `scripts/morning-briefing.ps1` | 早報生成，同步更新 `data/dashboard.json` |

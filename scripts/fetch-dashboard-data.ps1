@@ -182,6 +182,35 @@ $lobstersData = python $tmp 2>$null
 Remove-Item $tmp -ErrorAction SilentlyContinue
 if (-not $lobstersData -or $lobstersData.Trim() -eq '') { $lobstersData = "[]" }
 
+# ── 9. iThome RSS ─────────────────────────────────────────────────────────
+$ithomeData = "[]"
+$pyIthome = @'
+import sys, json
+try:
+    import requests
+    from xml.etree import ElementTree as ET
+    r = requests.get("https://www.ithome.com.tw/rss",
+                     headers={"User-Agent": "Mozilla/5.0"}, timeout=12)
+    root = ET.fromstring(r.content)
+    ns = {'dc': 'http://purl.org/dc/elements/1.1/'}
+    items = root.findall('.//item')[:15]
+    result = []
+    for i, item in enumerate(items, 1):
+        title  = item.findtext('title', '')
+        link   = item.findtext('link', '')
+        date   = item.findtext('pubDate', '').split()[0]
+        author = item.findtext('dc:creator', '—', ns)
+        result.append({"rank": i, "title": title, "url": link, "date": date, "author": author})
+    print(json.dumps(result, ensure_ascii=False))
+except Exception as e:
+    print("[]")
+'@
+$tmp = [System.IO.Path]::GetTempFileName() + ".py"
+$pyIthome | Out-File -FilePath $tmp -Encoding UTF8
+$ithomeData = python $tmp 2>$null
+Remove-Item $tmp -ErrorAction SilentlyContinue
+if (-not $ithomeData -or $ithomeData.Trim() -eq '') { $ithomeData = "[]" }
+
 # ── Assemble JSON ──────────────────────────────────────────────────────────
 $data = [ordered]@{
     updatedAt     = (Get-Date).ToString('yyyy-MM-dd HH:mm:ss')
@@ -193,6 +222,7 @@ $data = [ordered]@{
     hn            = ($hnData       | ConvertFrom-Json)
     ph            = ($phData       | ConvertFrom-Json)
     lobsters      = ($lobstersData | ConvertFrom-Json)
+    ithome        = ($ithomeData   | ConvertFrom-Json)
     schedule      = $(
         $calFile = "$vaultRoot\data\calendar.json"
         if (Test-Path $calFile) { Get-Content $calFile -Raw -Encoding UTF8 | ConvertFrom-Json }
@@ -209,5 +239,5 @@ $data | ConvertTo-Json -Depth 5 | Out-File -FilePath $outputFile -Encoding UTF8 
 
 $g  = ($data.github).Count;    $h  = ($data.hn).Count
 $p  = ($data.ph).Count;        $lb = ($data.lobsters).Count
-$em = ($data.emailBrief).Count
-Write-Host "dashboard.json updated: jobs=$jobCount github=$g hn=$h ph=$p lobsters=$lb email=$em token=$tokenEstimate"
+$it = ($data.ithome).Count;    $em = ($data.emailBrief).Count
+Write-Host "dashboard.json updated: jobs=$jobCount github=$g hn=$h ph=$p lobsters=$lb ithome=$it email=$em token=$tokenEstimate"

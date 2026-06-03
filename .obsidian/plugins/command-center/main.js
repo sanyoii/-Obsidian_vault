@@ -143,6 +143,19 @@ class DashboardView extends obsidian.ItemView {
 </div>`).join('');
     }
 
+    renderiThome(ithome) {
+        if (!ithome || ithome.length === 0)
+            return '<div class="cc-empty">尚未更新 → 按「🔄 更新資料」</div>';
+        return ithome.slice(0, 15).map(r => `
+<div class="cc-item cc-clickable" data-url="${r.url || ''}">
+  <span class="cc-rank">${r.rank}</span>
+  <div class="cc-item-body">
+    <div class="cc-item-title">${r.title}</div>
+    <div class="cc-item-sub">${r.author} · ${r.date}</div>
+  </div>
+</div>`).join('');
+    }
+
     // ── Main render ───────────────────────────────────────────────────────
 
     render() {
@@ -209,6 +222,16 @@ class DashboardView extends obsidian.ItemView {
       </div>
     </div>
 
+  </div>
+
+  <div class="cc-ithome-panel">
+    <div class="cc-panel-header">
+      <span class="cc-panel-title">ITHOME NEWS</span>
+      <span class="cc-panel-badge">iThome · 台灣 IT 新聞 · 點擊開原文</span>
+    </div>
+    <div class="cc-list cc-ithome-list-inner" id="cc-ithome-list">
+      ${this.renderiThome(data?.ithome)}
+    </div>
   </div>
 
   <div class="cc-brief-panel">
@@ -285,6 +308,11 @@ class DashboardView extends obsidian.ItemView {
 
         // Lobsters → open article
         container.querySelectorAll('#cc-lobsters-list .cc-clickable').forEach(el => {
+            el.addEventListener('click', () => this.openExternal(el.dataset.url));
+        });
+
+        // iThome → open article
+        container.querySelectorAll('#cc-ithome-list .cc-clickable').forEach(el => {
             el.addEventListener('click', () => this.openExternal(el.dataset.url));
         });
 
