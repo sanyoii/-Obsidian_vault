@@ -189,11 +189,15 @@ $data = [ordered]@{
     socialLabel   = $socialLabel
     briefingTitle = $briefingTitle
     tokenEstimate = $tokenEstimate
-    schedule      = @()
     github        = ($githubData   | ConvertFrom-Json)
     hn            = ($hnData       | ConvertFrom-Json)
     ph            = ($phData       | ConvertFrom-Json)
     lobsters      = ($lobstersData | ConvertFrom-Json)
+    schedule      = $(
+        $calFile = "$vaultRoot\data\calendar.json"
+        if (Test-Path $calFile) { Get-Content $calFile -Raw -Encoding UTF8 | ConvertFrom-Json }
+        else { @() }
+    )
 }
 
 $data | ConvertTo-Json -Depth 5 | Out-File -FilePath $outputFile -Encoding UTF8 -Force

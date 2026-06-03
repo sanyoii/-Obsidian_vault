@@ -1,10 +1,9 @@
 {
-  "updatedAt": "2026-06-03 16:50:50",
+  "updatedAt": "2026-06-03 17:44:40",
   "jobCount": 13,
   "socialLabel": "2026-05-17-2342",
   "briefingTitle": "Morning_2026-06-03",
-  "tokenEstimate": "~806K",
-  "schedule": [],
+  "tokenEstimate": "~954K",
   "github": [
     {
       "rank": 1,
@@ -81,72 +80,72 @@
     {
       "rank": 1,
       "title": "Hacking your PC using your speaker without ever touching it",
-      "score": 339,
+      "score": 390,
       "url": "https://blog.nns.ee/2026/06/03/katana-badusb/",
       "id": 48382310
     },
     {
       "rank": 2,
+      "title": "DaVinci Resolve 21",
+      "score": 61,
+      "url": "https://www.blackmagicdesign.com/products/davinciresolve/whatsnew",
+      "id": 48384482
+    },
+    {
+      "rank": 3,
       "title": "Meta workers can opt out of being tracked at work up to 30 min",
-      "score": 216,
+      "score": 314,
       "url": "https://www.bbc.com/news/articles/c93x0k194yno",
       "id": 48383220
     },
     {
-      "rank": 3,
+      "rank": 4,
+      "title": "A Post-Quantum Future for Let's Encrypt",
+      "score": 11,
+      "url": "https://letsencrypt.org/2026/06/03/pq-certs",
+      "id": 48385114
+    },
+    {
+      "rank": 5,
       "title": "Every Byte Matters",
-      "score": 131,
+      "score": 147,
       "url": "https://fzakaria.com/2026/06/01/every-byte-matters",
       "id": 48382382
     },
     {
-      "rank": 4,
+      "rank": 6,
       "title": "PlayStation Architecture",
-      "score": 116,
+      "score": 131,
       "url": "https://www.copetti.org/writings/consoles/playstation/",
       "id": 48382142
     },
     {
-      "rank": 5,
-      "title": "Nabokov's pale fire: the lost 'father of all hypertext demos'? (2011)",
-      "score": 62,
-      "url": "https://dl.acm.org/doi/pdf/10.1145/1995966.1996008",
-      "id": 48351579
-    },
-    {
-      "rank": 6,
-      "title": "1-Click GitHub Token Stealing via a VSCode Bug",
-      "score": 547,
-      "url": "https://blog.ammaraskar.com/github-token-stealing/",
-      "id": 48371562
-    },
-    {
       "rank": 7,
       "title": "Show HN: Edsger – A handwritten Clojure REPL for the reMarkable 2",
-      "score": 140,
+      "score": 164,
       "url": "https://handwritten.danieljanus.pl/2026-06-01-edsger.html",
       "id": 48374552
     },
     {
       "rank": 8,
-      "title": "I built a ceiling projection mapping of the planes flying over my house",
-      "score": 46,
-      "url": "https://old.reddit.com/r/nextfuckinglevel/comments/1tvmcin/i_live_in_the_take_off_path_of_sfo_and_built_a/",
-      "id": 48383823
+      "title": "1-Click GitHub Token Stealing via a VSCode Bug",
+      "score": 567,
+      "url": "https://blog.ammaraskar.com/github-token-stealing/",
+      "id": 48371562
     },
     {
       "rank": 9,
-      "title": "Show HN: I reverse-engineered the world maps of Test Drive III (1990 DOS game)",
-      "score": 161,
-      "url": "https://github.com/s-macke/Test-Drive-3-Maps",
-      "id": 48344327
+      "title": "Nabokov's pale fire: the lost 'father of all hypertext demos'? (2011)",
+      "score": 70,
+      "url": "https://dl.acm.org/doi/pdf/10.1145/1995966.1996008",
+      "id": 48351579
     },
     {
       "rank": 10,
-      "title": "Use your Nvidia GPU's VRAM as swap space on Linux",
-      "score": 389,
-      "url": "https://github.com/c0dejedi/nbd-vram",
-      "id": 48377404
+      "title": "I built a ceiling projection mapping of the planes flying over my house",
+      "score": 86,
+      "url": "https://old.reddit.com/r/nextfuckinglevel/comments/1tvmcin/i_live_in_the_take_off_path_of_sfo_and_built_a/",
+      "id": 48383823
     }
   ],
   "ph": [
@@ -154,7 +153,7 @@
       "rank": 1,
       "name": "Fundraisly",
       "tagline": "AI fundraising agent that finds investors and books meetings",
-      "votes": 995,
+      "votes": 1008,
       "url": "https://www.producthunt.com/products/fundraisly?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
@@ -189,7 +188,7 @@
       "rank": 6,
       "name": "Unabyss",
       "tagline": "MCP-native self-updating context layer for your AI",
-      "votes": 757,
+      "votes": 758,
       "url": "https://www.producthunt.com/products/unabyss?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
@@ -210,7 +209,7 @@
       "rank": 9,
       "name": "own.page",
       "tagline": "Make your own personal website with bento tiles",
-      "votes": 646,
+      "votes": 647,
       "url": "https://www.producthunt.com/products/own-page?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
@@ -225,13 +224,13 @@
     {
       "rank": 1,
       "title": "rsync and outrage",
-      "score": 60,
+      "score": 67,
       "url": "https://medium.com/@tridge60/rsync-and-outrage-d9849599e5a0"
     },
     {
       "rank": 2,
       "title": ".furry - A Top-Level Domain for furries",
-      "score": 33,
+      "score": 38,
       "url": "https://www.dotfurry.org/"
     },
     {
@@ -242,45 +241,57 @@
     },
     {
       "rank": 4,
-      "title": "Quality in the Age of Slop",
-      "score": 82,
-      "url": "https://sinclairtarget.com/blog/2026/06/01/quality-in-the-age-of-slop/"
-    },
-    {
-      "rank": 5,
       "title": "Edsger – a handwritten Clojure REPL for the reMarkable 2",
-      "score": 47,
+      "score": 50,
       "url": "https://handwritten.danieljanus.pl/2026-06-01-edsger.html"
     },
     {
-      "rank": 6,
+      "rank": 5,
       "title": "Gleam v1.17 - Single file Gleam BEAM programs with escript",
-      "score": 23,
+      "score": 27,
       "url": "https://gleam.run/news/single-file-gleam-beam-programs-with-escript/"
+    },
+    {
+      "rank": 6,
+      "title": "Quality in the Age of Slop",
+      "score": 83,
+      "url": "https://sinclairtarget.com/blog/2026/06/01/quality-in-the-age-of-slop/"
     },
     {
       "rank": 7,
       "title": "iddqd, or the hardest kind of unsafe Rust",
-      "score": 54,
+      "score": 56,
       "url": "https://oxide.computer/blog/iddqd-unsafe"
     },
     {
       "rank": 8,
       "title": "Oils - Reviewing Our NLnet Grants After 4 Years",
-      "score": 31,
+      "score": 32,
       "url": "https://oils.pub/blog/2026/06/grants.html"
     },
     {
       "rank": 9,
-      "title": "Vim Classic 8.3 released",
-      "score": 87,
-      "url": "https://vim-classic.org/news/vim-8.3-released.html"
+      "title": "PaceVer (an alternative to SemVer, for mobile apps)",
+      "score": 22,
+      "url": "https://pacever.org/"
     },
     {
       "rank": 10,
-      "title": "PaceVer (an alternative to SemVer, for mobile apps)",
-      "score": 20,
-      "url": "https://pacever.org/"
+      "title": "Pwnd Blaster: Hacking your PC using your speaker without ever touching it",
+      "score": 13,
+      "url": "https://blog.nns.ee/2026/06/03/katana-badusb/"
+    }
+  ],
+  "schedule": [
+    {
+      "time": "00:00",
+      "title": "Italy Business Trip",
+      "location": ""
+    },
+    {
+      "time": "00:00",
+      "title": "Josh @ Italy working",
+      "location": ""
     }
   ]
 }

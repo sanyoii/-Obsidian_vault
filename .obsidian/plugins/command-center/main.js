@@ -89,6 +89,19 @@ class DashboardView extends obsidian.ItemView {
 </div>`).join('');
     }
 
+    renderSchedule(schedule) {
+        if (!schedule || schedule.length === 0)
+            return '<div class="cc-empty">無行程（按「📅 日曆」同步）</div>';
+        return schedule.map(ev => {
+            const t = (!ev.time || ev.time === '00:00') ? '全天' : ev.time;
+            const loc = ev.location ? ` <span class="cc-event-loc">· ${ev.location}</span>` : '';
+            return `<div class="cc-event">
+  <span class="cc-event-time">${t}</span>
+  <span class="cc-event-title">${ev.title || ''}${loc}</span>
+</div>`;
+        }).join('');
+    }
+
     renderLobsters(lobsters) {
         if (!lobsters || lobsters.length === 0)
             return '<div class="cc-empty">尚未更新 → 按「🔄 更新資料」</div>';
@@ -181,6 +194,7 @@ class DashboardView extends obsidian.ItemView {
         <button class="cc-btn" id="cc-compile">📚 Compile</button>
         <button class="cc-btn" id="cc-lint">🔍 Lint</button>
         <button class="cc-btn" id="cc-capture">✏️ 捕捉</button>
+        <button class="cc-btn" id="cc-calendar">📅 日曆</button>
         <button class="cc-btn cc-btn-secondary" id="cc-refresh">🔄 更新資料</button>
       </div>
       <div class="cc-metrics-row">
@@ -196,6 +210,10 @@ class DashboardView extends obsidian.ItemView {
           <span class="cc-im-label">Token</span>
           <span class="cc-im-value">${data?.tokenEstimate || '—'}</span>
         </div>
+      </div>
+      <div class="cc-schedule-block">
+        <div class="cc-schedule-title">今日行程</div>
+        ${this.renderSchedule(data?.schedule)}
       </div>
     </div>
   </div>
@@ -232,6 +250,13 @@ class DashboardView extends obsidian.ItemView {
         });
 
         // Action buttons
+        container.querySelector('#cc-calendar')?.addEventListener('click', () => {
+            this.plugin.runScript('fetch-calendar.ps1', 'Sync Calendar');
+            setTimeout(() => {
+                this.plugin.runScript('fetch-dashboard-data.ps1', 'Refresh');
+                setTimeout(() => this.render(), 4000);
+            }, 15000);
+        });
         container.querySelector('#cc-morning')?.addEventListener('click', () => {
             this.plugin.runScript('morning-briefing.ps1', 'Morning Briefing');
         });

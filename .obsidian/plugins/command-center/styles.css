@@ -235,6 +235,47 @@
     padding: 6px 0;
 }
 
+/* ── Schedule (Morning Brief) ────────────────────────────────────────────── */
+.cc-schedule-block {
+    padding-top: 6px;
+    border-top: 1px solid #111;
+}
+.cc-schedule-title {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #ff6b00;
+    text-transform: uppercase;
+    font-family: var(--font-monospace, 'JetBrains Mono', monospace);
+    margin-bottom: 5px;
+}
+.cc-event {
+    display: flex;
+    gap: 10px;
+    padding: 3px 0;
+    border-bottom: 1px solid #0e0e0e;
+    align-items: baseline;
+    font-size: 11px;
+}
+.cc-event:last-child { border-bottom: none; }
+.cc-event-time {
+    font-size: 9px;
+    color: #ff6b00;
+    min-width: 34px;
+    flex-shrink: 0;
+    font-family: var(--font-monospace, 'JetBrains Mono', monospace);
+}
+.cc-event-title {
+    color: #bbb;
+    font-family: var(--font-interface, -apple-system, 'Segoe UI', sans-serif);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cc-event-loc {
+    font-size: 9px;
+    color: #444;
+}
+
 /* Light theme compat */
 .theme-light .cc-dashboard,
 .theme-light .cc-dashboard-container { background: #111; }
