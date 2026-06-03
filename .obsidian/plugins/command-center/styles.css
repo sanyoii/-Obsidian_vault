@@ -276,6 +276,92 @@
     color: #444;
 }
 
+/* ── Email Brief ─────────────────────────────────────────────────────────── */
+.cc-email-panel {
+    background: #080808;
+    border: 1px solid #1c1c1c;
+    border-radius: 3px;
+    padding: 10px 12px;
+    margin-top: 10px;
+}
+.cc-email-list { display: flex; flex-direction: column; gap: 6px; }
+
+.cc-email-item {
+    padding: 6px 8px;
+    border-radius: 2px;
+    border-left: 2px solid #2a2a2a;
+    background: #0a0a0a;
+}
+.cc-email-item.cc-badge-emergency { border-left-color: #e53e3e; }
+.cc-email-item.cc-badge-high      { border-left-color: #ff6b00; }
+.cc-email-item.cc-badge-medium    { border-left-color: #d4a017; }
+.cc-email-item.cc-badge-low       { border-left-color: #2a2a2a; }
+
+.cc-email-header {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 3px;
+}
+.cc-email-badge {
+    font-size: 8px;
+    font-family: var(--font-monospace, 'JetBrains Mono', monospace);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+.cc-badge-emg  { background: #3d0f0f; color: #e53e3e; animation: cc-pulse 1.5s infinite; }
+.cc-badge-high { background: #2a1400; color: #ff6b00; }
+.cc-badge-med  { background: #211900; color: #d4a017; }
+.cc-badge-low  { background: #111;    color: #444; }
+
+@keyframes cc-pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.5; }
+}
+
+.cc-email-from {
+    font-size: 11px;
+    color: #c0c0c0;
+    font-family: var(--font-interface, -apple-system, 'Segoe UI', sans-serif);
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cc-email-time {
+    font-size: 9px;
+    color: #383838;
+    font-family: var(--font-monospace, 'JetBrains Mono', monospace);
+    flex-shrink: 0;
+}
+.cc-email-subject {
+    font-size: 10px;
+    color: #888;
+    font-family: var(--font-interface, -apple-system, 'Segoe UI', sans-serif);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 3px;
+}
+.cc-email-todos {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.cc-todo-item {
+    font-size: 10px;
+    color: #ff6b00;
+    font-family: var(--font-interface, -apple-system, 'Segoe UI', sans-serif);
+    padding-left: 8px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /* Light theme compat */
 .theme-light .cc-dashboard,
 .theme-light .cc-dashboard-container { background: #111; }

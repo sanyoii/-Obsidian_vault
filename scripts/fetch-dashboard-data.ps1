@@ -198,10 +198,16 @@ $data = [ordered]@{
         if (Test-Path $calFile) { Get-Content $calFile -Raw -Encoding UTF8 | ConvertFrom-Json }
         else { @() }
     )
+    emailBrief    = $(
+        $emailFile = "$vaultRoot\data\email-brief.json"
+        if (Test-Path $emailFile) { Get-Content $emailFile -Raw -Encoding UTF8 | ConvertFrom-Json }
+        else { @() }
+    )
 }
 
 $data | ConvertTo-Json -Depth 5 | Out-File -FilePath $outputFile -Encoding UTF8 -Force
 
-$g = ($data.github).Count;   $h  = ($data.hn).Count
-$p = ($data.ph).Count;       $lb = ($data.lobsters).Count
-Write-Host "dashboard.json updated: jobs=$jobCount github=$g hn=$h ph=$p lobsters=$lb token=$tokenEstimate"
+$g  = ($data.github).Count;    $h  = ($data.hn).Count
+$p  = ($data.ph).Count;        $lb = ($data.lobsters).Count
+$em = ($data.emailBrief).Count
+Write-Host "dashboard.json updated: jobs=$jobCount github=$g hn=$h ph=$p lobsters=$lb email=$em token=$tokenEstimate"

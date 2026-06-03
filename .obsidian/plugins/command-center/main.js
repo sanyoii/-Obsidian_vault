@@ -89,6 +89,34 @@ class DashboardView extends obsidian.ItemView {
 </div>`).join('');
     }
 
+    renderEmailBrief(emails) {
+        if (!emails || emails.length === 0)
+            return '<div class="cc-empty">無重要郵件（按「📧 Email」同步）</div>';
+
+        const badgeMap = {
+            Emergency: '<span class="cc-email-badge cc-badge-emg">🚨EMG</span>',
+            High:      '<span class="cc-email-badge cc-badge-high">⚡HIGH</span>',
+            Medium:    '<span class="cc-email-badge cc-badge-med">📌MED</span>',
+            Low:       '<span class="cc-email-badge cc-badge-low">· LOW</span>'
+        };
+
+        return emails.map(e => {
+            const badge = badgeMap[e.importance] || badgeMap.Low;
+            const todos = e.todos && e.todos.length
+                ? `<div class="cc-email-todos">${e.todos.map(t => `<span class="cc-todo-item">→ ${t}</span>`).join('')}</div>`
+                : '';
+            return `<div class="cc-email-item cc-badge-${(e.importance||'low').toLowerCase()}">
+  <div class="cc-email-header">
+    ${badge}
+    <span class="cc-email-from">${e.from || ''}</span>
+    <span class="cc-email-time">${e.time || ''}</span>
+  </div>
+  <div class="cc-email-subject">${e.subject || ''}</div>
+  ${todos}
+</div>`;
+        }).join('');
+    }
+
     renderSchedule(schedule) {
         if (!schedule || schedule.length === 0)
             return '<div class="cc-empty">無行程（按「📅 日曆」同步）</div>';
@@ -195,6 +223,7 @@ class DashboardView extends obsidian.ItemView {
         <button class="cc-btn" id="cc-lint">🔍 Lint</button>
         <button class="cc-btn" id="cc-capture">✏️ 捕捉</button>
         <button class="cc-btn" id="cc-calendar">📅 日曆</button>
+        <button class="cc-btn" id="cc-email">📧 Email</button>
         <button class="cc-btn cc-btn-secondary" id="cc-refresh">🔄 更新資料</button>
       </div>
       <div class="cc-metrics-row">
@@ -215,6 +244,16 @@ class DashboardView extends obsidian.ItemView {
         <div class="cc-schedule-title">今日行程</div>
         ${this.renderSchedule(data?.schedule)}
       </div>
+    </div>
+  </div>
+
+  <div class="cc-email-panel">
+    <div class="cc-panel-header">
+      <span class="cc-panel-title">EMAIL BRIEF</span>
+      <span class="cc-panel-badge">重要郵件 · 點擊同步</span>
+    </div>
+    <div class="cc-email-list" id="cc-email-list">
+      ${this.renderEmailBrief(data?.emailBrief)}
     </div>
   </div>
 
@@ -250,6 +289,13 @@ class DashboardView extends obsidian.ItemView {
         });
 
         // Action buttons
+        container.querySelector('#cc-email')?.addEventListener('click', () => {
+            this.plugin.runScript('fetch-email-brief.ps1', 'Email Brief');
+            setTimeout(() => {
+                this.plugin.runScript('fetch-dashboard-data.ps1', 'Refresh');
+                setTimeout(() => this.render(), 4000);
+            }, 20000);
+        });
         container.querySelector('#cc-calendar')?.addEventListener('click', () => {
             this.plugin.runScript('fetch-calendar.ps1', 'Sync Calendar');
             setTimeout(() => {

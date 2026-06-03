@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-06-03 17:44:40",
+  "updatedAt": "2026-06-03 17:59:41",
   "jobCount": 13,
   "socialLabel": "2026-05-17-2342",
   "briefingTitle": "Morning_2026-06-03",
-  "tokenEstimate": "~954K",
+  "tokenEstimate": "~1139K",
   "github": [
     {
       "rank": 1,
@@ -79,71 +79,71 @@
   "hn": [
     {
       "rank": 1,
-      "title": "Hacking your PC using your speaker without ever touching it",
-      "score": 390,
-      "url": "https://blog.nns.ee/2026/06/03/katana-badusb/",
-      "id": 48382310
-    },
-    {
-      "rank": 2,
       "title": "DaVinci Resolve 21",
-      "score": 61,
+      "score": 87,
       "url": "https://www.blackmagicdesign.com/products/davinciresolve/whatsnew",
       "id": 48384482
     },
     {
-      "rank": 3,
-      "title": "Meta workers can opt out of being tracked at work up to 30 min",
-      "score": 314,
-      "url": "https://www.bbc.com/news/articles/c93x0k194yno",
-      "id": 48383220
+      "rank": 2,
+      "title": "Hacking your PC using your speaker without ever touching it",
+      "score": 411,
+      "url": "https://blog.nns.ee/2026/06/03/katana-badusb/",
+      "id": 48382310
     },
     {
-      "rank": 4,
+      "rank": 3,
       "title": "A Post-Quantum Future for Let's Encrypt",
-      "score": 11,
+      "score": 27,
       "url": "https://letsencrypt.org/2026/06/03/pq-certs",
       "id": 48385114
     },
     {
+      "rank": 4,
+      "title": "Meta workers can opt out of being tracked at work up to 30 min",
+      "score": 331,
+      "url": "https://www.bbc.com/news/articles/c93x0k194yno",
+      "id": 48383220
+    },
+    {
       "rank": 5,
       "title": "Every Byte Matters",
-      "score": 147,
+      "score": 155,
       "url": "https://fzakaria.com/2026/06/01/every-byte-matters",
       "id": 48382382
     },
     {
       "rank": 6,
       "title": "PlayStation Architecture",
-      "score": 131,
+      "score": 139,
       "url": "https://www.copetti.org/writings/consoles/playstation/",
       "id": 48382142
     },
     {
       "rank": 7,
-      "title": "Show HN: Edsger – A handwritten Clojure REPL for the reMarkable 2",
-      "score": 164,
-      "url": "https://handwritten.danieljanus.pl/2026-06-01-edsger.html",
-      "id": 48374552
-    },
-    {
-      "rank": 8,
       "title": "1-Click GitHub Token Stealing via a VSCode Bug",
-      "score": 567,
+      "score": 569,
       "url": "https://blog.ammaraskar.com/github-token-stealing/",
       "id": 48371562
     },
     {
+      "rank": 8,
+      "title": "Show HN: Edsger – A handwritten Clojure REPL for the reMarkable 2",
+      "score": 168,
+      "url": "https://handwritten.danieljanus.pl/2026-06-01-edsger.html",
+      "id": 48374552
+    },
+    {
       "rank": 9,
       "title": "Nabokov's pale fire: the lost 'father of all hypertext demos'? (2011)",
-      "score": 70,
+      "score": 71,
       "url": "https://dl.acm.org/doi/pdf/10.1145/1995966.1996008",
       "id": 48351579
     },
     {
       "rank": 10,
       "title": "I built a ceiling projection mapping of the planes flying over my house",
-      "score": 86,
+      "score": 105,
       "url": "https://old.reddit.com/r/nextfuckinglevel/comments/1tvmcin/i_live_in_the_take_off_path_of_sfo_and_built_a/",
       "id": 48383823
     }
@@ -153,14 +153,14 @@
       "rank": 1,
       "name": "Fundraisly",
       "tagline": "AI fundraising agent that finds investors and books meetings",
-      "votes": 1008,
+      "votes": 1009,
       "url": "https://www.producthunt.com/products/fundraisly?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 2,
       "name": "Kilo Code v7 for VS Code",
       "tagline": "Parallel agents, diff reviewer, and multi-model comparisons",
-      "votes": 912,
+      "votes": 911,
       "url": "https://www.producthunt.com/products/kilocode/launches/kilo-code-v7-for-vs-code?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
@@ -224,13 +224,13 @@
     {
       "rank": 1,
       "title": "rsync and outrage",
-      "score": 67,
+      "score": 70,
       "url": "https://medium.com/@tridge60/rsync-and-outrage-d9849599e5a0"
     },
     {
       "rank": 2,
       "title": ".furry - A Top-Level Domain for furries",
-      "score": 38,
+      "score": 40,
       "url": "https://www.dotfurry.org/"
     },
     {
@@ -241,45 +241,45 @@
     },
     {
       "rank": 4,
+      "title": "burntsushi discusses personal medical diagnosis",
+      "score": 12,
+      "url": "https://burntsushi.net/encephalitis/"
+    },
+    {
+      "rank": 5,
       "title": "Edsger – a handwritten Clojure REPL for the reMarkable 2",
       "score": 50,
       "url": "https://handwritten.danieljanus.pl/2026-06-01-edsger.html"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "title": "Gleam v1.17 - Single file Gleam BEAM programs with escript",
       "score": 27,
       "url": "https://gleam.run/news/single-file-gleam-beam-programs-with-escript/"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "title": "Quality in the Age of Slop",
       "score": 83,
       "url": "https://sinclairtarget.com/blog/2026/06/01/quality-in-the-age-of-slop/"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "title": "iddqd, or the hardest kind of unsafe Rust",
-      "score": 56,
+      "score": 55,
       "url": "https://oxide.computer/blog/iddqd-unsafe"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "title": "Oils - Reviewing Our NLnet Grants After 4 Years",
       "score": 32,
       "url": "https://oils.pub/blog/2026/06/grants.html"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "title": "PaceVer (an alternative to SemVer, for mobile apps)",
       "score": 22,
       "url": "https://pacever.org/"
-    },
-    {
-      "rank": 10,
-      "title": "Pwnd Blaster: Hacking your PC using your speaker without ever touching it",
-      "score": 13,
-      "url": "https://blog.nns.ee/2026/06/03/katana-badusb/"
     }
   ],
   "schedule": [
@@ -292,6 +292,26 @@
       "time": "00:00",
       "title": "Josh @ Italy working",
       "location": ""
+    }
+  ],
+  "emailBrief": [
+    {
+      "from": "Neromo (e-restaurants)",
+      "subject": "Reservation Confirmed: Neromo - 03/06/2026, 19:00",
+      "importance": "High",
+      "todos": [
+        "今晚 19:00 準時抵達 Neromo（Borgo S. Frediano, 23r, Firenze）",
+        "確認 5 人同行人數",
+        "如需取消或修改，請點信件內連結"
+      ],
+      "time": "23:33"
+    },
+    {
+      "from": "FotoShare",
+      "subject": "La tua foto",
+      "importance": "Low",
+      "todos": [],
+      "time": "21:56"
     }
   ]
 }

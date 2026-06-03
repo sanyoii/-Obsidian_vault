@@ -1,0 +1,20 @@
+[
+  {
+    "from": "Neromo (e-restaurants)",
+    "subject": "Reservation Confirmed: Neromo - 03/06/2026, 19:00",
+    "importance": "High",
+    "todos": [
+      "今晚 19:00 準時抵達 Neromo（Borgo S. Frediano, 23r, Firenze）",
+      "確認 5 人同行人數",
+      "如需取消或修改，請點信件內連結"
+    ],
+    "time": "23:33"
+  },
+  {
+    "from": "FotoShare",
+    "subject": "La tua foto",
+    "importance": "Low",
+    "todos": [],
+    "time": "21:56"
+  }
+]
