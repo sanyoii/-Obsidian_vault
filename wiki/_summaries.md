@@ -11,8 +11,8 @@
 
 ## [[Claude/Obsidian Dashboard 路線圖|Obsidian Dashboard 路線圖]]
 **標籤：** `#Claude` `#系統` `#obsidian` `#dashboard` `#roadmap`
-**摘要：** 四階段路線圖全部完成（2026-06-03）：Phase 0 Ribbon ✅、Phase 1 Bases ✅、Phase 2 Plugin Panel 2×2 grid（GitHub/HN/PH/Lobsters）✅、Phase 3 Google Calendar MCP 整合 ✅。Phase 4 待做：職缺快速操作、Careerbot 狀態、社群趨勢、Token 精確版。
-**最後更新：** 2026-06-03
+**摘要：** Phase 0–4a 全部完成（2026-06-03）：Ribbon ✅、Bases ✅、Plugin Panel 2×2 grid ✅、Google Calendar ✅、Email Brief ✅（Emergency/High/Med/Low 四級，todo 萃取，略過 newsletter）。Phase 4b 待做：職缺操作/Careerbot/社群趨勢/Token 精確版。
+**最後更新：** 2026-06-03（Phase 4a Email Brief 完成）
 
 ---
 

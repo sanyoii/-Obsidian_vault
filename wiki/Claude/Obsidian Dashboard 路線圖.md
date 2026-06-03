@@ -25,7 +25,8 @@
 | 1 | 輕量版 Bases Dashboard | ✅ 完成 | 2026-06-03 |
 | 2 | 完整 Plugin Panel（v3 四欄）| ✅ 完成 | 2026-06-03 |
 | 3 | Google Calendar | ✅ 完成 | 2026-06-03 |
-| 4 | 進階互動（職缺操作/Careerbot）| 🔄 未來 | — |
+| 4a | Email Brief（Gmail 重要郵件摘要）| ✅ 完成 | 2026-06-03 |
+| 4b | 進階互動（職缺操作/Careerbot）| 🔄 未來 | — |
 
 ---
 
@@ -117,7 +118,8 @@ scripts/fetch-dashboard-data.ps1
 | 社群動態 | social-monitor 報告 | ✅ |
 | Token 估算 | JSONL 行數估算 | ✅（粗估）|
 | 今日行程 | Google Calendar MCP → calendar.json | ✅ |
-| Daily Tasks | Morning Briefing Today's Tasks | 🔄 Phase 4 |
+| 重要郵件 + Todo | Gmail MCP → email-brief.json | ✅ |
+| Daily Tasks | Morning Briefing Today's Tasks | 🔄 Phase 4b |
 
 ---
 
@@ -136,7 +138,31 @@ scripts/fetch-dashboard-data.ps1
 
 ---
 
-## 🔄 Phase 4：未來擴充方向
+## ✅ Phase 4a：Email Brief（完成 2026-06-03）
+
+**做了什麼：**
+- 新建 `scripts/fetch-email-brief.ps1`：headless Claude + `--dangerously-skip-permissions` 呼叫 Gmail MCP
+  - `search_threads`：`is:unread OR is:important newer_than:2d`（max 15）
+  - `get_thread`：讀各 thread 內容
+  - Claude 評估重要程度 + 萃取待辦事項 → `data/email-brief.json`
+- 更新 `fetch-dashboard-data.ps1`：讀取 email-brief.json → emailBrief 欄位
+- 更新 `main.js`：新增 `renderEmailBrief()`、EMAIL BRIEF 全寬區塊（Morning Brief 下方）、「📧 Email」按鈕
+- 更新 `styles.css`：四個重要程度樣式（Emergency 紅色閃爍 / High 橘 / Medium 黃 / Low 灰）
+
+**四個重要程度：**
+
+| 程度 | 標籤 | 定義 |
+|------|------|------|
+| Emergency | 🚨EMG（閃爍）| 數小時內必須處理 |
+| High | ⚡HIGH | 今日需處理 |
+| Medium | 📌MED | 近期閱讀，無立即行動 |
+| Low | · LOW | 僅供參考，略過 newsletter |
+
+**已驗證：** 正確識別 Neromo 餐廳訂位（High，3 個待辦），略過 13 封 newsletter/自動通知
+
+---
+
+## 🔄 Phase 4b：未來擴充方向
 
 - **職缺快速操作**：Dashboard 內直接標記 applied / not_interested（需要 Flask API 橋接）
 - **社群趨勢摘要**：讀最新 social-monitor 報告第一則熱門話題顯示在指標列
