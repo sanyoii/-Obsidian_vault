@@ -39,16 +39,32 @@ class DashboardView extends obsidian.ItemView {
         }
     }
 
-    renderSchedule(schedule) {
-        if (!schedule || schedule.length === 0) {
-            return '<div class="cc-empty">無行程，或請先執行「更新資料」</div>';
+    renderGithub(github) {
+        if (!github || github.length === 0) {
+            return '<div class="cc-empty">尚未更新，請按「🔄 更新資料」</div>';
         }
-        return schedule.map(ev =>
-            `<div class="cc-event">
-                <span class="cc-event-time">${ev.time || ''}</span>
-                <span class="cc-event-title">${ev.title || ''}</span>
-            </div>`
-        ).join('');
+        return github.slice(0, 10).map(r => `
+<div class="cc-trend-item">
+  <span class="cc-rank">${r.rank}</span>
+  <div class="cc-trend-body">
+    <div class="cc-repo">${r.repo}${r.lang ? ' <span class="cc-lang">'+r.lang+'</span>' : ''}${r.stars && r.stars !== '0' ? ' <span class="cc-stars">★'+Number(r.stars).toLocaleString()+'</span>' : ''}</div>
+    ${r.desc ? '<div class="cc-desc">'+r.desc+'</div>' : ''}
+  </div>
+</div>`).join('');
+    }
+
+    renderHN(hn) {
+        if (!hn || hn.length === 0) {
+            return '<div class="cc-empty">尚未更新，請按「🔄 更新資料」</div>';
+        }
+        return hn.slice(0, 10).map(r => `
+<div class="cc-hn-item">
+  <span class="cc-rank">${r.rank}</span>
+  <div class="cc-hn-body">
+    <div class="cc-hn-title">${r.title}</div>
+    <div class="cc-hn-score">${r.score}↑</div>
+  </div>
+</div>`).join('');
     }
 
     render() {
@@ -56,65 +72,100 @@ class DashboardView extends obsidian.ItemView {
         const today = new Date().toLocaleDateString('zh-TW', {
             year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short'
         });
+        const timeStr = new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' });
 
         const container = this.containerEl.children[1];
         container.empty();
         container.addClass('cc-dashboard-container');
 
         container.innerHTML = `
-<div class="cc-dashboard">
+<div class="cc-dashboard cc-main">
 
-  <div class="cc-header">
+  <div class="cc-header cc-header-row">
     <div class="cc-title">COMMAND CENTER</div>
-    <div class="cc-subtitle">${today} · ${this.plugin.app.vault.getName()}</div>
-    <div class="cc-updated">${data?.updatedAt ? 'updated ' + data.updatedAt : '尚未更新'}</div>
+    <div class="cc-header-meta">
+      <span class="cc-date">${today}</span>
+      <span class="cc-time">${timeStr}</span>
+      <span class="cc-vault">${this.plugin.app.vault.getName()}</span>
+    </div>
+    <div class="cc-updated">${data?.updatedAt ? '↻ ' + data.updatedAt : '尚未更新'}</div>
   </div>
 
-  <div class="cc-metrics">
-    <div class="cc-metric">
-      <div class="cc-metric-label">新職缺</div>
-      <div class="cc-metric-value cc-accent">${data?.jobCount ?? '—'}</div>
+  <div class="cc-top-grid">
+
+    <div class="cc-panel">
+      <div class="cc-panel-header">
+        <span class="cc-panel-title">GITHUB TRENDING</span>
+        <span class="cc-panel-badge">DAILY</span>
+      </div>
+      <div class="cc-list">
+        ${this.renderGithub(data?.github)}
+      </div>
     </div>
-    <div class="cc-metric">
-      <div class="cc-metric-label">社群海巡</div>
-      <div class="cc-metric-value cc-small">${data?.socialLabel || '—'}</div>
+
+    <div class="cc-panel">
+      <div class="cc-panel-header">
+        <span class="cc-panel-title">HACKER NEWS</span>
+        <span class="cc-panel-badge">${timeStr}</span>
+      </div>
+      <div class="cc-list">
+        ${this.renderHN(data?.hn)}
+      </div>
     </div>
-    <div class="cc-metric cc-metric-wide">
-      <div class="cc-metric-label">今日早報</div>
-      <div class="cc-metric-value cc-small">${data?.briefingTitle || '尚未產生'}</div>
-    </div>
+
   </div>
 
-  <div class="cc-actions">
-    <button class="cc-btn" id="cc-morning">☀️ 早報</button>
-    <button class="cc-btn" id="cc-compile">📚 Compile</button>
-    <button class="cc-btn" id="cc-lint">🔍 Lint</button>
-    <button class="cc-btn" id="cc-capture">✏️ 捕捉</button>
-    <button class="cc-btn cc-btn-wide" id="cc-refresh">🔄 更新資料</button>
-  </div>
+  <div class="cc-brief-panel">
+    <div class="cc-panel-header">
+      <span class="cc-panel-title">MORNING BRIEF</span>
+      <span class="cc-panel-badge">${data?.briefingTitle || '—'}</span>
+    </div>
 
-  <div class="cc-section">
-    <div class="cc-section-title">今日行程</div>
-    ${this.renderSchedule(data?.schedule)}
+    <div class="cc-brief-body">
+
+      <div class="cc-actions-row">
+        <button class="cc-btn" id="cc-morning">☀️ 早報</button>
+        <button class="cc-btn" id="cc-compile">📚 Compile</button>
+        <button class="cc-btn" id="cc-lint">🔍 Lint</button>
+        <button class="cc-btn" id="cc-capture">✏️ 捕捉</button>
+        <button class="cc-btn cc-btn-refresh" id="cc-refresh">🔄 更新資料</button>
+      </div>
+
+      <div class="cc-metrics-row">
+        <div class="cc-inline-metric">
+          <span class="cc-im-label">新職缺</span>
+          <span class="cc-im-value cc-accent">${data?.jobCount ?? '—'}</span>
+        </div>
+        <div class="cc-inline-metric">
+          <span class="cc-im-label">社群</span>
+          <span class="cc-im-value">${data?.socialLabel || '—'}</span>
+        </div>
+        <div class="cc-inline-metric">
+          <span class="cc-im-label">Token</span>
+          <span class="cc-im-value">${data?.tokenEstimate || '—'}</span>
+        </div>
+      </div>
+
+    </div>
   </div>
 
 </div>`;
 
-        container.querySelector('#cc-morning').addEventListener('click', () => {
+        container.querySelector('#cc-morning')?.addEventListener('click', () => {
             this.plugin.runScript('morning-briefing.ps1', 'Morning Briefing');
         });
-        container.querySelector('#cc-compile').addEventListener('click', () => {
+        container.querySelector('#cc-compile')?.addEventListener('click', () => {
             this.plugin.runScript('compile.ps1', 'Compile Vault');
         });
-        container.querySelector('#cc-lint').addEventListener('click', () => {
+        container.querySelector('#cc-lint')?.addEventListener('click', () => {
             this.plugin.runScript('lint.ps1', 'Lint Vault');
         });
-        container.querySelector('#cc-capture').addEventListener('click', () => {
+        container.querySelector('#cc-capture')?.addEventListener('click', () => {
             this.plugin.quickCapture();
         });
-        container.querySelector('#cc-refresh').addEventListener('click', () => {
+        container.querySelector('#cc-refresh')?.addEventListener('click', () => {
             this.plugin.runScript('fetch-dashboard-data.ps1', 'Refresh Data');
-            setTimeout(() => this.render(), 4000);
+            setTimeout(() => this.render(), 5000);
         });
     }
 }
@@ -141,11 +192,11 @@ class CommandCenter extends obsidian.Plugin {
             this.quickCapture();
         });
 
-        this.addCommand({ id: 'open-dashboard',    name: 'Open Dashboard',    callback: () => this.activateDashboardView() });
-        this.addCommand({ id: 'morning-briefing',  name: 'Morning Briefing',  callback: () => this.runScript('morning-briefing.ps1', 'Morning Briefing') });
-        this.addCommand({ id: 'compile-vault',     name: 'Compile Vault',     callback: () => this.runScript('compile.ps1', 'Compile Vault') });
-        this.addCommand({ id: 'lint-vault',        name: 'Lint Vault',        callback: () => this.runScript('lint.ps1', 'Lint Vault') });
-        this.addCommand({ id: 'quick-capture',     name: 'Quick Capture',     callback: () => this.quickCapture() });
+        this.addCommand({ id: 'open-dashboard',   name: 'Open Dashboard',   callback: () => this.activateDashboardView() });
+        this.addCommand({ id: 'morning-briefing', name: 'Morning Briefing', callback: () => this.runScript('morning-briefing.ps1', 'Morning Briefing') });
+        this.addCommand({ id: 'compile-vault',    name: 'Compile Vault',    callback: () => this.runScript('compile.ps1', 'Compile Vault') });
+        this.addCommand({ id: 'lint-vault',       name: 'Lint Vault',       callback: () => this.runScript('lint.ps1', 'Lint Vault') });
+        this.addCommand({ id: 'quick-capture',    name: 'Quick Capture',    callback: () => this.quickCapture() });
 
         console.log('Command Center loaded');
     }
@@ -159,16 +210,15 @@ class CommandCenter extends obsidian.Plugin {
         const { workspace } = this.app;
         let leaf = workspace.getLeavesOfType(DASHBOARD_VIEW_TYPE)[0];
         if (!leaf) {
-            const rightLeaf = workspace.getRightLeaf(false);
-            await rightLeaf.setViewState({ type: DASHBOARD_VIEW_TYPE, active: true });
-            leaf = workspace.getLeavesOfType(DASHBOARD_VIEW_TYPE)[0];
+            leaf = workspace.getLeaf('tab');
+            await leaf.setViewState({ type: DASHBOARD_VIEW_TYPE, active: true });
         }
         workspace.revealLeaf(leaf);
     }
 
     runScript(scriptName, label) {
         const { exec } = require('child_process');
-        const basePath  = this.app.vault.adapter.basePath;
+        const basePath   = this.app.vault.adapter.basePath;
         const scriptPath = `${basePath}\\scripts\\${scriptName}`;
 
         new obsidian.Notice(`⏳ ${label} 執行中...`);

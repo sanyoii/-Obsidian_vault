@@ -1,7 +1,142 @@
 {
-  "updatedAt": "2026-06-03 14:06:52",
-  "jobCount": 1,
-  "socialLabel": null,
+  "updatedAt": "2026-06-03 14:19:37",
+  "jobCount": 13,
+  "socialLabel": "2026-05-17-2342",
   "briefingTitle": "Morning_2026-06-03",
-  "schedule": []
+  "tokenEstimate": "~613K",
+  "schedule": [],
+  "github": [
+    {
+      "rank": 1,
+      "repo": "chopratejas/headroom",
+      "desc": "Compress tool outputs, logs, files, and RAG chunks before they reach...",
+      "stars": "1265",
+      "lang": "Python"
+    },
+    {
+      "rank": 2,
+      "repo": "microsoft/markitdown",
+      "desc": "Python tool for converting files and office documents to Markdown.",
+      "stars": "2006",
+      "lang": "Python"
+    },
+    {
+      "rank": 3,
+      "repo": "affaan-m/ECC",
+      "desc": "The agent harness performance optimization system. Skills, instincts...",
+      "stars": "1533",
+      "lang": "JavaScript"
+    },
+    {
+      "rank": 4,
+      "repo": "D4Vinci/Scrapling",
+      "desc": "🕷️ An adaptive Web Scraping framework that handles everything from a...",
+      "stars": "1078",
+      "lang": "Python"
+    },
+    {
+      "rank": 5,
+      "repo": "nesquena/hermes-webui",
+      "desc": "Hermes WebUI: The best way to use Hermes Agent from the web or from ...",
+      "stars": "734",
+      "lang": "Python"
+    },
+    {
+      "rank": 6,
+      "repo": "reconurge/flowsint",
+      "desc": "A modern platform for visual, flexible, and extensible graph-based i...",
+      "stars": "124",
+      "lang": "TypeScript"
+    },
+    {
+      "rank": 7,
+      "repo": "OpenBMB/VoxCPM",
+      "desc": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Crea...",
+      "stars": "713",
+      "lang": "Python"
+    },
+    {
+      "rank": 8,
+      "repo": "stefan-jansen/machine-learning-for-trading",
+      "desc": "Code for Machine Learning for Algorithmic Trading, 2nd edition.",
+      "stars": "716",
+      "lang": "Jupyter Notebook"
+    },
+    {
+      "rank": 9,
+      "repo": "jamwithai/production-agentic-rag-course",
+      "desc": "",
+      "stars": "30",
+      "lang": "Python"
+    },
+    {
+      "rank": 10,
+      "repo": "supermemoryai/supermemory",
+      "desc": "Memory engine and app that is extremely fast, scalable. The Memory A...",
+      "stars": "601",
+      "lang": "TypeScript"
+    }
+  ],
+  "hn": [
+    {
+      "rank": 1,
+      "title": "Hacking your PC using your speaker without ever touching it",
+      "score": 112,
+      "url": "https://blog.nns.ee/2026/06/03/katana-badusb/"
+    },
+    {
+      "rank": 2,
+      "title": "Every Byte Matters",
+      "score": 47,
+      "url": "https://fzakaria.com/2026/06/01/every-byte-matters"
+    },
+    {
+      "rank": 3,
+      "title": "Show HN: Edsger – A handwritten Clojure REPL for the reMarkable 2",
+      "score": 98,
+      "url": "https://handwritten.danieljanus.pl/2026-06-01-edsger.html"
+    },
+    {
+      "rank": 4,
+      "title": "1-Click GitHub Token Stealing via a VSCode Bug",
+      "score": 492,
+      "url": "https://blog.ammaraskar.com/github-token-stealing/"
+    },
+    {
+      "rank": 5,
+      "title": "Nabokov's pale fire: the lost 'father of all hypertext demos'? (2011)",
+      "score": 19,
+      "url": "https://dl.acm.org/doi/pdf/10.1145/1995966.1996008"
+    },
+    {
+      "rank": 6,
+      "title": "PlayStation Architecture",
+      "score": 29,
+      "url": "https://www.copetti.org/writings/consoles/playstation/"
+    },
+    {
+      "rank": 7,
+      "title": "Piramidal (YC W24) – Software Engineers – NYC Onsite",
+      "score": 1,
+      "url": ""
+    },
+    {
+      "rank": 8,
+      "title": "Show HN: I reverse-engineered the world maps of Test Drive III (1990 DOS game)",
+      "score": 131,
+      "url": "https://github.com/s-macke/Test-Drive-3-Maps"
+    },
+    {
+      "rank": 9,
+      "title": "Use your Nvidia GPU's VRAM as swap space on Linux",
+      "score": 351,
+      "url": "https://github.com/c0dejedi/nbd-vram"
+    },
+    {
+      "rank": 10,
+      "title": "MAI-Code-1-Flash",
+      "score": 489,
+      "url": "https://microsoft.ai/news/introducingmai-code-1-flash/"
+    }
+  ]
 }
