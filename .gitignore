@@ -7,3 +7,6 @@
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# API tokens (never commit)
+data/ph_token.txt

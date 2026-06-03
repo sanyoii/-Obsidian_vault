@@ -39,37 +39,74 @@ class DashboardView extends obsidian.ItemView {
         }
     }
 
-    renderGithub(github) {
-        if (!github || github.length === 0) {
-            return '<div class="cc-empty">尚未更新，請按「🔄 更新資料」</div>';
+    openExternal(url) {
+        if (!url) return;
+        try {
+            require('electron').shell.openExternal(url);
+        } catch (e) {
+            window.open(url, '_blank');
         }
+    }
+
+    // ── Render helpers ────────────────────────────────────────────────────
+
+    renderGithub(github) {
+        if (!github || github.length === 0)
+            return '<div class="cc-empty">尚未更新 → 按「🔄 更新資料」</div>';
         return github.slice(0, 10).map(r => `
-<div class="cc-trend-item">
+<div class="cc-item cc-clickable" data-repo="${r.repo}">
   <span class="cc-rank">${r.rank}</span>
-  <div class="cc-trend-body">
-    <div class="cc-repo">${r.repo}${r.lang ? ' <span class="cc-lang">'+r.lang+'</span>' : ''}${r.stars && r.stars !== '0' ? ' <span class="cc-stars">★'+Number(r.stars).toLocaleString()+'</span>' : ''}</div>
-    ${r.desc ? '<div class="cc-desc">'+r.desc+'</div>' : ''}
+  <div class="cc-item-body">
+    <div class="cc-item-title">${r.repo}${r.lang ? ' <span class="cc-tag">'+r.lang+'</span>' : ''}${r.stars && r.stars !== '0' ? ' <span class="cc-badge">★'+Number(r.stars).toLocaleString()+'</span>' : ''}</div>
+    ${r.desc ? '<div class="cc-item-sub">'+r.desc+'</div>' : ''}
   </div>
 </div>`).join('');
     }
 
     renderHN(hn) {
-        if (!hn || hn.length === 0) {
-            return '<div class="cc-empty">尚未更新，請按「🔄 更新資料」</div>';
-        }
+        if (!hn || hn.length === 0)
+            return '<div class="cc-empty">尚未更新 → 按「🔄 更新資料」</div>';
         return hn.slice(0, 10).map(r => `
-<div class="cc-hn-item">
+<div class="cc-item cc-clickable" data-url="${r.url || ''}" data-hn-id="${r.id || ''}">
   <span class="cc-rank">${r.rank}</span>
-  <div class="cc-hn-body">
-    <div class="cc-hn-title">${r.title}</div>
-    <div class="cc-hn-score">${r.score}↑</div>
+  <div class="cc-item-body">
+    <div class="cc-item-title">${r.title}</div>
+    <div class="cc-item-sub cc-score">${r.score}↑</div>
   </div>
 </div>`).join('');
     }
 
+    renderPH(ph) {
+        if (!ph || ph.length === 0)
+            return '<div class="cc-empty">無資料（檢查 data/ph_token.txt）</div>';
+        return ph.slice(0, 10).map(r => `
+<div class="cc-item cc-clickable" data-url="${r.url || ''}">
+  <span class="cc-rank">${r.rank}</span>
+  <div class="cc-item-body">
+    <div class="cc-item-title">${r.name} <span class="cc-badge">▲${r.votes}</span></div>
+    <div class="cc-item-sub">${r.tagline}</div>
+  </div>
+</div>`).join('');
+    }
+
+    renderLobsters(lobsters) {
+        if (!lobsters || lobsters.length === 0)
+            return '<div class="cc-empty">尚未更新 → 按「🔄 更新資料」</div>';
+        return lobsters.slice(0, 10).map(r => `
+<div class="cc-item cc-clickable" data-url="${r.url || ''}">
+  <span class="cc-rank">${r.rank}</span>
+  <div class="cc-item-body">
+    <div class="cc-item-title">${r.title}</div>
+    <div class="cc-item-sub cc-score">${r.score}↑</div>
+  </div>
+</div>`).join('');
+    }
+
+    // ── Main render ───────────────────────────────────────────────────────
+
     render() {
-        const data  = this.loadData();
-        const today = new Date().toLocaleDateString('zh-TW', {
+        const data    = this.loadData();
+        const today   = new Date().toLocaleDateString('zh-TW', {
             year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short'
         });
         const timeStr = new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' });
@@ -81,24 +118,22 @@ class DashboardView extends obsidian.ItemView {
         container.innerHTML = `
 <div class="cc-dashboard cc-main">
 
-  <div class="cc-header cc-header-row">
-    <div class="cc-title">COMMAND CENTER</div>
-    <div class="cc-header-meta">
-      <span class="cc-date">${today}</span>
-      <span class="cc-time">${timeStr}</span>
-      <span class="cc-vault">${this.plugin.app.vault.getName()}</span>
-    </div>
-    <div class="cc-updated">${data?.updatedAt ? '↻ ' + data.updatedAt : '尚未更新'}</div>
+  <div class="cc-header-row">
+    <span class="cc-title">COMMAND CENTER</span>
+    <span class="cc-date">${today}</span>
+    <span class="cc-time">${timeStr}</span>
+    <span class="cc-vault">${this.plugin.app.vault.getName()}</span>
+    <span class="cc-updated">${data?.updatedAt ? '↻ ' + data.updatedAt : '尚未更新'}</span>
   </div>
 
-  <div class="cc-top-grid">
+  <div class="cc-grid-2x2">
 
     <div class="cc-panel">
       <div class="cc-panel-header">
         <span class="cc-panel-title">GITHUB TRENDING</span>
-        <span class="cc-panel-badge">DAILY</span>
+        <span class="cc-panel-badge">DAILY · 點擊分析</span>
       </div>
-      <div class="cc-list">
+      <div class="cc-list" id="cc-github-list">
         ${this.renderGithub(data?.github)}
       </div>
     </div>
@@ -106,10 +141,30 @@ class DashboardView extends obsidian.ItemView {
     <div class="cc-panel">
       <div class="cc-panel-header">
         <span class="cc-panel-title">HACKER NEWS</span>
-        <span class="cc-panel-badge">${timeStr}</span>
+        <span class="cc-panel-badge">${timeStr} · 點擊開原文</span>
       </div>
-      <div class="cc-list">
+      <div class="cc-list" id="cc-hn-list">
         ${this.renderHN(data?.hn)}
+      </div>
+    </div>
+
+    <div class="cc-panel">
+      <div class="cc-panel-header">
+        <span class="cc-panel-title">PRODUCT HUNT</span>
+        <span class="cc-panel-badge">TODAY · 點擊開頁面</span>
+      </div>
+      <div class="cc-list" id="cc-ph-list">
+        ${this.renderPH(data?.ph)}
+      </div>
+    </div>
+
+    <div class="cc-panel">
+      <div class="cc-panel-header">
+        <span class="cc-panel-title">LOBSTERS</span>
+        <span class="cc-panel-badge">HOTTEST · 點擊開原文</span>
+      </div>
+      <div class="cc-list" id="cc-lobsters-list">
+        ${this.renderLobsters(data?.lobsters)}
       </div>
     </div>
 
@@ -120,17 +175,14 @@ class DashboardView extends obsidian.ItemView {
       <span class="cc-panel-title">MORNING BRIEF</span>
       <span class="cc-panel-badge">${data?.briefingTitle || '—'}</span>
     </div>
-
     <div class="cc-brief-body">
-
       <div class="cc-actions-row">
         <button class="cc-btn" id="cc-morning">☀️ 早報</button>
         <button class="cc-btn" id="cc-compile">📚 Compile</button>
         <button class="cc-btn" id="cc-lint">🔍 Lint</button>
         <button class="cc-btn" id="cc-capture">✏️ 捕捉</button>
-        <button class="cc-btn cc-btn-refresh" id="cc-refresh">🔄 更新資料</button>
+        <button class="cc-btn cc-btn-secondary" id="cc-refresh">🔄 更新資料</button>
       </div>
-
       <div class="cc-metrics-row">
         <div class="cc-inline-metric">
           <span class="cc-im-label">新職缺</span>
@@ -145,12 +197,41 @@ class DashboardView extends obsidian.ItemView {
           <span class="cc-im-value">${data?.tokenEstimate || '—'}</span>
         </div>
       </div>
-
     </div>
   </div>
 
 </div>`;
 
+        // ── Event listeners ────────────────────────────────────────────────
+
+        // GitHub → repomix analysis
+        container.querySelectorAll('#cc-github-list .cc-clickable').forEach(el => {
+            el.addEventListener('click', () => {
+                const repo = el.dataset.repo;
+                if (repo) this.plugin.runScriptWithArg('analyze-repo.ps1', repo, `分析 ${repo}`);
+            });
+        });
+
+        // HN → open article URL (or HN discussion)
+        container.querySelectorAll('#cc-hn-list .cc-clickable').forEach(el => {
+            el.addEventListener('click', () => {
+                const url = el.dataset.url || (el.dataset.hnId
+                    ? `https://news.ycombinator.com/item?id=${el.dataset.hnId}` : '');
+                this.openExternal(url);
+            });
+        });
+
+        // Product Hunt → open product page
+        container.querySelectorAll('#cc-ph-list .cc-clickable').forEach(el => {
+            el.addEventListener('click', () => this.openExternal(el.dataset.url));
+        });
+
+        // Lobsters → open article
+        container.querySelectorAll('#cc-lobsters-list .cc-clickable').forEach(el => {
+            el.addEventListener('click', () => this.openExternal(el.dataset.url));
+        });
+
+        // Action buttons
         container.querySelector('#cc-morning')?.addEventListener('click', () => {
             this.plugin.runScript('morning-briefing.ps1', 'Morning Briefing');
         });
@@ -165,7 +246,7 @@ class DashboardView extends obsidian.ItemView {
         });
         container.querySelector('#cc-refresh')?.addEventListener('click', () => {
             this.plugin.runScript('fetch-dashboard-data.ps1', 'Refresh Data');
-            setTimeout(() => this.render(), 5000);
+            setTimeout(() => this.render(), 6000);
         });
     }
 }
@@ -176,21 +257,11 @@ class CommandCenter extends obsidian.Plugin {
     onload() {
         this.registerView(DASHBOARD_VIEW_TYPE, (leaf) => new DashboardView(leaf, this));
 
-        this.addRibbonIcon('layout-dashboard', 'Open Dashboard', () => {
-            this.activateDashboardView();
-        });
-        this.addRibbonIcon('sun', 'Morning Briefing', () => {
-            this.runScript('morning-briefing.ps1', 'Morning Briefing');
-        });
-        this.addRibbonIcon('book-open', 'Compile Vault', () => {
-            this.runScript('compile.ps1', 'Compile Vault');
-        });
-        this.addRibbonIcon('search', 'Lint Vault', () => {
-            this.runScript('lint.ps1', 'Lint Vault');
-        });
-        this.addRibbonIcon('file-plus', 'Quick Capture', () => {
-            this.quickCapture();
-        });
+        this.addRibbonIcon('layout-dashboard', 'Open Dashboard', () => this.activateDashboardView());
+        this.addRibbonIcon('sun',       'Morning Briefing', () => this.runScript('morning-briefing.ps1', 'Morning Briefing'));
+        this.addRibbonIcon('book-open', 'Compile Vault',    () => this.runScript('compile.ps1', 'Compile Vault'));
+        this.addRibbonIcon('search',    'Lint Vault',       () => this.runScript('lint.ps1', 'Lint Vault'));
+        this.addRibbonIcon('file-plus', 'Quick Capture',    () => this.quickCapture());
 
         this.addCommand({ id: 'open-dashboard',   name: 'Open Dashboard',   callback: () => this.activateDashboardView() });
         this.addCommand({ id: 'morning-briefing', name: 'Morning Briefing', callback: () => this.runScript('morning-briefing.ps1', 'Morning Briefing') });
@@ -220,22 +291,31 @@ class CommandCenter extends obsidian.Plugin {
         const { exec } = require('child_process');
         const basePath   = this.app.vault.adapter.basePath;
         const scriptPath = `${basePath}\\scripts\\${scriptName}`;
-
         new obsidian.Notice(`⏳ ${label} 執行中...`);
-
-        exec(
-            `pwsh.exe -ExecutionPolicy Bypass -File "${scriptPath}"`,
+        exec(`pwsh.exe -ExecutionPolicy Bypass -File "${scriptPath}"`,
             { cwd: basePath },
-            (err, stdout, stderr) => {
+            (err) => {
                 if (err) {
-                    new obsidian.Notice(`❌ ${label} 失敗\n${err.message.slice(0, 100)}`);
-                    console.error(`[Command Center] ${label} error:`, err.message);
+                    new obsidian.Notice(`❌ ${label} 失敗\n${err.message.slice(0, 80)}`);
+                    console.error(`[CC] ${label}:`, err.message);
                 } else {
                     new obsidian.Notice(`✅ ${label} 完成`);
-                    console.log(`[Command Center] ${label} done`);
                 }
-            }
-        );
+            });
+    }
+
+    runScriptWithArg(scriptName, arg, label) {
+        const { exec } = require('child_process');
+        const basePath   = this.app.vault.adapter.basePath;
+        const scriptPath = `${basePath}\\scripts\\${scriptName}`;
+        const safeArg    = arg.replace(/"/g, '\\"');
+        new obsidian.Notice(`⏳ ${label}...`);
+        exec(`pwsh.exe -ExecutionPolicy Bypass -File "${scriptPath}" "${safeArg}"`,
+            { cwd: basePath, timeout: 300000 },
+            (err) => {
+                if (err) new obsidian.Notice(`❌ ${label} 失敗`);
+                else     new obsidian.Notice(`✅ ${label} 完成 → wiki/Github/repos/`);
+            });
     }
 
     async quickCapture() {
@@ -245,7 +325,6 @@ class CommandCenter extends obsidian.Plugin {
         const mm   = String(now.getMinutes()).padStart(2, '0');
         const notePath = `Inbox/capture_${date}_${hh}${mm}.md`;
         const content  = `---\ndate: ${date}\ntags:\n  - inbox\n  - capture\n---\n\n`;
-
         try {
             const existing = this.app.vault.getAbstractFileByPath(notePath);
             if (existing) {
