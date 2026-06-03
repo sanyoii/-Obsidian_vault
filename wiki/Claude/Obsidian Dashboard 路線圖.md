@@ -3,115 +3,136 @@
 > **分類：** Claude / 系統
 > **標籤：** `#Claude` `#系統` `#obsidian` `#dashboard` `#roadmap`
 > **建立：** 2026-06-03
+> **最後更新：** 2026-06-03（Phase 2 完成 v3）
 > **靈感來源：** Chase AI — "The Claude Code + Obsidian Setup That Now Runs My Life"（Bilibili）
 
 ---
 
 ## 目標
 
-把 Obsidian 打造成一個 **Claude Code 驅動的指揮中心**，可以：
-- 一眼看到今日狀態（早報、職缺、社群）
+把 Obsidian 打造成一個 **Claude Code 驅動的指揮中心**：
+- 一眼看到今日狀態（職缺、社群、GitHub 熱門、HN、Product Hunt、Lobsters）
 - 一鍵觸發 Vault 自動化流程
-- 在側邊欄看到深色風格的即時 Dashboard
-
-Chase AI 截圖目標樣式：黑底橘線、指標 Widget、動作按鈕一排、今日行程。
+- 即時深色風格 Dashboard，開在主內容區 Tab
 
 ---
 
-## 三階段路線圖
+## 路線圖總覽
 
-### ✅ Phase 0：Ribbon 按鈕（已完成 2026-06-03）
+| Phase | 名稱 | 狀態 | 完成日 |
+|-------|------|------|--------|
+| 0 | Ribbon 按鈕 | ✅ 完成 | 2026-06-03 |
+| 1 | 輕量版 Bases Dashboard | ✅ 完成 | 2026-06-03 |
+| 2 | 完整 Plugin Panel（v3 四欄）| ✅ 完成 | 2026-06-03 |
+| 3 | Google Calendar + 進階互動 | 🔄 未來 | — |
 
-**做了什麼：**
+---
+
+## ✅ Phase 0：Ribbon 按鈕（完成 2026-06-03）
+
 - 建立 Command Center 自製 Obsidian Plugin
-- 4 個 Ribbon 按鈕：☀️ Morning Briefing / 📚 Compile / 🔍 Lint / ✏️ Quick Capture
-- 3 個 PowerShell 腳本：morning-briefing.ps1 / compile.ps1 / lint.ps1
-- Morning Briefing 串接 social-monitor 報告 + job-crawler 職缺 → `wiki/Daily/`
-
-**相關檔案：**
-- Plugin：`.obsidian/plugins/command-center/`
-- 腳本：`scripts/morning-briefing.ps1`、`scripts/compile.ps1`、`scripts/lint.ps1`
+- 5 個 Ribbon 按鈕：⚙️ Dashboard / ☀️ Morning Briefing / 📚 Compile / 🔍 Lint / ✏️ Quick Capture
+- PowerShell 腳本串接 social-monitor + job-crawler
+- Morning Briefing → `wiki/Daily/Morning_YYYY-MM-DD.md`
 
 ---
 
-### ✅ Phase 1：輕量版 Dashboard（已完成 2026-06-03）
+## ✅ Phase 1：輕量版 Bases Dashboard（完成 2026-06-03）
 
-**做了什麼：**
-- 利用 Obsidian 內建 Bases 核心 Plugin（不寫程式）
-- `wiki/Daily/Daily.base`：Morning Briefing 表格（有日期欄、幾天前公式）
-- `wiki/Social/Social.base`：社群動態表格（幾小時前公式，limit 20）
-- `Home.md`（vault 根目錄）：首頁，嵌入兩個 Base + 快速導航
+- `wiki/Daily/Daily.base`：Morning Briefing 表格視圖
+- `wiki/Social/Social.base`：社群動態表格
+- `Home.md`（vault 根目錄）：嵌入兩個 Base + 快速導航
 
-**限制：**
-- 靜態表格，無即時更新
-- 無法顯示 SQLite 資料
-- 無深色視覺設計
+限制：靜態表格，無即時更新，無深色設計，無外部資料。
 
 ---
 
-### 🔄 Phase 2：完整 Plugin Panel（進行中 2026-06-03）
+## ✅ Phase 2：完整 Plugin Panel（完成 2026-06-03，v3）
 
-**目標：** 在 Obsidian 右側邊欄顯示一個深色 Dashboard Panel，仿 Chase AI 截圖風格。
+### 最終版面（2×2 grid + Morning Brief）
 
-**架構：資料橋接方案**
+```
+┌──────────────────┬──────────────────┐
+│  GITHUB TRENDING │  HACKER NEWS     │
+│  點擊 → repomix  │  點擊 → 開原文   │
+├──────────────────┼──────────────────┤
+│  PRODUCT HUNT    │  LOBSTERS        │
+│  點擊 → 開頁面   │  點擊 → 開原文   │
+├──────────────────┴──────────────────┤
+│  MORNING BRIEF                      │
+│  [☀️] [📚] [🔍] [✏️] [🔄]          │
+│  新職缺 · 社群 · Token 估算          │
+└─────────────────────────────────────┘
+```
+
+### 資料橋接架構
 
 ```
 scripts/fetch-dashboard-data.ps1
-    ├── 查詢 d:\Claude\job-crawler\jobs.db（unread 職缺數）
-    ├── 讀最新 social-monitor 報告檔名
-    └── 讀最新 wiki/Daily/ Morning Briefing 標題
+    ├── GitHub Trending（beautifulsoup4 爬蟲）
+    ├── Hacker News（Firebase API，id 欄備用 HN 討論頁）
+    ├── Product Hunt（GraphQL API，token 在 data/ph_token.txt）
+    ├── Lobsters（lobste.rs JSON API，取代 Reddit）
+    ├── job-crawler SQLite → 未讀職缺數
+    ├── social-monitor 最新報告標題
+    └── Claude session JSONL 行數 → token 估算
             ↓
-data/dashboard.json  ← Plugin 每 30 秒讀一次，更新 UI
+    data/dashboard.json（Plugin 每 30 秒讀取，自動刷新）
 ```
 
-**Panel 內容（仿截圖）：**
+### 互動功能
 
-| 區塊 | 內容 |
+| 面板 | 點擊行為 |
+|------|---------|
+| GitHub Trending | 執行 `analyze-repo.ps1`，headless Claude repomix 分析 → wiki 文章 |
+| Hacker News | `electron.shell.openExternal(url)` 開原文，無 url 則開 HN 討論頁 |
+| Product Hunt | 開產品頁 |
+| Lobsters | 開原文 |
+
+### 新增腳本
+
+| 腳本 | 說明 |
 |------|------|
-| Header | 今日日期、Vault 名稱 |
-| 指標 Widgets | 社群海巡最新日期、新職缺數（橘色大字）、今日早報標題 |
-| 動作按鈕 | ☀️ 早報 / 📚 Compile / 🔍 Lint / ✏️ 捕捉 / 🔄 更新資料 |
-| 今日行程 | 從 dashboard.json 的 schedule 欄位讀取 |
+| `scripts/fetch-dashboard-data.ps1` | 四大資料源抓取 + 指標計算 |
+| `scripts/analyze-repo.ps1` | 接受 `$Repo`，headless Claude repomix 分析 |
 
-**新增檔案：**
-- `.obsidian/plugins/command-center/styles.css`（深色橘線主題）
-- `scripts/fetch-dashboard-data.ps1`（資料橋接腳本）
-- `data/dashboard.json`（橋接腳本輸出）
+### 樣式設計
 
-**修改檔案：**
-- `.obsidian/plugins/command-center/main.js`（加 DashboardView、registerView）
-- `scripts/morning-briefing.ps1`（產生早報時同步更新 dashboard.json）
+- 字型：`var(--font-interface)` 跟隨 Obsidian 設定（sans-serif）
+- 數字/rank/badge：`var(--font-monospace)`（JetBrains Mono 等）
+- 深色主題：#0d0d0d 底，#ff6b00 橘色強調
 
 ---
 
-## 使用者資料源對照表
+## 資料源對照表（最終狀態）
 
-| Chase AI 的指標 | 本系統對應 | 狀態 |
-|----------------|-----------|------|
-| Token Burn 計量 | 略過（先用佔位） | ⏭️ |
-| YouTube Subs | 不適用 | ⏭️ |
-| 社群海巡 | social-monitor 最新報告日期 | ✅ |
-| 新職缺數 | job-crawler `job_groups.user_status='unread'` | ✅ |
-| 今日早報標題 | `wiki/Daily/` 最新 Morning_*.md 檔名 | ✅ |
-| 動作按鈕 | 4 個 Ribbon 按鈕 | ✅ |
-| 今日行程 | dashboard.json schedule 欄（手動或未來接 Calendar） | 🔄 |
-| Daily Tasks | Morning Briefing 的 Today's Tasks 區塊 | 🔄 |
+| 資料 | 來源 | 狀態 |
+|------|------|------|
+| GitHub Trending | github.com/trending 爬蟲 | ✅ |
+| Hacker News | Firebase API | ✅ |
+| Product Hunt | GraphQL API（免費 token）| ✅ |
+| Lobsters | lobste.rs JSON | ✅ |
+| 新職缺數 | job-crawler SQLite | ✅ |
+| 社群動態 | social-monitor 報告 | ✅ |
+| Token 估算 | JSONL 行數估算 | ✅（粗估）|
+| 今日行程 | Google Calendar | 🔄 Phase 3 |
+| Daily Tasks | 動態讀取 | 🔄 Phase 3 |
 
 ---
 
-## 未來擴充方向（Phase 3+）
+## 🔄 Phase 3：未來擴充方向
 
-- **Google Calendar 整合**：透過 Google Calendar MCP + 橋接腳本把今日行程存入 dashboard.json
-- **Token Burn 追蹤**：解析 Claude session 日誌取得 token 用量
-- **職缺快速操作**：Dashboard 內直接標記 unread → applied / not_interested
-- **社群趨勢摘要**：讀最新報告的第一個熱門話題顯示在 Widget
-- **Careerbot 狀態**：顯示求職申請進度（applied / interview 數量）
+- **Google Calendar 整合**：MCP + 橋接腳本 → 今日行程顯示在 Morning Brief
+- **職缺快速操作**：Dashboard 內直接標記 applied / not_interested
+- **社群趨勢摘要**：讀最新報告第一個熱門話題顯示在 Widget
+- **Careerbot 狀態**：顯示求職進度（applied / interview 數量）
+- **Token Burn 精確版**：解析 session JSONL 取得實際用量
 
 ---
 
 ## 相關文章
 
-- [[Command Center Plugin — Obsidian 指揮中心]] — Plugin 技術架構與安裝說明
+- [[Command Center Plugin — Obsidian 指揮中心]] — Plugin 完整技術說明
 - [[知識庫操作手冊]] — /compile /lint /query /morning 指令集
 - [[Claude環境操作手冊]] — 整體 d:\Claude 環境說明
 

@@ -9,6 +9,7 @@
 
 ### 2026-06-03 | COMPILE
 - `2026-06-03 08:48 | COMPILE | Chase AI YouTube教學 + NotebookLM → wiki/Claude/Command Center Plugin — Obsidian 指揮中心.md` | 建立自製 Obsidian Plugin（4 個 Ribbon 按鈕：Morning Briefing/Compile/Lint/Quick Capture）；串接 social-monitor + job-crawler；新增 wiki/Daily/ 分類；更新 CLAUDE.md 加入 /morning 指令；_index 計數 150→151
+- `2026-06-03 14:30 | COMPILE | Dashboard v2/v3 → wiki/Claude/Obsidian Dashboard 路線圖.md` | Dashboard 升級三版：v1 Bases+Home.md、v2 Plugin Panel+GitHub/HN雙欄、v3 四欄2×2 grid（+Product Hunt+Lobsters）+互動（HN開原文/GitHub repomix分析）+字型優化；新增 fetch-dashboard-data.ps1 + analyze-repo.ps1；_summaries.md 更新
 
 ---
 

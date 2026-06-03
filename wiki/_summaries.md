@@ -5,8 +5,13 @@
 ---
 
 ## [[Claude/Command Center Plugin — Obsidian 指揮中心|Command Center Plugin — Obsidian 指揮中心]]
-**標籤：** `#Claude` `#系統` `#obsidian` `#automation` `#plugin`
-**摘要：** 自製 Obsidian Plugin，在 Ribbon 提供 4 個一鍵按鈕：☀️ Morning Briefing（彙整 social-monitor 報告 + job-crawler 職缺 → wiki/Daily/）、📚 Compile Vault（headless claude /compile）、🔍 Lint Vault（headless claude /lint）、✏️ Quick Capture（Inbox 新筆記）。使用 pwsh.exe 執行 PowerShell 腳本，可輕鬆新增按鈕。
+**標籤：** `#Claude` `#系統` `#obsidian` `#automation` `#plugin` `#dashboard`
+**摘要：** 自製 Obsidian Plugin（v3）。5 個 Ribbon 按鈕 + 主內容區 Dashboard Tab。Dashboard 為 2×2 grid：GitHub Trending（點擊 repomix 分析→wiki）/ Hacker News（點擊開原文）/ Product Hunt Daily（GraphQL API）/ Lobsters Hottest（免認證 JSON）。資料橋接腳本 fetch-dashboard-data.ps1 彙整四大來源 + 職缺/社群/token 估算到 dashboard.json，Plugin 每 30 秒自動刷新。字型使用 Obsidian CSS 變數。
+**最後更新：** 2026-06-03（v3）
+
+## [[Claude/Obsidian Dashboard 路線圖|Obsidian Dashboard 路線圖]]
+**標籤：** `#Claude` `#系統` `#obsidian` `#dashboard` `#roadmap`
+**摘要：** 三階段路線圖：Phase 0 Ribbon 按鈕 ✅、Phase 1 輕量版 Bases ✅、Phase 2 完整 Plugin Panel ✅（2026-06-03 完成）。Phase 3 待做：Google Calendar 整合、職缺快速操作、Careerbot 狀態、精確 token 追蹤。
 **建立：** 2026-06-03
 
 ---

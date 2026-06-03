@@ -3,53 +3,107 @@
 > **分類：** Claude / 系統
 > **標籤：** `#Claude` `#系統` `#obsidian` `#automation` `#plugin`
 > **建立：** 2026-06-03
+> **最後更新：** 2026-06-03（v3 — Dashboard 四欄 + 互動）
 > **來源：** Chase AI YouTube 教學 + 本地整合
 
 ---
 
 ## 系統目的
 
-把 Obsidian 升級成 **Claude Code 驅動的指揮中心**。在 Ribbon（左側圖示列）提供一鍵按鈕，直接觸發 Vault 自動化工作流，不需要手動開終端或記憶指令。
+把 Obsidian 升級成 **Claude Code 驅動的指揮中心**。提供：
+1. **Ribbon 快速按鈕**：一鍵觸發 Vault 自動化
+2. **Dashboard Tab**：開在主內容區的即時資訊面板（GitHub / HN / Product Hunt / Lobsters + 指標）
 
 靈感來源：Chase AI 的 "The Claude Code + Obsidian Setup That Now Runs My Life"。
-本地整合額外串接了既有的 social-monitor、job-crawler 兩套自動化系統。
 
 ---
 
-## 四個 Ribbon 按鈕
+## Ribbon 按鈕（5 個）
 
-| 圖示 | 標籤 | 腳本 | 說明 |
-|------|------|------|------|
-| ☀️ | Morning Briefing | `scripts/morning-briefing.ps1` | 彙整社群海巡報告 + 新職缺，產出 `wiki/Daily/Morning_YYYY-MM-DD.md` |
-| 📚 | Compile Vault | `scripts/compile.ps1` | headless `claude -p "/compile"`，把 raw/ 新資料編譯進 wiki/ |
-| 🔍 | Lint Vault | `scripts/lint.ps1` | headless `claude -p "/lint"`，掃描 wiki/ 找不一致，輸出至 output/ |
-| ✏️ | Quick Capture | —（Plugin 內建）| 在 `Inbox/` 建立新筆記並自動開啟，快速記錄想法 |
+| 圖示 | 標籤 | 說明 |
+|------|------|------|
+| ⚙️ | Open Dashboard | 開啟主內容區 Dashboard Tab |
+| ☀️ | Morning Briefing | 彙整社群報告 + 職缺 → `wiki/Daily/Morning_YYYY-MM-DD.md` |
+| 📚 | Compile Vault | headless `claude -p "/compile"` |
+| 🔍 | Lint Vault | headless `claude -p "/lint"` |
+| ✏️ | Quick Capture | 在 `Inbox/` 建立新筆記並開啟 |
 
-> 每個按鈕同時也在 Command Palette（Ctrl+P）可用。
+---
+
+## Dashboard 版面（v3）
+
+點 ⚙️ Ribbon 按鈕或 Command Palette → "Open Dashboard" 開啟，顯示為主內容區新 Tab。
+
+```
+┌──────────────────┬──────────────────┐
+│  GITHUB TRENDING │  HACKER NEWS     │
+│  點擊 → repomix  │  點擊 → 開原文   │
+├──────────────────┼──────────────────┤
+│  PRODUCT HUNT    │  LOBSTERS        │
+│  點擊 → 開產品頁 │  點擊 → 開原文   │
+├──────────────────┴──────────────────┤
+│  MORNING BRIEF                      │
+│  [☀️早報] [📚Compile] [🔍Lint]      │
+│  [✏️捕捉] [🔄更新資料]              │
+│  新職缺 13 · 社群 2026-05-17        │
+└─────────────────────────────────────┘
+```
+
+**資料更新**：按「🔄 更新資料」→ 執行 `fetch-dashboard-data.ps1` → 30 秒後自動刷新
+
+---
+
+## 四個資訊來源
+
+| 來源 | API | 更新頻率 | 特殊功能 |
+|------|-----|---------|---------|
+| **GitHub Trending** | github.com/trending 爬蟲 | 手動更新 | 點擊 → repomix 分析 + wiki 文章 |
+| **Hacker News** | Firebase API（免費）| 手動更新 | 點擊 → 開原文或 HN 討論 |
+| **Product Hunt** | GraphQL API（需免費 token）| 手動更新 | 點擊 → 開產品頁 |
+| **Lobsters** | lobste.rs JSON API（免費）| 手動更新 | 點擊 → 開原文 |
+
+> Product Hunt token 存放：`data/ph_token.txt`（.gitignore 保護，不 commit）
+
+---
+
+## GitHub 熱門 → repomix 分析流程
+
+點擊 GitHub 列表任一 repo：
+
+1. Obsidian 顯示 Notice「⏳ 分析 owner/repo...」
+2. 背景執行 `scripts/analyze-repo.ps1 "owner/repo"`
+3. headless Claude 呼叫 repomix-explorer skill 分析 repo
+4. 自動建立 `wiki/Github/repos/<名稱>.md`，包含：
+   - 功能說明、技術棧
+   - 與現有系統的相關性評估
+   - 安裝建議（✅ 適合 / ⏳ 觀望 / ❌ 不適合）
+5. 更新 `wiki/_index.md` + `wiki/log.md`
+6. Notice「✅ 分析完成 → wiki/Github/repos/」
 
 ---
 
 ## Morning Briefing 詳細說明
 
-**觸發方式：** Ribbon ☀️ 按鈕 或 Command Palette → "Morning Briefing"
+**觸發：** Ribbon ☀️ 或 Dashboard 按鈕
 
 **資料來源：**
 - `d:\Claude\social-monitor\reports\report-*.md`（最新一份）
-- `d:\Claude\job-crawler\jobs.db`（`job_groups` 表，`user_status='unread'`，最近 3 天）
+- `d:\Claude\job-crawler\jobs.db`（`job_groups.user_status='unread'`，最近 3 天）
 
-**輸出位置：** `wiki/Daily/Morning_YYYY-MM-DD.md`
+**輸出：** `wiki/Daily/Morning_YYYY-MM-DD.md`  
+**同步：** 同步更新 `data/dashboard.json`（Dashboard Panel 即時反映）
 
-**輸出格式：**
-```markdown
 ---
-date: YYYY-MM-DD
-tags: [morning-briefing, daily]
----
-# Morning Briefing YYYY-MM-DD
-## Social Monitor（最新報告）
-## New Jobs（最近 3 天未讀職缺，含公司/職稱/薪資/URL）
-## Today's Tasks（空白待辦）
-```
+
+## 資料橋接腳本
+
+| 腳本 | 說明 |
+|------|------|
+| `scripts/fetch-dashboard-data.ps1` | 抓取 GitHub/HN/PH/Lobsters + 職缺/社群/token 估算，輸出 `data/dashboard.json` |
+| `scripts/morning-briefing.ps1` | 早報生成，同步更新 `data/dashboard.json` |
+| `scripts/compile.ps1` | headless Claude /compile |
+| `scripts/lint.ps1` | headless Claude /lint |
+| `scripts/analyze-repo.ps1` | 接受 repo 參數，headless Claude repomix 分析 |
 
 ---
 
@@ -59,25 +113,15 @@ tags: [morning-briefing, daily]
 
 | 檔案 | 說明 |
 |------|------|
-| `manifest.json` | Plugin 元資料（id: command-center, isDesktopOnly: true）|
-| `main.js` | 繼承 `obsidian.Plugin`，4 個 addRibbonIcon + addCommand |
+| `manifest.json` | Plugin 元資料（isDesktopOnly: true）|
+| `main.js` | Plugin 主程式：DashboardView（ItemView）+ CommandCenter（Plugin）|
+| `styles.css` | 深色橘線主題，Obsidian CSS 變數字型 |
 
-**腳本執行方式：** Node.js `child_process.exec`，呼叫 `pwsh.exe -ExecutionPolicy Bypass -File <腳本路徑>`
-
-> 使用 `pwsh.exe`（PowerShell 7+），不用 `powershell.exe`（5.1），原因：UTF-8 支援，避免中文亂碼。
-
----
-
-## 新增按鈕的方式
-
-1. 在 `scripts/` 新增腳本（例如 `scripts/weekly-review.ps1`）
-2. 在 `main.js` 的 `onload()` 新增一行：
-   ```js
-   this.addRibbonIcon('calendar', 'Weekly Review', () => {
-       this.runScript('weekly-review.ps1', 'Weekly Review');
-   });
-   ```
-3. 若已安裝 Hot Reload plugin → 自動套用；否則在 Settings 停用再啟用 Command Center
+**技術重點：**
+- `DashboardView` 繼承 `obsidian.ItemView`，每 30 秒重新渲染
+- 讀取 `data/dashboard.json`（Node.js fs.readFileSync）
+- 外部連結用 `electron.shell.openExternal()`
+- 腳本執行用 `child_process.exec` + `pwsh.exe`（PowerShell 7+，UTF-8 支援）
 
 ---
 
@@ -85,19 +129,19 @@ tags: [morning-briefing, daily]
 
 1. Plugin 檔案已在 `.obsidian/plugins/command-center/`（git tracked）
 2. Obsidian → Settings → Community plugins → **Turn off restricted mode**
-3. Installed plugins 列表找到 **Command Center** → 打開開關
-4. 建議同時安裝 **Hot Reload** plugin（開發用，方便即時重載）
+3. Installed plugins → 找到 **Command Center** → 打開開關
+4. 建議安裝 **Hot Reload** plugin（開發用）
+5. 首次使用前：先按 🔄 更新資料，讓 `data/dashboard.json` 有內容
 
 ---
 
-## 相關檔案
+## 相關文章
 
-- 腳本目錄：`scripts/` → [[../../../scripts/morning-briefing.ps1|morning-briefing.ps1]]
-- 知識庫操作手冊：[[知識庫操作手冊]]（含 /compile /lint /query /morning 指令）
-- 社群海巡報告：`wiki/Social/`
-- 每日早報：`wiki/Daily/`
+- [[Obsidian Dashboard 路線圖]] — 三階段路線圖與未來規劃
+- [[知識庫操作手冊]] — /compile /lint /query /morning 指令集
+- [[Claude環境操作手冊]] — 整體 d:\Claude 環境說明
 
 ## 反向連結
 
-- [[知識庫操作手冊]] — /morning 指令在此定義
-- [[Claude環境操作手冊]] — 整體 d:\Claude 環境說明
+- [[Obsidian Dashboard 路線圖]]
+- [[知識庫操作手冊]]
