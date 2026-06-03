@@ -7,6 +7,14 @@
 
 ## 2026-06-03
 
+**Command Center Plugin v3.2 — 新增 TechOrange + TechCrunch RSS 面板：**
+- `scripts/fetch-dashboard-data.ps1`：新增 Section 10 TechOrange（`techorange.com/feed/`）、Section 11 TechCrunch（`techcrunch.com/feed/`）
+  - 使用 `email.utils.parsedate_to_datetime` 正確解析 RFC 2822 日期格式
+- `.obsidian/plugins/command-center/main.js`：新增 `renderTechOrange()` + `renderTechCrunch()` + 各自全寬 HTML panel + click listeners
+- `data/dashboard.json`：新增 `techorange` 與 `techcrunch` 陣列
+- `wiki/Claude/Command Center Plugin.md`：更新版面圖示至 v3.2，資料來源改為七個
+- 評估四個候選來源：The Verge ❌、MIT Tech Review ❌；TechOrange ✅、TechCrunch ✅（HN重疊但求職有用）
+
 **Command Center Plugin v3.1 — 新增 iThome RSS 全寬面板：**
 - `scripts/fetch-dashboard-data.ps1`：新增 Section 9 iThome RSS 抓取（`https://www.ithome.com.tw/rss`，15 筆）
 - `.obsidian/plugins/command-center/main.js`：新增 `renderiThome()` + ITHOME NEWS 全寬面板 HTML + 點擊事件
