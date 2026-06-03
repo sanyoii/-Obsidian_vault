@@ -156,6 +156,32 @@ class DashboardView extends obsidian.ItemView {
 </div>`).join('');
     }
 
+    renderTechOrange(items) {
+        if (!items || items.length === 0)
+            return '<div class="cc-empty">尚未更新 → 按「🔄 更新資料」</div>';
+        return items.slice(0, 10).map(r => `
+<div class="cc-item cc-clickable" data-url="${r.url || ''}">
+  <span class="cc-rank">${r.rank}</span>
+  <div class="cc-item-body">
+    <div class="cc-item-title">${r.title}</div>
+    <div class="cc-item-sub">${r.author} · ${r.date}</div>
+  </div>
+</div>`).join('');
+    }
+
+    renderTechCrunch(items) {
+        if (!items || items.length === 0)
+            return '<div class="cc-empty">尚未更新 → 按「🔄 更新資料」</div>';
+        return items.slice(0, 10).map(r => `
+<div class="cc-item cc-clickable" data-url="${r.url || ''}">
+  <span class="cc-rank">${r.rank}</span>
+  <div class="cc-item-body">
+    <div class="cc-item-title">${r.title}</div>
+    <div class="cc-item-sub">${r.author} · ${r.date}</div>
+  </div>
+</div>`).join('');
+    }
+
     // ── Main render ───────────────────────────────────────────────────────
 
     render() {
@@ -231,6 +257,26 @@ class DashboardView extends obsidian.ItemView {
     </div>
     <div class="cc-list cc-ithome-list-inner" id="cc-ithome-list">
       ${this.renderiThome(data?.ithome)}
+    </div>
+  </div>
+
+  <div class="cc-ithome-panel">
+    <div class="cc-panel-header">
+      <span class="cc-panel-title">TECHORANGE 科技報橘</span>
+      <span class="cc-panel-badge">台灣新創 · AI 趨勢 · 點擊開原文</span>
+    </div>
+    <div class="cc-list cc-ithome-list-inner" id="cc-techorange-list">
+      ${this.renderTechOrange(data?.techorange)}
+    </div>
+  </div>
+
+  <div class="cc-ithome-panel">
+    <div class="cc-panel-header">
+      <span class="cc-panel-title">TECHCRUNCH</span>
+      <span class="cc-panel-badge">新創募資 · 全球科技 · 點擊開原文</span>
+    </div>
+    <div class="cc-list cc-ithome-list-inner" id="cc-techcrunch-list">
+      ${this.renderTechCrunch(data?.techcrunch)}
     </div>
   </div>
 
@@ -313,6 +359,16 @@ class DashboardView extends obsidian.ItemView {
 
         // iThome → open article
         container.querySelectorAll('#cc-ithome-list .cc-clickable').forEach(el => {
+            el.addEventListener('click', () => this.openExternal(el.dataset.url));
+        });
+
+        // TechOrange → open article
+        container.querySelectorAll('#cc-techorange-list .cc-clickable').forEach(el => {
+            el.addEventListener('click', () => this.openExternal(el.dataset.url));
+        });
+
+        // TechCrunch → open article
+        container.querySelectorAll('#cc-techcrunch-list .cc-clickable').forEach(el => {
             el.addEventListener('click', () => this.openExternal(el.dataset.url));
         });
 

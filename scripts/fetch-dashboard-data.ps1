@@ -211,6 +211,68 @@ $ithomeData = python $tmp 2>$null
 Remove-Item $tmp -ErrorAction SilentlyContinue
 if (-not $ithomeData -or $ithomeData.Trim() -eq '') { $ithomeData = "[]" }
 
+# ── 10. TechOrange RSS ────────────────────────────────────────────────────
+$techorangeData = "[]"
+$pyTechOrange = @'
+import sys, json, email.utils
+try:
+    import requests
+    from xml.etree import ElementTree as ET
+    r = requests.get("https://techorange.com/feed/",
+                     headers={"User-Agent": "Mozilla/5.0"}, timeout=12)
+    root = ET.fromstring(r.content)
+    ns = {'dc': 'http://purl.org/dc/elements/1.1/'}
+    items = root.findall('.//item')[:10]
+    result = []
+    for i, item in enumerate(items, 1):
+        title  = item.findtext('title', '')
+        link   = item.findtext('link', '')
+        pd     = item.findtext('pubDate', '')
+        try:    date = email.utils.parsedate_to_datetime(pd).strftime('%Y-%m-%d')
+        except: date = pd[:10]
+        author = item.findtext('dc:creator', '—', ns)
+        result.append({"rank": i, "title": title, "url": link, "date": date, "author": author})
+    print(json.dumps(result, ensure_ascii=False))
+except Exception as e:
+    print("[]")
+'@
+$tmp = [System.IO.Path]::GetTempFileName() + ".py"
+$pyTechOrange | Out-File -FilePath $tmp -Encoding UTF8
+$techorangeData = python $tmp 2>$null
+Remove-Item $tmp -ErrorAction SilentlyContinue
+if (-not $techorangeData -or $techorangeData.Trim() -eq '') { $techorangeData = "[]" }
+
+# ── 11. TechCrunch RSS ────────────────────────────────────────────────────
+$techcrunchData = "[]"
+$pyTechCrunch = @'
+import sys, json, email.utils
+try:
+    import requests
+    from xml.etree import ElementTree as ET
+    r = requests.get("https://techcrunch.com/feed/",
+                     headers={"User-Agent": "Mozilla/5.0"}, timeout=12)
+    root = ET.fromstring(r.content)
+    ns = {'dc': 'http://purl.org/dc/elements/1.1/'}
+    items = root.findall('.//item')[:10]
+    result = []
+    for i, item in enumerate(items, 1):
+        title  = item.findtext('title', '')
+        link   = item.findtext('link', '')
+        pd     = item.findtext('pubDate', '')
+        try:    date = email.utils.parsedate_to_datetime(pd).strftime('%Y-%m-%d')
+        except: date = pd[:10]
+        author = item.findtext('dc:creator', '—', ns)
+        result.append({"rank": i, "title": title, "url": link, "date": date, "author": author})
+    print(json.dumps(result, ensure_ascii=False))
+except Exception as e:
+    print("[]")
+'@
+$tmp = [System.IO.Path]::GetTempFileName() + ".py"
+$pyTechCrunch | Out-File -FilePath $tmp -Encoding UTF8
+$techcrunchData = python $tmp 2>$null
+Remove-Item $tmp -ErrorAction SilentlyContinue
+if (-not $techcrunchData -or $techcrunchData.Trim() -eq '') { $techcrunchData = "[]" }
+
 # ── Assemble JSON ──────────────────────────────────────────────────────────
 $data = [ordered]@{
     updatedAt     = (Get-Date).ToString('yyyy-MM-dd HH:mm:ss')
@@ -222,7 +284,9 @@ $data = [ordered]@{
     hn            = ($hnData       | ConvertFrom-Json)
     ph            = ($phData       | ConvertFrom-Json)
     lobsters      = ($lobstersData | ConvertFrom-Json)
-    ithome        = ($ithomeData   | ConvertFrom-Json)
+    ithome        = ($ithomeData       | ConvertFrom-Json)
+    techorange    = ($techorangeData  | ConvertFrom-Json)
+    techcrunch    = ($techcrunchData  | ConvertFrom-Json)
     schedule      = $(
         $calFile = "$vaultRoot\data\calendar.json"
         if (Test-Path $calFile) { Get-Content $calFile -Raw -Encoding UTF8 | ConvertFrom-Json }
@@ -239,5 +303,6 @@ $data | ConvertTo-Json -Depth 5 | Out-File -FilePath $outputFile -Encoding UTF8 
 
 $g  = ($data.github).Count;    $h  = ($data.hn).Count
 $p  = ($data.ph).Count;        $lb = ($data.lobsters).Count
-$it = ($data.ithome).Count;    $em = ($data.emailBrief).Count
-Write-Host "dashboard.json updated: jobs=$jobCount github=$g hn=$h ph=$p lobsters=$lb ithome=$it email=$em token=$tokenEstimate"
+$it = ($data.ithome).Count;    $to = ($data.techorange).Count
+$tc = ($data.techcrunch).Count; $em = ($data.emailBrief).Count
+Write-Host "dashboard.json updated: jobs=$jobCount github=$g hn=$h ph=$p lobsters=$lb ithome=$it techorange=$to techcrunch=$tc email=$em token=$tokenEstimate"
