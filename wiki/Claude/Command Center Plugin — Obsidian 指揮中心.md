@@ -28,6 +28,17 @@
 | 🔍 | Lint Vault | headless `claude -p "/lint"` |
 | ✏️ | Quick Capture | 在 `Inbox/` 建立新筆記並開啟 |
 
+**Dashboard 內按鈕（Morning Brief 區塊）：**
+
+| 按鈕 | 說明 |
+|------|------|
+| ☀️ 早報 | 執行 morning-briefing.ps1 |
+| 📚 Compile | 執行 compile.ps1 |
+| 🔍 Lint | 執行 lint.ps1 |
+| ✏️ 捕捉 | 建立 Inbox 新筆記 |
+| 📅 日曆 | 執行 fetch-calendar.ps1 → 同步 Google Calendar → 更新行程 |
+| 🔄 更新資料 | 執行 fetch-dashboard-data.ps1 → 刷新四欄資料 |
+
 ---
 
 ## Dashboard 版面（v3）
@@ -99,11 +110,12 @@
 
 | 腳本 | 說明 |
 |------|------|
-| `scripts/fetch-dashboard-data.ps1` | 抓取 GitHub/HN/PH/Lobsters + 職缺/社群/token 估算，輸出 `data/dashboard.json` |
+| `scripts/fetch-dashboard-data.ps1` | 抓取 GitHub/HN/PH/Lobsters + 職缺/社群/token + 讀 calendar.json，輸出 `data/dashboard.json` |
+| `scripts/fetch-calendar.ps1` | headless Claude（`--dangerously-skip-permissions`）呼叫 Google Calendar MCP，輸出 `data/calendar.json` |
 | `scripts/morning-briefing.ps1` | 早報生成，同步更新 `data/dashboard.json` |
 | `scripts/compile.ps1` | headless Claude /compile |
 | `scripts/lint.ps1` | headless Claude /lint |
-| `scripts/analyze-repo.ps1` | 接受 repo 參數，headless Claude repomix 分析 |
+| `scripts/analyze-repo.ps1` | 接受 repo 參數，headless Claude repomix 分析 → wiki 文章 |
 
 ---
 

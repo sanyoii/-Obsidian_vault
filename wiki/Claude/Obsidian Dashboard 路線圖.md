@@ -24,7 +24,8 @@
 | 0 | Ribbon 按鈕 | ✅ 完成 | 2026-06-03 |
 | 1 | 輕量版 Bases Dashboard | ✅ 完成 | 2026-06-03 |
 | 2 | 完整 Plugin Panel（v3 四欄）| ✅ 完成 | 2026-06-03 |
-| 3 | Google Calendar + 進階互動 | 🔄 未來 | — |
+| 3 | Google Calendar | ✅ 完成 | 2026-06-03 |
+| 4 | 進階互動（職缺操作/Careerbot）| 🔄 未來 | — |
 
 ---
 
@@ -115,18 +116,32 @@ scripts/fetch-dashboard-data.ps1
 | 新職缺數 | job-crawler SQLite | ✅ |
 | 社群動態 | social-monitor 報告 | ✅ |
 | Token 估算 | JSONL 行數估算 | ✅（粗估）|
-| 今日行程 | Google Calendar | 🔄 Phase 3 |
-| Daily Tasks | 動態讀取 | 🔄 Phase 3 |
+| 今日行程 | Google Calendar MCP → calendar.json | ✅ |
+| Daily Tasks | Morning Briefing Today's Tasks | 🔄 Phase 4 |
 
 ---
 
-## 🔄 Phase 3：未來擴充方向
+## ✅ Phase 3：Google Calendar 整合（完成 2026-06-03）
 
-- **Google Calendar 整合**：MCP + 橋接腳本 → 今日行程顯示在 Morning Brief
-- **職缺快速操作**：Dashboard 內直接標記 applied / not_interested
-- **社群趨勢摘要**：讀最新報告第一個熱門話題顯示在 Widget
-- **Careerbot 狀態**：顯示求職進度（applied / interview 數量）
-- **Token Burn 精確版**：解析 session JSONL 取得實際用量
+**做了什麼：**
+- 新建 `scripts/fetch-calendar.ps1`
+  - 呼叫 headless Claude（`--dangerously-skip-permissions`）
+  - 使用 `mcp__claude_ai_Google_Calendar__list_events` 取今日事件
+  - 輸出至 `data/calendar.json`
+- 更新 `fetch-dashboard-data.ps1`：讀取 calendar.json → 填入 schedule 欄位
+- 更新 `main.js`：新增 `renderSchedule()`、Morning Brief 加「📅 日曆」按鈕
+- 更新 `styles.css`：行程區塊樣式（全天 / 時間 / 地點）
+
+**效果：** Morning Brief 下方顯示今日行程，全天事件標示「全天」，有時間的顯示 HH:MM（橘色）
+
+---
+
+## 🔄 Phase 4：未來擴充方向
+
+- **職缺快速操作**：Dashboard 內直接標記 applied / not_interested（需要 Flask API 橋接）
+- **社群趨勢摘要**：讀最新 social-monitor 報告第一則熱門話題顯示在指標列
+- **Careerbot 狀態**：顯示求職進度（需先完成 CareerBot /onboard）
+- **Token 精確版**：解析 session JSONL 的 usage 欄位取得實際 token 數
 
 ---
 
