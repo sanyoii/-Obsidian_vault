@@ -1,6 +1,6 @@
 # 7-Agent 工廠工作流 SOP
 
-> 最後更新：2026-05-28（v2：加入水球流設計模式強化 — Agent Contract + Bug 路由 + 策略選擇）
+> 最後更新：2026-06-04（v3：完整 Bug 處理生命週期 — Issue Tracking + RCA + Loop-back + 防止再發）
 > 適用：需要開發新功能、新工具、新系統時的標準 Agent 分工流程
 
 ---
@@ -86,19 +86,60 @@
 
 ---
 
-## Bug 路由機制（水球流責任鏈）
+## Bug 處理生命週期（v3 強化版）
 
-`test-verifier` 發現 Bug 時，不是直接回報給人，而是先做責任鏈路由：
+完整流程（適用 7-Agent 工廠 + Ad-hoc 工作流）：
 
 ```
-Bug → [規格有誤？] → spec-writer
+Bug 發現/回報
+    ↓
+① Issue Tracking 建立（title/描述/重現步驟/預期/實際）
+   P0/P1 → GitHub Issue（label: bug/P0 or bug/P1）
+    ↓
+② 調查 → RCA Report（直接原因 / 根本原因 / 觸發條件）
+    ↓
+③ 修正 + 測試（重跑 AC / Regression Test）
+    ↓
+④ 防止再發計劃（技術預防 + 流程預防 + Regression Test）
+    ↓
+⑤ 關閉 Issue + 更新 Bug 模式記憶庫
+```
+
+### P0/P1/P2 Severity 矩陣
+
+| 等級 | 定義 | SLA |
+|------|------|-----|
+| **P0** | 核心功能無法使用 / 資料損毀 / 安全漏洞 | 同工作日修復並驗證 |
+| **P1** | 重要功能降級但有 workaround | 下次工作階段 |
+| **P2** | 小問題 / UI 瑕疵 / 非關鍵路徑 | backlog 排期 |
+
+### 路由決策樹（test-verifier 責任鏈）
+
+```
+Bug → [規格有誤？]     → spec-writer
     → [後端實作有誤？] → backend-builder
     → [前端串接有誤？] → frontend-builder
-    → [邊界問題？] → spec-writer 重定邊界
-    → 以上皆否 → 升級人工判斷
+    → [邊界問題？]     → spec-writer 重定邊界
+    → 以上皆否         → recursive-debugging → 升級人工
 ```
 
-**效果：** 問題有據可查地回流到正確責任人，不會卡在測試層。
+**Loop-back 協議：**
+- Builder 修復後，test-verifier 重跑對應 AC
+- 最多重試 2 次；第 3 次仍 FAIL → 人工判斷
+- P0 修復後 GitHub Issue 標記 Fixed → test-verifier 確認 Verified 才關閉
+
+### Validator Loop-back
+
+Code Review 發現問題時不直接 block PR：
+- 邏輯錯誤 → 依路由決策樹回流
+- 安全漏洞 → 建 P0 GitHub Issue，阻止 PR
+- 技術債（範圍外）→ 建 P2 Issue，不阻止 PR
+
+### Bug 模式記憶庫
+
+每次修完 Bug，將 RCA 根本原因類別存入 `memory/project_bug_patterns.md`（已知模式：ASYNC-001、DATA-001）。
+
+**效果：** 問題有據可查地回流到正確責任人；相同類型 Bug 不再重複調查。
 
 ---
 
