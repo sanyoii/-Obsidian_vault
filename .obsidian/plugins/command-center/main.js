@@ -374,21 +374,17 @@ class DashboardView extends obsidian.ItemView {
 
         // Action buttons
         container.querySelector('#cc-email')?.addEventListener('click', () => {
-            this.plugin.runScript('fetch-email-brief.ps1', 'Email Brief');
-            setTimeout(() => {
-                this.plugin.runScript('fetch-dashboard-data.ps1', 'Refresh');
-                setTimeout(() => this.render(), 4000);
-            }, 20000);
+            this.plugin.runScript('fetch-email-brief.ps1', 'Email Brief', () => {
+                this.plugin.runScript('fetch-dashboard-data.ps1', 'Refresh', () => this.render());
+            });
         });
         container.querySelector('#cc-calendar')?.addEventListener('click', () => {
-            this.plugin.runScript('fetch-calendar.ps1', 'Sync Calendar');
-            setTimeout(() => {
-                this.plugin.runScript('fetch-dashboard-data.ps1', 'Refresh');
-                setTimeout(() => this.render(), 4000);
-            }, 15000);
+            this.plugin.runScript('fetch-calendar.ps1', 'Sync Calendar', () => {
+                this.plugin.runScript('fetch-dashboard-data.ps1', 'Refresh', () => this.render());
+            });
         });
         container.querySelector('#cc-morning')?.addEventListener('click', () => {
-            this.plugin.runScript('morning-briefing.ps1', 'Morning Briefing');
+            this.plugin.runScript('morning-briefing.ps1', 'Morning Briefing', () => this.render());
         });
         container.querySelector('#cc-compile')?.addEventListener('click', () => {
             this.plugin.runScript('compile.ps1', 'Compile Vault');
@@ -400,8 +396,7 @@ class DashboardView extends obsidian.ItemView {
             this.plugin.quickCapture();
         });
         container.querySelector('#cc-refresh')?.addEventListener('click', () => {
-            this.plugin.runScript('fetch-dashboard-data.ps1', 'Refresh Data');
-            setTimeout(() => this.render(), 6000);
+            this.plugin.runScript('fetch-dashboard-data.ps1', 'Refresh Data', () => this.render());
         });
     }
 }
@@ -442,7 +437,7 @@ class CommandCenter extends obsidian.Plugin {
         workspace.revealLeaf(leaf);
     }
 
-    runScript(scriptName, label) {
+    runScript(scriptName, label, onComplete) {
         const { exec } = require('child_process');
         const basePath   = this.app.vault.adapter.basePath;
         const scriptPath = `${basePath}\\scripts\\${scriptName}`;
@@ -455,6 +450,7 @@ class CommandCenter extends obsidian.Plugin {
                     console.error(`[CC] ${label}:`, err.message);
                 } else {
                     new obsidian.Notice(`✅ ${label} 完成`);
+                    if (onComplete) onComplete();
                 }
             });
     }
