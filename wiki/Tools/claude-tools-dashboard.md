@@ -78,8 +78,46 @@ d:\Claude\
     └── md_to_pdf.py
 ```
 
+## 外部工具（非 Skill，獨立安裝）
+
+### Agent Reach — AI Agent 互聯網感知層
+
+**安裝日期：** 2026-06-06  
+**版本：** 1.4.0  
+**原始碼：** `d:\Claude\tools\agent-reach\`  
+**Skill 路徑：** `C:\Users\sanyo\.claude\skills\agent-reach\`
+
+| 狀態 | 頻道 | 呼叫方式 |
+|------|------|---------|
+| ✅ | GitHub | `gh repo view`, `gh search` |
+| ✅ | 任意網頁 | `curl https://r.jina.ai/{URL}` |
+| ✅ | V2EX | `agent-reach` 路由 |
+| ✅ | RSS/Atom | feedparser |
+| ⚠️ | YouTube | yt-dlp 已裝，PATH 需設定 |
+| ⚠️ | Reddit | rdt-cli 已裝，需 `rdt login` |
+| ❌ | 語意搜尋 | 需 mcporter（npm install 失敗）|
+
+**診斷指令：** `%USERPROFILE%\AppData\Roaming\Python\Python314\Scripts\agent-reach.exe doctor`  
+**解鎖更多頻道：** 告訴 Agent「帮我配 Twitter/微博/小红书」
+
+### last30days — 多平台社群研究引擎
+
+**安裝日期：** 2026-06-06  
+**版本：** 3.3.2  
+**安裝路徑：** `C:\Users\sanyo\.agents\skills\last30days\`  
+**觸發：** `/last30days <主題>` 或 CLI `uv run python scripts/last30days.py`
+
+| 狀態 | 平台 |
+|------|------|
+| ✅ | Reddit / HN / Polymarket / GitHub（免費）|
+| 🔑 | X, YouTube, TikTok, IG（需 API key）|
+
+---
+
 ## 相關參考
 
 - [[SKILLS_GUIDE]] → `d:\Claude\SKILLS_GUIDE.md`（完整觸發說明）
 - [[CLAUDE.md]] → 新增 Skill 標準流程
 - 參考設計：`d:\Claude\prompt_master_studio_v2.html`（同款深色主題）
+- [[Panniantong-Agent-Reach — AI Agent 互聯網感知層]] → 詳細安裝記錄
+- [[mvanhorn-last30days-skill — AI 多平台社群研究引擎]] → 詳細說明

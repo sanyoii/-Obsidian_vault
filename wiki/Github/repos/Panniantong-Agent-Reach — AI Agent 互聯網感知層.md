@@ -74,23 +74,45 @@ Agent Reach 是一個 AI Agent 互聯網能力「腳手架」：把 Twitter CLI�
 
 ## 安裝建議
 
-**✅ 適合安裝**
-
-理由：本機環境使用 Claude Code，Agent Reach 的核心設計目標就是強化 Claude Code 的互聯網感知能力，零配置頻道（網頁/YouTube/RSS/微博/V2EX）安裝即用，Twitter 搜尋可補強現有 social-monitor 報告缺口，`SKILL.md` 路由格式與現有 skills 生態無縫相容。
+**✅ 適合安裝 → ✅ 已安裝（2026-06-06）**
 
 ```bash
-# 在 Agent 輸入框直接貼：
-帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md
+# 實際使用的安裝指令（PyPI zip 有 hatchling bug，改用 git clone）
+git clone https://github.com/Panniantong/Agent-Reach.git d:\Claude\tools\agent-reach
+C:\Python314\python.exe -m pip install -e d:\Claude\tools\agent-reach
+%USERPROFILE%\AppData\Roaming\Python\Python314\Scripts\agent-reach.exe install --env=auto
 
-# 安裝後診斷各頻道狀態：
+# 診斷頻道狀態
 agent-reach doctor
 ```
 
+## 安裝狀態（2026-06-06）
+
+**Skill 路徑：**
+- Claude Code skill：`C:\Users\sanyo\.claude\skills\agent-reach\`
+- Agent skill：`C:\Users\sanyo\.agents\skills\agent-reach\`
+- 原始碼：`d:\Claude\tools\agent-reach\`
+
+**頻道狀態（4/16 可用）：**
+
+| 頻道 | 狀態 | 說明 |
+|------|------|------|
+| GitHub | ✅ | gh CLI 完整可用 |
+| V2EX | ✅ | 公開 API |
+| RSS/Atom | ✅ | feedparser |
+| 任意網頁 | ✅ | Jina Reader（`curl https://r.jina.ai/URL`）|
+| YouTube | ⚠️ | yt-dlp 已裝，PATH 未含 Scripts 目錄 |
+| Reddit | ⚠️ | rdt-cli 0.4.1 已裝，需 `rdt login` 登入 |
+| 全網語意搜尋 | ❌ | 需 `npm install -g mcporter`（npm 安裝失敗）|
+| 微信公眾號 | ❌ | 需 mcporter + Exa MCP |
+
+**可選頻道（尚未設定）：** Twitter/X、B站、小紅書、微博、小宇宙、雪球、抖音、LinkedIn
+
 **後續擴充（按需配置）：**
 ```
-# Twitter：告訴 Agent「帮我配 Twitter」
-# 小紅書：告訴 Agent「帮我配小红书」（需 Cookie-Editor 匯出）
-# 雪球：告訴 Agent「帮我配雪球」
+告訴 Agent「帮我配 Twitter」  → 需 Cookie-Editor 匯出
+告訴 Agent「帮我配微博热搜」  → 零設定（公開 API）
+告訴 Agent「帮我配雪球」      → 需 Cookie-Editor 匯出
 ```
 
 ---

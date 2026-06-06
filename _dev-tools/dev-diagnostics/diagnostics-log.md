@@ -14433,3 +14433,71 @@
 }
 ```
 
+## workspace:active-leaf-change · INFO · 2026-06-06T21:49:48.436Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-06T21:49:48.690Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-06T21:49:48.690Z
+
+```json
+{
+  "path": "wiki/Github/repos/Panniantong-Agent-Reach — AI Agent 互聯網感知層.md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-06T21:49:48.693Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-06T21:49:48.760Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-06T21:49:48.768Z
+
+```json
+{}
+```
+
+## vault:modify · INFO · 2026-06-06T21:57:41.217Z
+
+```json
+{
+  "path": "wiki/Github/repos/Panniantong-Agent-Reach — AI Agent 互聯網感知層.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-06T21:58:01.810Z
+
+```json
+{
+  "path": "wiki/Tools/claude-tools-dashboard.md"
+}
+```
+
+## vault:create · INFO · 2026-06-06T22:01:45.338Z
+
+```json
+{
+  "path": "wiki/System/互聯網感知工具安裝記錄.md"
+}
+```
+
