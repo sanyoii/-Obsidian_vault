@@ -1,4 +1,4 @@
-> 最後更新：2026-05-29（新增 ai-workshop/ 工作坊素材庫與 path-scoped rules）
+> 最後更新：2026-06-04（135 Skills + 15 hyperframes；autohedge-env 已刪；新增 3 commands；移除 Open Design/AI Website Cloner/Hindsight）
 
 > Skills 在 **Claude Code** 和 **Claude Cowork** 中均可使用，Claude 一般網頁版不支援。
 
@@ -1153,7 +1153,7 @@ Skills 位置：
 
   
 
-目前共 **120+ 個 Skills**（含 Understand-Anything 8 個），分為以下類別：
+目前共 **135 個 Skills**（+ 15 hyperframes），分為以下類別：
 
   
 
@@ -2125,12 +2125,15 @@ Commands 位置：`C:\Users\sanyo\.claude\commands\`
 
   
 
-### 原有指令（2 個）
+### 原有指令（5 個）
 
 | Command | 用途 |
 |---------|------|
 | `/threads-to-fb` | 將 Threads 貼文轉換為繁中 Facebook 貼文（含格式、Emoji、Hashtag） |
 | `/generate-cover` | 生成 1200×1200 社群封面圖（支援 Threads/X/LinkedIn/Reddit，深色/淺色版） |
+| `/obsidian-architect` | 掃描 codebase → 寫入維護式架構筆記到 obsidian-second-brain vault |
+| `/research` | 免 API key 網路研究（Wikipedia/HN/arXiv/Reddit），有 Perplexity key 升級 |
+| `/research-deep` | Vault-first 深度研究 + 傳播更新到相關筆記 |
 
 ### CCPlugins（12 個，2026-05-25）
 
@@ -2319,11 +2322,11 @@ d:\Claude\
 
   
 
-全域 Skills 位置：`C:\Users\sanyo\.claude\skills\`（120+）
+全域 Skills 位置：`C:\Users\sanyo\.claude\skills\`（135 個 + 15 hyperframes）
 
 全域 Agents 位置：`C:\Users\sanyo\.claude\agents\`（8 類別）
 
-全域 Commands 位置：`C:\Users\sanyo\.claude\commands\`（2 個）
+全域 Commands 位置：`C:\Users\sanyo\.claude\commands\`（5 個）
 
 claude-mem Plugin：`C:\Users\sanyo\.claude\plugins\marketplaces\thedotmack\`
 

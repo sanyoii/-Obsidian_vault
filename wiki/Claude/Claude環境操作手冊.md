@@ -3,6 +3,7 @@
 > **分類：** Claude / 系統
 > **標籤：** `#Claude` `#系統` `#環境` `#Skills` `#Ruflo`
 > **建立：** 2026-05-08
+> **最後更新：** 2026-06-04（135 Skills、5 Commands；移除 Open Design/AI Website Cloner/Hindsight；autohedge-env 已刪）
 > **來源：** `D:\Claude\CLAUDE.md`
 
 ---
@@ -12,10 +13,11 @@
 `D:\Claude` 是 sanyoii 的 Claude Code 個人環境，兼作備份與還原 repo（Windows）。包含：
 
 - Claude Code 執行檔與 `settings.json`
-- 76 個 Skills 備份（`d:\Claude\.claude\skills\`）
+- 135 個 Skills 備份（`d:\Claude\.claude\skills\`）+ 15 hyperframes
 - 還原腳本（`setup.ps1` / `setup.sh`）
-- 子專案：`open-design/`、`ai-website-cloner/`、`autohedge-env/`、`hindsight/`、`vault/`
+- 子專案：`obsidian/`、`job-crawler/`、`social-monitor/`、`careerbot/`、`ai-workshop/`、`ai-video-pipeline/`、`open-slide/`、`hd-decode/`
 - 個人 Skill Marketplace（`my-marketplace/`）同步至 `sanyoii/claude-skills` GitHub
+- ⚠️ 已移除：open-design（2GB）、ai-website-cloner（508MB）、hindsight（1.3GB）；autohedge-env venv 已刪（1.5GB）
 
 ### Skills 兩層架構
 
@@ -69,29 +71,26 @@ Copy-Item "$env:TEMP\superpowers\skills\*" "d:\Claude\.claude\skills\" -Recurse 
 
 ## 子專案指令
 
-### Open Design
+### Job Crawler（職缺海巡）
 ```powershell
-cd d:\Claude\open-design
-pnpm tools-dev start web   # 啟動（查看輸出取得隨機 port）
-pnpm tools-dev stop
-pnpm tools-dev status
-pnpm tools-dev logs
+cd d:\Claude\job-crawler
+python app.py   # Flask UI at http://localhost:5000
+python crawler.py   # 手動抓取一次
 ```
 
-### AI Website Cloner
+### Social Monitor（社群海巡）
 ```powershell
-cd d:\Claude\ai-website-cloner
-claude --chrome            # 必須加 --chrome flag
-# 然後輸入：/clone-website https://target.com
-npm run dev                # 預覽結果 localhost:3000
+cd d:\Claude\social-monitor
+python run.bat   # 手動執行；自動排程 10:30 + 22:00
 ```
 
-### AutoHedge（Solana 交易 — 真實資金）
+### AutoHedge（Solana 交易 — ⚠️ venv 已刪，需重建）
 ```powershell
-cd d:\Claude\autohedge-env
-.\Scripts\Activate.ps1
-autohedge
-# 設定檔：d:\Claude\autohedge-env\.env（絕對不要 commit）
+# 重建 venv
+python -m venv d:\Claude\autohedge-env
+d:\Claude\autohedge-env\Scripts\Activate.ps1
+pip install autohedge
+# 填入 API Keys：d:\Claude\autohedge.env.example → .env
 ```
 
 ---
@@ -154,16 +153,17 @@ npx ruflo@latest mcp start       # 啟動 MCP Server（~210 工具）
 
 ## Skill 生態系架構
 
-76 個 skills，分 5 個 marketplace 群組：
+135 個 Skills（+ 15 hyperframes），分 5 個 marketplace 群組：
 
 | 群組 | 數量 | 內容 |
 |------|------|------|
 | `chinese-arts` | 7 | 八字/紫微/奇門/歸藏 PPT/女媧/SSC |
-| `design-tools` | 12 | 花叔 Design、frontend-design、canvas、pdf/docx/xlsx/pptx |
-| `dev-workflow` | 29 | TDD、debugging、code-review、recursive-mode（9 子技能） |
+| `design-tools` | 13+ | 花叔 Design、frontend-design、canvas、pdf/docx/xlsx/pptx、html-ppt、deck-* |
+| `dev-workflow` | 30+ | TDD、debugging、code-review、recursive-mode（9 子技能）、book-to-skill |
 | `ai-agents` | 10 | claude-api、gemini-api、subagent、make-plan/do、pathfinder |
-| `google-cloud` | 12 | BigQuery、Cloud Run、GKE、Firebase、WAF guides |
+| `google-cloud` | 13 | BigQuery、Cloud Run、GKE、Firebase、WAF guides |
 
+hyperframes（15 Skills）安裝於 `C:\Users\sanyo\.agents\skills\`（HTML→MP4 影片製作）。
 claude-mem（8 skills）為獨立 Plugin，透過 `thedotmack` marketplace 安裝，提供 Worker Service（port 37777）、SQLite 記憶體與自動 hooks。
 
 ### 新增 Skill 到個人 Marketplace
@@ -180,8 +180,9 @@ claude-mem（8 skills）為獨立 Plugin，透過 `thedotmack` marketplace 安�
 
 | 路徑 | 用途 |
 |------|------|
-| `C:\Users\sanyo\.claude\skills\` | Active skills（76 個） |
-| `C:\Users\sanyo\.claude\commands\` | Active commands（2 個） |
+| `C:\Users\sanyo\.claude\skills\` | Active skills（135 個） |
+| `C:\Users\sanyo\.agents\skills\` | hyperframes 等 15 個 |
+| `C:\Users\sanyo\.claude\commands\` | Active commands（5 個） |
 | `C:\Users\sanyo\.claude\plugins\marketplaces\thedotmack\` | claude-mem plugin |
 | `C:\Users\sanyo\.claude\plugins\marketplaces\sanyoii\` | Junction → `d:\Claude\my-marketplace\` |
 | `d:\Claude\.claude\skills\` | Skill 備份（git-tracked） |

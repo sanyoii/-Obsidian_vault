@@ -1,20 +1,44 @@
 [
   {
-    "from": "Neromo (e-restaurants)",
-    "subject": "Reservation Confirmed: Neromo - 03/06/2026, 19:00",
+    "from": "中國信託商業銀行",
+    "subject": "安全性警示通知(陌生位置)",
     "importance": "High",
-    "todos": [
-      "今晚 19:00 準時抵達 Neromo（Borgo S. Frediano, 23r, Firenze）",
-      "確認 5 人同行人數",
-      "如需取消或修改，請點信件內連結"
-    ],
-    "time": "23:33"
+    "todos": ["確認義大利登入是否本人操作（IP: 93.47.229.33）", "若非本人，立即修改帳號密碼"],
+    "time": "17:00"
   },
   {
-    "from": "FotoShare",
-    "subject": "La tua foto",
+    "from": "國泰世華銀行 CUBE App",
+    "subject": "CUBE App登入成功通知",
+    "importance": "Medium",
+    "todos": ["確認義大利 IP 登入是否本人操作"],
+    "time": "17:01"
+  },
+  {
+    "from": "XREX",
+    "subject": "【通知】XREX 收費政策更新",
+    "importance": "Medium",
+    "todos": ["閱讀新收費政策附件", "7 天後（約 6/11）生效，確認是否接受新條款"],
+    "time": "16:34"
+  },
+  {
+    "from": "Discord",
+    "subject": "twnoob_878 在 CO SHOP 中提到您",
+    "importance": "Medium",
+    "todos": ["查看 Discord CO SHOP 的 Code Review 排隊串（06/04）"],
+    "time": "13:53"
+  },
+  {
+    "from": "中國信託銀行",
+    "subject": "行動銀行APP登入成功通知",
     "importance": "Low",
     "todos": [],
-    "time": "21:56"
+    "time": "17:00"
+  },
+  {
+    "from": "國泰世華銀行",
+    "subject": "國泰世華銀行消費彙整通知",
+    "importance": "Low",
+    "todos": [],
+    "time": "14:23"
   }
 ]

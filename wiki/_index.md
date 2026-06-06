@@ -1,4 +1,4 @@
-# 知識庫主索引
+﻿# 知識庫主索引
 
 > 最後更新：2026-06-03
 > 文章數量：151 篇
@@ -63,6 +63,12 @@
 
 ---
 
+### AI Prompts 收藏庫
+
+- [[AI-Prompts/_index|AI Prompts 收藏庫 — 統一索引]] — 旅遊插畫 + ChatGPT Image 2 爆款圖，依效果/標籤快速查詢，持續新增中 `#ai #prompts #image-gen`
+
+---
+
 ### Tools（工具使用手冊）
 
 - [[Tools/liteparse|LiteParse]] — 本地 PDF 解析工具（Rust/PDFium），`pip install liteparse`，CLI + Python API，支援批次轉換與截圖 `#tools #pdf`
@@ -70,6 +76,18 @@
 - [[Tools/gbrain-inbox|gbrain Inbox 快速匯入]] — Obsidian Inbox 一鍵 import + 移至 wiki/Ideas `#tools #gbrain`
 - [[Tools/md-to-pdf|Markdown 轉 PDF]] — `#tools`
 - [[Tools/cleanup-transcripts|清理逐字稿]] — `#tools`
+
+---
+
+### Github/Repos（已分析 Repos）
+
+- [[Github/repos/Panniantong-Agent-Reach — AI Agent 互聯網感知層|Agent Reach — AI Agent 互聯網感知層]] — 17 平台 skills 腳手架（網頁/YouTube/Twitter/Reddit/小紅書/B站/微博/V2EX/雪球…），一句話安裝，零配置 8 頻道；✅ 適合安裝 `#skills #social-media #claude-code #mcp #internet`
+- [[Github/repos/mvanhorn-last30days-skill — AI 多平台社群研究引擎|last30days-skill — AI 多平台社群研究引擎]] — `/last30days <主題>` 跨 Reddit/X/YouTube/TikTok/HN/Polymarket 等 10+ 平台平行搜尋，社群互動量排序；✅ 適合安裝 `#skills #research #social-media #claude-code`
+- [[Github/repos/ECC — Claude Code harness-native 操作系統|ECC — Claude Code harness-native 操作系統]] — harness-native AI Agent 操作系統（Skills + Agents + Hooks + Rules），100+ skills，182K stars `#tool #claude-code #skills #hooks #agents`
+- [[Github/repos/Headroom — AI Agent Context 壓縮層|Headroom — AI Agent Context 壓縮層]] — 自動壓縮 context window，減少 token 消耗 `#tool #claude-code #context`
+- [[Github/repos/anthropicsknowledge-work-plugins|knowledge-work-plugins]] — Anthropic 官方知識工作 plugins 套件 `#anthropic #plugins`
+- [[Github/repos/Stop-slop 寫作去除AI腔|Stop-slop 寫作去除AI腔]] — 去除 AI 生成文章的機器味 `#writing #ai`
+- [[Github/repos/issue_tmp — GitHub Issue  PR 模板套件|issue_tmp — GitHub Issue / PR 模板套件]] — 繁體中文 9 種 Issue 表單 + PR 模板 `#github #templates`
 
 ---
 

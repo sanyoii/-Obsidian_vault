@@ -9,23 +9,41 @@ $outputFile = "$dataDir\dashboard.json"
 
 New-Item -ItemType Directory -Force -Path $dataDir | Out-Null
 
-# ── 1. Job count ───────────────────────────────────────────────────────────
+# ── 1. Job count + list ────────────────────────────────────────────────────
 $jobsDb   = "d:\Claude\job-crawler\jobs.db"
 $jobCount = 0
+$jobList  = @()
 if (Test-Path $jobsDb) {
     $py = @'
-import sqlite3, sys
+import sqlite3, sys, json
 conn = sqlite3.connect(sys.argv[1])
 cur = conn.cursor()
 cur.execute("SELECT COUNT(*) FROM job_groups WHERE user_status='unread'")
-print(cur.fetchone()[0])
+count = cur.fetchone()[0]
+cur.execute("""
+    SELECT jg.id, jg.company, jg.title, jg.location, jg.first_seen,
+           MIN(js.url) as url,
+           GROUP_CONCAT(DISTINCT js.platform) as platforms
+    FROM job_groups jg
+    JOIN job_sources js ON js.group_id = jg.id
+    WHERE jg.user_status='unread' AND js.job_status='active'
+    GROUP BY jg.id
+    ORDER BY jg.first_seen DESC
+""")
+cols = [d[0] for d in cur.description]
+jobs = [dict(zip(cols, row)) for row in cur.fetchall()]
 conn.close()
+print(json.dumps({"count": count, "jobs": jobs}, ensure_ascii=False))
 '@
     $tmp = [System.IO.Path]::GetTempFileName() + ".py"
     $py | Out-File -FilePath $tmp -Encoding UTF8
-    $result = python $tmp $jobsDb 2>$null
+    $rawResult = python $tmp $jobsDb 2>$null
     Remove-Item $tmp -ErrorAction SilentlyContinue
-    $jobCount = [int]($result.Trim())
+    if ($rawResult) {
+        $parsed  = $rawResult | ConvertFrom-Json
+        $jobCount = [int]$parsed.count
+        $jobList  = $parsed.jobs
+    }
 }
 
 # ── 2. Social monitor label ────────────────────────────────────────────────
@@ -277,6 +295,7 @@ if (-not $techcrunchData -or $techcrunchData.Trim() -eq '') { $techcrunchData = 
 $data = [ordered]@{
     updatedAt     = (Get-Date).ToString('yyyy-MM-dd HH:mm:ss')
     jobCount      = $jobCount
+    jobList       = $jobList
     socialLabel   = $socialLabel
     briefingTitle = $briefingTitle
     tokenEstimate = $tokenEstimate

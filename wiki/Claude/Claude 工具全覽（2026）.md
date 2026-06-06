@@ -8,7 +8,7 @@ date: 2026-05-24
 
 # Claude 工具全覽（2026）
 
-> 最後更新：2026-05-24
+> 最後更新：2026-06-04
 > 完整舊版說明：[[Claude 環境說明]]（換電腦恢復步驟、Scrapling 詳細用法等）
 > Skills 完整手冊：[[Claude Code Skills 使用手冊]]
 
@@ -33,7 +33,8 @@ date: 2026-05-24
 | **gbrain**         | `gbrain search "關鍵字"`                     | 查詢個人知識腦、語意搜尋筆記/課程          |
 | **Repomix**        | `repomix`（全域 npm）                         | 把整個 codebase 打包給 AI 分析     |
 | **OpenSpec**       | `openspec init` → `/opsx:propose`         | 複雜功能開發前先對齊規格               |
-| **AutoHedge**      | `cd autohedge-env && autohedge`           | AI 自主 Solana 鏈上交易（⚠️ 真實資金） |
+| **AutoHedge**      | `cd autohedge-env && autohedge`           | AI 自主 Solana 鏈上交易（⚠️ venv 已刪除，需重建） |
+| **LiteParse**      | `from liteparse import parse_pdf`         | 本地 PDF 解析（Rust/PDFium），v2.0.3 |
 | **Scrapling**      | `import scrapling` 或 `scrapling` CLI      | 網頁爬蟲（含繞 Cloudflare、瀏覽器自動化） |
 | **Recursive Mode** | 專案內執行 bootstrap.ps1 → `Implement the run` | 大型複雜任務的七階段結構化工作流程          |
 
@@ -166,8 +167,8 @@ cypher_query    → Cypher 圖查詢
 | **job-crawler**    | `d:\Claude\job-crawler\`    | ✅ Phase 1 完成 | 104/web3/cryptojobs 職缺爬蟲 + Flask UI + Gmail 通知            |
 | **careerbot**      | `d:\Claude\careerbot\`      | ✅ 進行中        | 求職助手，20家 in-review，/find-roles 待執行，Web UI: localhost:3000 |
 | **obsidian**       | `d:\Claude\obsidian\`       | ✅ 活躍         | Obsidian vault，git 備份至 sanyoii/-Obsidian_vault            |
-| **open-slide**     | `d:\Claude\open-slide\`     | 🔍 未用        | 投影片工具（待評估）<br>可以參考 : https://open-slide.dev/              |
-| **autohedge-env**  | `d:\Claude\autohedge-env\`  | ⚠️ 待設定       | 需填 API Keys + Solana 錢包私鑰                                 |
+| **open-slide**     | `d:\Claude\open-slide\`     | 🔍 未用        | 投影片工具（待評估）                                                  |
+| **autohedge-env**  | *(已刪除)*                   | ❌ 需重建       | venv 2026-06-03 刪除（釋放 1.5GB），需重建                           |
 | **brain-docs**     | `d:\Claude\brain-docs\`     | ✅ 已匯入        | gbrain 文件暫存區，課程字幕已全數匯入                                    |
 | **hd-decode**      | `d:\Claude\hd-decode\`      | ✅ 運作中        | 人類圖解讀器，純 HTML 離線工具，雙擊 index.html 即用                       |
 
@@ -249,6 +250,8 @@ python run_web.py
 完整說明：[[Claude Code Skills 使用手冊]]
 詳細環境說明：[[Claude 環境說明]]
 
+> 目前共 **135 個 Skills**（+ 15 hyperframes）
+
 ### 最常用的 Skills（觸發詞）
 
 | 分類              | Skill                            | 觸發詞                                |
@@ -285,10 +288,17 @@ python run_web.py
 | **命理**          | `bazi` / `bazi-skill`            | 排八字 / 看命盤                          |
 |                 | `ziwei-doushu`                   | 排紫微                                |
 |                 | `qimen-dunjia`                   | 奇門排盤                               |
+| **HTML 投影片**  | `html-ppt`                       | 36 主題、47 動畫、Presenter Mode         |
+|                 | `guizang-ppt`                    | 雜誌風簡報 / 橫滑 deck                    |
+|                 | `deck-*`（12 個）                 | 場景專用 Deck（course/tech/xhs/product…） |
 | **Obsidian**    | `obsidian-markdown`              | Obsidian wikilink/callout 語法       |
 |                 | `obsidian-bases`                 | 建立 Bases 資料庫視圖                     |
 |                 | `obsidian-canvas-creator`        | 文字→Canvas（MindMap / Freeform 佈局）   |
 |                 | `json-canvas`                    | 低階編輯現有 .canvas 節點/邊                |
+| **履歷 / 求職**  | `resume-architect`               | 六階段履歷優化 + Evaluator-Optimizer 閉環  |
+| **知識書籍**     | `book-to-skill`                  | PDF/EPUB → Claude Code Skill        |
+| **AI 品質**     | `karpathy-guidelines`            | Karpathy 六原則 AI 行為審查               |
+|                 | `context-budget`                 | 審計 context 用量，找 bloat 來源           |
 | **Prompt**      | `prompt-master`                  | 幫我寫一個 prompt / 為 Midjourney 寫提示詞   |
 | **Meta**        | `nuwa-skill`                     | 幫我做一個人物/角色的 Skill                  |
 |                 | `skill-creator`                  | 建立新 Skill                          |
@@ -300,10 +310,13 @@ python run_web.py
 
 位置：`C:\Users\sanyo\.claude\commands\`
 
-| Command           | 輸入方式  | 用途                          |
-| ----------------- | ----- | --------------------------- |
-| `/threads-to-fb`  | 對話中輸入 | Threads 貼文 → 繁中 Facebook 貼文 |
-| `/generate-cover` | 對話中輸入 | 生成 1200×1200 社群封面圖          |
+| Command               | 輸入方式  | 用途                          |
+| --------------------- | ----- | --------------------------- |
+| `/threads-to-fb`      | 對話中輸入 | Threads 貼文 → 繁中 Facebook 貼文 |
+| `/generate-cover`     | 對話中輸入 | 生成 1200×1200 社群封面圖          |
+| `/obsidian-architect` | 對話中輸入 | 掃描 codebase → 寫入架構筆記到 obsidian-second-brain vault |
+| `/research`           | 對話中輸入 | 免 API key 網路研究（Wikipedia/HN/arXiv/Reddit）  |
+| `/research-deep`      | 對話中輸入 | Vault-first 深度研究 + 傳播更新到相關筆記 |
 
 ---
 

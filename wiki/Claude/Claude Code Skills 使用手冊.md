@@ -1,6 +1,6 @@
 # Claude Code Skills 使用手冊
 
-> 共 118 個 Skills + 70+ 個 Ruflo/Claude Flow 命令，按使用情境分類。
+> 共 143 個 Skills（+ 15 hyperframes）+ 70+ 個 Ruflo/Claude Flow 命令，按使用情境分類。
 > 觸發方式：直接在對話中說出觸發詞，或輸入 `/skill-name`。
 
 ---
@@ -26,6 +26,8 @@
 - [💬 溝通與品牌](#-溝通與品牌)
 - [✍️ 寫作品質](#️-寫作品質)
 - [🛠 Meta Skills](#-meta-skills)
+- [🎞 HTML 投影片](#-html-投影片)
+- [📖 知識書籍](#-知識書籍)
 - [🦊 Ruflo 多 Agent 協調](#-ruflo-多-agent-協調)
 
 ---
@@ -131,6 +133,35 @@
 **用途：** 生成適合 Slack 的動態 GIF（尺寸、幀率最佳化）。
 **觸發：** 說「幫我做一個 Slack GIF」、「做個動態貼圖」
 
+### `ui-ux-pro-max` ⭐
+**用途：** 資料驅動的 UI/UX 設計智能庫。161 色票、67 UI 風格（glassmorphism/brutalism/claymorphism 等）、57 字型配對、99 UX 規則、25 圖表類型、15 技術棧（React/Next.js/Vue/Svelte/SwiftUI/Flutter 等）。不是原則泛談，而是有 CSV 資料庫可查詢。
+**觸發：** 設計頁面、選色彩系統、想知道哪種風格適合某產品類型時使用
+```
+「我在做一個 SaaS dashboard，推薦什麼 UI 風格和色票？」
+「這個行動 App 頁面有哪些 UX 問題？幫我用 99 條規則審查」
+「幫我選一個 minimalism 風格的字型配對」
+```
+> 來源：nextlevelbuilder/ui-ux-pro-max-skill（v2.5.0）| 2026-06-04 安裝
+> ⚠️ **不要與投影片選擇器混用**：`ui-ux-pro-max` 的 67 個 UI 風格是針對 App/Web 元件設計（React/SwiftUI 等），與投影片版型（html-ppt/frontend-slides）是兩個不重疊的領域。不需要整合到 slide-style-selector.html。
+
+### `design-system`
+**用途：** Design Token 架構（Primitive/Semantic/Component token）、shadcn/ui 元件規格、Tailwind 整合、States & Variants 規範。
+**觸發：** 建立設計系統、定義 token 架構、shadcn 元件規格確認時使用
+```
+「幫我設計一套 token 架構，支援 dark mode 切換」
+「這個 Button 的所有 variant 和 state 應該怎麼定義？」
+```
+> 來源：nextlevelbuilder/ui-ux-pro-max-skill | 2026-06-04 安裝
+
+### `ui-styling`
+**用途：** Tailwind 客製化設定、shadcn/ui 主題與 accessibility 實作、Python 腳本自動生成 tailwind.config。
+**觸發：** Tailwind/shadcn 專案需要實作指引或自動化 config 時使用
+```
+「幫我生成一份 tailwind.config.js，主色 indigo，支援 dark mode」
+「這個 shadcn 元件的 WCAG AA 對比度有問題，幫我修」
+```
+> 來源：nextlevelbuilder/ui-ux-pro-max-skill | 2026-06-04 安裝
+
 ### `gimp-inkscape`
 **用途：** 本地圖片處理工具組（ImageMagick、Inkscape、GIMP、FFmpeg、ExifTool）。
 **觸發：** 說「縮圖」、「轉 WebP」、「加浮水印」、「SVG 轉 PNG」、「壓縮圖片」、「去除 EXIF」
@@ -233,6 +264,41 @@
 「讀取這篇文章：https://example.com/article」
 ```
 > ✅ 已安裝：`defuddle v0.18.1`（`npm install -g defuddle`）
+
+### `firecrawl-build` ⭐
+**用途：** 把 Firecrawl 整合進 app 代碼的主 skill。任何「app 需要網路資料」的場景都觸發：網頁內容爬取、搜尋+抓取、AI 結構化抽取。
+**觸發：** 說「加入爬取功能」、「app 需要讀取網頁資料」、「integrate Firecrawl」、「我需要爬這個網站」
+```
+「在 job-crawler 裡加入 Firecrawl 爬取職缺頁面的功能」
+「把這個競品的定價頁面爬下來整理成 JSON」
+```
+**Endpoint 選擇邏輯：**
+- 已知 URL → `firecrawl-build-scrape`
+- 從查詢開始 → `firecrawl-build-search`
+- 需要點擊/登入 → `firecrawl-build-interact`
+
+> ✅ 已安裝：`firecrawl-build` + `firecrawl-build-onboarding` + `firecrawl-build-scrape` + `firecrawl-build-search` + `firecrawl-build-interact`（2026-06-05）
+> 🔑 需要 API key：`FIRECRAWL_API_KEY=fc-...`（免費 500 次/月，申請：firecrawl.dev/app）
+> ⚙️ MCP Server：已加入 `settings.json`（`npx firecrawl-mcp`），重啟 Claude Code 後生效
+
+### `firecrawl-build-scrape`
+**用途：** 整合 `/scrape` endpoint，把已知 URL 轉成 Markdown/JSON/HTML/screenshot。
+**觸發：** 說「抓取這個 URL 的內容」、「把這篇文章轉成 Markdown」
+```
+「把 https://example.com/pricing 的定價資訊抓下來結構化」
+```
+
+### `firecrawl-build-search`
+**用途：** 整合 `/search` endpoint，用查詢找到 URL 再抓取內容。
+**觸發：** 說「搜尋網路找這個主題的資料」、「從關鍵字開始找網頁」
+
+### `firecrawl-build-interact`
+**用途：** 整合 `/interact` endpoint，處理需要點擊、表單填寫、分頁等動態操作的頁面。
+**觸發：** 說「這個頁面需要點擊才能顯示」、「需要登入後才能拿到資料」
+
+### `firecrawl-build-onboarding`
+**用途：** 設定 `FIRECRAWL_API_KEY`，含瀏覽器 OAuth 流程，SDK 安裝指引。
+**觸發：** 說「幫我設定 Firecrawl 的 API key」、「第一次用 Firecrawl 怎麼設定」
 
 ---
 
@@ -725,6 +791,38 @@ learned(passport): 需明確加上 offline_access scope
 
 ---
 
+## 🎞 HTML 投影片
+
+### `html-ppt`（lewislulu）
+**用途：** 36 種主題、47 種動畫、Presenter Mode，全功能 HTML 投影片框架。
+**觸發：** 說「做投影片」、「html 簡報」
+
+### `deck-*`（12 個場景 Skills）
+**用途：** 從 html-ppt 架構衍生的場景專用 Deck。
+**各 skill：** `deck-course-module`、`deck-dir-key-nav`、`deck-graphify-dark`、`deck-guizang-editorial`、`deck-obsidian-claude`、`deck-open-slide-canvas`、`deck-presenter-mode`、`deck-product-launch`、`deck-replit`、`deck-safety-alert`、`deck-tech-sharing`、`deck-xhs-post`
+
+### `hyperframes`（15 個）
+**用途：** HTML → MP4 影片製作（ffmpeg-static 內建）。
+**安裝位置：** `C:\Users\sanyo\.agents\skills\`
+```
+npx hyperframes init → npx hyperframes preview → npx hyperframes render
+```
+
+---
+
+## 📖 知識書籍
+
+### `book-to-skill`
+**用途：** 把 PDF/EPUB/DOCX/TXT 等 9 種格式書籍轉換為 Claude Code Skill（SKILL.md）。
+**觸發：** `/book-to-skill your-book.pdf`
+> 依賴：PyPDF2、pdfminer.six、docling（已裝）
+
+### `resume-architect`
+**用途：** 六階段履歷優化流程（研究→定位→重寫→評分→改進→輸出），Evaluator-Optimizer 自我改進閉環。
+**觸發：** 說「優化我的履歷」、「幫我改履歷」
+
+---
+
 ---
 
 ## 🦊 Ruflo 多 Agent 協調
@@ -984,6 +1082,9 @@ npx ruflo@latest autopilot start --goal "describe goal"
 | 啟動 Swarm 任務 | `/claude-flow-swarm` |
 | 初始化專案架構 | `/init` |
 | 安全審查 | `/security-review` |
+| HTML 投影片 | `html-ppt` / `deck-*` / `hyperframes` |
+| 履歷優化 | `resume-architect` |
+| 書籍→Skill | `book-to-skill` |
 
 ---
 
@@ -1123,4 +1224,4 @@ npx ruflo@latest autopilot start --goal "describe goal"
 
 ---
 
-*更新日期：2026-05-25 | Skills 總數：118（含 Understand-Anything 8 個、stop-slop、agent-hygiene）| CCPlugins Commands：12 | Ruflo 命令：70+ | 已安裝 CLI：repomix v1.14.0、defuddle v0.18.1、ccr（claude-code-router）*
+*更新日期：2026-06-04 | Skills 總數：135（+ 15 hyperframes）| CCPlugins Commands：12 | Ruflo 命令：70+ | 已安裝 CLI：repomix、defuddle、LiteParse v2.0.3*

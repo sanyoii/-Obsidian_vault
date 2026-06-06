@@ -1,6 +1,6 @@
 # 新 Idea / 新專案 SOP
 
-> 最後更新：2026-05-28（整合 7-Agent 工廠工作流）
+> 最後更新：2026-06-05（spec-writer 新增 specs/<branch>/ 檔案輸出）
 > 適用：有新想法、要開新功能、要建新專案時的標準流程
 
 ---
@@ -81,11 +81,19 @@ gbrain search "相關關鍵字"
 需要包含：資料模型、API 合約、後端/前端分工邊界。
 ```
 
-spec-writer 的輸出就是過去的 SPEC.md，但格式更嚴謹（有 Contract 定義）。
+spec-writer 會自動偵測 Git branch，將規格寫入專案 repo 的：
 
-- 規格出來後在編輯器裡確認（`Ctrl+G`）
+```
+specs/
+└── <branch-name>/
+    ├── spec.md    ← 技術規格（本次輸出）
+    ├── plan.md    ← Scaffold（builder 填入實作計劃）
+    └── tasks.md   ← Scaffold（builder 填入 checkbox 任務）
+```
+
+- 規格出來後在編輯器裡確認（`Ctrl+G`），同時確認 `specs/<branch>/spec.md` 已存在
 - 重點確認：分工邊界清不清楚？API 合約完整嗎？
-- 確認後進 Phase 3
+- 確認後進 Phase 3（builder 從 `specs/<branch>/spec.md` 讀取規格）
 
 ---
 

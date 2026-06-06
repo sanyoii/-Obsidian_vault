@@ -1,4 +1,4 @@
-# 知識庫操作日誌
+﻿# 知識庫操作日誌
 
 > **規則：只增不改。** 每次 `/compile`、`/query`、`/lint` 後追加一筆記錄，不得修改舊記錄。
 > 格式：`YYYY-MM-DD HH:MM | 操作 | 來源 → 產出 | 備註`
@@ -6,6 +6,10 @@
 ---
 
 ## 2026-06
+
+### 2026-06-06 | COMPILE
+- `2026-06-06 11:30 | COMPILE | github.com/Panniantong/Agent-Reach → wiki/Github/repos/Panniantong-Agent-Reach — AI Agent 互聯網感知層.md` | repomix 分析（80 檔，98K tokens）；AI Agent 互聯網感知腳手架，v1.4.0，Python 3.10+；17 平台（YouTube/Twitter/Reddit/小紅書/B站/微博/V2EX/雪球/播客…）；SKILL.md 路由系統 + agent-reach doctor 診斷；結論 ✅ 適合安裝（零配置 8 頻道即用，SKILL.md 原生相容現有 skills 環境）
+- `2026-06-06 10:30 | COMPILE | github.com/mvanhorn/last30days-skill → wiki/Github/repos/mvanhorn-last30days-skill — AI 多平台社群研究引擎.md` | repomix 分析（102 檔，292K tokens）；AI Agent-led 多平台社群研究工具，v3.3.2，Agent Skills 格式，Python 3.12+ + Node.js；搜尋 Reddit/X/YouTube/TikTok/HN/Polymarket 等 10+ 平台；結論 ✅ 適合安裝（零設定啟動，與現有 skills 環境完全相容）；新增 _index.md Github/Repos 區塊
 
 ### 2026-06-03 | COMPILE
 - `2026-06-03 08:48 | COMPILE | Chase AI YouTube教學 + NotebookLM → wiki/Claude/Command Center Plugin — Obsidian 指揮中心.md` | 建立自製 Obsidian Plugin（4 個 Ribbon 按鈕：Morning Briefing/Compile/Lint/Quick Capture）；串接 social-monitor + job-crawler；新增 wiki/Daily/ 分類；更新 CLAUDE.md 加入 /morning 指令；_index 計數 150→151

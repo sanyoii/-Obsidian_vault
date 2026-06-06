@@ -4,6 +4,35 @@ var obsidian = require('obsidian');
 
 const DASHBOARD_VIEW_TYPE = 'command-center-dashboard';
 
+// ─── Job List Modal ───────────────────────────────────────────────────────────
+
+class JobListModal extends obsidian.Modal {
+    constructor(app, jobs) {
+        super(app);
+        this.jobs = jobs;
+    }
+    onOpen() {
+        const { contentEl } = this;
+        contentEl.createEl('h2', { text: `新職缺（${this.jobs.length}）` });
+        const list = contentEl.createEl('div', { cls: 'cc-job-list' });
+        this.jobs.forEach(job => {
+            const item = list.createEl('div', { cls: 'cc-job-item' });
+            const link = item.createEl('a', { text: `${job.company} — ${job.title}`, cls: 'cc-job-link' });
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                require('electron').shell.openExternal(job.url);
+            });
+            const meta = item.createEl('div', { cls: 'cc-job-meta' });
+            if (job.location) meta.createEl('span', { text: `📍 ${job.location}`, cls: 'cc-job-location' });
+            if (job.platforms) meta.createEl('span', { text: job.platforms, cls: 'cc-job-platform' });
+            if (job.first_seen) meta.createEl('span', { text: job.first_seen.substring(0, 10), cls: 'cc-job-date' });
+        });
+    }
+    onClose() {
+        this.contentEl.empty();
+    }
+}
+
 // ─── Dashboard View ───────────────────────────────────────────────────────────
 
 class DashboardView extends obsidian.ItemView {
@@ -296,7 +325,7 @@ class DashboardView extends obsidian.ItemView {
         <button class="cc-btn cc-btn-secondary" id="cc-refresh">🔄 更新資料</button>
       </div>
       <div class="cc-metrics-row">
-        <div class="cc-inline-metric">
+        <div class="cc-inline-metric cc-jobs-clickable" id="cc-jobs-metric" title="點擊查看職缺列表">
           <span class="cc-im-label">新職缺</span>
           <span class="cc-im-value cc-accent">${data?.jobCount ?? '—'}</span>
         </div>
@@ -397,6 +426,21 @@ class DashboardView extends obsidian.ItemView {
         });
         container.querySelector('#cc-refresh')?.addEventListener('click', () => {
             this.plugin.runScript('fetch-dashboard-data.ps1', 'Refresh Data', () => this.render());
+        });
+
+        // Job list modal
+        container.querySelector('#cc-jobs-metric')?.addEventListener('click', () => {
+            if (data?.jobList === undefined) {
+                new obsidian.Notice('🔄 正在更新職缺資料，請稍後再點擊...');
+                this.plugin.runScript('fetch-dashboard-data.ps1', 'Refresh for jobs', () => this.render());
+                return;
+            }
+            const jobs = data.jobList;
+            if (jobs.length > 0) {
+                new JobListModal(this.plugin.app, jobs).open();
+            } else {
+                new obsidian.Notice('目前沒有新職缺');
+            }
         });
     }
 }

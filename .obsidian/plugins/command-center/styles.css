@@ -385,3 +385,26 @@
 /* Light theme compat */
 .theme-light .cc-dashboard,
 .theme-light .cc-dashboard-container { background: #111; }
+
+/* ── Job List Modal ────────────────────────────────────────────────────────── */
+.cc-jobs-clickable { cursor: pointer; }
+.cc-jobs-clickable:hover .cc-im-value { text-decoration: underline; }
+
+.cc-job-list { max-height: 60vh; overflow-y: auto; }
+.cc-job-item { padding: 10px 0; border-bottom: 1px solid var(--background-modifier-border); }
+.cc-job-item:last-child { border-bottom: none; }
+.cc-job-link {
+    color: var(--text-accent);
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 4px;
+}
+.cc-job-link:hover { text-decoration: underline; }
+.cc-job-meta {
+    font-size: 0.82em;
+    color: var(--text-muted);
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}

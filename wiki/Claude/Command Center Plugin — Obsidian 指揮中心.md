@@ -3,7 +3,7 @@
 > **分類：** Claude / 系統
 > **標籤：** `#Claude` `#系統` `#obsidian` `#automation` `#plugin`
 > **建立：** 2026-06-03
-> **最後更新：** 2026-06-03（v3.2 — 新增 TechOrange + TechCrunch RSS 面板）
+> **最後更新：** 2026-06-04（資料來源說明文件建立）
 > **來源：** Chase AI YouTube 教學 + 本地整合
 
 ---
@@ -42,39 +42,26 @@
 
 ---
 
-## Dashboard 版面（v3.1）
+## Dashboard 版面（v3.2）
 
 點 ⚙️ Ribbon 按鈕或 Command Palette → "Open Dashboard" 開啟，顯示為主內容區新 Tab。
 
-```
-┌──────────────────┬──────────────────┐
-│  GITHUB TRENDING │  HACKER NEWS     │
-│  點擊 → repomix  │  點擊 → 開原文   │
-├──────────────────┼──────────────────┤
-│  PRODUCT HUNT    │  LOBSTERS        │
-│  點擊 → 開產品頁 │  點擊 → 開原文   │
-├──────────────────┴──────────────────┤
-│  ITHOME NEWS（全寬，15 則）          │
-│  台灣 IT 新聞 · 作者 · 日期          │
-├─────────────────────────────────────┤
-│  TECHORANGE 科技報橘（全寬，10 則）  │
-│  台灣新創 · AI 趨勢 · 作者 · 日期    │
-├─────────────────────────────────────┤
-│  TECHCRUNCH（全寬，10 則）           │
-│  全球新創募資 · 作者 · 日期          │
-├─────────────────────────────────────┤
-│  MORNING BRIEF                      │
-│  [☀️早報][📚Compile][🔍Lint]        │
-│  [✏️捕捉][📅日曆][📧Email][🔄更新]  │
-│  新職缺 13 · 社群 · Token 估算       │
-│  今日行程（Google Calendar）         │
-├─────────────────────────────────────┤
-│  EMAIL BRIEF                        │
-│  🚨EMG  From: ...  重要信件          │
-│      → 待辦: ...                    │
-│  ⚡HIGH From: ...                   │
-└─────────────────────────────────────┘
-```
+**上半部（兩欄）**
+
+| 左欄 | 右欄 |
+|------|------|
+| **GitHub Trending** — 點擊 → repomix 分析 | **Hacker News** — 點擊 → 開原文 |
+| **Product Hunt** — 點擊 → 開產品頁 | **Lobsters** — 點擊 → 開原文 |
+
+**下半部（全寬，由上至下）**
+
+| 區塊 | 內容 |
+|------|------|
+| **iThome News** | 台灣 IT 新聞 · 作者 · 日期，15 則 |
+| **TechOrange 科技報橘** | 台灣新創 · AI 趨勢 · 作者 · 日期，10 則 |
+| **TechCrunch** | 全球新創募資 · 作者 · 日期，10 則 |
+| **Morning Brief** | ☀️早報 📚Compile 🔍Lint ✏️捕捉 📅日曆 📧Email 🔄更新 按鈕 + 職缺數 / 社群 / Token 估算 / Google Calendar 行程 |
+| **Email Brief** | 🚨EMG 重要信件 → 待辦 / ⚡HIGH 高優先信件 |
 
 **資料更新**：按「🔄 更新資料」→ 執行 `fetch-dashboard-data.ps1` → 30 秒後自動刷新
 
@@ -172,6 +159,7 @@
 - [[Obsidian Dashboard 路線圖]] — 三階段路線圖與未來規劃
 - [[知識庫操作手冊]] — /compile /lint /query /morning 指令集
 - [[Claude環境操作手冊]] — 整體 d:\Claude 環境說明
+- [[Dashboard 資料來源說明]] — 七個資訊來源的排名依據與 URL 參數說明
 
 ## 反向連結
 

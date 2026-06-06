@@ -1,151 +1,243 @@
 {
-  "updatedAt": "2026-06-03 17:59:41",
-  "jobCount": 13,
+  "updatedAt": "2026-06-06 22:27:53",
+  "jobCount": 16,
+  "jobList": [
+    {
+      "id": 16,
+      "company": "Iftother",
+      "title": "Status Manual QA Product Tester Part time",
+      "location": "Iftother",
+      "first_seen": "2026-06-05T20:35:38.31181",
+      "url": "https://web3.career/status-manual-qa-product-tester-part-time-iftother/149990",
+      "platforms": "web3career"
+    },
+    {
+      "id": 15,
+      "company": "Tether Operations Limited",
+      "title": "Senior QA Engineer 100% Remote",
+      "location": "Tether Operations Limited",
+      "first_seen": "2026-06-05T20:35:38.308655",
+      "url": "https://web3.career/senior-qa-engineer-100-remote-tetheroperationslimited/150050",
+      "platforms": "web3career"
+    },
+    {
+      "id": 14,
+      "company": "Tether Operations Limited",
+      "title": "Senior QA Engineer 100% Remote Worldwide",
+      "location": "Tether Operations Limited",
+      "first_seen": "2026-06-05T20:35:38.287056",
+      "url": "https://web3.career/senior-qa-engineer-100-remote-worldwide-tetheroperationslimited/150051",
+      "platforms": "web3career"
+    },
+    {
+      "id": 13,
+      "company": "Status",
+      "title": "Status Manual QA Product Tester Part time",
+      "location": "Status",
+      "first_seen": "2026-06-03T07:18:24.446517",
+      "url": "https://web3.career/status-manual-qa-product-tester-part-time-status/149953",
+      "platforms": "web3career"
+    },
+    {
+      "id": 12,
+      "company": "Bitfinex",
+      "title": "QA Automation Engineer 100% remote Worldwide UTC+7 +9",
+      "location": "Bitfinex",
+      "first_seen": "2026-05-29T10:51:06.126033",
+      "url": "https://web3.career/qa-automation-engineer-100-remote-worldwide-utc-7-9-bitfinex/149834",
+      "platforms": "web3career"
+    },
+    {
+      "id": 11,
+      "company": "Coins.ph",
+      "title": "QA EngineerPH",
+      "location": "Coins.ph",
+      "first_seen": "2026-05-26T21:27:07.332636",
+      "url": "https://web3.career/qa-engineer-ph-coins/149751",
+      "platforms": "web3career"
+    },
+    {
+      "id": 6,
+      "company": "Largeton Group",
+      "title": "Blockchain QA Engineer",
+      "location": "Largeton Group",
+      "first_seen": "2026-05-25T16:29:44.337802",
+      "url": "https://web3.career/blockchain-qa-engineer-largetongroup/149259",
+      "platforms": "web3career"
+    },
+    {
+      "id": 5,
+      "company": "OpenTag",
+      "title": "Junior QA Engineer",
+      "location": "OpenTag",
+      "first_seen": "2026-05-25T16:29:44.334897",
+      "url": "https://web3.career/junior-qa-engineer-opentag/149390",
+      "platforms": "web3career"
+    },
+    {
+      "id": 4,
+      "company": "Fireblocks",
+      "title": "Senior QA Automation Engineer Financial Apps",
+      "location": "Fireblocks",
+      "first_seen": "2026-05-25T16:29:44.331974",
+      "url": "https://web3.career/senior-qa-automation-engineer-financial-apps-fireblocks/149632",
+      "platforms": "web3career"
+    },
+    {
+      "id": 3,
+      "company": "Kraken",
+      "title": "QA Automation Engineer Pro",
+      "location": "Kraken",
+      "first_seen": "2026-05-25T16:29:44.328143",
+      "url": "https://web3.career/qa-automation-engineer-pro-kraken/149662",
+      "platforms": "web3career"
+    }
+  ],
   "socialLabel": "2026-05-17-2342",
   "briefingTitle": "Morning_2026-06-03",
-  "tokenEstimate": "~1139K",
+  "tokenEstimate": "~401K",
   "github": [
     {
       "rank": 1,
-      "repo": "chopratejas/headroom",
-      "desc": "Compress tool outputs, logs, files, and RAG chunks before they reach...",
-      "stars": "3528",
+      "repo": "mvanhorn/last30days-skill",
+      "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, ...",
+      "stars": "441",
       "lang": "Python"
     },
     {
       "rank": 2,
-      "repo": "microsoft/markitdown",
-      "desc": "Python tool for converting files and office documents to Markdown.",
-      "stars": "2006",
-      "lang": "Python"
+      "repo": "CopilotKit/CopilotKit",
+      "desc": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobil...",
+      "stars": "613",
+      "lang": "TypeScript"
     },
     {
       "rank": 3,
-      "repo": "affaan-m/ECC",
-      "desc": "The agent harness performance optimization system. Skills, instincts...",
-      "stars": "2147",
-      "lang": "JavaScript"
+      "repo": "MemPalace/mempalace",
+      "desc": "The best-benchmarked open-source AI memory system. And it's free.",
+      "stars": "441",
+      "lang": "Python"
     },
     {
       "rank": 4,
-      "repo": "D4Vinci/Scrapling",
-      "desc": "🕷️ An adaptive Web Scraping framework that handles everything from a...",
-      "stars": "1078",
-      "lang": "Python"
+      "repo": "danielmiessler/Personal_AI_Infrastructure",
+      "desc": "Agentic AI Infrastructure for magnifying HUMAN capabilities.",
+      "stars": "63",
+      "lang": "TypeScript"
     },
     {
       "rank": 5,
-      "repo": "nesquena/hermes-webui",
-      "desc": "Hermes WebUI: The best way to use Hermes Agent from the web or from ...",
-      "stars": "734",
-      "lang": "Python"
+      "repo": "openai/plugins",
+      "desc": "OpenAI Plugins",
+      "stars": "215",
+      "lang": "JavaScript"
     },
     {
       "rank": 6,
-      "repo": "reconurge/flowsint",
-      "desc": "A modern platform for visual, flexible, and extensible graph-based i...",
-      "stars": "509",
-      "lang": "TypeScript"
+      "repo": "Panniantong/Agent-Reach",
+      "desc": "Give your AI agent eyes to see the entire internet. Read & search Tw...",
+      "stars": "700",
+      "lang": "Python"
     },
     {
       "rank": 7,
-      "repo": "OpenBMB/VoxCPM",
-      "desc": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Crea...",
-      "stars": "713",
-      "lang": "Python"
+      "repo": "sveltejs/svelte",
+      "desc": "web development for the rest of us",
+      "stars": "34",
+      "lang": "JavaScript"
     },
     {
       "rank": 8,
-      "repo": "stefan-jansen/machine-learning-for-trading",
-      "desc": "Code for Machine Learning for Algorithmic Trading, 2nd edition.",
-      "stars": "716",
-      "lang": "Jupyter Notebook"
+      "repo": "nginx/nginx",
+      "desc": "The official NGINX Open Source repository.",
+      "stars": "37",
+      "lang": "C"
     },
     {
       "rank": 9,
-      "repo": "jamwithai/production-agentic-rag-course",
-      "desc": "",
-      "stars": "372",
-      "lang": "Python"
+      "repo": "aquasecurity/trivy",
+      "desc": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers...",
+      "stars": "159",
+      "lang": "Go"
     },
     {
       "rank": 10,
-      "repo": "supermemoryai/supermemory",
-      "desc": "Memory engine and app that is extremely fast, scalable. The Memory A...",
-      "stars": "601",
-      "lang": "TypeScript"
+      "repo": "golang/go",
+      "desc": "The Go programming language",
+      "stars": "24",
+      "lang": "Go"
     }
   ],
   "hn": [
     {
       "rank": 1,
-      "title": "DaVinci Resolve 21",
-      "score": 87,
-      "url": "https://www.blackmagicdesign.com/products/davinciresolve/whatsnew",
-      "id": 48384482
+      "title": "Ntsc-rs – open-source video emulation of analog TV and VHS artifacts",
+      "score": 56,
+      "url": "https://ntsc.rs/",
+      "id": 48428025
     },
     {
       "rank": 2,
-      "title": "Hacking your PC using your speaker without ever touching it",
-      "score": 411,
-      "url": "https://blog.nns.ee/2026/06/03/katana-badusb/",
-      "id": 48382310
+      "title": "Zeroserve: A zero-config web server you can script with eBPF",
+      "score": 121,
+      "url": "https://su3.io/posts/introducing-zeroserve",
+      "id": 48425723
     },
     {
       "rank": 3,
-      "title": "A Post-Quantum Future for Let's Encrypt",
-      "score": 27,
-      "url": "https://letsencrypt.org/2026/06/03/pq-certs",
-      "id": 48385114
+      "title": "Meta confirms 1000s of Instagram accounts were hacked by abusing its AI chatbot",
+      "score": 96,
+      "url": "https://this.weekinsecurity.com/meta-confirms-thousands-of-instagram-accounts-were-hacked-by-abusing-its-ai-chatbot/",
+      "id": 48427643
     },
     {
       "rank": 4,
-      "title": "Meta workers can opt out of being tracked at work up to 30 min",
-      "score": 331,
-      "url": "https://www.bbc.com/news/articles/c93x0k194yno",
-      "id": 48383220
+      "title": "Nvidia is proposing a beast of a CPU system for Windows PCs",
+      "score": 166,
+      "url": "https://twitter.com/lemire/status/2062880075117113739",
+      "id": 48424605
     },
     {
       "rank": 5,
-      "title": "Every Byte Matters",
-      "score": 155,
-      "url": "https://fzakaria.com/2026/06/01/every-byte-matters",
-      "id": 48382382
+      "title": "You Can Run",
+      "score": 53,
+      "url": "https://magazine.atavist.com/2026/mccann-cocaine-fugitives",
+      "id": 48426202
     },
     {
       "rank": 6,
-      "title": "PlayStation Architecture",
-      "score": 139,
-      "url": "https://www.copetti.org/writings/consoles/playstation/",
-      "id": 48382142
+      "title": "Show HN: Infinite canvas notes in the non-Euclidean Poincaré disk",
+      "score": 68,
+      "url": "https://uonr.github.io/poincake/",
+      "id": 48372138
     },
     {
       "rank": 7,
-      "title": "1-Click GitHub Token Stealing via a VSCode Bug",
-      "score": 569,
-      "url": "https://blog.ammaraskar.com/github-token-stealing/",
-      "id": 48371562
+      "title": "Benchmarks in Leipzig",
+      "score": 104,
+      "url": "https://arxiv.org/abs/2606.05818",
+      "id": 48425247
     },
     {
       "rank": 8,
-      "title": "Show HN: Edsger – A handwritten Clojure REPL for the reMarkable 2",
-      "score": 168,
-      "url": "https://handwritten.danieljanus.pl/2026-06-01-edsger.html",
-      "id": 48374552
+      "title": "How LLMs work",
+      "score": 768,
+      "url": "https://www.0xkato.xyz/how-llms-actually-work/",
+      "id": 48389360
     },
     {
       "rank": 9,
-      "title": "Nabokov's pale fire: the lost 'father of all hypertext demos'? (2011)",
-      "score": 71,
-      "url": "https://dl.acm.org/doi/pdf/10.1145/1995966.1996008",
-      "id": 48351579
+      "title": "Google will pay SpaceX $920M per month for compute",
+      "score": 336,
+      "url": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/",
+      "id": 48423990
     },
     {
       "rank": 10,
-      "title": "I built a ceiling projection mapping of the planes flying over my house",
-      "score": 105,
-      "url": "https://old.reddit.com/r/nextfuckinglevel/comments/1tvmcin/i_live_in_the_take_off_path_of_sfo_and_built_a/",
-      "id": 48383823
+      "title": "Pokemon Emerald Ported to WebAssembly (100k FPS)",
+      "score": 202,
+      "url": "https://pokeemerald.com/",
+      "id": 48423762
     }
   ],
   "ph": [
@@ -153,133 +245,384 @@
       "rank": 1,
       "name": "Fundraisly",
       "tagline": "AI fundraising agent that finds investors and books meetings",
-      "votes": 1009,
+      "votes": 1107,
       "url": "https://www.producthunt.com/products/fundraisly?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 2,
-      "name": "Kilo Code v7 for VS Code",
-      "tagline": "Parallel agents, diff reviewer, and multi-model comparisons",
-      "votes": 911,
-      "url": "https://www.producthunt.com/products/kilocode/launches/kilo-code-v7-for-vs-code?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
-    },
-    {
-      "rank": 3,
       "name": "Brew ",
       "tagline": "Like Claude design for email marketing",
-      "votes": 879,
+      "votes": 888,
       "url": "https://www.producthunt.com/products/brew-5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "name": "StoreClaw",
       "tagline": "Grow your store profits with agents that know how to sell",
-      "votes": 863,
+      "votes": 874,
       "url": "https://www.producthunt.com/products/storeclaw/launches/storeclaw?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "name": "PollyReach",
       "tagline": "Give your agent a real number and voice to make calls.",
-      "votes": 853,
+      "votes": 809,
       "url": "https://www.producthunt.com/products/pollyreach/launches/pollyreach?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
-      "rank": 6,
+      "rank": 5,
       "name": "Unabyss",
       "tagline": "MCP-native self-updating context layer for your AI",
-      "votes": 758,
+      "votes": 748,
       "url": "https://www.producthunt.com/products/unabyss?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "name": "RankSpot",
       "tagline": "AI SEO Blog driven by deep competitor intelligence",
-      "votes": 672,
+      "votes": 668,
       "url": "https://www.producthunt.com/products/rankspot/launches/rankspot?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
+    },
+    {
+      "rank": 7,
+      "name": "own.page",
+      "tagline": "Make your own personal website with bento tiles",
+      "votes": 661,
+      "url": "https://www.producthunt.com/products/own-page?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 8,
       "name": "OpenHuman",
       "tagline": "An open source AI harness built with the human in mind",
-      "votes": 661,
+      "votes": 619,
       "url": "https://www.producthunt.com/products/openhuman/launches/openhuman?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 9,
-      "name": "own.page",
-      "tagline": "Make your own personal website with bento tiles",
-      "votes": 647,
-      "url": "https://www.producthunt.com/products/own-page?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
+      "name": "mailX by mailwarm",
+      "tagline": "Email deliverability toolkit for humans and AI agents",
+      "votes": 612,
+      "url": "https://www.producthunt.com/products/mailx-by-mailwarm-yc-s20/launches/mailx-by-mailwarm?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 10,
-      "name": "Velo 2.0",
-      "tagline": "Instantly turn your voice and screen into shareable videos",
-      "votes": 644,
-      "url": "https://www.producthunt.com/products/velo-4/launches/velo-2-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
+      "name": "Pancake",
+      "tagline": "OpenClaw in Slack that makes your company autonomous",
+      "votes": 606,
+      "url": "https://www.producthunt.com/products/pancake-6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     }
   ],
   "lobsters": [
     {
       "rank": 1,
-      "title": "rsync and outrage",
-      "score": 70,
-      "url": "https://medium.com/@tridge60/rsync-and-outrage-d9849599e5a0"
+      "title": "Life is too short for a slow terminal",
+      "score": 38,
+      "url": "https://mijndertstuij.nl/posts/life-is-too-short-for-a-slow-terminal/"
     },
     {
       "rank": 2,
-      "title": ".furry - A Top-Level Domain for furries",
-      "score": 40,
-      "url": "https://www.dotfurry.org/"
+      "title": "Stop Using Conventional Commits",
+      "score": 176,
+      "url": "https://sumnerevans.com/posts/software-engineering/stop-using-conventional-commits/"
     },
     {
       "rank": 3,
-      "title": "Full Disclosure: 1-Click GitHub Token Stealing via a VSCode Bug",
-      "score": 38,
-      "url": "https://blog.ammaraskar.com/github-token-stealing/"
+      "title": "The perils of UUID primary keys in SQLite",
+      "score": 19,
+      "url": "https://andersmurphy.com/2026/06/05/the-perils-of-uuid-primary-keys-in-sqlite.html"
     },
     {
       "rank": 4,
-      "title": "burntsushi discusses personal medical diagnosis",
-      "score": 12,
-      "url": "https://burntsushi.net/encephalitis/"
+      "title": "If LLMs Have Human-Like Attributes, Then So Does Age of Empires II",
+      "score": 18,
+      "url": "https://arxiv.org/pdf/2605.31514"
     },
     {
       "rank": 5,
-      "title": "Edsger – a handwritten Clojure REPL for the reMarkable 2",
-      "score": 50,
-      "url": "https://handwritten.danieljanus.pl/2026-06-01-edsger.html"
+      "title": "Total Reciprocity Public License",
+      "score": 22,
+      "url": "https://trplfoundation.org/"
     },
     {
       "rank": 6,
-      "title": "Gleam v1.17 - Single file Gleam BEAM programs with escript",
-      "score": 27,
-      "url": "https://gleam.run/news/single-file-gleam-beam-programs-with-escript/"
+      "title": "The smallest C++ binary",
+      "score": 31,
+      "url": "https://blog.weineng.me/posts/smallest_c/"
     },
     {
       "rank": 7,
-      "title": "Quality in the Age of Slop",
-      "score": 83,
-      "url": "https://sinclairtarget.com/blog/2026/06/01/quality-in-the-age-of-slop/"
+      "title": "Did Claude Increase Bugs in rsync?",
+      "score": 90,
+      "url": "https://alexispurslane.github.io/rsync-analysis/"
     },
     {
       "rank": 8,
-      "title": "iddqd, or the hardest kind of unsafe Rust",
-      "score": 55,
-      "url": "https://oxide.computer/blog/iddqd-unsafe"
+      "title": "Ergonomic overrides for Nixpkgs",
+      "score": 7,
+      "url": "https://haskellforall.com/2026/06/ergonomic-overrides-for-nixpkgs"
     },
     {
       "rank": 9,
-      "title": "Oils - Reviewing Our NLnet Grants After 4 Years",
-      "score": 32,
-      "url": "https://oils.pub/blog/2026/06/grants.html"
+      "title": "The Smart TV in Your LivingRoom Is a Node in the AIScraping Economy",
+      "score": 23,
+      "url": "https://blog.includesecurity.com/2026/06/the-smart-tv-in-your-livingroom-is-a-node-in-the-aiscraping-economy/"
     },
     {
       "rank": 10,
-      "title": "PaceVer (an alternative to SemVer, for mobile apps)",
-      "score": 22,
-      "url": "https://pacever.org/"
+      "title": "An announcement from the Steering Council regarding the JIT project",
+      "score": 32,
+      "url": "https://discuss.python.org/t/an-announcement-from-the-steering-council-regarding-the-jit-project/107638"
+    }
+  ],
+  "ithome": [
+    {
+      "rank": 1,
+      "title": "思科企業通訊管理平臺Unified CM存在重大SSRF漏洞，恐遭用於權限提升攻擊",
+      "url": "https://www.ithome.com.tw/news/176411",
+      "date": "2026-06-05",
+      "author": "李建興"
+    },
+    {
+      "rank": 2,
+      "title": "【資安週報】0601~0605，漏洞問題成國家嚴防風險，印度要求企業組織在關鍵漏洞公布12小時內完成修補",
+      "url": "https://www.ithome.com.tw/news/176407",
+      "date": "2026-06-05",
+      "author": "羅正漢"
+    },
+    {
+      "rank": 3,
+      "title": "用AI對抗AI：陳怡樺帶領趨勢科技全面加入Anthropic Project Glasswing，開啟資安攻防新紀元",
+      "url": "https://www.ithome.com.tw/news/176412",
+      "date": "2026-06-05",
+      "author": "李宗翰"
+    },
+    {
+      "rank": 4,
+      "title": "如何用HIMSS框架衡量數位轉型？長庚揭大型醫療體系的成熟度治理戰略",
+      "url": "https://www.ithome.com.tw/news/176224",
+      "date": "2026-06-05",
+      "author": "王若樸"
+    },
+    {
+      "rank": 5,
+      "title": "OpenSSF前總經理Brian Behlendorf：AI對開源的依賴愈深，將放大軟體供應鏈問題",
+      "url": "https://www.ithome.com.tw/news/176410",
+      "date": "2026-06-05",
+      "author": "蘇文彬"
+    },
+    {
+      "rank": 6,
+      "title": "ChatGPT新版記憶系統上線，改善個人化回應的時效與正確性",
+      "url": "https://www.ithome.com.tw/news/176408",
+      "date": "2026-06-05",
+      "author": "李建興"
+    },
+    {
+      "rank": 7,
+      "title": "研究人員發現逾700個GitHub程式碼庫遭污染，攻擊者利用postinstall機制散布惡意程式",
+      "url": "https://www.ithome.com.tw/news/176409",
+      "date": "2026-06-05",
+      "author": "張明德"
+    },
+    {
+      "rank": 8,
+      "title": "加拿大發布《AI for All》戰略，目標2034年企業AI採用率達6成",
+      "url": "https://www.ithome.com.tw/news/176406",
+      "date": "2026-06-05",
+      "author": "陳曉莉"
+    },
+    {
+      "rank": 9,
+      "title": "美國政府示警自動儲槽計量系統遭鎖定，籲ATG用戶移除網際網路曝露介面",
+      "url": "https://www.ithome.com.tw/news/176400",
+      "date": "2026-06-05",
+      "author": "李建興"
+    },
+    {
+      "rank": 10,
+      "title": "Google Phone App為Android裝置加入AI詐騙電話偵測",
+      "url": "https://www.ithome.com.tw/news/176405",
+      "date": "2026-06-05",
+      "author": "林妍溱"
+    },
+    {
+      "rank": 11,
+      "title": "【資安日報】6月5日，伺服器管理晶片廠商於Computex 2026積極展現資安布局",
+      "url": "https://www.ithome.com.tw/news/176404",
+      "date": "2026-06-05",
+      "author": "周峻佑"
+    },
+    {
+      "rank": 12,
+      "title": "Google Gemini語音助理存在漏洞，攻擊者可透過訊息通知來挾持AI",
+      "url": "https://www.ithome.com.tw/news/176397",
+      "date": "2026-06-05",
+      "author": "周峻佑"
+    },
+    {
+      "rank": 13,
+      "title": "NPM套件遭供應鏈攻擊，感染惡意程式IronWorm",
+      "url": "https://www.ithome.com.tw/news/176393",
+      "date": "2026-06-05",
+      "author": "周峻佑"
+    },
+    {
+      "rank": 14,
+      "title": "台達電展示模組化AI資料中心，可縮短6成建置時間、強化節能與電力韌性",
+      "url": "https://www.ithome.com.tw/news/176401",
+      "date": "2026-06-05",
+      "author": "蘇文彬"
+    },
+    {
+      "rank": 15,
+      "title": "研究人員直接公開VS Code資安漏洞，並表明對微軟漏洞通報流程失去信任",
+      "url": "https://www.ithome.com.tw/news/176387",
+      "date": "2026-06-05",
+      "author": "周峻佑"
+    }
+  ],
+  "techorange": [
+    {
+      "rank": 1,
+      "title": "【微軟 2026 工作趨勢報告】代理 AI 接管常規任務，企業如何將成效轉化為無法複製的「自有智慧」？",
+      "url": "https://techorange.com/2026/06/06/work-trend-index-annual-report/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-06",
+      "author": "MTJ"
+    },
+    {
+      "rank": 2,
+      "title": "「沒有台灣就沒有 Anthropic。」Anthropic 高層來台，點名台灣在 AI 生態系三個不可取代的角色",
+      "url": "https://techorange.com/2026/06/05/anthropic-taiwan-ai-cybersecurity-trust/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-05",
+      "author": "廖紹伶"
+    },
+    {
+      "rank": 3,
+      "title": "趨勢科技加入 Anthropic Project Glasswing：將前沿 AI 模型化為防禦武器，守住台灣 AI 供應鏈防線",
+      "url": "https://techorange.com/2026/06/05/trendai-anthropic-project-glasswing/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-05",
+      "author": "李昀蔚"
+    },
+    {
+      "rank": 4,
+      "title": "不把雞蛋放在同一個 AI 供應商籃子裡：Walmart 自研 Code Puppy，降低模型依賴風險",
+      "url": "https://techorange.com/2026/06/05/walmart-code-puppy-ai-anthropic-claude-openai-codex/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-05",
+      "author": "吳玟錡"
+    },
+    {
+      "rank": 5,
+      "title": "亞馬遜新一代 AI 機器人 Proteus 亮相：「用對話指揮機器人」如何改寫歐洲物流履約網路？",
+      "url": "https://techorange.com/2026/06/05/amazon-proteus-robot-europe-investment-employee/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-05",
+      "author": "吳玟錡"
+    },
+    {
+      "rank": 6,
+      "title": "RSI 是新的 AGI：矽谷追逐的最終魔王關，為何讓 Anthropic 呼籲全球按下暫停鍵？",
+      "url": "https://techorange.com/2026/06/05/ai-rsi-agi-recursive-self-improvement/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-05",
+      "author": "廖紹伶"
+    },
+    {
+      "rank": 7,
+      "title": "機器人在動手之前就預測觸感，HTD 技術讓人型機器人摺衣、端茶成功率大躍進",
+      "url": "https://techorange.com/2026/06/05/humanoid-htd-ai-robot-tasks-higher/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-05",
+      "author": "Min"
+    },
+    {
+      "rank": 8,
+      "title": "電商轉換率提升 380%、瀏覽頁面數提升 320%：戶外品牌 Columbia 用 AI 標籤做對了什麼？",
+      "url": "https://techorange.com/2026/06/05/columbia-ai-tag/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-05",
+      "author": "Ariel"
+    },
+    {
+      "rank": 9,
+      "title": "【科技早餐】鴻海聯手 Intel、台積電 CoPoS 最快兩年放量，AI 基建戰從機櫃燒到筆電",
+      "url": "https://techorange.com/2026/06/05/foxconn-teams-up-with-intel-tsmc-copos-scale-up-in-two-years/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-05",
+      "author": "Anita"
+    },
+    {
+      "rank": 10,
+      "title": "主權 AI 進入 2.0 時代：歐盟 CADA 草案將以 4 大主權評級看「終止開關」風險",
+      "url": "https://techorange.com/2026/06/04/tech-sovereignty-ai-eu-cada/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-04",
+      "author": "廖紹伶"
+    }
+  ],
+  "techcrunch": [
+    {
+      "rank": 1,
+      "title": "What to expect from WWDC 2026: Siri’s highly anticipated revamp and Apple Intelligence updates",
+      "url": "https://techcrunch.com/2026/06/06/what-to-expect-from-wwdc-2026-siris-highly-anticipated-revamp-and-apple-intelligence-updates/",
+      "date": "2026-06-06",
+      "author": "Lauren Forristal"
+    },
+    {
+      "rank": 2,
+      "title": "Sriram Krishnan is leaving his role as White House AI advisor",
+      "url": "https://techcrunch.com/2026/06/06/sriram-krishnan-is-leaving-his-role-as-white-house-ai-advisor/",
+      "date": "2026-06-06",
+      "author": "Anthony Ha"
+    },
+    {
+      "rank": 3,
+      "title": "The Trump administration might take an equity stake in OpenAI",
+      "url": "https://techcrunch.com/2026/06/06/the-trump-administration-might-take-an-equity-stake-in-openai/",
+      "date": "2026-06-06",
+      "author": "Anthony Ha"
+    },
+    {
+      "rank": 4,
+      "title": "Beyond Instagram: Introducing the next generation of social apps",
+      "url": "https://techcrunch.com/2026/06/06/beyond-instagram-introducing-the-next-generation-of-social-apps/",
+      "date": "2026-06-06",
+      "author": "Sarah Perez"
+    },
+    {
+      "rank": 5,
+      "title": "Reid Hoffman is leaving Microsoft’s board to go ‘founder mode’ with  startup Manus",
+      "url": "https://techcrunch.com/2026/06/05/reid-hoffman-is-leaving-microsofts-board-to-go-founder-mode-with-startup-manus/",
+      "date": "2026-06-05",
+      "author": "Julie Bort"
+    },
+    {
+      "rank": 6,
+      "title": "Founders share VC horror stories, and some are naming names",
+      "url": "https://techcrunch.com/2026/06/05/founders-share-vc-horror-stories-and-some-are-naming-names/",
+      "date": "2026-06-05",
+      "author": "Julie Bort"
+    },
+    {
+      "rank": 7,
+      "title": "Former cyber executive turned whistleblower accuses IBM of covering up several data breaches",
+      "url": "https://techcrunch.com/2026/06/05/former-cyber-executive-turned-whistleblower-accuses-ibm-of-covering-up-several-data-breaches/",
+      "date": "2026-06-05",
+      "author": "Lorenzo Franceschi-Bicchierai"
+    },
+    {
+      "rank": 8,
+      "title": "Startup Battlefield 200 applications officially close in 3 days",
+      "url": "https://techcrunch.com/2026/06/05/startup-battlefield-200-applications-officially-close-in-3-days/",
+      "date": "2026-06-05",
+      "author": "TechCrunch Events"
+    },
+    {
+      "rank": 9,
+      "title": "Google will pay SpaceX $920M per month for compute",
+      "url": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/",
+      "date": "2026-06-05",
+      "author": "Sean O'Kane"
+    },
+    {
+      "rank": 10,
+      "title": "GM’s electric future depends on a new battery — and this facility",
+      "url": "https://techcrunch.com/2026/06/05/gms-electric-future-depends-on-a-new-battery-and-this-building/",
+      "date": "2026-06-05",
+      "author": "Tim De Chant"
     }
   ],
   "schedule": [
@@ -296,22 +639,56 @@
   ],
   "emailBrief": [
     {
-      "from": "Neromo (e-restaurants)",
-      "subject": "Reservation Confirmed: Neromo - 03/06/2026, 19:00",
+      "from": "中國信託商業銀行",
+      "subject": "安全性警示通知(陌生位置)",
       "importance": "High",
       "todos": [
-        "今晚 19:00 準時抵達 Neromo（Borgo S. Frediano, 23r, Firenze）",
-        "確認 5 人同行人數",
-        "如需取消或修改，請點信件內連結"
+        "確認義大利登入是否本人操作（IP: 93.47.229.33）",
+        "若非本人，立即修改帳號密碼"
       ],
-      "time": "23:33"
+      "time": "17:00"
     },
     {
-      "from": "FotoShare",
-      "subject": "La tua foto",
+      "from": "國泰世華銀行 CUBE App",
+      "subject": "CUBE App登入成功通知",
+      "importance": "Medium",
+      "todos": [
+        "確認義大利 IP 登入是否本人操作"
+      ],
+      "time": "17:01"
+    },
+    {
+      "from": "XREX",
+      "subject": "【通知】XREX 收費政策更新",
+      "importance": "Medium",
+      "todos": [
+        "閱讀新收費政策附件",
+        "7 天後（約 6/11）生效，確認是否接受新條款"
+      ],
+      "time": "16:34"
+    },
+    {
+      "from": "Discord",
+      "subject": "twnoob_878 在 CO SHOP 中提到您",
+      "importance": "Medium",
+      "todos": [
+        "查看 Discord CO SHOP 的 Code Review 排隊串（06/04）"
+      ],
+      "time": "13:53"
+    },
+    {
+      "from": "中國信託銀行",
+      "subject": "行動銀行APP登入成功通知",
       "importance": "Low",
       "todos": [],
-      "time": "21:56"
+      "time": "17:00"
+    },
+    {
+      "from": "國泰世華銀行",
+      "subject": "國泰世華銀行消費彙整通知",
+      "importance": "Low",
+      "todos": [],
+      "time": "14:23"
     }
   ]
 }
