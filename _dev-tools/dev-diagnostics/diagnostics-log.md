@@ -14501,3 +14501,41 @@
 }
 ```
 
+## workspace:active-leaf-change · INFO · 2026-06-07T12:04:22.497Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-07T12:04:22.715Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-07T12:04:22.715Z
+
+```json
+{
+  "path": "wiki/Github/repos/mvanhorn-last30days-skill — AI 多平台社群研究引擎.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-07T12:04:22.790Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-07T12:04:22.802Z
+
+```json
+{}
+```
+
