@@ -46,11 +46,77 @@ print(json.dumps({"count": count, "jobs": jobs}, ensure_ascii=False))
     }
 }
 
-# ── 2. Social monitor label ────────────────────────────────────────────────
-$socialLabel = "N/A"
+# ── 2. Social monitor label + topic headlines ─────────────────────────────
+$socialLabel  = "N/A"
+$socialTopics = @()
 $latestRep = Get-ChildItem "d:\Claude\social-monitor\reports\report-*.md" -ErrorAction SilentlyContinue |
     Sort-Object LastWriteTime -Descending | Select-Object -First 1
-if ($latestRep) { $socialLabel = $latestRep.Name -replace 'report-','' -replace '\.md','' }
+if ($latestRep) {
+    $SYSTEM_SECTIONS = @('Warnings','DEGRADED RUN WARNING','Stats','Source Coverage',
+                         'Ranked Evidence Clusters','Pre-Research Status',
+                         '今日重點摘要（AI）','今日重點','AI Summary',
+                         'Code Review Summary','Freshness','背景資訊',
+                         'Summary','Background','Evidence','Raw Evidence')
+    $lines        = Get-Content $latestRep.FullName -Encoding UTF8
+    $curTopic     = $null
+    $inClusters   = $false
+    $topicHasData = $false
+    $curHeadlines = @()
+
+    function FlushTopic {
+        param($topic, $hasData, $headlines, [ref]$list)
+        if (-not $topic) { return }
+        if ($hasData) {
+            $list.Value += [PSCustomObject]@{
+                topic     = $topic
+                headline  = if ($headlines[0]) { $headlines[0].text } else { '' }
+                headlines = $headlines
+            }
+        } else {
+            $list.Value += [PSCustomObject]@{
+                topic     = $topic
+                headline  = '（無資料）'
+                headlines = @()
+            }
+        }
+    }
+
+    foreach ($ln in $lines) {
+        if ($ln -match '^## (.+)$') {
+            $h = $Matches[1].Trim()
+            if ($SYSTEM_SECTIONS -notcontains $h) {
+                FlushTopic $curTopic $topicHasData $curHeadlines ([ref]$socialTopics)
+                $curTopic     = $h
+                $inClusters   = $false
+                $topicHasData = $false
+                $curHeadlines = @()
+            } elseif ($h -eq 'Ranked Evidence Clusters') {
+                $inClusters = $true
+            } else {
+                $inClusters = $false
+            }
+        } elseif ($inClusters -and $curTopic -and $ln -match '^### (\d+)\. (.+?) \(score') {
+            $rank = [int]$Matches[1]
+            if ($rank -le 10) {
+                $title = $Matches[2].Trim()
+                $src   = ''
+                if ($ln -match 'sources?: (.+?)\)') { $src = $Matches[1].Trim() }
+                $curHeadlines += [PSCustomObject]@{ text = $title; source = $src }
+                $topicHasData  = $true
+            }
+        }
+    }
+    # flush last topic
+    FlushTopic $curTopic $topicHasData $curHeadlines ([ref]$socialTopics)
+
+    $hhmm = ($latestRep.Name -replace 'report-\d{4}-\d{2}-\d{2}-','') -replace '\.md',''
+    if ($socialTopics.Count -gt 0) {
+        $hasData = ($socialTopics | Where-Object { $_.headline -ne '（無資料）' }).Count
+        $socialLabel = "$($socialTopics.Count) 主題 · $hasData 有資料 · $hhmm"
+    } else {
+        $socialLabel = $hhmm
+    }
+}
 
 # ── 3. Latest Morning Briefing ────────────────────────────────────────────
 $briefingTitle = "尚未產生"
@@ -297,6 +363,7 @@ $data = [ordered]@{
     jobCount      = $jobCount
     jobList       = $jobList
     socialLabel   = $socialLabel
+    socialTopics  = $socialTopics
     briefingTitle = $briefingTitle
     tokenEstimate = $tokenEstimate
     github        = ($githubData   | ConvertFrom-Json)
