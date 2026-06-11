@@ -99,6 +99,18 @@ git clone https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
 
 ---
 
+## 已匯入 gbrain（2026-06-11）
+
+104 個 .txt/.json/.yaml 檔複製到 `d:\Claude\brain-docs\system-prompts-and-models-of-ai-tools\`
+並改加 `.md` 副檔名（gbrain `import` 只認 markdown），執行
+`gbrain import --no-embed` + `gbrain embed --stale`。
+
+結果：109 頁、829 chunks 全部 embed 完成（4 個 PNG 截圖檔因二進位內容被跳過）。
+現可用 gbrain 混合搜尋（語意 + BM25）直接查詢這 30+ 工具的 system prompt 內容，
+不必手動翻 `reference-repos/` 原始檔案。
+
+---
+
 ## 反向連結
 
 - [[Github/repos/prompt-master]] — 同屬 prompt 設計研究資源
