@@ -17,6 +17,11 @@
 - `2026-06-03 16:00 | COMPILE | Google Calendar MCP 整合 → Phase 3 完成` | 新增 fetch-calendar.ps1（headless Claude + --dangerously-skip-permissions + Google Calendar MCP）；Dashboard Morning Brief 新增📅日曆按鈕；行程區塊顯示全天/時間事件；已驗證義大利商旅全天事件正確顯示
 - `2026-06-03 17:30 | COMPILE | Gmail MCP Email Brief → Phase 4a 完成` | 新增 fetch-email-brief.ps1（Gmail MCP search_threads+get_thread；Claude 評估 Emergency/High/Med/Low；萃取 Todo 事項；略過 newsletter）；Dashboard 新增 EMAIL BRIEF 全寬區塊（Morning Brief 下方）；📧 Email 按鈕；Emergency 紅色閃爍；已驗證：佛羅倫斯餐廳訂位 High+3 個待辦，13 封 newsletter 略過
 
+### 2026-06-11 | COMPILE
+- `2026-06-11 00:00 | COMPILE | github.com/addyosmani/agent-skills → wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md` | repomix 分析（90 檔，126K tokens）；Addy Osmani（Google Chrome）生產級工程 skills 套件；24 skills 涵蓋 SDLC 六階段 + 7 斜線指令 + 4 專用 Agent + Hooks；SKILL.md 原生格式；結論 ✅ 適合安裝（/plugin marketplace add addyosmani/agent-skills，與現有 skills 環境 100% 相容，呼應 CLAUDE.md R8/R10/R14）
+### 2026-06-10 | COMPILE
+- `2026-06-10 22:00 | COMPILE | github.com/x1xhlol/system-prompts-and-models-of-ai-tools → wiki/Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools.md` | repomix 分析 104 檔 / 461K tokens；收錄 30+ AI 工具真實 system prompt（Claude Code 2.0 / Cursor 多版本 / Manus / Windsurf / Kiro 等）；✅ 適合 clone 備查
+
 ---
 
 ## 2026-05

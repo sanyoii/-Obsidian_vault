@@ -1,6 +1,6 @@
 # 7-Agent 工廠工作流 SOP
 
-> 最後更新：2026-06-04（v3：完整 Bug 處理生命週期 — Issue Tracking + RCA + Loop-back + 防止再發）
+> 最後更新：2026-06-11（v4：補 Step 0 路由 ROUTER.md + 執行機制 ORCHESTRATION.md）
 > 適用：需要開發新功能、新工具、新系統時的標準 Agent 分工流程
 
 ---
@@ -10,6 +10,24 @@
 **舊問題：** 一個 AI session 被迫同時扮演研究員、架構師、工程師、測試員 → context 混亂 → 錯誤一路擴散。
 
 **解法：** 每個 Agent 只做一段任務，完成後交棒，錯誤不跨層。
+
+---
+
+## Step 0：要不要進工廠？（ROUTER.md）
+
+新任務開始前，先判斷三選一，模稜兩可預設 `direct`：
+
+| 分類 | 適用 | 範例 |
+|------|------|------|
+| `direct` | 單一檔案/函式可解決、bug fix、問答 | 「改這個函式的命名」「為什麼這段會報錯？」 |
+| `factory` | 完整功能交付，可能跨前後端 | 「加一個職缺收藏功能」 |
+| `sparc` | 設計/架構/演算法本身就是產出 | 「設計一個排程演算法並寫 pseudocode」 |
+
+選定 `factory` 後，再依下方「策略選擇」挑 `minimal` / `standard` / `research-heavy`。
+
+> 來源：`d:\Claude\.claude\agents\workflow\ROUTER.md`，仿
+> [[x1xhlol-system-prompts-and-models-of-ai-tools]] 收錄的 Kiro Mode Classifier
+> 分類定義 + 範例 + 預設規則格式設計。
 
 ---
 
@@ -67,6 +85,28 @@
 | `research-heavy` | 新領域、未知技術、架構選型 | researcher（多輪）→ story → spec → backend → test |
 
 **怎麼選：** 有前後端都要改 → standard；只改一層 → minimal；完全不熟的技術 → research-heavy。
+
+---
+
+## 執行機制（ORCHESTRATION.md）
+
+進工廠後，主對話的 Claude 本身就是 orchestrator，用 `Agent` tool
+依序/平行呼叫各 agent（`subagent_type` = agent 檔名）。
+
+- **Context 傳遞**：researcher → story-writer 傳研究摘要全文；
+  spec-writer 之後改用檔案傳遞——直接告知 `specs/<branch>/spec.md` 路徑，
+  不必複製規格全文（spawn 出來的 agent 不記得對話）
+- **平行執行**：backend-builder + frontend-builder 在**同一則訊息**內
+  發出兩個 `Agent` tool call
+- **人工檢查點**：到達檢查點時輸出該 agent 的完整輸出格式內容後停下，
+  等使用者下一則訊息才繼續呼叫下一棒
+- **Bug loop-back**：test-verifier/validator 路由回某 agent 時，
+  主對話重新呼叫該 agent 並附上 Bug 描述 + 重現步驟 + spec 段落，
+  修復後跳回 test-verifier 重跑對應 AC（沿用下方 Loop-back 協議的次數限制）
+
+> 來源：`d:\Claude\.claude\agents\workflow\ORCHESTRATION.md`，仿
+> [[x1xhlol-system-prompts-and-models-of-ai-tools]] 收錄的 Manus Agent loop
+> （分析狀態→選工具→等待執行→迭代→提交結果）框架設計。
 
 ---
 
