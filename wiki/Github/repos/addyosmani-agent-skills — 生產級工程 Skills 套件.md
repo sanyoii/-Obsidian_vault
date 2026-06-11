@@ -26,10 +26,11 @@ tags:
 ## ✅ 安裝狀態（2026-06-11 已完成）
 
 - **方法**：GitHub SSH 不可用，改用本地 clone（`d:\Claude\reference-repos\agent-skills\`）+ 本地路徑 marketplace（`.claude-plugin/marketplace.json` 的 `source` 改為 `"./"`），再 `claude plugin install agent-skills@addy-agent-skills` 成功。
-- **已啟用**：32 個 Skills + 8 個 Slash Commands + SessionStart hook（依賴 `jq`，已用 `winget install jqlang.jq` 補裝 1.8.1）。
+- **已啟用**：32 個 Skills + 8 個 Slash Commands + SessionStart hook。
 - **4 個 Agent personas**：plugin.json 的 `agents` 陣列宣告未被此版本 Claude Code 載入，改為手動複製到 `d:\Claude\.claude\agents\specialized\agent-skills\` 並啟用：
   - `code-reviewer`、`test-engineer`、`web-performance-auditor` — 原樣安裝
   - `security-auditor` → 改名為 **`sdlc-security-auditor`**（與既有 v3 `security-auditor` agent 名稱衝突，frontmatter/標題已同步改名）
+- **Hooks 整合**：詳見下方「Hooks」章節 — SessionStart 已自動生效並修好 jq 依賴；`sdd-cache`/`simplify-ignore` 為 **per-project 選配**，目前未在任何專案啟用。
 - **詳細記錄**：`memory/reference_addyosmani_agent_skills.md`（自動記憶）
 
 ---
@@ -75,13 +76,17 @@ tags:
 - `test-engineer` — TDD 驅動的測試撰寫
 - `web-performance-auditor` — Core Web Vitals + Chrome DevTools 分析
 
-### Hooks（自動觸發）
+### Hooks
 
-| Hook | 功能 |
-|------|------|
-| `sdd-cache-pre/post.sh` | Spec-Driven Development 快取，避免重複讀取 spec 消耗 token |
-| `simplify-ignore.sh` | 過濾不需要簡化的檔案（node_modules、lock 檔等） |
-| `session-start.sh` | session 啟動時載入工程規範 |
+| Hook | 功能 | 安裝範圍 | 本環境狀態 |
+|------|------|---------|-----------|
+| `session-start.sh` | session 啟動時注入 `using-agent-skills` meta-skill（skill discovery flowchart + 核心行為準則） | plugin 自動安裝（`hooks/hooks.json` 全域 SessionStart） | ✅ 已生效（依賴 `jq`，已修正 PATH，見下方備註） |
+| `sdd-cache-pre.sh` + `sdd-cache-post.sh` | `/source-driven-development` 用，快取 WebFetch 文件查詢結果（ETag 驗證新鮮度，非 TTL） | **⚠️ per-project 選配**，需手動加到該專案 `.claude/settings.json` 的 PreToolUse/PostToolUse(WebFetch) | ❌ 未在任何專案啟用 |
+| `simplify-ignore.sh` | `/code-simplify` 用，保護標註過的程式碼區塊（`/* simplify-ignore-start */`）不被簡化 | **⚠️ per-project 選配**，需手動加到該專案 `.claude/settings.json` 的 PreToolUse(Read)/PostToolUse(Edit\|Write)/Stop | ❌ 未在任何專案啟用 |
+
+> **jq 依賴修正**：`session-start.sh` 需要 `jq`。`winget install jqlang.jq` 裝了 1.8.1 但未建立 PATH symlink，hook 仍降級為純 INFO 訊息。修正方式：將 `jq.exe` 從 WinGet 套件目錄複製到 `C:\Users\sanyo\.local\bin\jq.exe`（已在 PATH），驗證後 hook 完整輸出 meta-skill 內容（priority `IMPORTANT`）。
+>
+> **per-project 選配 hook 怎麼加**：在該專案 `.claude/settings.json`（或 `.local.json`）依照 `hooks/SDD-CACHE.md` / `hooks/SIMPLIFY-IGNORE.md` 的範例加入對應 hook 條目，並把指令路徑指向 `d:\Claude\reference-repos\agent-skills\hooks\<script>.sh` 的絕對路徑（因為 hook script 不在該專案目錄內）。只有實際會用到 `/source-driven-development` 或 `/code-simplify` 的專案才需要加，目前**全環境皆未設定**。
 
 ### References（靜態 Checklist）
 
@@ -114,7 +119,7 @@ tags:
 | **CLAUDE.md 原則呼應** | ✅ `doubt-driven-development` = R14 Bug 調查先行；`context-engineering` = R8 讀後再寫；`spec-driven-development` + `planning-and-task-breakdown` = R10 Checkpoint |
 | **7-Agent 工廠工作流** | ✅ `/build auto` 邏輯與 researcher→spec-writer→builder→verifier 工廠流程高度對齊 |
 | **現有 skills 衝突風險** | 🟢 低。純 Markdown + Bash，不碰 settings.json/agents/MCP 設定 |
-| **Hooks 整合** | ⚠️ `sdd-cache` 和 `simplify-ignore` hooks 需手動加入 .claude/settings.json，但不衝突現有 hooks |
+| **Hooks 整合** | ✅ SessionStart hook 已自動生效（jq 依賴已修正）；`sdd-cache`/`simplify-ignore` 為 per-project 選配，未啟用，不衝突現有 hooks |
 | **作者可信度** | ✅ Addy Osmani 為 Google Chrome 團隊工程師，在 web 效能與工程最佳實踐領域有長期貢獻 |
 
 ---

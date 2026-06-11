@@ -71517,3 +71517,209 @@
 }
 ```
 
+## workspace:active-leaf-change · INFO · 2026-06-11T19:22:56.679Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T19:24:10.393Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T19:24:10.394Z
+
+```json
+{
+  "path": "wiki/Tools/taste-skill.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T19:24:10.459Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T19:24:10.470Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T19:24:32.362Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T19:24:32.498Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T19:24:32.498Z
+
+```json
+{
+  "path": "wiki/Tools/spec-kit.md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T19:24:32.507Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T19:24:47.142Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T19:24:47.221Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T19:24:47.222Z
+
+```json
+{
+  "path": "wiki/Tools/last30days.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T19:24:47.323Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T19:24:47.334Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T19:25:06.730Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T19:25:06.731Z
+
+```json
+{
+  "path": "wiki/Tools/frontend-slides.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T19:25:06.784Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T19:25:06.796Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T19:25:13.209Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T19:25:13.295Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T19:25:13.295Z
+
+```json
+{
+  "path": "wiki/Tools/easy-vibe.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T19:25:13.365Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T19:25:13.371Z
+
+```json
+{}
+```
+
+## vault:modify · INFO · 2026-06-11T19:38:11.487Z
+
+```json
+{
+  "path": "wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T19:38:32.383Z
+
+```json
+{
+  "path": "wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T19:38:41.095Z
+
+```json
+{
+  "path": "wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T19:38:56.499Z
+
+```json
+{
+  "path": "wiki/log.md"
+}
+```
+
