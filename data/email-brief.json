@@ -1,44 +1,16 @@
 [
   {
-    "from": "中國信託商業銀行",
-    "subject": "安全性警示通知(陌生位置)",
-    "importance": "High",
-    "todos": ["確認義大利登入是否本人操作（IP: 93.47.229.33）", "若非本人，立即修改帳號密碼"],
-    "time": "17:00"
-  },
-  {
-    "from": "國泰世華銀行 CUBE App",
-    "subject": "CUBE App登入成功通知",
-    "importance": "Medium",
-    "todos": ["確認義大利 IP 登入是否本人操作"],
-    "time": "17:01"
-  },
-  {
-    "from": "XREX",
-    "subject": "【通知】XREX 收費政策更新",
-    "importance": "Medium",
-    "todos": ["閱讀新收費政策附件", "7 天後（約 6/11）生效，確認是否接受新條款"],
-    "time": "16:34"
-  },
-  {
     "from": "Discord",
-    "subject": "twnoob_878 在 CO SHOP 中提到您",
+    "subject": "butter4193 在 笨錢社群 中提到您",
     "importance": "Medium",
-    "todos": ["查看 Discord CO SHOP 的 Code Review 排隊串（06/04）"],
-    "time": "13:53"
-  },
-  {
-    "from": "中國信託銀行",
-    "subject": "行動銀行APP登入成功通知",
-    "importance": "Low",
-    "todos": [],
-    "time": "17:00"
+    "todos": ["查看 Discord 笨錢社群中 butter4193 的訊息並回應", "留意 06/17 道館 Code Review 排隊串（Sherry 主講）"],
+    "time": "11:24"
   },
   {
     "from": "國泰世華銀行",
-    "subject": "國泰世華銀行消費彙整通知",
+    "subject": "消費彙整通知：NT$59 Martinelli 20（IT）",
     "importance": "Low",
     "todos": [],
-    "time": "14:23"
+    "time": "06:36"
   }
 ]
