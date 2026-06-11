@@ -544,8 +544,8 @@ class DashboardView extends obsidian.ItemView {
                 'Reddit':'Reddit','Hacker News':'HN','GitHub':'GH',
                 'Polymarket':'PM','YouTube':'YT','X':'X','Twitter':'X','V2EX':'V2EX'
             };
-            const getText = h => typeof h === 'string' ? h : (h.text || '');
-            const getSrc  = h => typeof h === 'string' ? '' : (h.source || '');
+            const getText = h => typeof h === 'string' ? h : (h?.text || '');
+            const getSrc  = h => typeof h === 'string' ? '' : (h?.source || '');
             return data.socialTopics.map(t => {
                 const hl = (t.headlines && t.headlines.length > 0)
                     ? t.headlines.slice(0, n)

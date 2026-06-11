@@ -1,0 +1,26 @@
+{
+  "panelSettings": {
+    "github": true,
+    "hn": false,
+    "ph": false,
+    "lobsters": false,
+    "ithome": true,
+    "techorange": true,
+    "techcrunch": true,
+    "email": true,
+    "social": true,
+    "fontSize": 14,
+    "socialTopicCount": 5,
+    "panelOrder": [
+      "github",
+      "social",
+      "ithome",
+      "techorange",
+      "techcrunch",
+      "email",
+      "hn",
+      "ph",
+      "lobsters"
+    ]
+  }
+}
