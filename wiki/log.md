@@ -19,6 +19,7 @@
 
 ### 2026-06-11 | COMPILE
 - `2026-06-11 00:00 | COMPILE | github.com/addyosmani/agent-skills → wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md` | repomix 分析（90 檔，126K tokens）；Addy Osmani（Google Chrome）生產級工程 skills 套件；24 skills 涵蓋 SDLC 六階段 + 7 斜線指令 + 4 專用 Agent + Hooks；SKILL.md 原生格式；結論 ✅ 適合安裝（/plugin marketplace add addyosmani/agent-skills，與現有 skills 環境 100% 相容，呼應 CLAUDE.md R8/R10/R14）
+- `2026-06-11 23:00 | COMPILE | claude plugin install（本地 marketplace 繞過）→ wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md` | 安裝完成：32 skills + 8 commands + SessionStart hook（jq 已用 winget 補裝）；GitHub SSH 失敗改用本地 clone + marketplace source="./" 繞過；4 個 agent personas 因 plugin.json 格式未載入，改手動裝至 .claude/agents/specialized/agent-skills/，security-auditor 改名 sdlc-security-auditor 避免與 v3 衝突；同步更新 claude-tools-dashboard.html（新增 AGENTS 分類 + Plugin 說明卡）
 ### 2026-06-10 | COMPILE
 - `2026-06-10 22:00 | COMPILE | github.com/x1xhlol/system-prompts-and-models-of-ai-tools → wiki/Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools.md` | repomix 分析 104 檔 / 461K tokens；收錄 30+ AI 工具真實 system prompt（Claude Code 2.0 / Cursor 多版本 / Manus / Windsurf / Kiro 等）；✅ 適合 clone 備查
 

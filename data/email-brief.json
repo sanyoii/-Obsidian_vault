@@ -1,16 +1,16 @@
 [
   {
-    "from": "Discord",
-    "subject": "butter4193 在 笨錢社群 中提到您",
-    "importance": "Medium",
-    "todos": ["查看 Discord 笨錢社群中 butter4193 的訊息並回應", "留意 06/17 道館 Code Review 排隊串（Sherry 主講）"],
-    "time": "11:24"
+    "from": "財政部電子發票整合服務平台",
+    "subject": "115年03-04月期雲端發票中獎獎金匯款成功通知",
+    "importance": "High",
+    "todos": ["確認國泰世華帳號（051***829）已收到 NT$1,000 獎金"],
+    "time": "22:41"
   },
   {
-    "from": "國泰世華銀行",
-    "subject": "消費彙整通知：NT$59 Martinelli 20（IT）",
+    "from": "Google Payments",
+    "subject": "Google Cloud Platform & APIs: Payment received",
     "importance": "Low",
     "todos": [],
-    "time": "06:36"
+    "time": "23:28"
   }
 ]

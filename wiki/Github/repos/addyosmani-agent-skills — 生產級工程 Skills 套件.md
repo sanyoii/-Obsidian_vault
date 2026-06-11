@@ -23,6 +23,17 @@ tags:
 
 ---
 
+## ✅ 安裝狀態（2026-06-11 已完成）
+
+- **方法**：GitHub SSH 不可用，改用本地 clone（`d:\Claude\reference-repos\agent-skills\`）+ 本地路徑 marketplace（`.claude-plugin/marketplace.json` 的 `source` 改為 `"./"`），再 `claude plugin install agent-skills@addy-agent-skills` 成功。
+- **已啟用**：32 個 Skills + 8 個 Slash Commands + SessionStart hook（依賴 `jq`，已用 `winget install jqlang.jq` 補裝 1.8.1）。
+- **4 個 Agent personas**：plugin.json 的 `agents` 陣列宣告未被此版本 Claude Code 載入，改為手動複製到 `d:\Claude\.claude\agents\specialized\agent-skills\` 並啟用：
+  - `code-reviewer`、`test-engineer`、`web-performance-auditor` — 原樣安裝
+  - `security-auditor` → 改名為 **`sdlc-security-auditor`**（與既有 v3 `security-auditor` agent 名稱衝突，frontmatter/標題已同步改名）
+- **詳細記錄**：`memory/reference_addyosmani_agent_skills.md`（自動記憶）
+
+---
+
 ## 一句話說明
 
 `agent-skills` 是一套「生產級 AI 編碼工程流程」skills 套件：把資深工程師在 spec、計畫、實作、測試、審查、上線各階段的最佳實踐和品質關卡全部封裝成 SKILL.md，安裝後 Claude Code 自動依當前任務觸發對應 skill，無需手動選型。
@@ -60,7 +71,7 @@ tags:
 ### 4 個專用 Agent
 
 - `code-reviewer` — 五軸程式碼審查（正確性/可讀性/架構/安全/效能）
-- `security-auditor` — 安全漏洞審計
+- `security-auditor`（本環境已改名為 `sdlc-security-auditor`） — 安全漏洞審計
 - `test-engineer` — TDD 驅動的測試撰寫
 - `web-performance-auditor` — Core Web Vitals + Chrome DevTools 分析
 
@@ -113,10 +124,19 @@ tags:
 **✅ 適合安裝 — SKILL.md 原生格式，一行指令即可將 24 個生產級工程 skills 注入現有 Claude Code 環境。**
 
 ```bash
-# Claude Code Plugin Marketplace 安裝
+# Claude Code Plugin Marketplace 安裝（官方建議寫法）
 /plugin marketplace add addyosmani/agent-skills
 /plugin install agent-skills@addy-agent-skills
 ```
+
+> ⚠️ **本環境實際安裝時遇到 GitHub SSH 認證失敗**（無 SSH key），改用本地 clone + 本地路徑 marketplace 繞過：
+> ```bash
+> git clone --depth 1 https://github.com/addyosmani/agent-skills.git d:/Claude/reference-repos/agent-skills
+> claude plugin marketplace add "d:\Claude\reference-repos\agent-skills"
+> # 編輯 .claude-plugin/marketplace.json：plugin 的 source 改為 "./"
+> claude plugin marketplace update addy-agent-skills
+> claude plugin install agent-skills@addy-agent-skills
+> ```
 
 安裝後 skills 自動放至 C:\Users\sanyo\.claude\skills\，斜線指令 `/spec`、`/plan`、`/build auto`、`/review`、`/ship` 即刻可用。
 

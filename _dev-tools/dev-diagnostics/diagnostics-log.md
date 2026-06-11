@@ -71373,3 +71373,147 @@
 }
 ```
 
+## vault:create · INFO · 2026-06-11T15:09:09.249Z
+
+```json
+{
+  "path": "raw/sources/2026-06-11_claude-code-claude資料夾結構.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T16:30:38.282Z
+
+```json
+{
+  "viewType": "command-center-dashboard"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T16:30:53.901Z
+
+```json
+{
+  "path": "data/dashboard.json"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T16:30:53.936Z
+
+```json
+{
+  "path": "data/dashboard.json"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T16:30:55.559Z
+
+```json
+{
+  "path": "data/dashboard.json"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T16:30:55.592Z
+
+```json
+{
+  "path": "data/dashboard.json"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T16:30:56.002Z
+
+```json
+{
+  "path": "data/dashboard.json"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T16:30:56.008Z
+
+```json
+{
+  "path": "data/dashboard.json"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T16:32:21.986Z
+
+```json
+{
+  "path": "data/email-brief.json"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T16:45:05.244Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## vault:create · INFO · 2026-06-11T19:19:21.852Z
+
+```json
+{
+  "path": "wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md.tmp.47692.d2b7fe315fd1"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T19:19:21.879Z
+
+```json
+{
+  "path": "wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T19:19:22.788Z
+
+```json
+{
+  "path": "wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md.tmp.47692.d2b7fe315fd1"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T19:19:28.194Z
+
+```json
+{
+  "path": "wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T19:19:41.344Z
+
+```json
+{
+  "path": "wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md.tmp.47692.a1b79b20b67d"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T19:19:41.383Z
+
+```json
+{
+  "path": "wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T19:19:41.758Z
+
+```json
+{
+  "path": "wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md.tmp.47692.a1b79b20b67d"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T19:20:10.426Z
+
+```json
+{
+  "path": "wiki/log.md"
+}
+```
+
