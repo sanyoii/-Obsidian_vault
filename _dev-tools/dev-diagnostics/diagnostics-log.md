@@ -71723,3 +71723,847 @@
 }
 ```
 
+## vault:modify · INFO · 2026-06-11T20:13:16.039Z
+
+```json
+{
+  "path": "wiki/Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:45:19.476Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:45:19.563Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:45:19.564Z
+
+```json
+{
+  "path": "wiki/Tools/deck-ai-classroom.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:45:19.704Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:45:19.721Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:45:33.849Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:45:33.938Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:45:33.939Z
+
+```json
+{
+  "path": "wiki/Tools/command-center-dashboard.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:45:33.986Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:45:33.993Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:46:01.728Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:46:01.896Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:46:01.896Z
+
+```json
+{
+  "path": "wiki/Tools/cleanup-transcripts.md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:46:01.900Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:46:07.761Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:46:07.884Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:46:07.884Z
+
+```json
+{
+  "path": "wiki/Tools/claude-tools-dashboard.md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:46:07.889Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:46:11.650Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:46:11.712Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:46:11.712Z
+
+```json
+{
+  "path": "wiki/Tools/ChatGPT-Image2-Prompts.md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:46:11.717Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:46:14.302Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:46:14.370Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:46:14.371Z
+
+```json
+{
+  "path": "wiki/Tools/book-to-skill.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:46:14.433Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:46:14.441Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:46:51.662Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:46:51.742Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:46:51.743Z
+
+```json
+{
+  "path": "wiki/Tools/awesome-llm-apps.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:46:51.783Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:46:51.794Z
+
+```json
+{}
+```
+
+## vault:create · INFO · 2026-06-11T20:47:14.245Z
+
+```json
+{
+  "path": "wiki/求職"
+}
+```
+
+## vault:create · INFO · 2026-06-11T20:47:14.251Z
+
+```json
+{
+  "path": "wiki/求職/Ashby Support Engineer (APAC) — 求職進度.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T20:47:28.004Z
+
+```json
+{
+  "path": "wiki/_index.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:47:52.646Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:47:52.738Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:47:52.739Z
+
+```json
+{
+  "path": "wiki/Tools/AI-PPT排行榜2026.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:47:52.822Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:47:52.830Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:48:26.183Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:48:26.269Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:48:26.269Z
+
+```json
+{
+  "path": "wiki/Tools/claude-tools-dashboard.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:48:26.322Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:48:26.329Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:49:06.095Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:49:11.953Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:49:11.953Z
+
+```json
+{
+  "path": "wiki/求職/Ashby Support Engineer (APAC) — 求職進度.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:49:11.991Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:49:12.000Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:50:39.201Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:45.167Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:51:45.168Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/AppFlowy-IOAppFlowy Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:45.203Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:51:45.211Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:48.978Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:49.042Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:51:49.042Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/claude-code-workspacedocs2026-05-16-claude-code-best-practices.md at main.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:49.065Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:51:49.071Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:51.631Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:51.719Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:51:51.719Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/claude-memdocsi18nREADME.zh.md at main.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:51.746Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:51:51.754Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:55.052Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:55.711Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:51:55.711Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/obsidian-communityweb-clipper-templates Community collection of templates for the official Obsidian web clipper.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:55.743Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:51:55.753Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:58.785Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:58.889Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:51:58.890Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/open-slide github cover.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:51:58.932Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:51:58.939Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:04.363Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:04.468Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:52:04.469Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/ToolsaiSkills-Security-Check.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:04.499Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:52:04.507Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:07.749Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:07.833Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:52:07.834Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/web-clipper-templatestemplates at main.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:07.856Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:52:07.862Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:11.491Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:11.581Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:52:11.581Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/mvanhorncli-printing-press Every API has a secret identity. This finds it, absorbs every feature from every competing tool, then builds the GOAT CLI — designed for AI agents first, with SQLite sync, offline search, and compound insight commands.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:11.608Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:52:11.616Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:19.121Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:19.235Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:52:19.235Z
+
+```json
+{
+  "path": "wiki/Github/repos/ECC — Claude Code harness-native 操作系統.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:19.275Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:52:19.284Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:48.819Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:48.905Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:52:48.905Z
+
+```json
+{
+  "path": "wiki/Github/repos/eigent.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:52:48.960Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:52:48.967Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:53:08.611Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:53:08.708Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:53:08.708Z
+
+```json
+{
+  "path": "wiki/Github/repos/ait-vcs — AI 編碼代理嘗試帳本.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:53:08.752Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:53:08.762Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:53:13.477Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:53:13.550Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:53:13.550Z
+
+```json
+{
+  "path": "wiki/Github/repos/ai-engineering-from-scratch.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:53:13.600Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:53:13.607Z
+
+```json
+{}
+```
+

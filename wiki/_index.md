@@ -79,6 +79,12 @@
 
 ---
 
+### 求職
+
+- [[求職/Ashby Support Engineer (APAC) — 求職進度|Ashby Support Engineer (APAC) — 求職進度]] — 已投遞(2026-06-10)等recruiter回覆；技術準備重點、SEG對照表、STAR案例庫 `#求職 #ashby #career`
+
+---
+
 ### Github/Repos（已分析 Repos）
 
 - [[Github/repos/Panniantong-Agent-Reach — AI Agent 互聯網感知層|Agent Reach — AI Agent 互聯網感知層]] — 17 平台 skills 腳手架（網頁/YouTube/Twitter/Reddit/小紅書/B站/微博/V2EX/雪球…），一句話安裝，零配置 8 頻道；✅ 適合安裝 `#skills #social-media #claude-code #mcp #internet`
