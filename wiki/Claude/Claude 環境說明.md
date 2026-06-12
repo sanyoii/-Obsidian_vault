@@ -1056,6 +1056,15 @@ cd d:\Claude\careerbot
 
 **用途：** 人類圖（Human Design）深度分析工具。讀取個人圖表，輸出類型、策略、權威、通道、PHS 等完整解析報告。
 
+**🧮 自動計算面板：** `index.html` 內建面板，搭配本機 `calc-server/`（Flask + pyswisseph，port 5001）只需輸入出生日期/時間/縣市，即可自動算出並填入：輪迴交叉 4 閘門、南北交點 4 閘門、Type/Authority/Profile/Definition、九大能量中心、36 條通道、PHS（Color/Tone/環境）、四箭頭 Variable（L/R）、年齡。四箭頭與 PHS 的 L/R 規則：tone 1-3 → L/Active，4-6 → R/Passive。
+
+**⬇ 匯出報告：** 產生獨立靜態 HTML 報告，雙視角合併顯示（高頻+陰影同時呈現），不需連網。
+
+```powershell
+cd d:\Claude\hd-decode\calc-server
+.\start.bat   # 啟動本機計算服務（http://localhost:5001）
+```
+
 ---
 
 ### 13. Open Slide（`open-slide/`）
