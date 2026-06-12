@@ -19,6 +19,10 @@
 >
 > **豪華生日海報 Prompts** — [[豪華生日海報-Prompts]]
 > - #1 數字立體雕刻生日海報（孩童人像 + 奢華牆面 + 立體數字）
+>
+> **Fable 5 案例庫 Prompts** — [[Fable5-Cases-Prompts]]
+> - 42 個 Claude Fable 5 實測案例（遊戲14・模擬視覺化8・創意藝術8・工程研究9・文件簡報3）
+> - 17 個原文 prompt、25 個重建 prompt，依分類整理可直接複製重現
 
 ---
 
@@ -62,6 +66,18 @@
 |---|------|-----------|------|--------|
 | #1 | 數字立體雕刻生日海報 | 孩童正面人像照 | #人像 #海報 #生日 #立體 | [[豪華生日海報-Prompts]] |
 
+### Fable 5 案例庫 Prompts（42 個案例，coding/agent 類）
+
+> 來源：https://eugeneintw.github.io/fable5-cases/ ｜ 🟢 原文 prompt = 推文/文章原始指令、🟡 重建 prompt = 依案例描述補寫
+
+| 分類 | 數量 | 代表案例 | 標籤 | 來源檔 |
+|------|------|---------|------|--------|
+| 遊戲 | 14 | Skyrim/GTA6/Minecraft/Pokémon 一句話複刻、自我意識貪吃蛇 | #遊戲開發 #ThreeJS #oneShot | [[Fable5-Cases-Prompts]] |
+| 模擬視覺化 | 8 | 太陽系模擬、等時圈地圖、機械錶機芯、AI村莊 | #模擬 #ThreeJS #WebGL | [[Fable5-Cases-Prompts]] |
+| 文件簡報 | 3 | McKinsey報告複製、設計級投影片、論文解說投影片 | #文件簡報 #報告 | [[Fable5-Cases-Prompts]] |
+| 創意藝術 | 8 | 鋼琴視覺化、SVG鵜鶘、漫畫腳本、紀錄片MP4 | #創意藝術 #SVG #音樂 | [[Fable5-Cases-Prompts]] |
+| 工程研究 | 9 | 人形機器人設計、波音747 CAD、V8引擎、/goal 迴圈範本 | #工程研究 #goal迴圈 #CAD | [[Fable5-Cases-Prompts]] |
+
 ---
 
 ## 標籤索引
@@ -85,6 +101,7 @@
 | [[旅遊插畫-Prompts]] | 5 套旅遊插畫模板（T1–T5），每套含 Meta 模板 + Florence 版（T1 含 Rome）| 5 套 / 11 個 Prompt |
 | [[ChatGPT-Image2-Prompts]] | ChatGPT Image 2 爆款圖整理包，含快速索引 | 11 個 Prompt |
 | [[豪華生日海報-Prompts]] | 數字立體雕刻生日海報模板 | 1 個 Prompt |
+| [[Fable5-Cases-Prompts]] | Fable 5 案例庫——遊戲/模擬/簡報/藝術/工程 42 個實測 prompt（含原文連結與讚數） | 42 個 Prompt |
 
 ---
 
