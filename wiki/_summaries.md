@@ -16,6 +16,14 @@
 
 ---
 
+## [[Github/留看repos/已整理/Madison-de-Chao-rainbow-sanctuary-report-site — 命理解讀報告銷售落地頁|Rainbow Sanctuary — 命理解讀報告銷售落地頁]]
+**標籤：** `#nextjs` `#landing-page` `#ziwei` `#astrology` `#human-design` `#reference`
+**摘要：** Next.js 15 單頁網站，銷售《全方位命理解讀報告》（紫微×八字×占星×人類圖，以「人生羅盤」為中樞）。三階定價 1680/2880/3980，內容全部 `data/*.json` 驅動。非排盤引擎，純行銷落地頁，與「命運羅盤」專案主題高度重疊，頁面架構可參考。
+**來源：** https://github.com/Madison-de-Chao/-
+**建立：** 2026-06-12
+
+---
+
 ## [[Github/留看repos/已整理/itsfatduckoptimizerDuck — Windows 系統最佳化工具|optimizerDuck — 免費開源 Windows 系統最佳化工具]]
 **標籤：** `#tool` `#windows` `#optimization` `#wpf` `#dotnet`
 **摘要：** 免費開源 Windows 優化工具，30+ 個調整項（效能/隱私/GPU/電源/Bloatware/UX），每項附風險評級，全部可一鍵復原。WPF/.NET 10，不需安裝直接跑 exe。內附完整 Claude Code/Codex/Gemini 開發 skills（10 個），.resx 本地化含繁中。

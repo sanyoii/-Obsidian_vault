@@ -74096,3 +74096,425 @@
 {}
 ```
 
+## workspace:active-leaf-change · INFO · 2026-06-12T05:21:22.721Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-12T05:21:22.721Z
+
+```json
+{
+  "path": "wiki/Github/repos/一個基於 Python Flask 和 pyswisseph 的專業人類圖計算工具，提供精確的天文計算和完整的 Web 界面。.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:21:22.785Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-12T05:21:22.793Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:21:24.235Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:21:24.350Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-12T05:21:24.351Z
+
+```json
+{
+  "path": "wiki/Github/repos/以「人生羅盤」為中樞、整合四系統的個人解讀報告——內容不預言你的未來，只幫你看清原廠設定與行動選項。四系統交叉驗證：紫微、八字、占星、人類圖同時入列，避免單一視角誤差。.md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-12T05:21:24.356Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:21:25.397Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:21:25.489Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-12T05:21:25.490Z
+
+```json
+{
+  "path": "wiki/Github/repos/一個基於 Python Flask 和 pyswisseph 的專業人類圖計算工具，提供精確的天文計算和完整的 Web 界面。.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:21:25.527Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-12T05:21:25.538Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:21:29.594Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:21:29.688Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-12T05:21:29.688Z
+
+```json
+{
+  "path": "wiki/Github/repos/命運手記 Fate Notes — 紫微斗數 × 八字 × 人類圖 × 星座 AI 多系統交叉命理分析.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:21:29.713Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-12T05:21:29.720Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:21:52.746Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-12T05:21:52.747Z
+
+```json
+{
+  "path": "wiki/Github/repos/從人類圖找到你人生地圖.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:21:52.768Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-12T05:21:52.776Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:27:21.167Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-12T05:27:21.167Z
+
+```json
+{
+  "path": "wiki/Github/repos/開源版金融終端機 Fincept Terminal.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:27:21.199Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-12T05:27:21.207Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:27:32.411Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:27:32.524Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-12T05:27:32.524Z
+
+```json
+{
+  "path": "wiki/Github/repos/ai-engineering-from-scratch.md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-12T05:27:32.531Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:27:41.760Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:47:16.908Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-12T05:47:16.908Z
+
+```json
+{
+  "path": "wiki/Github/repos/一個基於 Python Flask 和 pyswisseph 的專業人類圖計算工具，提供精確的天文計算和完整的 Web 界面。.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:47:16.993Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-12T05:47:16.995Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:48:11.804Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:48:11.909Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-12T05:48:11.909Z
+
+```json
+{
+  "path": "wiki/Github/repos/以「人生羅盤」為中樞、整合四系統的個人解讀報告——內容不預言你的未來，只幫你看清原廠設定與行動選項。四系統交叉驗證：紫微、八字、占星、人類圖同時入列，避免單一視角誤差。.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:48:11.970Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-12T05:48:11.981Z
+
+```json
+{}
+```
+
+## vault:create · INFO · 2026-06-12T07:42:27.735Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/Madison-de-Chao-rainbow-sanctuary-report-site — 命理解讀報告銷售落地頁.md"
+}
+```
+
+## vault:create · INFO · 2026-06-12T07:42:39.409Z
+
+```json
+{
+  "path": "wiki/_index.md.tmp.47692.5040c52a714d"
+}
+```
+
+## vault:modify · INFO · 2026-06-12T07:42:39.455Z
+
+```json
+{
+  "path": "wiki/_index.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-12T07:42:40.537Z
+
+```json
+{
+  "path": "wiki/_index.md.tmp.47692.5040c52a714d"
+}
+```
+
+## vault:create · INFO · 2026-06-12T07:42:50.005Z
+
+```json
+{
+  "path": "wiki/_summaries.md.tmp.47692.afcc7f238d95"
+}
+```
+
+## vault:modify · INFO · 2026-06-12T07:42:50.014Z
+
+```json
+{
+  "path": "wiki/_summaries.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-12T07:42:50.533Z
+
+```json
+{
+  "path": "wiki/_summaries.md.tmp.47692.afcc7f238d95"
+}
+```
+
+## vault:create · INFO · 2026-06-12T07:42:59.514Z
+
+```json
+{
+  "path": "wiki/log.md.tmp.47692.c170d6b27ab7"
+}
+```
+
+## vault:modify · INFO · 2026-06-12T07:42:59.526Z
+
+```json
+{
+  "path": "wiki/log.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-12T07:43:00.533Z
+
+```json
+{
+  "path": "wiki/log.md.tmp.47692.c170d6b27ab7"
+}
+```
+
+## vault:create · INFO · 2026-06-12T08:06:53.807Z
+
+```json
+{
+  "path": "wiki/Claude/Claude 環境說明.md.tmp.49388.b9a24e36e0d1"
+}
+```
+
+## vault:modify · INFO · 2026-06-12T08:06:53.818Z
+
+```json
+{
+  "path": "wiki/Claude/Claude 環境說明.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-12T08:06:54.528Z
+
+```json
+{
+  "path": "wiki/Claude/Claude 環境說明.md.tmp.49388.b9a24e36e0d1"
+}
+```
+
+## vault:modify · INFO · 2026-06-12T08:07:06.150Z
+
+```json
+{
+  "path": "wiki/Claude/Claude 工具全覽（2026）.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-12T10:42:32.701Z
+
+```json
+{
+  "path": "wiki/Claude/Claude 環境說明.md"
+}
+```
+
