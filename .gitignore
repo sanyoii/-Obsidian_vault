@@ -10,3 +10,6 @@ desktop.ini
 
 # API tokens (never commit)
 data/ph_token.txt
+
+# Developer Toolbox plugin diagnostics (auto-growing event log, pure noise)
+_dev-tools/dev-diagnostics/diagnostics-log.md
