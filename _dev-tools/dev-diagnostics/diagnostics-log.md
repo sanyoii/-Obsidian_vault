@@ -72567,3 +72567,1532 @@
 {}
 ```
 
+## workspace:active-leaf-change · INFO · 2026-06-11T20:58:21.028Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:58:21.058Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T20:58:21.058Z
+
+```json
+{
+  "path": "wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T20:58:21.114Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T20:58:21.126Z
+
+```json
+{}
+```
+
+## vault:create · INFO · 2026-06-11T21:00:47.949Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）.md.tmp.47692.defecd308af1"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:00:47.959Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:00:48.060Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）.md.tmp.47692.defecd308af1"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:01:00.798Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:01:11.048Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:03:37.356Z
+
+```json
+{
+  "path": "wiki/log.md.tmp.49388.8ebfcc7ebea4"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:03:37.361Z
+
+```json
+{
+  "path": "wiki/log.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:03:37.459Z
+
+```json
+{
+  "path": "wiki/log.md.tmp.49388.8ebfcc7ebea4"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:04:24.179Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:04:24.282Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:04:24.282Z
+
+```json
+{
+  "path": "wiki/Github/repos/一個基於 Python Flask 和 pyswisseph 的專業人類圖計算工具，提供精確的天文計算和完整的 Web 界面。.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:04:24.338Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:04:24.344Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:13:46.456Z
+
+```json
+{
+  "viewType": "command-center-dashboard"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:14:00.211Z
+
+```json
+{
+  "path": "data/dashboard.json"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:14:00.237Z
+
+```json
+{
+  "path": "data/dashboard.json"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:14:42.499Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:14:42.659Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:14:42.660Z
+
+```json
+{
+  "path": "wiki/Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools.md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:14:42.666Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:14:42.812Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:14:42.832Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:16:28.845Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:16:33.140Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:16:33.140Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/exo-exploreexo Run frontier AI locally.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:16:33.191Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:16:33.199Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:16:43.693Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:16:43.762Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:16:43.762Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:16:43.843Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:16:43.857Z
+
+```json
+{}
+```
+
+## vault:modify · INFO · 2026-06-11T21:17:19.642Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:17:21.859Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:17:34.225Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）.md"
+}
+```
+
+## vault:rename · INFO · 2026-06-11T21:17:34.999Z
+
+```json
+{
+  "from": "wiki/Github/留看repos/已整理/rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）.md",
+  "to": "wiki/Github/留看repos/已整理/(選讀)rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）.md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:17:35.016Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:17:39.706Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:17:39.790Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:17:39.791Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/14 Claude Code skills for common research tasks — literature triage, research design, project context, manuscript writing, and multi-AI delegation. 5-plugin marketplace, install in one command.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:17:39.839Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:17:39.846Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:17:41.535Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:17:50.617Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:17:50.618Z
+
+```json
+{
+  "path": "wiki/Github/repos/一個基於 Python Flask 和 pyswisseph 的專業人類圖計算工具，提供精確的天文計算和完整的 Web 界面。.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:17:50.681Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:17:50.688Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:17:59.859Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:17:59.973Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:17:59.974Z
+
+```json
+{
+  "path": "wiki/Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:18:00.033Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:18:00.042Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:18:01.075Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:18:01.075Z
+
+```json
+{
+  "path": "wiki/Github/repos/Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported).md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:18:01.442Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:18:01.456Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:18:02.767Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:18:02.908Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:18:02.909Z
+
+```json
+{
+  "path": "wiki/Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:18:03.022Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:18:03.275Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:20:38.268Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.206Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/addyosmani-agent-skills — 生產級工程 Skills 套件.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.265Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/ait-vcs — AI 編碼代理嘗試帳本.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.285Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/awesome-agentic-ai-zh — 繁中 AI Agent 學習地圖.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.306Z
+
+```json
+{
+  "path": "wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.336Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/Claude-BugHunter — Claude Code Bug Bounty Skill Bundle.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.364Z
+
+```json
+{
+  "path": "wiki/Github/repos/ait-vcs — AI 編碼代理嘗試帳本.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.379Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/ECC — Claude Code harness-native 操作系統.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.409Z
+
+```json
+{
+  "path": "wiki/Github/repos/awesome-agentic-ai-zh — 繁中 AI Agent 學習地圖.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.426Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/Headroom — AI Agent Context 壓縮層.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.449Z
+
+```json
+{
+  "path": "wiki/Github/repos/Claude-BugHunter — Claude Code Bug Bounty Skill Bundle.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.493Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/itsfatduckoptimizerDuck — Windows 系統最佳化工具.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.498Z
+
+```json
+{
+  "path": "wiki/Github/repos/ECC — Claude Code harness-native 操作系統.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.529Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/Midscene.js - AI 視覺驅動 UI 自動化.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.533Z
+
+```json
+{
+  "path": "wiki/Github/repos/Headroom — AI Agent Context 壓縮層.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.567Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/mvanhorn-last30days-skill — AI 多平台社群研究引擎.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.593Z
+
+```json
+{
+  "path": "wiki/Github/repos/itsfatduckoptimizerDuck — Windows 系統最佳化工具.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.614Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/Panniantong-Agent-Reach — AI Agent 互聯網感知層.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.631Z
+
+```json
+{
+  "path": "wiki/Github/repos/Midscene.js - AI 視覺驅動 UI 自動化.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.669Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/ReClip — 自架開源影片音訊下載工具.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.672Z
+
+```json
+{
+  "path": "wiki/Github/repos/mvanhorn-last30days-skill — AI 多平台社群研究引擎.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.715Z
+
+```json
+{
+  "path": "wiki/Github/repos/Panniantong-Agent-Reach — AI Agent 互聯網感知層.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.747Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/RedditVideoMakerBot — Reddit 串文自動轉短影片機器人.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.773Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/Remotion — 用 React 寫程式碼產生影片.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.777Z
+
+```json
+{
+  "path": "wiki/Github/repos/ReClip — 自架開源影片音訊下載工具.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.816Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/Renhuai123ziwei-doushu — 倪海夏天紀體系紫微斗數引擎.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.847Z
+
+```json
+{
+  "path": "wiki/Github/repos/RedditVideoMakerBot — Reddit 串文自動轉短影片機器人.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.866Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/ruijayfengziwei — 現代化紫微斗數命盤分析工具.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.883Z
+
+```json
+{
+  "path": "wiki/Github/repos/Remotion — 用 React 寫程式碼產生影片.md"
+}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:09.916Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/x1xhlol-system-prompts-and-models-of-ai-tools.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:09.918Z
+
+```json
+{
+  "path": "wiki/Github/repos/Renhuai123ziwei-doushu — 倪海夏天紀體系紫微斗數引擎.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:10.125Z
+
+```json
+{
+  "path": "wiki/Github/repos/ruijayfengziwei — 現代化紫微斗數命盤分析工具.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:10.126Z
+
+```json
+{
+  "path": "wiki/Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools.md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:26:10.310Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:28.028Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:26:28.028Z
+
+```json
+{
+  "path": "wiki/Github/repos/Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported).md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:28.098Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:28.136Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:26:28.137Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/AppFlowy-IOAppFlowy Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:28.327Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:26:28.333Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:30.791Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:30.858Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:26:30.858Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/claude-code-workspacedocs2026-05-16-claude-code-best-practices.md at main.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:30.889Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:26:30.898Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:35.546Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:35.625Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:26:35.626Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/claude-memdocsi18nREADME.zh.md at main.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:35.661Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:26:35.669Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:37.502Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:37.592Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:26:37.593Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/exo-exploreexo Run frontier AI locally.md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:26:37.600Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:41.808Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:41.884Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:26:41.884Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/garrytangbrain Garry's Opinionated OpenClawHermes Agent Brain.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:41.909Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:26:41.916Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:43.949Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:44.056Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:26:44.056Z
+
+```json
+{
+  "path": "wiki/Github/repos/一個基於 Python Flask 和 pyswisseph 的專業人類圖計算工具，提供精確的天文計算和完整的 Web 界面。.md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:26:44.062Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:48.492Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:48.595Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:26:48.596Z
+
+```json
+{
+  "path": "wiki/Github/repos/以「人生羅盤」為中樞、整合四系統的個人解讀報告——內容不預言你的未來，只幫你看清原廠設定與行動選項。四系統交叉驗證：紫微、八字、占星、人類圖同時入列，避免單一視角誤差。.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:48.650Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:26:48.659Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:49.850Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:49.929Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:26:49.930Z
+
+```json
+{
+  "path": "wiki/Github/repos/命運手記 Fate Notes — 紫微斗數 × 八字 × 人類圖 × 星座 AI 多系統交叉命理分析.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:49.957Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:26:49.964Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:52.291Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:52.344Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:26:52.344Z
+
+```json
+{
+  "path": "wiki/Github/repos/從人類圖找到你人生地圖.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:52.400Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:26:52.416Z
+
+```json
+{}
+```
+
+## vault:create · INFO · 2026-06-11T21:26:54.507Z
+
+```json
+{
+  "path": "wiki/_index.md.tmp.47692.81ff97c6703d"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:26:54.705Z
+
+```json
+{
+  "path": "wiki/_index.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:54.861Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:26:54.863Z
+
+```json
+{
+  "path": "wiki/Github/repos/Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported).md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:26:55.609Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:26:55.682Z
+
+```json
+{}
+```
+
+## vault:delete · INFO · 2026-06-11T21:26:55.774Z
+
+```json
+{
+  "path": "wiki/_index.md.tmp.47692.81ff97c6703d"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:27:04.977Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:27:05.084Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:27:05.085Z
+
+```json
+{
+  "path": "wiki/Github/repos/Stop-slop 寫作去除AI腔.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:27:05.153Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:27:05.164Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:27:06.168Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:27:06.289Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:27:06.290Z
+
+```json
+{
+  "path": "wiki/Github/repos/prompt-master.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:27:06.378Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:27:06.383Z
+
+```json
+{}
+```
+
+## vault:create · INFO · 2026-06-11T21:27:11.665Z
+
+```json
+{
+  "path": "wiki/_summaries.md.tmp.47692.517181089b7c"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:27:11.672Z
+
+```json
+{
+  "path": "wiki/_summaries.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-11T21:27:11.774Z
+
+```json
+{
+  "path": "wiki/_summaries.md.tmp.47692.517181089b7c"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:30:17.025Z
+
+```json
+{
+  "path": "wiki/_summaries.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:30:18.966Z
+
+```json
+{
+  "path": "wiki/_summaries.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:30:21.764Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/x1xhlol-system-prompts-and-models-of-ai-tools.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-11T21:30:57.683Z
+
+```json
+{
+  "path": "wiki/log.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:37:20.829Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:37:20.931Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:37:20.932Z
+
+```json
+{
+  "path": "wiki/Github/repos/一個基於 Python Flask 和 pyswisseph 的專業人類圖計算工具，提供精確的天文計算和完整的 Web 界面。.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:37:20.981Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:37:20.990Z
+
+```json
+{}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:37:21.790Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:37:21.886Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-11T21:37:21.887Z
+
+```json
+{
+  "path": "wiki/Github/repos/以「人生羅盤」為中樞、整合四系統的個人解讀報告——內容不預言你的未來，只幫你看清原廠設定與行動選項。四系統交叉驗證：紫微、八字、占星、人類圖同時入列，避免單一視角誤差。.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-11T21:37:21.921Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-11T21:37:21.929Z
+
+```json
+{}
+```
+
+## vault:create · INFO · 2026-06-12T05:19:23.308Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/Chandra OCR 2.md"
+}
+```
+
+## vault:create · INFO · 2026-06-12T05:19:23.563Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/knowledge-work-plugins repo.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-12T05:19:23.746Z
+
+```json
+{
+  "path": "wiki/Github/repos/Chandra OCR 2.md"
+}
+```
+
+## vault:create · INFO · 2026-06-12T05:19:23.750Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/prompt-master.md"
+}
+```
+
+## vault:create · INFO · 2026-06-12T05:19:23.755Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/anthropicsknowledge-work-plugins.md"
+}
+```
+
+## vault:create · INFO · 2026-06-12T05:19:23.760Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/eigent.md"
+}
+```
+
+## vault:create · INFO · 2026-06-12T05:19:23.765Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/OpenHuman.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-12T05:19:24.538Z
+
+```json
+{
+  "path": "wiki/Github/repos/knowledge-work-plugins repo.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-12T05:19:24.540Z
+
+```json
+{
+  "path": "wiki/Github/repos/prompt-master.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-12T05:19:24.542Z
+
+```json
+{
+  "path": "wiki/Github/repos/anthropicsknowledge-work-plugins.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-12T05:19:24.544Z
+
+```json
+{
+  "path": "wiki/Github/repos/eigent.md"
+}
+```
+
+## vault:delete · INFO · 2026-06-12T05:19:24.545Z
+
+```json
+{
+  "path": "wiki/Github/repos/OpenHuman.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-12T05:19:30.580Z
+
+```json
+{
+  "path": "wiki/_index.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-12T05:19:32.791Z
+
+```json
+{
+  "path": "wiki/Github/留看repos/已整理/x1xhlol-system-prompts-and-models-of-ai-tools.md"
+}
+```
+
+## vault:modify · INFO · 2026-06-12T05:20:02.795Z
+
+```json
+{
+  "path": "wiki/log.md"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:20:41.983Z
+
+```json
+{
+  "viewType": "file-explorer"
+}
+```
+
+## workspace:active-leaf-change · INFO · 2026-06-12T05:20:42.136Z
+
+```json
+{
+  "viewType": "markdown"
+}
+```
+
+## workspace:file-open · INFO · 2026-06-12T05:20:42.136Z
+
+```json
+{
+  "path": "wiki/Github/repos/Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported).md"
+}
+```
+
+## workspace:layout-change · INFO · 2026-06-12T05:20:42.188Z
+
+```json
+{}
+```
+

@@ -32,10 +32,10 @@ verdict: "選讀 Phase 13–16（MCP/Agent/Swarm），前段略讀即可"
 | 07–08 | Transformer 深度解析、生成式 AI |
 | 09–10 | 強化學習、LLM from scratch |
 | 11–12 | LLM 工程、多模態 AI |
-| 13 | 工具與協定（MCP、A2A 等） |
-| 14 | Agent 工程（ReAct、ReWOO、Tree of Thoughts、LangGraph） |
-| 15 | 自主系統（AlphaEvolve、Darwin-Gödel Machine、Claude Code Permission Modes） |
-| 16 | 多 Agent 與 Swarm（A2A 協定） |
+| 13 | 工具與協定（MCP 模型上下文協定、A2A 跨 Agent 通訊協定等） |
+| 14 | Agent 工程（ReAct「推理-行動循環」、ReWOO「無觀察推理」、Tree of Thoughts「思維樹搜尋」、LangGraph「Agent 狀態機框架」） |
+| 15 | 自主系統（AlphaEvolve「自我演化程式碼」、Darwin-Gödel Machine「自我改良機器」、Claude Code 權限模式） |
+| 16 | 多 Agent 與 Swarm 協作（A2A 跨 Agent 通訊協定） |
 | 17 | 基礎設施與生產部署 |
 | 18 | 倫理、安全、對齊 |
 | 19 | 綜合專案（40+ 個） |
@@ -44,7 +44,7 @@ verdict: "選讀 Phase 13–16（MCP/Agent/Swarm），前段略讀即可"
 
 ## 技術棧
 
-Python（主力）+ TypeScript + Julia + Rust；PyTorch、Transformers、LangChain、LangGraph、Anthropic SDK、OpenAI SDK；Docker、GPU/CUDA；每課包含 quiz.json + Claude Skill 輸出檔。
+Python（主力）+ TypeScript + Julia + Rust；深度學習框架 PyTorch、Transformers，Agent 框架 LangChain、LangGraph，以及 Anthropic SDK、OpenAI SDK；容器化用 Docker、訓練用 GPU/CUDA；每課包含 quiz.json 測驗 + Claude Skill 輸出檔。
 
 ---
 
@@ -53,10 +53,10 @@ Python（主力）+ TypeScript + Julia + Rust；PyTorch、Transformers、LangCha
 **對已熟悉 Claude Code 工具鏈的開發者：選讀即可，不必通讀。**
 
 亮點在 Phase 13–16：
-- Phase 13：MCP/A2A 協定
-- Phase 14：Agent Loop、LangGraph stateful graphs
-- Phase 15：**Claude Code Permission Modes 專課**（`phases/15-autonomous-systems/10-claude-code-permission-modes/`）
-- Phase 16：A2A 多 Agent swarm
+- Phase 13：MCP（模型上下文協定）/ A2A（跨 Agent 通訊協定）
+- Phase 14：Agent 迴圈設計、LangGraph 狀態圖（stateful graph）
+- Phase 15：**Claude Code 權限模式專課**（`phases/15-autonomous-systems/10-claude-code-permission-modes/`）
+- Phase 16：A2A 多 Agent 群體協作（swarm）
 
 前半（Phase 00–12）對已有基礎的開發者參考價值有限，較教科書式。整體品質中等，更像教學索引而非生產級程式庫。每課附有的 Claude Skill 輸出（`.md` 格式）可直接參考或移植。
 

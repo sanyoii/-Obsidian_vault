@@ -87,15 +87,15 @@
 
 ### Github/Repos（已分析 Repos）
 
-- [[Github/repos/Panniantong-Agent-Reach — AI Agent 互聯網感知層|Agent Reach — AI Agent 互聯網感知層]] — 17 平台 skills 腳手架（網頁/YouTube/Twitter/Reddit/小紅書/B站/微博/V2EX/雪球…），一句話安裝，零配置 8 頻道；✅ 適合安裝 `#skills #social-media #claude-code #mcp #internet`
-- [[Github/repos/mvanhorn-last30days-skill — AI 多平台社群研究引擎|last30days-skill — AI 多平台社群研究引擎]] — `/last30days <主題>` 跨 Reddit/X/YouTube/TikTok/HN/Polymarket 等 10+ 平台平行搜尋，社群互動量排序；✅ 適合安裝 `#skills #research #social-media #claude-code`
-- [[Github/repos/ECC — Claude Code harness-native 操作系統|ECC — Claude Code harness-native 操作系統]] — harness-native AI Agent 操作系統（Skills + Agents + Hooks + Rules），100+ skills，182K stars `#tool #claude-code #skills #hooks #agents`
-- [[Github/repos/Headroom — AI Agent Context 壓縮層|Headroom — AI Agent Context 壓縮層]] — 自動壓縮 context window，減少 token 消耗 `#tool #claude-code #context`
-- [[Github/repos/anthropicsknowledge-work-plugins|knowledge-work-plugins]] — Anthropic 官方知識工作 plugins 套件 `#anthropic #plugins`
+- [[Github/留看repos/已整理/Panniantong-Agent-Reach — AI Agent 互聯網感知層|Agent Reach — AI Agent 互聯網感知層]] — 17 平台 skills 腳手架（網頁/YouTube/Twitter/Reddit/小紅書/B站/微博/V2EX/雪球…），一句話安裝，零配置 8 頻道；✅ 適合安裝 `#skills #social-media #claude-code #mcp #internet`
+- [[Github/留看repos/已整理/mvanhorn-last30days-skill — AI 多平台社群研究引擎|last30days-skill — AI 多平台社群研究引擎]] — `/last30days <主題>` 跨 Reddit/X/YouTube/TikTok/HN/Polymarket 等 10+ 平台平行搜尋，社群互動量排序；✅ 適合安裝 `#skills #research #social-media #claude-code`
+- [[Github/留看repos/已整理/ECC — Claude Code harness-native 操作系統|ECC — Claude Code harness-native 操作系統]] — harness-native AI Agent 操作系統（Skills + Agents + Hooks + Rules），100+ skills，182K stars `#tool #claude-code #skills #hooks #agents`
+- [[Github/留看repos/已整理/Headroom — AI Agent Context 壓縮層|Headroom — AI Agent Context 壓縮層]] — 自動壓縮 context window，減少 token 消耗 `#tool #claude-code #context`
+- [[Github/留看repos/已整理/anthropicsknowledge-work-plugins|knowledge-work-plugins]] — Anthropic 官方知識工作 plugins 套件 `#anthropic #plugins`
 - [[Github/repos/Stop-slop 寫作去除AI腔|Stop-slop 寫作去除AI腔]] — 去除 AI 生成文章的機器味 `#writing #ai`
 - [[Github/repos/issue_tmp — GitHub Issue  PR 模板套件|issue_tmp — GitHub Issue / PR 模板套件]] — 繁體中文 9 種 Issue 表單 + PR 模板 `#github #templates`
-- [[Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools|x1xhlol/system-prompts-and-models-of-ai-tools — AI 工具 System Prompt 資料庫]] — 30+ 工具真實 system prompt（Cursor/Claude Code 2.0/Manus/Windsurf/Kiro 等），104 檔案 2.1MB；✅ 適合收藏 `#ai-prompts #reverse-engineering #claude-code #research`
-- [[Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件|addyosmani/agent-skills — 生產級工程 Skills 套件]] — 24 個 SDLC 工程 skills（spec/plan/build/verify/review/ship）+ 7 條斜線指令 + 4 個專用 Agent；✅ 適合安裝 `#skills #claude-code #engineering #tdd #spec`
+- [[Github/留看repos/已整理/x1xhlol-system-prompts-and-models-of-ai-tools|x1xhlol/system-prompts-and-models-of-ai-tools — AI 工具 System Prompt 資料庫]] — 30+ 工具真實 system prompt（Cursor/Claude Code 2.0/Manus/Windsurf/Kiro 等），104 檔案 2.1MB；✅ 適合收藏 `#ai-prompts #reverse-engineering #claude-code #research`
+- [[Github/留看repos/已整理/addyosmani-agent-skills — 生產級工程 Skills 套件|addyosmani/agent-skills — 生產級工程 Skills 套件]] — 24 個 SDLC 工程 skills（spec/plan/build/verify/review/ship）+ 7 條斜線指令 + 4 個專用 Agent；✅ 適合安裝 `#skills #claude-code #engineering #tdd #spec`
 
 ---
 

@@ -21,6 +21,12 @@
 - `2026-06-11 00:00 | COMPILE | github.com/addyosmani/agent-skills → wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md` | repomix 分析（90 檔，126K tokens）；Addy Osmani（Google Chrome）生產級工程 skills 套件；24 skills 涵蓋 SDLC 六階段 + 7 斜線指令 + 4 專用 Agent + Hooks；SKILL.md 原生格式；結論 ✅ 適合安裝（/plugin marketplace add addyosmani/agent-skills，與現有 skills 環境 100% 相容，呼應 CLAUDE.md R8/R10/R14）
 - `2026-06-11 23:00 | COMPILE | claude plugin install（本地 marketplace 繞過）→ wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md` | 安裝完成：32 skills + 8 commands + SessionStart hook（jq 已用 winget 補裝）；GitHub SSH 失敗改用本地 clone + marketplace source="./" 繞過；4 個 agent personas 因 plugin.json 格式未載入，改手動裝至 .claude/agents/specialized/agent-skills/，security-auditor 改名 sdlc-security-auditor 避免與 v3 衝突；同步更新 claude-tools-dashboard.html（新增 AGENTS 分類 + Plugin 說明卡）
 - `2026-06-11 23:30 | COMPILE | jq PATH 修正 + Hooks 範圍釐清 → wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md` | jq.exe 複製到 ~/.local/bin 修正 PATH，SessionStart hook 驗證完整輸出 using-agent-skills meta-skill；新增 Hooks 表格區分「plugin 自動安裝」(SessionStart ✅) vs「per-project 選配未啟用」(sdd-cache/simplify-ignore ❌)；更新相關性評估表 Hooks 整合列
+- `2026-06-11 23:03 | QUERY | jq 依賴修正是否完成 → wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md` | 重新驗證確認：`which jq` → `~/.local/bin/jq`（jq-1.8.1），直接執行 `bash hooks/session-start.sh` 完整輸出 using-agent-skills meta-skill（priority IMPORTANT）；jq 依賴修正項目確認完成，文件內容無需變更
+- `2026-06-11 23:50 | LINT | wiki/Github/repos/ → wiki/Github/留看repos/已整理/` | 將 16 篇已整理完成的 repo 分析文章從 repos/ 移至 留看repos/已整理/（git mv 保留歷史），原始剪報留在 repos/；同步修正 _index.md（6 條連結）與 _summaries.md（3 條連結）、x1xhlol 文章內 ECC 反向連結路徑
+
+### 2026-06-12 | LINT
+- `2026-06-12 00:10 | LINT | wiki/Github/repos/ → wiki/Github/留看repos/已整理/` | 第二輪：再移 6 篇「原始 README + 附加分析（值得安裝嗎/分析結論）」混合格式文章（Chandra OCR 2、knowledge-work-plugins repo、prompt-master、anthropicsknowledge-work-plugins、eigent、OpenHuman），同步修正 _index.md 與 x1xhlol 文章內 prompt-master 反向連結路徑；anthropicsknowledge-work-plugins 與 knowledge-work-plugins repo 為同一 repo 兩份不同日期剪報，皆已移入但未去重
+
 ### 2026-06-10 | COMPILE
 - `2026-06-10 22:00 | COMPILE | github.com/x1xhlol/system-prompts-and-models-of-ai-tools → wiki/Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools.md` | repomix 分析 104 檔 / 461K tokens；收錄 30+ AI 工具真實 system prompt（Claude Code 2.0 / Cursor 多版本 / Manus / Windsurf / Kiro 等）；✅ 適合 clone 備查
 

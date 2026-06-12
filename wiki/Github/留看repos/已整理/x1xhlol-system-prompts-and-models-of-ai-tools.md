@@ -113,7 +113,7 @@ git clone https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
 
 ## 反向連結
 
-- [[Github/repos/prompt-master]] — 同屬 prompt 設計研究資源
+- [[Github/留看repos/已整理/prompt-master]] — 同屬 prompt 設計研究資源
 - [[Claude/Karpathy 最高遵守原則 — AI 行為準則]] — Claude Code system prompt 設計原則比對
-- [[Github/repos/ECC — Claude Code harness-native 操作系統]] — 同類 Claude Code 深度工具
+- [[Github/留看repos/已整理/ECC — Claude Code harness-native 操作系統]] — 同類 Claude Code 深度工具
 - [[Claude/7-Agent 工廠工作流 SOP]] — 實際套用此 repo 結構模式的工作流文件
