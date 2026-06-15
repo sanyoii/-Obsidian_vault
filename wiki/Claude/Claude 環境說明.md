@@ -1058,14 +1058,14 @@ cd d:\Claude\careerbot
 
 **🧮 自動計算面板：** `index.html` 內建面板，搭配本機 `calc-server/`（Flask + pyswisseph，port 5001）只需輸入出生日期/時間/縣市，即可自動算出並填入：輪迴交叉 4 閘門、南北交點 4 閘門、Type/Authority/Profile/Definition、九大能量中心、36 條通道、PHS（Color/Tone/環境）、四箭頭 Variable（L/R）、年齡。四箭頭與 PHS 的 L/R 規則：tone 1-3 → L/Active，4-6 → R/Passive。
 
-**⬇ 匯出報告：** 產生獨立靜態 HTML 報告，雙視角合併顯示（高頻+陰影同時呈現），不需連網。
+**⬇ 匯出報告：** 產生獨立靜態 HTML 報告，雙視角合併顯示（高頻+陰影同時呈現），不需連網。「姓名」欄位旁新增「性別」下拉（男/女/非二元性別/不想透露，選填），會隨表單持久化並顯示於匯出報告標頭，供之後產生敘事報告時判斷代稱（他/她）。
 
 ```powershell
 cd d:\Claude\hd-decode\calc-server
 .\start.bat   # 啟動本機計算服務（http://localhost:5001）
 ```
 
-**📄 視覺化解讀報告範本：** `Abao-人類圖解讀報告-視覺版.html` 是獨立的圖文報告（與計算工具不同產品），「暖陽奶油」設計系統（米白+珊瑚橘、雙層卡片、icon sprite、4張SVG圖表、側邊TOC）已定為**未來所有人類圖解讀報告輸出的標準格式**。完整 design spec：`D:\claude\plans\vectorized-swinging-thunder.md`。
+**📄 視覺化解讀報告範本：** `Abao-人類圖解讀報告-視覺版.html` 是獨立的圖文報告（與計算工具不同產品），「暖陽奶油」設計系統（米白+珊瑚橘、雙層卡片、icon sprite、4張SVG圖表、側邊TOC、13節含3個彩蛋使用說明章節）已**正式鎖定為未來所有人類圖解讀報告輸出的標準模板**，內建15頁投影片式PDF分頁。完整 design spec：`D:\claude\plans\vectorized-swinging-thunder.md`。
 
 ---
 

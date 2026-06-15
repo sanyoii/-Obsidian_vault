@@ -170,7 +170,7 @@ cypher_query    → Cypher 圖查詢
 | **open-slide**     | `d:\Claude\open-slide\`     | 🔍 未用        | 投影片工具（待評估）                                                  |
 | **autohedge-env**  | *(已刪除)*                   | ❌ 需重建       | venv 2026-06-03 刪除（釋放 1.5GB），需重建                           |
 | **brain-docs**     | `d:\Claude\brain-docs\`     | ✅ 已匯入        | gbrain 文件暫存區，課程字幕已全數匯入                                    |
-| **hd-decode**      | `d:\Claude\hd-decode\`      | ✅ 運作中        | 人類圖解讀器，雙擊 index.html 即用；🧮自動計算面板可連 calc-server 全欄位自動填入 |
+| **hd-decode**      | `d:\Claude\hd-decode\`      | ✅ 運作中        | 人類圖解讀器，雙擊 index.html 即用；🧮自動計算面板可連 calc-server 全欄位自動填入；含性別欄位＋暖陽奶油視覺化報告標準模板（13節/15頁PDF） |
 
 ### social-monitor 日常操作
 
