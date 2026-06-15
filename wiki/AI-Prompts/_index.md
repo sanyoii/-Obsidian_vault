@@ -10,6 +10,7 @@
 > - T3 · City Travel Poster 城市海報（Meta + Florence）
 > - T4 · 3D Paper-Cut Diorama 直式立體紙雕（Meta + Florence）
 > - T5 · Instagram 3D 旅人 ＋ 膠捲紙雕（Meta + Florence）
+> - T6 · Phone Portal 紙雕回憶海報（手機傳送門 + 旅行手帳，Meta）
 >
 > **ChatGPT Image 2 Prompts** — [[ChatGPT-Image2-Prompts]]
 > - #1 日文手寫小字 · #2 個人色彩分析 · #3 髮型分析
@@ -23,6 +24,9 @@
 > **Fable 5 案例庫 Prompts** — [[Fable5-Cases-Prompts]]
 > - 42 個 Claude Fable 5 實測案例（遊戲14・模擬視覺化8・創意藝術8・工程研究9・文件簡報3）
 > - 17 個原文 prompt、25 個重建 prompt，依分類整理可直接複製重現
+>
+> **個人圖騰 Prompts** — [[個人圖騰-Prompts]]
+> - #1 知識編織者圖騰（人類圖+紫微+命運羅盤+知識圖譜+QA特質）
 
 ---
 
@@ -43,6 +47,7 @@
 | T4 | Florence 版 | 直式 | MJ v6 / DALL·E 3 | #旅遊 #3D #義大利 | [[旅遊插畫-Prompts]] |
 | T5 | Instagram 3D 旅人＋膠捲（Meta 模板） | 直式 4:5 | MJ v6 / DALL·E 3 | #旅遊 #IG #3D人物 #膠捲 | [[旅遊插畫-Prompts]] |
 | T5 | Florence 版 | 直式 4:5 | MJ v6 / DALL·E 3 | #旅遊 #IG #義大利 #3D | [[旅遊插畫-Prompts]] |
+| T6 | Phone Portal 紙雕回憶海報（Meta 模板） | 直式 4:5 | MJ v6 / DALL·E 3 | #旅遊 #3D #立體 #手帳 | [[旅遊插畫-Prompts]] |
 
 ### ChatGPT Image 2 Prompts（11 款）
 
@@ -78,19 +83,28 @@
 | 創意藝術 | 8 | 鋼琴視覺化、SVG鵜鶘、漫畫腳本、紀錄片MP4 | #創意藝術 #SVG #音樂 | [[Fable5-Cases-Prompts]] |
 | 工程研究 | 9 | 人形機器人設計、波音747 CAD、V8引擎、/goal 迴圈範本 | #工程研究 #goal迴圈 #CAD | [[Fable5-Cases-Prompts]] |
 
+### 個人圖騰 Prompts（1 款）
+
+| # | 效果 | 比例 | 標籤 | 來源檔 |
+|---|------|------|------|--------|
+| #1 | 知識編織者圖騰（依人類圖/紫微/QA特質設計） | 5:4 | #圖騰 #曼陀羅 #個人化 | [[個人圖騰-Prompts]] |
+
 ---
 
 ## 標籤索引
 
-- **#旅遊**：T1–T5 全部、#6 日系雜誌封面、#8 LOST IN
-- **#插畫**：T1 / T2 / T3（平面插畫）、T4 / T5（立體紙雕）
-- **#3D**：T4 / T5、#5 動作參考表
+- **#旅遊**：T1–T6 全部、#6 日系雜誌封面、#8 LOST IN
+- **#插畫**：T1 / T2 / T3（平面插畫）、T4 / T5 / T6（立體紙雕）
+- **#3D**：T4 / T5 / T6、#5 動作參考表
 - **#人像**：#2 色彩、#3 髮型、#4 時尚海報、#7 膠捲海報、#9 穿搭、#10 靈魂、#11 迷你分身、豪華生日海報#1
 - **#生日**：豪華生日海報#1
-- **#立體**：T4 / T5、豪華生日海報#1
+- **#立體**：T4 / T5 / T6、豪華生日海報#1
 - **#日系**：#1 手寫、#6 旅遊雜誌、#10 靈魂
+- **#手帳**：T6
 - **#分析報告**：#2 色彩、#3 髮型、#10 靈魂
 - **#義大利**：T1 Florence/Rome、T2–T5 Florence
+- **#圖騰**：個人圖騰#1
+- **#曼陀羅**：個人圖騰#1
 
 ---
 
@@ -98,10 +112,11 @@
 
 | 檔案 | 內容摘要 | 模板數 |
 |------|---------|--------|
-| [[旅遊插畫-Prompts]] | 5 套旅遊插畫模板（T1–T5），每套含 Meta 模板 + Florence 版（T1 含 Rome）| 5 套 / 11 個 Prompt |
+| [[旅遊插畫-Prompts]] | 6 套旅遊插畫模板（T1–T6），每套含 Meta 模板 + Florence 版（T1 含 Rome，T6 僅 Meta）| 6 套 / 12 個 Prompt |
 | [[ChatGPT-Image2-Prompts]] | ChatGPT Image 2 爆款圖整理包，含快速索引 | 11 個 Prompt |
 | [[豪華生日海報-Prompts]] | 數字立體雕刻生日海報模板 | 1 個 Prompt |
 | [[Fable5-Cases-Prompts]] | Fable 5 案例庫——遊戲/模擬/簡報/藝術/工程 42 個實測 prompt（含原文連結與讚數） | 42 個 Prompt |
+| [[個人圖騰-Prompts]] | 依個人特質（人類圖/紫微/QA特質）設計的專屬圖騰符號 prompt | 1 個 Prompt |
 
 ---
 

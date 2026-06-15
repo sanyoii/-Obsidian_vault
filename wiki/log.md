@@ -30,6 +30,9 @@
 ### 2026-06-12 | LINT
 - `2026-06-12 00:10 | LINT | wiki/Github/repos/ → wiki/Github/留看repos/已整理/` | 第二輪：再移 6 篇「原始 README + 附加分析（值得安裝嗎/分析結論）」混合格式文章（Chandra OCR 2、knowledge-work-plugins repo、prompt-master、anthropicsknowledge-work-plugins、eigent、OpenHuman），同步修正 _index.md 與 x1xhlol 文章內 prompt-master 反向連結路徑；anthropicsknowledge-work-plugins 與 knowledge-work-plugins repo 為同一 repo 兩份不同日期剪報，皆已移入但未去重
 
+### 2026-06-13 | COMPILE
+- `2026-06-13 23:30 | COMPILE | github.com/music-assistant/server → wiki/Github/repos/music-assistant-server — 開源家用音樂串流管理器.md` | repomix 分析 106 個 providers；發現實驗性 FastMCP MCP Server plugin；⏳ 觀望（需 Docker + FFmpeg + PyTorch，HA 環境者可裝）
+
 ### 2026-06-10 | COMPILE
 - `2026-06-10 22:00 | COMPILE | github.com/x1xhlol/system-prompts-and-models-of-ai-tools → wiki/Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools.md` | repomix 分析 104 檔 / 461K tokens；收錄 30+ AI 工具真實 system prompt（Claude Code 2.0 / Cursor 多版本 / Manus / Windsurf / Kiro 等）；✅ 適合 clone 備查
 

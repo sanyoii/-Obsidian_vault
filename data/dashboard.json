@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-06-12 20:55:25",
-  "jobCount": 18,
+  "updatedAt": "2026-06-15 14:53:09",
+  "jobCount": 19,
   "jobList": [
+    {
+      "id": 19,
+      "company": "Binance",
+      "title": "Java Backend QA Engineer Whitebox Focus",
+      "location": "Binance",
+      "first_seen": "2026-06-14T20:32:05.530709",
+      "url": "https://web3.career/java-backend-qa-engineer-white-box-focus-binance/150420",
+      "platforms": "web3career"
+    },
     {
       "id": 18,
       "company": "Binance",
@@ -206,149 +215,149 @@
     }
   ],
   "briefingTitle": "Morning_2026-06-07",
-  "tokenEstimate": "~1238K",
+  "tokenEstimate": "~146K",
   "github": [
     {
       "rank": 1,
-      "repo": "addyosmani/agent-skills",
-      "desc": "Production-grade engineering skills for AI coding agents.",
-      "stars": "2660",
-      "lang": "Shell"
+      "repo": "iptv-org/iptv",
+      "desc": "Collection of publicly available IPTV channels from all over the wor...",
+      "stars": "2650",
+      "lang": "TypeScript"
     },
     {
       "rank": 2,
-      "repo": "music-assistant/server",
-      "desc": "Music Assistant is a free, opensource Media library manager that con...",
-      "stars": "6",
-      "lang": "Python"
+      "repo": "teslamate-org/teslamate",
+      "desc": "A self-hosted data logger for your Tesla 🚘 [main maintainer=@JakobLi...",
+      "stars": "35",
+      "lang": "Elixir"
     },
     {
       "rank": 3,
-      "repo": "mattermost/mattermost",
-      "desc": "Mattermost is an open source platform for secure collaboration acros...",
-      "stars": "391",
-      "lang": "TypeScript"
+      "repo": "Panniantong/Agent-Reach",
+      "desc": "Give your AI agent eyes to see the entire internet. Read & search Tw...",
+      "stars": "1045",
+      "lang": "Python"
     },
     {
       "rank": 4,
-      "repo": "apple/container",
-      "desc": "A tool for creating and running Linux containers using lightweight v...",
-      "stars": "3513",
-      "lang": "Swift"
-    },
-    {
-      "rank": 5,
-      "repo": "iptv-org/iptv",
-      "desc": "Collection of publicly available IPTV channels from all over the wor...",
-      "stars": "142",
+      "repo": "meshery/meshery",
+      "desc": "Meshery, the cloud native manager",
+      "stars": "227",
       "lang": "TypeScript"
     },
     {
+      "rank": 5,
+      "repo": "chatwoot/chatwoot",
+      "desc": "Open-source live-chat, email support, omni-channel desk. An alternat...",
+      "stars": "431",
+      "lang": "Ruby"
+    },
+    {
       "rank": 6,
-      "repo": "obra/superpowers",
-      "desc": "An agentic skills framework & software development methodology that ...",
-      "stars": "1276",
-      "lang": "Shell"
+      "repo": "krahets/hello-algo",
+      "desc": "《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持简中、繁中、English、日本語，提供 Python, Java, ...",
+      "stars": "34",
+      "lang": "Java"
     },
     {
       "rank": 7,
-      "repo": "refactoringhq/tolaria",
-      "desc": "Desktop app to manage markdown knowledge bases",
-      "stars": "369",
+      "repo": "freeCodeCamp/freeCodeCamp",
+      "desc": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, ...",
+      "stars": "738",
       "lang": "TypeScript"
     },
     {
       "rank": 8,
-      "repo": "maziyarpanahi/openmed",
-      "desc": "open-source healthcare ai",
-      "stars": "517",
-      "lang": "Python"
+      "repo": "trycua/cua",
+      "desc": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs,...",
+      "stars": "57",
+      "lang": "HTML"
     },
     {
       "rank": 9,
-      "repo": "LMCache/LMCache",
-      "desc": "LMCache: Supercharge Your LLM with the Fastest KV Cache Layer",
-      "stars": "17",
-      "lang": "Python"
+      "repo": "jwasham/coding-interview-university",
+      "desc": "A complete computer science study plan to become a software engineer...",
+      "stars": "516",
+      "lang": ""
     },
     {
       "rank": 10,
-      "repo": "phuryn/pm-skills",
-      "desc": "PM Skills Marketplace: 100+ agentic skills, commands, and plugins — ...",
-      "stars": "823",
-      "lang": ""
+      "repo": "rohitg00/ai-engineering-from-scratch",
+      "desc": "Learn it. Build it. Ship it for others.",
+      "stars": "538",
+      "lang": "Python"
     }
   ],
   "hn": [
     {
       "rank": 1,
-      "title": "CRISPR tech selectively shreds cancer cells, including \"undruggable\" cancers",
-      "score": 339,
-      "url": "https://innovativegenomics.org/news/crispr-technique-selectively-shreds-cancer-cells/",
-      "id": 48505231
+      "title": "Salesforce to Acquire Fin (formerly Intercom) for $3.6BN",
+      "score": 19,
+      "url": "https://www.salesforce.com/news/press-releases/2026/06/15/salesforce-signs-definitive-agreement-to-acquire-fin/?bc=HL",
+      "id": 48540126
     },
     {
       "rank": 2,
-      "title": "I Am Not a Reverse Centaur",
-      "score": 64,
-      "url": "https://blog.miguelgrinberg.com/post/i-am-not-a-reverse-centaur",
-      "id": 48507282
+      "title": "Anthropic's Safety Superpower",
+      "score": 107,
+      "url": "https://stratechery.com/2026/anthropics-safety-superpower/",
+      "id": 48539078
     },
     {
       "rank": 3,
-      "title": "How to Setup a Local Coding Agent on macOS",
-      "score": 36,
-      "url": "https://ikyle.me/blog/2026/how-to-setup-a-local-coding-agent-on-macos",
-      "id": 48507020
+      "title": "Your ePub Is fine",
+      "score": 708,
+      "url": "https://andreklein.net/your-epub-is-fine-kobo-disagrees-blame-adobe/",
+      "id": 48533848
     },
     {
       "rank": 4,
-      "title": "A PDF that changes based on how its read",
-      "score": 66,
-      "url": "https://sgaud.com/texts/pdf",
-      "id": 48506209
+      "title": "Apple Foundation Models",
+      "score": 244,
+      "url": "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models",
+      "id": 48536776
     },
     {
       "rank": 5,
-      "title": "I Won't Buy You a Coffee",
-      "score": 10,
-      "url": "https://hakkerman.eu/blog/i-wont-buy-you-a-coffee/",
-      "id": 48507783
+      "title": "What the Fuck Happened to Nerds",
+      "score": 369,
+      "url": "https://mrmarket.lol/what-the-fuck-happened-to-nerds/",
+      "id": 48538229
     },
     {
       "rank": 6,
-      "title": "Slightly reducing the sloppiness of AI generated front end",
-      "score": 115,
-      "url": "https://envs.net/~volpe/blog/posts/reduce-slop.html",
-      "id": 48504912
+      "title": "Foreign business owners are scrambling to raise capital to stay in Japan",
+      "score": 71,
+      "url": "https://tokyopaladin.substack.com/p/foreign-business-owners-are-scrambling",
+      "id": 48499898
     },
     {
       "rank": 7,
-      "title": "Pirates, a naval warfare game inspired by Sid Meier's Pirates",
-      "score": 36,
-      "url": "https://piwodlaiwo.github.io/pirates/",
-      "id": 48506659
+      "title": "Ported my C game to WASM, here's everybug that I hit",
+      "score": 34,
+      "url": "http://ernesernesto.github.io/writes/portingmatchmorphosistowasm/",
+      "id": 48506980
     },
     {
       "rank": 8,
-      "title": "Looking Forward to Postgres 19: It's About Time",
-      "score": 51,
-      "url": "https://www.pgedge.com/blog/looking-forward-to-postgres-19-its-about-time",
-      "id": 48506372
+      "title": "Openrouter Fusion API",
+      "score": 78,
+      "url": "https://openrouter.ai/openrouter/fusion",
+      "id": 48537641
     },
     {
       "rank": 9,
-      "title": "Malware developers added nuclear and biological weapons text to to their spyware",
-      "score": 99,
-      "url": "https://twitter.com/jsrailton/status/2064661778978533571",
-      "id": 48495928
+      "title": "Even more batteries included with Emacs",
+      "score": 252,
+      "url": "https://karthinks.com/software/even-more-batteries-included-with-emacs/",
+      "id": 48535886
     },
     {
       "rank": 10,
-      "title": "A dumpster arrived behind my university's library",
-      "score": 111,
-      "url": "https://yalereview.org/article/sheila-liming-the-end-of-books",
-      "id": 48504543
+      "title": "Asciline – real-time ASCII video rendering engine",
+      "score": 17,
+      "url": "https://github.com/YusufB5/ASCILINE",
+      "id": 48499993
     }
   ],
   "ph": [
@@ -356,384 +365,384 @@
       "rank": 1,
       "name": "Fundraisly",
       "tagline": "AI fundraising agent that finds investors and books meetings",
-      "votes": 1271,
+      "votes": 1343,
       "url": "https://www.producthunt.com/products/fundraisly?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 2,
       "name": "Brew ",
       "tagline": "Like Claude design for email marketing",
-      "votes": 929,
+      "votes": 936,
       "url": "https://www.producthunt.com/products/brew-5/launches/brew-4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 3,
       "name": "StoreClaw",
       "tagline": "Grow your store profits with agents that know how to sell",
-      "votes": 888,
+      "votes": 894,
       "url": "https://www.producthunt.com/products/storeclaw/launches/storeclaw?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 4,
       "name": "PollyReach",
       "tagline": "Give your agent a real number and voice to make calls.",
-      "votes": 827,
+      "votes": 833,
       "url": "https://www.producthunt.com/products/pollyreach/launches/pollyreach?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 5,
       "name": "Unabyss",
       "tagline": "MCP-native self-updating context layer for your AI",
-      "votes": 768,
+      "votes": 773,
       "url": "https://www.producthunt.com/products/unabyss/launches/unabyss?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 6,
-      "name": "own.page",
-      "tagline": "Make your own personal website with bento tiles",
-      "votes": 676,
-      "url": "https://www.producthunt.com/products/own-page/launches/own-page?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
+      "name": "Bond",
+      "tagline": "The AI to-do list that does itself",
+      "votes": 687,
+      "url": "https://www.producthunt.com/products/bond-12?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 7,
-      "name": "Bond",
-      "tagline": "The AI to-do list that does itself",
-      "votes": 648,
-      "url": "https://www.producthunt.com/products/bond-12?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
+      "name": "own.page",
+      "tagline": "Make your own personal website with bento tiles",
+      "votes": 679,
+      "url": "https://www.producthunt.com/products/own-page/launches/own-page?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 8,
       "name": "Mailwarm 2.0",
       "tagline": "The email warmup tool, upgraded for deliverability.",
-      "votes": 641,
+      "votes": 650,
       "url": "https://www.producthunt.com/products/mailwarm?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 9,
-      "name": "OpenHuman",
-      "tagline": "An open source AI harness built with the human in mind",
-      "votes": 629,
-      "url": "https://www.producthunt.com/products/openhuman/launches/openhuman?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
+      "name": "Publora",
+      "tagline": "A publishing API for agents to post on 10 social platforms",
+      "votes": 633,
+      "url": "https://www.producthunt.com/products/publora?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 10,
       "name": "mailX by mailwarm",
       "tagline": "Email deliverability toolkit for humans and AI agents",
-      "votes": 621,
+      "votes": 626,
       "url": "https://www.producthunt.com/products/mailx-by-mailwarm-yc-s20/launches/mailx-by-mailwarm?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     }
   ],
   "lobsters": [
     {
       "rank": 1,
-      "title": "AI Agent Bankrupted Their Operator While Trying to Scan DN42",
-      "score": 104,
-      "url": "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/"
+      "title": "curl summer of bliss",
+      "score": 84,
+      "url": "https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/"
     },
     {
       "rank": 2,
-      "title": "How I made a 60fps Eink monitor, the Modos Flow",
-      "score": 57,
-      "url": "https://youtu.be/nHbA2-_qzH4"
+      "title": "write for one person",
+      "score": 69,
+      "url": "https://wizardzines.com/comics/write-for-one-person/"
     },
     {
       "rank": 3,
-      "title": "Hundreds of AUR packages attacked by infostealer",
-      "score": 126,
-      "url": "https://lists.archlinux.org/archives/list/aur-general@lists.archlinux.org/thread/FGXPCB3ZVCJIV7FX323SBAX2JHYB7ZS4/"
+      "title": "Removing my nix flakes vs guix post",
+      "score": 16,
+      "url": "https://coopi.neocities.org/posts/taking-down-nix-flakes-vs-guix"
     },
     {
       "rank": 4,
-      "title": "Nix Flakes and their Guix Equivalents",
+      "title": "pyinfra — agentless infrastructure automation, in plain Python",
       "score": 15,
-      "url": "https://coopi.neocities.org/posts/nix-flakes-vs-guix#guix-purity-by-design_6eece251b1ca"
+      "url": "https://pyinfra.com"
     },
     {
       "rank": 5,
-      "title": "German court ruling declares Google's AI Overviews are Google's own words and makes it liable for false answers",
-      "score": 265,
-      "url": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/"
+      "title": "Deconstructing Datalog",
+      "score": 62,
+      "url": "https://www.rntz.net/post/my-thesis.html"
     },
     {
       "rank": 6,
-      "title": "What are you doing this weekend?",
-      "score": 10,
-      "url": "https://lobste.rs/s/qnv1dy"
+      "title": "I Am Not a Reverse Centaur",
+      "score": 20,
+      "url": "https://blog.miguelgrinberg.com/post/i-am-not-a-reverse-centaur"
     },
     {
       "rank": 7,
-      "title": "Reuse Less Software",
-      "score": 45,
-      "url": "https://wiki.alopex.li/ReuseLessSoftware"
+      "title": "Even More Batteries Included With Emacs",
+      "score": 57,
+      "url": "https://karthinks.com/software/even-more-batteries-included-with-emacs/"
     },
     {
       "rank": 8,
-      "title": "our workplace LLM mass delusion",
-      "score": 85,
-      "url": "https://blog.avas.space/llm-circus/"
+      "title": "zinnia: a modular 64-bit Unix-like kernel written in Rust",
+      "score": 46,
+      "url": "https://zinnia-os.org/"
     },
     {
       "rank": 9,
-      "title": "A columnar database for analytics in pure Clojure",
-      "score": 5,
-      "url": "https://github.com/yogthos/flatiron"
+      "title": "The only scalable delete in Postgres is DROP TABLE",
+      "score": 12,
+      "url": "https://planetscale.com/blog/the-only-scalable-delete"
     },
     {
       "rank": 10,
-      "title": "There Is Life Before Main in Rust",
-      "score": 38,
-      "url": "https://grack.com/blog/2026/06/11/life-before-main/"
+      "title": "What are you doing this week?",
+      "score": 5,
+      "url": "https://lobste.rs/s/fwohh5"
     }
   ],
   "ithome": [
     {
       "rank": 1,
-      "title": "套件管理器Homebrew調整套件來源信任機制，6.0.0強化供應鏈安全與Linux沙箱",
-      "url": "https://www.ithome.com.tw/news/176578",
-      "date": "2026-06-12",
+      "title": "系統介面WASI 0.3改用元件模型非同步機制，改善Wasm跨元件呼叫與串流處理",
+      "url": "https://www.ithome.com.tw/news/176615",
+      "date": "2026-06-15",
       "author": "李建興"
     },
     {
       "rank": 2,
-      "title": "【資安週報】0608-0612，全球漏洞治理迎來新變革，美國CISA開始勒令高風險漏洞3天內須修補",
-      "url": "https://www.ithome.com.tw/news/176582",
-      "date": "2026-06-12",
-      "author": "羅正漢"
+      "title": "NightSpire勒索軟體濫用合法管理工具發動攻擊，已入侵包括臺灣在內33個國家",
+      "url": "https://www.ithome.com.tw/news/176627",
+      "date": "2026-06-15",
+      "author": "張明德"
     },
     {
       "rank": 3,
-      "title": "環境部推全新的循環標誌，預計7月開放申請，今年還將納入政府綠色採購",
-      "url": "https://www.ithome.com.tw/news/176580",
-      "date": "2026-06-12",
-      "author": "蘇文彬"
+      "title": "資安署開辦「資安專家會客室」，中小企業可免費申請預約",
+      "url": "https://www.ithome.com.tw/news/176613",
+      "date": "2026-06-15",
+      "author": "羅正漢"
     },
     {
       "rank": 4,
-      "title": "企業需要AI即戰力，但新鮮人只會用AI改履歷",
-      "url": "https://www.ithome.com.tw/news/176579",
-      "date": "2026-06-12",
-      "author": "黃彥棻"
+      "title": "瘋世足除了防範假門票，也要防範假FIFA與贊助商徵才的網釣活動",
+      "url": "https://www.ithome.com.tw/news/176605",
+      "date": "2026-06-15",
+      "author": "羅正漢"
     },
     {
       "rank": 5,
-      "title": "Splunk 6月安全更新修補一項讓攻擊者清空檔案的重大漏洞",
-      "url": "https://www.ithome.com.tw/news/176577",
-      "date": "2026-06-12",
-      "author": "林妍溱"
+      "title": "資安不再是IT部門的事，供應鏈韌性與AI治理成企業存續的核心命題",
+      "url": "https://www.ithome.com.tw/news/176614",
+      "date": "2026-06-15",
+      "author": "黃彥棻"
     },
     {
       "rank": 6,
-      "title": "【資安日報】6月12日，Oracle PeopleSoft零時差漏洞被用於大規模攻擊",
-      "url": "https://www.ithome.com.tw/news/176576",
-      "date": "2026-06-12",
-      "author": "周峻佑"
+      "title": "GitHub改善Copilot程式碼審查，組織可統一控管Runner與內容排除設定",
+      "url": "https://www.ithome.com.tw/news/176610",
+      "date": "2026-06-15",
+      "author": "李建興"
     },
     {
       "rank": 7,
-      "title": "GitLab修補12個漏洞，最高風險可能導致帳號接管",
-      "url": "https://www.ithome.com.tw/news/176575",
-      "date": "2026-06-12",
-      "author": "陳曉莉"
+      "title": "CISA將Ivanti Sentry滿分漏洞列為已知遭利用，Ivanti稱攻擊嘗試僅見於蜜罐環境",
+      "url": "https://www.ithome.com.tw/news/176612",
+      "date": "2026-06-15",
+      "author": "王珮瑤"
     },
     {
       "rank": 8,
-      "title": "衛福部揭5,050筆臺灣專用LOINC對照表，打造全國共通醫學檢驗語言、為醫療AI鋪路",
-      "url": "https://www.ithome.com.tw/news/176573",
-      "date": "2026-06-12",
-      "author": "王若樸"
-    },
-    {
-      "rank": 9,
-      "title": "Ivanti甫修補的滿分重大漏洞已出現實際攻擊",
-      "url": "https://www.ithome.com.tw/news/176572",
-      "date": "2026-06-12",
+      "title": "【資安日報】6月15日，美國政府禁止外國人士使用Claude Fable",
+      "url": "https://www.ithome.com.tw/news/176604",
+      "date": "2026-06-15",
       "author": "周峻佑"
     },
     {
+      "rank": 9,
+      "title": "152個Chrome動態桌布擴充套件暗藏用戶行為追蹤功能，累計安裝量逾10萬次",
+      "url": "https://www.ithome.com.tw/news/176609",
+      "date": "2026-06-15",
+      "author": "張明德"
+    },
+    {
       "rank": 10,
-      "title": "麥肯錫：88%企業導入AI、只有39%看見實際效益，關鍵在於改變流程",
-      "url": "https://www.ithome.com.tw/news/176584",
-      "date": "2026-06-12",
-      "author": "王若樸"
+      "title": "美國司法部放行派拉蒙以1,100億美元收購WBD",
+      "url": "https://www.ithome.com.tw/news/176608",
+      "date": "2026-06-15",
+      "author": "陳曉莉"
     },
     {
       "rank": 11,
-      "title": "越南駭客OceanLotus發動供應鏈攻擊，鎖定投資人散布SpectralViper後門",
-      "url": "https://www.ithome.com.tw/news/176570",
-      "date": "2026-06-12",
+      "title": "Google控告濫用Gemini的中國詐騙集團Outsider Enterprise",
+      "url": "https://www.ithome.com.tw/news/176606",
+      "date": "2026-06-15",
       "author": "陳曉莉"
     },
     {
       "rank": 12,
-      "title": "LiteLLM高風險已知漏洞可與另一個漏洞串連，形成CVSS風險10分的漏洞利用鏈",
-      "url": "https://www.ithome.com.tw/news/176569",
-      "date": "2026-06-12",
+      "title": "中國駭客組織Velvet Ant滲透關鍵基礎設施，潛伏隔離網路環境近十年",
+      "url": "https://www.ithome.com.tw/news/176603",
+      "date": "2026-06-15",
       "author": "周峻佑"
     },
     {
       "rank": 13,
-      "title": "Palo Alto發布6月安全更新修補11項漏洞",
-      "url": "https://www.ithome.com.tw/news/176568",
-      "date": "2026-06-12",
-      "author": "林妍溱"
+      "title": "澳洲第二大製糖業者Mackay Sugar遭網路攻擊，兩糖廠營運停擺並迫使農戶暫停收割",
+      "url": "https://www.ithome.com.tw/news/176600",
+      "date": "2026-06-15",
+      "author": "羅正漢"
     },
     {
       "rank": 14,
-      "title": "Coupang個資外洩案波及3,755萬人，遭韓國重罰逾6,246億韓元",
-      "url": "https://www.ithome.com.tw/news/176567",
-      "date": "2026-06-12",
-      "author": "王珮瑤"
+      "title": "遠端管理工具SimpleHelp修補重大身分驗證繞過漏洞，未更新可能導致攻擊者取得管理權限",
+      "url": "https://www.ithome.com.tw/news/176601",
+      "date": "2026-06-15",
+      "author": "張明德"
     },
     {
       "rank": 15,
-      "title": "研究人員揭露BitLocker零時差漏洞GreatXML",
-      "url": "https://www.ithome.com.tw/news/176566",
-      "date": "2026-06-12",
-      "author": "周峻佑"
+      "title": "MITRE ATT&amp;CK第19版刪除防禦規避戰略，拆分為隱匿與防禦削弱",
+      "url": "https://www.ithome.com.tw/news/176594",
+      "date": "2026-06-15",
+      "author": "羅正漢"
     }
   ],
   "techorange": [
     {
       "rank": 1,
-      "title": "台灣 AI 動能指數居亞洲之冠，但鄧白氏點出最大挑戰：資料與系統整合",
-      "url": "https://techorange.com/2026/06/12/dun-bradstreet-taiwan-ai/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
-      "date": "2026-06-12",
+      "title": "美國 AI 科系五年暴增 15 倍，但這張新文憑值多少錢仍是未知數",
+      "url": "https://techorange.com/2026/06/15/ai-education-talent/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-15",
       "author": "廖紹伶"
     },
     {
       "rank": 2,
-      "title": "企業正在付錢養出自己的競爭對手？從 Claude Code 到 Claude Design，Anthropic 正在進攻客戶核心業務",
-      "url": "https://techorange.com/2026/06/12/anthropic-blindsides-business-partners/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
-      "date": "2026-06-12",
+      "title": "機器人產業正在等待「Windows 時刻」：Edge AI 軟體平台如何把碎片化開發變成標準化部署？",
+      "url": "https://techorange.com/2026/06/15/computers-software-windows-utility-robots/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-15",
       "author": "李昀蔚"
     },
     {
       "rank": 3,
-      "title": "麗臺於 COMPUTEX 2026 推出終極 AI 工作站，打造高彈性 AI 解決方案",
-      "url": "https://techorange.com/2026/06/12/leadtek-nvidia-computex-2026-ai-agent/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
-      "date": "2026-06-12",
-      "author": "產業動態"
-    },
-    {
-      "rank": 4,
-      "title": "解鎖 AWS 國際雙認證，新北青年局「AI 實戰職涯營」助攻媒合熱門科技職缺",
-      "url": "https://techorange.com/2026/06/12/ntpc-aws-2026-aipractitionerprogram/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
-      "date": "2026-06-12",
-      "author": "TO 主題新聞"
-    },
-    {
-      "rank": 5,
-      "title": "貝佐斯反駁 AI 失業潮：Prometheus 要用「通用人工智慧工程師」賦能工程師，讓發明更簡單快速",
-      "url": "https://techorange.com/2026/06/12/jeff-bezoss-prometheus/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
-      "date": "2026-06-12",
-      "author": "李昀蔚"
-    },
-    {
-      "rank": 6,
-      "title": "史上最大 IPO 背後：SpaceX 如何把太空定調成 AI 時代的新基礎設施？",
-      "url": "https://techorange.com/2026/06/12/spacex-ipo-2026/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
-      "date": "2026-06-12",
+      "title": "當 AI 把專業知識商品化，企業的差異化優勢剩什麼？Nadella 說答案在「學習迴圈」",
+      "url": "https://techorange.com/2026/06/15/satya-nadella-the-future-of-the-firm-in-an-ai-driven-economy/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-15",
       "author": "廖紹伶"
     },
     {
-      "rank": 7,
-      "title": "AI 用越多不代表越有價值：當 token 成本升高，企業決策者開始追問真正 ROI",
-      "url": "https://techorange.com/2026/06/12/ai-token-reckoning-execs-on-measuring-return-on-investment/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
-      "date": "2026-06-12",
+      "rank": 4,
+      "title": "Anthropic 被迫關閉 Fable 5、Mythos 5：美國經濟學家 Tyler Cowen 警告，全球可能轉向中國 AI",
+      "url": "https://techorange.com/2026/06/15/anthropic-tyler-cowen/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-15",
       "author": "李昀蔚"
     },
     {
-      "rank": 8,
-      "title": "研發週期砍半、搜尋能見度翻倍：聯合利華怎麼用 AI 改造食品事業？",
-      "url": "https://techorange.com/2026/06/12/unilever-ai-search-visibility/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
-      "date": "2026-06-12",
-      "author": "Ariel"
+      "rank": 5,
+      "title": "【從賣時間到賣成果】麥肯錫薪酬結構調整，AI 推動知識型服務業的商業模式重寫",
+      "url": "https://techorange.com/2026/06/15/consulting-work-charge/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-15",
+      "author": "歐尚恩"
     },
     {
-      "rank": 9,
-      "title": "展示容易部署難，人形機器人距離真正的工業化還有多遠？",
-      "url": "https://techorange.com/2026/06/12/ai-humanoid-robot-tipping-point-is-near/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
-      "date": "2026-06-12",
+      "rank": 6,
+      "title": "時隔 14 年再度開放申請：「品牌頂級域名」正影響企業資安、客戶信任與網路行銷",
+      "url": "https://techorange.com/2026/06/15/brand-tld-domain-name-and-cybersecurity/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-15",
       "author": "Min"
     },
     {
-      "rank": 10,
-      "title": "【科技早餐】台積電捲入美國專利戰，OpenAI 價格戰與 AI 監管同步壓上來",
-      "url": "https://techorange.com/2026/06/12/tsmc-us-patent-battle/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
-      "date": "2026-06-12",
+      "rank": 7,
+      "title": "限時折扣不管用了？《哈佛商業評論》揭 AI 購物代理的決策邏輯",
+      "url": "https://techorange.com/2026/06/15/research-traditional-marketing-doesnt-work-on-ai-shopping-agents/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-15",
+      "author": "Ariel"
+    },
+    {
+      "rank": 8,
+      "title": "【333 Robots Community Meetup】交大資工系副教授陳奕廷拆解 Physical AI 開發迷思，讓機器人回到真實需求",
+      "url": "https://techorange.com/2026/06/15/333-robots-community-meetup-may/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-15",
+      "author": "李昀蔚"
+    },
+    {
+      "rank": 9,
+      "title": "【科技早餐】SpaceX 點燃 AI IPO 信心，NVIDIA 基建與 Anthropic 管制同步升溫",
+      "url": "https://techorange.com/2026/06/15/spacex-the-largest-ipo-ever/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-15",
       "author": "Anita"
+    },
+    {
+      "rank": 10,
+      "title": "【AI 吞噬世界】AI 是繼網路、智慧型手機後的新一輪底層洗牌，你的護城河還在嗎？",
+      "url": "https://techorange.com/2026/06/13/ai-eats-the-world-benedict-evans/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+      "date": "2026-06-13",
+      "author": "MTJ"
     }
   ],
   "techcrunch": [
     {
       "rank": 1,
-      "title": "SpaceX IPO: Live updates on everything you need to know",
-      "url": "https://techcrunch.com/2026/06/12/spacex-ipo-live-updates-on-everything-you-need-to-know/",
-      "date": "2026-06-12",
-      "author": "Kirsten Korosec, Russell Brandom"
+      "title": "A satellite just learned to find things on its own — here’s what that means",
+      "url": "https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/",
+      "date": "2026-06-15",
+      "author": "Tim Fernholz"
     },
     {
       "rank": 2,
-      "title": "SpaceX shares soar 30% midday, vaulting it to top six most valuable U.S. companies",
-      "url": "https://techcrunch.com/2026/06/12/spacex-shares-soar-30-percent-midday-vaulting-it-to-top-six-most-valuable-us-companies/",
-      "date": "2026-06-12",
-      "author": "Marina Temkin, Sean O'Kane"
+      "title": "The AI layoff wave is becoming a powder keg",
+      "url": "https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/",
+      "date": "2026-06-15",
+      "author": "Connie Loizos"
     },
     {
       "rank": 3,
-      "title": "Mistral is rumored to be raising €3B at €20B valuation",
-      "url": "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/",
-      "date": "2026-06-12",
-      "author": "Ram Iyer"
+      "title": "Orbio raises $21 million to automate hiring and onboarding for frontline workers",
+      "url": "https://techcrunch.com/2026/06/14/orbio-raises-21-million-to-automate-hiring-and-onboarding-for-frontline-workers/",
+      "date": "2026-06-15",
+      "author": "Dominic-Madori Davis"
     },
     {
       "rank": 4,
-      "title": "Google sues alleged Chinese cybercrime operation that used AI to send scam texts",
-      "url": "https://techcrunch.com/2026/06/12/google-sues-alleged-chinese-cybercrime-operation-that-used-ai-to-send-scam-texts/",
-      "date": "2026-06-12",
-      "author": "Lorenzo Franceschi-Bicchierai"
+      "title": "Startup CEO Charlie Javice is reportedly angling for a Trump pardon",
+      "url": "https://techcrunch.com/2026/06/14/startup-ceo-charlie-javice-is-reportedly-angling-for-a-trump-pardon/",
+      "date": "2026-06-14",
+      "author": "Connie Loizos"
     },
     {
       "rank": 5,
-      "title": "Robinhood sees ‘record-breaking’ traffic after SpaceX stock debuts",
-      "url": "https://techcrunch.com/2026/06/12/robinhood-sees-record-breaking-traffic-after-spacex-stock-debuts/",
-      "date": "2026-06-12",
-      "author": "Sean O'Kane"
+      "title": "UK may ban social media for children under 16",
+      "url": "https://techcrunch.com/2026/06/14/uk-may-ban-social-media-for-children-under-16/",
+      "date": "2026-06-14",
+      "author": "Anthony Ha"
     },
     {
       "rank": 6,
-      "title": "SpaceX, Anthropic, and OpenAI’s hot IPO summer",
-      "url": "https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/",
-      "date": "2026-06-12",
-      "author": "Theresa Loconsolo"
+      "title": "As AI companies race to go public, who else is along for the ride?",
+      "url": "https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride/",
+      "date": "2026-06-14",
+      "author": "Anthony Ha"
     },
     {
       "rank": 7,
-      "title": "Elon Musk becomes the world’s first trillionaire after SpaceX’s historic IPO",
-      "url": "https://techcrunch.com/2026/06/12/elon-musk-becomes-the-worlds-first-trillionaire-after-spacexs-historic-ipo/",
-      "date": "2026-06-12",
-      "author": "Sean O'Kane"
+      "title": "TechCrunch Mobility: SpaceX rockets past Tesla",
+      "url": "https://techcrunch.com/2026/06/14/techcrunch-mobility-spacex-rockets-past-tesla/",
+      "date": "2026-06-14",
+      "author": "Kirsten Korosec"
     },
     {
       "rank": 8,
-      "title": "US surveillance law to expire for first time after lawmakers reject Trump’s controversial pick to lead spy agencies",
-      "url": "https://techcrunch.com/2026/06/12/us-spy-law-to-expire-for-first-time-after-lawmakers-reject-trumps-controversial-pick-to-lead-spy-agencies/",
-      "date": "2026-06-12",
-      "author": "Zack Whittaker"
+      "title": "The new Sonos Play has become my go-to desk and kitchen speaker",
+      "url": "https://techcrunch.com/2026/06/14/the-new-sonos-play-has-become-my-go-to-desk-and-kitchen-speaker/",
+      "date": "2026-06-14",
+      "author": "Ivan Mehta"
     },
     {
       "rank": 9,
-      "title": "Cheaper, faster, and culturally aware, Avataar’s video AI is built for India’s scale",
-      "url": "https://techcrunch.com/2026/06/11/cheaper-faster-and-culturally-aware-avataars-video-ai-is-built-for-indias-scale/",
-      "date": "2026-06-12",
-      "author": "Ivan Mehta"
+      "title": "As Anthropic suspends access to new models, India debates its AI future",
+      "url": "https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/",
+      "date": "2026-06-14",
+      "author": "Jagmeet Singh"
     },
     {
       "rank": 10,
-      "title": "Equal AI raises $30M to screen calls so Indians don’t have to",
-      "url": "https://techcrunch.com/2026/06/11/equal-ai-raises-30m-to-screen-calls-so-indians-dont-have-to/",
-      "date": "2026-06-12",
-      "author": "Ivan Mehta"
+      "title": "Meta reportedly moves to unwind $2B Manus deal after Beijing’s demand",
+      "url": "https://techcrunch.com/2026/06/13/meta-reportedly-moves-to-unwind-2b-manus-deal-after-beijings-demand/",
+      "date": "2026-06-14",
+      "author": "Kate Park"
     }
   ],
   "schedule": [
@@ -750,20 +759,21 @@
   ],
   "emailBrief": [
     {
-      "from": "財政部電子發票整合服務平台",
-      "subject": "115年03-04月期雲端發票中獎獎金匯款成功通知",
+      "from": "國泰世華銀行",
+      "subject": "帳戶連結交易提領通知",
       "importance": "High",
       "todos": [
-        "確認國泰世華帳號（051***829）已收到 NT$1,000 獎金"
+        "確認是否本人於 02:12 AM 在「連加電支」執行帳戶連結設定",
+        "若非本人操作，立即致電國泰世華24小時服務專線 (02)2383-1000"
       ],
-      "time": "22:41"
+      "time": "02:12"
     },
     {
-      "from": "Google Payments",
-      "subject": "Google Cloud Platform & APIs: Payment received",
+      "from": "中國信託銀行",
+      "subject": "系統暫停服務公告",
       "importance": "Low",
       "todos": [],
-      "time": "23:28"
+      "time": "19:11"
     }
   ]
 }

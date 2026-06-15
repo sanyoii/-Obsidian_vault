@@ -810,3 +810,49 @@ Photorealism / Over-detailed architecture / Heavy outlines / Crowded scenes / Re
 FINAL RESULT:
 A refined pastel paper-collage city poster of Florence featuring a classic Vespa scooter and Brunelleschi's Duomo as the two primary visual anchors, using warm terracotta and Tuscan ochre accents, tactile paper textures, clean geometric layering, generous negative space, and a sophisticated modern travel-illustration aesthetic.
 ```
+
+---
+
+## 模板六：Phone Portal Papercraft Travel Memory Poster
+
+> **直式 4:5**、手機螢幕作為傳送門，紙雕立體景由螢幕中浮現至現實。
+> 右側為旅行手帳排版（標題/日期/語錄/Polaroid照片/打卡卡片/紀念品），收藏感最強，適合製作個人化回憶海報。
+
+### 原始 Meta Prompt（含變數）
+
+```
+Create a premium personalized travel memory poster in 4:5 portrait format.
+
+The composition features a realistic modern smartphone positioned on the left side. Inside the phone is a highly detailed layered papercraft diorama representing [DESTINATION], with iconic landscapes, landmarks, architecture, nature, and cultural elements unique to the location.
+
+The papercraft scene should emerge naturally out of the phone screen into the real world, creating a seamless transition between digital discovery and travel memories. Use multiple paper-cut layers with visible depth, shadows, folded edges, and handcrafted textures. The phone remains photorealistic while the emerging destination is rendered in premium 3D papercraft style.
+
+Include one miniature traveler, viewed from behind, exploring the scene. The traveler should be small and subtle, creating a personal storytelling element rather than a tourism advertisement.
+
+The right side contains elegant travel-journal elements:
+
+- Large handwritten title: "My [DESTINATION] Journey"
+- Travel dates
+- Short personal travel quote
+- 3 to 5 Polaroid-style memory photos featuring iconic locations from the destination
+- "Places I Visited" note card
+- "Journey Highlights" note card
+- Travel stamp, passport marks, tickets, or collectible souvenir elements
+- Handwritten signature area: "Collected by [NAME]"
+
+Design style:
+Premium travel keepsake, luxury scrapbook aesthetic, clean white background, editorial layout, soft shadows, elegant typography, realistic paper textures, subtle botanical elements, high-end print design, museum-quality composition.
+
+Mood:
+Nostalgic, personal, artistic, memorable, collectible, handcrafted, sophisticated.
+
+Avoid:
+Tourism advertisements, QR codes, website URLs, promotional slogans, excessive clutter, influencer poses, stock-photo appearance, generic travel brochure design.
+
+Ultra detailed, professional poster design, premium paper textures, realistic lighting, high-resolution, award-winning travel memory artwork.
+
+=====================================
+VARIABLE REPLACEMENT GUIDE:
+[DESTINATION] = 目的地名稱（出現於標題與手機內紙雕場景）
+[NAME] = 收藏者署名（出現於右下「Collected by」手寫簽名區）
+```

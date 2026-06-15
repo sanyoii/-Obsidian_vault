@@ -1,64 +1,37 @@
 [
   {
-    "from": "職缺海巡 (自送)",
-    "subject": "[職缺海巡] 11 筆新職缺 (Fireblocks/Kraken/Bitfinex/Binance)",
-    "importance": "High",
-    "todos": [
-      "優先評估：Bitfinex QA Automation Engineer (100% Remote UTC+7~+9)",
-      "優先評估：Tether Operations Senior QA Engineer (100% Remote x2 listings)",
-      "評估：Fireblocks Senior QA Automation Engineer (Financial Apps)",
-      "評估：Kraken QA Automation Engineer Pro",
-      "評估：Binance QA Engineer Square"
-    ],
-    "time": "18:43"
-  },
-  {
-    "from": "Tony (AgentRQ)",
-    "subject": "Multi-agent orchestration — AgentRQ open-source MCP control plane",
+    "from": "Discord",
+    "subject": "elfken 在 水球軟體學院：研究組織 中提到您",
     "importance": "Medium",
     "todos": [
-      "查看 AgentRQ GitHub repo（dual-mode MCP: Supervisor vs Isolated Workspace）",
-      "7 天內決定是否回覆（逾期郵件自動刪除）"
+      "查看 Discord 水球軟體學院，確認 elfken 的留言內容",
+      "確認是否要加入週五（06/19）Code Review 排隊串"
     ],
-    "time": "18:05"
+    "time": "09:05"
   },
   {
-    "from": "ByteByteGo (Alex Xu)",
-    "subject": "Final Week to Enroll: Build with Claude Code (6/18 start)",
+    "from": "PayPal",
+    "subject": "你的 PayPal 驗證碼",
     "importance": "Medium",
     "todos": [
-      "決定是否報名 2-day intensive Build with Claude Code 課程（本週截止，6/18 開課）"
+      "確認此 OTP 是否為本人主動觸發（若非本人操作，立即至 PayPal 檢查帳戶安全）"
     ],
-    "time": "15:41"
+    "time": "08:47"
   },
   {
-    "from": "LinkedIn",
-    "subject": "Anshul Gangwar 徵才：Lead/Senior QA Engineer (Remote Vancouver)",
-    "importance": "Medium",
+    "from": "國泰世華銀行",
+    "subject": "國泰世華銀行消費彙整通知",
+    "importance": "Low",
+    "todos": [],
+    "time": "06:35"
+  },
+  {
+    "from": "Allianz Travel",
+    "subject": "Plus que quelques jours pour répondre - Votre avis",
+    "importance": "Low",
     "todos": [
-      "查看 Lead/Senior QA Engineer 職缺（Remote, Vancouver BC, 12 個月合約, 8+ 年經驗）"
+      "填寫 Allianz Travel 旅遊保險滿意度問卷（約 3 分鐘）"
     ],
-    "time": "15:39"
-  },
-  {
-    "from": "Indeed",
-    "subject": "1筆台北市 QA Engineer 新工作（英業達 士林）",
-    "importance": "Low",
-    "todos": [],
-    "time": "14:56"
-  },
-  {
-    "from": "Indeed",
-    "subject": "遠端工作 - 19筆最新工作",
-    "importance": "Low",
-    "todos": [],
-    "time": "14:39"
-  },
-  {
-    "from": "LinkedIn Jobs",
-    "subject": "Test Engineer at AMD",
-    "importance": "Low",
-    "todos": [],
-    "time": "11:38"
+    "time": "09:03"
   }
 ]

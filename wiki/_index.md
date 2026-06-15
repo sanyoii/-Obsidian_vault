@@ -97,6 +97,7 @@
 - [[Github/留看repos/已整理/x1xhlol-system-prompts-and-models-of-ai-tools|x1xhlol/system-prompts-and-models-of-ai-tools — AI 工具 System Prompt 資料庫]] — 30+ 工具真實 system prompt（Cursor/Claude Code 2.0/Manus/Windsurf/Kiro 等），104 檔案 2.1MB；✅ 適合收藏 `#ai-prompts #reverse-engineering #claude-code #research`
 - [[Github/留看repos/已整理/addyosmani-agent-skills — 生產級工程 Skills 套件|addyosmani/agent-skills — 生產級工程 Skills 套件]] — 24 個 SDLC 工程 skills（spec/plan/build/verify/review/ship）+ 7 條斜線指令 + 4 個專用 Agent；✅ 適合安裝 `#skills #claude-code #engineering #tdd #spec`
 - [[Github/留看repos/已整理/Madison-de-Chao-rainbow-sanctuary-report-site — 命理解讀報告銷售落地頁|Rainbow Sanctuary — 命理解讀報告銷售落地頁]] — Next.js 15 命理報告銷售模板，紫微×八字×占星×人類圖「人生羅盤」三階定價落地頁；參考用，非排盤引擎 `#nextjs #landing-page #ziwei #astrology #reference`
+- [[Github/repos/music-assistant-server — 開源家用音樂串流管理器|music-assistant/server — 開源家用音樂串流管理器]] — 106 個 providers 整合 Spotify/Tidal/YouTube 等音源 + Sonos/AirPlay 等嗇叭；含實驗性 FastMCP plugin 可接 Claude Code；⏳ 觀望 `#media #music #home-assistant #mcp #self-hosted`
 
 ---
 

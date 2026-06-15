@@ -29,6 +29,8 @@
 |**zeuikli/claude-pilot-suite**|Claude Code 3 模式 playbook：Haiku（省錢）/ Sonnet（品質保底）/ Opus（上限突破），量化升級門檻，可省 55-85% 成本|
 |**LichAmnesia/gemini-evolve**|Gemini CLI 自我進化工具：用 GA + DSPy 自動優化 `GEMINI.md`，有 holdout test 確保不退化|
 |**GPT-Prompt-Hub (LichAmnesia)**|222 個有結構的 Prompts（Role/Objective/Inputs/Output/Constraints），針對 Claude 4.x / GPT-5 / Gemini 3|
+|**zealchou/fable5-scaffold**|6 個 advisory hook + /deep-work、/adversarial-verify 兩個 skill，逼近 Fable5 級工作流嚴謹度。與現有 CLAUDE.md R8-R14 + recursive-* skills 高度重疊，**不建議安裝**|
+|**Agents365-ai/drawio-skill**|.drawio 圖表生成 + 匯出 PNG/SVG/PDF/JPG，10k+ 官方 AWS/Azure/GCP/UML 圖形、321 個 AI/LLM logo、程式碼結構自動視覺化（Python/JS/Go/Rust import graph）。需先裝 draw.io 桌面版，**有條件值得裝**|
 
 ---
 
