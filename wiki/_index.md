@@ -99,6 +99,7 @@
 - [[Github/留看repos/已整理/Madison-de-Chao-rainbow-sanctuary-report-site — 命理解讀報告銷售落地頁|Rainbow Sanctuary — 命理解讀報告銷售落地頁]] — Next.js 15 命理報告銷售模板，紫微×八字×占星×人類圖「人生羅盤」三階定價落地頁；參考用，非排盤引擎 `#nextjs #landing-page #ziwei #astrology #reference`
 - [[Github/repos/music-assistant-server — 開源家用音樂串流管理器|music-assistant/server — 開源家用音樂串流管理器]] — 106 個 providers 整合 Spotify/Tidal/YouTube 等音源 + Sonos/AirPlay 等嗇叭；含實驗性 FastMCP plugin 可接 Claude Code；⏳ 觀望 `#media #music #home-assistant #mcp #self-hosted`
 - [[Github/repos/chatwoot — 開源全通道客服平台|chatwoot — 開源全通道客服平台]] — 整合 10+ 頻道（WhatsApp/Email/FB/IG/Telegram）於統一收件匣，Rails+Vue.js，31.6k stars；Intercom/Zendesk 開源替代；❌ 不適合 `#customer-support #omnichannel #live-chat #rails #vuejs #webhook #self-hosted`
+- [[Github/repos/PixelRAG — 像素原生 RAG，截圖讓 AI 用視覺讀網頁|PixelRAG — 像素原生 RAG，截圖讓 AI 用視覺讀網頁]] — `pixelshot` CLI 把網頁/PDF 截圖成分塊圖片讓 LLM 視覺讀取，含 Claude Code plugin `pixelbrowse`；✅ 已安裝，Windows 需 CHROME_PATH wrapper `#skills #claude-code-plugin #screenshot #rag`
 
 ---
 
