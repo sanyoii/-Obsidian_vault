@@ -1065,6 +1065,8 @@ cd d:\Claude\hd-decode\calc-server
 .\start.bat   # 啟動本機計算服務（http://localhost:5001）
 ```
 
+**📄 視覺化解讀報告範本：** `Abao-人類圖解讀報告-視覺版.html` 是獨立的圖文報告（與計算工具不同產品），「暖陽奶油」設計系統（米白+珊瑚橘、雙層卡片、icon sprite、4張SVG圖表、側邊TOC）已定為**未來所有人類圖解讀報告輸出的標準格式**。完整 design spec：`D:\claude\plans\vectorized-swinging-thunder.md`。
+
 ---
 
 ### 13. Open Slide（`open-slide/`）

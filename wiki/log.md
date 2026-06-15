@@ -26,6 +26,7 @@
 
 ### 2026-06-12 | COMPILE
 - `2026-06-12 00:20 | COMPILE | github.com/Madison-de-Chao/- → wiki/Github/留看repos/已整理/Madison-de-Chao-rainbow-sanctuary-report-site — 命理解讀報告銷售落地頁.md` | repomix 分析（38 檔，16K tokens）；Next.js 15 命理報告銷售落地頁，紫微×八字×占星×人類圖「人生羅盤」三階定價（1680/2880/3980）；非排盤引擎，與命運羅盤專案主題重疊，頁面架構可參考；新增 _index.md 與 _summaries.md 條目
+- `2026-06-15 00:00 | COMPILE | github.com/chatwoot/chatwoot → wiki/Github/repos/chatwoot — 開源全通道客服平台.md` | repomix 分析（gh API + WebFetch）；Ruby on Rails + Vue.js 全通道客服平台，31.6k stars；整合 10+ 頻道（WhatsApp/Email/FB/IG/Telegram/Line/TikTok/SMS/語音）；含 Agent Bot Webhook 框架、Captain AI Agent、REST API；結論 ❌ 不適合（SaaS 等級基礎設施，個人工作流無外部客服需求）
 
 ### 2026-06-12 | LINT
 - `2026-06-12 00:10 | LINT | wiki/Github/repos/ → wiki/Github/留看repos/已整理/` | 第二輪：再移 6 篇「原始 README + 附加分析（值得安裝嗎/分析結論）」混合格式文章（Chandra OCR 2、knowledge-work-plugins repo、prompt-master、anthropicsknowledge-work-plugins、eigent、OpenHuman），同步修正 _index.md 與 x1xhlol 文章內 prompt-master 反向連結路徑；anthropicsknowledge-work-plugins 與 knowledge-work-plugins repo 為同一 repo 兩份不同日期剪報，皆已移入但未去重
