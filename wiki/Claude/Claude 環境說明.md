@@ -1,4 +1,4 @@
-> 最後更新：2026-06-04（135 Skills + 15 hyperframes；autohedge-env 已刪；新增 3 commands；移除 Open Design/AI Website Cloner/Hindsight）
+﻿> 最後更新：2026-06-04（135 Skills + 15 hyperframes；autohedge-env 已刪；新增 3 commands；移除 Open Design/AI Website Cloner/Hindsight）
 
 > Skills 在 **Claude Code** 和 **Claude Cowork** 中均可使用，Claude 一般網頁版不支援。
 
@@ -198,7 +198,7 @@ Copy-Item "d:\Claude\.claude\agents\*" "C:\Users\$env:USERNAME\.claude\agents\" 
 
 # 複製 plugin 到 user-level
 
-$src = "d:\Claude\Skill_origin\claude-mem-main\claude-mem-main"
+$src = "d:\Claude\infra\Skill_origin\claude-mem-main\claude-mem-main"
 
 $dst = "$env:USERPROFILE\.claude\plugins\marketplaces\thedotmack"
 
@@ -246,7 +246,7 @@ foreach ($s in $skills) {
 
 New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\plugins\marketplaces\sanyoii" `
 
-  -Target "d:\Claude\my-marketplace"
+  -Target "d:\Claude\infra\my-marketplace"
 
 ```
 
@@ -1013,7 +1013,7 @@ Phase 7    Closeout        — 歸檔，更新記憶
 **用途：** 定時抓取 X (Twitter) / Threads / Instagram 熱門話題，輸出 Markdown 報告，並可 Gmail 通知。Task Scheduler 設定於 10:30 + 22:00 自動執行。
 
 ```powershell
-cd d:\Claude\social-monitor
+cd d:\Claude\active\social-monitor
 python run.bat         # 手動執行一次
 ```
 
@@ -1026,7 +1026,7 @@ python run.bat         # 手動執行一次
 **用途：** 定時從多個求職平台（104、CryptoJobsList、Web3Career）抓取職缺，自動去重、過濾、Email 通知，並提供 Flask Web UI 瀏覽與追蹤。
 
 ```powershell
-cd d:\Claude\job-crawler
+cd d:\Claude\active\job-crawler
 python app.py          # 啟動 Web UI（預設 http://localhost:5000）
 python crawler.py      # 手動抓取一次
 ```
@@ -1046,7 +1046,7 @@ python crawler.py      # 手動抓取一次
 **用途：** AI 求職助手。研究目標公司、找出符合偏好的職缺、從 Answer Bank 自動草擬各平台申請表答案（Why us、自我介紹等），可重複跨申請複用。
 
 ```powershell
-cd d:\Claude\careerbot
+cd d:\Claude\active\careerbot
 # 先填入 context 和放入 resume.pdf，再執行 /onboard
 ```
 
@@ -1061,7 +1061,7 @@ cd d:\Claude\careerbot
 **⬇ 匯出報告：** 產生獨立靜態 HTML 報告，雙視角合併顯示（高頻+陰影同時呈現），不需連網。「姓名」欄位旁新增「性別」下拉（男/女/非二元性別/不想透露，選填），會隨表單持久化並顯示於匯出報告標頭，供之後產生敘事報告時判斷代稱（他/她）。
 
 ```powershell
-cd d:\Claude\hd-decode\calc-server
+cd d:\Claude\active\hd-decode\calc-server
 .\start.bat   # 啟動本機計算服務（http://localhost:5001）
 ```
 
@@ -1085,7 +1085,7 @@ npm run dev            # 啟動預覽伺服器
 **用途：** 企業 AI 教學工作坊素材庫。每場工作坊一個子資料夾（`workshops/YYYY-MM-DD_主題/`），包含 guizang-ppt 電子雜誌風格投影片（HTML + Marp 兩種格式）、公司說明書模板、踩坑筆記。CLAUDE.md 記錄三個已知問題解法（CJK/ASCII 對齊、flex overflow、Practice 統一基準）。
 
 ```powershell
-cd d:\Claude\ai-workshop
+cd d:\Claude\active\ai-workshop
 # 準備新工作坊：複製上一場 slides，搜尋 CloudPay 替換示範情境
 # 使用說明見 CLAUDE.md 和各場 README.md
 ```
@@ -2054,7 +2054,7 @@ Marketplace 是 Plugin 的分發機制，讓你透過 `/plugin install` 安裝�
 
   
 
-**自訂 Marketplace 位置：** `d:\Claude\my-marketplace\`（Junction 連結至 user-level）
+**自訂 Marketplace 位置：** `d:\Claude\infra\my-marketplace\`（Junction 連結至 user-level）
 
 **公開 GitHub Repo：** https://github.com/sanyoii/claude-skills
 
@@ -2112,9 +2112,9 @@ Marketplace 是 Plugin 的分發機制，讓你透過 `/plugin install` 安裝�
 
 1. 在 `d:\Claude\.claude\skills\<skill-name>\` 建立 `SKILL.md`
 
-2. 將 skill 目錄複製到 `d:\Claude\my-marketplace\plugins\<group>\skills\<skill-name>\`
+2. 將 skill 目錄複製到 `d:\Claude\infra\my-marketplace\plugins\<group>\skills\<skill-name>\`
 
-3. 更新 `d:\Claude\my-marketplace\.claude-plugin\marketplace.json`（若需新 group）
+3. 更新 `d:\Claude\infra\my-marketplace\.claude-plugin\marketplace.json`（若需新 group）
 
 4. Commit → Push → `sanyoii/claude-skills` 自動更新
 
@@ -2222,13 +2222,13 @@ Plugin 位置：`C:\Users\sanyo\.claude\plugins\marketplaces\understand-anything
 |------|--------|---------|
 | **Claude Code Router** | 要省 token 或測試 Gemini 路由時 | `ccr code`（替代 `claude`） |
 | **Repomix** | 讓 AI 讀整個 codebase，或打包給外部分析 | `/repomix-explorer` 或 `repomix --remote user/repo` |
-| **Social Monitor** | 已自動 10:30/22:00 執行，要手動跑時 | `cd d:\Claude\social-monitor && python run.bat` |
-| **Job Crawler** | 查看最新職缺、追蹤申請狀態 | `cd d:\Claude\job-crawler && python app.py`（Flask UI at port 5000） |
-| **CareerBot** | 草擬求職申請表、Why Us 答案 | `cd d:\Claude\careerbot`（⚠️ 需先執行 `/onboard`） |
-| **HD Decode** | 讀取人類圖報告、查詢通道或中心說明 | `cd d:\Claude\hd-decode` |
+| **Social Monitor** | 已自動 10:30/22:00 執行，要手動跑時 | `cd d:\Claude\active\social-monitor && python run.bat` |
+| **Job Crawler** | 查看最新職缺、追蹤申請狀態 | `cd d:\Claude\active\job-crawler && python app.py`（Flask UI at port 5000） |
+| **CareerBot** | 草擬求職申請表、Why Us 答案 | `cd d:\Claude\active\careerbot`（⚠️ 需先執行 `/onboard`） |
+| **HD Decode** | 讀取人類圖報告、查詢通道或中心說明 | `cd d:\Claude\active\hd-decode` |
 | **Open Slide** | 製作 React 元件式投影片 | `cd d:\Claude\open-slide && npm run dev` |
-| **AI Workshop** | 準備/修改教學工作坊投影片 | `cd d:\Claude\ai-workshop`（詳見 `CLAUDE.md`） |
-| **AI Video Pipeline** | 全自動影片生成（⚠️ 需先申請 FAL_KEY） | `cd d:\Claude\ai-video-pipeline` |
+| **AI Workshop** | 準備/修改教學工作坊投影片 | `cd d:\Claude\active\ai-workshop`（詳見 `CLAUDE.md`） |
+| **AI Video Pipeline** | 全自動影片生成（⚠️ 需先申請 FAL_KEY） | `cd d:\Claude\active\ai-video-pipeline` |
 | **AutoHedge** | Solana 鏈上自動對沖（⚠️ 真實資金） | `cd d:\Claude\autohedge-env && .\Scripts\Activate.ps1 && autohedge` |
 | **Scrapling** | Python 網頁爬蟲，繞過 Cloudflare | `from scrapling.fetchers import Fetcher` |
 | **OpenSpec** | AI 輔助需求規格管理，開始新功能前用 | `cd 專案 && openspec init`，再用 `/opsx:propose` |
@@ -2341,4 +2341,4 @@ d:\Claude\
 
 claude-mem Plugin：`C:\Users\sanyo\.claude\plugins\marketplaces\thedotmack\`
 
-個人 Marketplace：`C:\Users\sanyo\.claude\plugins\marketplaces\sanyoii\`（→ Junction → d:\Claude\my-marketplace\）
+個人 Marketplace：`C:\Users\sanyo\.claude\plugins\marketplaces\sanyoii\`（→ Junction → d:\Claude\infra\my-marketplace\）

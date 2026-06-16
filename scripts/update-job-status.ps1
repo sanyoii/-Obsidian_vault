@@ -7,7 +7,7 @@ $Status  = $parts[1].Trim()
 
 $py = @"
 import sqlite3, sys
-db = r'd:\Claude\job-crawler\jobs.db'
+db = r'd:\Claude\active\job-crawler\jobs.db'
 conn = sqlite3.connect(db)
 conn.execute('UPDATE job_groups SET user_status=? WHERE id=?', (sys.argv[1], int(sys.argv[2])))
 conn.commit()

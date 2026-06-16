@@ -1,4 +1,4 @@
-# D:\Claude 環境操作手冊
+﻿# D:\Claude 環境操作手冊
 
 > **分類：** Claude / 系統
 > **標籤：** `#Claude` `#系統` `#環境` `#Skills` `#Ruflo`
@@ -73,14 +73,14 @@ Copy-Item "$env:TEMP\superpowers\skills\*" "d:\Claude\.claude\skills\" -Recurse 
 
 ### Job Crawler（職缺海巡）
 ```powershell
-cd d:\Claude\job-crawler
+cd d:\Claude\active\job-crawler
 python app.py   # Flask UI at http://localhost:5000
 python crawler.py   # 手動抓取一次
 ```
 
 ### Social Monitor（社群海巡）
 ```powershell
-cd d:\Claude\social-monitor
+cd d:\Claude\active\social-monitor
 python run.bat   # 手動執行；自動排程 10:30 + 22:00
 ```
 
@@ -170,8 +170,8 @@ claude-mem（8 skills）為獨立 Plugin，透過 `thedotmack` marketplace 安�
 
 1. 在 `d:\Claude\.claude\skills\<skill-name>\` 建立含 `SKILL.md` 的 skill
 2. 複製到 `C:\Users\sanyo\.claude\skills\<skill-name>\`（啟用）
-3. 複製到 `d:\Claude\my-marketplace\plugins\<group>\skills\<skill-name>\`
-4. 若新群組，更新 `d:\Claude\my-marketplace\.claude-plugin\marketplace.json`
+3. 複製到 `d:\Claude\infra\my-marketplace\plugins\<group>\skills\<skill-name>\`
+4. 若新群組，更新 `d:\Claude\infra\my-marketplace\.claude-plugin\marketplace.json`
 5. `git add . && git commit && git push` — `sanyoii/claude-skills` 自動更新
 
 ---
@@ -184,11 +184,11 @@ claude-mem（8 skills）為獨立 Plugin，透過 `thedotmack` marketplace 安�
 | `C:\Users\sanyo\.agents\skills\` | hyperframes 等 15 個 |
 | `C:\Users\sanyo\.claude\commands\` | Active commands（5 個） |
 | `C:\Users\sanyo\.claude\plugins\marketplaces\thedotmack\` | claude-mem plugin |
-| `C:\Users\sanyo\.claude\plugins\marketplaces\sanyoii\` | Junction → `d:\Claude\my-marketplace\` |
+| `C:\Users\sanyo\.claude\plugins\marketplaces\sanyoii\` | Junction → `d:\Claude\infra\my-marketplace\` |
 | `d:\Claude\.claude\skills\` | Skill 備份（git-tracked） |
 | `d:\Claude\.claude-flow/` | Ruflo 執行期資料、記憶體、logs |
 | `d:\Claude\.claude-flow/config.yaml` | Ruflo 主設定 |
-| `d:\Claude\Skill_origin\` | 原始 zip/來源檔 |
+| `d:\Claude\infra\Skill_origin\` | 原始 zip/來源檔 |
 
 ---
 

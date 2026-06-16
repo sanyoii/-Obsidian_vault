@@ -1,4 +1,4 @@
----
+﻿---
 tags:
   - tools
   - gbrain
@@ -20,8 +20,8 @@ date: 2026-05-30
 |------|------|
 | 資料庫 | `C:\Users\sanyo\.gbrain\brain.pglite` |
 | Embedding 設定 | `C:\Users\sanyo\.gbrain\config.json` |
-| Skills | `D:\Claude\gbrain-skills\`（43 個，供 gbrain 自身的 LLM 用） |
-| 待匯入文件暫存 | `D:\Claude\brain-docs\` |
+| Skills | `d:\Claude\infra\gbrain-skills\`（43 個，供 gbrain 自身的 LLM 用） |
+| 待匯入文件暫存 | `d:\Claude\infra\brain-docs\` |
 
 ---
 
@@ -49,10 +49,10 @@ gbrain config list            # 查看 PGLite config
 
 ```powershell
 # 把新文件放進暫存區
-# D:\Claude\brain-docs\
+# d:\Claude\infra\brain-docs\
 
 # Step 1：匯入文件（不呼叫 API，不需要 key）
-gbrain import D:\Claude\brain-docs
+gbrain import d:\Claude\infra\brain-docs
 
 # Step 2：補 embedding（呼叫 Gemini API，這步才需要 key）
 $env:GOOGLE_GENERATIVE_AI_API_KEY = "<AIza 開頭的 key>"
@@ -64,7 +64,7 @@ gbrain embed --stale
 - 軟體設計模式課程影片轉錄（42 支，2026-05-23）
 
 **待收錄：**
-- `D:\Claude\social-monitor\reports\`
+- `d:\Claude\active\social-monitor\reports\`
 
 ---
 
@@ -92,7 +92,7 @@ Embedding 出問題時，確認三件事：
 
 ## gbrain-skills 是什麼
 
-`D:\Claude\gbrain-skills\` 裡的 43 個 skills 是 **gbrain 自身 LLM 的 prompt templates**，與 Claude Code skills 完全不同。目前主要用 Claude Code，這些 skills 不需要主動使用。
+`d:\Claude\infra\gbrain-skills\` 裡的 43 個 skills 是 **gbrain 自身 LLM 的 prompt templates**，與 Claude Code skills 完全不同。目前主要用 Claude Code，這些 skills 不需要主動使用。
 
 ---
 

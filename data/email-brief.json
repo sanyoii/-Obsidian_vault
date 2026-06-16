@@ -1,37 +1,23 @@
 [
   {
     "from": "Discord",
-    "subject": "elfken 在 水球軟體學院：研究組織 中提到您",
+    "subject": "du_0324 在 笨錢社群 中提到您",
     "importance": "Medium",
-    "todos": [
-      "查看 Discord 水球軟體學院，確認 elfken 的留言內容",
-      "確認是否要加入週五（06/19）Code Review 排隊串"
-    ],
-    "time": "09:05"
+    "todos": ["前往 Discord 查看 du_0324 在笨錢社群的提及內容並回覆"],
+    "time": "07:20"
   },
   {
-    "from": "PayPal",
-    "subject": "你的 PayPal 驗證碼",
+    "from": "Skool (Find Your Tribe)",
+    "subject": "1 event happening tomorrow",
     "importance": "Medium",
-    "todos": [
-      "確認此 OTP 是否為本人主動觸發（若非本人操作，立即至 PayPal 檢查帳戶安全）"
-    ],
-    "time": "08:47"
+    "todos": ["決定是否參加明日 8:00-9:00am（台北）Hey! Let's Connect Zoom 活動"],
+    "time": "02:51"
   },
   {
-    "from": "國泰世華銀行",
-    "subject": "國泰世華銀行消費彙整通知",
+    "from": "Wellfound",
+    "subject": "New jobs: QA/SRE at Himaya AI and 5 more jobs",
     "importance": "Low",
     "todos": [],
-    "time": "06:35"
-  },
-  {
-    "from": "Allianz Travel",
-    "subject": "Plus que quelques jours pour répondre - Votre avis",
-    "importance": "Low",
-    "todos": [
-      "填寫 Allianz Travel 旅遊保險滿意度問卷（約 3 分鐘）"
-    ],
-    "time": "09:03"
+    "time": "03:00"
   }
 ]

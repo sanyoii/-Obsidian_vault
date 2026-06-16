@@ -10,11 +10,13 @@ date: 2026-06-11
 
 > 完整工作檔案：`D:\Claude\Working Directory\Projects\ashby\`（ashby-context.md、技術學習地圖、STAR案例庫）
 
-## 目前狀態（2026-06-11）
+## 目前狀態（2026-06-16）
+
+> [!failure] 申請結束
+> 2026-06-16 收到 Ashby 拒信：「we don't see an ideal fit for this position」（高申請量，以 role fit 為由，強調非能力問題）。申請流程結束。
 
 - **已投遞**：Ashby — Support Engineer, APAC（首位），履歷已於 2026-06-10 優化送出
-- 等待 Recruiter 回覆。流程：Recruiter Call(30m) → Take-home(一週) → HM 面試(45-60m) → Virtual Onsite(120m)
-- 評估會考「technical reasoning + communication precision」，take-home 大概率是書面 ticket 排障演練（log/API 分析 + 客戶回覆 + 內部報告）
+- ~~等待 Recruiter 回覆。流程：Recruiter Call(30m) → Take-home(一週) → HM 面試(45-60m) → Virtual Onsite(120m)~~
 
 ## 已做成的決策
 

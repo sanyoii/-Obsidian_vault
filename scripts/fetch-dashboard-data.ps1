@@ -10,7 +10,7 @@ $outputFile = "$dataDir\dashboard.json"
 New-Item -ItemType Directory -Force -Path $dataDir | Out-Null
 
 # ── 1. Job count + list ────────────────────────────────────────────────────
-$jobsDb   = "d:\Claude\job-crawler\jobs.db"
+$jobsDb   = "d:\Claude\active\job-crawler\jobs.db"
 $jobCount = 0
 $jobList  = @()
 if (Test-Path $jobsDb) {
@@ -49,7 +49,7 @@ print(json.dumps({"count": count, "jobs": jobs}, ensure_ascii=False))
 # ── 2. Social monitor label + topic headlines ─────────────────────────────
 $socialLabel  = "N/A"
 $socialTopics = @()
-$latestRep = Get-ChildItem "d:\Claude\social-monitor\reports\report-*.md" -ErrorAction SilentlyContinue |
+$latestRep = Get-ChildItem "d:\Claude\active\social-monitor\reports\report-*.md" -ErrorAction SilentlyContinue |
     Sort-Object LastWriteTime -Descending | Select-Object -First 1
 if ($latestRep) {
     $SYSTEM_SECTIONS = @('Warnings','DEGRADED RUN WARNING','Stats','Source Coverage',

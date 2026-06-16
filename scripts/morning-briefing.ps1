@@ -22,7 +22,7 @@ if ($latestReport) {
 }
 
 # 2. Job Crawler: unread jobs in last 3 days
-$jobsDb  = "d:\Claude\job-crawler\jobs.db"
+$jobsDb  = "d:\Claude\active\job-crawler\jobs.db"
 $jobText = "(job-crawler DB not found)"
 
 if (Test-Path $jobsDb) {

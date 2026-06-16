@@ -1,4 +1,4 @@
----
+﻿---
 title: Claude Code 工具生態系儀表板
 created: 2026-06-06
 tags: [claude-code, skills, agents, dashboard, tools]
@@ -19,7 +19,7 @@ status: in-progress
 
 ### 1. 視覺儀表板（看得到）
 
-**檔案**：`d:\Claude\claude-tools-dashboard.html`
+**檔案**：`d:\Claude\dashboard\claude-tools-dashboard.html`
 
 - 單一 HTML 自含，瀏覽器直接開啟
 - 6 個 Tab：**Skills / Agents / 本地應用 / GBrain / 工具腳本 / 管理**
