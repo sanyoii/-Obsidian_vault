@@ -142,9 +142,11 @@ specs/
 D:\Claude\.claude\rules\<專案名>.md
 
 # 有值得記錄的決策或文件，存進 gbrain
-gbrain import D:\Claude\brain-docs\<新文件>
+gbrain import D:\Claude\infra\brain-docs\<新文件>
 gbrain embed --stale
 ```
+
+> **新專案目錄放哪**：進行中專案一律建在 `D:\Claude\active\<name>\`，名稱用 **kebab-case**（全小寫、連字號，如 `line-sticker-creator`）。完成/停更後移到 `archive/`。分類規則見 `active/README.md`。個人工作材料（求職、履歷、計劃）放 `workspace/`，不要放 `active/`。
 
 ---
 

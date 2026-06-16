@@ -8,7 +8,7 @@ date: 2026-06-11
 
 # Ashby Support Engineer (APAC) — 求職進度
 
-> 完整工作檔案：`D:\Claude\Working Directory\Projects\ashby\`（ashby-context.md、技術學習地圖、STAR案例庫）
+> 完整工作檔案：`D:\Claude\workspace\ashby\`（ashby-context.md、技術學習地圖、STAR案例庫）
 
 ## 目前狀態（2026-06-16）
 
@@ -78,6 +78,6 @@ I wrote up the full reproduction steps — the exact sequence of reassignment, r
 1. **Day 1-2**：精讀 Authentication、Responses & Errors、Pagination/Sync、Webhooks 四篇 guide；實測 Public Job Posting API
 2. **Day 3-4**：API Reference 模組結構；docs 整合指南 3 篇（Google Workspace、Workday、一個 Assessment partner）；status 頁事故格式
 3. **Day 5-7**：2-3 個 SEG 案例寫成英文 STAR；模擬 ticket 書面回覆對練
-4. 收到 recruiter 回覆/take-home 時：回 claude.ai 對話或在 `Working Directory/Projects/ashby/` 繼續準備
+4. 收到 recruiter 回覆/take-home 時：回 claude.ai 對話或在 `workspace/ashby/` 繼續準備
 
 > 鐵則：履歷與面試材料只能用真實可驗證的經歷，禁止虛構數據與案例。

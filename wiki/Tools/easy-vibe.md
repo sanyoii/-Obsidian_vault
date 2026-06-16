@@ -139,7 +139,7 @@ Stage 3 的以下章節直接對應你的工具鏈：
 把課程 Markdown 文件批量匯入 gbrain，讓語意搜索能找到這些內容。
 
 **適合場景**：「做 AI 教學時查詢特定概念的中文說明」  
-**做法**：複製 `docs/zh-cn/` 到 `d:\Claude\brain-docs\`，執行 gbrain import  
+**做法**：複製 `docs/zh-cn/` 到 `d:\Claude\infra\brain-docs\`，執行 gbrain import  
 **成本**：低（一次性匯入，但會增加 gbrain 索引大小）
 
 ### 方向 C：用 `/book-to-skill` 直接轉換

@@ -33,7 +33,7 @@ python D:\Claude\tools\video-to-brain.py --skip-dl
 轉錄完成後，手動執行 gbrain import 匯入：
 
 ```powershell
-# gbrain import（在 brain-docs/course/transcripts/ 下執行）
+# gbrain import（在 infra/brain-docs/course/transcripts/ 下執行）
 ```
 
 ---
@@ -42,7 +42,7 @@ python D:\Claude\tools\video-to-brain.py --skip-dl
 
 1. 讀取影片（本機資料夾 或 Google Drive 下載）
 2. 每支影片：先找字幕（sidecar `.srt` / `.vtt` 或嵌入字幕軌）→ 找不到才呼叫 Gemini 轉錄
-3. 輸出 Markdown 至 `D:\Claude\brain-docs\course\transcripts\`
+3. 輸出 Markdown 至 `D:\Claude\infra\brain-docs\course\transcripts\`
 4. 提示執行 `gbrain import`
 
 ---
@@ -52,7 +52,7 @@ python D:\Claude\tools\video-to-brain.py --skip-dl
 | 項目 | 說明 |
 |------|------|
 | 轉錄模型 | `gemini-2.5-flash`（Google Gemini File API）|
-| 輸出格式 | Markdown（`.md`），存至 `brain-docs/course/transcripts/`|
+| 輸出格式 | Markdown（`.md`），存至 `infra/brain-docs/course/transcripts/`|
 | 依賴工具 | `ffprobe`（ffmpeg）、`google-generativeai`、`gbrain` CLI |
 | 字幕優先 | 有 `.srt`/`.vtt` 就直接用，省 API 呼叫 |
 
@@ -62,7 +62,7 @@ python D:\Claude\tools\video-to-brain.py --skip-dl
 
 | 設定 | 預設值 |
 |------|--------|
-| `BASE_DIR` | `D:\Claude\brain-docs\course` |
+| `BASE_DIR` | `D:\Claude\infra\brain-docs\course` |
 | `DOWNLOAD_DIR` | `BASE_DIR\videos` |
 | `TRANSCRIPT_DIR` | `BASE_DIR\transcripts` |
 | `GEMINI_MODEL` | `gemini-2.5-flash` |

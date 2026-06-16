@@ -101,7 +101,7 @@ git clone https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
 
 ## 已匯入 gbrain（2026-06-11）
 
-104 個 .txt/.json/.yaml 檔複製到 `d:\Claude\brain-docs\system-prompts-and-models-of-ai-tools\`
+104 個 .txt/.json/.yaml 檔複製到 `d:\Claude\infra\brain-docs\system-prompts-and-models-of-ai-tools\`
 並改加 `.md` 副檔名（gbrain `import` 只認 markdown），執行
 `gbrain import --no-embed` + `gbrain embed --stale`。
 
