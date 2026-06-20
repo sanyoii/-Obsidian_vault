@@ -42,6 +42,7 @@
 - `2026-06-20 00:10 | COMPILE | github.com/Alishahryar1/free-claude-code → wiki/Tools/free-claude-code.md` | 本地 API 代理伺服器（Python），讓 Claude Code/Codex 原生介面接第三方模型，API 流量路由層，MIT
 - `2026-06-20 00:10 | COMPILE | github.com/calesthio/OpenMontage → wiki/Github/repos/calesthio-OpenMontage.md` | 開源 Agent 驅動影片製作系統，自然語言→全自動影片（研究→腳本→素材→剪輯→合成），多 provider，1356 檔案，AGPLv3
 - `2026-06-20 00:10 | COMPILE | github.com/tw93/Pake → wiki/Github/repos/tw93-Pake.md` | Rust+Tauri 一行指令網頁→桌面 App（~5MB），Electron 極輕量替代品，35K+ stars，MIT
+- `2026-06-20 01:00 | COMPILE | claude-tools-dashboard.html → 新增 CLI 工具頁籤` | 10 個全域 CLI 工具（claude-code/codex/gemini-cli/openclaw/claude-code-router/repomix/defuddle/pake-cli/openspec/pnpm），粉紅色邊框卡片；同步 revert Obsidian Command Center 誤改
 
 ---
 
