@@ -37,6 +37,12 @@
 ### 2026-06-10 | COMPILE
 - `2026-06-10 22:00 | COMPILE | github.com/x1xhlol/system-prompts-and-models-of-ai-tools → wiki/Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools.md` | repomix 分析 104 檔 / 461K tokens；收錄 30+ AI 工具真實 system prompt（Claude Code 2.0 / Cursor 多版本 / Manus / Windsurf / Kiro 等）；✅ 適合 clone 備查
 
+### 2026-06-20 | COMPILE
+- `2026-06-20 00:10 | COMPILE | github.com/Hmbown/CodeWhale → wiki/Tools/CodeWhale.md` | 開源 Terminal Coding Agent（Rust），模型中立 Claude Code 替代品，25 providers，Plan/Agent/YOLO 三模式，v0.8.62，MIT
+- `2026-06-20 00:10 | COMPILE | github.com/Alishahryar1/free-claude-code → wiki/Tools/free-claude-code.md` | 本地 API 代理伺服器（Python），讓 Claude Code/Codex 原生介面接第三方模型，API 流量路由層，MIT
+- `2026-06-20 00:10 | COMPILE | github.com/calesthio/OpenMontage → wiki/Github/repos/calesthio-OpenMontage.md` | 開源 Agent 驅動影片製作系統，自然語言→全自動影片（研究→腳本→素材→剪輯→合成），多 provider，1356 檔案，AGPLv3
+- `2026-06-20 00:10 | COMPILE | github.com/tw93/Pake → wiki/Github/repos/tw93-Pake.md` | Rust+Tauri 一行指令網頁→桌面 App（~5MB），Electron 極輕量替代品，35K+ stars，MIT
+
 ---
 
 ## 2026-05

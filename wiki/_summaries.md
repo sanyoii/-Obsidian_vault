@@ -1,6 +1,6 @@
 # 文章摘要總覽
 
-> 最後更新：2026-06-03
+> 最後更新：2026-06-20
 
 ---
 
@@ -213,3 +213,35 @@
 **摘要：** 將物件創建職責交給子類別，處理物件的生命週期約束，避免核心直接 `new` 具體類別。
 **來源：** raw/notebooklm/2026-05-08_notebooklm_軟體設計模式精通之旅_overview
 **建立：** 2026-05-08
+
+---
+
+## [[Tools/CodeWhale|CodeWhale — 開源 Terminal Coding Agent]]
+**標籤：** `#AI` `#tools` `#coding-agent` `#terminal` `#rust` `#open-source` `#deepseek`
+**摘要：** 開源終端 AI 編程代理（Rust），模型中立的 Claude Code 替代品。支援 25 個 provider（DeepSeek/Claude/GPT/GLM/Kimi/Ollama 等），功能含 Plan/Agent/YOLO 三模式、MCP 整合、多模態圖片輸入、Git-aware context。前身為 deepseek-tui，v0.8.62，MIT 授權。
+**來源：** https://github.com/Hmbown/CodeWhale
+**建立：** 2026-06-19
+
+---
+
+## [[Tools/free-claude-code|Free Claude Code — 本地 API 代理伺服器]]
+**標籤：** `#AI` `#tools` `#proxy` `#claude-code` `#codex` `#free` `#llm` `#python`
+**摘要：** 本地代理伺服器（Python），讓官方 Claude Code CLI / Codex CLI / VS Code 擴展的原生介面保持不動，透過中間人代理把 Anthropic API 請求轉發到第三方免費或便宜的模型供應商（NVIDIA NIM/OpenRouter/Gemini/DeepSeek/Ollama 等）。不是替代品或 fork，是 API 流量路由層。MIT 授權。
+**來源：** https://github.com/Alishahryar1/free-claude-code
+**建立：** 2026-06-19
+
+---
+
+## [[Github/repos/calesthio-OpenMontage|OpenMontage — 開源 Agentic 影片製作系統]]
+**標籤：** `#AI` `#tools` `#video` `#production` `#agentic` `#remotion` `#open-source`
+**摘要：** 第一個開源 Agent 驅動影片製作系統。自然語言描述影片需求後，AI coding agent 自動完成研究→腳本→素材生成→剪輯→配音→字幕→合成。支援多 provider（圖片：FLUX/DALL-E/Imagen；影片：Veo/Kling/MiniMax/Runway；配音：Piper/ElevenLabs/OpenAI TTS；音樂：Suno）。1,356 檔案，AGPLv3 授權。
+**來源：** https://github.com/calesthio/OpenMontage
+**建立：** 2026-06-20
+
+---
+
+## [[Github/repos/tw93-Pake|Pake — 網頁轉桌面 App 打包工具]]
+**標籤：** `#tools` `#desktop` `#tauri` `#rust` `#webapp-wrapper` `#cross-platform`
+**摘要：** Rust + Tauri 一行指令把任何網頁打包成跨平台桌面 App（macOS/Windows/Linux），產出約 5MB（Electron 的 1/20），記憶體佔用更低。含預製熱門 App（WeRead/ChatGPT/DeepSeek/YouTube Music 等）可直接下載，支援自訂 icon/CSS 注入/GitHub Actions 線上建置。35K+ stars，MIT 授權。
+**來源：** https://github.com/tw93/Pake
+**建立：** 2026-06-20

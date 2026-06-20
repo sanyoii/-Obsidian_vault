@@ -1,7 +1,7 @@
 ﻿# 知識庫主索引
 
-> 最後更新：2026-06-03
-> 文章數量：151 篇
+> 最後更新：2026-06-20
+> 文章數量：155 篇
 > 原始文件：持續累積中
 
 ---
@@ -76,6 +76,8 @@
 - [[Tools/gbrain-inbox|gbrain Inbox 快速匯入]] — Obsidian Inbox 一鍵 import + 移至 wiki/Ideas `#tools #gbrain`
 - [[Tools/md-to-pdf|Markdown 轉 PDF]] — `#tools`
 - [[Tools/cleanup-transcripts|清理逐字稿]] — `#tools`
+- [[Tools/CodeWhale|CodeWhale]] — 開源 Terminal Coding Agent（Rust），模型中立的 Claude Code 替代品，支援 25 providers `#tools #coding-agent #rust #open-source`
+- [[Tools/free-claude-code|Free Claude Code]] — 本地 API 代理伺服器，讓 Claude Code/Codex 介面接第三方模型 `#tools #proxy #claude-code`
 
 ---
 
@@ -100,6 +102,8 @@
 - [[Github/repos/music-assistant-server — 開源家用音樂串流管理器|music-assistant/server — 開源家用音樂串流管理器]] — 106 個 providers 整合 Spotify/Tidal/YouTube 等音源 + Sonos/AirPlay 等嗇叭；含實驗性 FastMCP plugin 可接 Claude Code；⏳ 觀望 `#media #music #home-assistant #mcp #self-hosted`
 - [[Github/repos/chatwoot — 開源全通道客服平台|chatwoot — 開源全通道客服平台]] — 整合 10+ 頻道（WhatsApp/Email/FB/IG/Telegram）於統一收件匣，Rails+Vue.js，31.6k stars；Intercom/Zendesk 開源替代；❌ 不適合 `#customer-support #omnichannel #live-chat #rails #vuejs #webhook #self-hosted`
 - [[Github/repos/PixelRAG — 像素原生 RAG，截圖讓 AI 用視覺讀網頁|PixelRAG — 像素原生 RAG，截圖讓 AI 用視覺讀網頁]] — `pixelshot` CLI 把網頁/PDF 截圖成分塊圖片讓 LLM 視覺讀取，含 Claude Code plugin `pixelbrowse`；✅ 已安裝，Windows 需 CHROME_PATH wrapper `#skills #claude-code-plugin #screenshot #rag`
+- [[Github/repos/calesthio-OpenMontage|OpenMontage — 開源 Agentic 影片製作系統]] — AI Agent 驅動全自動影片製作（研究→腳本→素材→剪輯→合成），支援 Veo/Kling/FLUX 多 provider `#video #agentic #production #open-source`
+- [[Github/repos/tw93-Pake|Pake — 網頁轉桌面 App 打包工具]] — Rust + Tauri 一行指令把網頁打包成跨平台桌面 App（~5MB），Electron 極輕量替代品 `#tools #desktop #tauri #rust`
 
 ---
 
