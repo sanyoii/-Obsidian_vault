@@ -22,7 +22,7 @@ status: in-progress
 **檔案**：`d:\Claude\dashboard\claude-tools-dashboard.html`
 
 - 單一 HTML 自含，瀏覽器直接開啟
-- 6 個 Tab：**Skills / Agents / 本地應用 / GBrain / 工具腳本 / 管理**
+- 7 個 Tab：**Skills / Agents / 本地應用 / GBrain / 工具腳本 / 管理 / CLI 工具**
 - 全域搜尋 + 分類 Pill 過濾
 - 每個 Skill 卡片：名稱、描述、觸發指令（可複製）、標籤
 - 深色主題（`#0f0f11` 背景，`#7c6af7` accent）
@@ -50,6 +50,21 @@ status: in-progress
 | ✍️ 寫作品質 | writing-skills, stop-slop, karpathy-guidelines |
 | 🛠 Meta Skills | skill-creator, book-to-skill, nuwa-skill |
 | 🖼 AI 圖生成 | gpt-image-2, excalidraw-diagram, mermaid-visualizer |
+
+**CLI 工具頁籤**（粉紅色邊框卡片，共 10 個全域 CLI 工具）：
+
+| 工具 | 說明 |
+|------|------|
+| claude-code | Anthropic 官方 CLI Agent |
+| codex | OpenAI CLI Agent |
+| gemini-cli | Google Gemini CLI Agent |
+| openclaw | 開源 Claude Code 替代品 |
+| claude-code-router | 多模型路由代理 |
+| repomix | 將 repo 打包成 LLM 可讀格式 |
+| defuddle | 網頁內容萃取（去雜訊） |
+| pake-cli | Rust+Tauri 網頁轉桌面 App |
+| openspec | OpenAPI spec 生成工具 |
+| pnpm | 快速 Node.js 套件管理器 |
 
 ### 2. 集中管理腳本（管得到）
 

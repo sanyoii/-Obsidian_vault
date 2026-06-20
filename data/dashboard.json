@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20 16:00:19",
+  "updatedAt": "2026-06-20 23:29:57",
   "jobCount": 19,
   "jobList": [
     {
@@ -172,7 +172,7 @@
     }
   ],
   "briefingTitle": "Morning_2026-06-07",
-  "tokenEstimate": "~97K",
+  "tokenEstimate": "~412K",
   "github": [
     {
       "rank": 1,
@@ -248,73 +248,73 @@
   "hn": [
     {
       "rank": 1,
+      "title": "UK Home Office launches £75M 'PoliceAI' to capitalise on artificial intelligence",
+      "score": 24,
+      "url": "https://www.publictechnology.net/2026/06/15/public-order-justice-and-rights/home-office-launches-75m-policeai-to-capitalise-on-artificial-intelligence/",
+      "id": 48612806
+    },
+    {
+      "rank": 2,
+      "title": "SMPTE Makes Its Standards Freely Accessible",
+      "score": 152,
+      "url": "https://www.smpte.org/blog/smpte-makes-its-standards-freely-accessible-openingstandards-library-to-the-global-media-technology-community",
+      "id": 48610827
+    },
+    {
+      "rank": 3,
+      "title": "UHF X11: X11 Built for VisionOS and Apple Vision Pro",
+      "score": 104,
+      "url": "https://www.lispm.net/apps/uhf-x11/",
+      "id": 48610853
+    },
+    {
+      "rank": 4,
+      "title": "PostgresBench: A Reproducible Benchmark for Postgres Services",
+      "score": 38,
+      "url": "https://clickhouse.com/blog/postgresbench",
+      "id": 48611942
+    },
+    {
+      "rank": 5,
+      "title": "The Wholesale Plagiarism of Obscure Sorrows",
+      "score": 263,
+      "url": "https://waxy.org/2026/06/the-wholesale-plagiarism-of-obscure-sorrows/",
+      "id": 48611411
+    },
+    {
+      "rank": 6,
+      "title": "DOS Game \"F-15 Strike Eagle II\" reversing project needs DOS test pilots",
+      "score": 149,
+      "url": "https://neuviemeporte.github.io/f15-se2/2026/06/20/needyou.html",
+      "id": 48609766
+    },
+    {
+      "rank": 7,
       "title": "CSSQuake",
-      "score": 141,
+      "score": 406,
       "url": "https://cssquake.com/",
       "id": 48608223
     },
     {
-      "rank": 2,
-      "title": "I Stored a Website in a Favicon",
-      "score": 206,
-      "url": "https://www.timwehrle.de/blog/i-stored-a-website-in-a-favicon/",
-      "id": 48606619
-    },
-    {
-      "rank": 3,
-      "title": "Where to Find the Colors Your Screen Can't Show You",
-      "score": 249,
-      "url": "https://moultano.wordpress.com/2026/06/19/where-to-find-the-colors-your-screen-cant-show-you/",
-      "id": 48606140
-    },
-    {
-      "rank": 4,
-      "title": "The Cold War's Accidental Whale Observatory",
-      "score": 31,
-      "url": "https://thereader.mitpress.mit.edu/the-cold-wars-accidental-whale-observatory/",
-      "id": 48564480
-    },
-    {
-      "rank": 5,
-      "title": "Bootimus – A Self-Contained PXE and HTTP Boot Server",
-      "score": 20,
-      "url": "https://bootimus.com",
-      "id": 48608255
-    },
-    {
-      "rank": 6,
-      "title": "16-year-old SATA II SSD survives 1 petabyte of writes, 25x the drive's rating",
-      "score": 51,
-      "url": "https://www.tomshardware.com/pc-components/ssds/16-year-old-sata-ii-ssd-survives-1-petabyte-of-writes-25x-over-the-drives-tbw-rating",
-      "id": 48608503
-    },
-    {
-      "rank": 7,
-      "title": "Can you see three trees?",
-      "score": 197,
-      "url": "https://www.not-ship.com/can-you-see-three-trees/",
-      "id": 48582374
-    },
-    {
       "rank": 8,
-      "title": "Data Compression Explained (2012)",
-      "score": 157,
-      "url": "https://mattmahoney.net/dc/dce.html",
-      "id": 48562662
+      "title": "Show HN: StartupWiki – A Free Alternative to Crunchbase",
+      "score": 106,
+      "url": "https://startupwiki.tech/",
+      "id": 48610224
     },
     {
       "rank": 9,
-      "title": "There are no instances in ATProto",
-      "score": 477,
-      "url": "https://overreacted.io/there-are-no-instances-in-atproto/",
-      "id": 48599515
+      "title": "Show HN: Make PDFs look scanned (CLI or in the browser via WASM)",
+      "score": 48,
+      "url": "https://github.com/overflowy/make-look-scanned",
+      "id": 48611513
     },
     {
       "rank": 10,
-      "title": "Lithuanian startup launches open-source network to detect Shahed-type drones",
-      "score": 34,
-      "url": "https://www.lrt.lt/en/news-in-english/19/2965205/lithuanian-startup-launches-open-source-network-to-detect-shahed-type-drones",
-      "id": 48608591
+      "title": "Bun has an open PR adding shared-memory threads to JavaScriptCore",
+      "score": 81,
+      "url": "https://github.com/oven-sh/WebKit/pull/249",
+      "id": 48610841
     }
   ],
   "ph": [
@@ -322,49 +322,49 @@
       "rank": 1,
       "name": "Fundraisly",
       "tagline": "AI fundraising agent that finds investors and books meetings",
-      "votes": 1417,
+      "votes": 1421,
       "url": "https://www.producthunt.com/products/fundraisly/launches/fundraisly-4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 2,
       "name": "Brew ",
       "tagline": "Like Claude design for email marketing",
-      "votes": 949,
+      "votes": 950,
       "url": "https://www.producthunt.com/products/brew-5/launches/brew-4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 3,
       "name": "Unabyss",
       "tagline": "MCP-native self-updating context layer for your AI",
-      "votes": 781,
+      "votes": 783,
       "url": "https://www.producthunt.com/products/unabyss/launches/unabyss?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 4,
       "name": "Bond",
       "tagline": "The AI to-do list that does itself",
-      "votes": 733,
+      "votes": 734,
       "url": "https://www.producthunt.com/products/bond-12?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 5,
       "name": "own.page",
       "tagline": "Make your own personal website with bento tiles",
-      "votes": 687,
+      "votes": 688,
       "url": "https://www.producthunt.com/products/own-page/launches/own-page?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 6,
       "name": "Upstream",
       "tagline": "The inbox designed for humans and agents",
-      "votes": 668,
+      "votes": 677,
       "url": "https://www.producthunt.com/products/upstream-3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 7,
       "name": "Publora",
       "tagline": "A publishing API for agents to post on 10 social platforms",
-      "votes": 667,
+      "votes": 668,
       "url": "https://www.producthunt.com/products/publora?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
@@ -378,77 +378,77 @@
       "rank": 9,
       "name": "Goldfish",
       "tagline": "Press Option. It knows your work and replies like you",
-      "votes": 653,
+      "votes": 661,
       "url": "https://www.producthunt.com/products/goldfish-early-access?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     },
     {
       "rank": 10,
       "name": "Pancake",
       "tagline": "OpenClaw in Slack that makes your company autonomous",
-      "votes": 624,
+      "votes": 625,
       "url": "https://www.producthunt.com/products/pancake-6/launches/pancake-6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+My+Dashboard+%28ID%3A+286654%29"
     }
   ],
   "lobsters": [
     {
       "rank": 1,
-      "title": "Town Square, the community deserves connection",
-      "score": 13,
-      "url": "https://cauenapier.com/blog/town-square-the-community-deserves-connection/"
+      "title": "Is anyone still using Emacs?",
+      "score": 16,
+      "url": "https://jmmv.dev/2026/06/is-anyone-still-using-emacs.html"
     },
     {
       "rank": 2,
-      "title": "I can haz smoller NixOS ISOs?",
-      "score": 54,
-      "url": "https://natkr.com/2026-06-19-nixos-but-smol/"
+      "title": "OCaml 5.5.0 released",
+      "score": 29,
+      "url": "https://discuss.ocaml.org/t/ocaml-5-5-0-released/18265"
     },
     {
       "rank": 3,
-      "title": "Bevy 0.19",
-      "score": 53,
-      "url": "https://bevy.org/news/bevy-0-19/"
+      "title": "Town Square, the community deserves connection",
+      "score": 18,
+      "url": "https://cauenapier.com/blog/town-square-the-community-deserves-connection/"
     },
     {
       "rank": 4,
       "title": "There Are No Instances in atproto",
-      "score": 12,
+      "score": 22,
       "url": "https://overreacted.io/there-are-no-instances-in-atproto/"
     },
     {
       "rank": 5,
-      "title": "What has (can) the EU Cyber Resilience Act done (do) for you?",
-      "score": 16,
-      "url": "https://nxdomain.no/~peter/what_hascan_eu_cra_donedo_for_you.html"
-    },
-    {
-      "rank": 6,
-      "title": "Safe SIMD in Rust, even on the inside",
-      "score": 14,
-      "url": "https://shnatsel.medium.com/safe-simd-in-rust-even-on-the-inside-c6f1ff381828"
-    },
-    {
-      "rank": 7,
-      "title": "I am dreading our LLM-written incident report future",
-      "score": 21,
-      "url": "https://surfingcomplexity.blog/2026/06/19/i-am-dreading-our-llm-written-incident-report-future/"
-    },
-    {
-      "rank": 8,
-      "title": "SMPTE Makes Its Standards Freely Accessible",
-      "score": 17,
-      "url": "https://www.smpte.org/blog/smpte-makes-its-standards-freely-accessible-openingstandards-library-to-the-global-media-technology-community"
-    },
-    {
-      "rank": 9,
       "title": "Meet Alice. Alice is impatient",
-      "score": 7,
+      "score": 20,
       "url": "https://brooker.co.za/blog/2026/06/19/waiting.html"
     },
     {
+      "rank": 6,
+      "title": "I can haz smoller NixOS ISOs?",
+      "score": 60,
+      "url": "https://natkr.com/2026-06-19-nixos-but-smol/"
+    },
+    {
+      "rank": 7,
+      "title": "Bevy 0.19",
+      "score": 69,
+      "url": "https://bevy.org/news/bevy-0-19/"
+    },
+    {
+      "rank": 8,
+      "title": "I am dreading our LLM-written incident report future",
+      "score": 29,
+      "url": "https://surfingcomplexity.blog/2026/06/19/i-am-dreading-our-llm-written-incident-report-future/"
+    },
+    {
+      "rank": 9,
+      "title": "The cube, the epicycles and the human face",
+      "score": 8,
+      "url": "https://www.andreinc.net/2026/06/15/the-cube-the-epicycles-and-the-human-face/"
+    },
+    {
       "rank": 10,
-      "title": "Godot 4.7: Lights, Camera, Action",
-      "score": 79,
-      "url": "https://godotengine.org/releases/4.7/"
+      "title": "What has (can) the EU Cyber Resilience Act done (do) for you?",
+      "score": 16,
+      "url": "https://nxdomain.no/~peter/what_hascan_eu_cra_donedo_for_you.html"
     }
   ],
   "ithome": [
@@ -633,73 +633,145 @@
   "techcrunch": [
     {
       "rank": 1,
+      "title": "Signal’s Meredith Whittaker wants you to remember that AI chatbots ‘are not your friends’",
+      "url": "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/",
+      "date": "2026-06-20",
+      "author": "Anthony Ha"
+    },
+    {
+      "rank": 2,
+      "title": "In the Weights is your new AI-centric vanity search",
+      "url": "https://techcrunch.com/2026/06/20/in-the-weights-is-your-new-ai-centric-vanity-search/",
+      "date": "2026-06-20",
+      "author": "Anthony Ha"
+    },
+    {
+      "rank": 3,
+      "title": "Founders Fund’s outlier bet on humanely killed fish",
+      "url": "https://techcrunch.com/2026/06/20/founders-funds-outlier-bet-on-humanely-killed-fish/",
+      "date": "2026-06-20",
+      "author": "Connie Loizos"
+    },
+    {
+      "rank": 4,
+      "title": "Nobel laureate John Jumper is leaving DeepMind for rival Anthropic",
+      "url": "https://techcrunch.com/2026/06/20/nobel-laureate-john-jumper-is-leaving-deepmind-for-rival-anthropic/",
+      "date": "2026-06-20",
+      "author": "Anthony Ha"
+    },
+    {
+      "rank": 5,
+      "title": "Every new iOS 27 feature that’s worth knowing about",
+      "url": "https://techcrunch.com/2026/06/20/every-new-ios-27-feature-thats-worth-knowing-about/",
+      "date": "2026-06-20",
+      "author": "Lauren Forristal"
+    },
+    {
+      "rank": 6,
       "title": "He made your free video player run smoothly. Now he’s doing that for robots.",
       "url": "https://techcrunch.com/2026/06/19/he-made-your-free-video-player-run-smoothly-now-hes-doing-that-for-robots/",
       "date": "2026-06-20",
       "author": "Anna Heim"
     },
     {
-      "rank": 2,
+      "rank": 7,
       "title": "From PGP to Mythos: a brief history of export controls that didn’t stop anyone",
       "url": "https://techcrunch.com/2026/06/19/encryption-spyware-and-now-mythos-history-shows-why-cyber-export-control-doesnt-work/",
       "date": "2026-06-19",
       "author": "Lorenzo Franceschi-Bicchierai"
     },
     {
-      "rank": 3,
-      "title": "Go eyes robotaxis and acquisitions after Japan’s biggest IPO of 2026. Here’s why it matters",
+      "rank": 8,
+      "title": "Go eyes robotaxis and acquisitions after Japan’s biggest IPO of 2026 — here’s why it matters",
       "url": "https://techcrunch.com/2026/06/19/go-eyes-robotaxis-and-acquisitions-after-japans-biggest-ipo-of-2026-heres-why-it-matters/",
       "date": "2026-06-19",
       "author": "Kate Park"
     },
     {
-      "rank": 4,
+      "rank": 9,
       "title": "Aura’s impressive e-ink photo frame doesn’t even look digital",
       "url": "https://techcrunch.com/2026/06/19/auras-impressive-e-ink-photo-frame-doesnt-even-look-digital/",
       "date": "2026-06-19",
       "author": "Amanda Silberling"
     },
     {
-      "rank": 5,
+      "rank": 10,
       "title": "Every fusion startup that has raised over $100M",
       "url": "https://techcrunch.com/2026/06/19/every-fusion-startup-that-has-raised-over-100m/",
       "date": "2026-06-19",
       "author": "Tim De Chant"
+    }
+  ],
+  "cli": [
+    {
+      "name": "claude-code",
+      "cmd": "claude",
+      "ver": "—",
+      "category": "AI Agent",
+      "desc": "Anthropic Claude Code CLI"
     },
     {
-      "rank": 6,
-      "title": "Is the US government’s Anthropic ban accidentally helping the brand?",
-      "url": "https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/",
-      "date": "2026-06-19",
-      "author": "Theresa Loconsolo"
+      "name": "codex",
+      "cmd": "codex",
+      "ver": "0.128.0",
+      "category": "AI Agent",
+      "desc": "OpenAI Codex CLI"
     },
     {
-      "rank": 7,
-      "title": "Billionaire Ambani wants AI in every call, app, and home",
-      "url": "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/",
-      "date": "2026-06-19",
-      "author": "Jagmeet Singh"
+      "name": "gemini-cli",
+      "cmd": "gemini",
+      "ver": "0.40.1",
+      "category": "AI Agent",
+      "desc": "Google Gemini CLI"
     },
     {
-      "rank": 8,
-      "title": "The CEO of Allbirds’ new AI biz has a plan, but no team",
-      "url": "https://techcrunch.com/2026/06/19/the-ceo-of-allbirds-new-ai-biz-has-a-plan-but-no-employees/",
-      "date": "2026-06-19",
-      "author": "Tim Fernholz"
+      "name": "openclaw",
+      "cmd": "openclaw",
+      "ver": "2026.3.7",
+      "category": "AI Agent",
+      "desc": "開源 Claude Code fork"
     },
     {
-      "rank": 9,
-      "title": "The US says ASML’s top chip tool may be in China, but how?",
-      "url": "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/",
-      "date": "2026-06-19",
-      "author": "Connie Loizos"
+      "name": "repomix",
+      "cmd": "npx repomix",
+      "ver": "1.14.0",
+      "category": "分析",
+      "desc": "Repo 打包給 AI 分析"
     },
     {
-      "rank": 10,
-      "title": "Telegram ban in India sparks a rush to VPNs, rival apps",
-      "url": "https://techcrunch.com/2026/06/18/telegram-ban-in-india-sparks-a-rush-to-vpns-rival-apps/",
-      "date": "2026-06-19",
-      "author": "Jagmeet Singh"
+      "name": "defuddle",
+      "cmd": "npx defuddle",
+      "ver": "0.18.1",
+      "category": "分析",
+      "desc": "網頁轉乾淨 Markdown"
+    },
+    {
+      "name": "pake-cli",
+      "cmd": "pake",
+      "ver": "3.11.10",
+      "category": "打包",
+      "desc": "網頁轉桌面 App（Tauri）"
+    },
+    {
+      "name": "openspec",
+      "cmd": "openspec",
+      "ver": "1.3.1",
+      "category": "開發",
+      "desc": "OpenAPI spec 生成工具"
+    },
+    {
+      "name": "claude-code-router",
+      "cmd": "claude-code-router",
+      "ver": "2.0.0",
+      "category": "AI Agent",
+      "desc": "Claude Code 多模型路由"
+    },
+    {
+      "name": "pnpm",
+      "cmd": "pnpm",
+      "ver": "10.33.2",
+      "category": "套件管理",
+      "desc": "快速 Node.js 套件管理器"
     }
   ],
   "schedule": [
