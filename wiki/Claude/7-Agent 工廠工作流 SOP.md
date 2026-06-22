@@ -66,7 +66,7 @@
 |-------|------|------|---------|
 | `researcher` | 背景調研、技術可行性、競品 | 研究摘要 + 關鍵決策點 | 不寫程式 |
 | `story-writer` | 整理 User Story + 驗收條件 | User Stories 清單 | 不做技術規格 |
-| `spec-writer` | API 合約、資料模型、分工邊界 | 技術規格文件 | 不實作 |
+| `spec-writer` | API 合約、資料模型、分工邊界、PR 切分規劃 | 技術規格文件 + `pr-split.md` | 不實作 |
 | `backend-builder` | 後端 API、DB、商業邏輯 | 後端程式碼 + unit tests | 不碰前端 |
 | `frontend-builder` | UI 元件、路由、串 API | 前端程式碼 + UI 正常 | 不碰後端 |
 | `test-verifier` | 整合測試、E2E、驗收條件逐一確認 | 測試報告 + Bug 清單 | 不寫新功能 |
@@ -118,7 +118,7 @@
 |-------|----------------|------------------------|
 | `researcher` | 5 個欄位（需求/調研/競品/可行性/決策點） | 關鍵決策點是問句、無程式碼 |
 | `story-writer` | 每個 Story 含 2+ AC + 優先級 | P0 至少 1 個、無技術細節 |
-| `spec-writer` | 資料模型 + API 合約 + 分工邊界 | 每個 endpoint 有完整範例 |
+| `spec-writer` | 資料模型 + API 合約 + 分工邊界 + `pr-split.md` | 每個 endpoint 有完整範例；PR 切分小而標明依賴 |
 | `backend-builder` | 符合 API 合約的程式碼 + unit tests 全過 | 無前端檔案異動 |
 | `frontend-builder` | 符合頁面結構的元件 + P0 UI 可操作 | 無後端檔案異動 |
 | `test-verifier` | 每個 AC 的 PASS/FAIL + Bug 路由決策 | 無 P0 Bug 待修 |
