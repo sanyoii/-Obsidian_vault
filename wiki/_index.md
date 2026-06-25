@@ -1,7 +1,7 @@
 ﻿# 知識庫主索引
 
-> 最後更新：2026-06-20
-> 文章數量：155 篇
+> 最後更新：2026-06-24
+> 文章數量：168 篇
 > 原始文件：持續累積中
 
 ---
@@ -104,6 +104,25 @@
 - [[Github/repos/PixelRAG — 像素原生 RAG，截圖讓 AI 用視覺讀網頁|PixelRAG — 像素原生 RAG，截圖讓 AI 用視覺讀網頁]] — `pixelshot` CLI 把網頁/PDF 截圖成分塊圖片讓 LLM 視覺讀取，含 Claude Code plugin `pixelbrowse`；✅ 已安裝，Windows 需 CHROME_PATH wrapper `#skills #claude-code-plugin #screenshot #rag`
 - [[Github/repos/calesthio-OpenMontage|OpenMontage — 開源 Agentic 影片製作系統]] — AI Agent 驅動全自動影片製作（研究→腳本→素材→剪輯→合成），支援 Veo/Kling/FLUX 多 provider `#video #agentic #production #open-source`
 - [[Github/repos/tw93-Pake|Pake — 網頁轉桌面 App 打包工具]] — Rust + Tauri 一行指令把網頁打包成跨平台桌面 App（~5MB），Electron 極輕量替代品 `#tools #desktop #tauri #rust`
+
+### 旺來幫｜Jane 金融知識庫
+
+> 來源：Vocus 沙龍 236 篇付費文章萃取（2026-06-24）
+> Skill：`jane-finance`（四模式：顧問/學習/分析/查詢 + 可信度分級 🟢🟡🔴）
+
+- [[旺來幫Jane/_index|旺來幫 Jane 總索引]] — 12 個分類導航 + 建議閱讀順序
+- [[旺來幫Jane/擺脫金融文盲|擺脫金融文盲]] — 資產vs負債、複利、ETF、EPS/PER/PBR、景氣循環（26 篇）`#finance #basics`
+- [[旺來幫Jane/最快最簡單成為有錢人的方法|致富方法]] — 買賣時機、選股法、投資組合 50/30/20（24 篇）`#finance #strategy`
+- [[旺來幫Jane/未來成長產業|未來成長產業]] — 量子運算、航太、能源六部曲、AI 版權（22 篇）`#finance #industry`
+- [[旺來幫Jane/Jane的秘密手冊|Jane 秘密手冊]] — 5 情境操作手冊 + 12 危機預測訊號（28 篇）`#finance #playbook`
+- [[旺來幫Jane/CBDC與數位貨幣|CBDC 與數位貨幣]] — 穩定幣機制、美中台策略（10 篇）`#finance #crypto`
+- [[旺來幫Jane/龍頭股發掘方法|龍頭股 20 步驟]] — 系統化選股方法論 + 量化指標速查（12 篇）`#finance #stock-picking`
+- [[旺來幫Jane/30年致富機會|30 年致富機會]] — 7 大結構變局（16 篇）`#finance #macro`
+- [[旺來幫Jane/金融用語教學|金融用語教學]] — 250+ 術語辭典（9 篇）`#finance #glossary`
+- [[旺來幫Jane/Jane的思考脈絡|Jane 思考脈絡]] — 美國霸權/比特幣/房地產/AI/投資哲學（51 篇）`#finance #analysis`
+- [[旺來幫Jane/JANETFLIX宏觀經濟小說|JANETFLIX 宏觀經濟小說]] — 川普馬斯克兄弟情、美中霸權戰（25 篇）`#finance #geopolitics`
+- [[旺來幫Jane/讓孩子成為幸福的有錢人|子女金融教育]] — 48 條法則 + 分齡清單（7 篇）`#finance #education`
+- [[旺來幫Jane/金錢的起點與終點|金錢的起點與終點]] — 金融系統三層結構（5 篇）`#finance #philosophy`
 
 ---
 

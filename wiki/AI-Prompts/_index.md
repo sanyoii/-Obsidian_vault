@@ -57,6 +57,12 @@
 >
 > **黑白時尚選角 Prompts** — [[黑白時尚選角-Prompts]]
 > - #1 男生版 GQ Editorial（9:16 · 2×2 Contact Sheet） · #2 女生版 Vogue Editorial（2×2 Contact Sheet）
+>
+> **Taste Interview Prompts** — [[Taste-Interview-Prompts]]
+> - 100 題深度訪談萃取個人書寫 DNA，產出 Voice Profile 文件（含分 session 續接模板）
+>
+> **設計融合短影片 Prompts** — [[設計融合短影片-Prompts]]
+> - #1 10 秒藝術設計短影片腳本（5 CUTs：誕生→跨越→流動→融合→唯一之作）
 
 ---
 
@@ -191,6 +197,18 @@
 | #1 | 男生版 GQ Editorial 2×2 Contact Sheet（黑色高領+底片質感） | 9:16 | #人像 #時尚 #黑白 #底片 #ContactSheet #奢華 | [[黑白時尚選角-Prompts]] |
 | #2 | 女生版 Vogue Editorial 2×2 Contact Sheet（黑色高領+銀圈耳環） | — | #人像 #時尚 #黑白 #底片 #ContactSheet #奢華 | [[黑白時尚選角-Prompts]] |
 
+### Taste Interview Prompts（1 套完整工作流）
+
+| # | 效果 | 需要的素材 | 標籤 | 來源檔 |
+|---|------|-----------|------|--------|
+| #1 | 100 題深度訪談 → Voice Profile 文件 | 2-4 小時耐心回答 | #寫作 #品味 #VoiceProfile #訪談 #個人化 | [[Taste-Interview-Prompts]] |
+
+### 設計融合短影片 Prompts（1 款）
+
+| # | 效果 | 時長 | 標籤 | 來源檔 |
+|---|------|------|------|--------|
+| #1 | 四宮格藝術設計→融合→唯一之作（5 CUTs 影片腳本） | 10 秒 | #影片 #藝術 #墨水 #拼貼 #四宮格 #Glitch | [[設計融合短影片-Prompts]] |
+
 ---
 
 ## 標籤索引
@@ -240,6 +258,17 @@
 - **#底片**：黑白時尚選角#1–#2
 - **#ContactSheet**：黑白時尚選角#1–#2
 - **#奢華**：黑白時尚選角#1–#2
+- **#寫作**：Taste Interview#1
+- **#品味**：Taste Interview#1
+- **#VoiceProfile**：Taste Interview#1
+- **#訪談**：Taste Interview#1
+- **#個人化**：Taste Interview#1
+- **#影片**：設計融合短影片#1
+- **#藝術**：設計融合短影片#1
+- **#墨水**：設計融合短影片#1
+- **#拼貼**：設計融合短影片#1
+- **#四宮格**：設計融合短影片#1
+- **#Glitch**：設計融合短影片#1
 
 ---
 
@@ -262,6 +291,8 @@
 | [[鏤空字體景觀-Prompts]] | 鏤空字體景觀 Meta 模板（文字即骨架+場景浮現）+ 九份範例 | 1 Meta + 1 範例 |
 | [[巨觀微觀對比海報-Prompts]] | 放大數千倍織物×微小人影×鏡面反射（關羽/大喬/學生） | 3 個 Prompt |
 | [[黑白時尚選角-Prompts]] | Kodak 400TX 底片風 2×2 Contact Sheet 時尚人像（男 GQ / 女 Vogue） | 2 個 Prompt |
+| [[Taste-Interview-Prompts]] | 100 題深度訪談萃取個人書寫 DNA，產出 Voice Profile（含續接模板+偽造 bug 處理） | 1 套工作流 |
+| [[設計融合短影片-Prompts]] | 10 秒藝術設計短影片腳本（四宮格→融合→唯一之作，5 CUTs） | 1 個 Prompt |
 
 ---
 
