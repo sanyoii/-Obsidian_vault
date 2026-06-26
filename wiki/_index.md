@@ -1,7 +1,7 @@
 ﻿# 知識庫主索引
 
-> 最後更新：2026-06-24
-> 文章數量：168 篇
+> 最後更新：2026-06-26
+> 文章數量：169 篇
 > 原始文件：持續累積中
 
 ---
@@ -104,6 +104,7 @@
 - [[Github/repos/PixelRAG — 像素原生 RAG，截圖讓 AI 用視覺讀網頁|PixelRAG — 像素原生 RAG，截圖讓 AI 用視覺讀網頁]] — `pixelshot` CLI 把網頁/PDF 截圖成分塊圖片讓 LLM 視覺讀取，含 Claude Code plugin `pixelbrowse`；✅ 已安裝，Windows 需 CHROME_PATH wrapper `#skills #claude-code-plugin #screenshot #rag`
 - [[Github/repos/calesthio-OpenMontage|OpenMontage — 開源 Agentic 影片製作系統]] — AI Agent 驅動全自動影片製作（研究→腳本→素材→剪輯→合成），支援 Veo/Kling/FLUX 多 provider `#video #agentic #production #open-source`
 - [[Github/repos/tw93-Pake|Pake — 網頁轉桌面 App 打包工具]] — Rust + Tauri 一行指令把網頁打包成跨平台桌面 App（~5MB），Electron 極輕量替代品 `#tools #desktop #tauri #rust`
+- [[Github/repos/awesome-design-md — 73 套品牌 DESIGN.md 設計系統收藏庫|awesome-design-md — 73 套品牌 DESIGN.md 設計系統]] — 93.5K⭐，Google Stitch 規範，73 品牌即插即用 AI UI 生成，9 大類分類覽 `#design-system #google-stitch #vibe-coding #ui-generation`
 
 ### 旺來幫｜Jane 金融知識庫
 
