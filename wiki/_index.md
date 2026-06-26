@@ -1,7 +1,7 @@
 ﻿# 知識庫主索引
 
 > 最後更新：2026-06-26
-> 文章數量：169 篇
+> 文章數量：172 篇
 > 原始文件：持續累積中
 
 ---
@@ -27,6 +27,7 @@
 #### Agent 設計
 - [[Claude/Karpathy 最高遵守原則 — AI 行為準則|Karpathy 最高遵守原則 — AI 行為準則]] — 5 大原則，套用至 CLAUDE.md，/karpathy-audit 命令 `#agent-design #karpathy`
 - [[Claude/Karpathy program.md Skill 設計哲學 — 讓 Agent 可靠工作的六個原則|Karpathy program.md Skill 設計哲學 — 讓 Agent 可靠工作的六個原則]] — CAN/CANNOT 邊界、單一指標、品味量化 if-then、baseline 先行、Checkpoint、三段式結構 `#agent-design #skills #karpathy`
+- [[Claude/stitch-skills SKILL.md 結構分析 — Agent Skill 設計模式|stitch-skills SKILL.md 結構分析]] — 四種工作流模式、Gold Standard/Baton/驗證腳本三設計模式、Skill 目錄標準結構 `#agent-design #skills #google-stitch #design-patterns`
 
 ---
 
@@ -105,6 +106,8 @@
 - [[Github/repos/calesthio-OpenMontage|OpenMontage — 開源 Agentic 影片製作系統]] — AI Agent 驅動全自動影片製作（研究→腳本→素材→剪輯→合成），支援 Veo/Kling/FLUX 多 provider `#video #agentic #production #open-source`
 - [[Github/repos/tw93-Pake|Pake — 網頁轉桌面 App 打包工具]] — Rust + Tauri 一行指令把網頁打包成跨平台桌面 App（~5MB），Electron 極輕量替代品 `#tools #desktop #tauri #rust`
 - [[Github/repos/awesome-design-md — 73 套品牌 DESIGN.md 設計系統收藏庫|awesome-design-md — 73 套品牌 DESIGN.md 設計系統]] — 93.5K⭐，Google Stitch 規範，73 品牌即插即用 AI UI 生成，9 大類分類覽 `#design-system #google-stitch #vibe-coding #ui-generation`
+- [[Github/repos/deer-flow — 字節跳動開源超級 Agent 運行框架|DeerFlow — 字節跳動超級 Agent Harness]] — 74.9K⭐，LangGraph/LangChain，25+ middleware、Skills、沙箱、IM 閘道、Sub-Agents；⏳ 觀望 `#agent-framework #langgraph #multi-agent #bytedance`
+- [[Github/repos/google-labs-code — Google Stitch + Jules 開源組織全覽|google-labs-code — Google Stitch + Jules 組織]] — 32K+⭐，8 repo：DESIGN.md 規範(20.7K⭐)+14 Agent Skills+Jules 雲端 Agent；🟢 CLI 可裝 `#google-stitch #design-system #agent-skills #jules #mcp`
 
 ### 旺來幫｜Jane 金融知識庫
 
