@@ -56,7 +56,7 @@ tags:
 ### 技術架構
 
 ```
-React SPA (Vite)  ──HTTP·SSE·輪詢──►  FastAPI
+React SPA (Vite)  ──HTTP·SSE·輪詢──►  FastAPI (uvicorn)
                                        │
                  ┌─────────────────────┼─────────────────────┐
                  ▼                     ▼                     ▼
@@ -76,6 +76,84 @@ React SPA (Vite)  ──HTTP·SSE·輪詢──►  FastAPI
 | LLM | Claude Code CLI / Codex CLI / BYOK |
 | Desktop | pywebview + PyInstaller |
 | 測試 | pytest（30+ 測試檔案） |
+
+---
+
+### LangGraph 投遞包生成流程（反思迴圈）
+
+14 個 Agent 節點的多代理協作流程，背景執行、射後不理：
+
+```
+START
+  ↓
+① parse — 解析 JD → ParsedJob
+  ↓
+② match — 履歷 vs JD 匹配評分 → MatchReport (0-100)
+  ↓
+③ supervisor_match — LLM 動態決策
+  ├─ stop → END（不適配）
+  └─ proceed ↓
+④ company_research — 公司情報搜尋 → CompanyBrief
+  ↓
+⑤ 三份文件『並行生成』
+  ├─ resume_tailor  → TailoredResume（客製履歷+ATS）
+  ├─ cover_letter   → CoverLetter（繁中求職信）
+  └─ interview_prep → InterviewKit（技術/行為/台灣特有題）
+  ↓
+⑥ join（等三份完成）
+  ↓
+⑦ critic — 品管評審 → CritiqueReport（三份各 0-100）
+  ↓
+⑧ supervisor_critic — LLM 決策
+  ├─ revise → 回到 ④（只重寫未達標文件，最多 3 輪）
+  └─ approve ↓
+⑨ human_gate → 存為「待審」/ 等使用者核可
+  ↓
+END
+```
+
+**關鍵設計：**
+- 每個節點都有 `_safe()` 包裹：agent 失敗時降級為 fallback，不炸整條流程
+- Supervisor 用 LLM 動態判斷路由，失敗退回確定性門檻邏輯（score ≥ 60）
+- 重寫迴圈精準：只重跑 `per_doc` 指定的文件，已達標的保留不動
+- 最多 4 條 pipeline 並行（`ThreadPoolExecutor(max_workers=4)`）
+- 每個背景產生用獨立 graph + MemorySaver，不共用 SQLite 連線
+
+### 自動找職缺流程
+
+```
+上傳履歷 → structure_profile() 解析
+  ↓
+derive_queries() 推導關鍵字（取 3 組）
+  ↓
+search_all() 四站並行搜尋 → 去重 + 地區過濾
+  ↓
+rank_jobs() 分批並行排序（12 筆/批，4 workers）
+  → SSE 逐批串流（邊排邊顯示）
+  ↓
+（選填）find_company_jobs() 指定公司開缺獨立排序
+```
+
+### LLM 分層策略
+
+| 層級 | 用途 | 對應模型 |
+|------|------|---------|
+| `deep` | 複雜判斷：supervisor、critic、match | opus |
+| `standard` | 主要生成：resume、cover、interview | sonnet |
+| `cheap` | 輕量任務：parse、structure、連線測試 | haiku |
+
+### 資料儲存
+
+| 資料庫 | 路徑 | 用途 |
+|--------|------|------|
+| `app.sqlite` | `data/app.sqlite` | 投遞包歷史、使用者記憶、搜尋紀錄、健檢紀錄 |
+| `checkpoints.sqlite` | `data/checkpoints.sqlite` | LangGraph checkpoint（跨重啟 resume）|
+
+### Windows 注意事項
+
+- `.gitattributes` 設定 `* text=auto eol=lf`，會導致 `.bat` 檔被轉為 LF 換行
+- Windows cmd.exe 需要 CRLF 才能解析 `.bat`，需加 `*.bat text eol=crlf` 例外
+- 已在本機修正 `.gitattributes` 並轉換 `run.bat` / `desktop.bat` 為 CRLF
 
 ---
 
