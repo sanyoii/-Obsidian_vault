@@ -34,7 +34,7 @@
 
 - 建立 Command Center 自製 Obsidian Plugin
 - 5 個 Ribbon 按鈕：⚙️ Dashboard / ☀️ Morning Briefing / 📚 Compile / 🔍 Lint / ✏️ Quick Capture
-- PowerShell 腳本串接 social-monitor + job-crawler
+- PowerShell 腳本串接 social-monitor + jobsmith
 - Morning Briefing → `wiki/Daily/Morning_YYYY-MM-DD.md`
 
 ---
@@ -75,7 +75,7 @@ scripts/fetch-dashboard-data.ps1
     ├── Hacker News（Firebase API，id 欄備用 HN 討論頁）
     ├── Product Hunt（GraphQL API，token 在 data/ph_token.txt）
     ├── Lobsters（lobste.rs JSON API，取代 Reddit）
-    ├── job-crawler SQLite → 未讀職缺數
+    ├── jobsmith SQLite → 待審投遞包數
     ├── social-monitor 最新報告標題
     └── Claude session JSONL 行數 → token 估算
             ↓
@@ -114,7 +114,7 @@ scripts/fetch-dashboard-data.ps1
 | Hacker News | Firebase API | ✅ |
 | Product Hunt | GraphQL API（免費 token）| ✅ |
 | Lobsters | lobste.rs JSON | ✅ |
-| 新職缺數 | job-crawler SQLite | ✅ |
+| 待審投遞包 | jobsmith SQLite | ✅ |
 | 社群動態 | social-monitor 報告 | ✅ |
 | Token 估算 | JSONL 行數估算 | ✅（粗估）|
 | 今日行程 | Google Calendar MCP → calendar.json | ✅ |

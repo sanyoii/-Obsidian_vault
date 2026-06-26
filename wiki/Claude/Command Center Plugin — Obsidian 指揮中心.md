@@ -105,7 +105,7 @@
 
 **資料來源：**
 - `d:\Claude\social-monitor\reports\report-*.md`（最新一份）
-- `d:\Claude\job-crawler\jobs.db`（`job_groups.user_status='unread'`，最近 3 天）
+- `d:\Claude\active\jobsmith\data\app.sqlite`（`packages` 待審投遞包，最近 3 天）
 
 **輸出：** `wiki/Daily/Morning_YYYY-MM-DD.md`  
 **同步：** 同步更新 `data/dashboard.json`（Dashboard Panel 即時反映）

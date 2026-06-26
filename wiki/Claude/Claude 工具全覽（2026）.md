@@ -164,7 +164,7 @@ cypher_query    → Cypher 圖查詢
 | 專案                 | 路徑                          | 狀態           | 用途                                                        |
 | ------------------ | --------------------------- | ------------ | --------------------------------------------------------- |
 | **social-monitor** | `d:\Claude\social-monitor\` | ✅ 運作中        | X/Threads/IG 定時海巡，Task Scheduler 10:30+22:00              |
-| **job-crawler**    | `d:\Claude\job-crawler\`    | ✅ Phase 1 完成 | 104/web3/cryptojobs 職缺爬蟲 + Flask UI + Gmail 通知            |
+| **jobsmith**       | `d:\Claude\active\jobsmith\` | ✅ v0.1.0      | 台灣求職 AI Co-Pilot（104/Yourator/Cake/LinkedIn），LangGraph 多代理，取代 job-crawler |
 | **careerbot**      | `d:\Claude\careerbot\`      | ✅ 進行中        | 求職助手，20家 in-review，/find-roles 待執行，Web UI: localhost:3000 |
 | **obsidian**       | `d:\Claude\obsidian\`       | ✅ 活躍         | Obsidian vault，git 備份至 sanyoii/-Obsidian_vault            |
 | **open-slide**     | `d:\Claude\open-slide\`     | 🔍 未用        | 投影片工具（待評估）                                                  |
@@ -184,13 +184,14 @@ ls d:\Claude\obsidian\wiki\Social\
 
 自動排程：Task Scheduler，每天 10:30 + 22:00 執行。
 
-### job-crawler 日常操作
+### jobsmith 日常操作
 
 ```powershell
-# 啟動 Flask UI
-cd d:\Claude\job-crawler
-python run_web.py
-# 開啟 http://localhost:5000
+# 桌面 App（推薦）
+cd d:\Claude\active\jobsmith
+desktop.bat
+# 或網頁版
+run.bat    # → http://localhost:8000
 ```
 
 ---

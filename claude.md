@@ -78,7 +78,7 @@ raw/
 ### `/morning` — 早報彙整
 執行 `scripts/morning-briefing.ps1`：
 1. 讀取 `d:\Claude\active\social-monitor\reports\` 最新報告
-2. 查詢 `d:\Claude\active\job-crawler\jobs.db` 最近 3 天未讀職缺
+2. 查詢 `d:\Claude\active\jobsmith\data\app.sqlite` 最近 3 天待審投遞包
 3. 產出 `wiki/Morning_YYYY-MM-DD.md` 並在 Obsidian 開啟
 
 > 此指令由 Command Center Plugin 的 Ribbon 按鈕觸發，不需要手動執行 Claude。

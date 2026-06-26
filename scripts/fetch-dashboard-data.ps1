@@ -9,8 +9,8 @@ $outputFile = "$dataDir\dashboard.json"
 
 New-Item -ItemType Directory -Force -Path $dataDir | Out-Null
 
-# ── 1. Job count + list ────────────────────────────────────────────────────
-$jobsDb   = "d:\Claude\active\job-crawler\jobs.db"
+# ── 1. Job count + list (Jobsmith app.sqlite) ─────────────────────────────
+$jobsDb   = "d:\Claude\active\jobsmith\data\app.sqlite"
 $jobCount = 0
 $jobList  = @()
 if (Test-Path $jobsDb) {
@@ -18,17 +18,13 @@ if (Test-Path $jobsDb) {
 import sqlite3, sys, json
 conn = sqlite3.connect(sys.argv[1])
 cur = conn.cursor()
-cur.execute("SELECT COUNT(*) FROM job_groups WHERE user_status='unread'")
+cur.execute("SELECT COUNT(*) FROM packages WHERE status='done' AND (approved IS NULL OR approved=0)")
 count = cur.fetchone()[0]
 cur.execute("""
-    SELECT jg.id, jg.company, jg.title, jg.location, jg.first_seen,
-           MIN(js.url) as url,
-           GROUP_CONCAT(DISTINCT js.platform) as platforms
-    FROM job_groups jg
-    JOIN job_sources js ON js.group_id = jg.id
-    WHERE jg.user_status='unread' AND js.job_status='active'
-    GROUP BY jg.id
-    ORDER BY jg.first_seen DESC
+    SELECT id, company, job_title as title, match_score, created_at as first_seen
+    FROM packages
+    WHERE status='done' AND (approved IS NULL OR approved=0)
+    ORDER BY created_at DESC
 """)
 cols = [d[0] for d in cur.description]
 jobs = [dict(zip(cols, row)) for row in cur.fetchall()]

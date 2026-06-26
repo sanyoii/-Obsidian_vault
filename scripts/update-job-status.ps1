@@ -1,20 +1,21 @@
-# update-job-status.ps1 — update job_groups.user_status in SQLite
-param([string]$Arg)   # format: "groupId|status"
-$parts   = $Arg -split '\|'
-$GroupId = $parts[0].Trim()
-$Status  = $parts[1].Trim()
+# update-job-status.ps1 — approve/update package status in Jobsmith SQLite
+# format: "packageId|approved" (approved: 1=核可, 0=待審)
+param([string]$Arg)
+$parts     = $Arg -split '\|'
+$PackageId = $parts[0].Trim()
+$Approved  = $parts[1].Trim()
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 $py = @"
 import sqlite3, sys
-db = r'd:\Claude\active\job-crawler\jobs.db'
+db = r'd:\Claude\active\jobsmith\data\app.sqlite'
 conn = sqlite3.connect(db)
-conn.execute('UPDATE job_groups SET user_status=? WHERE id=?', (sys.argv[1], int(sys.argv[2])))
+conn.execute('UPDATE packages SET approved=? WHERE id=?', (int(sys.argv[1]), int(sys.argv[2])))
 conn.commit()
 conn.close()
 print('ok')
 "@
 $tmp = [System.IO.Path]::GetTempFileName() + ".py"
 $py | Out-File -FilePath $tmp -Encoding UTF8
-python $tmp $Status $GroupId 2>$null
+python $tmp $Approved $PackageId 2>$null
 Remove-Item $tmp -ErrorAction SilentlyContinue

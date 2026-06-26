@@ -21,9 +21,9 @@ if ($latestReport) {
     $socialLabel   = "N/A"
 }
 
-# 2. Job Crawler: unread jobs in last 3 days
-$jobsDb  = "d:\Claude\active\job-crawler\jobs.db"
-$jobText = "(job-crawler DB not found)"
+# 2. Jobsmith: pending packages in last 3 days
+$jobsDb  = "d:\Claude\active\jobsmith\data\app.sqlite"
+$jobText = "(Jobsmith DB not found — run jobsmith at least once)"
 
 if (Test-Path $jobsDb) {
     $pyCode = @'
@@ -33,20 +33,18 @@ conn = sqlite3.connect(sys.argv[1])
 cur  = conn.cursor()
 cutoff = (datetime.now() - timedelta(days=3)).isoformat()
 cur.execute("""
-    SELECT jg.company, jg.title, jg.salary_info, jg.location, jg.first_seen, js.url
-    FROM job_groups jg
-    LEFT JOIN job_sources js ON js.group_id = jg.id
-    WHERE jg.user_status = 'unread' AND jg.first_seen >= ?
-    GROUP BY jg.id
-    ORDER BY jg.first_seen DESC
+    SELECT company, job_title, match_score, created_at
+    FROM packages
+    WHERE status='done' AND (approved IS NULL OR approved=0)
+      AND created_at >= ?
+    ORDER BY created_at DESC
     LIMIT 30
 """, (cutoff,))
 rows = cur.fetchall()
-for company, title, salary, loc, seen, url in rows:
-    d = seen[:10] if seen else ''
-    s = f" | {salary}" if salary else ''
-    u = f" | {url}" if url else ''
-    print(f"- **{company}** - {title}{s} | {loc} | {d}{u}")
+for company, title, score, created in rows:
+    d = created[:10] if created else ''
+    s = f" | 適配 {score}分" if score else ''
+    print(f"- **{company}** - {title}{s} | {d}")
 print(f"TOTAL:{len(rows)}")
 conn.close()
 '@
