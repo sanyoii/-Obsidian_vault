@@ -177,6 +177,16 @@ skills/react-native/
 
 **適用條件：** 輸出結構化 + 高頻使用 + 品質波動大的 Skill
 
+**實際使用機制（三層）：**
+
+1. **Agent 自動讀取（主要用途）**：Agent 被觸發 Skill 時讀 SKILL.md，末尾的 `## Gold Standard` 指向 `examples/` 目錄的範例檔。Agent 讀到後會**模仿範例的結構、深度、語氣**產出。LLM 天生擅長模仿，比遵守長規則列表有效得多。
+
+2. **驗證腳本比對（搭配 Phase 3）**：驗證腳本的檢查規則從 Gold Standard 反推而來。流程：Agent 參考 Gold Standard 產出 → 跑驗證腳本 → PASS 才交付。
+
+3. **人工品質基準線**：想知道某 Skill 該產出什麼品質時，直接開 `examples/gold-standard-*.md` 看，不用翻幾百行的 SKILL.md。
+
+**限制：** Agent 的 context window 吃緊時可能跳過讀 examples/；Skill 被間接觸發（非 `/skill-name`）時可能只讀 description 不讀全文。SKILL.md 末尾的指向是目前最可靠的觸發方式。
+
 #### 2. 接力棒模式（Baton Pattern）
 
 結構化交接檔用於多 Agent 工作流（如 7-Agent 工廠）。解決的核心問題：**context 在 Agent 間傳遞時丟失**。
