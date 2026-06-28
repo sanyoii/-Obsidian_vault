@@ -10,7 +10,7 @@ status: in-progress
 ## 動機
 
 工具散落在多處，沒有統一入口：
-- **Skills**：143 個，backup 在 `d:\Claude\.claude\skills\`，active 在 `C:\Users\sanyo\.claude\skills\`
+- **Skills**：151 個目錄，backup 在 `d:\Claude\.claude\skills\`，active 在 `C:\Users\sanyo\.claude\skills\`
 - **Agents**：107 個，分 8 類，雙份同步
 - **Apps**：ppt-master、ziwei、job-crawler、careerbot 等散落各目錄
 - **Scripts**：Python/PowerShell 分散在 `tools\`、各 skill 目錄、各專案
@@ -22,7 +22,7 @@ status: in-progress
 **檔案**：`d:\Claude\dashboard\claude-tools-dashboard.html`
 
 - 單一 HTML 自含，瀏覽器直接開啟
-- 7 個 Tab：**Skills / Agents / 本地應用 / GBrain / 工具腳本 / 管理 / CLI 工具**
+- 8 個 Tab：**Skills / Agents / 本地應用 / GBrain / 工具腳本 / CLI 工具 / Wiki 紀錄 / 管理**
 - 全域搜尋 + 分類 Pill 過濾
 - 每個 Skill 卡片：名稱、描述、觸發指令（可複製）、標籤
 - 深色主題（`#0f0f11` 背景，`#7c6af7` accent）

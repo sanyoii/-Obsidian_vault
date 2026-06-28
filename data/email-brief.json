@@ -1,23 +1,48 @@
 [
   {
-    "from": "Discord",
-    "subject": "du_0324 在 笨錢社群 中提到您",
-    "importance": "Medium",
-    "todos": ["前往 Discord 查看 du_0324 在笨錢社群的提及內容並回覆"],
-    "time": "07:20"
+    "from": "Vélonecy 60 minutes",
+    "subject": "[Vélonecy 60 minutes] Nous avons bien reçu votre demande",
+    "importance": "High",
+    "todos": [
+      "確認 Vélonecy 是否已回覆 ticket #854488（24小時期限今天到期）",
+      "若今日尚未收到回覆，可致電 09 74 99 47 16（週一至五 8h-20h，週末 10h-18h30）跟進"
+    ],
+    "time": "yesterday"
   },
   {
-    "from": "Skool (Find Your Tribe)",
-    "subject": "1 event happening tomorrow",
+    "from": "Vélonecy 60 minutes",
+    "subject": "[Vélonecy 60 minutes] Following your feedback",
     "importance": "Medium",
-    "todos": ["決定是否參加明日 8:00-9:00am（台北）Hey! Let's Connect Zoom 活動"],
-    "time": "02:51"
+    "todos": [
+      "等待 Camille 處理 ticket #853991（已提供姓名、電話、Email、生日）",
+      "確認帳號驗證碼是否已被手動更改、能否成功建立帳號"
+    ],
+    "time": "yesterday"
   },
   {
-    "from": "Wellfound",
-    "subject": "New jobs: QA/SRE at Himaya AI and 5 more jobs",
+    "from": "Indeed",
+    "subject": "伊原力科技 的 HR Product Manager & HR Manager。另外 9 個遠端職缺",
+    "importance": "Medium",
+    "todos": [
+      "查看 Indeed 推薦的 10 個 HR 相關職缺（含伊原力科技 HR Product Manager）"
+    ],
+    "time": "yesterday"
+  },
+  {
+    "from": "Allocab",
+    "subject": "How was your trip R6736497409572864?",
+    "importance": "Low",
+    "todos": [
+      "下載行程發票 PDF（2026PASS56142.pdf）",
+      "若有意願，填寫行程評價"
+    ],
+    "time": "yesterday"
+  },
+  {
+    "from": "國泰世華銀行",
+    "subject": "CUBE App轉帳通知",
     "importance": "Low",
     "todos": [],
-    "time": "03:00"
+    "time": "yesterday"
   }
 ]

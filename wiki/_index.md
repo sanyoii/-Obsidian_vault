@@ -1,7 +1,7 @@
 ﻿# 知識庫主索引
 
-> 最後更新：2026-06-26
-> 文章數量：172 篇
+> 最後更新：2026-06-28
+> 文章數量：173 篇
 > 原始文件：持續累積中
 
 ---
@@ -90,24 +90,8 @@
 
 ### Github/Repos（已分析 Repos）
 
-- [[Github/留看repos/已整理/Panniantong-Agent-Reach — AI Agent 互聯網感知層|Agent Reach — AI Agent 互聯網感知層]] — 17 平台 skills 腳手架（網頁/YouTube/Twitter/Reddit/小紅書/B站/微博/V2EX/雪球…），一句話安裝，零配置 8 頻道；✅ 適合安裝 `#skills #social-media #claude-code #mcp #internet`
-- [[Github/留看repos/已整理/mvanhorn-last30days-skill — AI 多平台社群研究引擎|last30days-skill — AI 多平台社群研究引擎]] — `/last30days <主題>` 跨 Reddit/X/YouTube/TikTok/HN/Polymarket 等 10+ 平台平行搜尋，社群互動量排序；✅ 適合安裝 `#skills #research #social-media #claude-code`
-- [[Github/留看repos/已整理/ECC — Claude Code harness-native 操作系統|ECC — Claude Code harness-native 操作系統]] — harness-native AI Agent 操作系統（Skills + Agents + Hooks + Rules），100+ skills，182K stars `#tool #claude-code #skills #hooks #agents`
-- [[Github/留看repos/已整理/Headroom — AI Agent Context 壓縮層|Headroom — AI Agent Context 壓縮層]] — 自動壓縮 context window，減少 token 消耗 `#tool #claude-code #context`
-- [[Github/留看repos/已整理/anthropicsknowledge-work-plugins|knowledge-work-plugins]] — Anthropic 官方知識工作 plugins 套件 `#anthropic #plugins`
-- [[Github/repos/Stop-slop 寫作去除AI腔|Stop-slop 寫作去除AI腔]] — 去除 AI 生成文章的機器味 `#writing #ai`
-- [[Github/repos/issue_tmp — GitHub Issue  PR 模板套件|issue_tmp — GitHub Issue / PR 模板套件]] — 繁體中文 9 種 Issue 表單 + PR 模板 `#github #templates`
-- [[Github/留看repos/已整理/x1xhlol-system-prompts-and-models-of-ai-tools|x1xhlol/system-prompts-and-models-of-ai-tools — AI 工具 System Prompt 資料庫]] — 30+ 工具真實 system prompt（Cursor/Claude Code 2.0/Manus/Windsurf/Kiro 等），104 檔案 2.1MB；✅ 適合收藏 `#ai-prompts #reverse-engineering #claude-code #research`
-- [[Github/留看repos/已整理/addyosmani-agent-skills — 生產級工程 Skills 套件|addyosmani/agent-skills — 生產級工程 Skills 套件]] — 24 個 SDLC 工程 skills（spec/plan/build/verify/review/ship）+ 7 條斜線指令 + 4 個專用 Agent；✅ 適合安裝 `#skills #claude-code #engineering #tdd #spec`
-- [[Github/留看repos/已整理/Madison-de-Chao-rainbow-sanctuary-report-site — 命理解讀報告銷售落地頁|Rainbow Sanctuary — 命理解讀報告銷售落地頁]] — Next.js 15 命理報告銷售模板，紫微×八字×占星×人類圖「人生羅盤」三階定價落地頁；參考用，非排盤引擎 `#nextjs #landing-page #ziwei #astrology #reference`
-- [[Github/repos/music-assistant-server — 開源家用音樂串流管理器|music-assistant/server — 開源家用音樂串流管理器]] — 106 個 providers 整合 Spotify/Tidal/YouTube 等音源 + Sonos/AirPlay 等嗇叭；含實驗性 FastMCP plugin 可接 Claude Code；⏳ 觀望 `#media #music #home-assistant #mcp #self-hosted`
-- [[Github/repos/chatwoot — 開源全通道客服平台|chatwoot — 開源全通道客服平台]] — 整合 10+ 頻道（WhatsApp/Email/FB/IG/Telegram）於統一收件匣，Rails+Vue.js，31.6k stars；Intercom/Zendesk 開源替代；❌ 不適合 `#customer-support #omnichannel #live-chat #rails #vuejs #webhook #self-hosted`
-- [[Github/repos/PixelRAG — 像素原生 RAG，截圖讓 AI 用視覺讀網頁|PixelRAG — 像素原生 RAG，截圖讓 AI 用視覺讀網頁]] — `pixelshot` CLI 把網頁/PDF 截圖成分塊圖片讓 LLM 視覺讀取，含 Claude Code plugin `pixelbrowse`；✅ 已安裝，Windows 需 CHROME_PATH wrapper `#skills #claude-code-plugin #screenshot #rag`
-- [[Github/repos/calesthio-OpenMontage|OpenMontage — 開源 Agentic 影片製作系統]] — AI Agent 驅動全自動影片製作（研究→腳本→素材→剪輯→合成），支援 Veo/Kling/FLUX 多 provider `#video #agentic #production #open-source`
-- [[Github/repos/tw93-Pake|Pake — 網頁轉桌面 App 打包工具]] — Rust + Tauri 一行指令把網頁打包成跨平台桌面 App（~5MB），Electron 極輕量替代品 `#tools #desktop #tauri #rust`
-- [[Github/repos/awesome-design-md — 73 套品牌 DESIGN.md 設計系統收藏庫|awesome-design-md — 73 套品牌 DESIGN.md 設計系統]] — 93.5K⭐，Google Stitch 規範，73 品牌即插即用 AI UI 生成，9 大類分類覽 `#design-system #google-stitch #vibe-coding #ui-generation`
-- [[Github/repos/deer-flow — 字節跳動開源超級 Agent 運行框架|DeerFlow — 字節跳動超級 Agent Harness]] — 74.9K⭐，LangGraph/LangChain，25+ middleware、Skills、沙箱、IM 閘道、Sub-Agents；⏳ 觀望 `#agent-framework #langgraph #multi-agent #bytedance`
-- [[Github/repos/google-labs-code — Google Stitch + Jules 開源組織全覽|google-labs-code — Google Stitch + Jules 組織]] — 32K+⭐，8 repo：DESIGN.md 規範(20.7K⭐)+14 Agent Skills+Jules 雲端 Agent；🟢 CLI 可裝 `#google-stitch #design-system #agent-skills #jules #mcp`
+- [[Github/_index|Github Repo 分析總索引]] — 109 篇 × 12 主題分類（🔬 16 深度分析 / 📎 93 簡單留存）`#github #index`
+- [[Github/已安裝工具 — Github 分析索引|已安裝工具 × Wiki 交叉對照]] — 30 項已安裝工具的 Wiki 紀錄 `#github #installed`
 
 ### 旺來幫｜Jane 金融知識庫
 

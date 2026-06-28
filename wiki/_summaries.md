@@ -16,7 +16,7 @@
 
 ---
 
-## [[Github/留看repos/已整理/Madison-de-Chao-rainbow-sanctuary-report-site — 命理解讀報告銷售落地頁|Rainbow Sanctuary — 命理解讀報告銷售落地頁]]
+## [[Github/repos/Madison-de-Chao-rainbow-sanctuary-report-site — 命理解讀報告銷售落地頁|Rainbow Sanctuary — 命理解讀報告銷售落地頁]]
 **標籤：** `#nextjs` `#landing-page` `#ziwei` `#astrology` `#human-design` `#reference`
 **摘要：** Next.js 15 單頁網站，銷售《全方位命理解讀報告》（紫微×八字×占星×人類圖，以「人生羅盤」為中樞）。三階定價 1680/2880/3980，內容全部 `data/*.json` 驅動。非排盤引擎，純行銷落地頁，與「命運羅盤」專案主題高度重疊，頁面架構可參考。
 **來源：** https://github.com/Madison-de-Chao/-
@@ -24,7 +24,7 @@
 
 ---
 
-## [[Github/留看repos/已整理/itsfatduckoptimizerDuck — Windows 系統最佳化工具|optimizerDuck — 免費開源 Windows 系統最佳化工具]]
+## [[Github/repos/itsfatduckoptimizerDuck — Windows 系統最佳化工具|optimizerDuck — 免費開源 Windows 系統最佳化工具]]
 **標籤：** `#tool` `#windows` `#optimization` `#wpf` `#dotnet`
 **摘要：** 免費開源 Windows 優化工具，30+ 個調整項（效能/隱私/GPU/電源/Bloatware/UX），每項附風險評級，全部可一鍵復原。WPF/.NET 10，不需安裝直接跑 exe。內附完整 Claude Code/Codex/Gemini 開發 skills（10 個），.resx 本地化含繁中。
 **來源：** https://github.com/itsfatduck/optimizerDuck
@@ -32,7 +32,7 @@
 
 ---
 
-## [[Github/留看repos/已整理/Renhuai123ziwei-doushu — 倪海夏天紀體系紫微斗數引擎|Renhuai123/ziwei-doushu — 倪海夏《天紀》體系排盤引擎]]
+## [[Github/repos/Renhuai123ziwei-doushu — 倪海夏天紀體系紫微斗數引擎|Renhuai123/ziwei-doushu — 倪海夏《天紀》體系排盤引擎]]
 **標籤：** `#ziwei` `#astrology` `#nextjs` `#dataset` `#enhancement-target`
 **摘要：** 倪海夏《天紀》體系 Next.js 紫微斗數 App，最大價值：1100+ 行格局知識庫 patterns.ts、三部古籍原文（骨髓賦/全集/全書）、名人命盤資料庫、51.8 萬條命盤樣本數據（5.5GB，可 RAG/fine-tune）。與 ruijayfeng/ziwei 互補，enhancement 路線圖已列出。
 **來源：** https://github.com/Renhuai123/ziwei-doushu
@@ -40,7 +40,7 @@
 
 ---
 
-## [[Github/留看repos/已整理/ruijayfengziwei — 現代化紫微斗數命盤分析工具|紫微知道 — 紫微斗數命盤分析工具]]
+## [[Github/repos/ruijayfengziwei — 現代化紫微斗數命盤分析工具|紫微知道 — 紫微斗數命盤分析工具]]
 **標籤：** `#tool` `#ziwei` `#astrology` `#react` `#installed`
 **摘要：** React 19 + TypeScript + Vite 的紫微斗數 Web App，本機已安裝於 `d:\Claude\ziwei`，`npm run dev` 跑在 localhost:5173。功能含精準排盤（iztro）、AI 命盤解讀（支援 Claude/DeepSeek/Gemini）、年度運勢、雙人合盤、人生 K 線、分享卡片。
 **來源：** https://github.com/ruijayfeng/ziwei

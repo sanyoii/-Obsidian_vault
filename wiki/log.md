@@ -22,20 +22,24 @@
 - `2026-06-11 23:00 | COMPILE | claude plugin install（本地 marketplace 繞過）→ wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md` | 安裝完成：32 skills + 8 commands + SessionStart hook（jq 已用 winget 補裝）；GitHub SSH 失敗改用本地 clone + marketplace source="./" 繞過；4 個 agent personas 因 plugin.json 格式未載入，改手動裝至 .claude/agents/specialized/agent-skills/，security-auditor 改名 sdlc-security-auditor 避免與 v3 衝突；同步更新 claude-tools-dashboard.html（新增 AGENTS 分類 + Plugin 說明卡）
 - `2026-06-11 23:30 | COMPILE | jq PATH 修正 + Hooks 範圍釐清 → wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md` | jq.exe 複製到 ~/.local/bin 修正 PATH，SessionStart hook 驗證完整輸出 using-agent-skills meta-skill；新增 Hooks 表格區分「plugin 自動安裝」(SessionStart ✅) vs「per-project 選配未啟用」(sdd-cache/simplify-ignore ❌)；更新相關性評估表 Hooks 整合列
 - `2026-06-11 23:03 | QUERY | jq 依賴修正是否完成 → wiki/Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件.md` | 重新驗證確認：`which jq` → `~/.local/bin/jq`（jq-1.8.1），直接執行 `bash hooks/session-start.sh` 完整輸出 using-agent-skills meta-skill（priority IMPORTANT）；jq 依賴修正項目確認完成，文件內容無需變更
-- `2026-06-11 23:50 | LINT | wiki/Github/repos/ → wiki/Github/留看repos/已整理/` | 將 16 篇已整理完成的 repo 分析文章從 repos/ 移至 留看repos/已整理/（git mv 保留歷史），原始剪報留在 repos/；同步修正 _index.md（6 條連結）與 _summaries.md（3 條連結）、x1xhlol 文章內 ECC 反向連結路徑
+- `2026-06-11 23:50 | LINT | wiki/Github/repos/ → wiki/Github/repos/` | 將 16 篇已整理完成的 repo 分析文章從 repos/ 移至 留看repos/已整理/（git mv 保留歷史），原始剪報留在 repos/；同步修正 _index.md（6 條連結）與 _summaries.md（3 條連結）、x1xhlol 文章內 ECC 反向連結路徑
 
 ### 2026-06-12 | COMPILE
-- `2026-06-12 00:20 | COMPILE | github.com/Madison-de-Chao/- → wiki/Github/留看repos/已整理/Madison-de-Chao-rainbow-sanctuary-report-site — 命理解讀報告銷售落地頁.md` | repomix 分析（38 檔，16K tokens）；Next.js 15 命理報告銷售落地頁，紫微×八字×占星×人類圖「人生羅盤」三階定價（1680/2880/3980）；非排盤引擎，與命運羅盤專案主題重疊，頁面架構可參考；新增 _index.md 與 _summaries.md 條目
+- `2026-06-12 00:20 | COMPILE | github.com/Madison-de-Chao/- → wiki/Github/repos/Madison-de-Chao-rainbow-sanctuary-report-site — 命理解讀報告銷售落地頁.md` | repomix 分析（38 檔，16K tokens）；Next.js 15 命理報告銷售落地頁，紫微×八字×占星×人類圖「人生羅盤」三階定價（1680/2880/3980）；非排盤引擎，與命運羅盤專案主題重疊，頁面架構可參考；新增 _index.md 與 _summaries.md 條目
 - `2026-06-15 00:00 | COMPILE | github.com/chatwoot/chatwoot → wiki/Github/repos/chatwoot — 開源全通道客服平台.md` | repomix 分析（gh API + WebFetch）；Ruby on Rails + Vue.js 全通道客服平台，31.6k stars；整合 10+ 頻道（WhatsApp/Email/FB/IG/Telegram/Line/TikTok/SMS/語音）；含 Agent Bot Webhook 框架、Captain AI Agent、REST API；結論 ❌ 不適合（SaaS 等級基礎設施，個人工作流無外部客服需求）
 
 ### 2026-06-12 | LINT
-- `2026-06-12 00:10 | LINT | wiki/Github/repos/ → wiki/Github/留看repos/已整理/` | 第二輪：再移 6 篇「原始 README + 附加分析（值得安裝嗎/分析結論）」混合格式文章（Chandra OCR 2、knowledge-work-plugins repo、prompt-master、anthropicsknowledge-work-plugins、eigent、OpenHuman），同步修正 _index.md 與 x1xhlol 文章內 prompt-master 反向連結路徑；anthropicsknowledge-work-plugins 與 knowledge-work-plugins repo 為同一 repo 兩份不同日期剪報，皆已移入但未去重
+- `2026-06-12 00:10 | LINT | wiki/Github/repos/ → wiki/Github/repos/` | 第二輪：再移 6 篇「原始 README + 附加分析（值得安裝嗎/分析結論）」混合格式文章（Chandra OCR 2、knowledge-work-plugins repo、prompt-master、anthropicsknowledge-work-plugins、eigent、OpenHuman），同步修正 _index.md 與 x1xhlol 文章內 prompt-master 反向連結路徑；anthropicsknowledge-work-plugins 與 knowledge-work-plugins repo 為同一 repo 兩份不同日期剪報，皆已移入但未去重
 
 ### 2026-06-13 | COMPILE
 - `2026-06-13 23:30 | COMPILE | github.com/music-assistant/server → wiki/Github/repos/music-assistant-server — 開源家用音樂串流管理器.md` | repomix 分析 106 個 providers；發現實驗性 FastMCP MCP Server plugin；⏳ 觀望（需 Docker + FFmpeg + PyTorch，HA 環境者可裝）
 
 ### 2026-06-10 | COMPILE
 - `2026-06-10 22:00 | COMPILE | github.com/x1xhlol/system-prompts-and-models-of-ai-tools → wiki/Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools.md` | repomix 分析 104 檔 / 461K tokens；收錄 30+ AI 工具真實 system prompt（Claude Code 2.0 / Cursor 多版本 / Manus / Windsurf / Kiro 等）；✅ 適合 clone 備查
+
+### 2026-06-28 | COMPILE
+- `2026-06-28 00:56 | COMPILE | github.com/xbtlin/ai-berkshire → wiki/Github/repos/xbtlin-ai-berkshire.md` | repomix 分析（2202 檔，32.8MB）；18 個 Claude Code / Codex 投研 Skill，巴菲特/芒格/段永平/李錄四大師框架；Python 工具含精確計算 + 雪球爬蟲；MIT 授權；✅ 適合安裝（./scripts/install-claude-commands.sh）
+- `2026-06-28 00:57 | COMPILE | github.com/hugohe3/ppt-master → wiki/Github/repos/hugohe3-ppt-master.md` | repomix 分析（2202 檔）；實為 AI Berkshire 投資研究框架（repo 名稱誤導）；18 Skill 含 /investment-team 四 Agent 並行；codex-skills/ 20 個 SKILL.md 可直接借用；MIT；✅ 適合借用單一 Skill
 
 ### 2026-06-20 | COMPILE
 - `2026-06-20 00:10 | COMPILE | github.com/Hmbown/CodeWhale → wiki/Tools/CodeWhale.md` | 開源 Terminal Coding Agent（Rust），模型中立 Claude Code 替代品，25 providers，Plan/Agent/YOLO 三模式，v0.8.62，MIT
@@ -49,10 +53,10 @@
 ## 2026-05
 
 ### 2026-05-30 | COMPILE
-- `2026-05-30 | COMPILE | repomix HKUDS/LightRAG → wiki/Github/留看repos/已整理/HKUDSLightRAG.md` | 知識圖譜增強 RAG，5 種查詢模式，Gemini 支援，結論：補充 gbrain 專題問答（不取代）
-- `2026-05-30 | COMPILE | repomix rohitg00/ai-engineering-from-scratch → wiki/Github/留看repos/已整理/rohitg00ai-engineering-from-scratch.md` | 20 phase AI 工程課程，2722 檔，Phase 13–16（MCP/Agent/Claude Code Permission Modes/Swarm）最值得選讀
-- `2026-05-30 | COMPILE | repomix karpathy/autoresearch → wiki/Github/留看repos/已整理/karpathyautoresearch.md` | 8 檔案極小 repo，AI agent 自主做 LLM 訓練研究，結論：需 NVIDIA GPU，非日常工具；program.md skill 設計哲學值得借鑒
-- `2026-05-30 | COMPILE | repomix activeloopai/hivemind → wiki/Github/留看repos/已整理/activeloopaiHivemind.md` | 分析跨 Agent 共享記憶系統（405 檔，356K tokens），結論：不推薦獨立開發者（全量上雲 + 功能重疊 + 無團隊）；加入 Repo 整理索引表
+- `2026-05-30 | COMPILE | repomix HKUDS/LightRAG → wiki/Github/repos/HKUDSLightRAG.md` | 知識圖譜增強 RAG，5 種查詢模式，Gemini 支援，結論：補充 gbrain 專題問答（不取代）
+- `2026-05-30 | COMPILE | repomix rohitg00/ai-engineering-from-scratch → wiki/Github/repos/rohitg00ai-engineering-from-scratch.md` | 20 phase AI 工程課程，2722 檔，Phase 13–16（MCP/Agent/Claude Code Permission Modes/Swarm）最值得選讀
+- `2026-05-30 | COMPILE | repomix karpathy/autoresearch → wiki/Github/repos/karpathyautoresearch.md` | 8 檔案極小 repo，AI agent 自主做 LLM 訓練研究，結論：需 NVIDIA GPU，非日常工具；program.md skill 設計哲學值得借鑒
+- `2026-05-30 | COMPILE | repomix activeloopai/hivemind → wiki/Github/repos/activeloopaiHivemind.md` | 分析跨 Agent 共享記憶系統（405 檔，356K tokens），結論：不推薦獨立開發者（全量上雲 + 功能重疊 + 無團隊）；加入 Repo 整理索引表
 - `2026-05-30 | COMPILE | pip install liteparse → wiki/Tools/liteparse.md` | repomix 分析 run-llama/liteparse，建立工具文件（CLI/Python API/支援格式/使用場景）；同步新增 _index.md Tools 區塊，計數 149→150
 - `2026-05-30 | COMPILE | karpathy/autoresearch program.md → wiki/Claude/Karpathy program.md Skill 設計哲學.md` | 六個 agent 可靠工作原則，含品味量化 if-then、CAN/CANNOT、checkpoint 設計
 

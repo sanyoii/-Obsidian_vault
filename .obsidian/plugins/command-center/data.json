@@ -8,7 +8,7 @@
     "techorange": true,
     "techcrunch": true,
     "email": true,
-    "social": true,
+    "social": false,
     "fontSize": 14,
     "socialTopicCount": 5,
     "panelOrder": [
