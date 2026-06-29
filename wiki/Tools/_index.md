@@ -43,6 +43,7 @@ generated: 2026-06-29
 - [[Tools/ppt-master|ppt-master 評估與安裝紀錄]] — 唯一能輸出原生可編輯 PPTX 的 Claude Code Skill #AI #tools #skill #pptx #presentation #claude-code #python
 - [[Tools/repo-intel|repo-intel — 全方位 Repo 情報分析 Skill]] — 五引擎整合的 GitHub repo 繁中情報報告 #tool #skill #claude-code #repo-analysis
 - [[Tools/spec-kit|spec-kit — GitHub 官方 Spec-Driven Development 工具包]] — 不安裝，僅採用其 feature 目錄三文件模式 #tools #AI #development-workflow #spec-driven-development
+- [[Tools/Skills 觸發詞對照表|Skills 觸發詞對照表]] — 135 個 Skills 完整觸發詞清單，按 12 分類整理 #claude-code #skills #triggers #index
 - [[Tools/taste-skill|Taste Skill — Anti-Slop 前端設計 Skills]] — 5 個反 AI 濫調 UI 設計 Skills，封殺壞模式注入好規則
 - [[Tools/ToolFk 程式設計師線上工具箱|ToolFk 程式設計師線上工具箱]] — 37 個免費線上工具，格式化/加解密/轉換等 #tools #developer-tools #online-tools
 - [[Tools/README|Tools 工具索引]] — 手動維護的腳本索引表（舊版，由本頁取代） #tools #index

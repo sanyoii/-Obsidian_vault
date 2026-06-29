@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 113 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 114 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-06-29
@@ -48,6 +48,7 @@ tags: [github, index, repos]
 | [[Github/repos/Claude-BugHunter — Claude Code Bug Bounty Skill Bundle\|Claude-BugHunter]] | 📎 | 📌 | Bug Bounty Skills |
 | [[Github/repos/kevintsai1202teaching-site-skills 11 agent skills (Anthropic Skills format) — one `npx skills add` installs the full pipeline for building interactive teaching sites end-to-end on Claude Code  Codex  Antigravity  55+ AI coding agents. ｜ 11 個 age\|teaching-site-skills]] | 📎 | 📌 | 11 個教學網站 Skills |
 | [[Github/repos/marketingskills — AI Agent 行銷技能包\|marketingskills]] | 🔬 | ⏳ | 35K⭐ 45 行銷 Skills + 51 CLI；虛擬歌手場景選裝 10 個可用 |
+| [[Github/repos/huangwb8-skills — Claude Code Skill 開發流水線\|huangwb8/skills]] | 🔬 | ⏳ | 12 Skill 開發流水線 + auto-test + parallel-vibe |
 
 ---
 
@@ -104,7 +105,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🧰 開發工具 / CLI（9 篇）
+## 🧰 開發工具 / CLI（10 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -117,6 +118,7 @@ tags: [github, index, repos]
 | [[Github/repos/Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported)\|OpenClaw]] | 📎 | ✅ | 免費 Claude Code |
 | [[Github/repos/farion1231cc-switch A cross-platform desktop All-in-One assistant tool for Claude Code, Codex, OpenCode, openclaw & Gemini CLI\|cc-switch（桌面版）]] | 📎 | ⏳ | 跨平台模型切換 |
 | [[Github/repos/codebase-memory-mcp — 高效能程式碼知識圖譜 MCP 伺服器\|codebase-memory-mcp]] | 🔬 | ⏳ | 19.5K⭐ 158 語言知識圖譜 MCP |
+| [[Github/repos/free-for-dev — 開發者免費 SaaS 資源清單\|free-for-dev]] | 🔬 | 📌 | 126K⭐ 61 分類 1226 個免費 SaaS 服務清單 |
 
 ---
 
