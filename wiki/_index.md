@@ -1,7 +1,7 @@
-﻿# 知識庫主索引
+# 知識庫主索引
 
 > 最後更新：2026-06-28
-> 文章數量：173 篇
+> 文章數量：335 篇
 > 原始文件：持續累積中
 
 ---
@@ -116,7 +116,22 @@
 
 ## 如何新增知識
 
+依來源類型有三條進庫路徑：
+
+### 路徑 A — 文章 / 剪報 / PDF（走 /compile）
 1. 用 Obsidian Web Clipper 剪報 → 存到 `Clippings/` 或 `Inbox/`
 2. 手動將檔案移至 `raw/sources/`（或 NotebookLM 匯出放 `raw/notebooklm/`）
 3. 在 Claude Code 輸入 `/compile`
-4. 索引與 `log.md` 自動更新
+4. 索引、`log.md`、gbrain 語意層自動更新
+
+### 路徑 B — GitHub repo 分析（走 /repo-intel）
+1. 在 Claude Code 輸入 `/repo-intel <repo URL 或 owner/repo>`
+2. 直接寫入 `wiki/Github/repos/{標題}.md` 並更新 `wiki/Github/_index.md` 分類與計數
+3. **不經 raw/、不跑 /compile** — 所以新文章尚未進 gbrain 語意層
+
+### 路徑 C — 靈感速記（走 gbrain-inbox）
+1. 速記丟到 `Inbox/`
+2. 跑 `tools/gbrain-inbox.ps1` → import 進 gbrain 並移至 `wiki/Ideas/`
+
+> **gbrain 同步提醒**：只有路徑 A（/compile）和路徑 C 會即時進 gbrain。路徑 B（repo-intel）或任何手動新增的文章，要能被語意搜尋命中，需補跑一次 `/compile`，或手動 `gbrain import "d:\Claude\obsidian\wiki" --no-embed && gbrain embed --stale`。
+> 結構化導航（找特定文章/目錄）走 `_index.md` 即可，不受此限。詳見 `CLAUDE.md` 的「檢索分工」。

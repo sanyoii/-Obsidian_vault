@@ -50,6 +50,15 @@ raw/
 6. 更新 `wiki/_graph.md` 補充反向連結
 7. 在原始文件第一行加上 `<!-- processed: YYYY-MM-DD -->` 標記
 8. **在 `wiki/log.md` 追加一筆記錄**，格式：`YYYY-MM-DD HH:MM | COMPILE | 來源檔 → 產出文章` | 備註
+9. **索引刷新與 gbrain 同步（compile 收尾）：**
+   1. 執行 `scripts/refresh-index.ps1` 刷新各目錄 `_index.md` 與根索引計數
+   2. 腳本會在大目錄的 `_index.md` 留下 `<!-- desc: TODO -->` 佔位 → AI 逐筆填上一行繁中描述
+   3. 同步 gbrain（語意搜尋層，避免 drift）：
+      ```powershell
+      gbrain import "d:\Claude\obsidian\wiki" --no-embed
+      gbrain embed --stale
+      ```
+      gbrain 未啟動或指令不存在時跳過，不中止 compile。
 
 概念文章格式見 `wiki/concepts/_template.md`。
 
@@ -73,7 +82,8 @@ raw/
 2. 找出缺失資訊（文章中的 `TODO:` 或空白段落）
 3. 發現未連結的相關概念，在 `wiki/_graph.md` 補充建議連結
 4. 提出 3–5 個值得深入探索的問題，存至 `output/lint_<日期>.md`
-5. **在 `wiki/log.md` 追加一筆記錄**，格式：`YYYY-MM-DD HH:MM | LINT | wiki/ → output/lint_日期.md` | 發現問題摘要
+5. 執行 `scripts/refresh-index.ps1` 取得 drift 報告（索引宣稱數字 vs 實際檔案數），把不符的列入 `output/lint_<日期>.md`。並為檔案數較多的目錄（Tools / Claude / 水球流軟體設計模式精通之旅）的 `_index.md` 補上或潤飾「Connecting thread」段落——用一段話說明該目錄內文章之間的脈絡關係（這是 OKF/LLM Wiki 模式讓 AI 導航更快的關鍵）。
+6. **在 `wiki/log.md` 追加一筆記錄**，格式：`YYYY-MM-DD HH:MM | LINT | wiki/ → output/lint_日期.md` | 發現問題摘要
 
 ### `/morning` — 早報彙整
 執行 `scripts/morning-briefing.ps1`：
@@ -99,6 +109,23 @@ raw/
 3. `wiki/concepts/<相關文章>.md` — 深入閱讀
 4. `raw/notebooklm/<文件>` — 預先消化的筆記（compile 時優先讀）
 5. `raw/sources/<文件>` — 原始第一手資料（compile 時補充細節）
+
+---
+
+## 檢索分工（三層：Obsidian 寫 / gbrain 搜 / NotebookLM 深答）
+
+心智模型：三者是同一條知識流水線的三個工位。
+
+| 查詢類型 | 走哪裡 | 不要用 |
+|---|---|---|
+| 結構化導航（「X 在哪篇」「這目錄有什麼」「給我那份報告」） | Obsidian `_index` + glob | 別丟 gbrain |
+| 語意/模糊跨文章（「我記過關於 Y 的東西嗎」「相關概念」） | gbrain 語意搜尋（含 wiki 外的課程影片/repo 語料） | — |
+| 接地深答（「根據我的行程/復健/履歷資料，要引用、不能唬爛」） | NotebookLM（引文接地最強，對齊「不唬爛」原則） | — |
+| wiki 沒有的新知識 | NotebookLM 線上擴充 → 回流 `raw/notebooklm/` | — |
+
+**何時建議新開 NotebookLM notebook（而非塞 wiki/gbrain）：** 主題有界 + 會反覆精確問答 + 錯了有代價（如特定公司深度研究、重要醫療決策資料）。多數零散主題留 gbrain 即可；現有 5 個 notebook 是精選不是上限（平台可開約 100 個）。
+
+**閉環說明：** NotebookLM 答案 → `raw/notebooklm/` → 下次 `/compile` 進 wiki → gbrain re-index。`/query` 已有前半段。
 
 ---
 
