@@ -6,14 +6,14 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 109 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 113 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-06-28
+> 最後更新：2026-06-29
 
 ---
 
-## 🤖 AI Agent 框架（7 篇）
+## 🤖 AI Agent 框架（8 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -23,6 +23,7 @@ tags: [github, index, repos]
 | [[Github/repos/crewAIInccrewAI Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks\|CrewAI]] | 📎 | ⏳ | 角色扮演 Agents 框架 |
 | [[Github/repos/langchain-ailanggraph Build resilient language agents as graphs. Available in TypeScript!\|LangGraph]] | 📎 | ⏳ | Graph-based Agent 框架 |
 | [[Github/repos/datawhalechinahello-agents 📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程\|hello-agents]] | 📎 | 📌 | 中文智能體教程 |
+| [[Github/repos/Threads 推薦工具型 Repo 六選\|工具型 Repo 六選]] | 🔬 | 📌 | OpenHands/Continue/LangChain/n8n/awesome-selfhosted/awesome-claude-code |
 | [[Github/repos/From idea to AI MCP tools —APIs that power your workflow.快速串接、即時上手，為你的程式或 AI Agent 裝載超能力。支援各 AI Agent 與自動化主流平台，無需部署。\|Superior APIs]] | 📎 | 📌 | MCP 工具 API 平台 |
 
 ---
@@ -103,7 +104,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🧰 開發工具 / CLI（8 篇）
+## 🧰 開發工具 / CLI（9 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -115,6 +116,7 @@ tags: [github, index, repos]
 | [[Github/repos/issue_tmp — GitHub Issue  PR 模板套件\|issue_tmp]] | 📎 | ⏳ | 繁中 Issue/PR 模板 |
 | [[Github/repos/Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported)\|OpenClaw]] | 📎 | ✅ | 免費 Claude Code |
 | [[Github/repos/farion1231cc-switch A cross-platform desktop All-in-One assistant tool for Claude Code, Codex, OpenCode, openclaw & Gemini CLI\|cc-switch（桌面版）]] | 📎 | ⏳ | 跨平台模型切換 |
+| [[Github/repos/codebase-memory-mcp — 高效能程式碼知識圖譜 MCP 伺服器\|codebase-memory-mcp]] | 🔬 | ⏳ | 19.5K⭐ 158 語言知識圖譜 MCP |
 
 ---
 
@@ -143,7 +145,7 @@ tags: [github, index, repos]
 
 ---
 
-## 📚 學習 / 教程 / RAG（8 篇）
+## 📚 學習 / 教程 / RAG（10 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -155,6 +157,8 @@ tags: [github, index, repos]
 | [[Github/repos/karpathyautoresearch — AI Agent 自主 LLM 訓練研究框架\|autoresearch]] | 📎 | ⏳ | Karpathy 自主研究 |
 | [[Github/repos/awesome-agentic-ai-zh — 繁中 AI Agent 學習地圖\|awesome-agentic-ai-zh]] | 📎 | 📌 | 繁中 AI Agent 地圖 |
 | [[Github/repos/easychenopc-methodology 《一人企业方法论》第二版，也适合做其他副业（比如自媒体、电商、数字商品）的非技术人群\|一人企業方法論]] | 📎 | 📌 | 副業經營方法論 |
+| [[Github/repos/developer-roadmap — 互動式開發者職涯路線圖\|developer-roadmap]] | 🔬 | 📌 | 359K⭐ 18+ 職涯路線圖（含 QA） |
+| [[Github/repos/經典學習資源 Mega-Repo 合輯\|Mega-Repo 合輯]] | 🔬 | 📌 | build-your-own-x/awesome/freeCodeCamp 等 6 個 |
 
 ---
 
