@@ -48,6 +48,9 @@
 - `2026-06-20 00:10 | COMPILE | github.com/tw93/Pake → wiki/Github/repos/tw93-Pake.md` | Rust+Tauri 一行指令網頁→桌面 App（~5MB），Electron 極輕量替代品，35K+ stars，MIT
 - `2026-06-20 01:00 | COMPILE | claude-tools-dashboard.html → 新增 CLI 工具頁籤` | 10 個全域 CLI 工具（claude-code/codex/gemini-cli/openclaw/claude-code-router/repomix/defuddle/pake-cli/openspec/pnpm），粉紅色邊框卡片；同步 revert Obsidian Command Center 誤改
 
+### 2026-06-30 | COMPILE
+- `2026-06-30 00:00 | COMPILE | wiki/水球流軟體設計模式精通之旅/ → wiki/_index.md + wiki/_summaries.md + wiki/_graph.md` | 補登 2026-06-29 新增 4 篇文章（代理人模式/複合模式/單體模式/抽象工廠）至主索引、摘要與連結圖；Christopher Alexander RPG 道館挑戰原始剪報編譯為正式 wiki 文章（Forces/Problem/Pattern 結構）
+
 ---
 
 ## 2026-05

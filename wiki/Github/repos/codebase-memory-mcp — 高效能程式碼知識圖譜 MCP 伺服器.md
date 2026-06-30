@@ -146,11 +146,11 @@ tags:
 
 ### 與現有系統的相關性評估
 
-| 面向 | 評估 |
-|------|------|
-| **Obsidian Vault** | 低直接關聯。但索引結果可作為程式碼筆記的結構化來源，搭配 `/query` 提供程式碼架構知識 |
-| **Claude Code** | ⭐ **高度相關**。直接作為 MCP server 整合，提供 14 個工具替代 Grep/Glob 搜尋，大幅減少 token 消耗。與現有的 codegraph MCP 功能有重疊但定位不同：codegraph 是檔案級索引，codebase-memory-mcp 是函式/類別級知識圖譜 + Cypher 查詢 + 語意搜尋 |
-| **Automation** | 中度相關。CLI 模式可整合進腳本（`codebase-memory-mcp cli search_graph ...`）；Team-shared artifact 適合 CI/CD 加速 |
+| 面向                 | 評估                                                                                                                                                                     |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Obsidian Vault** | 低直接關聯。但索引結果可作為程式碼筆記的結構化來源，搭配 `/query` 提供程式碼架構知識                                                                                                                        |
+| **Claude Code**    | ⭐ **高度相關**。直接作為 MCP server 整合，提供 14 個工具替代 Grep/Glob 搜尋，大幅減少 token 消耗。與現有的 codegraph MCP 功能有重疊但定位不同：codegraph 是檔案級索引，codebase-memory-mcp 是函式/類別級知識圖譜 + Cypher 查詢 + 語意搜尋 |
+| **Automation**     | 中度相關。CLI 模式可整合進腳本（`codebase-memory-mcp cli search_graph ...`）；Team-shared artifact 適合 CI/CD 加速                                                                         |
 
 ---
 
