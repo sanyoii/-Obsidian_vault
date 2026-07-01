@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 114 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 122 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-06-29
+> 最後更新：2026-06-30
 
 ---
 
@@ -28,7 +28,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（16 篇）
+## 🛠️ Claude Code / Skills（17 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -43,16 +43,23 @@ tags: [github, index, repos]
 | [[Github/repos/GPT-Prompt-HubCLAUDE.md at main\|GPT-Prompt-Hub]] | 📎 | 📌 | 222 個結構化 Prompts |
 | [[Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools\|x1xhlol/system-prompts]] | 📎 | ✅ | 30+ 工具真實 system prompt |
 | [[Github/repos/anthropicsknowledge-work-plugins\|knowledge-work-plugins]] | 📎 | ⏳ | Anthropic 官方 plugins |
+| [[Github/repos/anthropics-claude-plugins-official — Anthropic 官方 Claude Code Plugin 目錄\|claude-plugins-official]] | 🔬 | ✅ | 31K⭐ claude-md-management：6維評分稽核 + /revise-claude-md |
 | [[Github/repos/firecrawlfirecrawl — 網頁爬取轉 Markdown SaaS 平台\|firecrawl]] | 📎 | ✅ | 網頁爬取 Skills（5 個）|
 | [[Github/repos/firecrawlskills — Firecrawl Claude Code Skills 分析\|firecrawl-skills 分析]] | 📎 | ✅ | Firecrawl Skills 技術分析 |
 | [[Github/repos/Claude-BugHunter — Claude Code Bug Bounty Skill Bundle\|Claude-BugHunter]] | 📎 | 📌 | Bug Bounty Skills |
 | [[Github/repos/kevintsai1202teaching-site-skills 11 agent skills (Anthropic Skills format) — one `npx skills add` installs the full pipeline for building interactive teaching sites end-to-end on Claude Code  Codex  Antigravity  55+ AI coding agents. ｜ 11 個 age\|teaching-site-skills]] | 📎 | 📌 | 11 個教學網站 Skills |
+| [[Github/repos/sickn33-antigravity-awesome-skills — 1700+ Agentic Skills 多工具安裝庫\|antigravity-awesome-skills]] | 🔬 | ⏳ | 42K⭐ 1,700+ skills；14 Specialized Plugin；npx 一鍵裝 |
+| [[Github/repos/f-prompts.chat — 全球最大開源 AI Prompt 庫 + Claude Code 插件\|f/prompts.chat]] | 🔬 | ⏳ | 164K⭐ 全球最大 Prompt 庫；MCP + 2 指令 + 2 Agents；免費搜尋 |
+| [[Github/repos/wshobson-agents python-development — Python 3.12+ 全棧開發 Plugin（3 Agent + 16 Skill + 1 指令）\|wshobson/python-dev]] | 🔬 | ✅ | 37K⭐ python-pro(Opus)+django+fastapi；16 Skills；/python-scaffold |
 | [[Github/repos/marketingskills — AI Agent 行銷技能包\|marketingskills]] | 🔬 | ⏳ | 35K⭐ 45 行銷 Skills + 51 CLI；虛擬歌手場景選裝 10 個可用 |
 | [[Github/repos/huangwb8-skills — Claude Code Skill 開發流水線\|huangwb8/skills]] | 🔬 | ⏳ | 12 Skill 開發流水線 + auto-test + parallel-vibe |
+| [[Github/repos/JuliusBrussee-caveman — 用穴居人語法削減 65% output token\|caveman]] | 🔬 | ✅ | 78K⭐ 7 Skills + cavecrew 3-subagent；削 65% output token |
+| [[Github/repos/eugeniughelbur-obsidian-second-brain — Vault-first 研究與 Obsidian 架構筆記系統\|obsidian-second-brain]] | 🔬 | ✅ | 1.9K⭐ /research+/research-deep+/obsidian-architect；free+Perplexity paid |
+| [[Github/repos/thedotmack-claude-mem — 85K⭐ 跨 Session 持久記憶\|claude-mem]] | 🔬 | ✅ | 85K⭐ SQLite+ChromaDB；worker 自 2026-05 運行；claude-mem@thedotmack plugin |
 
 ---
 
-## 🔮 命理（八字 / 紫微 / 人類圖 / 占星）（9 篇）
+## 🔮 命理（八字 / 紫微 / 人類圖 / 占星）（10 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -65,6 +72,7 @@ tags: [github, index, repos]
 | [[Github/repos/Renhuai123ziwei-doushu — 倪海夏天紀體系紫微斗數引擎\|ziwei-doushu（倪海夏）]] | 🔬 | 📌 | 天紀體系排盤 |
 | [[Github/repos/ruijayfengziwei — 現代化紫微斗數命盤分析工具\|紫微知道]] | 📎 | 📌 | 現代化紫微 |
 | [[Github/repos/Madison-de-Chao-rainbow-sanctuary-report-site — 命理解讀報告銷售落地頁\|Rainbow Sanctuary]] | 📎 | 📌 | 命理報告落地頁模板 |
+| [[Github/repos/zhenheco-life-chart-engine — 三合一原生排盤引擎（西洋星盤×人類圖×紫微斗數）\|life-chart-engine]] | 🔬 | ✅ | 三系統 deterministic 引擎；astronomy-engine+iztro；CLI+JSON 供 agent；對口 hd-decode/ziwei/fate |
 
 ---
 

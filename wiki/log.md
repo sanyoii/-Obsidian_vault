@@ -51,6 +51,11 @@
 ### 2026-06-30 | COMPILE
 - `2026-06-30 00:00 | COMPILE | wiki/水球流軟體設計模式精通之旅/ → wiki/_index.md + wiki/_summaries.md + wiki/_graph.md` | 補登 2026-06-29 新增 4 篇文章（代理人模式/複合模式/單體模式/抽象工廠）至主索引、摘要與連結圖；Christopher Alexander RPG 道館挑戰原始剪報編譯為正式 wiki 文章（Forces/Problem/Pattern 結構）
 
+## 2026-07
+
+### 2026-07-01 | COMPILE
+- `2026-07-01 01:55 | COMPILE | active/life-chart-engine 安裝實測 → wiki/Github/repos/zhenheco-life-chart-engine — 三合一原生排盤引擎（西洋星盤×人類圖×紫微斗數）.md` | 補「安裝後更新」章節：發現並本地修正人類圖 OFFSET 計算 bug（與 GitHub issue #4 獨立交叉驗證一致）、衍生 tri-system-life-reading Claude Code skill
+
 ---
 
 ## 2026-05

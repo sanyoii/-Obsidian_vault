@@ -1,48 +1,28 @@
 [
   {
-    "from": "Vélonecy 60 minutes",
-    "subject": "[Vélonecy 60 minutes] Nous avons bien reçu votre demande",
+    "from": "Facebook Security",
+    "subject": "安全警告：Annecy 附近有新裝置登入",
     "importance": "High",
     "todos": [
-      "確認 Vélonecy 是否已回覆 ticket #854488（24小時期限今天到期）",
-      "若今日尚未收到回覆，可致電 09 74 99 47 16（週一至五 8h-20h，週末 10h-18h30）跟進"
+      "確認是否為本人在 Annecy, France 透過 Facebook for iPhone 登入（前一天有 Vélonecy 行程，應為本人）",
+      "若非本人，立即點擊郵件中「這不是我本人」鏈結保護帳號"
     ],
-    "time": "yesterday"
+    "time": "20:51"
   },
   {
-    "from": "Vélonecy 60 minutes",
-    "subject": "[Vélonecy 60 minutes] Following your feedback",
+    "from": "MUJI 無印良品",
+    "subject": "紅利點數 3 點將於 2026/07/02 到期",
     "importance": "Medium",
     "todos": [
-      "等待 Camille 處理 ticket #853991（已提供姓名、電話、Email、生日）",
-      "確認帳號驗證碼是否已被手動更改、能否成功建立帳號"
+      "07/02 前前往 shop.muji.tw 使用 3 點紅利點數"
     ],
-    "time": "yesterday"
-  },
-  {
-    "from": "Indeed",
-    "subject": "伊原力科技 的 HR Product Manager & HR Manager。另外 9 個遠端職缺",
-    "importance": "Medium",
-    "todos": [
-      "查看 Indeed 推薦的 10 個 HR 相關職缺（含伊原力科技 HR Product Manager）"
-    ],
-    "time": "yesterday"
-  },
-  {
-    "from": "Allocab",
-    "subject": "How was your trip R6736497409572864?",
-    "importance": "Low",
-    "todos": [
-      "下載行程發票 PDF（2026PASS56142.pdf）",
-      "若有意願，填寫行程評價"
-    ],
-    "time": "yesterday"
+    "time": "19:07"
   },
   {
     "from": "國泰世華銀行",
-    "subject": "CUBE App轉帳通知",
+    "subject": "CUBE App登入成功通知",
     "importance": "Low",
     "todos": [],
-    "time": "yesterday"
+    "time": "19:39"
   }
 ]
