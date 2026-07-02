@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 122 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 123 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-06-30
+> 最後更新：2026-07-02
 
 ---
 
@@ -143,7 +143,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🎨 設計 / UI / 前端（5 篇）
+## 🎨 設計 / UI / 前端（6 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -152,6 +152,7 @@ tags: [github, index, repos]
 | [[Github/repos/Stop-slop 寫作去除AI腔\|Stop-slop]] | 📎 | ✅ | 去 AI 腔寫作 |
 | [[Github/repos/akseolabs-seocinematic-ui A reasoning-first cinematic web design skill. Makes AI think like a film director — research a real film, extract its visual language, translate it into page narrative and composition. Not a style picker. A director's w\|cinematic-ui]] | 📎 | 📌 | 電影導演思維 Web 設計 |
 | [[Github/repos/不會設計也能做出專業級 App Store 截圖：一個 AI 驅動的截圖產生器\|App Store 截圖生成器]] | 📎 | 📌 | AI 截圖生成 |
+| [[Github/repos/latentbox — AI 創意藝術精選資源導航站\|latentbox]] | 🔬 | ❌ | 2.2K⭐ AI/創意/藝術精選資源站；CC BY-NC-ND 禁衍生，僅供瀏覽參考 |
 
 ---
 

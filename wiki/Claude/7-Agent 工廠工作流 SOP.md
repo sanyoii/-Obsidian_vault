@@ -1,6 +1,6 @@
 # 7-Agent 工廠工作流 SOP
 
-> 最後更新：2026-07-02（v5：對照原型文章補強——tools 白名單、pre-commit secret hook、schema 補欄）
+> 最後更新：2026-07-02（v6：接軌制度層——各 agent 模型指定、loop-back 模型升級、與 docs/institution/ 分工）
 > 適用：需要開發新功能、新工具、新系統時的標準 Agent 分工流程
 
 ---
@@ -280,6 +280,15 @@ agents/
 - 已知限制：`.env.local` 等變體不攔（目前只攔字面 `.env`）
 
 ---
+
+## v6 接軌制度層（2026-07-02，同日第二批）
+
+制度層 `d:\Claude\docs\institution\`（六檔：診斷/模型調度/判斷rubrics/派工模板/維護協議/交接信）建立後，工廠與其接軌：
+
+- **模型指定表**（ORCHESTRATION.md）：researcher～test-verifier 六個 agent → `sonnet`；validator → `opus`（驗收模型 ≥ 執行模型）
+- **Loop-back 模型升級**：baton `attempt: 2` 重派同一 agent 時升 `opus` + 附完整失敗軌跡；比 institution/01 §5（連錯兩次）更早升是刻意的——loop-back 失敗經過 test-verifier 驗證，是確證失敗
+- **分工邊界**：ROUTER 決定進不進工廠（direct 模式仍受 institution/01 不下場清單約束，中途發現跨棧要改道重路由）；institution/01 決定每次派工的模型；baton 是工廠內的回報合約實作，工廠外用 institution/03 模板
+- CLAUDE.md 同日重寫為 91 行路由層，工廠相關規則入口不變（`workflow/ROUTER.md` / `ORCHESTRATION.md`）
 
 ## v5 升級紀錄（2026-07-02）
 

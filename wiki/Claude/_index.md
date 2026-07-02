@@ -7,10 +7,11 @@ generated: 2026-06-29
 # Claude 索引
 
 > 此檔由 refresh-index.ps1 自動生成；描述由 AI 補（保留既有描述，不會被洗回）
-> 檔案數：16 篇
+> 檔案數：17 篇
 
 - [[Claude/18個改變一切的 Claude Code Settings|18 個改變一切的 Claude Code Settings]] — 實際套用的 settings.json 進階設定與說明
 - [[Claude/7-Agent 工廠工作流 SOP|7-Agent 工廠工作流 SOP]] — 七步 Agent 分工流程，研究→規格→開發→測試→驗收
+- [[Claude/制度層 docs-institution — 弱模型治理文件|制度層 docs-institution — 弱模型治理文件]] — Fable 5 建立的六檔治理層：模型調度/判斷rubrics/派工模板/維護協議 #claude-code #institution #governance
 - [[Claude/開發常用指令|開發常用指令]] — /compact、/clear 等日常 CLI 指令速查與 API key
 - [[Claude/--重要--新 Idea 新專案 SOP|新 Idea / 新專案 SOP]] — 從 Inbox 捕捉到工廠開發的完整 5 階段流程
 - [[Claude/Claude 工具全覽（2026）|Claude 工具全覽（2026）]] — 所有已安裝程式、MCP、Skills 的總清單 #claude #tools #reference
