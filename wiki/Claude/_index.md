@@ -16,8 +16,8 @@ generated: 2026-06-29
 - [[Claude/--重要--新 Idea 新專案 SOP|新 Idea / 新專案 SOP]] — 從 Inbox 捕捉到工廠開發的完整 5 階段流程
 - [[Claude/Claude 工具全覽（2026）|Claude 工具全覽（2026）]] — 所有已安裝程式、MCP、Skills 的總清單 #claude #tools #reference
 - [[Claude/Claude 重要觀念|Claude 重要觀念]] — stop_reason、pre-fill、system prompt 等 API 核心觀念
-- [[Claude/Claude 環境說明|Claude 環境說明]] — 換電腦恢復步驟、135 Skills 備份與安裝全紀錄
-- [[Claude/Claude Code Skills 使用手冊|Claude Code Skills 使用手冊]] — 143 個 Skills 按使用情境分類的觸發詞速查
+- [[Claude/Claude 環境說明|Claude 環境說明]] — 換電腦恢復步驟、135 Skills 備份與安裝全紀錄（2026-06-04 快照，count 已過時，現況見 [[Tools/Skills 觸發詞對照表]]）
+- [[Claude/Claude Code Skills 使用手冊|Claude Code Skills 使用手冊]] — 143 個 Skills 按使用情境分類的觸發詞速查（2026-06-04 快照，count 已過時）
 - [[Claude/Command Center Plugin — Obsidian 指揮中心|Command Center Plugin — Obsidian 指揮中心]] — Ribbon 快速按鈕 + Dashboard Tab 即時資訊面板
 - [[Claude/Claude環境操作手冊|D:\Claude 環境操作手冊]] — D:\Claude 目錄結構、子專案、還原腳本操作指南
 - [[Claude/ECC|ECC — Everything Claude Code]] — Hackathon 得獎跨工具 Operator 系統，246 skills + 61 agents #工具 #Claude #AI #外部資源

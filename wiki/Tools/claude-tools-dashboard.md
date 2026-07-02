@@ -10,7 +10,7 @@ status: in-progress
 ## 動機
 
 工具散落在多處，沒有統一入口：
-- **Skills**：151 個目錄，backup 在 `d:\Claude\.claude\skills\`，active 在 `C:\Users\sanyo\.claude\skills\`
+- **Skills**：55 個 user-level 目錄（2026-07-03 skills diet 147→55 瘦身後），backup 在 `d:\Claude\.claude\skills\`，active 在 `C:\Users\sanyo\.claude\skills\`；另有 plugin/marketplace 提供的 namespaced skills 不算在此數字內
 - **Agents**：107 個，分 8 類，雙份同步
 - **Apps**：ppt-master、ziwei、job-crawler、careerbot 等散落各目錄
 - **Scripts**：Python/PowerShell 分散在 `tools\`、各 skill 目錄、各專案
@@ -27,29 +27,31 @@ status: in-progress
 - 每個 Skill 卡片：名稱、描述、觸發指令（可複製）、標籤
 - 深色主題（`#0f0f11` 背景，`#7c6af7` accent）
 
-**Skills 分類**（20 類，共 143 個）：
-| 分類 | 代表 Skills |
-|------|-------------|
-| 📝 文件生成 | pdf, docx, pptx, xlsx |
-| 🎞 投影片 | html-ppt, guizang-ppt, deck-ai-classroom, GordenPPTSkill |
-| 🎨 設計視覺 | huashu-design, web-design-engineer, algorithmic-art |
-| 🔧 開發工具 | claude-api, gemini-api, context7-mcp, mcp-builder |
-| 🐛 除錯品質 | systematic-debugging, diagnose, recursive-debugging |
-| ✅ TDD | tdd, test-driven-development, recursive-tdd |
-| 📋 規劃管理 | make-plan, writing-plans, triage |
-| 👥 Code Review | code-review, requesting-code-review |
-| 🤖 Subagent | sparc, subagent-driven-development, recursive-mode |
-| 🔀 Git | using-git-worktrees, contextual-commit, version-bump |
-| 🧠 記憶知識 | agent-memory, continuous-learning-v2 |
-| 📓 Obsidian | obsidian-bases, obsidian-cli |
-| 🔮 術數命理 | bazi, qimen-dunjia, ziwei-doushu |
-| ☁️ Google Cloud | cloud-run-basics, bigquery-basics, gke-basics |
-| ⚡ 效率輸出 | do, understand 系列, find-skills |
-| 📚 知識查詢 | context7-mcp, grill-me, notebooklm-skill |
-| 💬 溝通品牌 | brand-guidelines, resume-architect |
-| ✍️ 寫作品質 | writing-skills, stop-slop, karpathy-guidelines |
-| 🛠 Meta Skills | skill-creator, book-to-skill, nuwa-skill |
-| 🖼 AI 圖生成 | gpt-image-2, excalidraw-diagram, mermaid-visualizer |
+**Skills 分類**（20 類，共 124 個，2026-07-03 skills diet 後更新；SDLC全流程/代碼分析/自動補錄/QA自動化 為 plugin 提供，不計入 55 個 user-level 目錄數）：
+| 分類 | 數量 | 代表 Skills |
+|------|------|-------------|
+| 📝 文件生成 | 4 | pdf, docx, pptx, xlsx |
+| 🎞 投影片 | 2 | guizang-ppt, deck-ai-classroom |
+| 🎨 設計視覺 | 6 | frontend-design, ui-ux-pro-max, design-fetch |
+| 🔧 開發工具 | 8 | gemini-api, repo-intel, defuddle |
+| ☁️ Google Cloud | 11 | cloud-run-basics, bigquery-basics, gke-basics |
+| 🐛 除錯品質 | 10 | systematic-debugging, diagnose, agent-hygiene |
+| ✅ 測試 TDD | 3 | tdd, test-driven-development, recursive-tdd |
+| 🧪 QA 自動化 | 8 | e2e-testing-patterns, playwright-skill, browser-automation |
+| 📋 規劃管理 | 9 | writing-plans, executing-plans, triage |
+| 🤖 Subagent 流程 | 1 | subagent-driven-development |
+| 🔀 Git 工作流 | 2 | using-git-worktrees, version-bump |
+| 🧠 記憶知識 | 8 | mem-search, last-word, session-close |
+| 📓 Obsidian 整合 | 4 | obsidian-markdown, obsidian-cli, obsidian-bases |
+| 🔮 術數命理 | 3 | qimen-dunjia, ziwei-doushu, four-system-life-reading |
+| ⚡ 效率輸出 | 1 | caveman |
+| 💬 溝通品牌 | 2 | resume-architect, resume-pdf-optimize |
+| 🛠 Meta Skills | 6 | ssc, skill-creator, audit-skill |
+| 🔍 代碼分析 | 2 | termdock-ast, termdock-terminal-api |
+| 🏭 SDLC全流程 | 28 | spec-driven-development, ponytail, code-review-and-quality |
+| 🆕 自動補錄 | 6 | design-taste-frontend, high-end-visual-design, minimalist-ui |
+
+> 👥 Code Review 分類已於 2026-07-03 撤除（requesting/receiving-code-review、recursive-review-bundle 三個 skill 皆已從 user-level 移除，無 plugin 對應版）。
 
 **CLI 工具頁籤**（粉紅色邊框卡片，共 10 個全域 CLI 工具）：
 
