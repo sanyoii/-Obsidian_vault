@@ -1,8 +1,10 @@
 ---
 source: "https://github.com/Panniantong/Agent-Reach"
 author: "Panniantong (Neo Reid)"
-version: "1.4.0"
+version: "1.5.0"
+stars: "48K+"
 clipped: 2026-06-06
+updated: 2026-07-02
 tags:
   - "github/repo"
   - "skills"
@@ -14,13 +16,14 @@ tags:
 
 # Agent Reach — AI Agent 互聯網感知層
 
-> 一句話安裝指令，讓 AI Agent 同時讀懂 17 個平台：網頁、YouTube、Twitter、Reddit、小紅書、B站、微博、V2EX、雪球……零配置 8 個頻道，Cookie 解鎖其餘。
+> 一句話安裝指令，讓 AI Agent 同時讀懂 15 個平台：網頁、YouTube、Twitter、Reddit、小紅書、B站、LinkedIn、V2EX、雪球……零配置 6 個頻道，Cookie/OpenCLI 解鎖其餘。
 
 **Repo：** https://github.com/Panniantong/Agent-Reach  
-**版本：** 1.4.0  
+**版本：** 1.5.0（2026-06-11，「能力层:多后端路由 + 真体检 + OpenCLI」）  
 **作者：** Panniantong（Neo Reid）  
 **授權：** MIT  
-**規模：** 80 個檔案，Python 3.10+
+**規模：** 89 個檔案，126,913 tokens，Python 3.10+  
+**社群：** ⭐ 48,847 · 🍴 3,889（2026-07-02 起 GitHub Trending #1，成長爆發）
 
 ---
 
@@ -86,34 +89,38 @@ C:\Python314\python.exe -m pip install -e d:\Claude\tools\agent-reach
 agent-reach doctor
 ```
 
-## 安裝狀態（2026-06-06）
+## 安裝狀態（2026-07-02 更新後，13/15 可用）
 
 **Skill 路徑：**
 - Claude Code skill：`C:\Users\sanyo\.claude\skills\agent-reach\`
 - Agent skill：`C:\Users\sanyo\.agents\skills\agent-reach\`
-- 原始碼：`d:\Claude\tools\agent-reach\`
+- 原始碼：`d:\Claude\tools\agent-reach\`（git clone，editable install，已 pull 到 v1.5.0）
 
-**頻道狀態（4/16 可用）：**
+**頻道狀態：**
 
 | 頻道 | 狀態 | 說明 |
 |------|------|------|
 | GitHub | ✅ | gh CLI 完整可用 |
 | V2EX | ✅ | 公開 API |
 | RSS/Atom | ✅ | feedparser |
-| 任意網頁 | ✅ | Jina Reader（`curl https://r.jina.ai/URL`）|
-| YouTube | ⚠️ | yt-dlp 已裝，PATH 未含 Scripts 目錄 |
-| Reddit | ⚠️ | rdt-cli 0.4.1 已裝，需 `rdt login` 登入 |
-| 全網語意搜尋 | ❌ | 需 `npm install -g mcporter`（npm 安裝失敗）|
-| 微信公眾號 | ❌ | 需 mcporter + Exa MCP |
+| 任意網頁 | ✅ | Jina Reader |
+| YouTube | ✅ | yt-dlp + `--js-runtimes node`（已修復） |
+| 全網語意搜尋 | ✅ | mcporter + Exa MCP（免 Key） |
+| Twitter / Reddit / Facebook / Instagram / B站 / 小紅書 | ✅ | OpenCLI（Chrome 擴充已裝，複用瀏覽器登入態） |
+| LinkedIn | ✅ | linkedin-scraper-mcp（隨 OpenCLI 一起通） |
+| 雪球 | ⚠️ 待辦 | `agent-reach configure --from-browser chrome` 讀 Chrome cookie 失敗（一般權限被拒，需系統管理員權限 + 關閉 Chrome 才能重跑），或改用 Cookie-Editor 手動匯出 |
+| 小宇宙播客 | ❌ 待辦 | 需裝 ffmpeg（音訊轉碼切片），指令：`apt install -y ffmpeg`（Linux）/ 對應 Windows 安裝方式待確認 |
 
-**可選頻道（尚未設定）：** Twitter/X、B站、小紅書、微博、小宇宙、雪球、抖音、LinkedIn
+---
 
-**後續擴充（按需配置）：**
-```
-告訴 Agent「帮我配 Twitter」  → 需 Cookie-Editor 匯出
-告訴 Agent「帮我配微博热搜」  → 零設定（公開 API）
-告訴 Agent「帮我配雪球」      → 需 Cookie-Editor 匯出
-```
+## 更新記錄（2026-07-02 repo-intel 複查）
+
+- 星數從安裝時（2026-06-06，尚未記錄）暴增至 48.8K，登上 GitHub Trending #1；近 4 週 commit 35→5→1→3，爆紅後明顯降溫但 release 仍密集（v1.3.0→v1.5.0）
+- 平台數從 README 記載的「17」收斂為「15」，微信公眾號、微博兩個頻道在最新 README 中已不再列出（可能整併或下線，需實測確認）
+- B站後端已從 yt-dlp 切換為 bili-cli（2026-06 實測：yt-dlp 被 B站風控 412 封死）
+- Open Issues 51 / Open PRs 68，PR 積壓略多，社群貢獻踴躍但合併速度可能跟不上
+- **2026-07-02 已完成更新**：v1.4.0 → v1.5.0，並補裝 Exa/LinkedIn/OpenCLI（Twitter/Reddit/Facebook/Instagram/B站/小紅書），頻道可用數 4/16 → 13/15
+- **待辦（僅剩兩項，皆需人工操作）：** 雪球需管理員權限重跑 cookie 匯出；小宇宙播客需裝 ffmpeg
 
 ---
 

@@ -1,6 +1,6 @@
 # 7-Agent 工廠工作流 SOP
 
-> 最後更新：2026-06-11（v4：補 Step 0 路由 ROUTER.md + 執行機制 ORCHESTRATION.md）
+> 最後更新：2026-07-02（v5：對照原型文章補強——tools 白名單、pre-commit secret hook、schema 補欄）
 > 適用：需要開發新功能、新工具、新系統時的標準 Agent 分工流程
 
 ---
@@ -64,13 +64,28 @@
 
 | Agent | 職責 | 輸出 | 不做什麼 |
 |-------|------|------|---------|
-| `researcher` | 背景調研、技術可行性、競品 | 研究摘要 + 關鍵決策點 | 不寫程式 |
-| `story-writer` | 整理 User Story + 驗收條件 | User Stories 清單 | 不做技術規格 |
-| `spec-writer` | API 合約、資料模型、分工邊界、PR 切分規劃 | 技術規格文件 + `pr-split.md` | 不實作 |
-| `backend-builder` | 後端 API、DB、商業邏輯 | 後端程式碼 + unit tests | 不碰前端 |
-| `frontend-builder` | UI 元件、路由、串 API | 前端程式碼 + UI 正常 | 不碰後端 |
+| `researcher` | 背景調研、技術可行性、競品、**codebase 掃描**（相關檔案/既有模式/類似功能） | 研究摘要 + 關鍵決策點 | 不寫程式 |
+| `story-writer` | 整理 User Story + 驗收條件 + **不在範圍內/未解問題**（不猜，列給人工回答） | User Stories 清單 | 不做技術規格 |
+| `spec-writer` | API 合約、資料模型、分工邊界、PR 切分規劃、**預計改動檔案清單** | 技術規格文件 + `pr-split.md` | 不實作 |
+| `backend-builder` | 後端 API、DB、商業邏輯 | 後端程式碼 + unit tests + **CLAUDE.md 規則建議** | 不碰前端 |
+| `frontend-builder` | UI 元件、路由、串 API | 前端程式碼 + UI 正常 + **CLAUDE.md 規則建議** | 不碰後端；**API 與 spec 不符 → 回報，不自行打補丁** |
 | `test-verifier` | 整合測試、E2E、驗收條件逐一確認 | 測試報告 + Bug 清單 | 不寫新功能 |
-| `validator` | Code review、安全檢查、PR 準備 | 品質報告 + PR 描述 | 不加新功能 |
+| `validator` | Code review、安全檢查、**範圍檢查**（git status 對照預計改動清單）、PR 準備 | 品質報告 + PR 描述 | 不加新功能 |
+
+### 工具白名單（v5，硬邊界）
+
+「只讀」約束從指令文字升級為 frontmatter `tools:` 硬限制：
+
+| Agent | 白名單 |
+|-------|--------|
+| `researcher` | Read, Grep, Glob, Write, WebSearch, WebFetch |
+| `story-writer` | Read, Grep, Glob, Write |
+| `spec-writer` | Read, Grep, Glob, Write, Bash |
+| `test-verifier` | Read, Grep, Glob, Write, Edit, Bash |
+| `validator` | Read, Grep, Glob, Bash（**無 Write** → baton 由 orchestrator 代寫） |
+| `backend/frontend-builder` | 不限制（需完整編輯能力） |
+
+Write 保留給 baton.md 與 specs/ 輸出；路徑級限制（如只能寫測試檔）需 PreToolUse hook，複雜度不成比例，未採用。
 
 ---
 
@@ -116,13 +131,13 @@
 
 | Agent | 核心 Output 要求 | Acceptance Criteria 重點 |
 |-------|----------------|------------------------|
-| `researcher` | 5 個欄位（需求/調研/競品/可行性/決策點） | 關鍵決策點是問句、無程式碼 |
-| `story-writer` | 每個 Story 含 2+ AC + 優先級 | P0 至少 1 個、無技術細節 |
-| `spec-writer` | 資料模型 + API 合約 + 分工邊界 + `pr-split.md` | 每個 endpoint 有完整範例；PR 切分小而標明依賴 |
-| `backend-builder` | 符合 API 合約的程式碼 + unit tests 全過 | 無前端檔案異動 |
-| `frontend-builder` | 符合頁面結構的元件 + P0 UI 可操作 | 無後端檔案異動 |
+| `researcher` | 7 個欄位（需求/調研/競品/可行性/決策點/**相關檔案與角色**/**既有模式與類似功能**；綠地可填 N/A） | 關鍵決策點是問句、無程式碼 |
+| `story-writer` | 每個 Story 含 2+ AC + 優先級 + **不在範圍內** + **未解問題** | P0 至少 1 個、無技術細節、未解問題不猜 |
+| `spec-writer` | 資料模型 + API 合約 + 分工邊界 + **預計改動檔案清單** + `pr-split.md` | 每個 endpoint 有完整範例；PR 切分小而標明依賴 |
+| `backend-builder` | 符合 API 合約的程式碼 + unit tests 全過 + CLAUDE.md 規則建議 | 無前端檔案異動 |
+| `frontend-builder` | 符合頁面結構的元件 + P0 UI 可操作 + CLAUDE.md 規則建議 | 無後端檔案異動；API 不符只回報不補丁 |
 | `test-verifier` | 每個 AC 的 PASS/FAIL + Bug 路由決策 | 無 P0 Bug 待修 |
-| `validator` | 審查清單全勾 + PR 描述草稿 | 無加入新功能 |
+| `validator` | 審查清單全勾（含範圍外改動檢查）+ PR 描述草稿 | 無加入新功能 |
 
 ---
 
@@ -250,6 +265,27 @@ agents/
 ├── swarm/        Ruflo 多 agent 協調
 └── specialized/  其他雜項
 ```
+
+---
+
+## Pre-commit Secret Hook（v5 基礎設施）
+
+工廠外圍防線，擋密鑰進版控（緣由：2026-07-01 fate/README.md API key 差點入庫，靠人工 diff 攔截）：
+
+- 腳本：`d:\Claude\scripts\pre-commit-secrets.sh`（git-tracked）；`.git/hooks/pre-commit` 為一行 shim
+- 攔檔名：`.env`（排除 `.env.example`）、`*.key`、`*.pem`、`secrets.json`
+- 攔內容：`sk-ant-` / `sk-proj-` / `AIzaSy` / `ghp_` / `AKIA` 等 prefix + 長度尾綴（`{20,}`，文件裡的短範例不誤殺）
+- 掃 staged 內容（`git show :file`），非工作區——partial staging 不誤判
+- ⚠️ hooks 不進版控：新 clone 後照 `docs/ENV_REFERENCE.md` 一行指令重建 shim
+- 已知限制：`.env.local` 等變體不攔（目前只攔字面 `.env`）
+
+---
+
+## v5 升級紀錄（2026-07-02）
+
+對照工廠原型文章（blocktempo 轉譯 @sairahul1 的 7-agent 設計）做差距分析，採納 7 點、明確不採納 3 點（後端→前端改依序、路徑級工具限制、CLAUDE.md 壓 100-300 行）。計劃全文：`d:\Claude\workspace\plans\7-agent-factory-article-gap-plan.md`。
+
+執行方式本身就是一次分工示範：Sonnet 5 subagent 依 R17 契約表（13 項）執行 → Fable 5 subagent 獨立兩層驗收（機械 12 項 + 品質 6 項 + 真實 commit 端到端加測）PASS → 主對話抽查後 commit（`45f8922`）。
 
 ---
 
