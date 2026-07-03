@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 123 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 124 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-07-02
+> 最後更新：2026-07-03
 
 ---
 
@@ -28,10 +28,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（17 篇）
+## 🛠️ Claude Code / Skills（18 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/social-cards-engine — 品牌無關的社群圖卡引擎\|social-cards-engine]] | 🔬 | ⏳ | 23⭐ 品牌無關社群圖卡引擎，brand pack+雙審核員（carousel-joker/meme-joker），2 天新 |
 | [[Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件\|addyosmani/agent-skills]] | 📎 | ✅ | 32 Skills + 8 Commands + 4 Agents |
 | [[Github/repos/ECC — Claude Code harness-native 操作系統\|ECC]] | 📎 | ⏳ | 100+ skills，182K⭐ |
 | [[Github/repos/zeuikliclaude-pilot-suite Claude Code execution playbook with 3 pilot modes cost-first (Haiku), quality-first (Sonnet), ceiling-elevation (Opus). Quantitative escalation gates\|claude-pilot-suite]] | 📎 | ⏳ | 三模式成本優化 |
