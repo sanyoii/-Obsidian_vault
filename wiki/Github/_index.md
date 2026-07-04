@@ -6,17 +6,19 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 128 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 131 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-04
 
 ---
 
-## 🤖 AI Agent 框架（8 篇）
+## 🤖 AI Agent 框架（10 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/graphiti — 為 AI Agent 打造的即時時序知識圖譜框架\|graphiti]] | 🔬 | ⏳ | 28.4K⭐ 時序知識圖譜，硬依賴 Neo4j/FalkorDB；MCP Server 可掛 Claude Code |
+| [[Github/repos/honcho — 為 AI Agent 打造的使用者建模記憶基礎設施\|honcho]] | 🔬 | ⏳ | 5.8K⭐ peer 建模+背景推理記憶層；與 claude-mem 定位重疊，需 Postgres |
 | [[Github/repos/deer-flow — 字節跳動開源超級 Agent 運行框架\|deer-flow]] | 📎 | ⏳ | 74.9K⭐ LangGraph 25+ middleware |
 | [[Github/repos/ruvnetruflo 🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, self-learning swarm intel\|Ruflo]] | 📎 | ✅ | Claude 多 Agent 協調 MCP |
 | [[Github/repos/activeloopaiHivemind — 跨 AI Coding Agent 共享記憶與 Skill 系統\|Hivemind]] | 📎 | ⏳ | 跨 Agent 共享記憶 |
@@ -178,10 +180,11 @@ tags: [github, index, repos]
 
 ---
 
-## 📖 知識管理 / Wiki（4 篇）
+## 📖 知識管理 / Wiki（5 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/obsidian-wiki — 讓 AI Agent 維護 Obsidian 數位大腦的跨平台 Skill 框架\|obsidian-wiki]] | 🔬 | ⏳ | 2.6K⭐ Karpathy LLM Wiki 模式，跨 15+ Agent；與現有 gbrain/claude-mem 重疊需先釐清分工 |
 | [[Github/repos/Beever Atlas — 聊天頻道自動生成 Wiki 知識庫\|Beever Atlas]] | 📎 | ⏳ | 聊天→Wiki 自動生成 |
 | [[Github/repos/OpenKnowledge — AI 原生 Markdown 編輯器暨 LLM Wiki 平台\|OpenKnowledge]] | 📎 | ⏳ | AI Markdown Wiki |
 | [[Github/repos/OpenHuman\|OpenHuman]] | 📎 | 📌 | 桌面 AI 助手 |
