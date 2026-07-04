@@ -21,7 +21,7 @@ tags:
 
 ### 一句話說明
 
-專為台灣求職市場打造的開源 AI 求職助手，整合 104/Yourator/LinkedIn/Cake 四大平台，用 LangGraph 多代理架構自動搜尋職缺、評分排序、產生客製投遞包（履歷+求職信+面試準備+公司研究），還有模擬面試。預設用本機 Claude Code / Codex CLI 訂閱當引擎，免 API key。
+專為台灣求職市場打造的開源 AI 求職助手，整合 104/Yourator/Cake/LinkedIn 與 web3.career/CryptoJobsList/DeJob/JobFrog 共 8 個職缺平台，用 LangGraph 多代理架構自動搜尋職缺、評分排序、產生客製投遞包（履歷+求職信+面試準備+公司研究），還有模擬面試。預設用本機 Claude Code / Codex CLI 訂閱當引擎，免 API key。
 
 ---
 
@@ -41,7 +41,7 @@ tags:
 
 ### 核心功能
 
-- **自動找職缺**：上傳履歷 → AI 推導關鍵字 → 並行搜尋 104/Yourator/LinkedIn/Cake → 分批串流、依適配度排序
+- **自動找職缺**：上傳履歷 → AI 推導關鍵字 → 並行搜尋 8 個平台（104/Yourator/Cake/LinkedIn/web3.career/CryptoJobsList/DeJob/JobFrog）→ 分批串流、依適配度排序
 - **投遞包工作台**：多代理流程（解析 JD → 匹配評分 → 公司情報 → 客製履歷 → 求職信 → 面試準備 → 品管反思）背景執行，多職缺可平行
 - **履歷健檢**：依台灣 ATS 慣例評分，給修改建議 + 改寫前後範例
 - **模擬面試**：依 JD + 履歷出題，逐題即時回饋評分
@@ -60,9 +60,11 @@ React SPA (Vite)  ──HTTP·SSE·輪詢──►  FastAPI (uvicorn)
                                        │
                  ┌─────────────────────┼─────────────────────┐
                  ▼                     ▼                     ▼
-       LangGraph StateGraph      職缺來源             App SQLite
-       (每個背景產生一個、       104 / Yourator /     (投遞包+狀態、
-        各自 checkpointer)       LinkedIn / Cake       記憶、搜尋)
+       LangGraph StateGraph      職缺來源（8 個）      App SQLite
+       (每個背景產生一個、       104/Yourator/Cake/    (投遞包+狀態、
+        各自 checkpointer)       LinkedIn/web3career/   記憶、搜尋)
+                                 CryptoJobsList/
+                                 DeJob/JobFrog
                  │
                  ▼
          可切換 LLM 後端
@@ -126,7 +128,7 @@ END
   ↓
 derive_queries() 推導關鍵字（取 3 組）
   ↓
-search_all() 四站並行搜尋 → 去重 + 地區過濾
+search_all() 8 站並行搜尋 → 去重 + 地區過濾
   ↓
 rank_jobs() 分批並行排序（12 筆/批，4 workers）
   → SSE 逐批串流（邊排邊顯示）
@@ -161,7 +163,7 @@ rank_jobs() 分批並行排序（12 筆/批，4 workers）
 
 | 面向 | career-ops | jobsmith |
 |------|-----------|----------|
-| 目標市場 | 歐美（Ashby/Greenhouse/Lever） | 台灣（104/Yourator/Cake/LinkedIn） |
+| 目標市場 | 歐美（Ashby/Greenhouse/Lever） | 台灣＋Web3（104/Yourator/Cake/LinkedIn/web3.career/CryptoJobsList/DeJob/JobFrog） |
 | Stars | 55K | 8 |
 | 架構 | Skill modes（Markdown 驅動） | LangGraph 多代理（Python） |
 | UI | CLI / Go TUI | React Web + 桌面 App |
@@ -169,6 +171,12 @@ rank_jobs() 分批並行排序（12 筆/批，4 workers）
 | 成熟度 | v1.13 | v0.1.0 |
 
 兩者完美互補：career-ops 管歐美職缺，jobsmith 管台灣市場。
+
+---
+
+### 更新記錄
+
+- **2026-07-03**：新增 4 個職缺來源 web3.career（HTML table parse）/ CryptoJobsList（`__NEXT_DATA__` parse）/ DeJob（`/api/worker/topics?keyword=` JSON API）/ JobFrog（`/api/search?q=` JSON API）。皆用瀏覽器抓包找到真實端點後驗證。原本評估的 network.bondex.app（Angular CSR + Cloudflare）判定投入產出比差，跳過。
 
 ---
 
