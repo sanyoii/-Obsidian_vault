@@ -6,17 +6,18 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 131 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 134 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-07-04
+> 最後更新：2026-07-05
 
 ---
 
-## 🤖 AI Agent 框架（10 篇）
+## 🤖 AI Agent 框架（11 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/ChronicleCore-Architecture — 38人格多Agent治理架構白皮書\|ChronicleCore]] | 🔬 | 📌 | 49⭐ 純概念白皮書零程式碼；5 Pillars 治理與本環境 institution/ 殊途同歸；授權禁衍生 |
 | [[Github/repos/graphiti — 為 AI Agent 打造的即時時序知識圖譜框架\|graphiti]] | 🔬 | ⏳ | 28.4K⭐ 時序知識圖譜，硬依賴 Neo4j/FalkorDB；MCP Server 可掛 Claude Code |
 | [[Github/repos/honcho — 為 AI Agent 打造的使用者建模記憶基礎設施\|honcho]] | 🔬 | ⏳ | 5.8K⭐ peer 建模+背景推理記憶層；與 claude-mem 定位重疊，需 Postgres |
 | [[Github/repos/deer-flow — 字節跳動開源超級 Agent 運行框架\|deer-flow]] | 📎 | ⏳ | 74.9K⭐ LangGraph 25+ middleware |
@@ -30,10 +31,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（20 篇）
+## 🛠️ Claude Code / Skills（21 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/fable-harness — Fable 行為協議移植套件（hooks 強制執行層）\|fable-harness]] | 🔬 | ⏳ | 83⭐ Fable 紀律蒸餾成 hooks+skill+agents；與 institution 體系 95% 同構，唯 verify_gate.py Stop hook 填真實缺口，建議單挑試裝 |
 | [[Github/repos/system_prompts_leaks — 全網 AI System Prompt 逆向存檔庫\|system_prompts_leaks]] | 🔬 | ⏳ | 48.7K⭐ 全網 AI system prompt 存檔（登華郵）；獨有 Claude Code bundled-skills 原始碼；選檔匯入不整包 |
 | [[Github/repos/vercel-labs-agent-skills — web-design-guidelines 前端審查 Skill\|web-design-guidelines]] | 🔬 | ✅ | Vercel官方 28.6K⭐，Fetch-on-Demand 即時抓 100+ 前端規則審查UI，437K次安裝 |
 | [[Github/repos/claude-real-video — 讓 Claude 真正看影片的本機關鍵幀擷取工具\|claude-real-video]] | 🔬 | ✅ | 619⭐ 場景感知+去重關鍵幀擷取，內建 Claude Code Skill，4 天登 HN 首頁 |
@@ -180,10 +182,11 @@ tags: [github, index, repos]
 
 ---
 
-## 📖 知識管理 / Wiki（5 篇）
+## 📖 知識管理 / Wiki（6 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/Vault-for-Founders — 創辦人 AI 知識庫建置框架\|Vault-for-Founders]] | 🔬 | 📌 | 225⭐ Obsidian+Git 創辦人 Vault 方法論；v2 索引分層/attention budget 兩條規則可借鏡，不建置 |
 | [[Github/repos/obsidian-wiki — 讓 AI Agent 維護 Obsidian 數位大腦的跨平台 Skill 框架\|obsidian-wiki]] | 🔬 | ⏳ | 2.6K⭐ Karpathy LLM Wiki 模式，跨 15+ Agent；與現有 gbrain/claude-mem 重疊需先釐清分工 |
 | [[Github/repos/Beever Atlas — 聊天頻道自動生成 Wiki 知識庫\|Beever Atlas]] | 📎 | ⏳ | 聊天→Wiki 自動生成 |
 | [[Github/repos/OpenKnowledge — AI 原生 Markdown 編輯器暨 LLM Wiki 平台\|OpenKnowledge]] | 📎 | ⏳ | AI Markdown Wiki |
