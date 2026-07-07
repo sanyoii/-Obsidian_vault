@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 136 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 137 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-07
@@ -31,7 +31,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（23 篇）
+## 🛠️ Claude Code / Skills（24 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -59,6 +59,7 @@ tags: [github, index, repos]
 | [[Github/repos/sickn33-antigravity-awesome-skills — 1700+ Agentic Skills 多工具安裝庫\|antigravity-awesome-skills]] | 🔬 | ⏳ | 42K⭐ 1,700+ skills；14 Specialized Plugin；npx 一鍵裝 |
 | [[Github/repos/f-prompts.chat — 全球最大開源 AI Prompt 庫 + Claude Code 插件\|f/prompts.chat]] | 🔬 | ⏳ | 164K⭐ 全球最大 Prompt 庫；MCP + 2 指令 + 2 Agents；免費搜尋 |
 | [[Github/repos/wshobson-agents python-development — Python 3.12+ 全棧開發 Plugin（3 Agent + 16 Skill + 1 指令）\|wshobson/python-dev]] | 🔬 | ✅ | 37K⭐ python-pro(Opus)+django+fastapi；16 Skills；/python-scaffold |
+| [[Github/repos/looper — Claude Code Agent Loop 設計教練\|looper]] | 🔬 | ⏳ | 623⭐ 迴圈 pre-flight 設計教練：七階段訪談+跨模型 judge+終止護欄→loop.yaml 可攜規格；與 institution 八成同構，等常設迴圈需求再裝 |
 | [[Github/repos/marketingskills — AI Agent 行銷技能包\|marketingskills]] | 🔬 | ⏳ | 35K⭐ 45 行銷 Skills + 51 CLI；虛擬歌手場景選裝 10 個可用 |
 | [[Github/repos/huangwb8-skills — Claude Code Skill 開發流水線\|huangwb8/skills]] | 🔬 | ⏳ | 12 Skill 開發流水線 + auto-test + parallel-vibe |
 | [[Github/repos/JuliusBrussee-caveman — 用穴居人語法削減 65% output token\|caveman]] | 🔬 | ✅ | 78K⭐ 7 Skills + cavecrew 3-subagent；削 65% output token |

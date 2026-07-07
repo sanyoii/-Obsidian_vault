@@ -1,7 +1,7 @@
 # 知識庫主索引
 
-> 最後更新：2026-06-28
-> 文章數量：339 篇
+> 最後更新：2026-07-07
+> 文章數量：376 篇
 > 原始文件：持續累積中
 
 ---
@@ -71,6 +71,12 @@
 ### AI Prompts 收藏庫
 
 - [[AI-Prompts/_index|AI Prompts 收藏庫 — 統一索引]] — 旅遊插畫 + ChatGPT Image 2 爆款圖，依效果/標籤快速查詢，持續新增中 `#ai #prompts #image-gen`
+
+---
+
+### Self-Media（自媒體變現）
+
+- [[Self-Media/2026-ai-video-production-guide|2026 AI 自媒體完全手冊 — Codex + HyperFrames + Remotion 一鍵出片]] — 三個工具、三條變現路線（講書號/帶貨/數據科普）、工作流程、成本與法規限制 `#self-media #video-production #ai-tools #codex #remotion #hyperframes #automation`
 
 ---
 

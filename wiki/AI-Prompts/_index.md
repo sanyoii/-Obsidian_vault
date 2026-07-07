@@ -25,6 +25,10 @@
 > - 42 個 Claude Fable 5 實測案例（遊戲14・模擬視覺化8・創意藝術8・工程研究9・文件簡報3）
 > - 17 個原文 prompt、25 個重建 prompt，依分類整理可直接複製重現
 >
+> **Fable 5 Harness 制度建立 Prompts** — [[Fable5-Harness制度建立-Prompt]]
+> - Claude Code 開發環境架構顧問 prompt
+> - 源頭指令：Harness 漏水診斷 + CLAUDE.md 路由層 + 模型調度守則 + 判斷力外化矩陣 + 派工模板 + 知識迭代協議 + 交接信
+>
 > **個人圖騰 Prompts** — [[個人圖騰-Prompts]]
 > - #1 知識編織者圖騰（人類圖+紫微+命運羅盤+知識圖譜+QA特質）
 >
@@ -134,6 +138,12 @@
 | 文件簡報 | 3 | McKinsey報告複製、設計級投影片、論文解說投影片 | #文件簡報 #報告 | [[Fable5-Cases-Prompts]] |
 | 創意藝術 | 8 | 鋼琴視覺化、SVG鵜鶘、漫畫腳本、紀錄片MP4 | #創意藝術 #SVG #音樂 | [[Fable5-Cases-Prompts]] |
 | 工程研究 | 9 | 人形機器人設計、波音747 CAD、V8引擎、/goal 迴圈範本 | #工程研究 #goal迴圈 #CAD | [[Fable5-Cases-Prompts]] |
+
+### Fable 5 Harness 制度建立 Prompts（1 個）
+
+| # | 效果 | 對象 | 標籤 | 來源檔 |
+|---|------|------|------|--------|
+| #1 | Claude Code 開發環境架構診斷 + Harness 制度建立源頭 prompt | Claude Code 弱模型長期維護 | #claude-code #harness #制度 #架構 #fable5 | [[Fable5-Harness制度建立-Prompt]] |
 
 ### 個人圖騰 Prompts（1 款）
 
@@ -337,6 +347,11 @@
 - **#裸視3D**：戶外裸視3D電視牆廣告#1–#3
 - **#LED電視牆**：戶外裸視3D電視牆廣告#1–#3
 - **#果凍**：戶外裸視3D電視牆廣告#1–#3
+- **#claude-code**：Fable5-Harness制度建立-Prompt#1
+- **#harness**：Fable5-Harness制度建立-Prompt#1
+- **#制度**：Fable5-Harness制度建立-Prompt#1
+- **#架構**：Fable5-Harness制度建立-Prompt#1
+- **#fable5**：Fable5-Cases-Prompts 全部、Fable5-Harness制度建立-Prompt#1
 
 ---
 
@@ -348,6 +363,7 @@
 | [[ChatGPT-Image2-Prompts]] | ChatGPT Image 2 爆款圖整理包，含快速索引 | 11 個 Prompt |
 | [[豪華生日海報-Prompts]] | 數字立體雕刻生日海報模板 | 1 個 Prompt |
 | [[Fable5-Cases-Prompts]] | Fable 5 案例庫——遊戲/模擬/簡報/藝術/工程 42 個實測 prompt（含原文連結與讚數） | 42 個 Prompt |
+| [[Fable5-Harness制度建立-Prompt]] | Claude Code Harness 制度建立源頭 prompt，用於診斷 → 制度外化 → 弱模型可持續執行框架 | 1 個 Prompt |
 | [[個人圖騰-Prompts]] | 依個人特質（人類圖/紫微/QA特質）設計的專屬圖騰符號 prompt | 1 個 Prompt |
 | [[日式畢業季海報-Prompts]] | 日式清透 × 建築幾何風格畢業季海報（鏤空文字+KMC建築+人物穿插） | 1 個 Prompt |
 | [[財脈神殿-Prompts]] | 命理能量場景設計 + 運勢分析報告（互動模板） | 1 個 Prompt |

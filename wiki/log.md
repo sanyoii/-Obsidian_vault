@@ -53,6 +53,9 @@
 
 ## 2026-07
 
+### 2026-07-07 | COMPILE
+- `2026-07-07 19:45 | COMPILE | raw/sources/2026-07-07_ai-video-production-guide.md → wiki/Self-Media/2026-ai-video-production-guide.md` | 新開 Self-Media 分類；X 文章（@iluciddreaming）使用者貼原文入庫；三工具（Codex/HyperFrames/Remotion）×三變現路線解讀
+
 ### 2026-07-01 | COMPILE
 - `2026-07-01 01:55 | COMPILE | active/life-chart-engine 安裝實測 → wiki/Github/repos/zhenheco-life-chart-engine — 三合一原生排盤引擎（西洋星盤×人類圖×紫微斗數）.md` | 補「安裝後更新」章節：發現並本地修正人類圖 OFFSET 計算 bug（與 GitHub issue #4 獨立交叉驗證一致）、衍生 tri-system-life-reading Claude Code skill
 

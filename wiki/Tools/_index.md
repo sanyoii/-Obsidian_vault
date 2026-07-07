@@ -1,15 +1,14 @@
 ---
 title: Tools 索引
 type: folder-index
-generated: 2026-06-29
+generated: 2026-07-07
 ---
 
 # Tools 索引
 
 > 此檔由 refresh-index.ps1 自動生成；描述由 AI 補（保留既有描述，不會被洗回）
-> 檔案數：39 篇
+> 檔案數：40 篇
 
-- [[Tools/Skills備份與還原|Skills 備份與還原]] — 雙位置架構、單 skill 還原指令、-IncludeNew 復活閘門與 2026-07-07 回滾教訓 #tools #skills #claude-code #backup #maintenance
 - [[Tools/投影片版型選擇器|投影片選擇系統]] — 71 套版型瀏覽＋三步驟 Wizard 推薦，自動開啟 #tools #setup #hook #slides #html #claude-code
 - [[Tools/AI-PPT排行榜2026|開源 AI PPT 工具排行榜評估 2026]] — 依 GitHub Stars 評比開源 PPT 工具，含行動清單 #AI #tools #evaluation #presentation #ranking #pptx #html-slides
 - [[Tools/video-to-brain|影片轉文字 → gbrain 匯入工具]] — 批次轉錄課程影片為 Markdown 並匯入 gbrain #tools #video #transcription #gbrain #python
@@ -43,8 +42,9 @@ generated: 2026-06-29
 - [[Tools/ponytail|Ponytail — 懶得出名的資深工程師技能包]] — 強制 AI Agent 寫最少程式碼的極簡主義規則包
 - [[Tools/ppt-master|ppt-master 評估與安裝紀錄]] — 唯一能輸出原生可編輯 PPTX 的 Claude Code Skill #AI #tools #skill #pptx #presentation #claude-code #python
 - [[Tools/repo-intel|repo-intel — 全方位 Repo 情報分析 Skill]] — 五引擎整合的 GitHub repo 繁中情報報告 #tool #skill #claude-code #repo-analysis
-- [[Tools/spec-kit|spec-kit — GitHub 官方 Spec-Driven Development 工具包]] — 不安裝，僅採用其 feature 目錄三文件模式 #tools #AI #development-workflow #spec-driven-development
+- [[Tools/Skills備份與還原|Skills 備份與還原]] — 雙位置架構、單 skill 還原指令、-IncludeNew 復活閘門與 2026-07-07 回滾教訓 #tools #skills #claude-code #backup #maintenance
 - [[Tools/Skills 觸發詞對照表|Skills 觸發詞對照表]] — 135 個 Skills 歷史觸發詞清單，2026-07-03 skills diet 後 72 個標註 ⛔已移除，按 12 分類整理 #claude-code #skills #triggers #index
+- [[Tools/spec-kit|spec-kit — GitHub 官方 Spec-Driven Development 工具包]] — 不安裝，僅採用其 feature 目錄三文件模式 #tools #AI #development-workflow #spec-driven-development
 - [[Tools/taste-skill|Taste Skill — Anti-Slop 前端設計 Skills]] — 5 個反 AI 濫調 UI 設計 Skills，封殺壞模式注入好規則
 - [[Tools/ToolFk 程式設計師線上工具箱|ToolFk 程式設計師線上工具箱]] — 37 個免費線上工具，格式化/加解密/轉換等 #tools #developer-tools #online-tools
 - [[Tools/README|Tools 工具索引]] — 手動維護的腳本索引表（舊版，由本頁取代） #tools #index

@@ -285,3 +285,11 @@
 **摘要：** Rust + Tauri 一行指令把任何網頁打包成跨平台桌面 App（macOS/Windows/Linux），產出約 5MB（Electron 的 1/20），記憶體佔用更低。含預製熱門 App（WeRead/ChatGPT/DeepSeek/YouTube Music 等）可直接下載，支援自訂 icon/CSS 注入/GitHub Actions 線上建置。35K+ stars，MIT 授權。
 **來源：** https://github.com/tw93/Pake
 **建立：** 2026-06-20
+
+---
+
+## [[Self-Media/2026-ai-video-production-guide|2026 AI 自媒體完全手冊 — Codex + HyperFrames + Remotion 一鍵出片]]
+**標籤：** `#self-media` `#video-production` `#ai-tools` `#codex` `#remotion` `#hyperframes` `#automation`
+**摘要：** 三個工具（Codex/Claude Code 當 AI 程式員、Remotion 代碼轉視頻、HyperFrames HTML 轉視頻）對應三條變現路線：講書號（門檻最低但剪映更適合）、帶貨混剪（FFmpeg+Python 複刻爆款，日產 30 條）、數據科普（Remotion 真正差異化，剪映做不到）。含完整提示詞模板、實測踩坑（Node v22/index.html/目錄路徑）、成本結構（$20/月+配音 4-8 毛/條）、中國 AI 標識法規（未標注最高罰 200 萬）。
+**來源：** X @iluciddreaming（使用者貼原文）
+**建立：** 2026-07-07

@@ -1,7 +1,7 @@
 ---
 title: 水球流軟體設計模式精通之旅 索引
 type: folder-index
-generated: 2026-06-29
+generated: 2026-07-07
 ---
 
 # 水球流軟體設計模式精通之旅 索引
