@@ -1,7 +1,7 @@
 # 知識庫主索引
 
 > 最後更新：2026-07-07
-> 文章數量：376 篇
+> 文章數量：378 篇
 > 原始文件：持續累積中
 
 ---
@@ -76,6 +76,7 @@
 
 ### Self-Media（自媒體變現）
 
+- [[Self-Media/2026-ai-agent-team-zero-code-guide|零代碼 AI Agent 團隊建置完全指南]] — 零代碼用 Claude Desktop + Cowork 建立 AI Agent 團隊的完整教學，四大組件（Role/Instructions/Tools/Memory）、五步驟建置、4-Agent 內容製作流程、進階技巧、三套預設團隊範本 `#AI-Agent #Claude #Cowork #零代碼 #自媒體工具 #工作流自動化`
 - [[Self-Media/2026-ai-video-production-guide|2026 AI 自媒體完全手冊 — Codex + HyperFrames + Remotion 一鍵出片]] — 三個工具、三條變現路線（講書號/帶貨/數據科普）、工作流程、成本與法規限制 `#self-media #video-production #ai-tools #codex #remotion #hyperframes #automation`
 
 ---
@@ -102,6 +103,14 @@
 
 - [[Github/_index|Github Repo 分析總索引]] — 109 篇 × 12 主題分類（🔬 16 深度分析 / 📎 93 簡單留存）`#github #index`
 - [[Github/已安裝工具 — Github 分析索引|已安裝工具 × Wiki 交叉對照]] — 30 項已安裝工具的 Wiki 紀錄 `#github #installed`
+
+---
+
+### Quant-Trading（量化交易）
+
+- [[Quant-Trading/2026-polymarket-quant-math-roadmap|2026年量化交易完整數學學習地圖]] — 從概率論到Black-Scholes，七章系統化路線圖；Polymarket LMSR與CLOB機制；頂級宽客薪資與工具箱 `#量化交易 #Polymarket #概率論 #Black-Scholes #演算法交易`
+
+---
 
 ### 旺來幫｜Jane 金融知識庫
 

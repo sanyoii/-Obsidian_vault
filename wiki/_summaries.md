@@ -1,6 +1,23 @@
 # 文章摘要總覽
 
-> 最後更新：2026-06-30
+> 最後更新：2026-07-07
+
+---
+
+## [[Self-Media/2026-ai-agent-team-zero-code-guide|零代碼 AI Agent 團隊建置完全指南]]
+**標籤：** `#AI-Agent` `#Claude` `#Cowork` `#零代碼` `#自媒體工具` `#工作流自動化`
+**摘要：** 完整教學如何用 Claude Desktop + Cowork 零代碼建立 AI Agent 團隊。內容涵蓋四大組件（Role 角色/Instructions 指令/Tools 工具/Memory 記憶）、五步驟建置內容研究 Agent、4-Agent 內容製作流水線（Research→Outline→Writer→Editor，30分鐘內完成文章）、進階技巧四項（排程自動化/context.md 一致性/回饋迴圈/多步驟工作流）、三套預設團隊範本（商業智能/客戶研究/社群媒體）。強調 Agent 的核心價值在於委託而非親力親為。
+**來源：** @eng_khairallah1（X）
+**建立：** 2026-07-07
+
+---
+
+## [[Quant-Trading/2026-polymarket-quant-math-roadmap|2026年量化交易完整數學學習地圖]]
+**標籤：** `#量化交易` `#Polymarket` `#概率論` `#Black-Scholes` `#演算法交易` `#衍生品定價` `#金融數學`
+**摘要：** 完整的宽客（量化交易員）學習路線圖，涵蓋七個核心領域。第1-5章逐步建立數學基礎（概率論→統計學→線性代數→微積分→隨機微積分），包含凱利公式、貝葉斯定理、Black-Scholes模型、希臘字母等。第6章講解Polymarket的LMSR（自動做市商）與CLOB（中央限價訂單簿）機制。第7章介紹四大核心角色、頂級機構薪資（$300K-$500K+入門級）與完整工具箱（Python/C++/Rust）。包含15門推薦教科書、課後習題與編程練習。
+**原作者：** @gemchange_ltd  
+**編譯者：** Mr.RC (@insidersdotbot)
+**建立：** 2026-07-07
 
 ---
 

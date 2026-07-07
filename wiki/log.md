@@ -55,6 +55,8 @@
 
 ### 2026-07-07 | COMPILE
 - `2026-07-07 19:45 | COMPILE | raw/sources/2026-07-07_ai-video-production-guide.md → wiki/Self-Media/2026-ai-video-production-guide.md` | 新開 Self-Media 分類；X 文章（@iluciddreaming）使用者貼原文入庫；三工具（Codex/HyperFrames/Remotion）×三變現路線解讀
+- `2026-07-07 21:25 | COMPILE | raw/sources/2026-07-07_polymarket-quant-math-roadmap.md → wiki/Quant-Trading/2026-polymarket-quant-math-roadmap.md` | 新開 Quant-Trading 分類；原作 @gemchange_ltd、編譯 Mr.RC；七章系統化量化交易數學知識地圖（概率論→統計學→線性代數→微積分→隨機微積分→Polymarket LMSR/CLOB→職業版圖）；含貝葉斯、凱利公式、Black-Scholes、希臘字母、LMSR成本函數等核心公式；宽客薪資$300K-$500K入門級；推薦教科書清單與編程習題
+- `2026-07-07 21:29 | COMPILE | raw/sources/2026-07-07_ai-agent-team-zero-code-guide.md → wiki/Self-Media/2026-ai-agent-team-zero-code-guide.md` | X 文章（@eng_khairallah1）；零代碼 AI Agent 團隊建置完全指南，四組件（Role/Instructions/Tools/Memory）、五步驟建置、4-Agent 內容製作管線（30分鐘內完成文章）、排程/context一致性/回饋迴圈/多步驟工作流四進階技巧、商業智能/客戶研究/社群媒體三團隊範本
 
 ### 2026-07-01 | COMPILE
 - `2026-07-01 01:55 | COMPILE | active/life-chart-engine 安裝實測 → wiki/Github/repos/zhenheco-life-chart-engine — 三合一原生排盤引擎（西洋星盤×人類圖×紫微斗數）.md` | 補「安裝後更新」章節：發現並本地修正人類圖 OFFSET 計算 bug（與 GitHub issue #4 獨立交叉驗證一致）、衍生 tri-system-life-reading Claude Code skill
