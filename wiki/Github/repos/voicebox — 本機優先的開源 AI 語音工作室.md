@@ -1,8 +1,9 @@
 ---
 source: "https://github.com/jamiepine/voicebox"
 author: "jamiepine (Jamie Pine)"
-stars: "37.2K"
+stars: "38.2K"
 clipped: 2026-07-03
+updated: 2026-07-06
 tags:
   - "github/repo"
   - "ai-voice"
@@ -12,8 +13,9 @@ tags:
 
 ## voicebox — 本機優先的開源 AI 語音工作室
 
-> **jamiepine/voicebox** | ⭐ 37,204 | 🍴 4,474 | 📝 MIT
+> **jamiepine/voicebox** | ⭐ 38,246 | 🍴 4,600 | 📝 MIT
 > "The open-source AI voice studio. Clone, dictate, create."
+> _（2026-07-06 複查：結論不變，僅星數/fork 數更新；423 open issues、v0.5.0 為最新版）_
 
 ---
 
@@ -27,8 +29,8 @@ Voicebox 是一個跑在本機的桌面 App（Tauri + Rust），把 ElevenLabs�
 
 | 項目 | 數值 |
 |------|------|
-| Stars | 37,204 |
-| Forks | 4,474 |
+| Stars | 38,246（2026-07-06 複查） |
+| Forks | 4,600 |
 | 主要語言 | TypeScript（+ Python 後端、Rust/Tauri 殼） |
 | 授權 | MIT |
 | 建立時間 | 2026-01-25 |

@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 134 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 136 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-07-05
+> 最後更新：2026-07-07
 
 ---
 
@@ -31,7 +31,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（21 篇）
+## 🛠️ Claude Code / Skills（23 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -64,6 +64,8 @@ tags: [github, index, repos]
 | [[Github/repos/JuliusBrussee-caveman — 用穴居人語法削減 65% output token\|caveman]] | 🔬 | ✅ | 78K⭐ 7 Skills + cavecrew 3-subagent；削 65% output token |
 | [[Github/repos/eugeniughelbur-obsidian-second-brain — Vault-first 研究與 Obsidian 架構筆記系統\|obsidian-second-brain]] | 🔬 | ✅ | 1.9K⭐ /research+/research-deep+/obsidian-architect；free+Perplexity paid |
 | [[Github/repos/thedotmack-claude-mem — 85K⭐ 跨 Session 持久記憶\|claude-mem]] | 🔬 | ✅ | 85K⭐ SQLite+ChromaDB；worker 自 2026-05 運行；claude-mem@thedotmack plugin |
+| [[Github/repos/vercel-labs-skills — Agent Skills 生態系 CLI 套件管理器\|vercel-labs/skills]] | 🔬 | ⏳ | 25K⭐ Vercel官方 npx skills 套件管理器；內建 find-skills 已在本機生效中 |
+| [[Github/repos/claude-cache-guard — Claude Code 5小時額度自動交接工具\|claude-cache-guard]] | 🔬 | ⏳ | 9⭐ 5h額度門檻自動寫交接檔+/ccgresume；⚠️與本環境 hook 注入規則衝突恐靜默失效，常撞額度才考慮 |
 
 ---
 

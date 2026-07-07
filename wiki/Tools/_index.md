@@ -7,8 +7,9 @@ generated: 2026-06-29
 # Tools 索引
 
 > 此檔由 refresh-index.ps1 自動生成；描述由 AI 補（保留既有描述，不會被洗回）
-> 檔案數：38 篇
+> 檔案數：39 篇
 
+- [[Tools/Skills備份與還原|Skills 備份與還原]] — 雙位置架構、單 skill 還原指令、-IncludeNew 復活閘門與 2026-07-07 回滾教訓 #tools #skills #claude-code #backup #maintenance
 - [[Tools/投影片版型選擇器|投影片選擇系統]] — 71 套版型瀏覽＋三步驟 Wizard 推薦，自動開啟 #tools #setup #hook #slides #html #claude-code
 - [[Tools/AI-PPT排行榜2026|開源 AI PPT 工具排行榜評估 2026]] — 依 GitHub Stars 評比開源 PPT 工具，含行動清單 #AI #tools #evaluation #presentation #ranking #pptx #html-slides
 - [[Tools/video-to-brain|影片轉文字 → gbrain 匯入工具]] — 批次轉錄課程影片為 Markdown 並匯入 gbrain #tools #video #transcription #gbrain #python
