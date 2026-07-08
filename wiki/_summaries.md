@@ -1,6 +1,14 @@
 # 文章摘要總覽
 
-> 最後更新：2026-07-07
+> 最後更新：2026-07-08
+
+---
+
+## [[Claude/fable5-mastery-leader-mode-workflows|Fable 5（Claude Sonnet 5）駕馭全攻略 — Leader 模式與五大變現工作流]]
+**標籤：** `#Fable5` `#ClaudeCode` `#Agent編排` `#Skill設計` `#Leader模式`
+**摘要：** 教學文，核心是把 Fable 5（Claude Sonnet 5）從「執行工人」升級為「團隊領導者」。五大超能力：長任務不失焦（18,000 行遷移單次 3 小時完成）、電腦視覺理解強、交付成品而非答案、讀寫筆記檔案持續變聰明、天生適合帶團隊。Leader 模式：用 Matt Pocock's skills collection 規劃、Opus/Codex worker 分工執行（`.claude/agents/` 各司一個 lane）、Fable 審核每個成果、verifier 二次確認不自評。三大秘訣：(1) 不過度引導——只給目標+限制+原因，禁止要求展示推理過程（觸發安全過濾降級）或顯示剩餘 token（誘發提早收工），(2) CLAUDE.md 保持輕量（專案簡介/常用指令/常犯錯誤三段即可），(3) 善用 `/goal` 與排程 loop，終點線要求可視證據+煞車（"stop after N turns"，否則有案例單一 prompt 燒到 $960）+誠實條款。附一鏡到底 landing page 範例五步驟，以及五個能賺錢的工作流（巨型 codebase 遷移/深度研究/常設 orchestrator/參考驅動前端/知識庫建置）。時效提醒：Fable 已於 2026-07-07 離開 Claude 訂閱制、改按用量付費。
+**來源：** 使用者貼原文，教學文（無 URL）
+**建立：** 2026-07-08
 
 ---
 

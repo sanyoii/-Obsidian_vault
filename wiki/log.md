@@ -53,6 +53,9 @@
 
 ## 2026-07
 
+### 2026-07-08 | COMPILE
+- `2026-07-08 16:32 | COMPILE | raw/sources/2026-07-08_fable5-mastery-course.md → wiki/Claude/fable5-mastery-leader-mode-workflows.md` | 使用者貼原文入庫（教學文，無 URL）；Fable 5（Claude Sonnet 5）駕馭全攻略：Leader/Worker/Verifier 分工架構（Pocock skills 規劃+Opus/Codex worker+verifier 審核）、三秘訣（不過度引導/CLAUDE.md 輕量化/goal+loop 終點線+煞車+誠實條款）、一鏡到底流程範例、五個變現工作流；_index.md 計數 380→381、Claude/_index.md 17→18；反向連結修正對齊實際檔名（7-Agent 工廠工作流 SOP / Karpathy 最高遵守原則 / 18個改變一切的 Claude Code Settings）
+
 ### 2026-07-07 | COMPILE
 - `2026-07-07 19:45 | COMPILE | raw/sources/2026-07-07_ai-video-production-guide.md → wiki/Self-Media/2026-ai-video-production-guide.md` | 新開 Self-Media 分類；X 文章（@iluciddreaming）使用者貼原文入庫；三工具（Codex/HyperFrames/Remotion）×三變現路線解讀
 - `2026-07-07 21:25 | COMPILE | raw/sources/2026-07-07_polymarket-quant-math-roadmap.md → wiki/Quant-Trading/2026-polymarket-quant-math-roadmap.md` | 新開 Quant-Trading 分類；原作 @gemchange_ltd、編譯 Mr.RC；七章系統化量化交易數學知識地圖（概率論→統計學→線性代數→微積分→隨機微積分→Polymarket LMSR/CLOB→職業版圖）；含貝葉斯、凱利公式、Black-Scholes、希臘字母、LMSR成本函數等核心公式；宽客薪資$300K-$500K入門級；推薦教科書清單與編程習題

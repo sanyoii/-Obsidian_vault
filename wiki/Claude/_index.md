@@ -7,7 +7,7 @@ generated: 2026-07-07
 # Claude 索引
 
 > 此檔由 refresh-index.ps1 自動生成；描述由 AI 補（保留既有描述，不會被洗回）
-> 檔案數：17 篇
+> 檔案數：18 篇
 
 - [[Claude/18個改變一切的 Claude Code Settings|18 個改變一切的 Claude Code Settings]] — 實際套用的 settings.json 進階設定與說明
 - [[Claude/7-Agent 工廠工作流 SOP|7-Agent 工廠工作流 SOP]] — 七步 Agent 分工流程，研究→規格→開發→測試→驗收
@@ -26,3 +26,4 @@ generated: 2026-07-07
 - [[Claude/知識庫操作手冊|LLM 知識庫 — Claude Code 操作手冊]] — Vault 的 LLM 編譯器角色定義與知識庫維護流程
 - [[Claude/Obsidian Dashboard 路線圖|Obsidian Dashboard 路線圖]] — 指揮中心 Dashboard 開發階段規劃與進度追蹤
 - [[Claude/stitch-skills SKILL.md 結構分析 — Agent Skill 設計模式|stitch-skills SKILL.md 結構分析 — Agent Skill 設計模式]] — Google Stitch 14 個 SKILL.md 深度拆解，三種設計模式 #agent-design #skills #google-stitch #design-patterns #claude-code
+- [[Claude/fable5-mastery-leader-mode-workflows|Fable 5（Claude Sonnet 5）駕馭全攻略 — Leader 模式與五大變現工作流]] — Leader/Worker/Verifier 分工架構、不過度引導/輕量 CLAUDE.md/goal+loop 三秘訣、五大變現工作流 #Fable5 #ClaudeCode #Agent編排 #Leader模式
