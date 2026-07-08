@@ -1,7 +1,7 @@
 # 知識庫主索引
 
 > 最後更新：2026-07-07
-> 文章數量：378 篇
+> 文章數量：380 篇
 > 原始文件：持續累積中
 
 ---
@@ -28,6 +28,7 @@
 - [[Claude/Karpathy 最高遵守原則 — AI 行為準則|Karpathy 最高遵守原則 — AI 行為準則]] — 5 大原則，套用至 CLAUDE.md，/karpathy-audit 命令 `#agent-design #karpathy`
 - [[Claude/Karpathy program.md Skill 設計哲學 — 讓 Agent 可靠工作的六個原則|Karpathy program.md Skill 設計哲學 — 讓 Agent 可靠工作的六個原則]] — CAN/CANNOT 邊界、單一指標、品味量化 if-then、baseline 先行、Checkpoint、三段式結構 `#agent-design #skills #karpathy`
 - [[Claude/stitch-skills SKILL.md 結構分析 — Agent Skill 設計模式|stitch-skills SKILL.md 結構分析]] — 四種工作流模式、Gold Standard/Baton/驗證腳本三設計模式、Skill 目錄標準結構 `#agent-design #skills #google-stitch #design-patterns`
+- [[Claude/2026-claude-code-repo-structure-final-boss|Claude Code 的終極挑戰：Repository 結構設計（Final Boss Setup）]] — 四層 Context Ladder、ASKED vs FORCED、Routing 三分類、Path Gating、Agent Memory、危險目錄 CLAUDE.md、七大 Golden Rules `#Claude-Code #Repo結構 #CLAUDE.md #Hooks #Skills`
 
 ---
 
@@ -78,6 +79,12 @@
 
 - [[Self-Media/2026-ai-agent-team-zero-code-guide|零代碼 AI Agent 團隊建置完全指南]] — 零代碼用 Claude Desktop + Cowork 建立 AI Agent 團隊的完整教學，四大組件（Role/Instructions/Tools/Memory）、五步驟建置、4-Agent 內容製作流程、進階技巧、三套預設團隊範本 `#AI-Agent #Claude #Cowork #零代碼 #自媒體工具 #工作流自動化`
 - [[Self-Media/2026-ai-video-production-guide|2026 AI 自媒體完全手冊 — Codex + HyperFrames + Remotion 一鍵出片]] — 三個工具、三條變現路線（講書號/帶貨/數據科普）、工作流程、成本與法規限制 `#self-media #video-production #ai-tools #codex #remotion #hyperframes #automation`
+
+---
+
+### Career（職涯與技能路線圖）
+
+- [[Career/2026-ai-engineer-no-cs-degree-path|2026年無CS學位成為AI工程師的完整路徑]] — 技能堆疊九步驟、三個能被雇用的專案、Claude Tutor提示、90天計畫、常見失敗模式 `#AI工程師 #職涯 #技能路線圖 #RAG #Agent #求職策略`
 
 ---
 

@@ -4,6 +4,22 @@
 
 ---
 
+## [[Career/2026-ai-engineer-no-cs-degree-path|2026年無CS學位成為AI工程師的完整路徑]]
+**標籤：** `#AI工程師` `#職涯` `#技能路線圖` `#RAG` `#Agent` `#求職策略` `#自學` `#證明`
+**摘要：** 完整的AI工程師自學路徑，針對無CS學位人士。核心論點：學位不再是入場券，**證明**才是。內容包括：(1) 為何舊路徑失效（AI工具縮小概念與實踐距離），(2) 2026年AI工程師定義（系統建造者，非ML研究員），(3) 九步驟技能堆疊（Python→SQL→Git→API→Embeddings→RAG→Agent→部署→開發工具），(4) 三個能被雇用的專案（RAG應用、工具型Agent、部署產品），(5) 結構化Tutor提示與逐行講解方法，(6) 求職策略（公開建造、開源貢獻、直接outreach、自由接案），(7) 三個專業方向賽道（RAG系統/Agentic系統/AI產品工程），(8) 入職前六個月實態，(9) 五項常見失敗模式，(10) 90天計畫（基礎期→兩個專案→部署曝光）。包含兩個完整英文Claude Tutor提示與outreach email模板。
+**來源：** 使用者貼原文，作者未提供
+**建立：** 2026-07-07
+
+---
+
+## [[Claude/2026-claude-code-repo-structure-final-boss|Claude Code 的終極挑戰：Repository 結構設計（Final Boss Setup）]]
+**標籤：** `#Claude-Code` `#Repo結構` `#CLAUDE.md` `#Hooks` `#Skills` `#Agent設計` `#Context-Hierarchy`
+**摘要：** 通過分析頂層 Claude Code 使用者的共同發現，闡述「瓶頸不是模型而是 repository 結構」核心論點。七大設計原則：(1) Context Ladder 四層載入時機（全局 CLAUDE.md/路徑觸發 rules/按需 skills/獨立 agents），(2) ASKED vs FORCED 區分請求型指令（90%執行率）與強制型 hooks（100%保證），(3) Routing Rule 將重複任務分為 Research/Procedure/Guarantee 三類，(4) Path Gating 自動載入該領域規則，(5) Agent Memory Git 版本管理 AI 學習成果，(6) 危險目錄位置特定 CLAUDE.md 及時警告，(7) 四大實戰 Golden Rules（200 行上限/實際指令/環境變數/Git 管理）。結論：結構改善所有對話，是「擁有」而非「借用」AI 智能的方式。
+**來源：** 使用者貼原文
+**建立：** 2026-07-07
+
+---
+
 ## [[Self-Media/2026-ai-agent-team-zero-code-guide|零代碼 AI Agent 團隊建置完全指南]]
 **標籤：** `#AI-Agent` `#Claude` `#Cowork` `#零代碼` `#自媒體工具` `#工作流自動化`
 **摘要：** 完整教學如何用 Claude Desktop + Cowork 零代碼建立 AI Agent 團隊。內容涵蓋四大組件（Role 角色/Instructions 指令/Tools 工具/Memory 記憶）、五步驟建置內容研究 Agent、4-Agent 內容製作流水線（Research→Outline→Writer→Editor，30分鐘內完成文章）、進階技巧四項（排程自動化/context.md 一致性/回饋迴圈/多步驟工作流）、三套預設團隊範本（商業智能/客戶研究/社群媒體）。強調 Agent 的核心價值在於委託而非親力親為。
