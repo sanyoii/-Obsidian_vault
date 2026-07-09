@@ -1,6 +1,14 @@
 # 文章摘要總覽
 
-> 最後更新：2026-07-08
+> 最後更新：2026-07-10
+
+---
+
+## [[Claude/loop-engineering-karpathy-method|Loop Engineering — Karpathy Method 與 Bilevel Autoresearch]]
+**標籤：** `#claude-code` `#agent-design` `#loop-engineering` `#karpathy`
+**摘要：** 解讀文，講「loop」（目標導向、AI 自我反覆直到達標）與一問一答式 prompt 的本質差異。Loop 三要素：verifier（沒有真檢查就只是 agent 自己說自己對）、state（記錄已試過什麼，否則每輪重犯同樣錯誤）、stop condition（達標或碰到嘗試上限就停）。附「你是否真的需要 loop」四項自測：任務至少每週重複、驗證可自動化、token 預算撐得住浪費、agent 有真工具——四者缺一就不划算。核心案例是 Karpathy 2026年3月發布的 AutoResearch repo（train.py/prepare.py/program.md 三檔案、630行），一個月破 6.6萬星，人類只寫 program.md、agent 跑700次實驗找到20項連 Karpathy 自己都漏掉的優化（如 attention 裡漏乘的 scalar）；Shopify CEO 用它一晚讓內部模型品質提升19%、體積砍半。一個可運作的 loop 由五部件組成：Automation（心跳）、Skill（知識累積）、Sub-agents（寫的人與檢查的人分開）、Connectors（能實際動作）、Verifier（真正的關卡）。之後兩位研究者發表 Bilevel Autoresearch，在 inner loop 外疊加 outer loop（觀察 inner loop 卡在哪、生成新程式碼改變其搜尋方式），同一顆 LLM 就讓 GPT 預訓練 benchmark 進步 5 倍（非 5%）。文末誠實承認 loop 不解決的兩個問題：comprehension debt（理解負債，跑得越順欠得越多）與 cognitive surrender（認知投降，懶得再形成判斷）——同一個 loop 動作，用在深度理解的工作上加速、或用來逃避理解工作本身，結果完全相反，loop 本身分不出差別。
+**來源：** 使用者貼原文（無 URL/平台）
+**建立：** 2026-07-10
 
 ---
 

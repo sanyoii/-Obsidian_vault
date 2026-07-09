@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 138 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 140 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-07-09
+> 最後更新：2026-07-10
 
 ---
 
@@ -31,10 +31,12 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（25 篇）
+## 🛠️ Claude Code / Skills（26 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/guizang-material-illustration — 歸藏材質插畫 Claude Skill\|guizang-material-illustration]] | 🔬 | ⏳ | 463⭐ 3天新；純Prompt型配圖Skill，帶中文標籤材質插畫+圖表美化；op7418歸藏系列，與已裝guizang-ppt互補 |
+| [[Github/repos/claude-howto — Claude Code 視覺化互動教學指南\|claude-howto]] | 🔬 | ⏳ | 39.5K⭐ 視覺化教學網站+repo，10模組+可複製模板+互動自評/測驗Skill；內容價值高於程式碼、非安裝型工具 |
 | [[Github/repos/fable-harness — Fable 行為協議移植套件（hooks 強制執行層）\|fable-harness]] | 🔬 | ⏳ | 83⭐ Fable 紀律蒸餾成 hooks+skill+agents；與 institution 體系 95% 同構，唯 verify_gate.py Stop hook 填真實缺口，建議單挑試裝 |
 | [[Github/repos/pilotfish — Claude Code 多模型委派配置包\|pilotfish]] | 🔬 | ⏳ | 119⭐ 一天新；三層委派設定包（settings/agents/CLAUDE.md）與 institution 三鐵則高度同構；安裝會全域覆寫+命名衝突風險 |
 | [[Github/repos/system_prompts_leaks — 全網 AI System Prompt 逆向存檔庫\|system_prompts_leaks]] | 🔬 | ⏳ | 48.7K⭐ 全網 AI system prompt 存檔（登華郵）；獨有 Claude Code bundled-skills 原始碼；選檔匯入不整包 |

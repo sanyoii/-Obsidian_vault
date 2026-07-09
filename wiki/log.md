@@ -53,6 +53,9 @@
 
 ## 2026-07
 
+### 2026-07-10 | COMPILE
+- `2026-07-10 00:33 | COMPILE | raw/sources/2026-07-10_loop-engineering-karpathy-method.md → wiki/Claude/loop-engineering-karpathy-method.md` | 使用者貼原文入庫（無 URL）；解讀 Loop Engineering 方法論：loop 三要素（verifier/state/stop condition）、需不需要 loop 四項自測、Karpathy AutoResearch 案例（三檔案架構、700實驗20項改進、Shopify案例19%提升）、五組成部件、Bilevel Autoresearch（outer/inner loop 5倍改善）、簡化版可執行 prompt、誠實兩問題（comprehension debt/cognitive surrender）；Claude/_index.md 計數 18→19；反向連結確認對齊 Karpathy 最高遵守原則 / Karpathy program.md Skill 設計哲學
+
 ### 2026-07-08 | COMPILE
 - `2026-07-08 16:32 | COMPILE | raw/sources/2026-07-08_fable5-mastery-course.md → wiki/Claude/fable5-mastery-leader-mode-workflows.md` | 使用者貼原文入庫（教學文，無 URL）；Fable 5（Claude Sonnet 5）駕馭全攻略：Leader/Worker/Verifier 分工架構（Pocock skills 規劃+Opus/Codex worker+verifier 審核）、三秘訣（不過度引導/CLAUDE.md 輕量化/goal+loop 終點線+煞車+誠實條款）、一鏡到底流程範例、五個變現工作流；_index.md 計數 380→381、Claude/_index.md 17→18；反向連結修正對齊實際檔名（7-Agent 工廠工作流 SOP / Karpathy 最高遵守原則 / 18個改變一切的 Claude Code Settings）
 
