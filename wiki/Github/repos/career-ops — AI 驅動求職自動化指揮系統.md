@@ -34,7 +34,7 @@ Career-ops 是一套以 AI 編程 CLI（Claude Code / Gemini / Codex / OpenCode 
 | 主要語言 | JavaScript（698K）+ Go（154K）+ Shell（30K） |
 | 授權 | MIT |
 | 建立時間 | 2026-04-04 |
-| 最新 Release | v1.13.0（2026-06-25） |
+| 最新 Release | v1.18.0（2026-07-07；本地已於 2026-07-09 升級） |
 | Topics | ai-agent, anthropic, automation, career, claude-code, cli, golang, interview-prep, job-search, resume |
 | 首頁 | https://career-ops.org |
 | 媒體報導 | WIRED、Business Insider、Product Hunt |
@@ -115,6 +115,17 @@ claude                           # 開啟 Claude Code
 ```
 
 首次啟動會引導設定 CV、profile 和目標角色。
+
+---
+
+### 本地部署狀態（2026-07-09）
+
+- **版本**：v1.13.0 → v1.18.0（`update-system.mjs apply`；升級時踩到雞生蛋 bug——updater 先自我更新再重執行、但新依賴 `scaffolder/bin/skill-entrypoints.mjs` 未複製，解法 `git checkout FETCH_HEAD -- scaffolder/` 後重跑）
+- **jobsmith 來源整合**：新增自訂 provider `dejob` / `jobfrog` / `yourator`（+`_workmode.mjs` filter helper），並接線 upstream 內建的 `jobicy` / `arbeitnow`。104 因 Cloudflare TLS 指紋擋 Node fetch（curl 可過）而停用佔位
+- **work-mode 篩選**：Onsite/Hybrid/Remote，實作在 provider 層 + portals.yml `work_modes` 欄（user layer，更新安全，刻意不 patch scan.mjs）
+- **關鍵字**：title_filter 採 AI+QA 雙軌（保留原 AI/FDE 系、疊加 QA/SDET/測試 等 8 組）
+- **驗證**：dry-run 6 boards 全活（6031 筆→900 新增）；test-all 1547/1548（唯一 fail 為 upstream 自身 offer-prep/.gitignore 遺漏）
+- 計劃文件：`d:/Claude/workspace/plans/career-ops-jobsmith-integration.md`
 
 ---
 
