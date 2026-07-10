@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 145 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 146 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-10
@@ -105,12 +105,13 @@ tags: [github, index, repos]
 
 ---
 
-## 💼 求職（2 篇）
+## 💼 求職（3 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
 | [[Github/repos/career-ops — AI 驅動求職自動化指揮系統\|career-ops]] | 🔬 | ✅ | v1.13.0 A-F 評估 + Go TUI |
 | [[Github/repos/jobsmith — 台灣求職 AI 多代理 Co-Pilot\|jobsmith]] | 📎 | ✅ | 14 Agent LangGraph |
+| [[Github/repos/ai-job-search — Claude Code 原生的本機求職應徵框架\|ai-job-search]] | 🔬 | ⏳ | 20.4K⭐ 4個月新；Claude Code 原生 Skills/Commands 求職模板，LaTeX PDF 校對+ATS驗證是差異化亮點；丹麥市場限定+需LaTeX工具鏈，先觀望 |
 
 ---
 
