@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 146 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 147 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-10
@@ -94,7 +94,7 @@ tags: [github, index, repos]
 
 ---
 
-## 💰 投資 / 金融（4 篇）
+## 💰 投資 / 金融（5 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -102,6 +102,7 @@ tags: [github, index, repos]
 | [[Github/repos/xbtlin-ai-berkshire\|xbtlin-ai-berkshire（原始分析）]] | 🔬 | ✅ | 同上初版 |
 | [[Github/repos/開源版金融終端機 Fincept Terminal\|Fincept Terminal]] | 📎 | ⏳ | 開源金融終端 |
 | [[Github/repos/best-of-algorithmic-trading Collections\|best-of-algo-trading]] | 📎 | 📌 | 演算法交易資源 |
+| [[Github/repos/machine-learning-for-trading — ML4T 第三版機器學習交易全流程\|ml4t 3rd ed]] | 🔬 | ⏳ | 19.7K⭐ 量化 ML 教科書配套；9 case study 同一 pipeline；61 護欄化 agent skills 值得偷 |
 
 ---
 
