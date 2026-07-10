@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 142 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 144 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-10
@@ -31,7 +31,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（28 篇）
+## 🛠️ Claude Code / Skills（30 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -72,6 +72,8 @@ tags: [github, index, repos]
 | [[Github/repos/vercel-labs-skills — Agent Skills 生態系 CLI 套件管理器\|vercel-labs/skills]] | 🔬 | ⏳ | 25K⭐ Vercel官方 npx skills 套件管理器；內建 find-skills 已在本機生效中 |
 | [[Github/repos/claude-cache-guard — Claude Code 5小時額度自動交接工具\|claude-cache-guard]] | 🔬 | ⏳ | 9⭐ 5h額度門檻自動寫交接檔+/ccgresume；⚠️與本環境 hook 注入規則衝突恐靜默失效，常撞額度才考慮 |
 | [[Github/repos/archify — 用大白話生成架構圖的 Claude Skill\|archify]] | 🔬 | ✅ | 3.2K⭐ 用大白話生成五種技術圖（架構/工作流程/時序/資料流/生命週期），JSON IR+Schema驗證+4×匯出；2026-07-10 已裝（雙位置+marketplace） |
+| [[Github/repos/MengTo-Skills — 設計師視角 Codex×Claude×Cursor Agent Skill 合集\|MengTo/Skills]] | 🔬 | ⏳ | 1.3K⭐ Design+Code 創辦人個人庫，75 skills（62 個視覺風格卡+13 個原則/Codex工作流）；與已裝 design-taste-frontend 等高度重複，與 emilkowalski/skills 互補（決策層 vs 風格庫） |
+| [[Github/repos/laowangba-pmprototype-skill — B端C端產品原型生成 Codex Skill\|laowangba-pmprototype-skill]] | 🔬 | ⏳ | 38⭐ 1天新；PM 用 B/C 端 Figma 原型生成流水線+Anti-Slop 閘門，inherits frontend-design；本機無 Figma MCP 跑不到執行層，QA 用途低 |
 
 ---
 
