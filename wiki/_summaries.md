@@ -358,3 +358,11 @@
 **摘要：** 三個工具（Codex/Claude Code 當 AI 程式員、Remotion 代碼轉視頻、HyperFrames HTML 轉視頻）對應三條變現路線：講書號（門檻最低但剪映更適合）、帶貨混剪（FFmpeg+Python 複刻爆款，日產 30 條）、數據科普（Remotion 真正差異化，剪映做不到）。含完整提示詞模板、實測踩坑（Node v22/index.html/目錄路徑）、成本結構（$20/月+配音 4-8 毛/條）、中國 AI 標識法規（未標注最高罰 200 萬）。
 **來源：** X @iluciddreaming（使用者貼原文）
 **建立：** 2026-07-07
+
+---
+
+## [[Claude/multi-ai-task-card|多 AI 協作不斷片 — 用任務卡把 Claude/Codex/Cursor 接起來]]
+**標籤：** `#多AI協作` `#任務卡` `#agent設計` `#狀態管理` `#工作流`
+**摘要：** 多 AI 接力斷片的根因：聊天是時間線不是狀態機，「當前狀態」藏在聊天裡下一個模型只能猜。解法是把每個可交接任務壓成一張 AI Task Card——六節點流程（human request→working conversation→task card→execution place→artifact→writeback）、10 欄位最小卡（goal/boundary/context/current_state/artifact/acceptance/hard_gate/next_action/owner/updated_at，每欄防一種常見錯誤）。hard gate 清單（發布/資金/帳號/憑證/deploy/破壞性清理必停人類確認）；boundary 四分類（repo/artifact/system/decision_bound）防任務錯位。核心四句：對話推進、任務卡持狀態、產物證明、寫回接續。與本 vault 的 R17 契約表/7-Agent 工廠同構。
+**來源：** Leo（X @runes_leo，使用者貼原文）
+**建立：** 2026-07-10
