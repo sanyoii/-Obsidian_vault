@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 144 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 145 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-10
@@ -132,10 +132,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🧰 開發工具 / CLI（10 篇）
+## 🧰 開發工具 / CLI（11 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/crawl4ai — 開源 LLM 友善網頁爬蟲與擷取框架\|crawl4ai]] | 🔬 | ⏳ | 72.1K⭐ 自架開源網頁爬蟲，免 API Key，官方附 Claude Skill + MCP Bridge；與 firecrawl（SaaS）互補 |
 | [[Github/repos/tw93-Pake\|Pake]] | 📎 | ✅ | 網頁轉桌面 App（Tauri） |
 | [[Github/repos/Headroom — AI Agent Context 壓縮層\|Headroom]] | 🔬 | ✅ | AI context 壓縮 60-95% |
 | [[Github/repos/PixelRAG — 像素原生 RAG，截圖讓 AI 用視覺讀網頁\|PixelRAG]] | 🔬 | ✅ | 截圖讓 AI 視覺讀取 |

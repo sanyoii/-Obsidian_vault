@@ -7,7 +7,7 @@ generated: 2026-07-10
 # Claude 索引
 
 > 此檔由 refresh-index.ps1 自動生成；描述由 AI 補（保留既有描述，不會被洗回）
-> 檔案數：19 篇
+> 檔案數：20 篇
 
 - [[Claude/18個改變一切的 Claude Code Settings|18 個改變一切的 Claude Code Settings]] — 實際套用的 settings.json 進階設定與說明
 - [[Claude/7-Agent 工廠工作流 SOP|7-Agent 工廠工作流 SOP]] — 七步 Agent 分工流程，研究→規格→開發→測試→驗收
@@ -24,6 +24,7 @@ generated: 2026-07-10
 - [[Claude/Karpathy 最高遵守原則 — AI 行為準則|Karpathy 最高遵守原則 — AI 行為準則]] — 最高優先級 AI 行為規範，覆蓋所有其他指令 #claude-code #principles #guidelines #karpathy
 - [[Claude/Karpathy program.md Skill 設計哲學 — 讓 Agent 可靠工作的六個原則|Karpathy program.md Skill 設計哲學 — 讓 Agent 可靠工作的六個原則]] — autoresearch 拆解的 6 個 Skill 設計原則，可直接移植 #claude-code #skills #agent-design #karpathy
 - [[Claude/loop-engineering-karpathy-method|Loop Engineering — Karpathy Method 與 Bilevel Autoresearch]] — Loop 三要素/需不需要loop自測/Karpathy AutoResearch案例(700實驗20項改進)/五部件/Bilevel 5倍改善/理解負債與認知投降 #claude-code #agent-design #loop-engineering #karpathy
+- [[Claude/clone-fable5-into-opus48|Clone Fable 5 into Opus 4.8 — 強模型行為蒸餾備份法]] — 7-12 Fable 5 改計費前的 brain backup 四步法：10領域常備指令+7條prompt工具箱+陷阱題驗證；本質＝institution 弱模型治理的消費者版；值得偷：陷阱題行為驗收+Health-Check漂移檢測 #claude #model-distillation #weak-model-governance
 - [[Claude/知識庫操作手冊|LLM 知識庫 — Claude Code 操作手冊]] — Vault 的 LLM 編譯器角色定義與知識庫維護流程
 - [[Claude/Obsidian Dashboard 路線圖|Obsidian Dashboard 路線圖]] — 指揮中心 Dashboard 開發階段規劃與進度追蹤
 - [[Claude/stitch-skills SKILL.md 結構分析 — Agent Skill 設計模式|stitch-skills SKILL.md 結構分析 — Agent Skill 設計模式]] — Google Stitch 14 個 SKILL.md 深度拆解，三種設計模式 #agent-design #skills #google-stitch #design-patterns #claude-code

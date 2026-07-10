@@ -4,6 +4,14 @@
 
 ---
 
+## [[Claude/clone-fable5-into-opus48|Clone Fable 5 into Opus 4.8 — 強模型行為蒸餾備份法]]
+**標籤：** `#claude` `#model-distillation` `#prompt-engineering` `#weak-model-governance`
+**摘要：** Newsletter 教學文（有訂閱導流成分，教學內容本身可用）。背景：2026-07-12 起 Fable 5 離開付費訂閱改按量計費（$10/$50 per M tokens，恰為 Opus 4.8 兩倍；與 vault 內 fable5-mastery 記載的 07-07 日期矛盾，以官方帳單頁為準）。核心方法「brain backup」四步：①用精心設計的 prompt 叫 Fable 5 把思考習慣寫成「給接替者的第二人稱命令式常備指令」，涵蓋 10 領域（意圖解讀/問題拆解/力氣配置/驗證/已知vs猜測標記/自我攻擊/完整性/拒絕瞎猜/交付順序/假能力10樣態），格式強制 trigger-action「見X做Y」、零判斷可執行、附抓錯範例、結尾發送前檢查閘門 ②存檔 ③貼進 Claude Projects instructions 配 Opus 4.8 ④陷阱題驗證（連環折扣 30%+20%≠50%，實為44%——素模型順著念、裝備版該重算抓錯）。附 7 條 prompt 工具箱（Brain Backup/Trap Test/Fix-It/Shrink-It/Make-It-Mine/Repeat-Task Interview/Health-Check 月度指令複述）。與本環境對照：本質＝docs/institution/ 弱模型治理的消費者版（零新增量但驗證方向）；真正值得偷的是「陷阱題行為驗收測試」（institution 缺）與「Health-Check 指令漂移檢測」。
+**來源：** Hamza（@humzaakhalid）newsletter，使用者貼原文（無 URL）
+**建立：** 2026-07-10
+
+---
+
 ## [[Claude/loop-engineering-karpathy-method|Loop Engineering — Karpathy Method 與 Bilevel Autoresearch]]
 **標籤：** `#claude-code` `#agent-design` `#loop-engineering` `#karpathy`
 **摘要：** 解讀文，講「loop」（目標導向、AI 自我反覆直到達標）與一問一答式 prompt 的本質差異。Loop 三要素：verifier（沒有真檢查就只是 agent 自己說自己對）、state（記錄已試過什麼，否則每輪重犯同樣錯誤）、stop condition（達標或碰到嘗試上限就停）。附「你是否真的需要 loop」四項自測：任務至少每週重複、驗證可自動化、token 預算撐得住浪費、agent 有真工具——四者缺一就不划算。核心案例是 Karpathy 2026年3月發布的 AutoResearch repo（train.py/prepare.py/program.md 三檔案、630行），一個月破 6.6萬星，人類只寫 program.md、agent 跑700次實驗找到20項連 Karpathy 自己都漏掉的優化（如 attention 裡漏乘的 scalar）；Shopify CEO 用它一晚讓內部模型品質提升19%、體積砍半。一個可運作的 loop 由五部件組成：Automation（心跳）、Skill（知識累積）、Sub-agents（寫的人與檢查的人分開）、Connectors（能實際動作）、Verifier（真正的關卡）。之後兩位研究者發表 Bilevel Autoresearch，在 inner loop 外疊加 outer loop（觀察 inner loop 卡在哪、生成新程式碼改變其搜尋方式），同一顆 LLM 就讓 GPT 預訓練 benchmark 進步 5 倍（非 5%）。文末誠實承認 loop 不解決的兩個問題：comprehension debt（理解負債，跑得越順欠得越多）與 cognitive surrender（認知投降，懶得再形成判斷）——同一個 loop 動作，用在深度理解的工作上加速、或用來逃避理解工作本身，結果完全相反，loop 本身分不出差別。
@@ -50,6 +58,14 @@
 **原作者：** @gemchange_ltd  
 **編譯者：** Mr.RC (@insidersdotbot)
 **建立：** 2026-07-07
+
+---
+
+## [[Quant-Trading/ai-24h-risk-monitoring|AI 24 小時盯盤——普通人可用的機構級風控四層架構]]
+**標籤：** `#quant` `#風控` `#AI應用` `#交易系統`
+**摘要：** 機構級風控的護城河不是「AI 比人聰明」，而是「永遠在線＋不可臨時更改的硬規則」。四層架構：實時監控（填補注意力空檔）、異常檢測（假警報減四到六成、命中率保 99%）、硬編碼熔斷線（冷靜時定死、AI 不得臨場改）、壓力測試（「集體跌 20% 會怎樣」）。三個零代碼落地動作＋三大局限（極端行情 AI 最不可靠、警報疲勞、風控是護欄非自動駕駛）。背景數據：2026 年美股 60–70% 交易由 AI/演算法完成。
+**來源：** 使用者提供（作者/平台不明，簡體財經科普文）
+**建立：** 2026-07-10
 
 ---
 

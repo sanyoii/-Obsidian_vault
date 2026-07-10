@@ -54,6 +54,8 @@
 ## 2026-07
 
 ### 2026-07-10 | COMPILE
+- `2026-07-10 16:31 | COMPILE | raw/sources/2026-07-10_ai-24h-risk-monitoring.md → wiki/Quant-Trading/ai-24h-risk-monitoring.md` | 簡體中文財經科普文；機構級風控四層架構（實時監控/異常檢測/硬編碼熔斷線/壓力測試）轉繁體 wiki 筆記；護城河：「永遠在線＋硬規則」而非「AI 比人聰明」；關鍵數據：60–70% 美股交易由 AI 完成、銀行反欺詐假警報減 45–65% 同保 99% 命中；三落地動作（寫熔斷線/每日體檢/月度壓力測試）；三局限（極端行情失效/警報疲勞/非自動駕駛）；三啟示（永遠在線>聰明/提前定規則/差距縮小）；反向連結驗證與已存在檔案對齊（2026-polymarket-quant-math-roadmap / _index）
+- `2026-07-10 09:10 | COMPILE | raw/sources/2026-07-10_clone-fable5-into-opus48.md → wiki/Claude/clone-fable5-into-opus48.md` | 使用者貼原文入庫（Hamza newsletter）；brain backup 四步法（10領域常備指令+7 prompt+陷阱題驗證）；批判脈絡：institution 弱模型治理消費者版、7-12 vs 07-07 日期矛盾註記、訂閱導流漏斗標明；值得偷：陷阱題行為驗收+Health-Check 漂移檢測；Claude/_index 19→20
 - `2026-07-10 00:33 | COMPILE | raw/sources/2026-07-10_loop-engineering-karpathy-method.md → wiki/Claude/loop-engineering-karpathy-method.md` | 使用者貼原文入庫（無 URL）；解讀 Loop Engineering 方法論：loop 三要素（verifier/state/stop condition）、需不需要 loop 四項自測、Karpathy AutoResearch 案例（三檔案架構、700實驗20項改進、Shopify案例19%提升）、五組成部件、Bilevel Autoresearch（outer/inner loop 5倍改善）、簡化版可執行 prompt、誠實兩問題（comprehension debt/cognitive surrender）；Claude/_index.md 計數 18→19；反向連結確認對齊 Karpathy 最高遵守原則 / Karpathy program.md Skill 設計哲學
 
 ### 2026-07-08 | COMPILE
