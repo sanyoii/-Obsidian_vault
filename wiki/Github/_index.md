@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 147 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 148 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-10
@@ -31,7 +31,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（30 篇）
+## 🛠️ Claude Code / Skills（31 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -43,6 +43,7 @@ tags: [github, index, repos]
 | [[Github/repos/system_prompts_leaks — 全網 AI System Prompt 逆向存檔庫\|system_prompts_leaks]] | 🔬 | ⏳ | 48.7K⭐ 全網 AI system prompt 存檔（登華郵）；獨有 Claude Code bundled-skills 原始碼；選檔匯入不整包 |
 | [[Github/repos/vercel-labs-agent-skills — web-design-guidelines 前端審查 Skill\|web-design-guidelines]] | 🔬 | ✅ | Vercel官方 28.6K⭐，Fetch-on-Demand 即時抓 100+ 前端規則審查UI，437K次安裝 |
 | [[Github/repos/claude-real-video — 讓 Claude 真正看影片的本機關鍵幀擷取工具\|claude-real-video]] | 🔬 | ✅ | 619⭐ 場景感知+去重關鍵幀擷取，內建 Claude Code Skill，4 天登 HN 首頁 |
+| [[Github/repos/claude-video — 讓 Claude 真正看影片的 watch 技能\|claude-video]] | 🔬 | ❌ | 7.7K⭐ /watch 上游原始版（claude-real-video 即其平行實作）；yt-dlp+ffmpeg 四段細節撥盤+MAD 去重，跨 50+ host；與已裝 claude-real-video 重複故不裝 |
 | [[Github/repos/social-cards-engine — 品牌無關的社群圖卡引擎\|social-cards-engine]] | 🔬 | ⏳ | 23⭐ 品牌無關社群圖卡引擎，brand pack+雙審核員（carousel-joker/meme-joker），2 天新 |
 | [[Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件\|addyosmani/agent-skills]] | 📎 | ✅ | 32 Skills + 8 Commands + 4 Agents |
 | [[Github/repos/ECC — Claude Code harness-native 操作系統\|ECC]] | 📎 | ⏳ | 100+ skills，182K⭐ |
