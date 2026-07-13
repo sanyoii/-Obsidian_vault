@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 149 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 150 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-10
@@ -78,7 +78,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🔮 命理（八字 / 紫微 / 人類圖 / 占星）（10 篇）
+## 🔮 命理（八字 / 紫微 / 人類圖 / 占星 / 六爻）（11 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -92,6 +92,7 @@ tags: [github, index, repos]
 | [[Github/repos/ruijayfengziwei — 現代化紫微斗數命盤分析工具\|紫微知道]] | 📎 | 📌 | 現代化紫微 |
 | [[Github/repos/Madison-de-Chao-rainbow-sanctuary-report-site — 命理解讀報告銷售落地頁\|Rainbow Sanctuary]] | 📎 | 📌 | 命理報告落地頁模板 |
 | [[Github/repos/zhenheco-life-chart-engine — 三合一原生排盤引擎（西洋星盤×人類圖×紫微斗數）\|life-chart-engine]] | 🔬 | ✅ | 三系統 deterministic 引擎；astronomy-engine+iztro；CLI+JSON 供 agent；對口 hd-decode/ziwei/fate |
+| [[Github/repos/I-ching — 納甲六爻占卜起卦引擎\|I-ching（六爻）]] | 🔬 | ⏳ | 0⭐ 個人專案；納甲六爻**占卜起卦**引擎（補命盤棧缺的占卜分支），sxtwl 節氣精確+deterministic 查表，Vercel/Eel/exe 三形態；⚠️無 LICENSE 不可直接複用 |
 
 ---
 
