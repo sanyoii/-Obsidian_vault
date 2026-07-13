@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 148 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 149 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-10
@@ -135,7 +135,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🧰 開發工具 / CLI（11 篇）
+## 🧰 開發工具 / CLI（12 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -150,6 +150,7 @@ tags: [github, index, repos]
 | [[Github/repos/farion1231cc-switch A cross-platform desktop All-in-One assistant tool for Claude Code, Codex, OpenCode, openclaw & Gemini CLI\|cc-switch（桌面版）]] | 📎 | ⏳ | 跨平台模型切換 |
 | [[Github/repos/codebase-memory-mcp — 高效能程式碼知識圖譜 MCP 伺服器\|codebase-memory-mcp]] | 🔬 | ⏳ | 19.5K⭐ 158 語言知識圖譜 MCP |
 | [[Github/repos/free-for-dev — 開發者免費 SaaS 資源清單\|free-for-dev]] | 🔬 | 📌 | 126K⭐ 61 分類 1226 個免費 SaaS 服務清單 |
+| [[Github/repos/CLIProxyAPI — 訂閱帳號包成 OpenAI 相容 API 的多帳號閘道\|CLIProxyAPI]] | 🔬 | ⏳ | 40.7K⭐ Go 代理把 Claude Code/Codex/Gemini/Grok 訂閱 OAuth 包成 OpenAI 相容 API+多帳號 round-robin；生產級架構+龐大衍生生態，⚠️訂閱當 API 違 ToS 帳號恐被封 |
 
 ---
 
