@@ -122,6 +122,10 @@ ccg 的 statusLine 模式是**橋接**：備份原 statusLine 設定，每次 re
 
 **決策樞紐**：實際常撞 5h 額度上限才值得走「讀三檔源碼 → CLAUDE.md 開 hook 例外 → 一週試用」流程；沒撞過直接跳過。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：實際常態性撞到 Claude Code 5 小時額度上限 → 讀三檔源碼（usage-handoff-hook.js/project-hooks.js/sanitize.js）→ CLAUDE.md 開 hook 例外 → 一週試用
+- **放棄條件**（→ ❌ 不裝）：持續未撞到 5 小時額度上限 → 跳過
+
 ---
 
 ## 相關連結

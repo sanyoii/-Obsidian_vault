@@ -119,6 +119,10 @@ tests/ + .github/     notebook 測試、防洩漏測試、weekly 外部漂移 CI
 
 ⏳ 觀望（按需選用）— 758MB、Python 3.14 + 重型深度學習依賴，整包 clone 不划算；且第三版逐 Part 發布中（目前僅到第 10 章，Part III–VI 未出）。建議：① 先逛 ml4trading.io 免費 primers（112 題）與 agent skills 頁面偷設計；② 對特定主題（如合成資料、微結構）再 sparse clone 對應章節目錄；③ 等全章節發布 + ml4t-* 套件出 beta 再評估整合 autohedge。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：全 27 章節發布完成（目前僅到 Part II 第 10 章），且 ml4t-* 套件（data/engineer/backtest/live 等）正式出 beta → 評估整合 autohedge
+- **放棄條件**（→ ❌ 不裝）：autohedge 專案確定不再復活，或第三版長期停滯未發布新章節 → 不評估整合
+
 ---
 
 ## 相關連結

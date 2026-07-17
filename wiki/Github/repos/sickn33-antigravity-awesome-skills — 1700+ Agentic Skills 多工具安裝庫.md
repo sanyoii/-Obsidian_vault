@@ -92,6 +92,10 @@ claude plugin marketplace add sickn33/antigravity-awesome-skills
 claude plugin install antigravity-bundle-aas-qa-test-automation@antigravity-awesome-skills
 ```
 
+復查觸發（2026-07-17 補，針對全量 1,700 skills 的觀望部分——QA plugin 已裝）：
+- **升級條件**（→ ✅ 裝）：QA 以外的其他領域 Specialized Plugin（如 AAS Security Engineer、AAS DevOps & Cloud 等 14 包之一）出現明確用途
+- **放棄條件**（→ ❌ 不裝）：QA bundle（已裝 8 skills）持續足夠覆蓋需求、無其他領域包需求 → 不擴大安裝全量 1,700 skills
+
 ---
 
 ### 相關連結

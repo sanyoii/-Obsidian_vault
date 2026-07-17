@@ -103,6 +103,10 @@ README 列 10+ 下游專案（共同賣點「no API keys needed」）：vibeprox
 - 踩雷面：核心玩法（訂閱 OAuth 當 API）很可能違反 Anthropic/OpenAI ToS，帳號有被封風險；主要解「多帳號分攤額度」，若只有單一訂閱、額度到頂等重置，幫助有限。
 - if-then：願開多帳號分攤 + 接受 ToS 灰色地帶 → 值得試（隔離環境、鎖 Management API）；只想單帳號省事用 Claude Code → 跳過。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：實際常態性撞到 Claude Code 額度上限，且願意接受多帳號分攤的 ToS 灰色地帶風險
+- **放棄條件**（→ ❌ 不裝）：僅有單一訂閱帳號、額度到頂等重置即可應付 → 多帳號分攤的核心價值用不到
+
 ## 相關連結
 
 - [[Github/repos/farion1231cc-switch A cross-platform desktop All-in-One assistant tool for Claude Code, Codex, OpenCode, openclaw & Gemini CLI\|cc-switch（桌面版）]] — 模型/帳號切換工具

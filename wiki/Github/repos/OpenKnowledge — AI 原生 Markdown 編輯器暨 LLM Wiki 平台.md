@@ -138,6 +138,10 @@ ok start --open  # 啟動 Web 編輯器
 - 專案極度年輕（pre-1.0），API 仍在劇烈變動
 - 值得參考：Agent Skills 管理 UI 和 MCP 整合模式
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：推出 Windows 桌面 App，且 API 進入 1.0 穩定（不再劇烈變動）→ 重新評估是否取代 Obsidian workflow
+- **放棄條件**（→ ❌ 不裝）：持續維持 Web UI + CLI-only（無 Windows 桌面版）→ 不值得切換，維持 Obsidian
+
 ---
 
 ### 相關連結

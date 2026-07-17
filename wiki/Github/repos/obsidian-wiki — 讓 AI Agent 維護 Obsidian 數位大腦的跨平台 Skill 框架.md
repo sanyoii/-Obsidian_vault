@@ -42,6 +42,10 @@ tags:
 
 ⏳ **觀望** — 功能與現有 gbrain + Obsidian Wiki 索引自動化 + claude-mem 記憶系統高度重疊，尤其 claude-history-ingest 會與既有 memory 機制搶著寫 vault。若要引入需先設計清楚分工邊界（例如只取用 wiki-lint/wiki-dedup 這類補強型 skill），且 macOS 導向的排程腳本（launchd）在 Windows 上需改寫。專案品質本身高（活躍維護、測試覆蓋、多 Agent 相容），列入候選但不建議現在整套安裝。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：明確設計出與 gbrain/claude-mem 不衝突的分工邊界（如只取用 wiki-lint/wiki-dedup 補強型 skill），且完成 macOS launchd 腳本改寫為 Windows 相容版本
+- **放棄條件**（→ ❌ 不裝）：gbrain + Obsidian 索引自動化 + claude-mem 持續覆蓋現有需求、無設計分工邊界的動機 → 不裝
+
 ## 相關連結
 
 - 與現有 gbrain（Wiki 索引自動化）、claude-mem（跨 session 記憶）功能定位有重疊，需先釐清分工

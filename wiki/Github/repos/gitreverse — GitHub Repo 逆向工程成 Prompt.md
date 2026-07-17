@@ -80,6 +80,10 @@ GitReverse 是一個 Web 應用，貼上任何公開 GitHub repo 的 URL，就�
 
 ⏳ **觀望** — 線上版 https://gitreverse.com 可直接使用，無需自建。自建需 LLM API key + Supabase + Stripe。概念有趣但使用場景有限。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：出現需要自建（離線/客製化）逆向生成 prompt 的具體需求，且線上版無法滿足
+- **放棄條件**（→ ❌ 不裝）：線上版 gitreverse.com 持續可用且免費 → 不需自建
+
 ---
 
 ### 相關連結

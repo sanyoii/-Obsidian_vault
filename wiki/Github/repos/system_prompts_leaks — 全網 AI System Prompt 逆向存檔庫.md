@@ -50,6 +50,10 @@ tags:
 - **值得**：把 `Anthropic/Claude Code/bundled-skills/` 關鍵檔（code-review.md、deep-research/SKILL.md、simplify.md）單獨存進 vault/gbrain，當寫 skill、寫制度檔時的一手範本
 - **不值得**：整庫近 2M token 匯 gbrain，多數是不用的他廠 prompt，稀釋檢索品質
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：需要寫新 skill 或制度檔時，用得到官方 code-review/deep-research/simplify 等 bundled-skills 原始 prompt 作範本
+- **放棄條件**（→ ❌ 不裝）：持續無撰寫新 skill/制度檔的參考需求 → 不需要選擇性匯入
+
 ## 相關連結
 
 - [[Github/repos/x1xhlol-system-prompts-and-models-of-ai-tools]] — 同類姊妹庫（30+ 工具），本 repo 更大更新且獨有 Claude Code bundled-skills 原始碼；institution 制度檔（ROUTER/ORCHESTRATION）先前以 x1xhlol 為設計參考，此庫可補充 Claude Code 深度

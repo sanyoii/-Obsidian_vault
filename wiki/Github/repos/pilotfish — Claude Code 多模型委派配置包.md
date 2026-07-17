@@ -70,6 +70,10 @@ pilotfish 不是程式庫，是一份純設定包：把「主 session 用 Fable 
 
 ⏳ 觀望，不安裝 — 概念與現有 institution 體系高度同構，非新增能力；安裝有全域設定覆寫與命名衝突風險。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：institution 體系需要「模型棄用/降級只改一行 frontmatter」的三層分離重構，且能解決與 caveman crew 的命名衝突（尤其 Explore 覆寫）
+- **放棄條件**（→ ❌ 不裝）：institution 體系與 caveman crew 現狀持續運作無礙、無重構需求 → 不採用
+
 ---
 
 ## 相關連結

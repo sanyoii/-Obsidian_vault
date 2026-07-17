@@ -128,6 +128,10 @@ laowangba-pmprototype-skill/
 3. Anti-Slop 方法論本身與已裝的 `frontend-design`/`high-end-visual-design`/`stop-slop` 高度重疊，價值增量僅在「B/C 端 token 路由表」這一份文件，若未來真有 PM 側需求，直接讀 `DESIGN.md`/`anti-slop-checklist.md` 兩份參考即可，不需要整包安裝。
 4. Repo 僅 1 天新、單人帳號、零 issue/PR/release，尚無社群驗證信號。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：本機安裝 Figma MCP/插件，且承接 PM/原型設計相關專案
+- **放棄條件**（→ ❌ 不裝）：持續無 Figma MCP 且非 PM 工作範疇 → 不裝，僅參考 DESIGN.md/anti-slop-checklist.md 兩份文件
+
 ---
 
 ## 延伸操作

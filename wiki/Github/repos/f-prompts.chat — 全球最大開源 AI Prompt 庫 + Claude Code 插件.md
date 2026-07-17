@@ -119,6 +119,10 @@ f/prompts.chat (主 repo)
 
 若要試裝：基本查詢不需 API Key，先裝再評估再決定是否留著。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：需要大量 Prompt 探索的場景出現（如開新專案、寫教學材料），且現有 wiki/AI-Prompts 15 個收藏不敷使用
+- **放棄條件**（→ ❌ 不裝）：wiki/AI-Prompts 收藏庫與 find-skills/skill-creator 持續滿足需求 → 不裝
+
 ---
 
 ## 相關連結

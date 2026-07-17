@@ -57,6 +57,10 @@ verdict: 開源 AI 影片製作系統，Agent 驅動全自動產出影片
 
 ⏳ **觀望** — 功能非常強大但 AGPLv3 授權限制商用、需要 FFmpeg + Node.js + Python 全套環境、且與現有 `ai-video-pipeline` 專案定位重疊。建議先觀察其 Skill 是否可單獨抽取使用。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：確認其 `.claude/skills/`（HyperFrames/Remotion/ManimGL/Flux/HeyGen 等）可單獨抽取使用，不需引入整包 AGPLv3 環境
+- **放棄條件**（→ ❌ 不裝）：ai-video-pipeline 專案方向確定不需要參考此 repo，或已被其他方案完全取代 → 不再觀望
+
 ## 相關連結
 
 - [[ai-media-generator — 跨平台 AI 媒體生成 Prompt Skill]]

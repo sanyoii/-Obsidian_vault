@@ -55,6 +55,10 @@ AI coding agent，可在沙箱環境中自主執行開發任務：寫程式碼�
 
 **安裝建議：** ⏳ 觀望。已有 Claude Code 覆蓋核心需求，OpenHands 適合需要完全自主執行的場景。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：出現需要「完全自主無人值守執行」的具體任務，Claude Code 人在迴圈協作模式不敷使用
+- **放棄條件**（→ ❌ 不裝）：持續以 Claude Code 協作模式滿足需求 → 不裝
+
 ---
 
 ### 2. Continue — 開源 IDE AI 編碼助手
@@ -80,6 +84,10 @@ AI coding agent，可在沙箱環境中自主執行開發任務：寫程式碼�
 **與現有系統的關係：** Claude Code 是 CLI / 終端為主，Continue 是 IDE 內嵌插件。如果你更常在 VS Code 裡工作且想要 inline autocomplete，Continue 可以補位。
 
 **安裝建議：** ⏳ 觀望。VS Code 已有 Claude Code 擴充，Continue 的差異化在於可接本地模型和更深度的 IDE 整合。
+
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：需要接本地模型（如 Ollama）跑 IDE inline autocomplete，且 Claude Code VS Code 擴充無法滿足
+- **放棄條件**（→ ❌ 不裝）：持續只用雲端 Claude API、無本地模型需求 → 不裝
 
 ---
 
@@ -135,6 +143,10 @@ LLM 應用開發框架，提供 Chain（鏈式呼叫）、Agent（自主決策�
 **與現有系統的關係：** 可替代 Task Scheduler + 自寫 PowerShell 腳本的自動化方案。MCP 支援意味著可與 Claude Code 整合。但現有 social-monitor / 各種 .bat 腳本已能滿足需求。
 
 **安裝建議：** ⏳ 觀望。功能強大但引入新平台的學習成本不低。等現有腳本方案遇到維護瓶頸時再考慮。
+
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：現有 PowerShell/.bat 自動化腳本方案遇到明顯維護瓶頸（如複雜條件分支/多系統整合難以用腳本表達）
+- **放棄條件**（→ ❌ 不裝）：現有腳本方案持續穩定運作、無維護瓶頸 → 不裝
 
 ---
 

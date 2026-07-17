@@ -155,6 +155,10 @@ huangwb8/skills/
 - `parallel-vibe` — 多工作區並行探索（概念獨特）
 - `compact-bensz-skills` — Skill 壓縮優化
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：需要「多方案 A/B 比較」的重構/架構決策場景（parallel-vibe 用途），或需要 Skill 本身的批判性測試（auto-test-skill）
+- **放棄條件**（→ ❌ 不裝）：現有 Agent tool 的 `isolation: "worktree"` 已能滿足多方案探索需求，且無 Skill 品質測試需求 → 不裝
+
 ---
 
 ### parallel-vibe 深入說明

@@ -49,6 +49,10 @@ Postgres + pgvector（主資料庫）
 
 ⏳ **觀望** — 功能與已安裝的 claude-mem 高度重疊，且自架需要 Postgres+pgvector、背景 worker、至少一組 LLM API Key（非免費），Managed SaaS 則是付費 hosted service。在「單機個人知識庫 + 已有 claude-mem」現況下，導入會增加架構複雜度而非減少。若未來有「多 AI agent 互相協作需交叉建模對方」的具體需求（多 bot 群組、多人共用一個 agent），值得重新評估。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：出現「多 AI agent 互相協作需交叉建模對方」的具體需求（多 bot 群組、多人共用一個 agent）
+- **放棄條件**（→ ❌ 不裝）：持續單機個人知識庫 + claude-mem 已覆蓋需求 → 不裝
+
 ## 相關連結
 
 - 與已安裝的 claude-mem（跨 session 記憶）定位高度重疊，需先釐清分工才有整合意義

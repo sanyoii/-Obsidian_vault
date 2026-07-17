@@ -85,6 +85,10 @@ bin/cli.mjs → src/cli.ts（指令入口）
 
 ⏳ 觀望 — CLI 工具本身不需要「安裝」（npx 隨用隨跑即可），其 `find-skills` Skill 已在本機生效中。若想用它管理現有 skills 目錄的同步，建議先在測試目錄試跑 `npx skills list` 確認能否正確辨識 `d:\Claude\.claude\skills\` 下現有的自製 Skill，再決定是否取代現有手動同步 SOP。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：測試目錄試跑 `npx skills list` 確認能正確辨識現有自製 Skill（symlink 模式在 Windows 相容）→ 取代現有手動雙位置同步 SOP
+- **放棄條件**（→ ❌ 不裝）：`npx skills list` 測試無法正確辨識現有自製 Skill，或 symlink 在 Windows 不相容 → 維持現有手動雙位置同步 SOP
+
 ## 相關連結
 
 - [[Github/repos/antigravity-awesome-skills — Agent Skills 收藏庫]]（find-skills 可能來源之一）

@@ -115,6 +115,10 @@ guizang-material-illustration/
 
 ⏳ 觀望 — 若已有 imagegen/GPT-Image 生成管線且常需要「帶中文標籤的解釋圖」（教育配圖、圖表美化、周報配圖），值得安裝試用；純方法論參考則可只借鏡其 SKILL.md 工作流設計（不強迫選模式、8 種圖解結構分類）與 QA checklist 結構，不必整包安裝。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：本機建立 imagegen/GPT-Image 生成管線，且常態需要帶中文標籤的解釋圖/圖表美化/周報配圖
+- **放棄條件**（→ ❌ 不裝）：持續無 imagegen/GPT-Image 生成管線可用 → 只借鏡 SKILL.md 工作流設計，不整包安裝
+
 ## 相關連結
 
 - [[Github/_index|Github Repo 分析總索引]]

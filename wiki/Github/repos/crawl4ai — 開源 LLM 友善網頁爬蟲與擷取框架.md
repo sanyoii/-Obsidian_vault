@@ -159,6 +159,10 @@ deploy/docker/
 
 ⏳ 建議安裝、尚未裝 — 理由：72K+ 星、維護活躍（近期仍每 1-2 週發版含安全修補）、官方直接提供 Claude Code Skill 套件與 MCP Bridge，與本環境「網頁爬取免 API Key」的潛在需求高度吻合；但需 Docker + Playwright 環境（≥4GB RAM），且目前 defuddle/agent-reach 已覆蓋大多數單頁擷取需求，安裝優先度中等——待有「整站深度爬取」或「firecrawl API Key 遲遲未到位」的實際需求時再裝。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：出現「整站深度爬取」的實際需求，或 FIRECRAWL_API_KEY 持續未申請成功
+- **放棄條件**（→ ❌ 不裝）：defuddle + agent-reach 持續覆蓋所有單頁擷取需求，且 FIRECRAWL_API_KEY 已成功申請 → 不需要 crawl4ai 作為替代方案
+
 ## 整合評估：不併入 repo-intel
 
 **結論：不建議把 crawl4ai 整合進 `repo-intel` skill（R13 判「不做」）。**

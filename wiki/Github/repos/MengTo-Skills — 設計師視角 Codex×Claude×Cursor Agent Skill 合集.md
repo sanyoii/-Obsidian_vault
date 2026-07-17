@@ -143,6 +143,10 @@ Skills/
 2. web-design 62 個視覺風格卡屬於「一次性套用」型模板，非通用技術層 skill（不像 gsap/animejs/css-animations 走 HyperFrames 決策），單獨挑幾個有需要時再手動複製會比整包裝更乾淨。
 3. 真正有增量的是 codex 專屬工作流與 swiftui-pro/seo-audit，若未來要接入 Codex agent 或做 SwiftUI review，可單獨挑選這幾個安裝，不需要裝整個 75-skill 庫。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：未來要接入 Codex agent，或需要 SwiftUI review → 單獨安裝 codex 專屬工作流或 swiftui-pro/seo-audit
+- **放棄條件**（→ ❌ 不裝）：持續無 Codex/SwiftUI 需求，且 UI 分類與現有 design-taste-frontend 等 skills 重複的狀態不變 → 不裝
+
 ---
 
 ## 相關連結

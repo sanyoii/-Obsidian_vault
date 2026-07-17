@@ -108,6 +108,10 @@ RUN_IN_SESSION.md（in-session 執行合約）＋ LOOP.md（人讀）＋ run-loo
 
 ⏳ **觀望** — 理由：紀律本體（跨模型驗收、可執行成功標準、多重停止護欄）本機 institution 體系已覆蓋約八成，重複安裝不符合 R13；它獨有的增量是「loop 規格工件化（loop.yaml 可版控可攜）」與五份現成 rubrics/模板。if-then：下次要設計**多 gate、需跨模型 judge 的常設迴圈**（例如每日 bug-hunt 巡檢）時再裝，屆時它省的是規格設計時間；平時單次任務用現有 R17 契約表即可。3 週新 + 單人維護，也值得等它過第一個月再看存活度。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：需要設計「多 gate、跨模型 judge 的常設迴圈」（例如每日 bug-hunt 巡檢）
+- **放棄條件**（→ ❌ 不裝）：發布滿一個月後轉為停滯（無新 release/commit、issue 無回應）→ 存活度不足，放棄追蹤
+
 ## 相關連結
 
 - [[Github/repos/fable-harness — Fable 行為協議移植套件（hooks 強制執行層）|fable-harness]] — 同樣把「驗證紀律」工件化，但走 hooks 強制層；looper 走 pre-flight 設計層，互補

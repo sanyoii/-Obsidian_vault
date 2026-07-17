@@ -121,6 +121,10 @@ claude-howto/
 
 ⏳ 觀望 — 內容品質高但屬於「教學閱讀材料」而非「安裝即生效」的工具。建議：不整包安裝，需要時單獨參考 `self-assessment`/`lesson-quiz` 兩個 Skill 的設計（互動測驗型 Skill 在本環境尚無同類），或在寫 CLAUDE.md/subagent 模板時當作交叉比對的外部參考點。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：要設計互動診斷型 Skill（程度自評/測驗類），或重寫 CLAUDE.md/subagent 模板時需要外部參考點
+- **放棄條件**（→ ❌ 不裝）：持續無互動診斷型 Skill 或制度文件重寫需求 → 不需要參考，純資料保留即可
+
 ## 相關連結
 
 - [[Github/repos/pilotfish — Claude Code 多模型委派配置包|pilotfish]] — 同為 Claude Code 配置/教學型 repo，可比較設計取向

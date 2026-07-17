@@ -158,6 +158,10 @@ Repo 建立僅 4 個月、社群討論仍集中在近期爆紅這一波，資料
 
 ⏳ 觀望 — 不整包安裝，但把「LaTeX PDF 編譯後視覺校對 + ATS 文字層驗證」這個設計模式記下來，未來若 career-ops/jobsmith 要補「產出可投遞履歷 PDF」這塊功能時可回頭參考本 repo 的 `/apply` 實作細節（`.claude/commands/apply.md`）。理由：① 求職網站部分是丹麥市場專屬、對台灣求職無直接用處；② 需要另外安裝 LaTeX 工具鏈，成本不小；③ 現有 career-ops+jobsmith 已覆蓋抓取與評分，此 repo 的差異化價值集中在應徵文件產出這一段，屬於「未來想補的功能」而非「現在缺的功能」。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：career-ops/jobsmith 要新增「產出可投遞履歷 PDF」功能時 → 參考本 repo 的 drafter-reviewer 雙 Agent + PDF 視覺校對迴圈設計
+- **放棄條件**（→ ❌ 不裝）：career-ops/jobsmith 持續不需要 PDF 產出功能 → 不需參考，可徹底跳過
+
 ---
 
 ## 延伸操作

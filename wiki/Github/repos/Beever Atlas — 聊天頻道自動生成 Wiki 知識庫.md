@@ -116,6 +116,10 @@ cd beever-atlas
 
 **最值得借鑑的設計：** Wiki 編譯器（compiler.py）和漂移偵測（wiki_drift_comparator.py）的架構，可參考用於 Obsidian 知識庫自動化。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：團隊實際出現需要處理的 Slack/Discord/Teams/Mattermost 聊天記錄，且能承擔 Docker + 4 個 data store 的部署成本
+- **放棄條件**（→ ❌ 不裝）：等待 6 個月以上仍無團隊聊天頻道需要處理，僅保留 compiler.py／wiki_drift_comparator.py 的設計參考價值
+
 ---
 
 ## 相關連結

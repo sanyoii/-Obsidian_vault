@@ -66,6 +66,10 @@ Music Assistant 是一個**永遠在線**的媒體庫管理伺服器，統一管
 
 **⏳ 觀望** — 若有 Home Assistant 環境，可評估安裝為 Add-on；純 Claude Code / Obsidian 工作流目前無迫切需求，且需重量級 Docker + FFmpeg + PyTorch 執行環境，不適合直接裝在開發機。
 
+復查觸發（2026-07-17 補）：
+- **升級條件**（→ ✅ 裝）：建置 Home Assistant 環境
+- **放棄條件**（→ ❌ 不裝）：持續無 Home Assistant 環境、純 Claude Code/Obsidian 工作流 → 不裝
+
 ---
 
 ## Tags
