@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 152 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 153 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-10
@@ -200,10 +200,11 @@ tags: [github, index, repos]
 
 ---
 
-## 📖 知識管理 / Wiki（6 篇）
+## 📖 知識管理 / Wiki（7 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/graphify — 一指令把資料夾建成可查詢知識圖譜的多平台 Skill\|graphify]] | 🔬 | ⏳ | 89K⭐ Karpathy wiki 構想 48hr 實作；tree-sitter 零token建圖+圖遍歷查詢+信心標籤；--obsidian 出全 wikilink vault；升級條件＝jobsmith 試建圖驗分工 |
 | [[Github/repos/Vault-for-Founders — 創辦人 AI 知識庫建置框架\|Vault-for-Founders]] | 🔬 | 📌 | 225⭐ Obsidian+Git 創辦人 Vault 方法論；v2 索引分層/attention budget 兩條規則可借鏡，不建置 |
 | [[Github/repos/obsidian-wiki — 讓 AI Agent 維護 Obsidian 數位大腦的跨平台 Skill 框架\|obsidian-wiki]] | 🔬 | ⏳ | 2.6K⭐ Karpathy LLM Wiki 模式，跨 15+ Agent；與現有 gbrain/claude-mem 重疊需先釐清分工 |
 | [[Github/repos/Beever Atlas — 聊天頻道自動生成 Wiki 知識庫\|Beever Atlas]] | 📎 | ⏳ | 聊天→Wiki 自動生成 |
