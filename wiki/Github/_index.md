@@ -6,14 +6,14 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 153 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 154 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-10
 
 ---
 
-## 🤖 AI Agent 框架（11 篇）
+## 🤖 AI Agent 框架（12 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -28,6 +28,7 @@ tags: [github, index, repos]
 | [[Github/repos/datawhalechinahello-agents 📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程\|hello-agents]] | 📎 | 📌 | 中文智能體教程 |
 | [[Github/repos/Threads 推薦工具型 Repo 六選\|工具型 Repo 六選]] | 🔬 | 📌 | OpenHands/Continue/LangChain/n8n/awesome-selfhosted/awesome-claude-code |
 | [[Github/repos/From idea to AI MCP tools —APIs that power your workflow.快速串接、即時上手，為你的程式或 AI Agent 裝載超能力。支援各 AI Agent 與自動化主流平台，無需部署。\|Superior APIs]] | 📎 | 📌 | MCP 工具 API 平台 |
+| [[Github/repos/Hermes-maces — Hermes Agent 的潛意識記憶層插件\|Hermes-maces]] | 🔬 | ❌ | 1⭐ 一天大；Hermes（Nous Research）專用潛意識記憶插件；本環境無宿主不裝，但權重衰減公式+advisory/審批雙通道+輸出邊界驗證三模式值得讀 |
 
 ---
 
