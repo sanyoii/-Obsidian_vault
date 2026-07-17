@@ -53,6 +53,9 @@
 
 ## 2026-07
 
+### 2026-07-17 | COMPILE
+- `2026-07-17 07:15 | COMPILE | github.com/openai/codex-plugin-cc → wiki/Github/repos/openai-codex-plugin-cc.md` | repomix 分析（62 檔 / 96K tokens）；OpenAI 官方 Codex-in-Claude-Code plugin，Apache-2.0，純 Node ESM 零依賴；`/codex:review`+`adversarial-review`+`rescue`+`transfer`+`status/result/cancel`；透過 Codex app-server protocol；結論 ✅ 適合安裝（環境已裝其 codex-rescue subagent/skill，正是上游來源）
+
 ### 2026-07-10 | COMPILE
 - `2026-07-10 22:23 | COMPILE | raw/sources/2026-07-10_multi-ai-task-card.md → wiki/Claude/multi-ai-task-card.md` | 使用者貼原文入庫（Leo @runes_leo 訂閱區導流文）；多 AI 任務卡工作流：聊天=時間線非狀態機、六節點（請求→對話→任務卡→執行位置→產物→寫回）、10 欄位最小卡、hard gate 清單、boundary 四分類；核心四句「對話推進/任務卡持狀態/產物證明/寫回接續」；與 R17 契約表同構；_index 382→383、Claude/_index 20→21；反向連結驗證 3 檔皆存在（7-Agent 工廠工作流 SOP / Claude 工具全覽（2026）/ Claude 環境說明）
 - `2026-07-10 16:31 | COMPILE | raw/sources/2026-07-10_ai-24h-risk-monitoring.md → wiki/Quant-Trading/ai-24h-risk-monitoring.md` | 簡體中文財經科普文；機構級風控四層架構（實時監控/異常檢測/硬編碼熔斷線/壓力測試）轉繁體 wiki 筆記；護城河：「永遠在線＋硬規則」而非「AI 比人聰明」；關鍵數據：60–70% 美股交易由 AI 完成、銀行反欺詐假警報減 45–65% 同保 99% 命中；三落地動作（寫熔斷線/每日體檢/月度壓力測試）；三局限（極端行情失效/警報疲勞/非自動駕駛）；三啟示（永遠在線>聰明/提前定規則/差距縮小）；反向連結驗證與已存在檔案對齊（2026-polymarket-quant-math-roadmap / _index）
