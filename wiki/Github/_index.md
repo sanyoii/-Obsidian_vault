@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 154 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 155 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-10
@@ -32,10 +32,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（32 篇）
+## 🛠️ Claude Code / Skills（33 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/fable-method — Fable 5 工作法蒸餾成任何模型可跑的 Skill＋Eval\|fable-method]] | 🔬 | ⏳ | 1.6K⭐ Fable 5 工作法四 skill（think/act/prove/grow）＋15 輪對抗 eval；與 institution 同哲學不整裝，但 trap-fixture 迴歸測試是 institution 缺的真增量，升級條件＝下次改規則先寫 trap 測 |
 | [[Github/repos/emilkowalski-skills — Design Engineer 動效與 Apple 設計 Skill 合集\|emilkowalski/skills]] | 🔬 | ✅ | 6.8K⭐ Sonner/Vaul 作者的 4 個動效 Skill；決策層互補現有 css-animations/gsap 等技術層 skill；2026-07-10 已裝（雙位置+marketplace） |
 | [[Github/repos/guizang-material-illustration — 歸藏材質插畫 Claude Skill\|guizang-material-illustration]] | 🔬 | ⏳ | 463⭐ 3天新；純Prompt型配圖Skill，帶中文標籤材質插畫+圖表美化；op7418歸藏系列，與已裝guizang-ppt互補 |
 | [[Github/repos/claude-howto — Claude Code 視覺化互動教學指南\|claude-howto]] | 🔬 | ⏳ | 39.5K⭐ 視覺化教學網站+repo，10模組+可複製模板+互動自評/測驗Skill；內容價值高於程式碼、非安裝型工具 |
