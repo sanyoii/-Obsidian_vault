@@ -38,7 +38,7 @@ tags: [github, index, repos]
 | [[Github/repos/emilkowalski-skills — Design Engineer 動效與 Apple 設計 Skill 合集\|emilkowalski/skills]] | 🔬 | ✅ | 6.8K⭐ Sonner/Vaul 作者的 4 個動效 Skill；決策層互補現有 css-animations/gsap 等技術層 skill；2026-07-10 已裝（雙位置+marketplace） |
 | [[Github/repos/guizang-material-illustration — 歸藏材質插畫 Claude Skill\|guizang-material-illustration]] | 🔬 | ⏳ | 463⭐ 3天新；純Prompt型配圖Skill，帶中文標籤材質插畫+圖表美化；op7418歸藏系列，與已裝guizang-ppt互補 |
 | [[Github/repos/claude-howto — Claude Code 視覺化互動教學指南\|claude-howto]] | 🔬 | ⏳ | 39.5K⭐ 視覺化教學網站+repo，10模組+可複製模板+互動自評/測驗Skill；內容價值高於程式碼、非安裝型工具 |
-| [[Github/repos/fable-harness — Fable 行為協議移植套件（hooks 強制執行層）\|fable-harness]] | 🔬 | ⏳ | 83⭐ Fable 紀律蒸餾成 hooks+skill+agents；與 institution 體系 95% 同構，唯 verify_gate.py Stop hook 填真實缺口，建議單挑試裝 |
+| [[Github/repos/fable-harness — Fable 行為協議移植套件（hooks 強制執行層）\|fable-harness]] | 🔬 | ✅ | 83⭐ Fable 紀律蒸餾成 hooks+skill+agents；verify_gate 組件 07-17 試用轉正全域化，其餘 95% 同構不裝 |
 | [[Github/repos/pilotfish — Claude Code 多模型委派配置包\|pilotfish]] | 🔬 | ⏳ | 119⭐ 一天新；三層委派設定包（settings/agents/CLAUDE.md）與 institution 三鐵則高度同構；安裝會全域覆寫+命名衝突風險 |
 | [[Github/repos/system_prompts_leaks — 全網 AI System Prompt 逆向存檔庫\|system_prompts_leaks]] | 🔬 | ⏳ | 48.7K⭐ 全網 AI system prompt 存檔（登華郵）；獨有 Claude Code bundled-skills 原始碼；選檔匯入不整包 |
 | [[Github/repos/vercel-labs-agent-skills — web-design-guidelines 前端審查 Skill\|web-design-guidelines]] | 🔬 | ✅ | Vercel官方 28.6K⭐，Fetch-on-Demand 即時抓 100+ 前端規則審查UI，437K次安裝 |
