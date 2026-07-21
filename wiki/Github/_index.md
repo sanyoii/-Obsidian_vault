@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 164 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 165 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-21
@@ -224,7 +224,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🔒 安全 / 自動化 / 其他（11 篇）
+## 🔒 安全 / 自動化 / 其他（12 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -239,6 +239,7 @@ tags: [github, index, repos]
 | [[Github/repos/chatwoot — 開源全通道客服平台\|chatwoot]] | 📎 | ❌ | 開源客服平台 |
 | [[Github/repos/ai-media-generator — 跨平台 AI 媒體生成 Prompt Skill\|ai-media-generator]] | 📎 | 📌 | AI 媒體 Prompt |
 | [[Github/repos/TrendRadar — 一鍵部署的 AI 舆情熱點聚合監控助手\|TrendRadar]] | 🔬 | ⏳ | 60.6K⭐ 35+中文平台熱榜聚合+RSS+AI篩選/翻譯/分析，9推播渠道+17工具MCP；GitHub Actions 30秒fork即跑；與 last30days/agent-reach 重疊80%，資料綁定 newsnow 單點API，僅 MCP 對話分析是差異點 |
+| [[Github/repos/newsnow — 優雅的即時熱榜新聞聚合器\|newsnow]] | 🔬 | ✅ | 21K⭐ 優雅熱榜聚合器（40+源：百度/微博/知乎/財聯社/雪球/HN/GitHub）；React19+Nitro+sqlite，每源一爬蟲易擴充；Docker/CF/Vercel一鍵自架，`/api/s`可當熱榜API接海巡；TrendRadar 的上游資料源 |
 
 ---
 
