@@ -1,8 +1,9 @@
 ---
 source: "https://github.com/tt-a1i/archify"
 author: "tt-a1i"
-stars: "3.2K"
+stars: "6.5K"
 clipped: 2026-07-10
+updated: 2026-07-21
 tags:
   - "github/repo"
   - "claude-skill"
@@ -12,33 +13,37 @@ tags:
 
 # archify — 用大白話生成架構圖的 Claude Skill
 
-> **tt-a1i/archify** | ⭐ 3.2K | 🍴 227 | 📝 MIT
+> **tt-a1i/archify** | ⭐ 6.5K | 🍴 438 | 📝 MIT
 > "Any agent Skill: generate beautiful architecture diagrams with dark/light theme toggle and PNG/JPEG/WebP/SVG export"
+
+> [!note] 2026-07-21 復盤更新
+> 距首次分析（07-10, 3.2K⭐/v2.10）兩週後重跑 repo-intel：**星數翻倍至 6.5K、發版至 v2.11.0**，功能大幅擴充。**你已裝的是舊版 → 此為升級候選**（詳見「安裝建議」）。
 
 ---
 
 ## 一句話說明
 
-archify 是一個可安裝進 Claude Code / Codex CLI / opencode 的 Agent Skill，讓使用者用純英文口語描述系統或流程，就能產出五種技術圖（架構圖、工作流程圖、時序圖、資料流圖、生命週期圖）的單一自包含 HTML 檔案，內建深/淺主題切換與 4× 高解析度匯出。
+archify 是一個可安裝進 Claude Code / Codex CLI / opencode 的 Agent Skill，讓使用者用純英文口語描述系統或流程，就能產出五種技術圖（架構圖、工作流程圖、時序圖、資料流圖、生命週期圖）的單一自包含、**可互動探索**的 HTML 檔案，內建深/淺主題切換與 4× 高解析度匯出（PNG/JPEG/WebP/SVG/WebM）。定位為 Mermaid 替代品。
 
 ---
 
 ## 專案概覽
 
-| 項目 | 數值 |
+| 項目 | 數值（2026-07-21） |
 |------|------|
-| Stars | 3,230 |
-| Forks | 227 |
-| 主要語言 | JavaScript（另含 HTML／Mermaid／Shell） |
+| Stars | 6,531（07-10 為 3,230，兩週翻倍） |
+| Forks | 438 |
+| 主要語言 | HTML（多為 rendered artifacts）+ JavaScript（.mjs renderers） |
 | 授權 | MIT |
 | 建立時間 | 2026-04-15 |
-| 最後推送 | 2026-07-06 |
-| Open Issues | 10 |
-| Open PRs | 0 |
-| 最新 Release | v2.10.0（2026-07-05） |
-| Topics | anthropic, architecture-diagram, claude-skill, dark-mode, developer-tools, diagram-as-code, mermaid-alternative, svg, system-design, html-diagram |
-| 首頁 | https://tt-a1i.github.io/archify/ |
-| 是否 Archived | 否 |
+| 最後推送 | 2026-07-21（當天，高度活躍） |
+| Open Issues / PRs | 5 / 1 |
+| 最新 Release | v2.11.0（2026-07-16） |
+| Release 節奏 | v2.7→v2.11 密集迭代 |
+| Topics | anthropic, architecture-diagram, claude-skill, mermaid-alternative, diagram-as-code, svg, system-design |
+| 首頁 | https://tt-a1i.github.io/archify/（含 proof gallery） |
+| 貢獻者 | tt-a1i, ShiroKSH（2 人） |
+| 基於 | Cocoon-AI/architecture-diagram-generator（MIT v1.0） |
 
 ---
 
@@ -46,60 +51,54 @@ archify 是一個可安裝進 Claude Code / Codex CLI / opencode 的 Agent Skill
 
 | 指標 | 數值 |
 |------|------|
-| 總檔案數 | 83 |
-| 總 Tokens | 308,548 |
-| 壓縮模式 | 未使用（diskUsage 僅 ~7MB） |
+| 總檔案數 | 229（07-10 為 83） |
+| 總 Tokens | 3,701,804（多為 rendered HTML artifacts） |
+| 壓縮模式 | 未使用 |
 
-#### 最大 token 消耗檔案 Top 5
-
-| 檔案 | Tokens | 佔比 |
-|------|--------|------|
-| docs/index.html | 15,872 | 5.1% |
-| examples/workflow-agent-tool-call-rendered.html | 15,037 | 4.9% |
-| examples/workflow-agent-tool-call.html | 15,037 | 4.9% |
-| examples/dataflow-product-analytics.html | 14,936 | 4.8% |
-| examples/sequence-cache-miss-request.html | 14,540 | 4.7% |
+3.7M tokens 幾乎全是 `docs/gallery/artifacts/*.html` 的 rendered 圖表（每支自包含 ~128K token）；真正源碼在 `archify/renderers/*.mjs`，核心邏輯輕巧。
 
 ---
 
 ## 核心功能
 
-- **五種圖表模式**：architecture（系統/雲端組件）、workflow（流程/審批/CI-CD）、sequence（API 呼叫鏈）、dataflow（資料管線/PII 邊界）、lifecycle（狀態機）
-- **JSON IR + Schema 驗證**：每種模式都有對應 `schemas/<type>.schema.json`，用 `ajv` 驗證輸入，渲染器並額外做 layout 檢查（節點重疊、標籤碰撞、超出畫布等）
-- **語意色彩系統**：七種元件型別（frontend/backend/database/cloud/security/messagebus/external）對應固定 CSS class，深淺主題自動切換，不使用寫死顏色
-- **自包含輸出**：產出單一 HTML，內嵌 SVG + ~19KB JS（主題切換＋匯出選單），零依賴、離線可開
-- **高解析度匯出**：PNG/JPEG/WebP 原生 4× 解析度，SVG 為雙主題向量圖（跟隨讀者系統深淺色）
-- **CLI 工具鏈**：`bin/archify.mjs` 提供 render / validate / inspect / check 子指令，供 Agent 在寫 JSON 後自我驗證與修正
-- **Mermaid 輸入方言支援**：可讀懂貼入的 Mermaid 語法（flowchart/sequenceDiagram/stateDiagram），重新規劃版面而非機械轉譯
+- **五種圖表模式**：architecture / workflow / sequence / dataflow / lifecycle，各一 `render-<type>.mjs` + JSON Schema + 編譯後 standalone validator（零依賴即時驗證）
+- **3 種視覺 preset**（v2.11 新）：stable classic / luminous signal-flow / precise blueprint
+- **可互動探索 HTML**（v2.11 大幅擴充）：漸進 Reading Depth（MAP→READ→FULL）、語意鏡頭、Node Finder 搜尋、Route Probe 兩端點分析、Named Chapter Rail story 導覽、Story Follow Camera、可分享 deep link、Presentation Stage、零依賴 pan/zoom
+- **JSON IR + Schema 驗證**：`schemas/<type>.schema.json` + ajv，渲染器額外做 layout 檢查（節點重疊、標籤碰撞、超框），錯誤直指 JSON path 供 LLM 自我迭代
+- **高解析匯出**：copy PNG 到剪貼簿、4× 原生 PNG/JPEG/WebP、雙主題 SVG、**trace 圖錄 WebM（v2.11 新）**
+- **CLI**（`bin/archify.mjs`）：`doctor` 驗裝、`demo` 產範例、`guide "<情境>"` 11 種 bounded 情境 recipe 選型（`--json`/`--lang`）、render/validate
+- **Mermaid 輸入方言**：讀懂貼入的 flowchart/sequenceDiagram/stateDiagram，**重新排版**非機械轉譯
+- **零依賴**：distributed skill 內含編譯 validator，HTML + runtime 全零依賴、離線可開
 
 ---
 
 ## 技術架構
 
 ```
-archify/
-├── bin/archify.mjs           CLI 入口（render/validate/inspect/check）
-├── renderers/
-│   ├── architecture/         grid.mjs + render-architecture.mjs
-│   ├── workflow/  sequence/  dataflow/  lifecycle/   （各自 render-<type>.mjs + README）
-│   └── shared/                cli.mjs / geometry.mjs / layout-report.mjs / utils.mjs / validator.mjs
-├── schemas/                  五種 diagram type 的 JSON Schema（含 common.schema.json）
-├── assets/template.html      無 Node 環境時的手工 SVG 排版 fallback 樣板
-├── examples/                 五種模式的完整 worked examples（JSON + 渲染後 HTML）
-├── test/                     node:test 單元測試 + golden 影像測試 + CLI 測試
-├── SKILL.md                  Claude Skill 指令文件（渲染迴圈、layout 規則、設計系統）
-└── docs/index.html           GitHub Pages 產品首頁
+使用者描述 / Mermaid → agent（讀 SKILL.md）
+                          │
+        bin/archify.mjs guide "<情境>" → 11 recipe 選型
+                          │
+              選 5 種 renderer 之一
+                          │
+   JSON-IR ──► schemas/*.schema.json 驗證（generated-validators, ajv）
+                          │
+   renderers/<type>/render-<type>.mjs + shared/（geometry/layout/cli/validator）
+                          │
+   assets/template.html + 內聯 SVG + 互動 runtime JS
+                          ▼
+        自包含 HTML 單檔（可探索 + 匯出 PNG/SVG/WebM）
 ```
 
 | 層次 | 技術 |
 |------|------|
-| Skill 層 | `SKILL.md`（Anthropic Skill 格式），描述 5 種模式選用邏輯、Mermaid 轉譯規則、hand-placed fallback |
-| CLI/渲染層 | Node.js ≥18，`ajv` 做 Schema 驗證（唯一 runtime 依賴），純函式渲染器輸出 SVG 字串 |
-| 輸出層 | 單檔 HTML：內嵌 CSS 變數系統 + inline SVG + 原生 Canvas 4× 匯出 JS，零外部依賴 |
-| 測試層 | `node --test` + 自製 golden image 比對 + layout 規則驗證腳本 |
-| CI/CD | GitHub Actions（`.github/workflows/ci.yml` + `release.yml`） |
+| Skill 層 | `SKILL.md`（Anthropic Skill 格式；description 極長 = 觸發面極廣） |
+| CLI/渲染層 | Node.js ≥18，`ajv` Schema 驗證，純函式渲染器輸出 SVG 字串 |
+| 選型層 | recipes/scenarios.mjs（11 bounded 情境 guide） |
+| 輸出層 | 單檔 HTML：CSS 變數系統 + inline SVG + 原生 Canvas 4× 匯出 JS，零依賴 |
+| 測試/CI | `node --test` + golden image 比對 + GitHub Actions（ci.yml/release.yml） |
 
-**架構重點**：這不是通用繪圖引擎，而是「JSON IR → 型別化渲染器 → 驗證迴圈」的設計——Agent 先讀 schema + worked example，寫 JSON，渲染後用 `validate`/`check` 指令抓版面錯誤（節點重疊、標籤衝突、超框），錯誤訊息直接指出 JSON path 該怎麼修，讓 LLM 能自我迭代而非盲猜座標。整個系統刻意把「渲染器修正」與「JSON 內容修正」分開——SKILL.md 明確要求「fix the JSON and re-run; never edit the renderer」。
+**架構重點**：不是通用繪圖引擎，而是「JSON IR → 型別化渲染器 → 驗證迴圈」的設計——Agent 讀 schema + worked example，寫 JSON，渲染後用 validate/check 抓版面錯誤，錯誤直指 JSON path，讓 LLM 自我迭代而非盲猜座標。SKILL.md 明令「fix the JSON and re-run; never edit the renderer」。這是 agent skill 少見的工程完整度（schema + golden test + CI）。
 
 ---
 
@@ -107,25 +106,12 @@ archify/
 
 | 指標 | 數值 | 評估 |
 |------|------|------|
-| 貢獻者 | 目前僅 tt-a1i 一人 | 個人專案，尚無外部貢獻者加入 |
-| Release 頻率 | v2.4.0(04-18) → v2.10.0(07-05)，近三個月 7 個版本 | 疊代密集、活躍維護中 |
-| Issue open/close | 10 open / 0 open PR | 尚無社群 PR 貢獻，issue 有一定量待處理 |
+| 貢獻者 | tt-a1i, ShiroKSH | 小團隊 |
+| 近 4 週 commit | 6 / 8 / 6 / 3 | 穩定活躍 |
+| Release 頻率 | v2.7→v2.11 密集 | 頻繁迭代 |
+| Issue/PR | 5 open / 1 PR | 有社群互動 |
 
----
-
-## 社群口碑
-
-*Stars > 1,000，已嘗試 Reddit + X/Twitter 搜尋。*
-
-**熱門討論（X/Twitter，簡體中文科技帳號轉發）：**
-- @GitHub_Daily（2026-07-01）：詳細介紹貼文，1,686 讚 / 141K 瀏覽，強調「省事」「單一 HTML 零依賴」「能直接貼進 Slack/Notion」
-- 個人科技帳號（2026-07-09）：37 讚 / 4.6K 瀏覽，痛點切入「畫架構圖最煩不是講而是畫」，肯定其取代 Visio 手動拖拉的定位
-
-**正面回饋：** 「省事」「零依賴單檔 HTML」「深淺主題自動跟隨」是反覆被提及的賣點，定位精準打中「畫圖比講解更花時間」的痛點。
-
-**負面回饋 / 已知問題：** 搜尋結果未見負面評論；Reddit 搜尋未命中相關討論（`r/Archified` 為同名但無關的 Arch Linux 社群）。
-
-（Note：YouTube 搜尋「archify tutorial」全部命中的是同名商業室內設計/建材平台 ArchifyNow，與本專案無關，故略過該區塊。）
+6,531⭐/438 fork——高星健康比，登過 GitHub Trending（trendshift #31352）、有 YouTube short、列於 openagentskill.com skill 目錄。
 
 ---
 
@@ -133,22 +119,24 @@ archify/
 
 | 面向 | 評估 |
 |------|------|
-| **Obsidian Vault** | 可用於幫既有的 repo-intel 分析報告、架構決策記錄補上視覺化架構圖，比純文字 ASCII 樹更精緻，且可直接貼進 wiki 文章（單檔 HTML 可另存或截圖嵌入） |
-| **Claude Code** | 直接是 Claude Skill 形式，與現有 mermaid-visualizer 定位部分重疊但更精緻（Mermaid 是語法圖，archify 是排版驗證迴圈+主題+匯出）；可補強現有技術文件/架構討論的視覺輸出品質 |
-| **Automation** | CLI 化的 render/validate/inspect 子指令可被腳本呼叫，適合在文件產出流程或 CI 中自動生成架構圖快照 |
+| **Claude Code** | 極高——**已裝 archify skill，但為舊版**（描述僅到 PNG/JPEG/WebP/SVG）。v2.11 多了 WebM、語意鏡頭、Story 導覽、Route Probe、11-recipe guide 等大量新功能。明確升級候選。 |
+| **Obsidian Vault** | 中-高。與 [[mermaid-visualizer]] 定位重疊但更精緻（Mermaid 是語法圖，archify 是排版驗證迴圈 + 主題 + 匯出）；可幫 repo-intel 報告/架構決策補視覺化圖。 |
+| **Automation** | 中。CLI（`archify.mjs render`）可腳本化批次產圖，零依賴適合 CI 產文件圖快照。 |
 
 ---
 
 ## 安裝建議
 
-⏳ 觀望 — 功能扎實、口碑正面、疊代活躍，但與現有 `mermaid-visualizer` skill 有定位重疊；沒有立即需求前不必立刻裝，等真的需要「更精緻、可匯出高解析度圖片」的架構圖時再安裝（下載 `archify.zip` 解壓到 `~/.claude/skills/` 即可，安裝成本低，可隨時追加）。
+**✅ 適合安裝（升級）** — 已裝舊版 archify，v2.11 是同一 skill 的大幅進化（+WebM、語意互動、Story 導覽、11-recipe guide、golden test/CI 工程完整度）。零依賴、MIT、當天仍在推、6.5K⭐ 已驗證。升級：`npx skills add tt-a1i/archify -g` 覆蓋，或依 skill SOP（逐字讀 SKILL.md → 雙位置 + marketplace）重裝。
 
-復查觸發（2026-07-17 補）：
-- **升級條件**（→ ✅ 裝）：出現需要「更精緻、可匯出高解析度圖片」的架構圖需求，mermaid-visualizer 無法滿足
-- **放棄條件**（→ ❌ 不裝）：mermaid-visualizer 持續足夠應付架構圖需求 → 不裝
+**升級前一個檢查點**：現版走 `~/.claude/skills` junction 實體，重裝前先 `test -d` 確認路徑、備份舊 SKILL.md 對比 description 觸發詞差異（新版 description 極長，可能擴大自動觸發面，與 [[mermaid-visualizer]] 的觸發邊界要留意——類似 hallmark 當初的觸發打架考量）。
+
+> 歷史狀態：07-10 首裝時判 ⏳ 觀望（與 mermaid-visualizer 重疊），後已安裝（索引標 ✅）。07-21 復盤：既已在用，跟上 v2.11 為順勢升級。
 
 ---
 
 ## 相關連結
 
 - [[Github/_index|Github Repo 分析總索引]]
+- [[mermaid-visualizer]] — 同賽道語法圖 skill（觸發邊界需留意）
+- [[video-shotcraft — 用 Remotion 拍電影感產品宣傳片的 AI Agent Skill|video-shotcraft]] — 同為 tt-a1i 生態外的 agent skill 工程完整度典範

@@ -76,7 +76,7 @@ tags: [github, index, repos]
 | [[Github/repos/thedotmack-claude-mem — 85K⭐ 跨 Session 持久記憶\|claude-mem]] | 🔬 | ✅ | 85K⭐ SQLite+ChromaDB；worker 自 2026-05 運行；claude-mem@thedotmack plugin |
 | [[Github/repos/vercel-labs-skills — Agent Skills 生態系 CLI 套件管理器\|vercel-labs/skills]] | 🔬 | ⏳ | 25K⭐ Vercel官方 npx skills 套件管理器；內建 find-skills 已在本機生效中 |
 | [[Github/repos/claude-cache-guard — Claude Code 5小時額度自動交接工具\|claude-cache-guard]] | 🔬 | ⏳ | 9⭐ 5h額度門檻自動寫交接檔+/ccgresume；⚠️與本環境 hook 注入規則衝突恐靜默失效，常撞額度才考慮 |
-| [[Github/repos/archify — 用大白話生成架構圖的 Claude Skill\|archify]] | 🔬 | ✅ | 3.2K⭐ 用大白話生成五種技術圖（架構/工作流程/時序/資料流/生命週期），JSON IR+Schema驗證+4×匯出；2026-07-10 已裝（雙位置+marketplace） |
+| [[Github/repos/archify — 用大白話生成架構圖的 Claude Skill\|archify]] | 🔬 | ✅ | 6.5K⭐（07-21 復盤翻倍）用大白話生成五種技術圖，JSON IR+Schema驗證+4×匯出+WebM；已裝**舊版**，v2.11 為升級候選（+語意互動/Story導覽/11-recipe guide） |
 | [[Github/repos/MengTo-Skills — 設計師視角 Codex×Claude×Cursor Agent Skill 合集\|MengTo/Skills]] | 🔬 | ⏳ | 1.3K⭐ Design+Code 創辦人個人庫，75 skills（62 個視覺風格卡+13 個原則/Codex工作流）；與已裝 design-taste-frontend 等高度重複，與 emilkowalski/skills 互補（決策層 vs 風格庫） |
 | [[Github/repos/laowangba-pmprototype-skill — B端C端產品原型生成 Codex Skill\|laowangba-pmprototype-skill]] | 🔬 | ⏳ | 38⭐ 1天新；PM 用 B/C 端 Figma 原型生成流水線+Anti-Slop 閘門，inherits frontend-design；本機無 Figma MCP 跑不到執行層，QA 用途低 |
 | [[Github/repos/ten-wins-ten-losses — 三國官渡 SDD 角色扮演開發工作流\|ten-wins-ten-losses]] | 🔬 | ❌ | 2⭐ 三國四謀士人設 SDD skill；與 institution+7-Agent 工廠同構但精簡（單 session 人格切換）；抽機制不裝皮——diff 增量鎖定＋questions.md 安全閥待分診 |
