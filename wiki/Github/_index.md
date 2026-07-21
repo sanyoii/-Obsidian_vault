@@ -105,7 +105,7 @@ tags: [github, index, repos]
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
-| [[Github/repos/FinanceDatabase — 30萬金融商品分類資料庫\|FinanceDatabase]] | 🔬 | ✅ | 8.2K⭐ 30萬+金融商品分類目錄（股/ETF/基金/指數/幣）+輕量pandas查詢；社群CSV維護；`.to_toolkit()`接FinanceToolkit；與jane-finance互補（宇宙vs觀點）；pip裝零風險 |
+| [[Github/repos/FinanceDatabase — 30萬金融商品分類資料庫\|FinanceDatabase]] | 🔬 | ✅ | 8.2K⭐ 30萬+金融商品分類目錄（股/ETF/基金/指數/幣）+輕量pandas查詢；社群CSV維護；`.to_toolkit()`接FinanceToolkit；與jane-finance互補（宇宙vs觀點）；**已裝C:\Python314**（+FinanceToolkit）；台股本地1347檔權值9/10（缺2330.TW台積電） |
 | [[Github/repos/ai-berkshire — AI 時代的價值投資研究框架\|ai-berkshire]] | 🔬 | ✅ | 四大師 18 Commands |
 | [[Github/repos/xbtlin-ai-berkshire\|xbtlin-ai-berkshire（原始分析）]] | 🔬 | ✅ | 同上初版 |
 | [[Github/repos/開源版金融終端機 Fincept Terminal\|Fincept Terminal]] | 📎 | ⏳ | 開源金融終端 |

@@ -95,7 +95,9 @@ database/**.csv    ◄── 社群手動編輯（PR）
 
 ## 安裝建議
 
-**✅ 適合安裝（按需 pip）** — 免費、MIT、成熟（5 年 8.2K⭐）、活躍、依賴極輕（pandas）。做任何「先找出某國/某產業有哪些標的」的投資研究前置最省事，`to_toolkit()` 一行接 FinanceToolkit 算財報。零風險：`pip install financedatabase`，不需 clone 4.9GB（PyPI 只帶必要壓縮資料）。搭配 jane-finance 判斷框架 = 「宇宙 + 觀點」閉環。
+**✅ 已安裝（2026-07-21）** — 免費、MIT、成熟（5 年 8.2K⭐）、活躍、依賴極輕（pandas）。已 `pip install financedatabase financetoolkit` 裝進 C:\Python314（user site-packages，FD 2.4.0）。`to_toolkit()` 一行接 FinanceToolkit 算財報。搭配 jane-finance 判斷框架 = 「宇宙 + 觀點」閉環。
+
+**台股覆蓋實測（2026-07-21）**：`country="Taiwan"` 1,593 檔，本地 TAI+TWO **1,347 檔**，標準 `<代碼>.TW` 格式，11 板塊全。權值 10 檔本地命中 **9/10**——唯一缺 **2330.TW 台積電本地掛牌**（只有 ADR `TSM` + 海外掛牌；社群可補的 CSV 缺口）。結論：批次板塊掃描完全可用；精確查單一 symbol 前先驗證存在。
 
 - **升級條件（→ 深度整合成 Claude 工具/管線）**：實際啟動投資標的掃描專案且驗證台/美股覆蓋夠用
 - **放棄條件（→ 裝了不用）**：實測台股覆蓋過稀/分類過時，或投資研究不需「標的探索」層
