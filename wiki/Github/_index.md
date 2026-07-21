@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 166 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 167 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-21
@@ -179,10 +179,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🎨 設計 / UI / 前端（7 篇）
+## 🎨 設計 / UI / 前端（8 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/awesome-design-skills — 67種美學風格的SKILL.md註冊庫\|awesome-design-skills]] | 🔬 | ⏳ | 1.9K⭐ 67 美學風格 SKILL.md/DESIGN.md 註冊庫（brutalism/glassmorphism/neon/retro…）；`npx typeui.sh pull`；與 awesome-design-md 互補（風格 vs 品牌）；靜態SKILL.md無法看codebase，按需pull即可 |
 | [[Github/repos/Open Design — 開源版Claude Design讓CLI agent變設計引擎\|Open Design]] | 🔬 | ⏳ | 80K⭐ 開源版 Claude Design 桌面 app（Electron）；接你已裝 CLI(BYOK)當設計引擎產原型/簡報/影片；71 DESIGN.md+19 skills；nexu-io 是 hyperframes/html-anything vendor；曾移除2GB+CLI-first重疊故觀望 |
 | [[Github/repos/awesome-design-md — 73 套品牌 DESIGN.md 設計系統收藏庫\|awesome-design-md]] | 📎 | ✅ | 93.5K⭐ Google Stitch |
 | [[Github/repos/google-labs-code — Google Stitch + Jules 開源組織全覽\|google-labs-code]] | 📎 | ⏳ | Stitch + Jules 組織 |
