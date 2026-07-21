@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 162 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 163 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-21
@@ -101,10 +101,11 @@ tags: [github, index, repos]
 
 ---
 
-## 💰 投資 / 金融（6 篇）
+## 💰 投資 / 金融（7 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/FinanceDatabase — 30萬金融商品分類資料庫\|FinanceDatabase]] | 🔬 | ✅ | 8.2K⭐ 30萬+金融商品分類目錄（股/ETF/基金/指數/幣）+輕量pandas查詢；社群CSV維護；`.to_toolkit()`接FinanceToolkit；與jane-finance互補（宇宙vs觀點）；pip裝零風險 |
 | [[Github/repos/ai-berkshire — AI 時代的價值投資研究框架\|ai-berkshire]] | 🔬 | ✅ | 四大師 18 Commands |
 | [[Github/repos/xbtlin-ai-berkshire\|xbtlin-ai-berkshire（原始分析）]] | 🔬 | ✅ | 同上初版 |
 | [[Github/repos/開源版金融終端機 Fincept Terminal\|Fincept Terminal]] | 📎 | ⏳ | 開源金融終端 |
