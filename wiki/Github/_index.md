@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 158 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 159 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-21
@@ -187,10 +187,11 @@ tags: [github, index, repos]
 
 ---
 
-## 📚 學習 / 教程 / RAG（10 篇）
+## 📚 學習 / 教程 / RAG（11 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/graphrag — 微軟知識圖譜 RAG 管線\|graphrag]] | 🔬 | ⏳ | 34.7K⭐ 知識圖譜RAG（Leiden社群+分層摘要）；索引成本是頭號痛點；gbrain規模用不到，升級條件=全局問題痛點/LazyGraphRAG併入 |
 | [[Github/repos/ai-engineering-from-scratch\|ai-engineering（repos版）]] | 📎 | 📌 | 20 phase AI 工程課 |
 | [[Github/repos/(選讀)rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）\|ai-engineering（選讀版）]] | 📎 | 📌 | 同上詳細版 |
 | [[Github/repos/data-engineer-handbook — 資料工程完全學習手冊\|data-engineer-handbook]] | 📎 | 📌 | 資料工程學習 |
