@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 160 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 161 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-21
@@ -124,10 +124,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🎬 影片 / 媒體 / 音樂（11 篇）
+## 🎬 影片 / 媒體 / 音樂（12 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/video-shotcraft — 用 Remotion 拍電影感產品宣傳片的 AI Agent Skill\|video-shotcraft]] | 🔬 | ⏳ | 337⭐ Claude Code/Codex agent skill；106 鏡頭配方卡+161 動態樣片+Ink Press 模板；Remotion+真實截圖+2.5D 運鏡+節奏卡點；方法論與 institution R13/R17 同構；與 HyperFrames 重疊需釐清 |
 | [[Github/repos/voicebox — 本機優先的開源 AI 語音工作室\|voicebox]] | 🔬 | ⏳ | 37K⭐ 本機 TTS+語音克隆+口述輸入，MCP server 讓 Claude Code 開口說話 |
 | [[Github/repos/calesthio-OpenMontage\|OpenMontage]] | 📎 | ⏳ | Agentic 影片製作 |
 | [[Github/repos/AIDC-AIPixelle-Video 🚀 AI 全自动短视频引擎  AI Fully Automated Short Video Engine\|Pixelle-Video]] | 📎 | ⏳ | 全自動短影片 |
