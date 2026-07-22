@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 167 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 168 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-21
@@ -125,10 +125,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🎬 影片 / 媒體 / 音樂（14 篇）
+## 🎬 影片 / 媒體 / 音樂（15 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/capcut-mate — 開源剪映草稿自動化REST API\|capcut-mate]] | 🔬 | ⏳ | 1.4K⭐ 剪映草稿自動化 REST API（FastAPI，~35端點+雲渲染），建於 pyJianYingDraft；讓 LLM/Coze/n8n 程式化剪片；與 vak 互補（API vs 本機草稿）；綁剪映生態故觀望 |
 | [[Github/repos/seedance-2.0 — 導演式操作Seedance影片模型的Skill OS\|seedance-2.0]] | 🔬 | ⏳ | 5K⭐ 導演式操作 ByteDance Seedance 2.0 影片模型的 28-skill 包（MIT）；directing-engine+126 evals+6語詞彙；與 video-shotcraft 同構但強綁生成模型；版號治理不一致(gh v5.3 vs skill v6.6) |
 | [[Github/repos/video-autopilot-kit — 填自己資料的 YouTube 短影音自動化框架\|video-autopilot-kit]] | 🔬 | ⏳ | 1.5K⭐ 填自己資料的 YT/短影音自動化框架（MIT）；雙路徑 ffmpeg 純程式 + CapCut 草稿 JSON/Computer Use；M1-M106 避坑庫+機械化 QA 閘；與 video-shotcraft 互補（實拍 vs 程式化） |
 | [[Github/repos/video-shotcraft — 用 Remotion 拍電影感產品宣傳片的 AI Agent Skill\|video-shotcraft]] | 🔬 | ⏳ | 337⭐ Claude Code/Codex agent skill；106 鏡頭配方卡+161 動態樣片+Ink Press 模板；Remotion+真實截圖+2.5D 運鏡+節奏卡點；方法論與 institution R13/R17 同構；與 HyperFrames 重疊需釐清 |
