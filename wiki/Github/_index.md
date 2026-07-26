@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 170 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 171 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-07-25
+> 最後更新：2026-07-26
 
 ---
 
@@ -39,7 +39,7 @@ tags: [github, index, repos]
 |------|------|------|------|
 | [[Github/repos/i-have-adhd — ADHD 友善輸出 skill\|i-have-adhd]] | 🔬 | ❌ | 5.3K⭐ 10 條 ADHD 友善輸出規則；與 caveman hook 高度重疊＋全域觸發衝突；可吸收個別規則零安裝 |
 | [[Github/repos/fable-method — Fable 5 工作法蒸餾成任何模型可跑的 Skill＋Eval\|fable-method]] | 🔬 | ⏳ | 1.6K⭐ Fable 5 工作法四 skill（think/act/prove/grow）＋15 輪對抗 eval；與 institution 同哲學不整裝，但 trap-fixture 迴歸測試是 institution 缺的真增量，升級條件＝下次改規則先寫 trap 測 |
-| [[Github/repos/hallmark — 拒絕 AI 味的前端設計 Skill（結構多樣性＋防呆閘門）\|hallmark]] | 🔬 | ✅ | 12.5K⭐ Nutlope 反 AI-slop 設計 skill；一預設+三動詞（build/audit/redesign/study）；強制跨頁結構多樣性、study 抽 DNA→可攜 design.md、~57 gate slop-test+六軸自評；**07-18 已裝**（指名調用限定避開 taste 群打架）；10月復查上游維護 |
+| [[Github/repos/hallmark — 拒絕 AI 味的前端設計 Skill（結構多樣性＋防呆閘門）\|hallmark]] | 🔬 | ✅ | 17.7K⭐ Nutlope 反 AI-slop 設計 skill；一預設+三動詞（build/audit/redesign/study）；強制跨頁結構多樣性、study 抽 DNA→可攜 design.md、57 gate slop-test+六軸自評；**07-18 已裝**（指名調用限定避開 taste 群打架）；**07-26 回訪**：星數+40% 但上游 7 週零 commit、ROADMAP 全未動、本地已是最新版；復查判準改為「下次設計任務實測 vs design-taste-frontend，沒贏就移除」 |
 | [[Github/repos/emilkowalski-skills — Design Engineer 動效與 Apple 設計 Skill 合集\|emilkowalski/skills]] | 🔬 | ✅ | 6.8K⭐ Sonner/Vaul 作者的 4 個動效 Skill；決策層互補現有 css-animations/gsap 等技術層 skill；2026-07-10 已裝（雙位置+marketplace） |
 | [[Github/repos/guizang-material-illustration — 歸藏材質插畫 Claude Skill\|guizang-material-illustration]] | 🔬 | ⏳ | 463⭐ 3天新；純Prompt型配圖Skill，帶中文標籤材質插畫+圖表美化；op7418歸藏系列，與已裝guizang-ppt互補 |
 | [[Github/repos/claude-howto — Claude Code 視覺化互動教學指南\|claude-howto]] | 🔬 | ⏳ | 39.5K⭐ 視覺化教學網站+repo，10模組+可複製模板+互動自評/測驗Skill；內容價值高於程式碼、非安裝型工具 |
@@ -182,7 +182,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🎨 設計 / UI / 前端（8 篇）
+## 🎨 設計 / UI / 前端（9 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -194,6 +194,7 @@ tags: [github, index, repos]
 | [[Github/repos/akseolabs-seocinematic-ui A reasoning-first cinematic web design skill. Makes AI think like a film director — research a real film, extract its visual language, translate it into page narrative and composition. Not a style picker. A director's w\|cinematic-ui]] | 📎 | 📌 | 電影導演思維 Web 設計 |
 | [[Github/repos/不會設計也能做出專業級 App Store 截圖：一個 AI 驅動的截圖產生器\|App Store 截圖生成器]] | 📎 | 📌 | AI 截圖生成 |
 | [[Github/repos/latentbox — AI 創意藝術精選資源導航站\|latentbox]] | 🔬 | ❌ | 2.2K⭐ AI/創意/藝術精選資源站；CC BY-NC-ND 禁衍生，僅供瀏覽參考 |
+| [[Github/repos/galaxy — Uiverse.io 開源 UI 元件庫鏡像（3800+ CSS-Tailwind 元件）\|galaxy]] | 🔬 | ⏳ | 11.7K⭐ Uiverse.io 唯讀元件鏡像；3,804 個單檔 HTML+CSS/Tailwind 元件、MIT 可商用；鏡像停更 22 個月落後官網 2,000 元件；用時上官網複製即可，除非有離線批量餵 agent 需求才 clone |
 
 ---
 

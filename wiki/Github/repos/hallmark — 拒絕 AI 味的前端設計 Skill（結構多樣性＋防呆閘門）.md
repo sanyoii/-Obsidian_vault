@@ -1,8 +1,9 @@
 ---
 source: "https://github.com/Nutlope/hallmark"
 author: "Nutlope (Hassan El Mghari)"
-stars: "12.5K+"
+stars: "17.7K+"
 clipped: 2026-07-18
+updated: 2026-07-26
 tags:
   - "github/repo"
   - "claude-code-skill"
@@ -12,12 +13,33 @@ tags:
 
 # hallmark — 拒絕「AI 味」的前端設計 Skill（結構多樣性＋防呆閘門）
 
-> **Nutlope/hallmark** | ⭐ 12,588 | 🍴 624 | 📝 MIT | CSS/HTML 規則庫（零 runtime）| SKILL.md v1.1.0
+> **Nutlope/hallmark** | ⭐ 17,701 | 🍴 891 | 📝 MIT | CSS/HTML 規則庫（零 runtime）| SKILL.md v1.1.0
 > 官網：https://www.usehallmark.com/ ｜ 安裝：`npx skills add nutlope/hallmark`（Powered by Together AI）
+> 📊 **2026-07-26 回訪**：星數 12.5K→17.7K（+40.6%）、fork 624→891，但**程式碼零推進**（最後實際 commit 2026-06-04，連續約 7 週 0 commit）。本地版本 = 上游最新 v1.1.0，無可升級內容。
 
 ## 一句話說明
 
 Hassan El Mghari（Nutlope）做的**反 AI-slop 設計 skill**，給 Claude Code / Cursor / Codex 用。核心不是「換配色」而是**強制結構多樣性**——每個頁面先選版面骨架（macrostructure）再上主題，且拒絕重複前 3 個骨架，讓不同 brief 的頁面「像不同網站，不是同模板換色」。出貨前跑 ~57 條 slop 檢查閘門 + 六軸自我評分，並在 CSS 頂端蓋產出戳章。
+
+## 專案概覽
+
+| 項目 | 數值 | 對比 07-18 |
+|------|------|-----------|
+| Stars | 17,701 | 12,588 → **+40.6%** |
+| Forks | 891 | 624 → +42.8% |
+| 語言 | CSS 863KB / HTML 521KB / JS 96KB | — |
+| 授權 | MIT | — |
+| 建立時間 | 2026-04-27 | — |
+| 最後推送 | 2026-06-26 | 同（未再動）|
+| 最後實際 commit | 2026-06-04（merge PR #18）| 同 |
+| 近 4 週 commit | **0** | 同（連續約 7 週零）|
+| Open Issues / PRs | 13 / 20 | — |
+| 最新 Release | 無 | — |
+| 貢獻者 | Luffixos, Nutlope, JaySmith502, riccardogiorato | — |
+| Topics | 無設定 | — |
+| 首頁 | https://www.usehallmark.com/ | — |
+| 是否 Archived | 否 | — |
+| Repomix 指標 | 238 檔 / 469,913 tokens（`--compress`）| — |
 
 ## 核心功能：一個預設 + 三動詞
 
@@ -61,12 +83,16 @@ docs/       ← recipes / study-examples / talk-slides
 
 > ⚠️ 版本數字不一：packed 原始碼 v1.1.0 / 20 themes / gate 到 55；官網寫「57-gate」；部分報導稱「22 themes / 65-gate / 21 macrostructures」——迭代快、文件滯後，以安裝當下 SKILL.md 為準。
 
+**20 主題完整名單**（07-26 確認）：Specimen, Atelier, Brutal, Newsprint, Studio, Manifesto, Terminal, Midnight, Almanac, Garden, Riso, Sport, Bloom, Coral, Cobalt, Aurora, Editorial, Carnival, Lumen, Hum。輪替**按 genre 分群**：atmospheric→Bloom/Midnight/Terminal/Aurora/Lumen；modern-minimal→Coral/Cobalt；playful→固定 Hum；editorial→其餘 12 個。另有 component-scope 分流（單一元件 brief 跳過 macrostructure/nav/footer/enrichment，但 8 狀態要求更嚴）。
+
 ## 專案特性與風險
 
 - 純規則庫，效果高度依賴宿主模型遵守度（弱模型可能仍破功）
 - 作者 Hassan El Mghari 高信譽（多個爆紅 OSS AI app）、發布即獲大量科技媒體報導、登 Claude Code Skills marketplace 榜
-- **近 4 週 0 commit**（2026-06-26 後靜置），衝高後維護持續性待觀察
+- repo 體積約 80% 是行銷站與範例頁；真正 skill 只有 `skills/hallmark/`（SKILL.md 67KB + 105 個 reference .md）
 - 無 Release，MIT 授權
+- **⚠️ 維護停滯（07-26 回訪確認）**：最後實際 commit 2026-06-04、連續約 7 週 0 commit、20 個 PR 積壓未合、貢獻者 4 人但實質 1 人主導（巴士係數 1）。ROADMAP.md 列了 12+ 項規劃（Nanobanana 圖像鉤子 / brand-first flow / `hallmark variant` / `data-viz.md` / 多頁一致性 / study 讀自家 codebase），Now/Next/Later **三層全部未動工**。星數 +40% 是發表期傳播餘波，不是開發訊號。
+- **教學生態薄弱**：YouTube 僅 5 支相關影片、最高 4,478 觀看；Reddit 幾無有機討論（唯一貼文 score 1、零留言）。高曝光、低沉澱。
 
 ## 與現有系統的相關性
 
@@ -85,7 +111,15 @@ docs/       ← recipes / study-examples / talk-slides
 - **安裝形態**：**指名調用限定**（LOCAL MOD：description 收窄，上游原版會搶 landing page 場景與 taste 群打架；原文保留在 SKILL.md 註解）。走 SOP 三位置落地，未用 `npx skills add`。
 - **驗收**：三位置 diff IDENTICAL、熱載確認、audit 動詞對蓄意 slop 夾具實測 9/9 全中。
 - **PPT 場景用法**：build 不適用（骨架全是捲動網頁）；deck 產完手動 `hallmark audit`，只採 typography/color/anti-pattern 類 findings、忽略 responsive 類。
-- **⚠️ 復查觸發（~2026-10）**：上游（2026-06-26 後零 commit）仍零維護且實測未勝 `design-taste-frontend`，則移除（R13）；若效果好則考慮把 anti-patterns＋六軸自評蒸餾進 deck skill。
+- **版本狀態（07-26 核對）**：本地 v1.1.0 = 上游 v1.1.0，SKILL.md 與 references 105 檔全同，**無可升級內容**；LOCAL MOD 僅 description 一行。
+
+### ⚠️ 復查判準修正（2026-07-26 回訪後）
+
+原判準「~2026-10 復查上游是否仍維護」**已可提早結案**——連續 7 週零 commit、20 PR 積壓、ROADMAP 三層全未動工、巴士係數 1，答案已明確，不必再等。剩下唯一該測的是**行為題**：實測有沒有勝過 `design-taste-frontend`。現在就能測。
+
+- **改 ❌ 移除**：下次真的要做 landing page / 設計稿時，`hallmark audit` 與 `design-taste-frontend` 各跑一次同一夾具；hallmark 沒給出對方漏掉的 findings → 移除，並把 anti-patterns 五條＋六軸自評蒸餾進 deck skill（R13：無法量化改善→不留）。
+- **改 ✅ 深化**：同測試中 hallmark 抓到獨有問題（尤其 study/DNA 或 57-gate 類），升級為常設，並考慮把 `study → design.md` 接進設計參考流。
+- **期限**：下次任何設計/PPT 任務順手跑，**不另外排期**；若到 2026-09-30 仍未觸發設計任務，直接依「用不到 = 移除」處理。
 
 ## 相關連結
 

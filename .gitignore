@@ -13,3 +13,10 @@ data/ph_token.txt
 
 # Developer Toolbox plugin diagnostics (auto-growing event log, pure noise)
 _dev-tools/dev-diagnostics/diagnostics-log.md
+
+# 私人財務資料（含真實姓名與金額，此 repo 為 public）
+wiki/Travel/2026-歐洲商旅/*.html
+
+# claude-flow session 執行期狀態（每 session 變動，純雜訊）
+.claude-flow/
+**/.claude-flow/
