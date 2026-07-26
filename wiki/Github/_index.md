@@ -6,14 +6,14 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 174 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 178 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-07-26
+> 最後更新：2026-07-27
 
 ---
 
-## 🤖 AI Agent 框架（14 篇）
+## 🤖 AI Agent 框架（16 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -30,11 +30,13 @@ tags: [github, index, repos]
 | [[Github/repos/From idea to AI MCP tools —APIs that power your workflow.快速串接、即時上手，為你的程式或 AI Agent 裝載超能力。支援各 AI Agent 與自動化主流平台，無需部署。\|Superior APIs]] | 📎 | 📌 | MCP 工具 API 平台 |
 | [[Github/repos/Hermes-maces — Hermes Agent 的潛意識記憶層插件\|Hermes-maces]] | 🔬 | ❌ | 1⭐ 一天大；Hermes（Nous Research）專用潛意識記憶插件；本環境無宿主不裝，但權重衰減公式+advisory/審批雙通道+輸出邊界驗證三模式值得讀 |
 | [[Github/repos/swarm-forge — Uncle Bob 的 tmux 多 Agent 紀律協作平台\|swarm-forge]] | 🔬 | ⏳ | 1.3K⭐ Clean Code 作者作品；tmux+git worktree+Babashka daemon 多 agent 協作，憲法分層強制 TDD/Gherkin/mutation；無 LICENSE + 需 zsh/tmux（Windows 只能 WSL）不裝，但 handoff 窄化（10碼commit+80字note）值得抄進 R17 |
+| [[Github/repos/cua — 跨 OS 電腦操作 Agent 基礎設施（driver／sandbox／bench）\|cua]] | 🔬 | ⏳ | 20.6K⭐ YC X25 全 MIT；四產品線：背景不搶焦點的 Cua Driver（Rust+C ABI，講 MCP over stdio，`claude mcp add` 一行接 Claude Code）／跨 OS Sandbox SDK（Linux/macOS/Windows/Android 同一 API，本機 QEMU 免費）／Cua-Bench（OSWorld/Windows Arena）／Lume（Apple Silicon macOS VM）；**自帶 `gui-automation` skill，觸發語意直指 E2E QA**，補的是 playwright 覆蓋不到的**原生桌面 App**；⚠️ 安裝走 `irm \| iex`、host 模式＝交出滑鼠鍵盤、雲端要付費、PR 積壓 334 |
 | [[Github/repos/DeepTutor — 港大開源的 Agent 原生個人化學習工作站\|DeepTutor]] | 🔬 | ⏳ | 29.8K⭐ HKUDS（LightRAG 同團隊）+arXiv 論文；六模式共用單一 agent loop，多引擎 RAG（LlamaIndex/PageIndex/GraphRAG/LightRAG/**Obsidian vault**）+三層記憶+Memory Graph；可在對話中呼叫本機 Claude Code/Codex；品質極高但屬**替換**非補位——會取代現行三層檢索，且 Obsidian KB 為**就地讀寫**對 public vault 有風險；部署需 Docker+PocketBase+Next.js |
+| [[Github/repos/ClawWork — 港大讓 AI Agent 自負盈虧的經濟生存基準\|ClawWork]] | 🔬 | ❌ | 8.3K⭐ HKUDS（DeepTutor 同團隊）；給 Agent $10 起始餘額跑 GDPVal 220 任務、扣真 token 成本賺**模擬**薪水。**不是工具是跑分機**，對本環境零功能增量；MCP 有但工具只在模擬內有意義，ClawMode 綁死 nanobot 與 Claude Code 無關。三個結構性弱點：收入＝GPT估工時×GPT配BLS時薪×GPT評分（三重估計疊乘）、評分解析失敗預設 5.0/10＝照付半薪、README 宣稱的 0.6 門檻在主線程式碼不存在。749MB 中 96% 是跑分產物；5個月停更/0 release/22 PR 積壓/無測試 CI；HN 僅 3 分 1 留言（同團隊 nanobot 有 257 分），中文圈熱度全是轉述。**📌 可單獨抽取**：`eval/generate_meta_prompts.py` + 44 份職業別評分 rubric，是 LLM-as-judge rubric 自動生成的可運行範例（亦為 fallback 靜默失效的反面教材） |
 
 ---
 
-## 🛠️ Claude Code / Skills（36 篇）
+## 🛠️ Claude Code / Skills（37 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -82,6 +84,7 @@ tags: [github, index, repos]
 | [[Github/repos/MengTo-Skills — 設計師視角 Codex×Claude×Cursor Agent Skill 合集\|MengTo/Skills]] | 🔬 | ⏳ | 1.3K⭐ Design+Code 創辦人個人庫，75 skills（62 個視覺風格卡+13 個原則/Codex工作流）；與已裝 design-taste-frontend 等高度重複，與 emilkowalski/skills 互補（決策層 vs 風格庫） |
 | [[Github/repos/laowangba-pmprototype-skill — B端C端產品原型生成 Codex Skill\|laowangba-pmprototype-skill]] | 🔬 | ⏳ | 38⭐ 1天新；PM 用 B/C 端 Figma 原型生成流水線+Anti-Slop 閘門，inherits frontend-design；本機無 Figma MCP 跑不到執行層，QA 用途低 |
 | [[Github/repos/ten-wins-ten-losses — 三國官渡 SDD 角色扮演開發工作流\|ten-wins-ten-losses]] | 🔬 | ❌ | 2⭐ 三國四謀士人設 SDD skill；與 institution+7-Agent 工廠同構但精簡（單 session 人格切換）；抽機制不裝皮——diff 增量鎖定＋questions.md 安全閥待分診 |
+| [[Github/repos/bento — 塞進單一 HTML 檔的辦公套件（PowerPoint 替代品）\|bento]] | 🔬 | ✅ | 2K⭐ 單檔 `.bento.html` 同時是文件＋編輯器＋播放器＋協作端（~560 KB）；文件是檔內明文 JSON → agent 就地改檔；自帶 Claude Code plugin marketplace（`bento-slides` skill 會自己下載 app 當空白容器）；morph／自研圖表／E2EE CRDT 協作／PDF 匯出；補位既有 guizang-ppt 等**靜態 HTML** deck skill（Bento 產出可再編輯＋可正式簡報）；⚠️ repo 僅 9 天、2 人、作者帳號新建（HN 上被質疑），先用 skill 不啟自我更新 |
 | [[Github/repos/html-anything — 把任何檔案轉成單檔互動 HTML 的 Agent Skill\|html-anything]] | 🔬 | ⏳ | 104⭐ 60 source prompts×17 style systems，把 WhatsApp/微信/Kindle/Spotify/Apple Health/**Obsidian vault** 等雜亂匯出轉單檔互動 HTML；填「source-aware parsing」空白（既有設計 skill 全是產出端、無人管讀懂格式）；**MIT-0 可單抄 prompt 檔不必裝整包**；⚠️停滯10週+單人+v0.1.x，when_to_use 比 hallmark 更廣會搶觸發 → 建議只抄 obsidian-vault.md 餵 archify |
 
 ---
@@ -104,7 +107,7 @@ tags: [github, index, repos]
 
 ---
 
-## 💰 投資 / 金融（7 篇）
+## 💰 投資 / 金融（8 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -114,6 +117,7 @@ tags: [github, index, repos]
 | [[Github/repos/開源版金融終端機 Fincept Terminal\|Fincept Terminal]] | 📎 | ⏳ | 開源金融終端 |
 | [[Github/repos/best-of-algorithmic-trading Collections\|best-of-algo-trading]] | 📎 | 📌 | 演算法交易資源 |
 | [[Github/repos/machine-learning-for-trading — ML4T 第三版機器學習交易全流程\|ml4t 3rd ed]] | 🔬 | ⏳ | 19.7K⭐ 量化 ML 教科書配套；9 case study 同一 pipeline；61 護欄化 agent skills 值得偷 |
+| [[Github/repos/daily_stock_analysis — LLM 驅動的多市場股票每日分析與推送系統\|daily_stock_analysis]] | 🔬 | ⏳ | 59K⭐/**50.5K fork**（比值 0.86＝典型 fork-to-run）；fork 完設 Secrets 就跑在 GitHub Actions 上，每交易日推「決策儀表盤」到飛書/TG/Discord/Slack/Email；多 Agent pipeline（Technical→Intel→Risk→Decision）＋`disagreement.py` 把 Agent 分歧結構化、risk 有 override 權；15 種 YAML 策略＋17 個資料源；**台股一等支援**（`.TW`/`.TWO` suffix-only、XTAI 日曆、三大法人 TWSE T86+TPEx OpenAPI）但明確不承諾即時行情/大盤複盤/自動補全；⚠️ README「推薦」供應商全帶推廣碼且為贊助商、免費源不保證穩定、安全 issue #1970 未關 |
 | [[Github/repos/chokepoint-atlas — AI 供應鏈卡點美股研究方法論 Skill\|chokepoint-atlas]] | 🔬 | ⏳ | 42⭐ 卡脖子美股战法 Skill；證據四級標籤＋卡點 stack＋五維打分；與 jane-finance 鏡頭互補；⚠️無授權檔+領域窄+停更，抽「證據標籤」機制即可 |
 
 ---

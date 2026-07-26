@@ -1,7 +1,7 @@
 # 知識庫主索引
 
-> 最後更新：2026-07-10
-> 文章數量：383 篇
+> 最後更新：2026-07-27
+> 文章數量：384 篇
 > 原始文件：持續累積中
 
 ---
@@ -92,6 +92,7 @@
 
 ### Tools（工具使用手冊）
 
+- [[Tools/ai-一手資訊源清單|AI 一手資訊源清單（12 個）]] — 12 個不看二手轉述的 AI 一手來源，五類分組 + 每日／每週／決策時的追蹤節奏建議 `#tools #ai #資訊源`
 - [[Tools/liteparse|LiteParse]] — 本地 PDF 解析工具（Rust/PDFium），`pip install liteparse`，CLI + Python API，支援批次轉換與截圖 `#tools #pdf`
 - [[Tools/video-to-brain|影片轉文字 → gbrain]] — 課程影片批次轉錄 Markdown，Gemini API + gbrain import `#tools #video`
 - [[Tools/gbrain-inbox|gbrain Inbox 快速匯入]] — Obsidian Inbox 一鍵 import + 移至 wiki/Ideas `#tools #gbrain`
