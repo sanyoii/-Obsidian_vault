@@ -237,7 +237,7 @@ tags: [github, index, repos]
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
-| [[Github/repos/Panniantong-Agent-Reach — AI Agent 互聯網感知層\|Agent Reach]] | 📎 | ✅ | 17 平台互聯網感知 |
+| [[Github/repos/Panniantong-Agent-Reach — AI Agent 互聯網感知層\|Agent Reach]] | 🔬 | ✅ | 60.8K⭐ 15 渠道互聯網能力層（選型/安裝/體檢/路由，讀取由 Agent 直呼上游）；已裝 v1.5.0，實測 13/15 可用；⚠️ 小紅書/Twitter 有實證封號案例（issue #498），排程長跑須用拋棄帳號 |
 | [[Github/repos/mvanhorn-last30days-skill — AI 多平台社群研究引擎\|last30days]] | 📎 | ✅ | 社群研究引擎 |
 | [[Github/repos/Usagi-orgai-goofish-monitor 基于 Playwright 和AI实现的闲鱼多任务实时定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。\|閒魚監控]] | 🔬 | 📌 | AI 閒魚監控 |
 | [[Github/repos/projectdiscoverynuclei Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you fi\|nuclei]] | 📎 | 📌 | YAML 漏洞掃描 |

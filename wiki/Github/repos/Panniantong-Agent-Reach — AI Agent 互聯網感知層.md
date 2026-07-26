@@ -2,9 +2,9 @@
 source: "https://github.com/Panniantong/Agent-Reach"
 author: "Panniantong (Neo Reid)"
 version: "1.5.0"
-stars: "48K+"
+stars: "60K+"
 clipped: 2026-06-06
-updated: 2026-07-02
+updated: 2026-07-26
 tags:
   - "github/repo"
   - "skills"
@@ -22,8 +22,8 @@ tags:
 **版本：** 1.5.0（2026-06-11，「能力层:多后端路由 + 真体检 + OpenCLI」）  
 **作者：** Panniantong（Neo Reid）  
 **授權：** MIT  
-**規模：** 89 個檔案，126,913 tokens，Python 3.10+  
-**社群：** ⭐ 48,847 · 🍴 3,889（2026-07-02 起 GitHub Trending #1，成長爆發）
+**規模：** 103 個檔案，159,368 tokens，Python 3.10+  
+**社群：** ⭐ 60,842 · 🍴 4,924（2026-07-26 複查；建立僅 5 個月，Trendshift Trending #1）
 
 ---
 
@@ -55,7 +55,9 @@ Agent Reach 是一個 AI Agent 互聯網能力「腳手架」：把 Twitter CLI�
 | MCP 整合  | mcporter（小紅書、抖音、Exa 搜尋）                            |
 | 上游工具  | yt-dlp、gh CLI、twitter-cli、rdt-cli、feedparser、Jina Reader |
 | 安裝方式  | `pip install agent-reach`（PyPI）                             |
-| 測試      | pytest，CI 涵蓋 Python 3.10–3.13                              |
+| 測試      | pytest，27 個測試檔／103 檔；GitHub Actions `pytest.yml` + wheel smoke test |
+| 後端路由  | `Channel.backends` 有序清單（首選 ▸ 備選）；`ordered_backends()` 套用使用者覆寫 `<channel>_backend` / 環境變數 `<CHANNEL>_BACKEND` |
+| 體檢原則  | `probe.py` **真執行**輕量指令才宣稱後端可用（`shutil.which()` 會被 stale venv shim 騙過）；`check()` 設定 `active_backend` |
 | 設定格式  | Agent Skills `SKILL.md` + `references/*.md` 分類路由          |
 
 ---
@@ -110,6 +112,32 @@ agent-reach doctor
 | LinkedIn | ✅ | linkedin-scraper-mcp（隨 OpenCLI 一起通） |
 | 雪球 | ⚠️ 待辦 | `agent-reach configure --from-browser chrome` 讀 Chrome cookie 失敗（一般權限被拒，需系統管理員權限 + 關閉 Chrome 才能重跑），或改用 Cookie-Editor 手動匯出 |
 | 小宇宙播客 | ❌ 待辦 | 需裝 ffmpeg（音訊轉碼切片），指令：`apt install -y ffmpeg`（Linux）/ 對應 Windows 安裝方式待確認 |
+
+---
+
+## 已知風險（2026-07-26 補）
+
+> [!warning] 封號風險是實證發生的，不是理論
+> - Issue #498（open）「小红书的封号警告来得很快，才用了2天」，附截圖。
+> - Issue #452「关于封号的问题」、#63「注册了 Twitter 小号…结果被封号了」皆為同型。
+> - README 自己建議用**拋棄式帳號**。要把小紅書／Twitter 渠道接進排程或長跑流程前，先開小號，勿用主帳號。
+
+- **Cookie 每 7–30 天過期**：單機單人可接受；多機／cron 是維護稅。
+- **安裝方式本身是供應鏈向量**：「叫 Agent 讀一個 URL 然後照做」——`install.md` 若被劫持，Agent 會照跑。生產環境應釘 commit SHA。
+- **PR 積壓**：Open PR 96 / Open Issue 72，單人主導的合併瓶頸明顯。
+- **平台偏中文圈**：Mastodon / Bluesky / TikTok(US) 需自行接。
+- **「pure vibe coding、無測試」的舊評價已過時**（2026-06 第三方評測所述），現已有 27 個測試檔 + CI。
+
+---
+
+## 更新記錄（2026-07-26 repo-intel 複查）
+
+- 星數 48.8K → **60.8K**（24 天 +12K）；forks 3,889 → 4,924；檔案 89 → 103、tokens 126.9K → 159.4K
+- **v1.5.0 仍為最新 release（2026-06-11），已 45 天未發版**，但主線昨天（07-25）仍有 push；近 4 週 commit 7/1/0/15
+- Open Issues 51 → 72、Open PRs 68 → **96**，積壓持續擴大
+- 本機實測 `agent-reach doctor` = **13/15 渠道可用**（僅雪球、小宇宙未通，皆與版本無關）
+- 架構亮點：`backends/opencli.py` 註解明載「`opencli doctor` 會副作用啟動 daemon，健康檢查絕不能用它」——與「驗證動作本身會污染觀測」（Class B 污染型驗證盲區）同一問題意識
+- **結論：維持現狀，不需動作。** 下次動手觸發條件：① 出 v1.6.0 → pull + 重跑 doctor；② `doctor` 掉渠道（平台換代）→ 立即更新
 
 ---
 
