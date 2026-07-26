@@ -7,8 +7,9 @@ generated: 2026-07-07
 # Tools 索引
 
 > 此檔由 refresh-index.ps1 自動生成；描述由 AI 補（保留既有描述，不會被洗回）
-> 檔案數：41 篇
+> 檔案數：43 篇
 
+- [[Tools/web3-ai-情報流水線開源專案清單|Web3 × AI 情報流水線開源專案清單（5 個）]] — 社群推薦的 5 個情報自動化開源專案，含即時星數／停更查核與「本 vault 是否已分析」交叉比對 #tools #web3 #ai #資訊源 #情報收集 #open-source
 - [[Tools/投影片版型選擇器|投影片選擇系統]] — 71 套版型瀏覽＋三步驟 Wizard 推薦，自動開啟 #tools #setup #hook #slides #html #claude-code
 - [[Tools/ai-一手資訊源清單|AI 一手資訊源清單（12 個）]] — 日報／論文／評測排行／深度部落格／產業分析五類共 12 個一手來源，含追蹤節奏建議 #tools #ai #資訊源 #情報收集 #reading-list
 - [[Tools/AI-PPT排行榜2026|開源 AI PPT 工具排行榜評估 2026]] — 依 GitHub Stars 評比開源 PPT 工具，含行動清單 #AI #tools #evaluation #presentation #ranking #pptx #html-slides
