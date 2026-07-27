@@ -20,3 +20,6 @@ wiki/Travel/2026-歐洲商旅/*.html
 # claude-flow session 執行期狀態（每 session 變動，純雜訊）
 .claude-flow/
 **/.claude-flow/
+
+# 前東家糾紛細節與面試講稿（含個資，此 repo 為 public）
+wiki/求職/Web3-轉職計畫/private/
