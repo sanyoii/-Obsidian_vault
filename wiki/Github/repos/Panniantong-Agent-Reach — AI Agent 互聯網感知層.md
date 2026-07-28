@@ -98,20 +98,28 @@ agent-reach doctor
 - Agent skill：`C:\Users\sanyo\.agents\skills\agent-reach\`
 - 原始碼：`d:\Claude\tools\agent-reach\`（git clone，editable install，已 pull 到 v1.5.0）
 
-**頻道狀態：**
+**頻道狀態（2026-07-27 逐頻道實測後三分級；「doctor ok」≠「真的能取到資料」）：**
 
-| 頻道 | 狀態 | 說明 |
-|------|------|------|
-| GitHub | ✅ | gh CLI 完整可用 |
-| V2EX | ✅ | 公開 API |
-| RSS/Atom | ✅ | feedparser |
-| 任意網頁 | ✅ | Jina Reader |
-| YouTube | ✅ | yt-dlp + `--js-runtimes node`（已修復） |
-| 全網語意搜尋 | ✅ | mcporter + Exa MCP（免 Key） |
-| Twitter / Reddit / Facebook / Instagram / B站 / 小紅書 | ✅ | OpenCLI（Chrome 擴充已裝，複用瀏覽器登入態） |
-| LinkedIn | ✅ | linkedin-scraper-mcp（隨 OpenCLI 一起通） |
-| 雪球 | ⚠️ 待辦 | `agent-reach configure --from-browser chrome` 讀 Chrome cookie 失敗（一般權限被拒，需系統管理員權限 + 關閉 Chrome 才能重跑），或改用 Cookie-Editor 手動匯出 |
-| 小宇宙播客 | ❌ 待辦 | 需裝 ffmpeg（音訊轉碼切片），指令：`apt install -y ffmpeg`（Linux）/ 對應 Windows 安裝方式待確認 |
+| 頻道 | doctor | 實測 | 說明 |
+|------|--------|------|------|
+| GitHub | ✅ | ✅ | gh CLI 完整可用 |
+| Twitter/X | ✅ | ✅ | OpenCLI，thread/article 取文實證有效 |
+| YouTube | ✅ | ✅ | yt-dlp + `--js-runtimes node` |
+| Reddit | ✅ | ✅ | OpenCLI |
+| Instagram | ✅ | ✅ | OpenCLI，search 回真資料 |
+| B站 | ✅ | ✅ | OpenCLI，search 回真資料（含播放數） |
+| Facebook | ✅ | ⚠️ 部分 | `search` 可用（空結果與壞要分清：某些查詢合法回空）；**`feed` 子命令壞**（rendered but no feed rows extracted） |
+| 全網語意搜尋 Exa | ✅ | ✅ | **mcporter + Exa 實測復活**（skill 裡「07-10 起已壞」註記已過時） |
+| 任意網頁 | ✅ | ✅ | Jina Reader，本 session 大量使用 |
+| RSS/Atom | ✅ | 未測 | feedparser，doctor ok 但近期無實際呼叫 |
+| V2EX | ✅ | ⚠️ 存疑 | doctor ok，但 07-27 subagent 跑 hot API 無輸出，未複驗 |
+| **小紅書** | ✅ | ❌ **假 OK** | doctor 回 ok，實際呼叫兩次皆 `AUTH_REQUIRED` 登入牆——doctor 只驗「後端存在」不驗「取得到資料」 |
+| **LinkedIn** | ✅ | ❌ **假 OK** | doctor 回「完整可用」，mcporter 實測 `linkedin` server **offline** 連不上 |
+| 雪球 | ⚠️ | ❌ | cookie 匯出需系統管理員權限 + 關 Chrome（誠實 warn） |
+| 小宇宙播客 | ❌ | ❌ | 需 ffmpeg（誠實 off） |
+
+> [!note] doctor 的探測比實際使用淺
+> doctor 驗的是「後端 CLI 存在且可呼叫」，不是「這條路真的取得到資料」。「13/15 可用」是 doctor 口徑；**實證口徑是 9 通 + 1 部分 + 2 假 OK + 2 誠實掛 + 1 未測**。要判斷頻道可不可用，以實際呼叫為準。
 
 ---
 
@@ -127,6 +135,15 @@ agent-reach doctor
 - **PR 積壓**：Open PR 96 / Open Issue 72，單人主導的合併瓶頸明顯。
 - **平台偏中文圈**：Mastodon / Bluesky / TikTok(US) 需自行接。
 - **「pure vibe coding、無測試」的舊評價已過時**（2026-06 第三方評測所述），現已有 27 個測試檔 + CI。
+
+---
+
+## 更新記錄（2026-07-27 逐頻道實測）
+
+- 觸發：使用者要求重跑 repo-intel → 判定距上次僅 15 小時、v1.5.0 未變、doctor 13/15 未變，**不重跑完整分析**（R13），改做上次沒做的事：逐頻道實際呼叫
+- **抓到兩個 doctor 假 OK**：小紅書（`AUTH_REQUIRED` ×2）、LinkedIn（mcporter server offline）——doctor 探測層級太淺，與它自己 `backends/opencli.py` 的問題意識（健康檢查不能有副作用）互為表裡：**健康檢查也不能太淺**
+- **Exa 復活確認**：mcporter 呼叫 `exa.web_search_exa` 回真資料——repo-intel skill 寫死的「2026-07-10 起已壞」註記過時，已修（三處同步）
+- Facebook `feed` 子命令壞（search 可用）；delta：⭐61,055（+213）、Open Issues 73、PRs 96，主線 07-25 仍有 push
 
 ---
 
