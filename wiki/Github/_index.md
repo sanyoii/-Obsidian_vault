@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 182 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 185 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-07-27
+> 最後更新：2026-07-29
 
 ---
 
@@ -38,7 +38,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（38 篇）
+## 🛠️ Claude Code / Skills（39 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -89,6 +89,7 @@ tags: [github, index, repos]
 | [[Github/repos/bento — 塞進單一 HTML 檔的辦公套件（PowerPoint 替代品）\|bento]] | 🔬 | ✅ | 2K⭐ 單檔 `.bento.html` 同時是文件＋編輯器＋播放器＋協作端（~560 KB）；文件是檔內明文 JSON → agent 就地改檔；自帶 Claude Code plugin marketplace（`bento-slides` skill 會自己下載 app 當空白容器）；morph／自研圖表／E2EE CRDT 協作／PDF 匯出；補位既有 guizang-ppt 等**靜態 HTML** deck skill（Bento 產出可再編輯＋可正式簡報）；⚠️ repo 僅 9 天、2 人、作者帳號新建（HN 上被質疑），先用 skill 不啟自我更新 |
 | [[Github/repos/html-anything — 把任何檔案轉成單檔互動 HTML 的 Agent Skill\|html-anything]] | 🔬 | ⏳ | 104⭐ 60 source prompts×17 style systems，把 WhatsApp/微信/Kindle/Spotify/Apple Health/**Obsidian vault** 等雜亂匯出轉單檔互動 HTML；填「source-aware parsing」空白（既有設計 skill 全是產出端、無人管讀懂格式）；**MIT-0 可單抄 prompt 檔不必裝整包**；⚠️停滯10週+單人+v0.1.x，when_to_use 比 hallmark 更廣會搶觸發 → 建議只抄 obsidian-vault.md 餵 archify |
 | [[Github/repos/naiyue-skills — 跨宿主的四支元技能工具箱（審 skill／調研／建 skill／思考框架）\|naiyue-skills]] | 🔬 | ✅ | 4⭐ MIT／純 Python 標準庫零相依／雙宿主（Codex＋Claude Code）。四支**元技能**：**skill-auditor**（把第三方 skill 宣稱拆成 claim → 沙箱多輪實跑 → 逐條證實/證偽/無法驗證，`claims.json` 單一事實源、AI 只做局部判斷、轉停由腳本決定、終態永不改判、實跑 Agent 不得知道 claim 內容防取證偏向）→ **建議裝**，填補既有 `audit-skill` 只做靜態檢查的空白（本環境屢吃 hallmark/pixelshot「宣稱≠實測」的虧），但**須改名 + 指名調用限定**避開觸發打架；**prior-art-scout**（開工前多源選型，15 條鐵律含「盡力證明有人做過」「停更≠路線不可行」「不得從有限樣本推導行業無解」）→ ⏳ 與 research-deep+repo-intel 七成重疊、X 源需付費 TikHub；**naiyue-thinking** ❌ 與 institution/02 八成同構（獨立收斂訊號，抄「三次才固化」表即可）；**naiyue-skill-builder** ❌ 與本環境三處同步 SOP 衝突（只抄 `quick_validate.py` 的 L1/L2/L3 檢查）。⚠️ 本機實測：symlink 還原失敗（需管理員/開發者模式，但手動安裝不受影響）、測試硬編碼 `python3` 致 9 fail+2 error（環境非邏輯）、`skill-auditor` 5 支承重腳本零測試（違反自家 AGENTS.md）。與 [[Github/repos/naiyue-cover-generator — Codex 用的文章封面與段內說明圖 Skill 組\|naiyue-cover-generator]] 互補不重複（早 20 天、零檔案重疊、MIT vs 無授權），**本 repo 是該追蹤的正本** |
+| [[Github/repos/free-claude-code — 讓 Claude Code、Codex、Pi 改跑自家 LLM 供應商的本機代理\|free-claude-code]] | 🔬 | ❌ | 42.7K⭐ MIT／6 個月衝上來的本機反向代理：假裝成 Anthropic Messages（給 Claude Code/Pi）與 OpenAI Responses（給 Codex），把請求翻譯後轉去 **29 家供應商**（NVIDIA NIM/OpenRouter/Gemini/DeepSeek/Groq/Ollama/LM Studio…），支援 Opus/Sonnet/Haiku 分層各指不同上游、本機 Admin UI（Validate 後才 Apply）、Discord/Telegram 橋接＋語音轉文字。**名稱誤導**——拿到的不是免費 Claude 模型，是用 Claude Code 這個殼去驅動別家模型，原廠模型不在清單裡。**❌ 因需求不存在**（本環境付費 opus[1m]）＋要動 `ANTHROPIC_BASE_URL`/`.claude.json`/`DISABLE_AUTOUPDATER` 與 settings 統一＋config-drift 金絲雀正面衝突；且 `curl \| sh` 安裝、**零 tag 零 Release 無版本可釘**、bus factor 1（728/860 commits 一人，第 2、5 名貢獻者是 `cursoragent`/`claude` AI 帳號）。工程品質**反而是同星等前段**：靜態 AST 契約測試釘死八套件依賴白名單、19K token ARCHITECTURE.md、tests/ + smoke/ 雙層測試。熱門 issue 前 7 有 6 個同一件事＝上游供應商請求失敗（結構性風險，免費層限流／改 schema／tool-calling 支援不一）。**📌 可單獨抽取**：`api/web_tools/egress.py` 的 DNS-rebinding-safe SSRF 守門（~60 行零相依）、`tests/contracts/test_import_boundaries.py` 架構契約測試法、`smoke/` prereq/product 兩層分法 |
 
 ---
 
@@ -179,7 +180,7 @@ tags: [github, index, repos]
 
 ---
 
-## 📊 AI/ML 模型（6 篇）
+## 📊 AI/ML 模型（7 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -189,6 +190,7 @@ tags: [github, index, repos]
 | [[Github/repos/HKUDSLightRAG — 知識圖譜增強 RAG 框架\|LightRAG]] | 🔬 | ⏳ | 知識圖譜 RAG |
 | [[Github/repos/exo-exploreexo Run frontier AI locally\|exo]] | 📎 | 📌 | 多裝置組 AI cluster |
 | [[Github/repos/Chandra OCR 2\|Chandra OCR 2]] | 📎 | 📌 | PDF/掃描→Markdown |
+| [[Github/repos/VibeVoice — 微軟長音檔語音 AI 家族（TTS 已下架、ASR 仍在推進）\|VibeVoice]] | 🔬 | ⏳ | 50.8K⭐ MIT／微軟研究院；核心是 **7.5 Hz 超低幀率連續語音 tokenizer**（聲學+語意雙路）＋next-token diffusion（Qwen2.5 主幹 + diffusion head），換來長序列能力：TTS 側 90 分鐘 4 人 podcast（ICLR 2026 Oral）、ASR 側**單次吞 60 分鐘音檔**直出「誰／何時／說什麼」結構化逐字稿＋自訂 hotwords，50+ 語言。**⚠️ repo 只剩半套**：2025-09-05 微軟以「被用於偏離原意用途」移除 TTS 安裝與使用文件（`docs/vibevoice-tts.md` 現只剩一行 *Disabled due to widespread misuse*），Large 權重 HF **實測 401**；但 1.5B 權重仍公開（57K 下載、`gated=False`）、模型類別也還在 repo 裡＝**官方封路、能力未封**。生態隨即繞道：VibeVoice-ComfyUI ⭐1.5K、audio.cpp C++/ggml 移植 ⭐983（RTX 5090 上 22.95 分產 93.6 分音檔，比 Python 快 2.86×）、Large 權重存 ModelScope 鏡像；Issue #95「MIT 授權下 out-of-scope 是什麼意思」仍 open 未回應。程式碼**已停滯**（最後 code commit 2026-05-06 修 CWE-502，之後只更 README news），核心模型零測試。**⏳ 因**需求未出現（現行單人講課影片 Whisper 已足夠，增量只在 diarization）＋7B 要 GPU（1 分鐘音檔就有人 OOM）＋免 GPU 的 BitNet 在另一 repo `VibeASR.cpp`（⭐50、要自 build C++）＋無 Claude Code 接口且轉錄位已被 hyperframes-media／claude-real-video 佔住＋治理風險已實證。**升級條件**＝出現需分人逐字稿的實際任務（訪談／多人會議／podcast），或 VibeASR.cpp 出 Windows 預編譯 binary；**放棄條件**＝至 2027-01 仍無 Windows 支援／停更，或 WhisperX diarization 接進現有流程即滿足，或微軟再次下架。**TTS 部分明確 ❌**（只剩非官方繞道，授權立場不明；要 TTS 用既有 Kokoro）。**📌 可單獨參考**：`modular_vibevoice_tokenizer.py`+`diffusion_head.py`+`dpm_solver.py` 是「超低幀率換長序列」可讀範例；`vllm_plugin/` 是自訂模型註冊成 vLLM general plugin 的完整範本 |
 
 ---
 
@@ -198,7 +200,7 @@ tags: [github, index, repos]
 |------|------|------|------|
 | [[Github/repos/awesome-design-skills — 67種美學風格的SKILL.md註冊庫\|awesome-design-skills]] | 🔬 | ⏳ | 1.9K⭐ 67 美學風格 SKILL.md/DESIGN.md 註冊庫（brutalism/glassmorphism/neon/retro…）；`npx typeui.sh pull`；與 awesome-design-md 互補（風格 vs 品牌）；靜態SKILL.md無法看codebase，按需pull即可 |
 | [[Github/repos/Open Design — 開源版Claude Design讓CLI agent變設計引擎\|Open Design]] | 🔬 | ⏳ | 80K⭐ 開源版 Claude Design 桌面 app（Electron）；接你已裝 CLI(BYOK)當設計引擎產原型/簡報/影片；71 DESIGN.md+19 skills；nexu-io 是 hyperframes/html-anything vendor；曾移除2GB+CLI-first重疊故觀望 |
-| [[Github/repos/awesome-design-md — 73 套品牌 DESIGN.md 設計系統收藏庫\|awesome-design-md]] | 📎 | ✅ | 93.5K⭐ Google Stitch |
+| [[Github/repos/awesome-design-md — 73 套品牌 DESIGN.md 設計系統收藏庫\|awesome-design-md]] | 🔬 | ✅ | **105K⭐**（07-29 回訪，初訪 93.5K／+12.5%）74 套品牌 DESIGN.md（檔名「73 套」為歷史遺留、內容本就 74）；每份 500–800 行十段結構，`Known Gaps`（自陳未覆蓋範圍）＋`Iteration Guide`（教 agent 往下推導）兩段是同類 token dump 沒有的。**回訪兩大發現**：①**已轉付費引流層**——README 品牌連結全改指 getdesign.md，官網 `/request` 私有 DESIGN.md **$59→$39**、LaunchKit **$299→$249**，宣稱「300+ 可請求」但那 300+ 不在免費 repo；**內容 commit 停在 06-08（7 週）而 300 張 open issue 幾乎全是無人處理的品牌請求**＝請求流被改道，別期待新品牌免費加入。②**`/design-fetch` 6 項對照失效（P1，**07-29 已修＋驗收 74/74→200**）**：`linear`/`opencode-ai`/`runway`/`the-verge`/`together-ai`/`xai` 全 404，正確為 `linear.app`/`opencode.ai`/`runwayml`/`theverge`/`together.ai`/`x.ai`（12 次實呼叫驗證），**linear 還是本頁第一推薦**——根因是上游用含點號真實網域名、skill 建立時寫慣用短名，屬淺探型盲區同族。**✅ 維持已裝但降預期**：免費 74 套 raw URL 實測仍 200、MIT 不變、與 awesome-design-skills（風格向）不重疊；放棄條件＝轉 archived／免費檔進付費牆（raw 開始 404）／授權改限制性。📌 十段結構可當「把視覺規範寫成 AI 可消費格式」的自用範本 |
 | [[Github/repos/google-labs-code — Google Stitch + Jules 開源組織全覽\|google-labs-code]] | 📎 | ⏳ | Stitch + Jules 組織 |
 | [[Github/repos/Stop-slop 寫作去除AI腔\|Stop-slop]] | 📎 | ✅ | 去 AI 腔寫作 |
 | [[Github/repos/akseolabs-seocinematic-ui A reasoning-first cinematic web design skill. Makes AI think like a film director — research a real film, extract its visual language, translate it into page narrative and composition. Not a style picker. A director's w\|cinematic-ui]] | 📎 | 📌 | 電影導演思維 Web 設計 |
@@ -240,7 +242,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🔒 安全 / 自動化 / 其他（12 篇）
+## 🔒 安全 / 自動化 / 其他（13 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -256,6 +258,7 @@ tags: [github, index, repos]
 | [[Github/repos/ai-media-generator — 跨平台 AI 媒體生成 Prompt Skill\|ai-media-generator]] | 📎 | 📌 | AI 媒體 Prompt |
 | [[Github/repos/TrendRadar — 一鍵部署的 AI 舆情熱點聚合監控助手\|TrendRadar]] | 🔬 | ⏳ | 60.6K⭐ 35+中文平台熱榜聚合+RSS+AI篩選/翻譯/分析，9推播渠道+17工具MCP；GitHub Actions 30秒fork即跑；與 last30days/agent-reach 重疊80%，資料綁定 newsnow 單點API，僅 MCP 對話分析是差異點 |
 | [[Github/repos/newsnow — 優雅的即時熱榜新聞聚合器\|newsnow]] | 🔬 | ✅ | 21K⭐ 優雅熱榜聚合器（40+源：百度/微博/知乎/財聯社/雪球/HN/GitHub）；React19+Nitro+sqlite，每源一爬蟲易擴充；Docker/CF/Vercel一鍵自架，`/api/s`可當熱榜API接海巡；TrendRadar 的上游資料源 |
+| [[Github/repos/gpt-5.6-instruct — Codex CLI 越獄提示詞包（威脅情報，不裝）\|gpt-5.6-instruct]] | 🔬 | ❌ | 3.5K⭐ MIT／18天衝星／**越獄工具·威脅情報留存**（不轉載 payload）；把 OpenAI Codex CLI 的 gpt-5.6-sol「破甲」——寫入 `model_instructions_file` 把安全研究/滲透/逆向/破解/NSFW 全框定成「本地沙箱任務」、顯式壓制拒絕與「改用授權靶場」回退話術。真正少見的是**把越獄成功率工程化成 CI**：「模型拒絕＝測試失敗」判準（360+52 條 prompt bank）＋模型自迭代重寫提示詞＋low/medium/high 分層迴歸門禁。Repomix Top5 只1個是程式碼、其餘全是星數/通過率趨勢SVG＝行銷成長曲線。Watchers 僅5對3.5K星＝話題衝星非持續使用群。**Issue 暴露真實用途**：破解App改包、規避OpenAI雲端風控（多帳號輪詢）、試探生物安全邊界。**❌ 用途與本環境價值取向相反＋違反OpenAI ToS（封號/帳務風險）＋改的是Codex `config.toml`（撞本機「Codex寫壞config.toml致MCP啟動即死」既有陷阱）＋18天單人ZIP注入系統指令＝高信任成本。無升級條件（用途排除非觀望）**。📌 中性可留：`codex-instruct.py` 的設定檔安全改寫模式（快照+SHA256比對+精準reset+原子寫入，config-drift金絲雀正面範例）、「CI把成功率做成可迴歸門禁」的框架形狀可移植正當eval |
 
 ---
 

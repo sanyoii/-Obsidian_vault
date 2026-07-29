@@ -1,8 +1,9 @@
 ---
 source: "https://github.com/VoltAgent/awesome-design-md"
 author: "VoltAgent"
-stars: "93.5K"
+stars: "105K"
 clipped: 2026-06-26
+updated: 2026-07-29
 tags:
   - "github/repo"
   - "design-system"
@@ -13,31 +14,75 @@ tags:
   - "awesome-list"
 ---
 
-## awesome-design-md — 73 套品牌 DESIGN.md 設計系統收藏庫
+## awesome-design-md — 74 套品牌 DESIGN.md 設計系統收藏庫
 
-> **VoltAgent/awesome-design-md** | ⭐ 93.5K | 🍴 11,091 | 📝 MIT
+> **VoltAgent/awesome-design-md** | ⭐ 105,154 | 🍴 12,035 | 📝 MIT
 > "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI."
+
+> 📌 檔名仍為「73 套」是歷史遺留（有 4 條反向連結指向舊檔名，改名成本大於收益故不改）。**實際為 74 套**——下方分類表本來就列滿 74 個（12+7+8+7+6+7+5+13+7+2），只有舊標題數字寫錯。
 
 ---
 
 ### 一句話說明
 
-基於 Google Stitch 提出的 DESIGN.md 規範，從 73 個知名品牌網站萃取出可讓 AI 程式碼生成器直接讀取的設計系統文件。複製一個 `DESIGN.md` 到專案根目錄，AI Agent 就能產出風格一致的 UI。
+基於 Google Stitch 提出的 DESIGN.md 規範，從 74 個知名品牌網站萃取出可讓 AI 程式碼生成器直接讀取的設計系統文件。複製一個 `DESIGN.md` 到專案根目錄，AI Agent 就能產出風格一致的 UI。
 
 ---
 
 ### 專案概覽
 
-| 項目 | 數值 |
-|------|------|
-| Stars | 93,468 |
-| Forks | 11,091 |
-| 主要語言 | 無（純 Markdown） |
-| 授權 | MIT |
-| 建立時間 | 2026-03-31 |
-| 最後推送 | 2026-06-16 |
-| Open Issues | 290（多為新品牌請求） |
-| Topics | awesome-list, design-md, design-system, google-stitch, vibe-coding, figma, design-tokens |
+| 項目 | 數值（2026-07-29 回訪） | vs 初訪（2026-06-26） |
+|------|------|------|
+| Stars | 105,154 | 93,468 → **+12.5%** |
+| Forks | 12,035 | 11,091 |
+| 主要語言 | 無（純 Markdown） | 同 |
+| 授權 | MIT | 同 |
+| 建立時間 | 2026-03-31 | 同 |
+| 最後推送 | 2026-06-16（僅改 README banner 圖） | 同 → **已停 6 週** |
+| 最後**內容**變更 | **2026-06-08**（`add nintendo design`） | **已停 7 週** |
+| Open Issues | **300**（幾乎全是新品牌請求，無人處理） | 290 |
+| Open PRs | 7 | — |
+| 總 commit | 60（necatiozmen 一人 57） | — |
+| 品牌數 | **74** | 標題誤記 73，內容本來就 74 |
+| Topics | awesome-list, design-md, design-system, google-stitch, landing-page, design-tokens, figma, vibe-coding, vibe-design, vibecoding | — |
+
+---
+
+## 🔁 2026-07-29 回訪：兩件初訪沒有的事
+
+### ① 已轉為付費服務的引流層
+
+README 的品牌連結**全部改指 getdesign.md 官網**（不再指向 repo 內檔案），而官網的「請求新品牌」已是付費：
+
+| 產品 | 價格 | 內容 |
+|---|---|---|
+| Private DESIGN.md | ~~$59~~ **$39** 單次 | 指定網站的客製 DESIGN.md（light+dark）+ HTML 主題預覽 + 私有 Discord |
+| Web Launch Kit + DESIGN.md | ~~$299~~ **$249** 單次 | 完整 production-stack 模板 |
+
+官網另宣稱「300+ DESIGN.md analyses, ready to request」——**那 300+ 不在免費 repo 裡**，是付費請求的目錄。
+
+**結構性判讀**：300 張 open issue 幾乎全是「DESIGN.md for X」（含 shadcn/ui、Cloudflare、ChatGPT、Ant Design 等高需求品牌），而內容 commit 停在 06-08。這不是維護者忙不過來，是**請求流被改道**——GitHub 免費管道保留但不服務，同樣需求官網標價 $39。
+
+➡️ **實務結論：免費的 74 套仍可用（raw URL 實測 200），但別期待新品牌會被免費加進來。**
+
+### ② `/design-fetch` 有 6 項對照失效（P1，**2026-07-29 已修復並驗收**）
+
+skill 的品牌→目錄對照表與 repo 實際目錄不符。12 次實呼叫驗證：
+
+| skill 舊值 | 實測 | 修正後目錄 | 實測 |
+|---|---|---|---|
+| `linear` | **404** | `linear.app` | 200 |
+| `opencode-ai` | **404** | `opencode.ai` | 200 |
+| `runway` | **404** | `runwayml` | 200 |
+| `the-verge` | **404** | `theverge` | 200 |
+| `together-ai` | **404** | `together.ai` | 200 |
+| `xai` | **404** | `x.ai` | 200 |
+
+其餘 68 項正確。**`linear` 是本頁「開發者 Dashboard」第一推薦**，等於最常用的那條路是壞的。
+
+**根因**：上游目錄用了含點號的真實網域名（`linear.app`／`x.ai`），skill 建立時寫成慣用短名。屬「淺探型」驗證盲區的同族——skill 裝好後從未實呼叫驗證過。
+
+**修復**（2026-07-29）：只改對照表第 2 欄（目錄名稱），第 1 欄使用者輸入名保留短名，故 `/design-fetch linear` 用法不變。雙位置同步（`~/.claude/skills/` + `infra/skills-backup/`，MD5 一致）。順帶修正 skill 內兩處「73 個／73 brands」為 74。**驗收：對表列全部 74 個目錄實跑 raw URL，74/74 皆 200。**
 
 ---
 
@@ -70,7 +115,7 @@ tags:
 
 ---
 
-### 73 套品牌完整分類
+### 74 套品牌完整分類
 
 #### AI & LLM 平台（12 個）
 
@@ -227,7 +272,7 @@ tags:
 
 | Skill | 用途 |
 |-------|------|
-| `/design-fetch <品牌名>` | 一鍵從 GitHub 取得該品牌的 DESIGN.md 放到當前專案根目錄 |
+| `/design-fetch <品牌名>` | 一鍵從 GitHub 取得該品牌的 DESIGN.md 放到當前專案根目錄。**2026-07-29 已修 6 項對照並驗收 74/74 → 200**（見上方回訪 §②）。取檔機制：`curl -sL https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/<目錄>/DESIGN.md`，**不要改走 README 連結**（已導向官網付費漏斗） |
 | `/design-taste-frontend` | Anti-Slop 前端生成，搭配 DESIGN.md 強制風格一致 |
 | `/high-end-visual-design` | $150k 代理商等級設計規則 |
 | `/minimalist-ui` | Editorial/Minimalist 風格（Notion/Linear 美學） |
