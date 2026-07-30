@@ -42,6 +42,10 @@ Barclays 與 Nomura 各自收購了雷曼北美與部分亞洲業務，但文件
 
 - Bates：`LBEX-LL 3356480-3356609`｜來源標記：Confidential Treatment Requested By Barclays / SOURCE: LEHMAN LIVE
 - 本地：`raw/sources/lehman-manuals/LBEX-LL-3356480-3356609_FX-and-Options-Training-Manual.pdf`
+- **中文精修版：** [[Quant-Trading/雷曼FX手冊-中文精修-01-即期外匯|① 即期外匯]]
+- **中文精修版：** [[Quant-Trading/雷曼FX手冊-中文精修-02-遠期外匯|② 遠期外匯]]
+- **中文精修版：** [[Quant-Trading/雷曼FX手冊-中文精修-03-換匯交易|③ 換匯交易]]
+- **中文精修版：** [[Quant-Trading/雷曼FX手冊-中文精修-04-外匯選擇權|④ 外匯選擇權]]
 
 四大段，由市場語言一路推到選擇權風險：
 
@@ -66,6 +70,7 @@ Barclays 與 Nomura 各自收購了雷曼北美與部分亞洲業務，但文件
 
 - Bates：`LBEX-LL 1175483-1175553`｜文件自述用途：給從事 repurchase agreements 的 sales people 的 reference guide
 - 本地：`raw/sources/lehman-manuals/LBEX-LL-1175483-1175553_Repo-Sales-Reference-Guide.pdf`
+- **中文精修版：** [[Quant-Trading/雷曼Repo手冊-中文精修|雷曼 Repo 手冊 中文精修]]
 
 十一節（原文羅馬數字編號）：
 
@@ -98,6 +103,7 @@ Barclays 與 Nomura 各自收購了雷曼北美與部分亞洲業務，但文件
 
 - Bates：`LBEX-DOCID 688141`｜版本 1.0，CRMC review 日期 2007-11-13｜標記 FOIA
 - 本地：`raw/sources/lehman-manuals/LBEX-DOCID-688141_Credit-Risk-Reporting-Manual.pdf`
+- **中文精修版：** [[Quant-Trading/雷曼信用風險報表手冊-中文精修|雷曼信用風險報表手冊 中文精修]]
 
 **它不是**教你分析財報、決定 credit rating 或建 default model。它記錄 Credit Risk Reporting 團隊如何**收集、驗證、彙總、上報**全行 counterparty exposure。
 
