@@ -1,7 +1,7 @@
 # 知識庫主索引
 
 > 最後更新：2026-07-30
-> 文章數量：387 篇
+> 文章數量：394 篇
 > 原始文件：持續累積中
 
 ---
@@ -123,6 +123,21 @@
 - [[Quant-Trading/ai-24h-risk-monitoring|AI 24 小時盯盤——普通人可用的機構級風控四層架構]] — 護城河＝永遠在線＋硬編碼熔斷線而非「AI 比人聰明」；四層架構（實時監控/異常檢測/熔斷線/壓力測試）；三個零代碼落地動作與三大局限 `#quant #風控 #AI應用 #交易系統`
 - [[Quant-Trading/lehman-brothers-trading-manuals|雷曼兄弟內部交易培訓手冊 — 投行實務的一手教材]] — 2010 破產調查公開的三份 desk operating manual 真實目錄：FX Training Manual 130 頁（spot/forwards/swaps/options 四段，含 gamma hedging 練習）、Repo Sales Reference Guide 71 頁（11 節含 Infinity 前台系統）、Credit Risk Reporting Procedures Manual 32 頁（CCE/MPE、parent-child mapping、Daily Excess Report）；PDF 已存 raw/sources/lehman-manuals/ 並開檔驗證；含手冊×證物對讀法與來源站可信度評估 `#quant #外匯 #選擇權 #repo #信用風險 #投行實務 #一手文件`
 - [[Quant-Trading/投行金流與反洗錢-自學教材|投行金流與反洗錢 — 自學教材]] — 13 模組自學課程，前台實務（FX 語言/forward 利率差/swap 資金調度/Greeks 與 gamma hedging/Repo 生命週期/CCE-MPE 信用風險報表）× 洗錢五案（Wachovia 通匯／Danske 非居民／德銀鏡像交易／Troika 平行金融／太子集團與 Lazarus 鏈上）；每模組白話先行＋一手 PDF 頁碼導航＋自測題；含四判準、手冊×證物對讀法、中英詞彙表、Web3/CEX 面試映射 `#教材 #AML #合規 #外匯 #選擇權 #repo #web3`
+- [[Quant-Trading/雷曼FX手冊-中文精修-01-即期外匯|雷曼 FX 手冊 中文精修 ① 即期外匯]] — 一手手冊 p.1–37 全節中文化：outright／四種交割慣例（CAD 例外）／credit risk 與 settlement risk（Herstatt）／American vs European terms＋算術寫法陷阱／匯率變動與損益三題全解／pips／速算公式／bid-offer／**left bid–right offer 三步判斷法**／cross rate 同異 terms／**cross bid-offer 交叉規則＋最寬 spread 反推驗算**；10 個零基礎實例區塊＋8 題自測；標出原件兩處錯誤 `#教材 #中文精修 #外匯 #FX-Spot #一手文件`
+
+---
+
+### 倫敦黑貓 London Black Cat
+
+> 來源：londonblackcat.substack.com 23 篇全數萃取（2026-07-30）｜作者匿名，自述資歷一律 🔴
+> Skill：`london-blackcat`（四模式：紅旗/機制/面試/生態 + 可信度分級 🟢🟡🔴）
+
+- [[倫敦黑貓/_index|倫敦黑貓總索引]] — 五主題頁導航 + 兩條閱讀路線 + 編輯紀律 `#index`
+- [[倫敦黑貓/暗流-洗錢與地下金融|暗流：洗錢與地下金融]] — 七案速查、五種攻擊面交叉比較、**紅旗速查（銀行 14 條＋鏈上 11 條，以可觀測欄位為軸）**、AML 制度四失效點、cum-cum/cum-ex 稅差套利、灰產資本邏輯、地下銀行從飛錢到 USDT 的不變邏輯（7 篇）`#AML #洗錢 #合規 #紅旗`
+- [[倫敦黑貓/交易實務與市場事件|交易實務與市場事件]] — 選擇權下跌應對決策清單、Wheel Strategy 拆解＋7 條失效條件、韓股融斷的指數集中×槓桿 ETF 因果鏈（4 篇）`#選擇權 #ETF #交易策略`
+- [[倫敦黑貓/市場結構與金融產品|市場結構與金融產品]] — Private Credit 槓桿暗處、足球豪門結構化融資、唐提式養老金 Tontine、華爾街造詞史 FANG→MANGOS（4 篇）`#市場結構 #結構化融資 #private-credit`
+- [[倫敦黑貓/金融圈人物與職場文化|金融圈人物與職場文化]] — Alpha Male/Finance bro 類型學、挖角與 team lift-out 六機制、八卦作為資訊流動機制、**對求職者的實用啟示**（3 篇）`#職場 #倫敦金融城 #求職`
+- [[倫敦黑貓/倫敦生活與隨筆|倫敦生活與隨筆]] — **Monzo/Revolut/Wise 換匯四維對照＋四個隱藏機制（safeguarding vs FSCS、AML 凍結申訴、無 Section 75）**、倫敦生活成本、站台定位（5 篇）`#英國 #換匯 #生活`
 
 ---
 

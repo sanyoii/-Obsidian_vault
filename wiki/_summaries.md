@@ -382,3 +382,19 @@
 **摘要：** 13 個模組的自學課程，核心命題是「不懂正常長什麼樣就看不出異常」，因此前台實務與洗錢結構必須一起學。Part 1（M1–M6，前台）：交易室語言（base/terms、left bid–right offer、cross rate 兩種算法、外匯無單邊部位）→ Forward 非預測而是利率差與資金成本（premium/discount、pay/earn points、carry、odd dates）→ Swap 作為全行幣別調度中樞（T/N 每日做平餘額，結構同型於 Repo）→ 選擇權交易的是變化中的風險因子而非靜態 payoff（Delta/Gamma/Theta/Vega、方向對仍虧錢的四條路、gamma hedging 成本、barrier 附近 Greeks 失控）→ Repo 真正的產品是現金抵押品資產負債表額度結算的整體管理（六用途、十步生命週期、haircut、wrong-way risk）→ 信用風險報表其實是資料工程（parent/child 與 agent/principal mapping 是地基、CCE vs MPE、報表必須轉成四選一的行動）。Part 2（M7–M11，後門）五種攻擊面：Wachovia 通匯銀行與 casa de cambio 混池（4,200 億美元未有效監控）、Danske 非居民組合與獎勵視而不見的結構（2,000 億歐元／2022 年 20 億美元和解）、德銀鏡像交易與 remote booking 責任真空（約 100 億美元／FCA 1.63 億英鎊＋NYDFS 4.25 億美元）、Troika 自建平行金融系統（75 家空殼、layering、假合約與合約取消費）、太子集團實體版（跑分→USDT→integration）與 Lazarus 鏈上版（盲簽、chain-hopping、追得到不等於追得回）。Part 3（M12）收斂出同一失效模式：異常都被看見了，但沒有任何一層擁有整個問題；給四個可遷移判準（沒有經濟目的的交易＝最強紅旗、行為畫像優於金額門檻、責任真空比惡意更常見、資料品質即風控上限）與手冊×證物對讀法。Part 4（M13）把每個傳統概念映射到 CEX/託管面試語言（entity mapping→地址簇、代理銀行信任鏈→Travel Rule、CCE/MPE→保險基金、Daily Excess→提幣風控、盲簽→託管簽核介面完整性），並指出 QA 背景的兩個切入角（介面與實際行為一致性、提幣狀態機）。附錄含四類中英詞彙表、一手文件查詢導航（哪個問題翻哪份手冊第幾頁）、資料可信度分級（一手手冊可直接引用；二手案例數字寫進正式文件前須回 DOJ/FCA/NYDFS/FinCEN/OCCRP 原始出處；起訴不等於定罪）。
 **來源：** 一手——雷曼三手冊 233 頁 + Examiner Report 九冊 4,105 頁（`raw/sources/lehman-manuals/`）；二手——倫敦黑貓 Substack 五篇案例
 **建立：** 2026-07-30
+
+---
+
+## [[Quant-Trading/雷曼FX手冊-中文精修-01-即期外匯|雷曼 FX 手冊 中文精修 ① 即期外匯]]
+**標籤：** `#教材` `#中文精修` `#外匯` `#FX-Spot` `#一手文件`
+**摘要：** 雷曼 Foreign Exchange Training Manual（Bates LBEX-LL 3356480-3356609）p.1–37 的中文精修版，依原手冊章節順序全節覆蓋。內容：outright 定義與 swap 的一腿/兩腿結構區分；四種交割慣例（cash 同日／tom +1／spot +2／forward，CAD spot 例外為 +1）；credit risk（等於重置成本，且因銀行認列 MTM 為收入而直接打到損益表）與 settlement risk（兩次交割不同步的 Herstatt 風險，對應 CEX 充提幣時序）；American vs European terms 與原件的算術寫法陷阱（原件寫 USD/EUR 指每歐元值多少美元，與現代市場相反）；匯率變動判斷規則（分子上升＝base 走強）與三題損益全解；pips/points 與跨市場不可直接比較；速算公式；bid-offer 與 spread 的內建虧損效果；left bid–right offer 三步判斷法與四題實戰；cross rate 同 terms 相除／不同 terms 相乘；cross 的 bid-offer 交叉規則（相除要交叉、相乘不交叉）與「最寬 spread」反推驗算法；反射速記口訣。加值：10 個為零基礎讀者寫的實例區塊（台灣公司付歐洲貨款、日圓 150→155 是升是貶、spread 是進場即虧、為何需要 cross rate 與美元作為 vehicle currency）、8 題自測、標出原件兩處錯誤（p.11 把 European terms 誤稱 American terms；算術寫法與市場慣例相反）。
+**來源：** 一手 PDF `raw/sources/lehman-manuals/LBEX-LL-3356480-3356609_FX-and-Options-Training-Manual.pdf`
+**建立：** 2026-07-30
+
+---
+
+## [[倫敦黑貓/_index|倫敦黑貓 London Black Cat 知識庫]]
+**標籤：** `#index` `#AML` `#洗錢` `#合規` `#投行實務` `#倫敦金融城`
+**摘要：** londonblackcat.substack.com 全部 23 篇文章（2026-07-01~07-29，皆免費）萃取成五個主題頁，體例比照旺來幫Jane（可信度分級 🟢🟡🔴 + 專屬 skill）。① 暗流-洗錢與地下金融（7 篇）：七案速查表、五種攻擊面交叉比較、以可觀測欄位為軸的紅旗速查（傳統銀行 14 條 + 鏈上託管 11 條）、AML 制度四個失效點（Alert Fatigue／Normalcy Bias／時間不對稱／追責在機構層停止）、cum-cum 與 cum-ex 稅差套利、灰產集團的理性資本配置邏輯、地下銀行從唐朝飛錢到兩地對敲到 USDT 的不變邏輯。② 交易實務與市場事件（4 篇）：選擇權市場下跌應對決策清單、Wheel Strategy 拆解與 7 條失效條件（機制為編輯補充，原文未拆解，已標明）、韓股融斷的指數集中×槓桿 ETF 再平衡因果鏈。③ 市場結構與金融產品（4 篇）：Private Credit 的槓桿暗處、足球豪門把未來收入證券化、唐提式養老金 Tontine 的歷史與現代復活、華爾街造詞史。④ 金融圈人物與職場文化（3 篇）：Alpha Male/Finance bro 類型學、挖角與 team lift-out 六條機制、八卦作為資訊流動機制、對求職者的實用啟示。⑤ 倫敦生活與隨筆（5 篇）：Monzo/Revolut/Wise 換匯四維對照與四個隱藏機制（safeguarding vs FSCS £120,000、AML 演算法凍結申訴差異、無 Section 75、商業模式決定推播動機）、倫敦生活成本、站台定位。核心紀律：學機制可靠本庫，引用數字必回一手（DOJ/FCA/NYDFS/FinCEN/OCCRP）；作者匿名故自述資歷一律 🔴；起訴不等於定罪。已抓出原文三處問題（035 未實際拆解 wheel strategy、FINRA 融資餘額前言與內文矛盾、三星 2026Q2 數字隱含 52% 營業利益率疑誤植）。
+**來源：** https://londonblackcat.substack.com/ （23 篇）
+**建立：** 2026-07-30
