@@ -398,3 +398,27 @@
 **摘要：** londonblackcat.substack.com 全部 23 篇文章（2026-07-01~07-29，皆免費）萃取成五個主題頁，體例比照旺來幫Jane（可信度分級 🟢🟡🔴 + 專屬 skill）。① 暗流-洗錢與地下金融（7 篇）：七案速查表、五種攻擊面交叉比較、以可觀測欄位為軸的紅旗速查（傳統銀行 14 條 + 鏈上託管 11 條）、AML 制度四個失效點（Alert Fatigue／Normalcy Bias／時間不對稱／追責在機構層停止）、cum-cum 與 cum-ex 稅差套利、灰產集團的理性資本配置邏輯、地下銀行從唐朝飛錢到兩地對敲到 USDT 的不變邏輯。② 交易實務與市場事件（4 篇）：選擇權市場下跌應對決策清單、Wheel Strategy 拆解與 7 條失效條件（機制為編輯補充，原文未拆解，已標明）、韓股融斷的指數集中×槓桿 ETF 再平衡因果鏈。③ 市場結構與金融產品（4 篇）：Private Credit 的槓桿暗處、足球豪門把未來收入證券化、唐提式養老金 Tontine 的歷史與現代復活、華爾街造詞史。④ 金融圈人物與職場文化（3 篇）：Alpha Male/Finance bro 類型學、挖角與 team lift-out 六條機制、八卦作為資訊流動機制、對求職者的實用啟示。⑤ 倫敦生活與隨筆（5 篇）：Monzo/Revolut/Wise 換匯四維對照與四個隱藏機制（safeguarding vs FSCS £120,000、AML 演算法凍結申訴差異、無 Section 75、商業模式決定推播動機）、倫敦生活成本、站台定位。核心紀律：學機制可靠本庫，引用數字必回一手（DOJ/FCA/NYDFS/FinCEN/OCCRP）；作者匿名故自述資歷一律 🔴；起訴不等於定罪。已抓出原文三處問題（035 未實際拆解 wheel strategy、FINRA 融資餘額前言與內文矛盾、三星 2026Q2 數字隱含 52% 營業利益率疑誤植）。
 **來源：** https://londonblackcat.substack.com/ （23 篇）
 **建立：** 2026-07-30
+
+---
+
+## [[Quant-Trading/雷曼FX手冊-中文精修-02-遠期外匯|雷曼 FX 手冊 中文精修 ② 遠期外匯]]
+**標籤：** `#教材` `#中文精修` `#外匯` `#FX-Forwards` `#利率平價` `#一手文件`
+**摘要：** 雷曼 FX 手冊 p.38–68（Forwards 全段）中文精修，20 個零基礎實例區塊。核心命題：forward rate 是「中和掉兩幣利率差」的匯率，不是市場對未來匯率的預測——用「$1,000,000 走兩條路」逐步推出均衡值 1.5061，再以套利四步驟演示若市場報 1.53 可無風險賺 $16,451，證明市場不允許偏離。內容涵蓋：forward 定義與市場規模（超過 spot 日的交易約佔 60%）、forward points 為何取代 forward rate 報價（spot 高頻跳動、點數由利率差決定而低頻，這解釋了 forward desk 與 spot desk 分開的原因）、premium/discount 為無套利條件的必然結果、pay or earn the points、forward 日期從 spot 起算與 end-to-end rule、odd dates 內插、currency futures、forward desk 作為全行資金調度中樞、trade ideas 為何偏中期與利差（利率的趨勢性強於匯率）、Eurodollar futures。加值：實測原件線性近似公式與精確利率平價法差 4.4 個點並解釋成因（忽略複利與分母效應，天期越長誤差越大）；pay/earn 給出一句話自檢法「這段期間我的錢放在利率高的幣還是低的幣」取代死背；end-to-end rule 用 2/28→6/30 反例破除「同一號」推法；指出 futures vs forward 真正的差異在保證金追繳，那才是企業避險失敗的常見主因；even swap 兩腿名目相同仍產生 65 萬美元 spot equivalent 曝險（名目相等 ≠ 風險中性）；Eurodollar 曲線的「方向不是交易理由、定價錯誤才是」並延伸到永續合約資金費率。
+**來源：** 一手 PDF `raw/sources/lehman-manuals/LBEX-LL-3356480-3356609_FX-and-Options-Training-Manual.pdf`
+**建立：** 2026-07-30
+
+---
+
+## [[Quant-Trading/雷曼FX手冊-中文精修-03-換匯交易|雷曼 FX 手冊 中文精修 ③ 換匯交易]]
+**標籤：** `#教材` `#中文精修` `#外匯` `#FX-Swaps` `#資金調度` `#一手文件`
+**摘要：** 雷曼 FX 手冊 p.69–93（Swaps 全段）中文精修，12 個實例區塊。核心定位：swap 賣的是時間不是方向——它把匯率風險換成利率差風險，用台灣科技廠「本週付 $5mm、三個月後收 $5mm」的資金缺口實例演示兩腿如何互相抵銷。內容涵蓋：swap 結構與只有 buy/sell 與 sell/buy 兩種型態、與 outright 的隱藏差異（swap 可固定 terms 或 base 任一邊）、依交割日的八種分類（T/N、S/N、spot-a-week、spot-two-weeks、spot/forward、odd-dates、forward/forward、long-dates）、bid-offer 指遠端那一腿、從歐洲貨幣市場存放款利率推導兩側報價、swap points 計算、加減的速記規則、pay or earn the points、forward desk 的每日資金調度。加值：指出 T/N 是唯一近端早於 spot 的 swap，因此是「明天資金缺口」的唯一解（spot 與 S/N 都來不及），回扣 ② 的 funding 段；把 bid-offer 推導濃縮成兩條公式（bid＝base offer − terms bid、offer＝base bid − terms offer）並點明與 ① cross rate 的「最寬 spread」同源——同一原理在本手冊第三次出現，可省下大量死背；加減給出三種判斷法（看報價左右大小／看 base 利率高低／推理持有哪個幣）並說明三者必然一致、不一致即為算錯，本身就是內建驗算機制；日圓題點出跨市場搬公式不換單位的陷阱。抓到原件一處數字顛倒誤植（7.2432 寫成 7.2342，其自身算式可證）。
+**來源：** 同上一手 PDF
+**建立：** 2026-07-30
+
+---
+
+## [[Quant-Trading/雷曼FX手冊-中文精修-04-外匯選擇權|雷曼 FX 手冊 中文精修 ④ 外匯選擇權]]
+**標籤：** `#教材` `#中文精修` `#外匯` `#選擇權` `#Greeks` `#gamma-hedging` `#一手文件`
+**摘要：** 雷曼 FX 手冊 p.94–130（Options 全段）中文精修，系列完結篇，17 個實例區塊、33,568 字元（系列最長）。樞紐觀念：波動率是選擇權合約中唯一未被雙方明訂的參數，因此是唯一隨市場力量變動的、也是交易員真正在交易的東西。內容涵蓋：payoff 與損益兩平（ITM ≠ 賺錢，差一個權利金）、內含價值＋時間價值、Greeks 全套（delta 約等於價內機率但 exotic 可超過 ±100%、gamma 為 delta 的變化速度且恆為正、theta 時間耗損前慢後快、vega、rho）與二階 nova（vol gamma）、delta 動態避險三點走查（20%→60%→100%）、exotic options 與 reverse knock-out、交易室慣例（TV 與相對 TV 的價差、v-vol、barrier 的市場衝擊）、選擇權策略組合（四種垂直價差、straddle、strangle、butterfly、risk reversal）、原件練習題精選。最有價值的一段是完整重建的 gamma 避險 P&L：買選擇權 $200 → 股價 100→110→85→100 期間四次再避險 → 到期作廢卻淨賺 $925，用以證明「實現波動率高於隱含波動率時，有做 gamma 避險的買方不論標的往哪個方向走都獲利」。其他加值：指出 theta 收最多的地方（短天期 ATM）正是 gamma 風險最大的地方，兩者互為代價是數學恆等式；vega 一節突出「你的避險動作本身會移動市場」的兩難；reverse knock-out 概括為「你賺最多的地方就是你離死最近的地方」並解釋 delta −300% 的實務意義；barrier 觸發連鎖條件單與 CEX 連環清算同構；收掉 ② 的伏筆——想知道市場方向性預期要看 risk reversal 不是 forward 曲線。抓到原件兩處錯誤：p.106 稱 long gamma 需「買高賣低」（其自身例子與 p.108 均證應為賣高買低，且這正是買賣雙方損益結構相反的根源）、p.110 rho 公式分母誤植為波動率。
+**來源：** 同上一手 PDF
+**建立：** 2026-07-30
