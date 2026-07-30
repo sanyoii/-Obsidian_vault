@@ -182,6 +182,11 @@
 **說明：** Forwards 的每一節都建立在 ① 的 base/terms、bid-offer、交割日三個直覺上；② 的「pay or earn the points」直接套用 ① 的「分子上升＝base 走強」判準。精修系列刻意設計成不可跳讀
 **建立於：** 2026-07-30（compile）
 
+### [[Quant-Trading/雷曼FX手冊-中文精修-03-換匯交易]] → [[Quant-Trading/雷曼FX手冊-中文精修-01-即期外匯]]
+**關係：** 原理複用（同一條規則第三次出現）
+**說明：** ① 的 cross rate「最寬 spread」驗算法，在 ③ 的 swap bid-offer 推導原封不動可用——所有「該用 bid 還是 offer」的問題，答案永遠是「讓做市商賺最多的那個」。① 的 pip 單位陷阱也在 ③ 的日圓題重現
+**建立於：** 2026-07-30（compile）
+
 ---
 
 ## 孤島文章

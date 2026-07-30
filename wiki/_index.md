@@ -1,7 +1,7 @@
 # 知識庫主索引
 
 > 最後更新：2026-07-30
-> 文章數量：395 篇
+> 文章數量：396 篇
 > 原始文件：持續累積中
 
 ---
@@ -125,6 +125,7 @@
 - [[Quant-Trading/投行金流與反洗錢-自學教材|投行金流與反洗錢 — 自學教材]] — 13 模組自學課程，前台實務（FX 語言/forward 利率差/swap 資金調度/Greeks 與 gamma hedging/Repo 生命週期/CCE-MPE 信用風險報表）× 洗錢五案（Wachovia 通匯／Danske 非居民／德銀鏡像交易／Troika 平行金融／太子集團與 Lazarus 鏈上）；每模組白話先行＋一手 PDF 頁碼導航＋自測題；含四判準、手冊×證物對讀法、中英詞彙表、Web3/CEX 面試映射 `#教材 #AML #合規 #外匯 #選擇權 #repo #web3`
 - [[Quant-Trading/雷曼FX手冊-中文精修-01-即期外匯|雷曼 FX 手冊 中文精修 ① 即期外匯]] — 一手手冊 p.1–37 全節中文化：outright／四種交割慣例（CAD 例外）／credit risk 與 settlement risk（Herstatt）／American vs European terms＋算術寫法陷阱／匯率變動與損益三題全解／pips／速算公式／bid-offer／**left bid–right offer 三步判斷法**／cross rate 同異 terms／**cross bid-offer 交叉規則＋最寬 spread 反推驗算**；10 個零基礎實例區塊＋8 題自測；標出原件兩處錯誤 `#教材 #中文精修 #外匯 #FX-Spot #一手文件`
 - [[Quant-Trading/雷曼FX手冊-中文精修-02-遠期外匯|雷曼 FX 手冊 中文精修 ② 遠期外匯]] — 一手手冊 p.38–68 全節中文化：forward 定義與市場規模／**利率平價的無套利證明（含套利四步驟實例）**／forward points 與計算公式（標出線性近似與精確法差 4.4 點）／premium-discount／**pay or earn the points 一句話自檢法**／forward 日期與 end-to-end rule／odd dates 內插／**futures vs forward 的保證金陷阱**／forward desk 作為全行資金調度中樞／利率趨勢性強於匯率／**even swap 仍產生 spot equivalent 曝險**／Eurodollar futures 100−價格；20 個實例區塊＋10 題自測 `#教材 #中文精修 #外匯 #FX-Forwards #利率平價 #一手文件`
+- [[Quant-Trading/雷曼FX手冊-中文精修-03-換匯交易|雷曼 FX 手冊 中文精修 ③ 換匯交易]] — 一手手冊 p.69–93 全節中文化：swap 結構與只有兩種型態／**swap 賣的是時間不是方向（把匯率風險換成利率差風險）**／依交割日八種分類／**T/N 是唯一近端早於 spot 者、故為明天資金缺口的唯一解**／bid-offer 指遠端那一腿／**兩邊價格從歐洲貨幣市場存放款利率推導（bid＝base offer−terms bid）**／「做市商賺最多」原理第三次出現／**加減三種判斷法互為驗算**／pay-earn 沿用 ② 判準；12 個實例區塊＋10 題自測；標出原件一處數字顛倒誤植 `#教材 #中文精修 #外匯 #FX-Swaps #資金調度 #一手文件`
 
 ---
 
