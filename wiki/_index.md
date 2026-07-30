@@ -1,7 +1,7 @@
 # 知識庫主索引
 
 > 最後更新：2026-07-30
-> 文章數量：396 篇
+> 文章數量：397 篇
 > 原始文件：持續累積中
 
 ---
@@ -126,6 +126,7 @@
 - [[Quant-Trading/雷曼FX手冊-中文精修-01-即期外匯|雷曼 FX 手冊 中文精修 ① 即期外匯]] — 一手手冊 p.1–37 全節中文化：outright／四種交割慣例（CAD 例外）／credit risk 與 settlement risk（Herstatt）／American vs European terms＋算術寫法陷阱／匯率變動與損益三題全解／pips／速算公式／bid-offer／**left bid–right offer 三步判斷法**／cross rate 同異 terms／**cross bid-offer 交叉規則＋最寬 spread 反推驗算**；10 個零基礎實例區塊＋8 題自測；標出原件兩處錯誤 `#教材 #中文精修 #外匯 #FX-Spot #一手文件`
 - [[Quant-Trading/雷曼FX手冊-中文精修-02-遠期外匯|雷曼 FX 手冊 中文精修 ② 遠期外匯]] — 一手手冊 p.38–68 全節中文化：forward 定義與市場規模／**利率平價的無套利證明（含套利四步驟實例）**／forward points 與計算公式（標出線性近似與精確法差 4.4 點）／premium-discount／**pay or earn the points 一句話自檢法**／forward 日期與 end-to-end rule／odd dates 內插／**futures vs forward 的保證金陷阱**／forward desk 作為全行資金調度中樞／利率趨勢性強於匯率／**even swap 仍產生 spot equivalent 曝險**／Eurodollar futures 100−價格；20 個實例區塊＋10 題自測 `#教材 #中文精修 #外匯 #FX-Forwards #利率平價 #一手文件`
 - [[Quant-Trading/雷曼FX手冊-中文精修-03-換匯交易|雷曼 FX 手冊 中文精修 ③ 換匯交易]] — 一手手冊 p.69–93 全節中文化：swap 結構與只有兩種型態／**swap 賣的是時間不是方向（把匯率風險換成利率差風險）**／依交割日八種分類／**T/N 是唯一近端早於 spot 者、故為明天資金缺口的唯一解**／bid-offer 指遠端那一腿／**兩邊價格從歐洲貨幣市場存放款利率推導（bid＝base offer−terms bid）**／「做市商賺最多」原理第三次出現／**加減三種判斷法互為驗算**／pay-earn 沿用 ② 判準；12 個實例區塊＋10 題自測；標出原件一處數字顛倒誤植 `#教材 #中文精修 #外匯 #FX-Swaps #資金調度 #一手文件`
+- [[Quant-Trading/雷曼FX手冊-中文精修-04-外匯選擇權|雷曼 FX 手冊 中文精修 ④ 外匯選擇權]] — **系列完結**，一手手冊 p.94–130 全節中文化：payoff 與兩平／內含+時間價值／**波動率是合約唯一未指定的參數故為交易員真正交易的東西**／delta 動態避險三點走查／**gamma 避險完整 P&L（到期作廢卻獲利 $925，證明實現波動>隱含波動時不論方向都賺）**／theta 與 gamma 互為代價／vega 與市場衝擊兩難／rho 避險／二階 Greeks nova／**reverse knock-out：賺最多處即離死最近處，delta 可達 −300%**／barrier 觸發連鎖單與 CEX 連環清算同構／策略組合與 **risk reversal 才是方向性預期的溫度計**；17 個實例區塊＋14 題自測；標出原件兩處錯誤 `#教材 #中文精修 #外匯 #選擇權 #Greeks #gamma-hedging #一手文件`
 
 ---
 
