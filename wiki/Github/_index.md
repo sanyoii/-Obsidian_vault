@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 185 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 190 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-07-30
+> 最後更新：2026-07-31
 
 ---
 
@@ -38,10 +38,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（39 篇）
+## 🛠️ Claude Code / Skills（49 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/AgentKey — Chainbase 的付費 MCP 資料閘道\|AgentKey]] | 🔬 | ⏳ | 582⭐ Apache-2.0；Chainbase（Web3 資料公司）的**訂閱制資料閘道**——一個訂閱涵蓋 web search/scraping/社群/鏈上/財經/電商，雲端自動 failover。⚠️ **repo 不是產品本體**：主語言僅 Shell+PowerShell，Top 5 大檔全是安裝腳本，零應用邏輯；服務閉源託管於 `api.agentkey.app/v1/mcp`，寫設定的 `@agentkey/cli` 宣告 repo 實測 **404 私有**。✅ **供應鏈檢查通過**：線上 install.sh/.ps1 與 repo 內 **SHA-256 完全相同**，對外端點無非預期主機。⚠️ **最該注意**：SKILL.md 明文「**Use INSTEAD OF built-in WebSearch/WebFetch**」「don't fall back to Claude's built-in Web Search」＝**用計費服務取代你免費的內建工具**，且工具名包裝成通用的 `find_tools`/`execute_tool` 不揭露付費性質；已有使用者開 issue「吃相太难看了」指 server 端會把誘導文字注回每個 session（改本機 SKILL.md 擋不住），**0 回覆**。做得好的三點：prompt-injection 防禦寫進 SKILL.md、成本閘門（≥3 呼叫或 ≥10 credits 前強制查餘額估價確認、失敗呼叫不計費）、7 條 CI＋週更 15+ release。判 ⏳ 三理由：**定價頁 JS SPA 兩種爬法都抓不到**、覆蓋內建工具行為未解、**582⭐ 只有 2 watcher** 缺第三方實測。🪟 **本環境專屬坑**：安裝器認 `%USERPROFILE%\.claude.json`、**完全不認 `CLAUDE_CONFIG_DIR`**，會觸發 config-drift 金絲雀第 [4] 項 → ✅ **改走 `.claude-plugin/marketplace.json` 的 plugin 路徑可完全繞過**。**📌 可單獨抽取**：`cost-aware.md` 花錢前確認規則、`protocol/skill-meta-v1` 版本廣播協定、`install.ps1` 40+ agent Windows 路徑對照表 |
 | [[Github/repos/i-have-adhd — ADHD 友善輸出 skill\|i-have-adhd]] | 🔬 | ❌ | 5.3K⭐ 10 條 ADHD 友善輸出規則；與 caveman hook 高度重疊＋全域觸發衝突；可吸收個別規則零安裝 |
 | [[Github/repos/fable-method — Fable 5 工作法蒸餾成任何模型可跑的 Skill＋Eval\|fable-method]] | 🔬 | ⏳ | 1.6K⭐ Fable 5 工作法四 skill（think/act/prove/grow）＋15 輪對抗 eval；與 institution 同哲學不整裝，但 trap-fixture 迴歸測試是 institution 缺的真增量，升級條件＝下次改規則先寫 trap 測 |
 | [[Github/repos/hallmark — 拒絕 AI 味的前端設計 Skill（結構多樣性＋防呆閘門）\|hallmark]] | 🔬 | ✅ | 17.7K⭐ Nutlope 反 AI-slop 設計 skill；一預設+三動詞（build/audit/redesign/study）；強制跨頁結構多樣性、study 抽 DNA→可攜 design.md、57 gate slop-test+六軸自評；**07-18 已裝**（指名調用限定避開 taste 群打架）；**07-26 回訪**：星數+40% 但上游 7 週零 commit、ROADMAP 全未動、本地已是最新版；復查判準改為「下次設計任務實測 vs design-taste-frontend，沒贏就移除」 |
@@ -152,16 +153,17 @@ tags: [github, index, repos]
 | [[Github/repos/Remotion — 用 React 寫程式碼產生影片\|Remotion]] | 📎 | 📌 | React 產生影片 |
 | [[Github/repos/ReClip — 自架開源影片音訊下載工具\|ReClip]] | 🔬 | 📌 | 影片音訊下載 |
 | [[Github/repos/music-assistant-server — 開源家用音樂串流管理器\|music-assistant]] | 📎 | ⏳ | 106 providers 音源整合 |
-| [[Github/repos/LongCat-Video, a foundational video generation model with 13.6B parameters, delivering strong performance across Text-to-Video, Image-to-Video, and Video-Continuation generation tasks\|LongCat-Video]] | 📎 | ⏳ | 13.6B 影片生成模型 |
+| [[Github/repos/LongCat-Video — 美團 13.6B 開源長影片生成模型\|LongCat-Video]] | 🔬 | ⏳ | 5.7K⭐ **MIT 權重可商用**；美團 13.6B dense DiT，T2V/I2V/影片續寫統一在單一模型。真差異點不是畫質是**長度**——原生以續寫任務預訓練，分鐘級無色偏無衰減。自寫 Triton Block Sparse Attention（含 TMA autotune）＋Ulysses context parallel＋INT8 weight-only 量化；VAE 承自阿里 Wan（`autoencoder_kl_wan.py` 檔名直接洩漏血統）。40 檔推論倉庫，**無訓練/微調程式碼**。⚠️ **供應鏈**：`requirements_avatar.txt` 釘的 `libsndfile1==0.0.1` 在 PyPI 根本不存在（apt 套件誤植）、`tritonserverclient==0.0.6` 發行檔 0 個且 metadata 標 **`quarantined`**（正確名為 `tritonclient`）→ `pip install` 直接失敗，issue 開 7 個月未修；照抄該行＝dependency-confusion 形狀，解法是刪兩行改 conda 裝 libsndfile。**評測誠實**：README 自列 I2V Overall 3.17 四者墊底、T2V 輸 Veo3（但為內部自評 MOS 非盲測）。判 ⏳：需 24GB+ NVIDIA 卡（**官方完全沒寫 VRAM 需求**，流傳數字皆第三方未驗證）、Windows 無支援、0 release／2 個月停更／62 issue 混雜垃圾貼。**真正採用路徑是 ComfyUI 生態**（教學 8.2 萬觀看，遠超 repo 本身；HN 僅 3 分）。**📌 可單獨抽取**：`quantization.py` 教學級 INT8、`block_sparse_attention/` Triton kernel、arXiv 2510.22200 ＋ 2605.26486 |
 | [[Github/repos/zarazhangruifollow-builders AI builders digest — monitors top AI builders on X and YouTube podcasts, remixes their content into digestible summaries. Follow builders, not influencers\|follow-builders]] | 📎 | 📌 | AI Builders 摘要推送 |
 | [[Github/repos/roboflowsupervision We write your reusable computer vision tools. 💜\|supervision]] | 📎 | 📌 | 電腦視覺工具庫 |
 
 ---
 
-## 🧰 開發工具 / CLI（15 篇）
+## 🧰 開發工具 / CLI（16 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/claw-code — Claude Code 外洩事件催生的 Rust 重寫版\|claw-code]] | 🔬 | ❌ | 195K⭐ MIT；**Claude Code source map 外洩（逾 50 萬行）的衍生產物**——Sigrid Jin 用 Codex 依架構重寫、一天破 10 萬星，Anthropic 提 8,100+ 件 DMCA（後收斂近百件精準鎖定）；作者宣稱無專有檔案，但「重寫是否構成衍生著作」未經裁判。crate 真名仍是 `rusty-claude-cli`。**作者已親自封為「博物館展品」**：README 首段就要你改用 LazyCodex/Gajae-Code，06-26 起停更、近四週 commit 0、0 release、雙人貢獻者佔 70%。339 檔/1.21M tokens，11 crate（含 `claw-analog` 唯讀 CI 殼、`claw-rag-service` SQLite 語意檢索、`compat-harness` parity 對拍）；`main.rs` 75.6 萬字元＋第二大檔是 commit 進庫的 agent 對話 JSON（10.2%）＝**agent 生成程式碼的指紋**。判 ❌ 三獨立理由：作者自我下架／要 API key 計費不吃訂閱（對訂閱者嚴格更差）／**安全治理實質失效**（HIGH 揭露卡在關閉的 PVR 兩週無回應、Medium 越界讀取 main 上未修、0 advisory，而它會跑 bash＋掛 MCP＋存取整個工作區）。fork/star 56% 異常已解釋＝「趁還在趕快留一份」，抽樣 100 個 fork 全 0 星未修改且至今每天仍增 2–5 個。⚠️ `cargo install claw-code` 是廢棄 stub，指向的 `agent-code` 屬**另一個 org**（avala-ai）。**📌 真正該追的是活體後繼**：oh-my-openagent 66.8K⭐、oh-my-claudecode 38.2K⭐、clawhip 922⭐（通知路由推出 context window，與 R16 同題）；oh-my-codex 32.3K⭐ **無 LICENSE 先別碰** |
 | [[Github/repos/mimic — 攔截App流量AI生成Python client\|mimic]] | 🔬 | ⏳ | 1.4K⭐ Deno作者8天衝榜；抓App流量→claude生成可重放Python client；QA領域相關（手動→回歸腳本）；DPoP無解；限自己帳號/ToS |
 | [[Github/repos/crawl4ai — 開源 LLM 友善網頁爬蟲與擷取框架\|crawl4ai]] | 🔬 | ⏳ | 72.1K⭐ 自架開源網頁爬蟲，免 API Key，官方附 Claude Skill + MCP Bridge；與 firecrawl（SaaS）互補 |
 | [[Github/repos/tw93-Pake\|Pake]] | 📎 | ✅ | 網頁轉桌面 App（Tauri） |
@@ -222,7 +224,7 @@ tags: [github, index, repos]
 | [[Github/repos/LichAmnesiallm-engineering-handbook 构建生产级 AI 副本教程\|llm-engineering-handbook]] | 📎 | 📌 | 生產級 AI 副本 |
 | [[Github/repos/karpathyautoresearch — AI Agent 自主 LLM 訓練研究框架\|autoresearch]] | 📎 | ⏳ | Karpathy 自主研究 |
 | [[Github/repos/awesome-agentic-ai-zh — 繁中 AI Agent 學習地圖\|awesome-agentic-ai-zh]] | 📎 | 📌 | 繁中 AI Agent 地圖 |
-| [[Github/repos/easychenopc-methodology 《一人企业方法论》第二版，也适合做其他副业（比如自媒体、电商、数字商品）的非技术人群\|一人企業方法論]] | 📎 | 📌 | 副業經營方法論 |
+| [[Github/repos/easychenopc-methodology 《一人企业方法论》第二版，也适合做其他副业（比如自媒体、电商、数字商品）的非技术人群。\|一人企業方法論]] | 📎 | 📌 | 副業經營方法論 |
 | [[Github/repos/developer-roadmap — 互動式開發者職涯路線圖\|developer-roadmap]] | 🔬 | 📌 | 359K⭐ 18+ 職涯路線圖（含 QA） |
 | [[Github/repos/經典學習資源 Mega-Repo 合輯\|Mega-Repo 合輯]] | 🔬 | 📌 | build-your-own-x/awesome/freeCodeCamp 等 6 個 |
 
@@ -242,10 +244,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🔒 安全 / 自動化 / 其他（13 篇）
+## 🔒 安全 / 自動化 / 其他（14 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/n8n — 視覺化工作流自動化平台（fair-code 非開源）\|n8n]] | 🔬 | ⏳ | 198.7K⭐ **非 OSI 開源**——Sustainable Use License「只能自用或非商業，對外提供須免費」＋`.ee` 檔需 Enterprise License（**實測 1,110 檔／全 repo 4.3%**）＋**master 以外分支不受任何授權涵蓋**。43 個 `feat:*` 付費旗標經 `LicenseState.isLicensed()` 執行期強制，自架免費版**沒有資料夾分類、沒有 Git 版控、沒有環境變數、沒有 workflow diff/版本、三個 AI 輔助全鎖**——核心執行不限次數，被關的是協作治理與 AI。26,031 檔／6,546 目錄（Trees API 全量，**repomix 引擎本輪失敗**：archive 停在 8.3MB→git clone→Windows EPERM rmdir，未取得 token 數）；`.ts` 佔 72%，54 個 `@n8n/*` 子套件含 vendor 的 TypeORM 分支 2,572 檔。**2026 已轉型 AI agent 平台**：MCP client+server 雙向（402 個 .ts）、`mcp-browser`（Playwright/BiDi）、`mcp-browser-extension`（CDP 控 Chrome）、⚠️ `computer-use`（AI 助手的**本機 filesystem/shell/截圖**閘道）。體質頂級：週 400 commit、一天多版、$180M 募資、Fireship 118.9 萬觀看教學。判 ⏳ 非因品質——**個人自架完全合規**，是成本效益：現有 schtasks+PowerShell 排程能動，加常駐 Docker ＝ R13「加複雜度換小改善」；且 `sourceControl` 被鎖會讓工作流變成唯一沒進 git 的資產。**📌 可單獨抽取**：43 旗標清單（免費/付費切線的產品決策教材）、`task-runner`+`task-runner-python` 隔離執行參考、`n8n.io/llms.txt` |
 | [[Github/repos/Panniantong-Agent-Reach — AI Agent 互聯網感知層\|Agent Reach]] | 🔬 | ✅ | 60.8K⭐ 15 渠道互聯網能力層（選型/安裝/體檢/路由，讀取由 Agent 直呼上游）；已裝 v1.5.0，實測 13/15 可用；⚠️ 小紅書/Twitter 有實證封號案例（issue #498），排程長跑須用拋棄帳號 |
 | [[Github/repos/mvanhorn-last30days-skill — AI 多平台社群研究引擎\|last30days]] | 📎 | ✅ | 社群研究引擎 |
 | [[Github/repos/Usagi-orgai-goofish-monitor 基于 Playwright 和AI实现的闲鱼多任务实时定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。\|閒魚監控]] | 🔬 | 📌 | AI 閒魚監控 |

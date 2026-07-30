@@ -141,7 +141,7 @@ tags: [github, installed, skills, tools, index]
 | **gitreverse** — Repo 逆向成 Prompt | 開發 | [[Github/repos/gitreverse — GitHub Repo 逆向工程成 Prompt\|分析]] | ⏳ |
 | **data-engineer-handbook** — 資料工程學習 | 學習 | [[Github/repos/data-engineer-handbook — 資料工程完全學習手冊\|分析]] | ⏳ |
 | **chatwoot** — 全通道客服平台 | 客服 | [[Github/repos/chatwoot — 開源全通道客服平台\|分析]] | ❌ |
-| **LongCat-Video** — 13.6B 影片生成 | AI/ML | [[Github/repos/LongCat-Video, a foundational video generation model with 13.6B parameters, delivering strong performance across Text-to-Video, Image-to-Video, and Video-Continuation generation tasks\|分析]] | ⏳ |
+| **LongCat-Video** — 美團 13.6B 長影片生成（MIT 權重） | AI/ML | [[Github/repos/LongCat-Video — 美團 13.6B 開源長影片生成模型\|分析]] | ⏳ |
 | **Breeze-ASR-25** — 台灣中文語音辨識 | AI/ML | [[Github/repos/Breeze-ASR-25 — 台灣中文中英混用語音辨識模型\|分析]] | ⏳ |
 | **music-assistant-server** — 家用音樂串流 | 媒體 | [[Github/repos/music-assistant-server — 開源家用音樂串流管理器\|分析]] | ⏳ |
 | **ai-media-generator** — AI 媒體 Prompt | 設計 | [[Github/repos/ai-media-generator — 跨平台 AI 媒體生成 Prompt Skill\|分析]] | ⏳ |
