@@ -422,3 +422,11 @@
 **摘要：** 雷曼 FX 手冊 p.94–130（Options 全段）中文精修，系列完結篇，17 個實例區塊、33,568 字元（系列最長）。樞紐觀念：波動率是選擇權合約中唯一未被雙方明訂的參數，因此是唯一隨市場力量變動的、也是交易員真正在交易的東西。內容涵蓋：payoff 與損益兩平（ITM ≠ 賺錢，差一個權利金）、內含價值＋時間價值、Greeks 全套（delta 約等於價內機率但 exotic 可超過 ±100%、gamma 為 delta 的變化速度且恆為正、theta 時間耗損前慢後快、vega、rho）與二階 nova（vol gamma）、delta 動態避險三點走查（20%→60%→100%）、exotic options 與 reverse knock-out、交易室慣例（TV 與相對 TV 的價差、v-vol、barrier 的市場衝擊）、選擇權策略組合（四種垂直價差、straddle、strangle、butterfly、risk reversal）、原件練習題精選。最有價值的一段是完整重建的 gamma 避險 P&L：買選擇權 $200 → 股價 100→110→85→100 期間四次再避險 → 到期作廢卻淨賺 $925，用以證明「實現波動率高於隱含波動率時，有做 gamma 避險的買方不論標的往哪個方向走都獲利」。其他加值：指出 theta 收最多的地方（短天期 ATM）正是 gamma 風險最大的地方，兩者互為代價是數學恆等式；vega 一節突出「你的避險動作本身會移動市場」的兩難；reverse knock-out 概括為「你賺最多的地方就是你離死最近的地方」並解釋 delta −300% 的實務意義；barrier 觸發連鎖條件單與 CEX 連環清算同構；收掉 ② 的伏筆——想知道市場方向性預期要看 risk reversal 不是 forward 曲線。抓到原件兩處錯誤：p.106 稱 long gamma 需「買高賣低」（其自身例子與 p.108 均證應為賣高買低，且這正是買賣雙方損益結構相反的根源）、p.110 rho 公式分母誤植為波動率。
 **來源：** 同上一手 PDF
 **建立：** 2026-07-30
+
+---
+
+## [[Quant-Trading/雷曼Repo手冊-中文精修|雷曼 Repo 手冊 中文精修]]
+**標籤：** `#教材` `#中文精修` `#Repo` `#附買回` `#擔保品融資` `#Repo105` `#一手文件`
+**摘要：** 雷曼 *REPO MANUAL — Repo Sales Reference Guide*（Bates LBEX-LL 1175483–1175553，71 頁，封面標註 2005-11-08）全十一節中文精修，教材 M5 的原文層，104,110 字元／23 個實例區塊。核心觀念：Repo 是同一筆交易的兩張臉——經濟上是以證券擔保的借貸，法律上是「賣出＋承諾買回」，價差即利息；**破產那天你手上有什麼，取決於用哪一張臉解讀**。內容涵蓋六大用途（融資庫存／matched book 賺利差／借券補空頭／處理 settlement fail／客戶流動性／閒置券變現）如何牽動 Trading-Treasury-BalanceSheet-Collateral-Credit-Settlement 六個部門、完整生命週期十步、haircut 的三重作用（價格緩衝＋清算所需時間＋清算時的流動性折價，第三樣最常被漏）、Infinity 前台系統作為狀態機（Shell→Allocated→Approved→Released，且 Released 不可逆）、MTS 主機指令、CAMEO 盯市與 margin call、LBI/LBIE 雙法人的票據與交割差異。**最大的加值是 ⚠️ 標出原件 16 處缺陷**：haircut 有扣減式與倍數式兩種口徑但原件混用且從未定義（同一個「20%」兩種算法差 5% 擔保品）、殘餘風險完整清單七項而原件只涵蓋兩項半且缺的第四項 wrong-way risk 正是雷曼的死因、matched book 實際上交易員刻意錯配天期賺利差（資產鎖三個月、負債每天 roll）、業績表誘因偏向未評等抵押品長天期交易達公債的 30 倍、`Current Exposure` 不含新交易與 reprice 卻在同一手冊有三個名字、margin call 有三個互相衝突的期限且處置動詞是 could 不是 will、判斷 margin call 好壞的人是拿業績分的業務、全書從未問「雷曼自己借不到錢會怎樣」（2005 年一線教材的集體盲點）。**最犀利的一條：LBI（紐約／美國法／MRA）與 LBIE（倫敦／英國法／GMRA）的區分，在這份手冊裡的控制手段只是「Excel 上標一個顏色」——三年後這條線變成了 Repo 105。** 末章「這份手冊與 Repo 105 的關係」銜接 Examiner Vol 3。
+**來源：** 一手 PDF `raw/sources/lehman-manuals/LBEX-LL-1175483-1175553_Repo-Sales-Reference-Guide.pdf`
+**建立：** 2026-07-30
