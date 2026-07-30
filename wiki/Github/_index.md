@@ -9,7 +9,7 @@ tags: [github, index, repos]
 > 185 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-07-29
+> 最後更新：2026-07-30
 
 ---
 
@@ -145,7 +145,7 @@ tags: [github, index, repos]
 | [[Github/repos/video-autopilot-kit — 填自己資料的 YouTube 短影音自動化框架\|video-autopilot-kit]] | 🔬 | ⏳ | 1.5K⭐ 填自己資料的 YT/短影音自動化框架（MIT）；雙路徑 ffmpeg 純程式 + CapCut 草稿 JSON/Computer Use；M1-M106 避坑庫+機械化 QA 閘；與 video-shotcraft 互補（實拍 vs 程式化） |
 | [[Github/repos/video-shotcraft — 用 Remotion 拍電影感產品宣傳片的 AI Agent Skill\|video-shotcraft]] | 🔬 | ⏳ | 337⭐ Claude Code/Codex agent skill；106 鏡頭配方卡+161 動態樣片+Ink Press 模板；Remotion+真實截圖+2.5D 運鏡+節奏卡點；方法論與 institution R13/R17 同構；與 HyperFrames 重疊需釐清 |
 | [[Github/repos/voicebox — 本機優先的開源 AI 語音工作室\|voicebox]] | 🔬 | ⏳ | 37K⭐ 本機 TTS+語音克隆+口述輸入，MCP server 讓 Claude Code 開口說話 |
-| [[Github/repos/calesthio-OpenMontage\|OpenMontage]] | 📎 | ⏳ | Agentic 影片製作 |
+| [[Github/repos/calesthio-OpenMontage\|OpenMontage]] | 🔬 | ⏳ | 44K⭐ AGPL-3.0；**agent 即 orchestrator**（無程式碼 orchestrator），7 道工序寫成 YAML manifest + Markdown 導演技能檔。1,887 檔/3.08M tokens：`.agents/skills/` 860＋`.claude/` 431＋`skills/` 156＋`tools/` 144＋77 pytest＋24 schema；README 數字對帳**全數屬實**（723 skill 檔／12 pipeline）。真差異點是 `documentary-montage` 用 CLIP 檢索 Archive.org/NASA/Wikimedia **真實動態素材**剪時間軸，非靜圖假動畫；零 key 可跑（Piper＋免費素材＋Remotion/HyperFrames），$0.02–$1.33 皆有附紀錄範例。⚠️ **正版 repo 從未發過 release**，冒名組織 `Open-Montage/OpenMontage` 散布 `OpenMontage-x64.7z`（358 次下載、Defender 判 Trojan），同名 repo 20+，只認 `calesthio` owner。判 ⏳ 三阻礙：Windows+WSL2 有「6 小時 15 個問題產不出成品」實測回報、0 release/148 open PR/單人 70% commit、48 個 `.claude/skills/` 與既有 user-level hyperframes/remotion 系列重名。外部驗證薄（HN 5 篇最高 7 分）。**📌 可單獨抽取**：`lib/scoring.py` 7 維 provider 選型＋`explain()`、`lib/delivery_promise.py`＋`slideshow_risk.py`（宣稱 vs 實產落差偵測＝R12 可執行版）、`base_tool.py` 的 cp1252 降級表 |
 | [[Github/repos/AIDC-AIPixelle-Video 🚀 AI 全自动短视频引擎  AI Fully Automated Short Video Engine\|Pixelle-Video]] | 📎 | ⏳ | 全自動短影片 |
 | [[Github/repos/(參考)Winston774ai-music-channel-starter 半自動 AI 音樂 YouTube 頻道 Pipeline\|ai-music-channel]] | 📎 | 📌 | AI 音樂 YouTube Pipeline |
 | [[Github/repos/RedditVideoMakerBot — Reddit 串文自動轉短影片機器人\|RedditVideoMaker]] | 📎 | 📌 | Reddit 轉短影片 |
