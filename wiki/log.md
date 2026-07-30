@@ -53,6 +53,10 @@
 
 ## 2026-07
 
+### 2026-07-30 | COMPILE
+- `2026-07-30 12:05 | COMPILE | wiki/Quant-Trading/lehman-brothers-trading-manuals.md + 5 篇洗錢案原文 → wiki/Quant-Trading/投行金流與反洗錢-自學教材.md` | 使用者要求「整理分析後建立教材」；13 模組自學課程（Part1 前台 M1-M6／Part2 洗錢五案 M7-M11／Part3 貫穿失效模式 M12／Part4 CEX 面試映射 M13），每模組白話先行→機制→為什麼重要→一手 PDF 頁碼→自測題；**Examiner Report 九冊已補抓**（42MB／4,105 頁，pypdf 逐冊驗頁數與首頁法院抬頭），原 manuals 筆記 §④ 由「尚未下載」更新為完整頁數對照表；附四類中英詞彙表、一手文件查詢導航、可信度分級（一手可引用／二手數字須回 DOJ-FCA-NYDFS-FinCEN-OCCRP）；_index 386→387
+- `2026-07-30 11:20 | COMPILE | raw/sources/2026-07-30_lehman-trading-manuals-leak.md → wiki/Quant-Trading/lehman-brothers-trading-manuals.md` | 倫敦黑貓 Substack 文章入庫；defuddle 對 Substack SPA 失效（`documentElement is null`）→ 改 curl + regex 抽 body markup；**三份雷曼一手手冊 PDF 已下載至 `raw/sources/lehman-manuals/`（共 11.5MB）並以 pypdf 驗證頁數與 TOC**（FX 130 頁 / Repo 71 頁 / Credit Risk Reporting 32 頁），wiki 內容以真實 PDF 目錄為骨架而非文章轉述；Examiner Report 九冊（約 37MB，menu.html 內第二層連結）尚未下載；raw/sources 未逐字存原文——vault 為 public repo，逐字轉存他人 Substack 全文等同公開轉載，改存來源記錄；附來源站可信度評估（23 篇全免費、事實抽查全對但幾乎零引用、作者匿名、量產管線跡象）；_index 385→386；反向連結 3 檔實測皆存在（2026-polymarket-quant-math-roadmap / ai-24h-risk-monitoring / 旺來幫Jane/_index）
+
 ### 2026-07-17 | COMPILE
 - `2026-07-17 07:15 | COMPILE | github.com/openai/codex-plugin-cc → wiki/Github/repos/openai-codex-plugin-cc.md` | repomix 分析（62 檔 / 96K tokens）；OpenAI 官方 Codex-in-Claude-Code plugin，Apache-2.0，純 Node ESM 零依賴；`/codex:review`+`adversarial-review`+`rescue`+`transfer`+`status/result/cancel`；透過 Codex app-server protocol；結論 ✅ 適合安裝（環境已裝其 codex-rescue subagent/skill，正是上游來源）
 

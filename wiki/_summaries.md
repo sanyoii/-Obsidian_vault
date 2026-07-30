@@ -366,3 +366,19 @@
 **摘要：** 多 AI 接力斷片的根因：聊天是時間線不是狀態機，「當前狀態」藏在聊天裡下一個模型只能猜。解法是把每個可交接任務壓成一張 AI Task Card——六節點流程（human request→working conversation→task card→execution place→artifact→writeback）、10 欄位最小卡（goal/boundary/context/current_state/artifact/acceptance/hard_gate/next_action/owner/updated_at，每欄防一種常見錯誤）。hard gate 清單（發布/資金/帳號/憑證/deploy/破壞性清理必停人類確認）；boundary 四分類（repo/artifact/system/decision_bound）防任務錯位。核心四句：對話推進、任務卡持狀態、產物證明、寫回接續。與本 vault 的 R17 契約表/7-Agent 工廠同構。
 **來源：** Leo（X @runes_leo，使用者貼原文）
 **建立：** 2026-07-10
+
+---
+
+## [[Quant-Trading/lehman-brothers-trading-manuals|雷曼兄弟內部交易培訓手冊 — 投行實務的一手教材]]
+**標籤：** `#quant` `#外匯` `#選擇權` `#repo` `#信用風險` `#投行實務` `#一手文件`
+**摘要：** 2008 雷曼倒閉後紐約破產法院任命 Examiner（Anton R. Valukas / Jenner & Block）調查，2010 年將九冊報告與 8,000+ 註腳引用的 supporting documents 上網，使三份「內部新人訓練＋desk operating manual」級文件進入公開領域（Stanford 保存副本）。① FX Training Manual 130 頁：FX Spot（left bid–right offer 規則、cross rate 兩種算法）→ Forwards（forward points、odd dates、positive carry）→ Swaps（swap points、T/N 做平部位）→ Options（Greeks、gamma hedging P&L 練習、exotic/barrier）；核心觀念是「交易的不是靜態 payoff 圖而是持續變化的風險因子」，且 forward 非未來匯率預測而是利率差 + 資金成本決定。② Repo Sales Reference Guide 71 頁：11 節含 Infinity 前台輸入系統與 MTS 主機指令；Repo 六大用途、完整生命週期 Quote→suitability→MRA/GMRA→credit limit→booking→collateral→settlement→MTM→margin call→close-out；抵押品不能取代信用風險管理。③ Credit Risk Reporting Procedures Manual 32 頁（v1.0, 2007-11）：parent/child 與 agent/principal mapping 是風險計算地基、CCE vs MPE 之分、風險管理大半是資料管理、Daily Excess Report 必須轉成行動。最有價值的讀法是手冊（應有流程）× Examiner 證物（實際行為）對讀找制度落差。三份 PDF 共 11.5MB 已下載至 raw/sources/lehman-manuals/ 並以 pypdf 驗證頁數與 TOC；Examiner 九冊約 37MB 尚未抓。附來源站可信度評估：事實抽查全對但幾乎零引用、作者匿名，可當詞彙表不可當引用來源。
+**來源：** 倫敦黑貓 London Black Cat https://londonblackcat.substack.com/p/e7b ＋一手文件 https://web.stanford.edu/~jbulow/Lehmandocs/menu.html
+**建立：** 2026-07-30
+
+---
+
+## [[Quant-Trading/投行金流與反洗錢-自學教材|投行金流與反洗錢 — 自學教材]]
+**標籤：** `#教材` `#quant` `#AML` `#合規` `#外匯` `#選擇權` `#repo` `#web3`
+**摘要：** 13 個模組的自學課程，核心命題是「不懂正常長什麼樣就看不出異常」，因此前台實務與洗錢結構必須一起學。Part 1（M1–M6，前台）：交易室語言（base/terms、left bid–right offer、cross rate 兩種算法、外匯無單邊部位）→ Forward 非預測而是利率差與資金成本（premium/discount、pay/earn points、carry、odd dates）→ Swap 作為全行幣別調度中樞（T/N 每日做平餘額，結構同型於 Repo）→ 選擇權交易的是變化中的風險因子而非靜態 payoff（Delta/Gamma/Theta/Vega、方向對仍虧錢的四條路、gamma hedging 成本、barrier 附近 Greeks 失控）→ Repo 真正的產品是現金抵押品資產負債表額度結算的整體管理（六用途、十步生命週期、haircut、wrong-way risk）→ 信用風險報表其實是資料工程（parent/child 與 agent/principal mapping 是地基、CCE vs MPE、報表必須轉成四選一的行動）。Part 2（M7–M11，後門）五種攻擊面：Wachovia 通匯銀行與 casa de cambio 混池（4,200 億美元未有效監控）、Danske 非居民組合與獎勵視而不見的結構（2,000 億歐元／2022 年 20 億美元和解）、德銀鏡像交易與 remote booking 責任真空（約 100 億美元／FCA 1.63 億英鎊＋NYDFS 4.25 億美元）、Troika 自建平行金融系統（75 家空殼、layering、假合約與合約取消費）、太子集團實體版（跑分→USDT→integration）與 Lazarus 鏈上版（盲簽、chain-hopping、追得到不等於追得回）。Part 3（M12）收斂出同一失效模式：異常都被看見了，但沒有任何一層擁有整個問題；給四個可遷移判準（沒有經濟目的的交易＝最強紅旗、行為畫像優於金額門檻、責任真空比惡意更常見、資料品質即風控上限）與手冊×證物對讀法。Part 4（M13）把每個傳統概念映射到 CEX/託管面試語言（entity mapping→地址簇、代理銀行信任鏈→Travel Rule、CCE/MPE→保險基金、Daily Excess→提幣風控、盲簽→託管簽核介面完整性），並指出 QA 背景的兩個切入角（介面與實際行為一致性、提幣狀態機）。附錄含四類中英詞彙表、一手文件查詢導航（哪個問題翻哪份手冊第幾頁）、資料可信度分級（一手手冊可直接引用；二手案例數字寫進正式文件前須回 DOJ/FCA/NYDFS/FinCEN/OCCRP 原始出處；起訴不等於定罪）。
+**來源：** 一手——雷曼三手冊 233 頁 + Examiner Report 九冊 4,105 頁（`raw/sources/lehman-manuals/`）；二手——倫敦黑貓 Substack 五篇案例
+**建立：** 2026-07-30

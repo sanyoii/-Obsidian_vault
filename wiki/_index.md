@@ -1,7 +1,7 @@
 # 知識庫主索引
 
-> 最後更新：2026-07-27
-> 文章數量：385 篇
+> 最後更新：2026-07-30
+> 文章數量：387 篇
 > 原始文件：持續累積中
 
 ---
@@ -121,6 +121,8 @@
 
 - [[Quant-Trading/2026-polymarket-quant-math-roadmap|2026年量化交易完整數學學習地圖]] — 從概率論到Black-Scholes，七章系統化路線圖；Polymarket LMSR與CLOB機制；頂級宽客薪資與工具箱 `#量化交易 #Polymarket #概率論 #Black-Scholes #演算法交易`
 - [[Quant-Trading/ai-24h-risk-monitoring|AI 24 小時盯盤——普通人可用的機構級風控四層架構]] — 護城河＝永遠在線＋硬編碼熔斷線而非「AI 比人聰明」；四層架構（實時監控/異常檢測/熔斷線/壓力測試）；三個零代碼落地動作與三大局限 `#quant #風控 #AI應用 #交易系統`
+- [[Quant-Trading/lehman-brothers-trading-manuals|雷曼兄弟內部交易培訓手冊 — 投行實務的一手教材]] — 2010 破產調查公開的三份 desk operating manual 真實目錄：FX Training Manual 130 頁（spot/forwards/swaps/options 四段，含 gamma hedging 練習）、Repo Sales Reference Guide 71 頁（11 節含 Infinity 前台系統）、Credit Risk Reporting Procedures Manual 32 頁（CCE/MPE、parent-child mapping、Daily Excess Report）；PDF 已存 raw/sources/lehman-manuals/ 並開檔驗證；含手冊×證物對讀法與來源站可信度評估 `#quant #外匯 #選擇權 #repo #信用風險 #投行實務 #一手文件`
+- [[Quant-Trading/投行金流與反洗錢-自學教材|投行金流與反洗錢 — 自學教材]] — 13 模組自學課程，前台實務（FX 語言/forward 利率差/swap 資金調度/Greeks 與 gamma hedging/Repo 生命週期/CCE-MPE 信用風險報表）× 洗錢五案（Wachovia 通匯／Danske 非居民／德銀鏡像交易／Troika 平行金融／太子集團與 Lazarus 鏈上）；每模組白話先行＋一手 PDF 頁碼導航＋自測題；含四判準、手冊×證物對讀法、中英詞彙表、Web3/CEX 面試映射 `#教材 #AML #合規 #外匯 #選擇權 #repo #web3`
 
 ---
 

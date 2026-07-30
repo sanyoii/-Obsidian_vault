@@ -142,6 +142,26 @@
 **說明：** 操作手冊定義了所有文章的生產流程（/compile）、查詢流程（/query）與維護流程（/lint），是整個知識庫的後設文件
 **建立於：** 2026-05-08
 
+### [[Quant-Trading/lehman-brothers-trading-manuals]] → [[Quant-Trading/2026-polymarket-quant-math-roadmap]]
+**關係：** 實務對照（理論 → 交易現場）
+**說明：** 數學地圖的 Black-Scholes／希臘字母章節是理論層；雷曼 FX Training Manual 的 Options 段（p.94-123）是同一組概念在投行 desk 上的實作層，含 gamma hedging P&L 練習與 barrier 附近 Greeks 失控的實務警告
+**建立於：** 2026-07-30（compile）
+
+### [[Quant-Trading/lehman-brothers-trading-manuals]] → [[Quant-Trading/ai-24h-risk-monitoring]]
+**關係：** 同構（機構風控 ↔ 個人風控）
+**說明：** AI 盯盤文的「硬編碼熔斷線」對應雷曼 CRR 手冊的 Daily Excess Report 與 limit escalation；兩者共同結論是風控靠事先定死的規則與資料品質，不靠模型聰明——CRR 手冊那句「輸入資料錯了輸出的風險數字就沒有意義」是機構版本
+**建立於：** 2026-07-30（compile）
+
+### [[Quant-Trading/投行金流與反洗錢-自學教材]] → [[Quant-Trading/lehman-brothers-trading-manuals]]
+**關係：** 教學層 ↔ 材料層
+**說明：** 手冊筆記是材料清冊（有什麼、在哪、可信度）；教材是學習路徑（先學什麼、為什麼重要、怎麼自測）。兩者刻意分開——材料會增補，路徑相對穩定
+**建立於：** 2026-07-30（compile）
+
+### [[Quant-Trading/投行金流與反洗錢-自學教材]] → [[求職/web3-轉職計畫/01-賽道地圖與資產缺口]]
+**關係：** 能力補給（傳統金融 → CEX/託管賽道）
+**說明：** 教材 M13 把每個傳統概念映射到 CEX 面試語言（entity mapping→地址簇、代理銀行信任鏈→Travel Rule、CCE/MPE→保險基金、盲簽→託管簽核介面完整性）；後兩者是 QA 背景的直接切入角
+**建立於：** 2026-07-30（compile）
+
 ---
 
 ## 孤島文章
