@@ -157,5 +157,5 @@ tags: [github, installed, skills, tools, index]
 ## 相關頁面
 
 - [[Tools/claude-tools-dashboard|Claude Code 工具生態系儀表板]] — 視覺化 Dashboard（8 個 Tab）
-- [[Github/repos/- Github 留看 Repo 整理（37 個，共 33 個獨立 repo）|留看 Repo 總整理（37 個）]]
+- [[Github/Github 留看 Repo 整理（37 個，共 33 個獨立 repo）|留看 Repo 總整理（37 個）]]
 - [[Tools/repo-intel|repo-intel Skill]] — 用於分析新 repo 的工具

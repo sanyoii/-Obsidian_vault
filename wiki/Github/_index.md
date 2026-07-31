@@ -6,14 +6,14 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 190 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 184 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-31
 
 ---
 
-## 🤖 AI Agent 框架（18 篇）
+## 🤖 AI Agent 框架（19 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -35,10 +35,11 @@ tags: [github, index, repos]
 | [[Github/repos/ClawWork — 港大讓 AI Agent 自負盈虧的經濟生存基準\|ClawWork]] | 🔬 | ❌ | 8.3K⭐ HKUDS（DeepTutor 同團隊）；給 Agent $10 起始餘額跑 GDPVal 220 任務、扣真 token 成本賺**模擬**薪水。**不是工具是跑分機**，對本環境零功能增量；MCP 有但工具只在模擬內有意義，ClawMode 綁死 nanobot 與 Claude Code 無關。三個結構性弱點：收入＝GPT估工時×GPT配BLS時薪×GPT評分（三重估計疊乘）、評分解析失敗預設 5.0/10＝照付半薪、README 宣稱的 0.6 門檻在主線程式碼不存在。749MB 中 96% 是跑分產物；5個月停更/0 release/22 PR 積壓/無測試 CI；HN 僅 3 分 1 留言（同團隊 nanobot 有 257 分），中文圈熱度全是轉述。**📌 可單獨抽取**：`eval/generate_meta_prompts.py` + 44 份職業別評分 rubric，是 LLM-as-judge rubric 自動生成的可運行範例（亦為 fallback 靜默失效的反面教材） |
 | [[Github/repos/CowAgent — chatgpt-on-wechat 改名後的開源個人 Agent Harness\|CowAgent]] | 🔬 | ⏳ | 46.1K⭐ MIT；**確認即 chatgpt-on-wechat 原地演進**（repo 建於 2022-08、2026-04-12 改名 commit 可查、Docker tag 刻意保留），真正斷代點是 v2.0.0 聊天機器人→Agent Harness。無外部 DB（SQLite+FTS5 記憶／Markdown 知識庫），週均 28 commits、2 週一版、2147 issue 已關；**Windows 支援意外地好**（run.ps1／Win7 打包 CI／bundle ripgrep／cp936 編碼修正）。⚠️ 中國生態綁定在 `web_search`（Bocha/智譜/千帆/LinkAI 四後端全中國、無 Google/Tavily）與 CDN 安裝腳本，但 Web console／Telegram／Slack／Discord 四通道完全可用，台灣可用面約 8 成。判 ⏳ 因知識庫與本 vault 正面衝突＝開第二個腦，且唯一增量「常駐 IM 助理」目前無需求；**外部驗證近乎零**（HN 零覆蓋、無第三方實測、46K 星是四年累積非 CowAgent 採用度）。**📌 可單獨抽取**：`channel/` 三方法通道抽象、`skills/loader.py` 遞迴停止規則、`memory/storage.py` CJK trigram 分詞、`evolution/` write-guard+備份+undo 安全圍欄；且 SKILL.md 格式與 Claude skills 相容 |
 | [[Github/repos/OpenMinis — iOS／Android 上的開源 On-Device AI Agent App\|OpenMinis]] | 🔬 | ⏳ | 1.4K⭐ GPL-3.0；**手機端 agent App 原始碼，非桌面工具**——無 CLI／無 MCP server／無可取用 skill，對 Windows 工作流直接增量為零。技術核心是**在 App 進程內跑 Linux**（iOS: iSH ARM64 fork + Asbestos JIT + SQLite fakefs；Android: PRoot），外加 60+ 原生 offload（HealthKit／HomeKit／NFC／Vision OCR／FFmpeg）與 12 個 App Intents。⚠️ **repo 是私有樹的鏡像、明文拒收 PR**，原始碼 2026-07-25 才以單一 commit 倒出（前三個月只是 README 空殼，1.4K 星是 App 人氣非程式碼），貢獻者 1 人。唯一交集是 **skill 格式與 Claude 同構**（SKILL.md + 按需載入，prompt 內上限 20 個），既有 124 skill 理論上可直接在手機跑，但屬「內容互通」非「系統整合」。外部驗證薄：HN 僅 7 分 0 留言、YouTube 教學為零，正評集中在 MacStories／知乎／Appinn 三篇媒體。已知資料完整性 bug 兩張（iSH 容器失步 #99、iCloud 同步孤兒化 #98）。**📌 可單獨抽取**：`src/shared/bashism/` 偵測 LLM 產出的 bash-ism 在 ash 上跑不動的規則表＋測試向量；7/25 開源 commit message 是「私有專案開源該交代什麼」的範本 |
+| [[Github/repos/bytedanceUI-TARS-desktop The Open-Source Multimodal AI Agent Stack Connecting Cutting-Edge AI Models and Agent Infra\|UI-TARS-desktop]] | 📎 | ⏳ | 字節多模態 Agent Stack：Agent TARS（CLI＋Web UI，MCP 工具整合）＋ UI-TARS Desktop（本機/遠端電腦與瀏覽器 operator）；README 剪貼留存 |
 
 ---
 
-## 🛠️ Claude Code / Skills（49 篇）
+## 🛠️ Claude Code / Skills（52 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -91,6 +92,9 @@ tags: [github, index, repos]
 | [[Github/repos/html-anything — 把任何檔案轉成單檔互動 HTML 的 Agent Skill\|html-anything]] | 🔬 | ⏳ | 104⭐ 60 source prompts×17 style systems，把 WhatsApp/微信/Kindle/Spotify/Apple Health/**Obsidian vault** 等雜亂匯出轉單檔互動 HTML；填「source-aware parsing」空白（既有設計 skill 全是產出端、無人管讀懂格式）；**MIT-0 可單抄 prompt 檔不必裝整包**；⚠️停滯10週+單人+v0.1.x，when_to_use 比 hallmark 更廣會搶觸發 → 建議只抄 obsidian-vault.md 餵 archify |
 | [[Github/repos/naiyue-skills — 跨宿主的四支元技能工具箱（審 skill／調研／建 skill／思考框架）\|naiyue-skills]] | 🔬 | ✅ | 4⭐ MIT／純 Python 標準庫零相依／雙宿主（Codex＋Claude Code）。四支**元技能**：**skill-auditor**（把第三方 skill 宣稱拆成 claim → 沙箱多輪實跑 → 逐條證實/證偽/無法驗證，`claims.json` 單一事實源、AI 只做局部判斷、轉停由腳本決定、終態永不改判、實跑 Agent 不得知道 claim 內容防取證偏向）→ **建議裝**，填補既有 `audit-skill` 只做靜態檢查的空白（本環境屢吃 hallmark/pixelshot「宣稱≠實測」的虧），但**須改名 + 指名調用限定**避開觸發打架；**prior-art-scout**（開工前多源選型，15 條鐵律含「盡力證明有人做過」「停更≠路線不可行」「不得從有限樣本推導行業無解」）→ ⏳ 與 research-deep+repo-intel 七成重疊、X 源需付費 TikHub；**naiyue-thinking** ❌ 與 institution/02 八成同構（獨立收斂訊號，抄「三次才固化」表即可）；**naiyue-skill-builder** ❌ 與本環境三處同步 SOP 衝突（只抄 `quick_validate.py` 的 L1/L2/L3 檢查）。⚠️ 本機實測：symlink 還原失敗（需管理員/開發者模式，但手動安裝不受影響）、測試硬編碼 `python3` 致 9 fail+2 error（環境非邏輯）、`skill-auditor` 5 支承重腳本零測試（違反自家 AGENTS.md）。與 [[Github/repos/naiyue-cover-generator — Codex 用的文章封面與段內說明圖 Skill 組\|naiyue-cover-generator]] 互補不重複（早 20 天、零檔案重疊、MIT vs 無授權），**本 repo 是該追蹤的正本** |
 | [[Github/repos/free-claude-code — 讓 Claude Code、Codex、Pi 改跑自家 LLM 供應商的本機代理\|free-claude-code]] | 🔬 | ❌ | 42.7K⭐ MIT／6 個月衝上來的本機反向代理：假裝成 Anthropic Messages（給 Claude Code/Pi）與 OpenAI Responses（給 Codex），把請求翻譯後轉去 **29 家供應商**（NVIDIA NIM/OpenRouter/Gemini/DeepSeek/Groq/Ollama/LM Studio…），支援 Opus/Sonnet/Haiku 分層各指不同上游、本機 Admin UI（Validate 後才 Apply）、Discord/Telegram 橋接＋語音轉文字。**名稱誤導**——拿到的不是免費 Claude 模型，是用 Claude Code 這個殼去驅動別家模型，原廠模型不在清單裡。**❌ 因需求不存在**（本環境付費 opus[1m]）＋要動 `ANTHROPIC_BASE_URL`/`.claude.json`/`DISABLE_AUTOUPDATER` 與 settings 統一＋config-drift 金絲雀正面衝突；且 `curl \| sh` 安裝、**零 tag 零 Release 無版本可釘**、bus factor 1（728/860 commits 一人，第 2、5 名貢獻者是 `cursoragent`/`claude` AI 帳號）。工程品質**反而是同星等前段**：靜態 AST 契約測試釘死八套件依賴白名單、19K token ARCHITECTURE.md、tests/ + smoke/ 雙層測試。熱門 issue 前 7 有 6 個同一件事＝上游供應商請求失敗（結構性風險，免費層限流／改 schema／tool-calling 支援不一）。**📌 可單獨抽取**：`api/web_tools/egress.py` 的 DNS-rebinding-safe SSRF 守門（~60 行零相依）、`tests/contracts/test_import_boundaries.py` 架構契約測試法、`smoke/` prereq/product 兩層分法 |
+| [[Github/repos/AK-Threads-booster — Threads 演算法寫文決策 skill\|AK-Threads-booster]] | 📎 | ⏳ | AK體 2.0：用自己的歷史貼文＋演算法做 Threads 選題/起草/發文前診斷/表現預估/復盤的 skill 系統；原檔名 296 bytes 造成 git-bash 隱形，2026-07-31 改名修復 |
+| [[Github/repos/openai-codex-plugin-cc\|codex-plugin-cc]] | 🔬 | ✅ | OpenAI 官方 Claude Code plugin：/codex:review、adversarial-review、rescue、transfer、背景 job 管理；本環境 codex 雙 AI 工作流的上游來源，Apache-2.0 零依賴 |
+| [[Github/repos/awesome-codex-skills A curated list of practical Codex skills for automating workflows across the Codex CLI and API\|awesome-codex-skills]] | 📎 | 📌 | 自己維護的 Codex skills 精選清單（sanyoii/awesome-codex-skills） |
 
 ---
 
@@ -112,7 +116,7 @@ tags: [github, index, repos]
 
 ---
 
-## 💰 投資 / 金融（8 篇）
+## 💰 投資 / 金融（9 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -124,6 +128,7 @@ tags: [github, index, repos]
 | [[Github/repos/machine-learning-for-trading — ML4T 第三版機器學習交易全流程\|ml4t 3rd ed]] | 🔬 | ⏳ | 19.7K⭐ 量化 ML 教科書配套；9 case study 同一 pipeline；61 護欄化 agent skills 值得偷 |
 | [[Github/repos/daily_stock_analysis — LLM 驅動的多市場股票每日分析與推送系統\|daily_stock_analysis]] | 🔬 | ⏳ | 59K⭐/**50.5K fork**（比值 0.86＝典型 fork-to-run）；fork 完設 Secrets 就跑在 GitHub Actions 上，每交易日推「決策儀表盤」到飛書/TG/Discord/Slack/Email；多 Agent pipeline（Technical→Intel→Risk→Decision）＋`disagreement.py` 把 Agent 分歧結構化、risk 有 override 權；15 種 YAML 策略＋17 個資料源；**台股一等支援**（`.TW`/`.TWO` suffix-only、XTAI 日曆、三大法人 TWSE T86+TPEx OpenAPI）但明確不承諾即時行情/大盤複盤/自動補全；⚠️ README「推薦」供應商全帶推廣碼且為贊助商、免費源不保證穩定、安全 issue #1970 未關 |
 | [[Github/repos/chokepoint-atlas — AI 供應鏈卡點美股研究方法論 Skill\|chokepoint-atlas]] | 🔬 | ⏳ | 42⭐ 卡脖子美股战法 Skill；證據四級標籤＋卡點 stack＋五維打分；與 jane-finance 鏡頭互補；⚠️無授權檔+領域窄+停更，抽「證據標籤」機制即可 |
+| [[Github/repos/hugohe3-ppt-master\|ppt-master（AI Berkshire）]] | 🔬 | ⏳ | 名為 ppt-master 實為 AI Berkshire 投資研究 skill 合集鏡像（與 xbtlin/ai-berkshire 同源，MIT）；18 skills 四大師視角並行、鏡子測試強制表態；按需取用單一 skill 不整包裝 |
 
 ---
 
@@ -159,7 +164,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🧰 開發工具 / CLI（16 篇）
+## 🧰 開發工具 / CLI（17 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -179,6 +184,7 @@ tags: [github, index, repos]
 | [[Github/repos/CLIProxyAPI — 訂閱帳號包成 OpenAI 相容 API 的多帳號閘道\|CLIProxyAPI]] | 🔬 | ⏳ | 40.7K⭐ Go 代理把 Claude Code/Codex/Gemini/Grok 訂閱 OAuth 包成 OpenAI 相容 API+多帳號 round-robin；生產級架構+龐大衍生生態，⚠️訂閱當 API 違 ToS 帳號恐被封 |
 | [[Github/repos/fitnesse — 把驗收測試寫成 Wiki 表格的 ATDD 老牌框架\|fitnesse]] | 🔬 | ⏳ | 2.1K⭐ Uncle Bob 2003 年 ATDD 老牌；wiki 表格即可執行測試（DecisionTable/ScriptTable）+ SLIM 跨語言 fixture 協議；維護模式、採用僅 Robot Framework 1/10，但單 jar 30 分鐘可試玩，決策表窮舉法直接可用於手動測試設計 |
 | [[Github/repos/resume-skills — 跨 AI Agent 的離線 session context 遷移工具（8×8）\|resume-skills]] | 🔬 | ⏳ | 24⭐ 6天新；把 Claude/Codex/Cursor 等 8 家本機 session 紀錄抽成惰性交接摘要餵給另一家新 session（非 live restore）；Python stdlib-only 全離線、274 測試、STATUS.md 逐項標 not-done 誠實度罕見；填「跨 host context 遷移」空白（現靠手寫 .ai/tasks）；**⚠️ CI 無 Windows** 且作者自承 Windows 安裝缺鎖→暫不裝，handoff-policy 六條可先抄進派工模板 |
+| [[Github/repos/cli-printing-press — API spec 自動生成 Go CLI 工具\|cli-printing-press]] | 📎 | ❌ | 給 API spec（或自動嗅探）生成 Go CLI，30+ 內建 catalog、附 7 個 Claude Code skills；判 ❌：輸出 Go 程式碼與本環境 Python 棧不合，臨時 API 呼叫讓 Claude 寫 Python script 更快 |
 
 ---
 
@@ -196,7 +202,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🎨 設計 / UI / 前端（10 篇）
+## 🎨 設計 / UI / 前端（11 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -210,6 +216,7 @@ tags: [github, index, repos]
 | [[Github/repos/latentbox — AI 創意藝術精選資源導航站\|latentbox]] | 🔬 | ❌ | 2.2K⭐ AI/創意/藝術精選資源站；CC BY-NC-ND 禁衍生，僅供瀏覽參考 |
 | [[Github/repos/galaxy — Uiverse.io 開源 UI 元件庫鏡像（3800+ CSS-Tailwind 元件）\|galaxy]] | 🔬 | ⏳ | 11.7K⭐ Uiverse.io 唯讀元件鏡像；3,804 個單檔 HTML+CSS/Tailwind 元件、MIT 可商用；鏡像停更 22 個月落後官網 2,000 元件；用時上官網複製即可，除非有離線批量餵 agent 需求才 clone |
 | [[Github/repos/naiyue-cover-generator — Codex 用的文章封面與段內說明圖 Skill 組\|naiyue-cover-generator]] | 🔬 | 📌 | 3⭐ 2天新／1人／**無 LICENSE**；兩支 **Codex** skill：文章橫向封面＋段落說明圖（flow/timeline/decision-map/comparison/concept-diagram 五圖型）。主張「AI 只做視覺規劃＋整圖生成，Node 腳本負責可機械證明的部分」＋3-4 道人工門禁。**真正價值在反幻覺機制可移植**：review 綁內容 hash、`guard-*-attempt.mjs` 用檔案狀態擋無限重試、不可覆寫 attempt 快照（禁本地圖冒充 raw）、標題逐字比對（批准內容卡≠授權改標題）、拒絕從平台名推斷像素事實。⚠️ IP 素材權利不明需自換、綁 Codex 內建 image_gen（Claude Code 無等價）、硬綁專案根目錄名 |
+| [[Github/repos/open-slide — Agent 原生 React 簡報框架\|open-slide]] | 📎 | ⏳ | 3.4K⭐ MIT；agent 寫 React 產 1920×1080 簡報：/create-slide 起稿、瀏覽器點選留言→/apply-comments 套改、presenter mode、匯出靜態 HTML/PDF；與 html-ppt/guizang-ppt skill 群同域 |
 ---
 
 ## 📚 學習 / 教程 / RAG（11 篇）
