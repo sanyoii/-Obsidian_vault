@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 184 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 185 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-07-31
@@ -39,7 +39,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（52 篇）
+## 🛠️ Claude Code / Skills（53 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -95,6 +95,7 @@ tags: [github, index, repos]
 | [[Github/repos/AK-Threads-booster — Threads 演算法寫文決策 skill\|AK-Threads-booster]] | 📎 | ⏳ | AK體 2.0：用自己的歷史貼文＋演算法做 Threads 選題/起草/發文前診斷/表現預估/復盤的 skill 系統；原檔名 296 bytes 造成 git-bash 隱形，2026-07-31 改名修復 |
 | [[Github/repos/openai-codex-plugin-cc\|codex-plugin-cc]] | 🔬 | ✅ | OpenAI 官方 Claude Code plugin：/codex:review、adversarial-review、rescue、transfer、背景 job 管理；本環境 codex 雙 AI 工作流的上游來源，Apache-2.0 零依賴 |
 | [[Github/repos/awesome-codex-skills A curated list of practical Codex skills for automating workflows across the Codex CLI and API\|awesome-codex-skills]] | 📎 | 📌 | 自己維護的 Codex skills 精選清單（sanyoii/awesome-codex-skills） |
+| [[Github/repos/personal-ip-brand-intro — 個人品牌開場動畫 Codex Skill\|personal-ip-brand-intro]] | 🔬 | ⏳ | 14⭐ MIT；台灣創作者 FuFu（fufuailab.com）**發布首日**的 Codex Skill：7 秒個人品牌開場動畫，HyperFrames 預設／Remotion 明示，三視覺模式（純文字插圖/用戶圖片/混合）。**方法論是賣點**：七項設計指紋防模板化、**無音樂時自選 BPM 產靜音節拍表**（成品無聲仍按節奏動）、分鏡確認閘門才渲染、ffprobe＋抽幀驗成品。安全稽核乾淨：execFileSync 陣列參數呼叫 ffprobe 無注入面、零網路呼叫、SKILL.md 明文不偷換音樂不擅自渲染。判 ⏳：品質高於星數且 HyperFrames 引擎層已就緒，但**目前無排上的品牌開場需求**（R13）；升級觸發＝個人網站/Threads 要做開場素材時。**📌 可單獨抽取**：七項設計指紋 anti-template 檢核表、「無音樂也要有節拍表」思路、60 行的 verify-render 抽幀驗證 |
 
 ---
 
