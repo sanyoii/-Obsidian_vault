@@ -51,6 +51,11 @@
 ### 2026-06-30 | COMPILE
 - `2026-06-30 00:00 | COMPILE | wiki/水球流軟體設計模式精通之旅/ → wiki/_index.md + wiki/_summaries.md + wiki/_graph.md` | 補登 2026-06-29 新增 4 篇文章（代理人模式/複合模式/單體模式/抽象工廠）至主索引、摘要與連結圖；Christopher Alexander RPG 道館挑戰原始剪報編譯為正式 wiki 文章（Forces/Problem/Pattern 結構）
 
+## 2026-08
+
+### 2026-08-01 | COMPILE
+- `2026-08-01 01:05 | COMPILE | raw/sources/2026-08-01_codex-multi-agent-orchestration.md → wiki/Claude/codex-multi-agent-orchestration.md` | riba2534 X Article《Codex 进阶指南：作为 Multi-Agent 编排控制平面》入庫（發布 2026-07-30，408 讚/61 轉快照）；36KB 繁中解讀，涵蓋四層模型／Task vs Subagent／跨主機雙向可見性／13 個 codex_app defer-loading 工具／**無 wait-all 原語**／clientThreadId 陷阱／中斷不對稱／fork_turns 三檔／八種拓撲／五段式派工模板／outputSchema；**抽取缺陷如實標注**：原文全部表格與程式碼區塊未取得（至少 8 處），以「未取得」標記 17 處＋文末 15 條官方文件主題清單替代指引，禁腦補（編排者驗收抓到 haiku 虛構官方 URL 已全數移除）；加時效註記（feature flag 為發布快照，本機 codex-cli 0.145.0 實測 multi_agent_v2 已 stable，用前跑 `codex features list`）；反向連結 4/4 實測存活；_index 402→403
+
 ## 2026-07
 
 ### 2026-07-31 | LINT

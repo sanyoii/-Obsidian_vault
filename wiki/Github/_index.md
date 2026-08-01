@@ -6,14 +6,14 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 185 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 189 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-07-31
+> 最後更新：2026-08-01
 
 ---
 
-## 🤖 AI Agent 框架（19 篇）
+## 🤖 AI Agent 框架（21 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -36,10 +36,12 @@ tags: [github, index, repos]
 | [[Github/repos/CowAgent — chatgpt-on-wechat 改名後的開源個人 Agent Harness\|CowAgent]] | 🔬 | ⏳ | 46.1K⭐ MIT；**確認即 chatgpt-on-wechat 原地演進**（repo 建於 2022-08、2026-04-12 改名 commit 可查、Docker tag 刻意保留），真正斷代點是 v2.0.0 聊天機器人→Agent Harness。無外部 DB（SQLite+FTS5 記憶／Markdown 知識庫），週均 28 commits、2 週一版、2147 issue 已關；**Windows 支援意外地好**（run.ps1／Win7 打包 CI／bundle ripgrep／cp936 編碼修正）。⚠️ 中國生態綁定在 `web_search`（Bocha/智譜/千帆/LinkAI 四後端全中國、無 Google/Tavily）與 CDN 安裝腳本，但 Web console／Telegram／Slack／Discord 四通道完全可用，台灣可用面約 8 成。判 ⏳ 因知識庫與本 vault 正面衝突＝開第二個腦，且唯一增量「常駐 IM 助理」目前無需求；**外部驗證近乎零**（HN 零覆蓋、無第三方實測、46K 星是四年累積非 CowAgent 採用度）。**📌 可單獨抽取**：`channel/` 三方法通道抽象、`skills/loader.py` 遞迴停止規則、`memory/storage.py` CJK trigram 分詞、`evolution/` write-guard+備份+undo 安全圍欄；且 SKILL.md 格式與 Claude skills 相容 |
 | [[Github/repos/OpenMinis — iOS／Android 上的開源 On-Device AI Agent App\|OpenMinis]] | 🔬 | ⏳ | 1.4K⭐ GPL-3.0；**手機端 agent App 原始碼，非桌面工具**——無 CLI／無 MCP server／無可取用 skill，對 Windows 工作流直接增量為零。技術核心是**在 App 進程內跑 Linux**（iOS: iSH ARM64 fork + Asbestos JIT + SQLite fakefs；Android: PRoot），外加 60+ 原生 offload（HealthKit／HomeKit／NFC／Vision OCR／FFmpeg）與 12 個 App Intents。⚠️ **repo 是私有樹的鏡像、明文拒收 PR**，原始碼 2026-07-25 才以單一 commit 倒出（前三個月只是 README 空殼，1.4K 星是 App 人氣非程式碼），貢獻者 1 人。唯一交集是 **skill 格式與 Claude 同構**（SKILL.md + 按需載入，prompt 內上限 20 個），既有 124 skill 理論上可直接在手機跑，但屬「內容互通」非「系統整合」。外部驗證薄：HN 僅 7 分 0 留言、YouTube 教學為零，正評集中在 MacStories／知乎／Appinn 三篇媒體。已知資料完整性 bug 兩張（iSH 容器失步 #99、iCloud 同步孤兒化 #98）。**📌 可單獨抽取**：`src/shared/bashism/` 偵測 LLM 產出的 bash-ism 在 ash 上跑不動的規則表＋測試向量；7/25 開源 commit message 是「私有專案開源該交代什麼」的範本 |
 | [[Github/repos/bytedanceUI-TARS-desktop The Open-Source Multimodal AI Agent Stack Connecting Cutting-Edge AI Models and Agent Infra\|UI-TARS-desktop]] | 📎 | ⏳ | 字節多模態 Agent Stack：Agent TARS（CLI＋Web UI，MCP 工具整合）＋ UI-TARS Desktop（本機/遠端電腦與瀏覽器 operator）；README 剪貼留存 |
+| [[Github/repos/Meta_Kim — 跨四 CLI 的 AI 編碼治理執行層\|Meta_Kim]] | 🔬 | ⏳ | 257⭐ Apache-2.0；老金（AI-Coding-Guide-Zh 5.5K⭐作者）單人作品；八階段治理脊柱＋9 meta-agents＋能力索引路由，單源投影 Claude/Codex/Cursor/OpenClaw；供應鏈稽核乾淨（postinstall 良性、3 顆知名相依、網路面窄）但腳印大（Windows 啟動資料夾 VBS 自啟動＋四 runtime 全域寫入）；與 R14/R17/verify_gate/institution 概念重疊 8 成且哲學相反（全量前置 vs 極簡路由），86KB SKILL＋4 Stop hooks 違反 R13 不裝系統；📌 可抄想法：discover:global 能力索引、stage-DAG 斷點續跑、smoke/live 證據分級 |
+| [[Github/repos/storm — LLM 自動研究與維基文章生成系統\|storm]] | 🔬 | ⏳ | 30.4K⭐ MIT；史丹福 OVAL 官方（NAACL/EMNLP 2024 雙論文）：主題→多視角提問＋模擬「維基編輯×專家」對話→大綱→帶引用長文的四段可斷點管線；Co-STORM 加人機圓桌＋心智圖。供應鏈五項全綠（標準 setuptools、12 相依全實、呼叫面全為文件化 API）。與 repo-intel/article-decode 產線高度同域，判 ⏳：需求已被 research-deep 覆蓋＋停更逾一年（dspy 釘死 2.4.9）＋方法論三招（視角提問/對話式追問/大綱先行）讀完即吸收；真正獨有是 VectorRM 錨定自有語料生成——升級觸發＝出現「以自有教材語料批量產長文」需求。社群提醒：抽掉檢索的 STORM prompt 是幻覺製造機 |
 
 ---
 
-## 🛠️ Claude Code / Skills（53 篇）
+## 🛠️ Claude Code / Skills（54 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -96,6 +98,7 @@ tags: [github, index, repos]
 | [[Github/repos/openai-codex-plugin-cc\|codex-plugin-cc]] | 🔬 | ✅ | OpenAI 官方 Claude Code plugin：/codex:review、adversarial-review、rescue、transfer、背景 job 管理；本環境 codex 雙 AI 工作流的上游來源，Apache-2.0 零依賴 |
 | [[Github/repos/awesome-codex-skills A curated list of practical Codex skills for automating workflows across the Codex CLI and API\|awesome-codex-skills]] | 📎 | 📌 | 自己維護的 Codex skills 精選清單（sanyoii/awesome-codex-skills） |
 | [[Github/repos/personal-ip-brand-intro — 個人品牌開場動畫 Codex Skill\|personal-ip-brand-intro]] | 🔬 | ⏳ | 14⭐ MIT；台灣創作者 FuFu（fufuailab.com）**發布首日**的 Codex Skill：7 秒個人品牌開場動畫，HyperFrames 預設／Remotion 明示，三視覺模式（純文字插圖/用戶圖片/混合）。**方法論是賣點**：七項設計指紋防模板化、**無音樂時自選 BPM 產靜音節拍表**（成品無聲仍按節奏動）、分鏡確認閘門才渲染、ffprobe＋抽幀驗成品。安全稽核乾淨：execFileSync 陣列參數呼叫 ffprobe 無注入面、零網路呼叫、SKILL.md 明文不偷換音樂不擅自渲染。判 ⏳：品質高於星數且 HyperFrames 引擎層已就緒，但**目前無排上的品牌開場需求**（R13）；升級觸發＝個人網站/Threads 要做開場素材時。**📌 可單獨抽取**：七項設計指紋 anti-template 檢核表、「無音樂也要有節拍表」思路、60 行的 verify-render 抽幀驗證 |
+| [[Github/repos/claude-cache-guard — 5 小時額度到頂前自動寫交接檔的 statusLine 守門員\|claude-cache-guard]] | 🔬 | ⏳ | 33⭐ MIT 零依賴；掛 statusLine 抽 5h/7d 用量寫本機檔，越過門檻（預設 90%）用 `Stop`/`PostToolBatch` hook 逼 Claude 先寫 `next_session.md` 才准停。**防的是具體成本陷阱**：額度耗盡等重置期間 prompt cache 冷掉，回到大 session 整段對話以**未快取 input tokens** 重新計費讀入。✅ **供應鏈五項全綠**：零 postinstall／零依賴／npm tarball 21 檔與 `files[]` 吻合無夾帶、`bin`+`scripts`+`src`+`package.json` **14 檔逐檔比對零差異**／`fetch`·`node:http(s)`·`net`·`dns` 全 repo 零命中、無 `eval`。**品質 vs 採用度矛盾**：測試碼體積是產品碼 1.5 倍（19 test 檔／檔名即開發史 `audit-fixes`·`qa-fixes`·`config-hardening`·`prototype-residue`）、三語文件、CI 跑 Node 18/20/22，但 **0 issue / 0 fork / 0 PR / 1 watcher**＝沒人裝過。🪟 **本環境兩處硬衝突**：①`src/paths.js` 只用 `os.homedir()`，全 repo grep `CLAUDE_CONFIG_DIR` **零命中** → statusLine 寫進 C: 而 Claude 讀 D:（永不生效＋觸發金絲雀第 [1] 項）、`/ccg*` 裝進沒 junction 的 `C:\...\.claude\commands\` 一個都不會出現（skills Issue #1 同型）②statusLine 已被 caveman plugin 佔用。**功能空缺是真的**：`/last-word` 觸發軸是 context 40%，ccg 是額度視窗 90%，兩軸正交。**📌 零成本可抽取**：交接模板的 `## Original User Prompts`（逐字依序保存原始指令，理由＝compaction 會改變語意）與 `## Do Not Repeat` 兩欄補進 `/last-word`；另有雙層遞迴防護（正則+`CCG_BRIDGE_CHILD` env marker）、殺 process group、symlink truncate 防護、控制字元先剝除再比對敏感標記 |
 
 ---
 
@@ -165,7 +168,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🧰 開發工具 / CLI（17 篇）
+## 🧰 開發工具 / CLI（18 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -186,6 +189,7 @@ tags: [github, index, repos]
 | [[Github/repos/fitnesse — 把驗收測試寫成 Wiki 表格的 ATDD 老牌框架\|fitnesse]] | 🔬 | ⏳ | 2.1K⭐ Uncle Bob 2003 年 ATDD 老牌；wiki 表格即可執行測試（DecisionTable/ScriptTable）+ SLIM 跨語言 fixture 協議；維護模式、採用僅 Robot Framework 1/10，但單 jar 30 分鐘可試玩，決策表窮舉法直接可用於手動測試設計 |
 | [[Github/repos/resume-skills — 跨 AI Agent 的離線 session context 遷移工具（8×8）\|resume-skills]] | 🔬 | ⏳ | 24⭐ 6天新；把 Claude/Codex/Cursor 等 8 家本機 session 紀錄抽成惰性交接摘要餵給另一家新 session（非 live restore）；Python stdlib-only 全離線、274 測試、STATUS.md 逐項標 not-done 誠實度罕見；填「跨 host context 遷移」空白（現靠手寫 .ai/tasks）；**⚠️ CI 無 Windows** 且作者自承 Windows 安裝缺鎖→暫不裝，handoff-policy 六條可先抄進派工模板 |
 | [[Github/repos/cli-printing-press — API spec 自動生成 Go CLI 工具\|cli-printing-press]] | 📎 | ❌ | 給 API spec（或自動嗅探）生成 Go CLI，30+ 內建 catalog、附 7 個 Claude Code skills；判 ❌：輸出 Go 程式碼與本環境 Python 棧不合，臨時 API 呼叫讓 Claude 寫 Python script 更快 |
+| [[Github/repos/googleworkspace-cli — 一支 CLI 打通全 Google Workspace（含 95 個 Agent Skills）\|googleworkspace-cli]] | 🔬 | ⏳ | 30.1K⭐ Apache-2.0 Rust；掛官方 org 但 README 明文「not officially supported」（DevRel 專案，npm 由 google-wombot 官方 bot 發布）。**動態指令面**：runtime 讀 Discovery Service 生成全部指令，Google 加端點自動長出；**95 個 SKILL.md** 隨附（Gmail/Drive/Calendar/Sheets＋workflow 型＋ModelArmor prompt 消毒），`npx skills add` 直裝 Claude Code。✅ 供應鏈乾淨：postinstall 逐字審過（GitHub Releases 下載＋**SHA256 強制驗證**）、npm 包零依賴、CI 有 cargo-audit/deny；⚠️ `gws-shared` skill 內建「鼓勵 agent 催 star」條款（AgentKey 同型、烈度低）。**關鍵警訊：human commit 停在 2026-03-31**（3 月爆紅連發 8 版→熄火 4 個月，只剩 bot 再生 skills），116 open issues 含 auth 級 bug（憑證解密失敗被靜默刪除 #886、gmail +read 丟本文 #889）無人修。Reddit 有真用戶見證（Claude Code＋gws 做 Gmail triage/自動回信/發票）。判 ⏳：升級＝求職大量投遞期需要 Gmail triage 時裝＋實測 auth；放棄＝2026-10 前仍零人力 commit |
 
 ---
 

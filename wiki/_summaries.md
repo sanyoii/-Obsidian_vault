@@ -1,6 +1,14 @@
 # 文章摘要總覽
 
-> 最後更新：2026-07-10
+> 最後更新：2026-08-01
+
+---
+
+## [[Claude/codex-multi-agent-orchestration|Codex 進階指南 — 作為 Multi-Agent 編排控制平面]]
+**標籤：** `#codex` `#multi-agent` `#agent編排` `#控制平面` `#orchestration`
+**摘要：** riba2534（服務端工程師）的 Codex 編排深度解讀，核心論點：Codex 不是聊天工具而是「跨項目、跨 Git 工作樹、跨 SSH 主機的 Agent 運維控制台」。四層模型：持久 Task（側邊欄長存、跨主機）／Task 內 Subagent（短生命週期、獨立上下文窗口）／執行環境（Local/Worktree/Remote SSH/Cloud）／App Server 可編程控制面。關鍵硬語義：①跨主機可見性雙向且不分主客（操作線程的工具由 App 提供，主機退化為線程屬性）；②codex_app 13 工具 defer-loading（需先工具搜尋拿 schema）；③**無 wait-all 原語**——wait_threads 天生 wait-any、最多 8 目標，等全部要自己寫迴圈；④clientThreadId 陷阱（非阻塞建線程時返回的 ID 不能傳給要 threadId 的工具，最易寫出 bug）；⑤中斷不對稱（掐得掉子 Agent、掐不掉持久 Task 的當前 Turn）；⑥fork_turns 三檔（all/none/N）控制上下文繼承，fork_thread 總是複製全部歷史。選型判據：context pollution/rot——讀大量代碼得簡短結論→派子 Agent，一兩個明確編輯→自己做。治理：SubagentStop 返回 decision:"block" 實現「驗證不過就重做」；PreToolUse 可改寫工具輸入。八種拓撲（Supervisor/Fan-out/Pipeline/Graph Workflow/Generator-Critic/兩種 Handoff/Fork+Worktree 競賽/Race 與 Quorum）＋五段式派工模板（目標/工作目錄/範圍/約束/返回格式，要求 file:line 證據）＋outputSchema 把「做完了」變成可校驗對象。⚠️ 抽取缺陷：原文所有表格與程式碼區塊（至少 8 處）未取得，已逐處標注並附 15 條官方文件主題清單；feature flag 狀態為 2026-07-30 快照，本機 codex-cli 0.145.0 實測 multi_agent_v2 已 stable——使用前跑 `codex features list` 核對。
+**來源：** riba2534 X Article — https://x.com/riba2534/status/2082916383248252976（發布 2026-07-30，408 讚/61 轉）
+**建立：** 2026-08-01
 
 ---
 

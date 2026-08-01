@@ -1,7 +1,7 @@
 # 知識庫主索引
 
-> 最後更新：2026-07-30
-> 文章數量：402 篇
+> 最後更新：2026-08-01
+> 文章數量：403 篇
 > 原始文件：持續累積中
 
 ---
@@ -31,6 +31,7 @@
 - [[Claude/2026-claude-code-repo-structure-final-boss|Claude Code 的終極挑戰：Repository 結構設計（Final Boss Setup）]] — 四層 Context Ladder、ASKED vs FORCED、Routing 三分類、Path Gating、Agent Memory、危險目錄 CLAUDE.md、七大 Golden Rules `#Claude-Code #Repo結構 #CLAUDE.md #Hooks #Skills`
 - [[Claude/fable5-mastery-leader-mode-workflows|Fable 5（Claude Sonnet 5）駕馭全攻略 — Leader 模式與五大變現工作流]] — 讓 Fable 當團隊領導者而非工人：Pocock skills 規劃 + Opus/Codex worker 分工 + verifier 審核；三秘訣（不過度引導/CLAUDE.md 輕量化/善用 goal+loop）；五個變現工作流 `#Fable5 #ClaudeCode #Agent編排 #Skill設計 #Leader模式`
 - [[Claude/multi-ai-task-card|多 AI 協作不斷片 — 用任務卡把 Claude/Codex/Cursor 接起來]] — 聊天是時間線不是狀態機；六節點流程（請求→對話→任務卡→執行位置→產物→寫回）、10 欄位最小任務卡、hard gate 清單、boundary 四分類 `#多AI協作 #任務卡 #agent設計 #狀態管理 #工作流`
+- [[Claude/codex-multi-agent-orchestration|Codex 進階指南 — 作為 Multi-Agent 編排控制平面]] — riba2534 深度解讀：四層模型（Task／Subagent／執行環境／App Server 控制面）、無 wait-all 原語、clientThreadId 陷阱、中斷不對稱、八種拓撲、五段式派工模板；⚠️ 原文表格/程式碼未取得已如實標注 `#codex #multi-agent #agent編排 #orchestration`
 
 ---
 
