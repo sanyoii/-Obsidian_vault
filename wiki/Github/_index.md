@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 196 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 197 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-08-02
@@ -42,7 +42,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（55 篇）
+## 🛠️ Claude Code / Skills（56 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -100,6 +100,7 @@ tags: [github, index, repos]
 | [[Github/repos/awesome-codex-skills A curated list of practical Codex skills for automating workflows across the Codex CLI and API\|awesome-codex-skills]] | 📎 | 📌 | 自己維護的 Codex skills 精選清單（sanyoii/awesome-codex-skills） |
 | [[Github/repos/personal-ip-brand-intro — 個人品牌開場動畫 Codex Skill\|personal-ip-brand-intro]] | 🔬 | ⏳ | 14⭐ MIT；台灣創作者 FuFu（fufuailab.com）**發布首日**的 Codex Skill：7 秒個人品牌開場動畫，HyperFrames 預設／Remotion 明示，三視覺模式（純文字插圖/用戶圖片/混合）。**方法論是賣點**：七項設計指紋防模板化、**無音樂時自選 BPM 產靜音節拍表**（成品無聲仍按節奏動）、分鏡確認閘門才渲染、ffprobe＋抽幀驗成品。安全稽核乾淨：execFileSync 陣列參數呼叫 ffprobe 無注入面、零網路呼叫、SKILL.md 明文不偷換音樂不擅自渲染。判 ⏳：品質高於星數且 HyperFrames 引擎層已就緒，但**目前無排上的品牌開場需求**（R13）；升級觸發＝個人網站/Threads 要做開場素材時。**📌 可單獨抽取**：七項設計指紋 anti-template 檢核表、「無音樂也要有節拍表」思路、60 行的 verify-render 抽幀驗證 |
 | [[Github/repos/claude-cache-guard — 5 小時額度到頂前自動寫交接檔的 statusLine 守門員\|claude-cache-guard]] | 🔬 | ⏳ | 33⭐ MIT 零依賴；掛 statusLine 抽 5h/7d 用量寫本機檔，越過門檻（預設 90%）用 `Stop`/`PostToolBatch` hook 逼 Claude 先寫 `next_session.md` 才准停。**防的是具體成本陷阱**：額度耗盡等重置期間 prompt cache 冷掉，回到大 session 整段對話以**未快取 input tokens** 重新計費讀入。✅ **供應鏈五項全綠**：零 postinstall／零依賴／npm tarball 21 檔與 `files[]` 吻合無夾帶、`bin`+`scripts`+`src`+`package.json` **14 檔逐檔比對零差異**／`fetch`·`node:http(s)`·`net`·`dns` 全 repo 零命中、無 `eval`。**品質 vs 採用度矛盾**：測試碼體積是產品碼 1.5 倍（19 test 檔／檔名即開發史 `audit-fixes`·`qa-fixes`·`config-hardening`·`prototype-residue`）、三語文件、CI 跑 Node 18/20/22，但 **0 issue / 0 fork / 0 PR / 1 watcher**＝沒人裝過。🪟 **本環境兩處硬衝突**：①`src/paths.js` 只用 `os.homedir()`，全 repo grep `CLAUDE_CONFIG_DIR` **零命中** → statusLine 寫進 C: 而 Claude 讀 D:（永不生效＋觸發金絲雀第 [1] 項）、`/ccg*` 裝進沒 junction 的 `C:\...\.claude\commands\` 一個都不會出現（skills Issue #1 同型）②statusLine 已被 caveman plugin 佔用。**功能空缺是真的**：`/last-word` 觸發軸是 context 40%，ccg 是額度視窗 90%，兩軸正交。**📌 零成本可抽取**：交接模板的 `## Original User Prompts`（逐字依序保存原始指令，理由＝compaction 會改變語意）與 `## Do Not Repeat` 兩欄補進 `/last-word`；另有雙層遞迴防護（正則+`CCG_BRIDGE_CHILD` env marker）、殺 process group、symlink truncate 防護、控制字元先剝除再比對敏感標記 |
+| [[Github/repos/claude-code-templates — 1700+ 元件的 Claude Code 設定分發器\|claude-code-templates]] | 🔬 | ❌ | 30K⭐ MIT；把 872 skills／408 agents／commands／MCP 收成目錄，`npx claude-code-templates` 一鍵寫進 `~/.claude/`。**體質其實不差**：下載來源單一透明（全在自家 GitHub raw、無自架 CDN）、**無 postinstall**、遙測克制且 opt-out 一致（`CCT_NO_TRACKING`）、GHSA-79wm-x847-7cvg（`--studio` 未鑑權 OS 命令注入 RCE，CVSS 8.8）**同日修補**。判 ❌ 是與**本環境**的具體衝突：①🔴 **單一元件安裝靜默覆蓋**——逐行讀原始碼確認 agents／commands／skills 的 .md 走裸 `fs.writeFile` 無存在性檢查，而 `.mcp.json`／`settings.json`／hooks 走 `pathExists`→合併（設計選擇非疏漏，全檔 12 處 `pathExists` 無一在元件寫檔路徑上）；**本機 86 個 skill 中 18 個（21%）與其目錄精確同名**（brainstorming／docx／pdf／pptx／xlsx／skill-creator／ui-ux-pro-max／using-superpowers／writing-plans／frontend-design 等），帶 local patch 的元件會無提示無備份被蓋掉 ②重疊項幾乎全是 anthropics/skills＋obra/superpowers 的鏡射同步，已從源頭取得，經它再裝＝多一層無收益轉發 ③`--yes` 繞過四步 SOP（逐字讀→備份區→user-level→marketplace），稽核點全失效。⚠️ 供應鏈結構性弱點：**無 npm provenance**（無法驗證產物由該 repo 建出）、**單一維護者** danisan_avila、修 RCE 的 v1.29.4 **連 tag 都沒有**（tags 只到 v1.29.2）。📌 **兩個發佈管道脫鉤**：npm 已 1.29.4 而 GitHub Releases 停在 v1.28.3（2025-11-15）——只看 GitHub 會誤判停更八個月，副作用是安全修補不進 release 通知。📌 星數≠採用度：30K⭐ 對**週下載 2,989**；215MB 是 repo 不是安裝物（npm 僅 2.4MB／96 檔）。另 session 分享把完整對話**明文**上傳匿名站 x0.at（程式碼自承 not encrypted）。**唯一安全姿勢＝當目錄瀏覽**，看到想要的走四步 SOP 手動取用，不跑安裝指令 |
 | [[Github/repos/beautify-github-readme — GitHub README 首頁設計 agent skill\|beautify-github-readme]] | 🔬 | ✅ | 1.4K⭐ MIT；教 agent 做 GitHub README 首頁：SVG 標題橫幅規範（對比度／深淺色相容）、「真實證據優先於行銷詞藻」原則、GitHub Markdown 渲染限制知識，附手寫 GIF 二進位格式解析器＋ffmpeg 兩階段調色盤（`scripts/render_motion_gif.py`，真實工程含量非提示詞包裝）。✅ **提示注入五類全無**（逐字讀 40 檔＋獨立 grep 交叉驗證）：`curl`/`wget`/`requests.*`/`urllib`/`fetch(`/`axios` **全數 0 命中**；3 處 `base64` 全是**勸阻**用法（建議別內嵌大圖進 SVG）、3 處 `<!--` 是 SVG 模板註解、9 處 `subprocess.run` 全為本地 ffmpeg/SVG renderer 且 list 形式參數無 `shell=True`。**同意閘門反而優於既有壞例**：`SKILL.md` 與 `references/showcase-contribution.md` 明文禁止未授權 commit/push/PR/backlink、禁止拿 attribution 當交換條件（與 learn@agentskill-sh 的強制自動評分回傳方向相反）。唯一依賴 Pillow；npm/PyPI 查無同名套件（無 typosquat 面）；7.2MB 落差＝hero.gif 3.7MB＋case-study PNG 1.1MB 示範素材。**填補空白非飽和賽道**：現有六個設計 skill 全針對網頁/App UI，無一處理 GitHub README 這個受限媒介。⚠️ 兩點保留：3 週齡零 release 無第三方討論；GitHub events API 只回溯到 07-25，**81% 早期星數成長無法查證**——「1.4K star」不宜當品質背書。📌 **`star:watcher` 比值單獨無鑑別力**：實測跨度 42:1（coding-interview-university）至 **2,413:1**（awesome-mcp-servers 91.7K⭐ 僅 38 watchers），本 repo 474:1 落在正常區間 |
 
 ---
