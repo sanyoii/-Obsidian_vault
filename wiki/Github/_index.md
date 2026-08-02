@@ -6,14 +6,14 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 189 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 196 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-08-01
+> 最後更新：2026-08-02
 
 ---
 
-## 🤖 AI Agent 框架（21 篇）
+## 🤖 AI Agent 框架（22 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -38,10 +38,11 @@ tags: [github, index, repos]
 | [[Github/repos/bytedanceUI-TARS-desktop The Open-Source Multimodal AI Agent Stack Connecting Cutting-Edge AI Models and Agent Infra\|UI-TARS-desktop]] | 📎 | ⏳ | 字節多模態 Agent Stack：Agent TARS（CLI＋Web UI，MCP 工具整合）＋ UI-TARS Desktop（本機/遠端電腦與瀏覽器 operator）；README 剪貼留存 |
 | [[Github/repos/Meta_Kim — 跨四 CLI 的 AI 編碼治理執行層\|Meta_Kim]] | 🔬 | ⏳ | 257⭐ Apache-2.0；老金（AI-Coding-Guide-Zh 5.5K⭐作者）單人作品；八階段治理脊柱＋9 meta-agents＋能力索引路由，單源投影 Claude/Codex/Cursor/OpenClaw；供應鏈稽核乾淨（postinstall 良性、3 顆知名相依、網路面窄）但腳印大（Windows 啟動資料夾 VBS 自啟動＋四 runtime 全域寫入）；與 R14/R17/verify_gate/institution 概念重疊 8 成且哲學相反（全量前置 vs 極簡路由），86KB SKILL＋4 Stop hooks 違反 R13 不裝系統；📌 可抄想法：discover:global 能力索引、stage-DAG 斷點續跑、smoke/live 證據分級 |
 | [[Github/repos/storm — LLM 自動研究與維基文章生成系統\|storm]] | 🔬 | ⏳ | 30.4K⭐ MIT；史丹福 OVAL 官方（NAACL/EMNLP 2024 雙論文）：主題→多視角提問＋模擬「維基編輯×專家」對話→大綱→帶引用長文的四段可斷點管線；Co-STORM 加人機圓桌＋心智圖。供應鏈五項全綠（標準 setuptools、12 相依全實、呼叫面全為文件化 API）。與 repo-intel/article-decode 產線高度同域，判 ⏳：需求已被 research-deep 覆蓋＋停更逾一年（dspy 釘死 2.4.9）＋方法論三招（視角提問/對話式追問/大綱先行）讀完即吸收；真正獨有是 VectorRM 錨定自有語料生成——升級觸發＝出現「以自有教材語料批量產長文」需求。社群提醒：抽掉檢索的 STORM prompt 是幻覺製造機 |
+| [[Github/repos/TencentDB-Agent-Memory — 騰訊四層記憶架構的 AI Agent 記憶中樞\|TencentDB-Agent-Memory]] | 🔬 | ❌ | 10.1K⭐ 實質 MIT（`licenseInfo=other` 是 Tencent 制式前言干擾偵測器）；四層長期記憶 L0 原始對話→L1 原子事實（sqlite-vec+FTS5）→L2 場景塊 `.md`→L3 用戶畫像，可反向追溯證據鏈；短期記憶把工具日誌卸載外部檔、上下文只留帶狀態/依賴/節點 ID 的 Mermaid 任務圖。**四項技術宣稱全 Confirmed**（`src/core/store/sqlite.ts:20711,20798`），SQLite local-first 屬實（僅 Hermes Docker 快啟預設 LLM 端點指向騰訊雲 DeepSeek，可覆蓋），供應鏈五項全綠＋`SKILL.md` 逐字讀無自動行為指令。**判 ❌ 的是結構與安全不是技術**：①**三分支＝三產品且互無共同祖先**（`gh api compare` 回 `No common ancestor`）——`main` v0.3.6 是 OpenClaw/Hermes 外掛、`feat/server` 才是 `releases/latest` 認定的 v1.0.1、而 **GitHub 預設分支 `feat/server_team` 是 `prerelease:true` 的 v2.0.0-beta.1**，`git clone` 裸指令拿到的正是 beta ②**唯一能接 Claude Code 的 MemoryProxy 正是 issue #672 漏洞所在**（外部研究者 2026-08-01 提報，OPEN）：`admin-auth.ts:8` 逐字 `if (!expected) return "ok"` ＝token 未設即全開的 fail-open、`rate-limits.ts` 全檔查無 `checkAdminAuth`，2026-08-02 對 HEAD 新鮮複驗**兩個 CRITICAL 均未修** ③功能與既有 claude-mem 重疊，官方 benchmark（PersonaMem 召回 29.63%→79.07%）零第三方複現、錯誤記憶/跨專案污染/記憶刪除四個失敗面零案例。社群：345 open PR 但全歷史合併率僅 8.85%，同一批 bug 被 5-10 個一次性作者重做（疑校園獎勵型湧入）；⚠️ `/contributors` 與 `/commits` 因預設分支是孤兒分支而嚴重失真不可引用。復查觸發＝#672 關閉且 fail-open 分支移除＋v2.0.0 脫離 prerelease |
 
 ---
 
-## 🛠️ Claude Code / Skills（54 篇）
+## 🛠️ Claude Code / Skills（55 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -99,6 +100,7 @@ tags: [github, index, repos]
 | [[Github/repos/awesome-codex-skills A curated list of practical Codex skills for automating workflows across the Codex CLI and API\|awesome-codex-skills]] | 📎 | 📌 | 自己維護的 Codex skills 精選清單（sanyoii/awesome-codex-skills） |
 | [[Github/repos/personal-ip-brand-intro — 個人品牌開場動畫 Codex Skill\|personal-ip-brand-intro]] | 🔬 | ⏳ | 14⭐ MIT；台灣創作者 FuFu（fufuailab.com）**發布首日**的 Codex Skill：7 秒個人品牌開場動畫，HyperFrames 預設／Remotion 明示，三視覺模式（純文字插圖/用戶圖片/混合）。**方法論是賣點**：七項設計指紋防模板化、**無音樂時自選 BPM 產靜音節拍表**（成品無聲仍按節奏動）、分鏡確認閘門才渲染、ffprobe＋抽幀驗成品。安全稽核乾淨：execFileSync 陣列參數呼叫 ffprobe 無注入面、零網路呼叫、SKILL.md 明文不偷換音樂不擅自渲染。判 ⏳：品質高於星數且 HyperFrames 引擎層已就緒，但**目前無排上的品牌開場需求**（R13）；升級觸發＝個人網站/Threads 要做開場素材時。**📌 可單獨抽取**：七項設計指紋 anti-template 檢核表、「無音樂也要有節拍表」思路、60 行的 verify-render 抽幀驗證 |
 | [[Github/repos/claude-cache-guard — 5 小時額度到頂前自動寫交接檔的 statusLine 守門員\|claude-cache-guard]] | 🔬 | ⏳ | 33⭐ MIT 零依賴；掛 statusLine 抽 5h/7d 用量寫本機檔，越過門檻（預設 90%）用 `Stop`/`PostToolBatch` hook 逼 Claude 先寫 `next_session.md` 才准停。**防的是具體成本陷阱**：額度耗盡等重置期間 prompt cache 冷掉，回到大 session 整段對話以**未快取 input tokens** 重新計費讀入。✅ **供應鏈五項全綠**：零 postinstall／零依賴／npm tarball 21 檔與 `files[]` 吻合無夾帶、`bin`+`scripts`+`src`+`package.json` **14 檔逐檔比對零差異**／`fetch`·`node:http(s)`·`net`·`dns` 全 repo 零命中、無 `eval`。**品質 vs 採用度矛盾**：測試碼體積是產品碼 1.5 倍（19 test 檔／檔名即開發史 `audit-fixes`·`qa-fixes`·`config-hardening`·`prototype-residue`）、三語文件、CI 跑 Node 18/20/22，但 **0 issue / 0 fork / 0 PR / 1 watcher**＝沒人裝過。🪟 **本環境兩處硬衝突**：①`src/paths.js` 只用 `os.homedir()`，全 repo grep `CLAUDE_CONFIG_DIR` **零命中** → statusLine 寫進 C: 而 Claude 讀 D:（永不生效＋觸發金絲雀第 [1] 項）、`/ccg*` 裝進沒 junction 的 `C:\...\.claude\commands\` 一個都不會出現（skills Issue #1 同型）②statusLine 已被 caveman plugin 佔用。**功能空缺是真的**：`/last-word` 觸發軸是 context 40%，ccg 是額度視窗 90%，兩軸正交。**📌 零成本可抽取**：交接模板的 `## Original User Prompts`（逐字依序保存原始指令，理由＝compaction 會改變語意）與 `## Do Not Repeat` 兩欄補進 `/last-word`；另有雙層遞迴防護（正則+`CCG_BRIDGE_CHILD` env marker）、殺 process group、symlink truncate 防護、控制字元先剝除再比對敏感標記 |
+| [[Github/repos/beautify-github-readme — GitHub README 首頁設計 agent skill\|beautify-github-readme]] | 🔬 | ✅ | 1.4K⭐ MIT；教 agent 做 GitHub README 首頁：SVG 標題橫幅規範（對比度／深淺色相容）、「真實證據優先於行銷詞藻」原則、GitHub Markdown 渲染限制知識，附手寫 GIF 二進位格式解析器＋ffmpeg 兩階段調色盤（`scripts/render_motion_gif.py`，真實工程含量非提示詞包裝）。✅ **提示注入五類全無**（逐字讀 40 檔＋獨立 grep 交叉驗證）：`curl`/`wget`/`requests.*`/`urllib`/`fetch(`/`axios` **全數 0 命中**；3 處 `base64` 全是**勸阻**用法（建議別內嵌大圖進 SVG）、3 處 `<!--` 是 SVG 模板註解、9 處 `subprocess.run` 全為本地 ffmpeg/SVG renderer 且 list 形式參數無 `shell=True`。**同意閘門反而優於既有壞例**：`SKILL.md` 與 `references/showcase-contribution.md` 明文禁止未授權 commit/push/PR/backlink、禁止拿 attribution 當交換條件（與 learn@agentskill-sh 的強制自動評分回傳方向相反）。唯一依賴 Pillow；npm/PyPI 查無同名套件（無 typosquat 面）；7.2MB 落差＝hero.gif 3.7MB＋case-study PNG 1.1MB 示範素材。**填補空白非飽和賽道**：現有六個設計 skill 全針對網頁/App UI，無一處理 GitHub README 這個受限媒介。⚠️ 兩點保留：3 週齡零 release 無第三方討論；GitHub events API 只回溯到 07-25，**81% 早期星數成長無法查證**——「1.4K star」不宜當品質背書。📌 **`star:watcher` 比值單獨無鑑別力**：實測跨度 42:1（coding-interview-university）至 **2,413:1**（awesome-mcp-servers 91.7K⭐ 僅 38 watchers），本 repo 474:1 落在正常區間 |
 
 ---
 
@@ -168,7 +170,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🧰 開發工具 / CLI（18 篇）
+## 🧰 開發工具 / CLI（20 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -191,6 +193,8 @@ tags: [github, index, repos]
 | [[Github/repos/cli-printing-press — API spec 自動生成 Go CLI 工具\|cli-printing-press]] | 📎 | ❌ | 給 API spec（或自動嗅探）生成 Go CLI，30+ 內建 catalog、附 7 個 Claude Code skills；判 ❌：輸出 Go 程式碼與本環境 Python 棧不合，臨時 API 呼叫讓 Claude 寫 Python script 更快 |
 | [[Github/repos/googleworkspace-cli — 一支 CLI 打通全 Google Workspace（含 95 個 Agent Skills）\|googleworkspace-cli]] | 🔬 | ⏳ | 30.1K⭐ Apache-2.0 Rust；掛官方 org 但 README 明文「not officially supported」（DevRel 專案，npm 由 google-wombot 官方 bot 發布）。**動態指令面**：runtime 讀 Discovery Service 生成全部指令，Google 加端點自動長出；**95 個 SKILL.md** 隨附（Gmail/Drive/Calendar/Sheets＋workflow 型＋ModelArmor prompt 消毒），`npx skills add` 直裝 Claude Code。✅ 供應鏈乾淨：postinstall 逐字審過（GitHub Releases 下載＋**SHA256 強制驗證**）、npm 包零依賴、CI 有 cargo-audit/deny；⚠️ `gws-shared` skill 內建「鼓勵 agent 催 star」條款（AgentKey 同型、烈度低）。**關鍵警訊：human commit 停在 2026-03-31**（3 月爆紅連發 8 版→熄火 4 個月，只剩 bot 再生 skills），116 open issues 含 auth 級 bug（憑證解密失敗被靜默刪除 #886、gmail +read 丟本文 #889）無人修。Reddit 有真用戶見證（Claude Code＋gws 做 Gmail triage/自動回信/發票）。判 ⏳：升級＝求職大量投遞期需要 Gmail triage 時裝＋實測 auth；放棄＝2026-10 前仍零人力 commit |
 
+| [[Github/repos/qrs — 用連續 QR Code 串流傳檔的離線傳輸工具\|qrs]] | 🔬 | ⏳ | 1.6K⭐ MIT（antfu 等 Vue/Vite 核心實名參與）；LT 噴泉碼把檔案切塊、20fps 連播 QR 由相機接收還原，無網路無配對。✅ 供應鏈五項全綠且「資料不離開瀏覽器」是**驗證過**的——`fetch`/XHR/WS/sendBeacon/analytics 全零命中，`ssr:false`＋靜態託管**部署形態上就沒有能收檔的後端**。⚠️ 效能比想像慢一個數量級：專案自身測試斷言傳輸開銷 1.8–2.5 倍，淨吞吐僅 8–11 KB/s、實務上限 1MB（根因是用 Ideal Soliton 而非 Robust Soliton）；`pushedAt` 2026-03 是假訊號（只改 LICENSE 年份），**功能性開發停在 2025-02**，npm 週下載 6 次。**價值在讀不在裝**：動態 QR 串流正是硬體錢包氣隙簽章（Keystone/Passport 的 BC-UR `ur:crypto-psbt`）標準做法，對 Web3/CEX 託管 QA 有直接知識價值。同賽道對照 [[Github/repos/decimen-optical-transfer — 噴泉碼動畫 QR 螢幕對相機傳檔 PoC\|decimen]] |
+| [[Github/repos/decimen-optical-transfer — 噴泉碼動畫 QR 螢幕對相機傳檔 PoC\|decimen-optical-transfer]] | 🔬 | ⏳ | 2.1K⭐ MIT；螢幕播動畫 QR、相機接收，LT 噴泉碼實作紮實正確（robust soliton CDF＋splitmix32＋partial Fisher–Yates）。最見功力：因 `Math.log` 在 JS 規範是「實作近似」，V8（發送）與 JavaScriptCore（iPhone 接收）差一個 ulp 就會讓 soliton 分布靜默 desync，作者自寫只含精確 IEEE-754 運算的確定性 log。✅ 供應鏈五項全綠（零 postinstall、6 顆 devDeps 實查存在、**全 repo 僅一處 `fetch()` 且參數是寫死的本地示範圖**）。⚠️ **最大落差：沒有檔案選擇器**——grep `type=file`/`FileReader` 全零命中，只能傳內建的兩張示範 PNG、接收端亦無下載連結，是傳輸層 demo 非可用工具。「2 天帳號 2,051 星」已查證為自然流量（r/vibecoding 5,622 讚貼文，作者自述 Claude Code 一晚 vibe-code），非灌量。可帶走的是 fountain.ts 參考實作＋README 的瀏覽器硬傷清單。對照 [[Github/repos/qrs — 用連續 QR Code 串流傳檔的離線傳輸工具\|qrs]] |
 ---
 
 ## 📊 AI/ML 模型（7 篇）
@@ -256,7 +260,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🔒 安全 / 自動化 / 其他（14 篇）
+## 🔒 安全 / 自動化 / 其他（17 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -275,6 +279,9 @@ tags: [github, index, repos]
 | [[Github/repos/newsnow — 優雅的即時熱榜新聞聚合器\|newsnow]] | 🔬 | ✅ | 21K⭐ 優雅熱榜聚合器（40+源：百度/微博/知乎/財聯社/雪球/HN/GitHub）；React19+Nitro+sqlite，每源一爬蟲易擴充；Docker/CF/Vercel一鍵自架，`/api/s`可當熱榜API接海巡；TrendRadar 的上游資料源 |
 | [[Github/repos/gpt-5.6-instruct — Codex CLI 越獄提示詞包（威脅情報，不裝）\|gpt-5.6-instruct]] | 🔬 | ❌ | 3.5K⭐ MIT／18天衝星／**越獄工具·威脅情報留存**（不轉載 payload）；把 OpenAI Codex CLI 的 gpt-5.6-sol「破甲」——寫入 `model_instructions_file` 把安全研究/滲透/逆向/破解/NSFW 全框定成「本地沙箱任務」、顯式壓制拒絕與「改用授權靶場」回退話術。真正少見的是**把越獄成功率工程化成 CI**：「模型拒絕＝測試失敗」判準（360+52 條 prompt bank）＋模型自迭代重寫提示詞＋low/medium/high 分層迴歸門禁。Repomix Top5 只1個是程式碼、其餘全是星數/通過率趨勢SVG＝行銷成長曲線。Watchers 僅5對3.5K星＝話題衝星非持續使用群。**Issue 暴露真實用途**：破解App改包、規避OpenAI雲端風控（多帳號輪詢）、試探生物安全邊界。**❌ 用途與本環境價值取向相反＋違反OpenAI ToS（封號/帳務風險）＋改的是Codex `config.toml`（撞本機「Codex寫壞config.toml致MCP啟動即死」既有陷阱）＋18天單人ZIP注入系統指令＝高信任成本。無升級條件（用途排除非觀望）**。📌 中性可留：`codex-instruct.py` 的設定檔安全改寫模式（快照+SHA256比對+精準reset+原子寫入，config-drift金絲雀正面範例）、「CI把成功率做成可迴歸門禁」的框架形狀可移植正當eval |
 
+| [[Github/repos/airgapped-qr-code-transfer — 用 QR Code 螢幕對鏡頭離線傳檔的純前端工具\|airgapped-qr-code-transfer]] | 🔬 | ❌ | 364⭐ MIT 純前端 QR 光學傳檔（gzip 切 250B/塊逐張畫 QR）。資料面確實零外呼（fetch/XHR/WS 全 0 匹配、線上版與 repo 逐 byte 相同無追蹤碼），**但 air-gapped 只成立一半**：兩頁各依賴 4 個 CDN、零 SRI、`@undecaf/zbar-wasm@latest` 未鎖版，且該 WASM 在**執行期用 fetch+instantiateStreaming 再抓 .wasm**——斷網根本開不起來，使用者 issue #2 已實測證實。另有單次播放無重傳的「掉一塊即死鎖」缺陷（作者未修）、git 歷史殘留 localhost 自簽私鑰（實測仍可下載，但僅 CN=localhost 自簽，嚴重性低）。判 ❌：核心宣稱不成立＋無真需求 |
+| [[Github/repos/Infinite_Storage_Glitch — KKarmugil 的 YouTube 當雲端硬碟 Python 重寫版\|Infinite_Storage_Glitch (KKarmugil)]] | 🔬 | ❌ | 163⭐ MIT；把檔案位元畫成黑白方塊影片上傳 YouTube 當免費儲存。**歸屬已查證：有明確附連結 credit 的獨立 Python 重寫，非抄襲**——README 首段寫明 inspired from DvorakDwarf、程式碼與 Rust 原版結構性不同（無 RGB 模式、硬編碼 4×4、單檔 200 行 vs 原版 8 模組）、作者帳號早於 repo 20 個月。但如實記錄兩項負面事實：README「How to use」步驟 2/4/5/6/7 與原版一字不差且照抄了本專案不存在的功能名（executable/dislodge）；21 個 commit 有 18 個只改 README。原版 repo 現已 404（作者自行刪除、帳號仍活躍 725 followers），使本 repo 成為該關鍵字星數最高結果。6 顆 PyPI 相依全存在未 yanked，惟 `numpy==1.22.4` 在 Py3.11+ 無 wheel、`pytube` 停更 3 年已對現行 YouTube 失效——**實質跑不起來**。判 ❌ |
+| [[Github/repos/sherlock — 跨 400+ 社群網站的使用者名稱 OSINT 搜尋工具\|sherlock]] | 🔬 | ⏳ | 87.5K⭐ MIT；給一個 username 並行查 481 站有無同名帳號。**核心邏輯 <1000 行，價值全在那份眾包維護的站點清單**——站點數自數為 **481**（非 README 宣稱「400+」），判定分三型 `status_code` 327／`message` 127／`response_url` 27，另有 4 組硬編碼 WAF 指紋防呆；執行緒池（非 asyncio）`max_workers=min(N,20)` 共用 session 連線池。🔴 **安裝前必讀的 PyPI 命名碰撞**：`pip install sherlock` 裝到**完全無關**的「distributed inter-process locks」（作者 Vaidik Kapoor v0.4.1），正解是 `pip install sherlock-project`——非惡意 typosquat（該套件早於本專案）但誤裝機率高；且 PyPI 停在 0.16.0 而 repo 已 0.16.1 未發布。供應鏈其餘全綠：9 個相依全存在未 yank、無安裝腳本、無硬編碼金鑰；預設每次執行打 `data.sherlockproject.xyz`（實測 301→`raw.githubusercontent.com`）抓即時站點清單，**無使用者查詢對象上報**。已修 **CVE-2026-44590 / GHSA-v6wr-ccr4-x8g9（CVSS 9.3 Critical）**：CI 的 `pull_request_target`＋`${{ }}` 插值 command injection 可竊 `GITHUB_TOKEN`，3 天內修復，**影響 CI 基礎設施非使用者套件**。維護判定：近三筆 commit（2026-08-01）**全是贊助商 banner**（UserSearch、OSINT Industries），實質修復停在 05-05，release 間隔 14 個月，前三人佔貢獻 86%——安全響應仍在但功能開發近停滯。227 open PR 經 166 個不重複作者投稿、48% 是 ≤20 行站點新增（hacktoberfest 驅動）＋3 人批次審查＝**積壓非灌水**，55 筆等超過一年。⚠️ 假陽性是持續未根治現象（issue 掛零回覆逾年），唯一實測 32% 樣本 n=1 **不可推廣**。替代：WhatsMyName（免安裝、社群評價假陽性最低）／Maigret（深但慢）。升級觸發＝需批次掃多 username 或 v0.17 清理假陽性積壓；放棄觸發＝再 6 個月僅剩 banner commit |
 ---
 
 ## 🔄 未分類 / 待整理（~8 篇）
