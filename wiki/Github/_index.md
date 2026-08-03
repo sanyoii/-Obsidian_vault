@@ -6,14 +6,14 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 199 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 201 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-08-02
+> 最後更新：2026-08-03
 
 ---
 
-## 🤖 AI Agent 框架（22 篇）
+## 🤖 AI Agent 框架（23 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -39,10 +39,11 @@ tags: [github, index, repos]
 | [[Github/repos/Meta_Kim — 跨四 CLI 的 AI 編碼治理執行層\|Meta_Kim]] | 🔬 | ⏳ | 257⭐ Apache-2.0；老金（AI-Coding-Guide-Zh 5.5K⭐作者）單人作品；八階段治理脊柱＋9 meta-agents＋能力索引路由，單源投影 Claude/Codex/Cursor/OpenClaw；供應鏈稽核乾淨（postinstall 良性、3 顆知名相依、網路面窄）但腳印大（Windows 啟動資料夾 VBS 自啟動＋四 runtime 全域寫入）；與 R14/R17/verify_gate/institution 概念重疊 8 成且哲學相反（全量前置 vs 極簡路由），86KB SKILL＋4 Stop hooks 違反 R13 不裝系統；📌 可抄想法：discover:global 能力索引、stage-DAG 斷點續跑、smoke/live 證據分級 |
 | [[Github/repos/storm — LLM 自動研究與維基文章生成系統\|storm]] | 🔬 | ⏳ | 30.4K⭐ MIT；史丹福 OVAL 官方（NAACL/EMNLP 2024 雙論文）：主題→多視角提問＋模擬「維基編輯×專家」對話→大綱→帶引用長文的四段可斷點管線；Co-STORM 加人機圓桌＋心智圖。供應鏈五項全綠（標準 setuptools、12 相依全實、呼叫面全為文件化 API）。與 repo-intel/article-decode 產線高度同域，判 ⏳：需求已被 research-deep 覆蓋＋停更逾一年（dspy 釘死 2.4.9）＋方法論三招（視角提問/對話式追問/大綱先行）讀完即吸收；真正獨有是 VectorRM 錨定自有語料生成——升級觸發＝出現「以自有教材語料批量產長文」需求。社群提醒：抽掉檢索的 STORM prompt 是幻覺製造機 |
 | [[Github/repos/TencentDB-Agent-Memory — 騰訊四層記憶架構的 AI Agent 記憶中樞\|TencentDB-Agent-Memory]] | 🔬 | ❌ | 10.1K⭐ 實質 MIT（`licenseInfo=other` 是 Tencent 制式前言干擾偵測器）；四層長期記憶 L0 原始對話→L1 原子事實（sqlite-vec+FTS5）→L2 場景塊 `.md`→L3 用戶畫像，可反向追溯證據鏈；短期記憶把工具日誌卸載外部檔、上下文只留帶狀態/依賴/節點 ID 的 Mermaid 任務圖。**四項技術宣稱全 Confirmed**（`src/core/store/sqlite.ts:20711,20798`），SQLite local-first 屬實（僅 Hermes Docker 快啟預設 LLM 端點指向騰訊雲 DeepSeek，可覆蓋），供應鏈五項全綠＋`SKILL.md` 逐字讀無自動行為指令。**判 ❌ 的是結構與安全不是技術**：①**三分支＝三產品且互無共同祖先**（`gh api compare` 回 `No common ancestor`）——`main` v0.3.6 是 OpenClaw/Hermes 外掛、`feat/server` 才是 `releases/latest` 認定的 v1.0.1、而 **GitHub 預設分支 `feat/server_team` 是 `prerelease:true` 的 v2.0.0-beta.1**，`git clone` 裸指令拿到的正是 beta ②**唯一能接 Claude Code 的 MemoryProxy 正是 issue #672 漏洞所在**（外部研究者 2026-08-01 提報，OPEN）：`admin-auth.ts:8` 逐字 `if (!expected) return "ok"` ＝token 未設即全開的 fail-open、`rate-limits.ts` 全檔查無 `checkAdminAuth`，2026-08-02 對 HEAD 新鮮複驗**兩個 CRITICAL 均未修** ③功能與既有 claude-mem 重疊，官方 benchmark（PersonaMem 召回 29.63%→79.07%）零第三方複現、錯誤記憶/跨專案污染/記憶刪除四個失敗面零案例。社群：345 open PR 但全歷史合併率僅 8.85%，同一批 bug 被 5-10 個一次性作者重做（疑校園獎勵型湧入）；⚠️ `/contributors` 與 `/commits` 因預設分支是孤兒分支而嚴重失真不可引用。復查觸發＝#672 關閉且 fail-open 分支移除＋v2.0.0 脫離 prerelease |
+| [[Github/repos/dashi-taskboard — 嵌入 Codex 的本地優先任務看板\|dashi-taskboard]] | 🔬 | ⏳ | 169⭐ **無 LICENSE**；「大师的AI小灶」出品的 Codex 任務看板（自稱 Codex Taskboard）：Node22 零依賴後端（node:sqlite）＋React19，CDP 注入嵌進 Codex 桌面版（macOS 為主）＋manage-taskboard Skill 讓 agent 用 taskctl 管 issue 全生命週期（樂觀鎖併發領單＋CODEX_THREAD_ID 歸因）；AI Chat 走本機 codex app-server 不碰 API key。供應鏈五項乾淨（無遙測/無 install hook/Repomix 綠）但無 lockfile/無 release/無 CI，上線 10 天單人衝刺；LAN 模式預設 0.0.0.0 零認證。升級＝補 license 出 release，或雙 AI 工作流出現多 issue 併發派工需求；放棄＝六個月無 commit |
 
 ---
 
-## 🛠️ Claude Code / Skills（56 篇）
+## 🛠️ Claude Code / Skills（57 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -102,6 +103,7 @@ tags: [github, index, repos]
 | [[Github/repos/claude-cache-guard — 5 小時額度到頂前自動寫交接檔的 statusLine 守門員\|claude-cache-guard]] | 🔬 | ⏳ | 33⭐ MIT 零依賴；掛 statusLine 抽 5h/7d 用量寫本機檔，越過門檻（預設 90%）用 `Stop`/`PostToolBatch` hook 逼 Claude 先寫 `next_session.md` 才准停。**防的是具體成本陷阱**：額度耗盡等重置期間 prompt cache 冷掉，回到大 session 整段對話以**未快取 input tokens** 重新計費讀入。✅ **供應鏈五項全綠**：零 postinstall／零依賴／npm tarball 21 檔與 `files[]` 吻合無夾帶、`bin`+`scripts`+`src`+`package.json` **14 檔逐檔比對零差異**／`fetch`·`node:http(s)`·`net`·`dns` 全 repo 零命中、無 `eval`。**品質 vs 採用度矛盾**：測試碼體積是產品碼 1.5 倍（19 test 檔／檔名即開發史 `audit-fixes`·`qa-fixes`·`config-hardening`·`prototype-residue`）、三語文件、CI 跑 Node 18/20/22，但 **0 issue / 0 fork / 0 PR / 1 watcher**＝沒人裝過。🪟 **本環境兩處硬衝突**：①`src/paths.js` 只用 `os.homedir()`，全 repo grep `CLAUDE_CONFIG_DIR` **零命中** → statusLine 寫進 C: 而 Claude 讀 D:（永不生效＋觸發金絲雀第 [1] 項）、`/ccg*` 裝進沒 junction 的 `C:\...\.claude\commands\` 一個都不會出現（skills Issue #1 同型）②statusLine 已被 caveman plugin 佔用。**功能空缺是真的**：`/last-word` 觸發軸是 context 40%，ccg 是額度視窗 90%，兩軸正交。**📌 零成本可抽取**：交接模板的 `## Original User Prompts`（逐字依序保存原始指令，理由＝compaction 會改變語意）與 `## Do Not Repeat` 兩欄補進 `/last-word`；另有雙層遞迴防護（正則+`CCG_BRIDGE_CHILD` env marker）、殺 process group、symlink truncate 防護、控制字元先剝除再比對敏感標記 |
 | [[Github/repos/claude-code-templates — 1700+ 元件的 Claude Code 設定分發器\|claude-code-templates]] | 🔬 | ❌ | 30K⭐ MIT；把 872 skills／408 agents／commands／MCP 收成目錄，`npx claude-code-templates` 一鍵寫進 `~/.claude/`。**體質其實不差**：下載來源單一透明（全在自家 GitHub raw、無自架 CDN）、**無 postinstall**、遙測克制且 opt-out 一致（`CCT_NO_TRACKING`）、GHSA-79wm-x847-7cvg（`--studio` 未鑑權 OS 命令注入 RCE，CVSS 8.8）**同日修補**。判 ❌ 是與**本環境**的具體衝突：①🔴 **單一元件安裝靜默覆蓋**——逐行讀原始碼確認 agents／commands／skills 的 .md 走裸 `fs.writeFile` 無存在性檢查，而 `.mcp.json`／`settings.json`／hooks 走 `pathExists`→合併（設計選擇非疏漏，全檔 12 處 `pathExists` 無一在元件寫檔路徑上）；**本機 86 個 skill 中 18 個（21%）與其目錄精確同名**（brainstorming／docx／pdf／pptx／xlsx／skill-creator／ui-ux-pro-max／using-superpowers／writing-plans／frontend-design 等），帶 local patch 的元件會無提示無備份被蓋掉 ②重疊項幾乎全是 anthropics/skills＋obra/superpowers 的鏡射同步，已從源頭取得，經它再裝＝多一層無收益轉發 ③`--yes` 繞過四步 SOP（逐字讀→備份區→user-level→marketplace），稽核點全失效。⚠️ 供應鏈結構性弱點：**無 npm provenance**（無法驗證產物由該 repo 建出）、**單一維護者** danisan_avila、修 RCE 的 v1.29.4 **連 tag 都沒有**（tags 只到 v1.29.2）。📌 **兩個發佈管道脫鉤**：npm 已 1.29.4 而 GitHub Releases 停在 v1.28.3（2025-11-15）——只看 GitHub 會誤判停更八個月，副作用是安全修補不進 release 通知。📌 星數≠採用度：30K⭐ 對**週下載 2,989**；215MB 是 repo 不是安裝物（npm 僅 2.4MB／96 檔）。另 session 分享把完整對話**明文**上傳匿名站 x0.at（程式碼自承 not encrypted）。**唯一安全姿勢＝當目錄瀏覽**，看到想要的走四步 SOP 手動取用，不跑安裝指令 |
 | [[Github/repos/beautify-github-readme — GitHub README 首頁設計 agent skill\|beautify-github-readme]] | 🔬 | ✅ | 1.4K⭐ MIT；教 agent 做 GitHub README 首頁：SVG 標題橫幅規範（對比度／深淺色相容）、「真實證據優先於行銷詞藻」原則、GitHub Markdown 渲染限制知識，附手寫 GIF 二進位格式解析器＋ffmpeg 兩階段調色盤（`scripts/render_motion_gif.py`，真實工程含量非提示詞包裝）。✅ **提示注入五類全無**（逐字讀 40 檔＋獨立 grep 交叉驗證）：`curl`/`wget`/`requests.*`/`urllib`/`fetch(`/`axios` **全數 0 命中**；3 處 `base64` 全是**勸阻**用法（建議別內嵌大圖進 SVG）、3 處 `<!--` 是 SVG 模板註解、9 處 `subprocess.run` 全為本地 ffmpeg/SVG renderer 且 list 形式參數無 `shell=True`。**同意閘門反而優於既有壞例**：`SKILL.md` 與 `references/showcase-contribution.md` 明文禁止未授權 commit/push/PR/backlink、禁止拿 attribution 當交換條件（與 learn@agentskill-sh 的強制自動評分回傳方向相反）。唯一依賴 Pillow；npm/PyPI 查無同名套件（無 typosquat 面）；7.2MB 落差＝hero.gif 3.7MB＋case-study PNG 1.1MB 示範素材。**填補空白非飽和賽道**：現有六個設計 skill 全針對網頁/App UI，無一處理 GitHub README 這個受限媒介。⚠️ 兩點保留：3 週齡零 release 無第三方討論；GitHub events API 只回溯到 07-25，**81% 早期星數成長無法查證**——「1.4K star」不宜當品質背書。📌 **`star:watcher` 比值單獨無鑑別力**：實測跨度 42:1（coding-interview-university）至 **2,413:1**（awesome-mcp-servers 91.7K⭐ 僅 38 watchers），本 repo 474:1 落在正常區間 |
+| [[Github/repos/dashi-ppt-skill — 瀏覽器可編輯的 AI 簡報生成 Skill\|dashi-ppt-skill]] | 🔬 | ⏳ | 4.6K⭐ AGPL＋專有導出引擎例外；12 主題×1020 版式「鎖模板填文案」，產物自帶編輯控制台、可導真實可編輯 PPTX（現有 PPT 技能群唯一沒有的能力）；供應鏈六項全過——唯一自動行為＝任務尾端版本檢查（純 GET 版本號，無自我更新無資料回傳）、telemetry 純本地、README 聯網宣稱與程式碼實測一致、有 lockfile；owner 同 dashi-taskboard（大师的AI小灶品牌帳號；實際工程者是小米設計師 jadon7，391/394 commits ＋ npm maintainer）；⚠️ 預覽服務預設 bind 0.0.0.0（LAN 可見，`DASHI_PPT_PREVIEW_HOST` 可收斂）、npm 0.4.5 落後 GitHub 0.4.11 六個 patch、10 頁≈10 萬 token 重成本、觸發詞與 html-ppt/guizang-ppt 正面相撞；升級條件＝出現「交付可編輯 PPTX 給他人自改」場景 |
 
 ---
 
