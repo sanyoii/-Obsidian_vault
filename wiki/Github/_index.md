@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 197 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 199 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-08-02
@@ -149,14 +149,15 @@ tags: [github, index, repos]
 
 ---
 
-## 🎬 影片 / 媒體 / 音樂（15 篇）
+## 🎬 影片 / 媒體 / 音樂（16 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
 | [[Github/repos/capcut-mate — 開源剪映草稿自動化REST API\|capcut-mate]] | 🔬 | ⏳ | 1.4K⭐ 剪映草稿自動化 REST API（FastAPI，~35端點+雲渲染），建於 pyJianYingDraft；讓 LLM/Coze/n8n 程式化剪片；與 vak 互補（API vs 本機草稿）；綁剪映生態故觀望 |
 | [[Github/repos/seedance-2.0 — 導演式操作Seedance影片模型的Skill OS\|seedance-2.0]] | 🔬 | ⏳ | 5K⭐ 導演式操作 ByteDance Seedance 2.0 影片模型的 28-skill 包（MIT）；directing-engine+126 evals+6語詞彙；與 video-shotcraft 同構但強綁生成模型；版號治理不一致(gh v5.3 vs skill v6.6) |
-| [[Github/repos/video-autopilot-kit — 填自己資料的 YouTube 短影音自動化框架\|video-autopilot-kit]] | 🔬 | ⏳ | 1.5K⭐ 填自己資料的 YT/短影音自動化框架（MIT）；雙路徑 ffmpeg 純程式 + CapCut 草稿 JSON/Computer Use；M1-M106 避坑庫+機械化 QA 閘；與 video-shotcraft 互補（實拍 vs 程式化） |
+| [[Github/repos/video-autopilot-kit — 填自己資料的 YouTube 短影音自動化框架\|video-autopilot-kit]] | 🔬 | ⏳ | 1.6K⭐ MIT；**08-03 二次分析更新至 v0.11.0**。三條同構生產線（教學長片／直式 Shorts／線上訪談）：知識層→機械閘門→一鍵驅動；gate_core.py 統一 report/assert/selftest 外殼但判定規則不集中。115 檔 419K tokens，**53 支 .py 對 57 份 .md**（方法論是第一級交付物）。**供應鏈五項全清**：零網路呼叫（所有 http 字串皆為文獻出處）、無 eval/exec/pickle、subprocess 全指向 ffmpeg/ffprobe、**無 requirements/pyproject/CI 腳本**（無可被投毒的相依清單）。v0.11 主軸是「把借來的數字清出去」：詞表出貨即空、門檻標明為範例校準值、合規法源逐條標 [official]/[reported]/[speculative]。⚠ 風險：**單人維護 + 兩個月新專案 + 歷史僅 2 筆 issue**（1,580⭐ 與互動量落差大，多數人是收藏非使用）；WebSearch 查無任何第三方評測。star:watcher 527:1 依實測基準無鑑別力，不當紅旗。**📌 可單獨抽取**：gate_core.py 純 Python 可單檔複製；teardown.py 的節奏量測半邊；OCR 能力邊界寫死在原始碼防誤用的寫法 |
 | [[Github/repos/video-shotcraft — 用 Remotion 拍電影感產品宣傳片的 AI Agent Skill\|video-shotcraft]] | 🔬 | ⏳ | 337⭐ Claude Code/Codex agent skill；106 鏡頭配方卡+161 動態樣片+Ink Press 模板；Remotion+真實截圖+2.5D 運鏡+節奏卡點；方法論與 institution R13/R17 同構；與 HyperFrames 重疊需釐清 |
+| [[Github/repos/video-use — 用 Coding Agent 剪影片的 Claude Skill\|video-use]] | 🔬 | ⏳ | 18.7K⭐ MIT；browser-use 團隊出的 **Claude Skill**（32 檔／67K tokens，6 支 helper + SKILL.md）。核心主張「LLM 不看影片，它讀影片」：ElevenLabs Scribe 詞級逐字稿打包成 ~12KB takes_packed.md 當主要閱讀面，timeline_view PNG 只在決策點呼叫（宣稱把 45M tokens 的幀噪音壓成 12KB）。**12 條硬規則**每條都附「否則會發生什麼靜默失敗」（字幕最後上／-c copy 串接／30ms fade／setpts 位移／不切字中間），外加 render 後對每個切點自我評估、上限重修 3 次。與 video-autopilot-kit 是同題反向解法（那邊機械閘門 assert，這邊規則交給 agent）。供應鏈清：唯一對外呼叫是 ElevenLabs STT、無 eval/exec、setup.sh 只做環境檢查。⚠ 三個具體阻礙：①**Windows 實質未支援**——`FONT_CANDIDATES` 只有 mac/Linux 路徑，全 miss 後退到點陣字，CJK 全豆腐（已逐行驗證）②原始音訊（含 NG）全上傳 ElevenLabs、需付費 key ③**維護停滯**：零 release、45 open PR 對歷史僅 9 次合併、最後推送一個月前。**📌 可單獨抽取**：「規則＋違反後的靜默失敗現象」這個寫法可借進 institution；render.py 的濾鏡順序（抽段→copy 串接→overlay→字幕最後） |
 | [[Github/repos/voicebox — 本機優先的開源 AI 語音工作室\|voicebox]] | 🔬 | ⏳ | 37K⭐ 本機 TTS+語音克隆+口述輸入，MCP server 讓 Claude Code 開口說話 |
 | [[Github/repos/calesthio-OpenMontage\|OpenMontage]] | 🔬 | ⏳ | 44K⭐ AGPL-3.0；**agent 即 orchestrator**（無程式碼 orchestrator），7 道工序寫成 YAML manifest + Markdown 導演技能檔。1,887 檔/3.08M tokens：`.agents/skills/` 860＋`.claude/` 431＋`skills/` 156＋`tools/` 144＋77 pytest＋24 schema；README 數字對帳**全數屬實**（723 skill 檔／12 pipeline）。真差異點是 `documentary-montage` 用 CLIP 檢索 Archive.org/NASA/Wikimedia **真實動態素材**剪時間軸，非靜圖假動畫；零 key 可跑（Piper＋免費素材＋Remotion/HyperFrames），$0.02–$1.33 皆有附紀錄範例。⚠️ **正版 repo 從未發過 release**，冒名組織 `Open-Montage/OpenMontage` 散布 `OpenMontage-x64.7z`（358 次下載、Defender 判 Trojan），同名 repo 20+，只認 `calesthio` owner。判 ⏳ 三阻礙：Windows+WSL2 有「6 小時 15 個問題產不出成品」實測回報、0 release/148 open PR/單人 70% commit、48 個 `.claude/skills/` 與既有 user-level hyperframes/remotion 系列重名。外部驗證薄（HN 5 篇最高 7 分）。**📌 可單獨抽取**：`lib/scoring.py` 7 維 provider 選型＋`explain()`、`lib/delivery_promise.py`＋`slideshow_risk.py`（宣稱 vs 實產落差偵測＝R12 可執行版）、`base_tool.py` 的 cp1252 降級表 |
 | [[Github/repos/AIDC-AIPixelle-Video 🚀 AI 全自动短视频引擎  AI Fully Automated Short Video Engine\|Pixelle-Video]] | 📎 | ⏳ | 全自動短影片 |
@@ -261,7 +262,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🔒 安全 / 自動化 / 其他（17 篇）
+## 🔒 安全 / 自動化 / 其他（18 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -281,6 +282,7 @@ tags: [github, index, repos]
 | [[Github/repos/gpt-5.6-instruct — Codex CLI 越獄提示詞包（威脅情報，不裝）\|gpt-5.6-instruct]] | 🔬 | ❌ | 3.5K⭐ MIT／18天衝星／**越獄工具·威脅情報留存**（不轉載 payload）；把 OpenAI Codex CLI 的 gpt-5.6-sol「破甲」——寫入 `model_instructions_file` 把安全研究/滲透/逆向/破解/NSFW 全框定成「本地沙箱任務」、顯式壓制拒絕與「改用授權靶場」回退話術。真正少見的是**把越獄成功率工程化成 CI**：「模型拒絕＝測試失敗」判準（360+52 條 prompt bank）＋模型自迭代重寫提示詞＋low/medium/high 分層迴歸門禁。Repomix Top5 只1個是程式碼、其餘全是星數/通過率趨勢SVG＝行銷成長曲線。Watchers 僅5對3.5K星＝話題衝星非持續使用群。**Issue 暴露真實用途**：破解App改包、規避OpenAI雲端風控（多帳號輪詢）、試探生物安全邊界。**❌ 用途與本環境價值取向相反＋違反OpenAI ToS（封號/帳務風險）＋改的是Codex `config.toml`（撞本機「Codex寫壞config.toml致MCP啟動即死」既有陷阱）＋18天單人ZIP注入系統指令＝高信任成本。無升級條件（用途排除非觀望）**。📌 中性可留：`codex-instruct.py` 的設定檔安全改寫模式（快照+SHA256比對+精準reset+原子寫入，config-drift金絲雀正面範例）、「CI把成功率做成可迴歸門禁」的框架形狀可移植正當eval |
 
 | [[Github/repos/airgapped-qr-code-transfer — 用 QR Code 螢幕對鏡頭離線傳檔的純前端工具\|airgapped-qr-code-transfer]] | 🔬 | ❌ | 364⭐ MIT 純前端 QR 光學傳檔（gzip 切 250B/塊逐張畫 QR）。資料面確實零外呼（fetch/XHR/WS 全 0 匹配、線上版與 repo 逐 byte 相同無追蹤碼），**但 air-gapped 只成立一半**：兩頁各依賴 4 個 CDN、零 SRI、`@undecaf/zbar-wasm@latest` 未鎖版，且該 WASM 在**執行期用 fetch+instantiateStreaming 再抓 .wasm**——斷網根本開不起來，使用者 issue #2 已實測證實。另有單次播放無重傳的「掉一塊即死鎖」缺陷（作者未修）、git 歷史殘留 localhost 自簽私鑰（實測仍可下載，但僅 CN=localhost 自簽，嚴重性低）。判 ❌：核心宣稱不成立＋無真需求 |
+| [[Github/repos/skill-recorder — 錄一次螢幕操作變成 Agent Skill 的桌面工具\|skill-recorder]] | 🔬 | ⏳ | 1.3K⭐ MIT；**微軟官方**，2026-07-29 建立（分析時僅 5 天大）。Electron App 錄下你做一次工作（視窗切換／瀏覽器網址／1fps 去重快照／剪貼簿預覽／可選旁白），交 **GitHub Copilot CLI** 重建成「intent + 有序步驟」，人工審閱後產出 SKILL.md 或排程 Automation；產出**優先映射 agent 原生工具**（gh CLI／web_fetch）而非重播點擊。Windows 支援是真的做過：Koffi 直呼 user32/kernel32/dwmapi、UIA 讀網址列（常駐 powershell.exe 5.1 host——README 說僅 macOS 是**過時的**）、為 ARM64 整條移除 ffmpeg-static 改用 Chromium。旁白 Whisper 本機轉錄不上傳。⚠ 三阻礙：①生態綁 Copilot 訂閱、產物進 ~/.copilot/，無 Claude target ②維護者**自填三個 High**——尤以 **#8「skill 安裝可擴大 allowed-tools 超出人類核准範圍」**（builder.ts:181 註解宣稱的不變量無程式碼強制，skillbuilder 零單元測試）直接打在核心用途上 ③按 Analyze 會把螢幕影像／視窗標題／URL／剪貼簿送上 GitHub 雲端，程式層無遮罩。零遙測但原始碼預告會加。**📌 可單獨抽取**：issue #8 是「agent 產生 agent 設定」的通用威脅模型（本地 skill SOP 同樣缺機械檢查）；evals 的 irrelevant-detour 情境（測模型會不會把雜訊寫進步驟）；install.ps1 的 curl|bash 加固範本（釘 commit＋官方 SHASUMS＋二次比對 reviewed hash） |
 | [[Github/repos/Infinite_Storage_Glitch — KKarmugil 的 YouTube 當雲端硬碟 Python 重寫版\|Infinite_Storage_Glitch (KKarmugil)]] | 🔬 | ❌ | 163⭐ MIT；把檔案位元畫成黑白方塊影片上傳 YouTube 當免費儲存。**歸屬已查證：有明確附連結 credit 的獨立 Python 重寫，非抄襲**——README 首段寫明 inspired from DvorakDwarf、程式碼與 Rust 原版結構性不同（無 RGB 模式、硬編碼 4×4、單檔 200 行 vs 原版 8 模組）、作者帳號早於 repo 20 個月。但如實記錄兩項負面事實：README「How to use」步驟 2/4/5/6/7 與原版一字不差且照抄了本專案不存在的功能名（executable/dislodge）；21 個 commit 有 18 個只改 README。原版 repo 現已 404（作者自行刪除、帳號仍活躍 725 followers），使本 repo 成為該關鍵字星數最高結果。6 顆 PyPI 相依全存在未 yanked，惟 `numpy==1.22.4` 在 Py3.11+ 無 wheel、`pytube` 停更 3 年已對現行 YouTube 失效——**實質跑不起來**。判 ❌ |
 | [[Github/repos/sherlock — 跨 400+ 社群網站的使用者名稱 OSINT 搜尋工具\|sherlock]] | 🔬 | ⏳ | 87.5K⭐ MIT；給一個 username 並行查 481 站有無同名帳號。**核心邏輯 <1000 行，價值全在那份眾包維護的站點清單**——站點數自數為 **481**（非 README 宣稱「400+」），判定分三型 `status_code` 327／`message` 127／`response_url` 27，另有 4 組硬編碼 WAF 指紋防呆；執行緒池（非 asyncio）`max_workers=min(N,20)` 共用 session 連線池。🔴 **安裝前必讀的 PyPI 命名碰撞**：`pip install sherlock` 裝到**完全無關**的「distributed inter-process locks」（作者 Vaidik Kapoor v0.4.1），正解是 `pip install sherlock-project`——非惡意 typosquat（該套件早於本專案）但誤裝機率高；且 PyPI 停在 0.16.0 而 repo 已 0.16.1 未發布。供應鏈其餘全綠：9 個相依全存在未 yank、無安裝腳本、無硬編碼金鑰；預設每次執行打 `data.sherlockproject.xyz`（實測 301→`raw.githubusercontent.com`）抓即時站點清單，**無使用者查詢對象上報**。已修 **CVE-2026-44590 / GHSA-v6wr-ccr4-x8g9（CVSS 9.3 Critical）**：CI 的 `pull_request_target`＋`${{ }}` 插值 command injection 可竊 `GITHUB_TOKEN`，3 天內修復，**影響 CI 基礎設施非使用者套件**。維護判定：近三筆 commit（2026-08-01）**全是贊助商 banner**（UserSearch、OSINT Industries），實質修復停在 05-05，release 間隔 14 個月，前三人佔貢獻 86%——安全響應仍在但功能開發近停滯。227 open PR 經 166 個不重複作者投稿、48% 是 ≤20 行站點新增（hacktoberfest 驅動）＋3 人批次審查＝**積壓非灌水**，55 筆等超過一年。⚠️ 假陽性是持續未根治現象（issue 掛零回覆逾年），唯一實測 32% 樣本 n=1 **不可推廣**。替代：WhatsMyName（免安裝、社群評價假陽性最低）／Maigret（深但慢）。升級觸發＝需批次掃多 username 或 v0.17 清理假陽性積壓；放棄觸發＝再 6 個月僅剩 banner commit |
 ---
