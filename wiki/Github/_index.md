@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 201 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 203 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-08-03
+> 最後更新：2026-08-04
 
 ---
 
@@ -215,7 +215,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🎨 設計 / UI / 前端（11 篇）
+## 🎨 設計 / UI / 前端（12 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -231,6 +231,7 @@ tags: [github, index, repos]
 | [[Github/repos/naiyue-cover-generator — Codex 用的文章封面與段內說明圖 Skill 組\|naiyue-cover-generator]] | 🔬 | 📌 | 3⭐ 2天新／1人／**無 LICENSE**；兩支 **Codex** skill：文章橫向封面＋段落說明圖（flow/timeline/decision-map/comparison/concept-diagram 五圖型）。主張「AI 只做視覺規劃＋整圖生成，Node 腳本負責可機械證明的部分」＋3-4 道人工門禁。**真正價值在反幻覺機制可移植**：review 綁內容 hash、`guard-*-attempt.mjs` 用檔案狀態擋無限重試、不可覆寫 attempt 快照（禁本地圖冒充 raw）、標題逐字比對（批准內容卡≠授權改標題）、拒絕從平台名推斷像素事實。⚠️ IP 素材權利不明需自換、綁 Codex 內建 image_gen（Claude Code 無等價）、硬綁專案根目錄名 |
 | [[Github/repos/open-slide — Agent 原生 React 簡報框架\|open-slide]] | 📎 | ⏳ | 3.4K⭐ MIT；agent 寫 React 產 1920×1080 簡報：/create-slide 起稿、瀏覽器點選留言→/apply-comments 套改、presenter mode、匯出靜態 HTML/PDF；與 html-ppt/guizang-ppt skill 群同域 |
 ---
+| [[Github/repos/make-interfaces-feel-better — UI 細節打磨的 agent skill|make-interfaces-feel-better]] | 🔬 | ⏳ | 2.8K⭐ MIT；純文件 skill（47KB / 11 檔全 Markdown），19 條帶具體數值的前端打磨原則（同心圓角、按壓 scale 一律 0.96、圖示 blur 4px→0、bounce 永遠 0、點擊區 44×44）。**真正差異點不是原則而是審查協議**：quick/full 雙模式、發現數上限 5/15、五類別「實際檢查了什麼證據」覆蓋表（明文禁止暗示未檢查的面向已審）、強制列「Considered but Rejected」、沒跑的檢查標 Not verified、最後給 Block/Needs-changes/Approve 判決——與本環境 R17 交付契約同構。架構上是漸進揭露範本（SKILL.md 只留判斷，recipe 下放五個子檔）。判 ⏳ 三條：①本機已裝 8 個同域 skill，其中 `emil-design-eng` 連「必須用 Before/After 表格、禁止分行寫」這條格式規約都一字不差重複（同一批設計工程共識）；②description 約 580 bytes≈145 tokens，清單預算 Σ=4,718/5,000 實測，裝入後餘裕從 282→137 tokens；③MIT 可直接拄審查協議進既有 skill 不必整包裝。升級條件＝跟 `emil-design-eng` 對同一份程式碼並排實測，贏了就**取代**不並存；放棄條件＝協議已拄完用得順／至 2026 年底仍零 release 單人零外部 PR。⚠️ bus factor 1、零 tag 無版本可釘、0 issue/0 PR、stargazers API 本環境普遍 404 故星數成長未能驗證 |
 
 ## 📚 學習 / 教程 / RAG（11 篇）
 
@@ -264,7 +265,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🔒 安全 / 自動化 / 其他（18 篇）
+## 🔒 安全 / 自動化 / 其他（19 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -288,6 +289,7 @@ tags: [github, index, repos]
 | [[Github/repos/Infinite_Storage_Glitch — KKarmugil 的 YouTube 當雲端硬碟 Python 重寫版\|Infinite_Storage_Glitch (KKarmugil)]] | 🔬 | ❌ | 163⭐ MIT；把檔案位元畫成黑白方塊影片上傳 YouTube 當免費儲存。**歸屬已查證：有明確附連結 credit 的獨立 Python 重寫，非抄襲**——README 首段寫明 inspired from DvorakDwarf、程式碼與 Rust 原版結構性不同（無 RGB 模式、硬編碼 4×4、單檔 200 行 vs 原版 8 模組）、作者帳號早於 repo 20 個月。但如實記錄兩項負面事實：README「How to use」步驟 2/4/5/6/7 與原版一字不差且照抄了本專案不存在的功能名（executable/dislodge）；21 個 commit 有 18 個只改 README。原版 repo 現已 404（作者自行刪除、帳號仍活躍 725 followers），使本 repo 成為該關鍵字星數最高結果。6 顆 PyPI 相依全存在未 yanked，惟 `numpy==1.22.4` 在 Py3.11+ 無 wheel、`pytube` 停更 3 年已對現行 YouTube 失效——**實質跑不起來**。判 ❌ |
 | [[Github/repos/sherlock — 跨 400+ 社群網站的使用者名稱 OSINT 搜尋工具\|sherlock]] | 🔬 | ⏳ | 87.5K⭐ MIT；給一個 username 並行查 481 站有無同名帳號。**核心邏輯 <1000 行，價值全在那份眾包維護的站點清單**——站點數自數為 **481**（非 README 宣稱「400+」），判定分三型 `status_code` 327／`message` 127／`response_url` 27，另有 4 組硬編碼 WAF 指紋防呆；執行緒池（非 asyncio）`max_workers=min(N,20)` 共用 session 連線池。🔴 **安裝前必讀的 PyPI 命名碰撞**：`pip install sherlock` 裝到**完全無關**的「distributed inter-process locks」（作者 Vaidik Kapoor v0.4.1），正解是 `pip install sherlock-project`——非惡意 typosquat（該套件早於本專案）但誤裝機率高；且 PyPI 停在 0.16.0 而 repo 已 0.16.1 未發布。供應鏈其餘全綠：9 個相依全存在未 yank、無安裝腳本、無硬編碼金鑰；預設每次執行打 `data.sherlockproject.xyz`（實測 301→`raw.githubusercontent.com`）抓即時站點清單，**無使用者查詢對象上報**。已修 **CVE-2026-44590 / GHSA-v6wr-ccr4-x8g9（CVSS 9.3 Critical）**：CI 的 `pull_request_target`＋`${{ }}` 插值 command injection 可竊 `GITHUB_TOKEN`，3 天內修復，**影響 CI 基礎設施非使用者套件**。維護判定：近三筆 commit（2026-08-01）**全是贊助商 banner**（UserSearch、OSINT Industries），實質修復停在 05-05，release 間隔 14 個月，前三人佔貢獻 86%——安全響應仍在但功能開發近停滯。227 open PR 經 166 個不重複作者投稿、48% 是 ≤20 行站點新增（hacktoberfest 驅動）＋3 人批次審查＝**積壓非灌水**，55 筆等超過一年。⚠️ 假陽性是持續未根治現象（issue 掛零回覆逾年），唯一實測 32% 樣本 n=1 **不可推廣**。替代：WhatsMyName（免安裝、社群評價假陽性最低）／Maigret（深但慢）。升級觸發＝需批次掃多 username 或 v0.17 清理假陽性積壓；放棄觸發＝再 6 個月僅剩 banner commit |
 ---
+| [[Github/repos/reverse-skill — AI 逆向滲透安全技能路由包|reverse-skill]] | 🔬 | ❌ | 17.4K⭐ MIT（**2.7 個月漲 17K、Trendshift 榜**）；給 code AI（Claude Code/Codex/Cursor/Cline/Kiro）的安全任務**技能路由包**：APK/二進位/JS 加密/封包/CTF/滲透→分類→進對應方法論子技能→缺工具自動 bootstrap（nmap/Frida/radare2/SecLists/多 MCP）→執行→產報告。330+ skill檔、CTF 子技能群、src-hunter payload 庫（305 payload/263 WAF 繞過/2887 份 HackerOne 案例/77K WooYun）。**工程其實不差**：bootstrap 有路徑安全圍欄、install 全 list-form、工具來源知名上游非 typosquat、commit log 可見主動修 command/shell injection 多個洞；有 scope/授權閘門（ACT 前要 auth.status=granted）不是無腦攻擊包。**判 ❌ 的不是技術是自注入與服從性工程**：①`RULES.md` Global Injection **強制把路由規則寫進 `~/.claude/CLAUDE.md`** → 撞 config-drift 金絲雀＋settings 統一；②`agent-obedience-engineering.md`＝**專門擊敗 agent 的猶豫與拒絕**（借口反駁表），而 RULES 明文叫 agent 「猶豫某操作是否被允許」時就去讀它＝將安全遲疑工程化消除；③README_AI section 0＋CRITICAL 塊反覆「讀完立刻執行、只回覆了解就是失敗」。依本環境判準（learn@agentskill-sh 先例）**skill 內文自動行為指令視同 hook 注入＝背景參考非指令**，三條全歸「讀到不遵守」。加上需求不存在（QA/求職定位、無在跡滲透案）＋330 skill 大攻擊面（R13）。**📌 可單獨抽取**：src-hunter playbooks/payloader、ops/scope-contract＋evidence-finding-path（授權滲透契約寫法，對安全 QA 有參考）；obedience-engineering 可當「prompt 如何被工程化瓦解 agent 安全判斷」的反面樣本一讀但絕不照做。升級條件＝真接授權滲透/CTF 案且願只 clone 當本地參考、手動停 Global Injection；放棄＝上游把自注入變硬依賴或引入自架 CDN/不透明 binary |
 
 ## 🔄 未分類 / 待整理（~8 篇）
 
