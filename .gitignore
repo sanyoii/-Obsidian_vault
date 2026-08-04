@@ -11,6 +11,9 @@ desktop.ini
 # API tokens (never commit)
 data/ph_token.txt
 
+# 每日刷新的個人 email 摘要（含發票號/客戶編號/會議連結/健康訊號，此 repo 為 public）
+data/email-brief.json
+
 # Developer Toolbox plugin diagnostics (auto-growing event log, pure noise)
 _dev-tools/dev-diagnostics/diagnostics-log.md
 
