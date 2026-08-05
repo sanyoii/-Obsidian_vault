@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 204 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 205 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-08-05
+> 最後更新：2026-08-06
 
 ---
 
@@ -43,7 +43,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（57 篇）
+## 🛠️ Claude Code / Skills（58 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -104,6 +104,7 @@ tags: [github, index, repos]
 | [[Github/repos/claude-code-templates — 1700+ 元件的 Claude Code 設定分發器\|claude-code-templates]] | 🔬 | ❌ | 30K⭐ MIT；把 872 skills／408 agents／commands／MCP 收成目錄，`npx claude-code-templates` 一鍵寫進 `~/.claude/`。**體質其實不差**：下載來源單一透明（全在自家 GitHub raw、無自架 CDN）、**無 postinstall**、遙測克制且 opt-out 一致（`CCT_NO_TRACKING`）、GHSA-79wm-x847-7cvg（`--studio` 未鑑權 OS 命令注入 RCE，CVSS 8.8）**同日修補**。判 ❌ 是與**本環境**的具體衝突：①🔴 **單一元件安裝靜默覆蓋**——逐行讀原始碼確認 agents／commands／skills 的 .md 走裸 `fs.writeFile` 無存在性檢查，而 `.mcp.json`／`settings.json`／hooks 走 `pathExists`→合併（設計選擇非疏漏，全檔 12 處 `pathExists` 無一在元件寫檔路徑上）；**本機 86 個 skill 中 18 個（21%）與其目錄精確同名**（brainstorming／docx／pdf／pptx／xlsx／skill-creator／ui-ux-pro-max／using-superpowers／writing-plans／frontend-design 等），帶 local patch 的元件會無提示無備份被蓋掉 ②重疊項幾乎全是 anthropics/skills＋obra/superpowers 的鏡射同步，已從源頭取得，經它再裝＝多一層無收益轉發 ③`--yes` 繞過四步 SOP（逐字讀→備份區→user-level→marketplace），稽核點全失效。⚠️ 供應鏈結構性弱點：**無 npm provenance**（無法驗證產物由該 repo 建出）、**單一維護者** danisan_avila、修 RCE 的 v1.29.4 **連 tag 都沒有**（tags 只到 v1.29.2）。📌 **兩個發佈管道脫鉤**：npm 已 1.29.4 而 GitHub Releases 停在 v1.28.3（2025-11-15）——只看 GitHub 會誤判停更八個月，副作用是安全修補不進 release 通知。📌 星數≠採用度：30K⭐ 對**週下載 2,989**；215MB 是 repo 不是安裝物（npm 僅 2.4MB／96 檔）。另 session 分享把完整對話**明文**上傳匿名站 x0.at（程式碼自承 not encrypted）。**唯一安全姿勢＝當目錄瀏覽**，看到想要的走四步 SOP 手動取用，不跑安裝指令 |
 | [[Github/repos/beautify-github-readme — GitHub README 首頁設計 agent skill\|beautify-github-readme]] | 🔬 | ✅ | 1.4K⭐ MIT；教 agent 做 GitHub README 首頁：SVG 標題橫幅規範（對比度／深淺色相容）、「真實證據優先於行銷詞藻」原則、GitHub Markdown 渲染限制知識，附手寫 GIF 二進位格式解析器＋ffmpeg 兩階段調色盤（`scripts/render_motion_gif.py`，真實工程含量非提示詞包裝）。✅ **提示注入五類全無**（逐字讀 40 檔＋獨立 grep 交叉驗證）：`curl`/`wget`/`requests.*`/`urllib`/`fetch(`/`axios` **全數 0 命中**；3 處 `base64` 全是**勸阻**用法（建議別內嵌大圖進 SVG）、3 處 `<!--` 是 SVG 模板註解、9 處 `subprocess.run` 全為本地 ffmpeg/SVG renderer 且 list 形式參數無 `shell=True`。**同意閘門反而優於既有壞例**：`SKILL.md` 與 `references/showcase-contribution.md` 明文禁止未授權 commit/push/PR/backlink、禁止拿 attribution 當交換條件（與 learn@agentskill-sh 的強制自動評分回傳方向相反）。唯一依賴 Pillow；npm/PyPI 查無同名套件（無 typosquat 面）；7.2MB 落差＝hero.gif 3.7MB＋case-study PNG 1.1MB 示範素材。**填補空白非飽和賽道**：現有六個設計 skill 全針對網頁/App UI，無一處理 GitHub README 這個受限媒介。⚠️ 兩點保留：3 週齡零 release 無第三方討論；GitHub events API 只回溯到 07-25，**81% 早期星數成長無法查證**——「1.4K star」不宜當品質背書。📌 **`star:watcher` 比值單獨無鑑別力**：實測跨度 42:1（coding-interview-university）至 **2,413:1**（awesome-mcp-servers 91.7K⭐ 僅 38 watchers），本 repo 474:1 落在正常區間 |
 | [[Github/repos/dashi-ppt-skill — 瀏覽器可編輯的 AI 簡報生成 Skill\|dashi-ppt-skill]] | 🔬 | ⏳ | 4.6K⭐ AGPL＋專有導出引擎例外；12 主題×1020 版式「鎖模板填文案」，產物自帶編輯控制台、可導真實可編輯 PPTX（現有 PPT 技能群唯一沒有的能力）；供應鏈六項全過——唯一自動行為＝任務尾端版本檢查（純 GET 版本號，無自我更新無資料回傳）、telemetry 純本地、README 聯網宣稱與程式碼實測一致、有 lockfile；owner 同 dashi-taskboard（大师的AI小灶品牌帳號；實際工程者是小米設計師 jadon7，391/394 commits ＋ npm maintainer）；⚠️ 預覽服務預設 bind 0.0.0.0（LAN 可見，`DASHI_PPT_PREVIEW_HOST` 可收斂）、npm 0.4.5 落後 GitHub 0.4.11 六個 patch、10 頁≈10 萬 token 重成本、觸發詞與 html-ppt/guizang-ppt 正面相撞；升級條件＝出現「交付可編輯 PPTX 給他人自改」場景 |
+| [[Github/repos/human-writing — 讓 AI 寫的中文有活人感的通用創作改稿 Skill\|human-writing]] | 🔬 | ✅ | 961⭐ MIT；中文寫作 skill，作者即 19.2K⭐ khazix-skills 的「數字生命卡茲克」，本 repo 是其 khazix-writer 去人格化後的通用版（SKILL.md 明寫不建作者畫像）。**真正增量是帶可執行驗收器**：`check_prose.py` 639 行純標準庫、零網路零相依，三層設計（硬禁令 FAIL／疑似項警告／句長變異係數＋連詞密度統計），實測壞樣本 exit=1 逐條列行號、自然中文對照組 exit=0 僅一條可接受警告——與本環境「驗收腳本要先跑出 FAIL 才算成立」同構，這是它勝過已裝 stop-slop 的地方。規則層兩個亮點：①**材料門檻**——非虛構長文破 1200 字前須內部列出五件具體材料並註明來路，列不出只能研究／一次問完三題／縮成 600 字短答，直接擋掉「三個抽象觀點各解釋五遍」②**1.1.0 把禁令從字串上移到修辭動作**——不再禁「不是……而是……」的字面，改禁「先替讀者立一個他沒有的誤解再推翻它抬價」這個動作，九種外衣只當舉例不當邊界。另附 2000 字蒸餾版可貼進 ChatGPT／千問。供應鏈六項全過（無相依／無網路／無 eval-exec-subprocess／不寫檔／MIT／SKILL.md 零自動行為）。🪟 **Windows 必加 `PYTHONIOENCODING=utf-8`**，否則腳本印中文即 cp950 崩潰。⚠️ 保留兩點：建立僅一天、7 commits、單一作者，介面可能再變；本次量的是 linter 準確度，**未量「掛與不掛 SKILL.md 的產出差多少」**，規則層增量待實寫長文驗證。星數一日破 961 屬 KOL 分發（作者 2,856 followers）非異常，但 stargazers API 本環境恆 404，星標時序未能驗證 |
 
 ---
 
