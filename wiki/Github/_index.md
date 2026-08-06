@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 205 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 206 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-08-06
@@ -217,7 +217,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🎨 設計 / UI / 前端（12 篇）
+## 🎨 設計 / UI / 前端（13 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -232,6 +232,7 @@ tags: [github, index, repos]
 | [[Github/repos/galaxy — Uiverse.io 開源 UI 元件庫鏡像（3800+ CSS-Tailwind 元件）\|galaxy]] | 🔬 | ⏳ | 11.7K⭐ Uiverse.io 唯讀元件鏡像；3,804 個單檔 HTML+CSS/Tailwind 元件、MIT 可商用；鏡像停更 22 個月落後官網 2,000 元件；用時上官網複製即可，除非有離線批量餵 agent 需求才 clone |
 | [[Github/repos/naiyue-cover-generator — Codex 用的文章封面與段內說明圖 Skill 組\|naiyue-cover-generator]] | 🔬 | 📌 | 3⭐ 2天新／1人／**無 LICENSE**；兩支 **Codex** skill：文章橫向封面＋段落說明圖（flow/timeline/decision-map/comparison/concept-diagram 五圖型）。主張「AI 只做視覺規劃＋整圖生成，Node 腳本負責可機械證明的部分」＋3-4 道人工門禁。**真正價值在反幻覺機制可移植**：review 綁內容 hash、`guard-*-attempt.mjs` 用檔案狀態擋無限重試、不可覆寫 attempt 快照（禁本地圖冒充 raw）、標題逐字比對（批准內容卡≠授權改標題）、拒絕從平台名推斷像素事實。⚠️ IP 素材權利不明需自換、綁 Codex 內建 image_gen（Claude Code 無等價）、硬綁專案根目錄名 |
 | [[Github/repos/open-slide — Agent 原生 React 簡報框架\|open-slide]] | 📎 | ⏳ | 3.4K⭐ MIT；agent 寫 React 產 1920×1080 簡報：/create-slide 起稿、瀏覽器點選留言→/apply-comments 套改、presenter mode、匯出靜態 HTML/PDF；與 html-ppt/guizang-ppt skill 群同域 |
+| [[Github/repos/shadcn-admin — Shadcn UI + Vite 管理後台介面集合\|shadcn-admin]] | 🔬 | ⏳ | 13.3K⭐ MIT；Shadcn UI + Vite + TanStack Router 的管理後台**成品 UI**（10+ 頁：儀表板/任務表/使用者/五種錯誤頁/五個設定頁/兩套 Auth），作者明言「非 starter template」——無後端、無 API、faker 假資料。**真正可搬的三塊**：`components/data-table/` 泛型表格六件套、`hooks/use-table-url-state.ts`（分頁/搜尋/多欄篩選雙向序列化進 router search params，重整不掉狀態，少見的原創邏輯）、`main.tsx` 把 401→清 token→存網址→導登入的流程集中在 QueryCache 層。272 檔/2.0MB 但**三張 PNG 吃掉 57% 體積**，實際程式碼僅 597KB；21 個測試跑 Vitest **browser mode**（真 Chromium）非 jsdom。⚠️ **活躍度陷阱**：首頁 `pushedAt` 顯示 2026-07-21 是 dependabot 分支，**main 停在 2026-06-11、最後人工 commit 2026-04-21、距上次 release 9 個月**，只看首頁時間戳會高估。⚠️ **安全**：`auth-store.ts` 用 `document.cookie` 存 token、名稱寫死 `'thisisjustarandomstring'`、`cookies.ts` 無 Secure/SameSite/HttpOnly——示範無害，沿用到真 JWT 就是 XSS 取 token 入口。bus factor=1（作者 87% commit）。⏳ 理由：價值一次性（用到再抄不必常駐）＋維護停滯＋不能當產品骨架。升級條件＝有 Vite+TanStack Router 的後台實案（ziwei/fate/jobsmith 加管理介面）；放棄條件＝archived／Shadcn 官方 blocks 補上資料表／2027-02 前仍零人工 commit。⚙️ 本次 repomix 未執行（本機 npx 遺失）故 token 數未取得，改走 Trees+Contents API |
 ---
 | [[Github/repos/make-interfaces-feel-better — UI 細節打磨的 agent skill|make-interfaces-feel-better]] | 🔬 | ⏳ | 2.8K⭐ MIT；純文件 skill（47KB / 11 檔全 Markdown），19 條帶具體數值的前端打磨原則（同心圓角、按壓 scale 一律 0.96、圖示 blur 4px→0、bounce 永遠 0、點擊區 44×44）。**真正差異點不是原則而是審查協議**：quick/full 雙模式、發現數上限 5/15、五類別「實際檢查了什麼證據」覆蓋表（明文禁止暗示未檢查的面向已審）、強制列「Considered but Rejected」、沒跑的檢查標 Not verified、最後給 Block/Needs-changes/Approve 判決——與本環境 R17 交付契約同構。架構上是漸進揭露範本（SKILL.md 只留判斷，recipe 下放五個子檔）。判 ⏳ 三條：①本機已裝 8 個同域 skill，其中 `emil-design-eng` 連「必須用 Before/After 表格、禁止分行寫」這條格式規約都一字不差重複（同一批設計工程共識）；②description 約 580 bytes≈145 tokens，清單預算 Σ=4,718/5,000 實測，裝入後餘裕從 282→137 tokens；③MIT 可直接拄審查協議進既有 skill 不必整包裝。升級條件＝跟 `emil-design-eng` 對同一份程式碼並排實測，贏了就**取代**不並存；放棄條件＝協議已拄完用得順／至 2026 年底仍零 release 單人零外部 PR。⚠️ bus factor 1、零 tag 無版本可釘、0 issue/0 PR、stargazers API 本環境普遍 404 故星數成長未能驗證 |
 
