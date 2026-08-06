@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 206 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 207 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-08-06
@@ -254,7 +254,7 @@ tags: [github, index, repos]
 
 ---
 
-## 📖 知識管理 / Wiki（7 篇）
+## 📖 知識管理 / Wiki（8 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -265,6 +265,7 @@ tags: [github, index, repos]
 | [[Github/repos/OpenKnowledge — AI 原生 Markdown 編輯器暨 LLM Wiki 平台\|OpenKnowledge]] | 📎 | ⏳ | AI Markdown Wiki |
 | [[Github/repos/OpenHuman\|OpenHuman]] | 📎 | 📌 | 桌面 AI 助手 |
 | [[Github/repos/AppFlowy-IOAppFlowy Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative\|AppFlowy]] | 📎 | 📌 | 開源 Notion 替代 |
+| [[Github/repos/lecture-to-notes — 講課錄影轉可回溯筆記與同步檢視器\|lecture-to-notes]] | 🔬 | ⏳ | 81⭐ MIT（4 天新，台灣復健科醫師）；講課錄影/錄音/投影片照片/PDF 講義**原樣入資料夾**→本機 GPU 管線（faster-whisper 轉錄、抽幀去重、RapidOCR→Surya 兩級 OCR、ollama minicpm-v 語意判讀、多來源音訊互相關對時）→LLM 只在最後合成→**同步 HTML 檢視器**（影片播到哪筆記高亮到哪、點時間戳跳影片）＋Obsidian vault markdown＋PDF 三形態。設計目標是**可回溯**：每句筆記指得回逐字稿時間點與當時投影片。治理成熟度遠超新齡：SKILL.md 十條硬規則（逐字稿永不自動改字——兩版自動改字「實作→量測→退役」；檔案時間是假說、xcorr 是證據、衝突>5s 停下問人；VLM 補 OCR 盲區——純 OCR 曾把 11 張流程圖全判空白；缺件大聲說不悄悄降級；PHI 紅線）。與水球課程入庫/gbrain 同問題空間的深度版。⏳ 理由：**本機無 NVIDIA（Iris Xe 實測）**，Whisper 只能 Groq offload、VLM 純 CPU 不可用，且無課程積壓。升級條件＝新課程要入庫**且**（有 ≥8GB N 卡或實測 Groq+CPU 端到端可接受）；放棄條件＝archived／停更 6 個月／出現 CPU 友善替代品。**不裝也值得抄三樣**：sync_from_skill.py 白名單投影（私 skill→公開 repo 防外洩）、對時協議、「悄悄降級是最貴的 bug」依賴治理 |
 
 ---
 
