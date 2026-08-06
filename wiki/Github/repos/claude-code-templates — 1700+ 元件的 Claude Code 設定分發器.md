@@ -3,6 +3,7 @@ source: "https://github.com/davila7/claude-code-templates"
 author: "davila7 (Daniel Ávila)"
 stars: "30K+"
 clipped: 2026-08-02
+updated: 2026-08-07
 tags:
   - "github/repo"
   - "claude-code"
@@ -23,17 +24,17 @@ tags:
 
 | 項目 | 數值 |
 |------|------|
-| Stars | 30,048 |
-| Forks | 3,298 |
+| Stars | 30,132 |
+| Forks | 3,366 |
 | 主要語言 | Python（5.26 MB）＋ HTML／JavaScript／TypeScript 等共 18 種 |
 | 授權 | MIT |
 | 建立時間 | 2025-07-04 |
-| 最後推送 | 2026-08-02（每日活躍） |
-| Open Issues | 85 |
-| Open PRs | 131 |
+| 最後推送 | 2026-08-06（每日活躍；近 30 天 100+ commit） |
+| Open Issues | 86 |
+| Open PRs | 137 |
 | 最新 Release（GitHub） | v1.28.3（2025-11-15） |
-| 最新版本（npm） | **1.29.4（2026-07-14）** |
-| Watchers | 219 |
+| 最新版本（npm） | **1.29.4（2026-07-14，已三週無新版）** |
+| Watchers | 220 |
 | Topics | anthropic, anthropic-claude, claude, claude-code |
 | 首頁 | https://aitmpl.com |
 | 是否 Archived | 否 |
@@ -44,8 +45,8 @@ tags:
 |------|------|
 | repo diskUsage | **215 MB** |
 | npm 套件解壓後 | **2.4 MB / 96 檔** |
-| repo 檔案樹 | 9,189 個 blob |
-| 週下載量 | **2,989** |
+| repo 檔案樹 | 9,194 個 blob |
+| 週下載量 | **2,834**（月下載 17,540） |
 
 **215 MB 是 repo 不是安裝物**——`npx` 只拉 2.4 MB 的 CLI。體積來自元件市集本身加上 git 歷史膨脹（bot 每日多次重寫多 MB 的 JSON 索引）。
 
@@ -166,6 +167,35 @@ console.log(chalk.gray(`🔓 Note: Files are not encrypted by default`));
 | **npm 維護者** | ⚠️ **單人 `danisan_avila`**——該帳號被盜即可對 30K 星套件推惡意版本 |
 | 收錄元件抽樣 | 17 檔（<2% 覆蓋率）未見注入或外送代碼。**樣本小，不足以宣稱整個市集乾淨** |
 
+### 🔴 它教你打的指令名稱，不歸它所有（2026-08-07 新增）
+
+已發佈的 1.29.4 宣告兩個 bin：`claude-code-templates` 與 **`cct`**。npm 上叫 `cct` 的套件**是別人的**——維護者 `atool`，2019-12-17 發佈，description 直接寫「npm package name robbery.」、keywords `["npm-robbery"]`，224 bytes／2 檔、無 install script、無依賴。
+
+差別在於 bin alias **只在套件裝好之後才存在**。已全域安裝的人打 `cct` 沒問題；**沒裝的人打 `npx cct` 拿到的是那個陌生人的套件**——而「不必先安裝、一行就跑」正是這個工具主打的使用姿勢。
+
+該 squat 套件今日是惰性的（無腳本、無 payload），所以這不是「現在有東西在攻擊你」，而是**一個第三方長期持有這個工具教使用者輸入的指令名**，隨時可改版塞入內容。判定依據為 npm registry 所有權（已查證）＋ npm 的指令解析順序（文件行為），**未實際執行 `npx cct` 驗證**——執行它就等於把那包東西拉下來跑。
+
+未發佈的 Rust 版 `cli-rust/npm/cct/package.json` 進一步宣告六個 bin alias，其中 **`claude-init`（chrislinn）、`claude-setup`（abdoknbgit）、`create-claude-config`（judinilabs）三個名稱同樣屬於他人**，只有 `claude-config` 尚無人佔。若哪天發佈，同型混淆面會從一個名稱擴大到四個。
+
+### Rust 重寫版：覆蓋語意被寫成刻意的跨實作不變量
+
+repo 內新增 `cli-rust/`（Rust port，binary 名 `cct`，PR #640，2026-06-19），npm 平台套件 `@davila7/cct-*` 全部尚未發佈（404），**目前不是實際出貨的管道**。
+
+值得記的是它對覆蓋行為的處理。`cli-rust/src/merge.rs` 只處理 JSON——`.mcp.json`、settings、hooks 三者各有合併規則（hooks 是陣列串接、permissions 是 Set 聯集）。而 `install_skill()` / `install_agent()` 對 `.md` 一律走 `fs_ext::write_file`，該函式是 `ensure_dir` + `fs::write`，**無存在性檢查、無備份、無確認**。`fs_ext.rs` 的模組註解明寫：reproduce the byte-level behavior of the Node CLI。
+
+也就是說，這個「同名 .md 靜默覆蓋、JSON 才合併」的分野**不是 Node 端的疏漏，是重寫時被當成必須保留的行為刻意複製過去**。2026-08-07 對今日 main 的 Node 端逐行複驗，結論不變：agent（L514→L526）、command（L583→L596）、skill（L1615→L1621）全是 `ensureDir` → `writeFile`，路徑上沒有任何 `pathExists`；而 `.mcp.json`（L665、L2356）有。
+
+## 社群口碑
+
+獨立第三方評測（Exa 檢索，2026-02～03 兩篇）對功能面評價正向，但列出的缺點與本報告的稽核結果**從不同角度指向同一件事**：
+
+- **無版本釘選**——「`npx claude-code-templates@latest` 永遠拉當下的定義；社群 agent 若有破壞性更新，下次安裝跟上次會不一樣」（dudarik.com）。建議把產出的設定檔納入版控。
+- **合併是累加但不一定乾淨**——「裝兩個都改 `.claude/settings.json` hooks 的 agent，合併是循序的、有時會產生重複項；批次安裝後要檢查 settings 檔」（dudarik.com）。與本報告「JSON 走合併」的觀察互補：合併不等於正確。
+- **元件品質參差**——「有些精緻有些很陽春，放進正式工作流前先在 aitmpl.com 讀過 system prompt」（dudarik.com）。
+- **定位**：社群自建，非 Anthropic 官方元件登錄；由 Z.AI 贊助，屬 Claude for Open Source 計畫（ryanorban.com）。
+
+⚠️ **無人提及同名 .md 靜默覆蓋**。兩篇評測都推薦「安裝前先讀 system prompt」，卻沒有人檢查安裝**寫入**時會不會蓋掉既有檔案——這個風險在社群討論裡是空白的。
+
 ## 社群健康度
 
 | 指標 | 數值 | 評估 |
@@ -186,7 +216,7 @@ console.log(chalk.gray(`🔓 Note: Files are not encrypted by default`));
 
 ### ⚠️ 18 個 skill 名稱正面相撞
 
-以本機 86 個 user-level skills 與 CCT 的 872 個 skill 目錄做精確名稱比對，**18 個同名（21%）**：
+以本機 **88** 個 user-level skills 與 CCT 的 **873** 個 skill 目錄做精確名稱比對，**18 個同名（20%）**（2026-08-07 重算：本機數已從 86 增為 88，撞名清單不變）：
 
 ```
 brainstorming          dispatching-parallel-agents   docx
@@ -196,6 +226,8 @@ skill-creator          subagent-driven-development   ui-ux-pro-max
 using-git-worktrees    using-superpowers             verification-before-completion
 web-design-guidelines  writing-plans                 xlsx
 ```
+
+**agent 端另有 12 個檔名相撞**（CCT 408 個 agent vs 本機兩層 agents 目錄）：`code-reviewer`、`security-auditor`、`test-engineer`、`performance-engineer`、`performance-monitor`、`planner`、`specification`、`compliance-auditor`、`product-manager`、`sales-engineer`、`game-designer`、`README`。agent 走的是同一條 `ensureDir` → `writeFile` 路徑，風險同型。
 
 這 18 個全部是**單一元件安裝路徑下的靜默覆蓋候選**。且它們幾乎都源自 `anthropics/skills` 與 `obra/superpowers`——CCT 只是這些上游的定期鏡射同步（PR #758／#742 可證），本機既然已從源頭取得，透過 CCT 再裝一次只是多一層轉發，卻換來覆蓋風險。
 
@@ -216,7 +248,8 @@ web-design-guidelines  writing-plans                 xlsx
 1. **21% 的既有 skill 是靜默覆蓋候選**，而本機元件帶有本地修改（`LOCAL-CHANGES.md` 模式），覆蓋即失去且無備份。
 2. **重疊的部分幾乎都是上游鏡射**，已從源頭取得，透過它再裝是多一層無收益的轉發。
 3. **一鍵安裝繞過四步 SOP**，制度上的稽核點全部失效。
-4. 供應鏈結構性弱點：無 provenance、單一維護者、安全修補版本無 tag。
+4. 供應鏈結構性弱點：無 provenance、單一維護者、安全修補版本無 tag（2026-08-07 複查：v1.29.4 發佈滿三週，tag 仍未補）。
+5. **它教你打的 `cct` 指令名在 npm 上屬於他人**，沒先全域安裝就打 `npx cct` 會拿到陌生人的套件。
 
 **若仍要用，唯一安全的姿勢**：把它當**目錄瀏覽**用（在 aitmpl.com 或 repo 裡找元件），看到想要的就用四步 SOP 手動取用，**不要跑安裝指令**。這樣拿到目錄的價值，避開覆蓋與繞過稽核的代價。
 
