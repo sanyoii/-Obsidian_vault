@@ -45,17 +45,19 @@ tags:
 
 ## 原始碼結構分析
 
-⚠️ 本次分析時本機 `npx` 不可用（`C:\nvm4w\nodejs\node_modules` 為空），**repomix 未執行、token 數未取得**。以下由 GitHub Trees API + Contents API 取得，檔案數與體積為精確值。
+> 初次分析時本機 `npx` 不可用故 repomix 未執行，改走 GitHub Trees + Contents API；npx 修復後（2026-08-06）已補跑 repomix 回填 token 數。兩組數據並列如下。
 
-| 指標 | 數值 |
-|------|------|
-| 總檔案數 | 272（blob） |
-| 總體積 | 2,071,620 bytes（約 2.0 MB） |
-| Tokens | 未取得 |
-| 副檔名分佈 | `.tsx` 206、`.ts` 28、`.json` 8、`.md` 7、`.png` 5 |
-| 測試檔 | 21 個 `*.test.ts(x)` |
+| 指標 | 數值 | 來源 |
+|------|------|------|
+| 總檔案數（含二進位） | 272（blob） | Trees API |
+| 總體積 | 2,071,620 bytes（約 2.0 MB） | Trees API |
+| repomix 打包檔案數 | 264（排除二進位／忽略項） | repomix |
+| **總 Tokens** | **166,716** | repomix |
+| 總字元數 | 665,637 | repomix |
+| 副檔名分佈 | `.tsx` 206、`.ts` 28、`.json` 8、`.md` 7、`.png` 5 | Trees API |
+| 測試檔 | 21 個 `*.test.ts(x)` | Trees API |
 
-### 最大檔案 Top 5
+### 最大檔案 Top 5（依 Bytes，含二進位）
 
 | 檔案 | Bytes | 佔比 |
 |------|-------|------|
@@ -64,6 +66,18 @@ tags:
 | `public/images/shadcn-admin.png` | 279,656 | 13.5% |
 | `pnpm-lock.yaml` | 236,298 | 11.4% |
 | `src/routeTree.gen.ts`（TanStack 自動產生） | 26,801 | 1.3% |
+
+### 最大 token 消耗檔案 Top 5（repomix）
+
+| 檔案 | Tokens | 佔比 |
+|------|--------|------|
+| `src/routeTree.gen.ts`（自動產生） | 6,409 | 3.8% |
+| `src/components/ui/sidebar.tsx` | 5,607 | 3.4% |
+| `src/features/chats/index.tsx` | 2,819 | 1.7% |
+| `src/hooks/use-table-url-state.test.ts` | 2,802 | 1.7% |
+| `src/features/users/components/users-action-dialog.test.tsx` | 2,648 | 1.6% |
+
+token 分佈非常平坦——最大檔僅占 3.8%，前五名合計 12.2%。這是元件庫型專案的典型形狀：沒有巨獸檔案，程式碼平均散在 264 個小檔裡。repomix 安全掃描亦回報「無可疑檔案」。
 
 三張 PNG 就吃掉 57% 體積，扣掉圖片與 lock file 後真正的程式碼只有約 597 KB。最大的**手寫**原始碼檔是 `src/components/ui/sidebar.tsx`（21,910 bytes）——Shadcn 官方 sidebar 元件的客製版，也是本專案最常被抄走的單一檔案。
 
@@ -194,8 +208,8 @@ tags:
 | 引擎 | 狀態 |
 |------|------|
 | gh API | ✅ 完整（含分支／貢獻者／commit 活躍度交叉驗證） |
-| Repomix | ❌ **未執行** — 本機 npx/npm 遺失，改用 GitHub Trees + Contents API 補齊；**token 數未取得** |
-| defuddle | ❌ 未執行（同上）；Jina Reader 備援對 SPA demo 站僅回標題，無內容 |
+| Repomix | ✅ **已補跑**（2026-08-06 修好 npx 後）— 264 檔 / 166,716 tokens；初次分析時因本機 npx/npm 遺失而改走 GitHub Trees + Contents API |
+| defuddle | ❌ 未執行（初次分析時 npx 不可用）；Jina Reader 備援對 SPA demo 站僅回標題，無內容 |
 | agent-reach 社群口碑 | ⚠️ 降級為 WebSearch，結果多為模板列表型內容農場，非一手開發者討論 |
 | YouTube 教學訊號 | ❌ 未執行（yt-dlp 未驗證可用） |
 | smart-explore AST | — 不適用（遠端 repo，非本地路徑） |
