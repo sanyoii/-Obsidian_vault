@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 207 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 208 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-08-06
+> 最後更新：2026-08-07
 
 ---
 
@@ -176,7 +176,7 @@ tags: [github, index, repos]
 ---
 | [[Github/repos/chatgpt-video-editing-skills — 繁中八步短影音剪輯安全 skill|chatgpt-video-editing-skills]] | 🔬 | ⏳ | 188⭐ MIT繁中；把「使用者自拍影片→ 9:16 直式短片」拆成兩 skill：setup（只檢查/裝/驗證環境，不上傳不剪）＋editor（八步：素材檢查→逐字轉寫→內容整理→剪輯策略（先給白話策略等核准）→粗剪→字幕→720p 預覽→QA 正式）。**賣點不是功能是安全工程**：逐檔讀 runbook/security 全清——來源全釘官方 HTTPS（字體 `curl -fL --proto '=https'`、LFS-skip、frozen-lockfile、隔離 npm cache）、憑證 check-ignore→拒 symlink→chmod 600→stat 複驗、非 git worktree 新檔一律 hard stop、每個 mutation/上傳/付費都要顯式核准、原檔零破壞、**未驗證不得稱完成**（R17 教科書級）——與 reverse-skill 強制自注入正好相反。判 ⏳：①需求不存在（已裝 HyperFrames 群＋claude-real-video＋hyperframes-media，但**剪真實素材成 Reels** 無在跡任務，R13）②硬依賴重：browser-use/video-use 完整 repo＋uv＋ElevenLabs Scribe v2 **付費**憑證，選用動畫還要 Node22＋Bun ③太新太小（2.7 週/單人/無 release/社群零訊號）。升級條件＝真出現剪自拍素材成繁中直式短片的重複任務（個人品牌/求職自介短片）且願設 video-use＋ElevenLabs；放棄＝上游持續静默（已 2 週無 commit）或 video-use 上游改動使 runbook 失效。**📌 可單抽**：security-and-verification 的憑證處理範式、output-contract 的「未驗證不得稱完成」契約，當安全 skill 範本 |
 
-## 🧰 開發工具 / CLI（20 篇）
+## 🧰 開發工具 / CLI（21 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -201,6 +201,7 @@ tags: [github, index, repos]
 
 | [[Github/repos/qrs — 用連續 QR Code 串流傳檔的離線傳輸工具\|qrs]] | 🔬 | ⏳ | 1.6K⭐ MIT（antfu 等 Vue/Vite 核心實名參與）；LT 噴泉碼把檔案切塊、20fps 連播 QR 由相機接收還原，無網路無配對。✅ 供應鏈五項全綠且「資料不離開瀏覽器」是**驗證過**的——`fetch`/XHR/WS/sendBeacon/analytics 全零命中，`ssr:false`＋靜態託管**部署形態上就沒有能收檔的後端**。⚠️ 效能比想像慢一個數量級：專案自身測試斷言傳輸開銷 1.8–2.5 倍，淨吞吐僅 8–11 KB/s、實務上限 1MB（根因是用 Ideal Soliton 而非 Robust Soliton）；`pushedAt` 2026-03 是假訊號（只改 LICENSE 年份），**功能性開發停在 2025-02**，npm 週下載 6 次。**價值在讀不在裝**：動態 QR 串流正是硬體錢包氣隙簽章（Keystone/Passport 的 BC-UR `ur:crypto-psbt`）標準做法，對 Web3/CEX 託管 QA 有直接知識價值。同賽道對照 [[Github/repos/decimen-optical-transfer — 噴泉碼動畫 QR 螢幕對相機傳檔 PoC\|decimen]] |
 | [[Github/repos/decimen-optical-transfer — 噴泉碼動畫 QR 螢幕對相機傳檔 PoC\|decimen-optical-transfer]] | 🔬 | ⏳ | 2.1K⭐ MIT；螢幕播動畫 QR、相機接收，LT 噴泉碼實作紮實正確（robust soliton CDF＋splitmix32＋partial Fisher–Yates）。最見功力：因 `Math.log` 在 JS 規範是「實作近似」，V8（發送）與 JavaScriptCore（iPhone 接收）差一個 ulp 就會讓 soliton 分布靜默 desync，作者自寫只含精確 IEEE-754 運算的確定性 log。✅ 供應鏈五項全綠（零 postinstall、6 顆 devDeps 實查存在、**全 repo 僅一處 `fetch()` 且參數是寫死的本地示範圖**）。⚠️ **最大落差：沒有檔案選擇器**——grep `type=file`/`FileReader` 全零命中，只能傳內建的兩張示範 PNG、接收端亦無下載連結，是傳輸層 demo 非可用工具。「2 天帳號 2,051 星」已查證為自然流量（r/vibecoding 5,622 讚貼文，作者自述 Claude Code 一晚 vibe-code），非灌量。可帶走的是 fountain.ts 參考實作＋README 的瀏覽器硬傷清單。對照 [[Github/repos/qrs — 用連續 QR Code 串流傳檔的離線傳輸工具\|qrs]] |
+| [[Github/repos/spec-kit — GitHub 官方的規格驅動開發工具組\|spec-kit]] | 🔬 | ⏳ | 125.7K⭐ MIT，GitHub 官方；把「寫程式前先產出可 review 的規格」做成一層外掛在既有 coding agent 之上的流程骨架——`specify` CLI 把 slash command 與 Markdown 模板注入專案，強制走 constitution → specify → plan → tasks → implement，每階段產出進 repo 的 .md 供人類 review。**流程本體是 Markdown 不是程式碼**，這是它一口氣支援 **37 個 agent 整合**（claude/copilot/codex/cursor/gemini/… + generic 逃生口）的原因，也是天花板——執行品質全靠下游 agent，spec-kit 自己不驗證。架構實料：`workflows/` 是真的編排 DSL（11 種 step：command·shell·prompt·gate·if_then·switch·while_loop·do_while·fan_out·fan_in·init + overlay 分層合併）、bundler 有 resolver/conflict/installer/validator、authentication 支援 GitHub＋Azure DevOps＋air-gapped。**測試投入罕見**：token 前三大檔全是測試（合計 18.2%），並有 `*_python_parity.py` 強制 bash/PowerShell/Python 三套腳本行為一致。社群 146 個擴充、近 8 週 commit 加速（59→112）、14 天發 8 個 release、Issue 關閉率 89.6%、YouTube 官方教學 58.9 萬觀看。判 ⏳ 非品質問題而是**需求重疊**：7-Agent 工廠＋writing-plans/executing-plans/spec-driven-development 已覆蓋同一段，增量只剩 workflow 引擎的 fan_out/gate 表達力；且使用者實測損益平衡點是「模糊到兩個工程師會做不同實作的需求」，與本環境近期以基建維護/單檔改動為主的工作型態不合。升級＝出現跨多階段、需求模糊、要把 spec 當 PR review 產物的實作型專案（先在 workspace/ 隔離試跑確認 `speckit.*` 不與 CLAUDE.md 路由打架）；放棄＝Claude Code 原生 plan mode 內建等能力／human commit 停滯>2 個月／隔離試跑證實與現有路由層無法共存。**📌 可單抽（逐字讀過 v0.16.0）**：①`speckit.bug.assess.md` 的 **URL Trust Policy**（拒抓 file:/RFC1918/metadata endpoint＋可疑指令引述進 `Unverified` 段落供人審而非執行——「注入不信」之上的「引述存證」增量）②`clarify.md` 機制（上限 5 問、答案回寫進 spec 檔非留對話）③`analyze.md` 跨產物一致性稽核（唯讀、constitution 衝突自動 CRITICAL）④spec-template 結構元素（story 優先級化＋獨立可測即 MVP＋Given/When/Then，diff 嫁接勿整抄）；註：三套腳本 parity 測試是「維持重複」的工具、與本環境「消滅重複」策略相反，僅「同腳本雙引擎」變體值得抄形 |
 ---
 
 ## 📊 AI/ML 模型（7 篇）
@@ -269,7 +270,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🔒 安全 / 自動化 / 其他（19 篇）
+## 🔒 安全 / 自動化 / 其他（27 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
