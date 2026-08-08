@@ -75,7 +75,7 @@ tags: [github, installed, skills, tools, index]
 | 工具 | 安裝路徑 | Wiki 紀錄 |
 |------|---------|----------|
 | **ponytail** — 反過度工程 5 commands | `.claude/commands/ponytail*` | [[Tools/ponytail\|使用指南]] |
-| **addyosmani/agent-skills** — 32 Skills + 8 Commands + 4 Agents | plugin marketplace | [[Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件\|Github 分析]] |
+| **addyosmani/agent-skills** — 24 Skills + 8 Commands + 4 Agents（本機 0.6.2，上游 0.6.6） | plugin marketplace（實際載入 `infra/reference-repos/agent-skills`） | [[Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件\|Github 分析]] |
 | **stop-slop** — 去除 AI 腔 | `.claude/skills/stop-slop/` | [[Github/repos/Stop-slop 寫作去除AI腔\|Github 分析]] |
 
 ---

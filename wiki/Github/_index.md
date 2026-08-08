@@ -61,7 +61,7 @@ tags: [github, index, repos]
 | [[Github/repos/claude-real-video — 讓 Claude 真正看影片的本機關鍵幀擷取工具\|claude-real-video]] | 🔬 | ✅ | 619⭐ 場景感知+去重關鍵幀擷取，內建 Claude Code Skill，4 天登 HN 首頁 |
 | [[Github/repos/claude-video — 讓 Claude 真正看影片的 watch 技能\|claude-video]] | 🔬 | ❌ | 7.7K⭐ /watch 上游原始版（claude-real-video 即其平行實作）；yt-dlp+ffmpeg 四段細節撥盤+MAD 去重，跨 50+ host；與已裝 claude-real-video 重複故不裝 |
 | [[Github/repos/social-cards-engine — 品牌無關的社群圖卡引擎\|social-cards-engine]] | 🔬 | ⏳ | 23⭐ 品牌無關社群圖卡引擎，brand pack+雙審核員（carousel-joker/meme-joker），2 天新 |
-| [[Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件\|addyosmani/agent-skills]] | 📎 | ✅ | 32 Skills + 8 Commands + 4 Agents |
+| [[Github/repos/addyosmani-agent-skills — 生產級工程 Skills 套件\|addyosmani/agent-skills]] | 🔬 | ✅ | 84K⭐ 24 Skills + 8 Commands + 4 Agents；本機釘 0.6.2，上游已 0.6.6（新增三層 skill eval 框架，Tier-2 描述碰撞偵測可解本環境 skill 清單漂移） |
 | [[Github/repos/ECC — Claude Code harness-native 操作系統\|ECC]] | 📎 | ⏳ | 100+ skills，182K⭐ |
 | [[Github/repos/zeuikliclaude-pilot-suite Claude Code execution playbook with 3 pilot modes cost-first (Haiku), quality-first (Sonnet), ceiling-elevation (Opus). Quantitative escalation gates\|claude-pilot-suite]] | 📎 | ⏳ | 三模式成本優化 |
 | [[Github/repos/mattpocockskills Skills for Real Engineers. Straight from my .claude directory\|mattpocock/skills]] | 📎 | ✅ | Real Engineers Skills |
