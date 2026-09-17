@@ -1,0 +1,9 @@
+ok   node  v24.19.0
+ok   python  py -3 → Python 3.14.2
+ok   git bash  C:\Program Files\Git\bin\bash.exe
+ok   .claude/skills  → skills/
+ok   .agent/skills  → skills/
+ok   行尾  LF
+ok   claude CLI  2.1.220 (Claude Code)
+
+都好了。

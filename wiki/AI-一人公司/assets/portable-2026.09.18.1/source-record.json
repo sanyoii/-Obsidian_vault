@@ -1,0 +1,1658 @@
+{
+  "version": "2026.09.18.1",
+  "base_zip_sha256": "bb4e9d59b655878e751e63fe8d464c070d04a5612a81ec432dadd1374270257c",
+  "source_hashes": {
+    ".claude/hooks/audit.py": "232d85050f0bdb350620c7cf9214aa853fb8e78b9bf7ddde6c2dc18e365357f2",
+    ".claude/hooks/extract.py": "ffcff6936d4ab6c173929ff0e4aabe4b1100b7fd5d5c4a10c6d6eb4153009213",
+    ".claude/hooks/install_claude_hook.py": "1b248c9e0dd254ce049b8ba9006bb8e837cea49d32ec1f93cee1957d087e83a4",
+    ".claude/hooks/install_codex_hook.py": "949fdd501664afa5dda272bb8e499d906fbec9730145cb30d161b4bad40096ee",
+    ".claude/hooks/run_hook.mjs": "2750ed0a825c9dc0e23a00cee34db1272f7cf19a1156b3e5a9aed0eb0d21c4f7",
+    ".claude/hooks/sessionend_hook.py": "5ee4e7bcb08ca156a4cdad559d3c1e3521c911248f2ca4d62ddb4af754f20fcd",
+    ".claude/hooks/sessionstart_hook.py": "1185cc69efb6367624f895b91291cce6638d68f8e9fa9289e10775895ed63300",
+    ".claude/hooks/tests/__init__.py": "c680ae95553077b6b883faf2641c4b82e64386d77e059d4e588f5e8254fd4408",
+    ".claude/hooks/tests/fixtures/hub_broken.md": "f6d805952db359793d976e067fea83e425b7b28e0b24d674077d762e69297f84",
+    ".claude/hooks/tests/fixtures/hub_green.md": "e71676de6d6f95d779777bfd3e3f130125a083b45864b4d74d1766b74cb6fda6",
+    ".claude/hooks/tests/fixtures/hub_overflow.md": "e215ff612172f16bb03158b26bfecf2f812402c557edad13235925d87b350c4a",
+    ".claude/hooks/tests/fixtures/hub_oversize.md": "484d859b6436777da390bf5aa9570d3346bbd5574b5213323c395f73572a57a9",
+    ".claude/hooks/tests/fixtures/hub_sample.md": "d2b0179629e8b4b31a7aeb19945463348fda105ed396d281e12785bdb2338734",
+    ".claude/hooks/tests/fixtures.py": "20881ea45000a391aa8fe49c61790a990180b3d3bcb1cd96eb9bd02e56f5b9a4",
+    ".claude/hooks/tests/test_audit.py": "510eaae62962c2453b8721b22944486e91d8ec73750c59da9886850bf19bc834",
+    ".claude/hooks/tests/test_extract.py": "c5669558e63121c19cd73990b8d34a62b7674b59d03e1ceccf0dd1dd28c06fe3",
+    ".claude/hooks/tests/test_install_codex_hook.py": "2e163b51ff4feaa538211a152a2344080bedfb96d52e80501a0447d571401818",
+    ".claude/hooks/tests/test_sessionstart_hook.py": "4a7b777b236123146663d04e034fac1404b25a7fabe995cd0a7d3f2efbbcfc46",
+    ".claude/settings.json": "e4dc651c91f94f30934565e1afad106010e1fa25c7628007b96afa9bb6fe9168",
+    ".gitattributes": "2b5ece81198078767fe4b07a806663f92306f91e87d05dedec096eabedbcebf7",
+    ".gitignore": "7487429a8a20f40d1e8ba9abe4f1222b199bc6bc47ccff385ba9f1e88d6783dc",
+    "AGENTS.md": "9a3163f4bfbbc4ca1fe9f8de8e28bed7f0f71c102a0ea4cc046e10194778712a",
+    "CLAUDE.md": "38082532d6bff995293992b0ee156e0c6a2de5937a62687d0f714ec2db5d5539",
+    "evaluations/check.py": "591fafe4c2286c44fe4309a60242148aeae43d2f861b5f40ba87373c9087033f",
+    "evaluations/developer/fixtures/checks.py": "b71558adfdc4d25abd1e12151e777cf273634ec8a7c0f3140864b939dc209736",
+    "evaluations/developer/fixtures/sample.py": "96610245212fa433d2bad49bc97c5f3827992cf7b4abd3287365303d2f8ff7ad",
+    "evaluations/developer/README.md": "536e4676990c4cf4504007dcf6ced52269944d22c1475e6cc3df47af5cc46463",
+    "evaluations/developer/scenarios.json": "13f5eede89dd64c15bbfd575a4cd93e3973ffc2ea8ab63bfeedb87c68a666703",
+    "evaluations/fixtures/research/source.md": "ee661bd78168e802f5bf4cafecc16b4606f08444ae8c6450f2b656c090330868",
+    "evaluations/fixtures/resume.md": "d8e76dab37bae98216b1f360cce60bd867ab8b4a2a2bceef4e49545ad273dc03",
+    "evaluations/README.md": "85a70175bc0d212575f1749e6fed1a768b913bc261d647de9b0c91bd56cd24f6",
+    "evaluations/scenarios.json": "b2ecd25f0a6a0d66bf01f9e8b14c9a95330ee4eab0ddea4ef4835443e980f420",
+    "evaluations/test_check.py": "9c4c9fe807e5ae7e29c52b917b60fb29d9ef306cf8f369fc4ca623bb89394600",
+    "evaluations/ui-ux-designer/fixtures/requirements.md": "559ab0bcafd8bb46a5fed09666b20248ee9530b8b8cc400fed21389bc9f15f0e",
+    "evaluations/ui-ux-designer/fixtures/screen.html": "f7289938692fb59f9dc6688bad6168a6abfe68919b17ec29eb0ce764a79fb033",
+    "evaluations/ui-ux-designer/README.md": "17103ea7c7ce8bcef319766d7979f3c39b18a3af8e950ac681a15eb7c8df61a8",
+    "evaluations/ui-ux-designer/scenarios.json": "dedca6fbe6003434e868aec8bbb568f5e74500ce08d2c6b95118ed62ab874b78",
+    "offline/ability-references.test.mjs": "b761c9be8bdc75347294bc9609a5afca181b26bcbe0e5fb93316af18de899db0",
+    "offline/ai-one-person-company-logo-v2.png": "6e2509ced842f6e2fe48f0cf7e90e81c55f7339a009369f0eca963d2a05040d7",
+    "offline/build.mjs": "f3fb5a53948b5b43f10fca5e0db427d6edb1e0640348c3967fb0465fb67800c0",
+    "offline/doctor.mjs": "8fc1df20eb2c2361e5bec7818a9c8c17ac9cbd1ad27afda04a5a84d9d5c8ecc3",
+    "offline/setup-progress.mjs": "3b4860f1584c5b7848c6da8efc67484f7a40a9629ed88af1579f22743ebbdd02",
+    "offline/setup-progress.test.mjs": "3e921a1a936591765ea7adac0072432a5567ebfc29c37c26d493a31f55c3aadf",
+    "offline/sysflow-hover.test.mjs": "5d953adc504a011026cc0299762dac9b52650cf2d338b86c92aa9aaa07befa49",
+    "README.md": "9758787e28bbc3c9ca255a0b74dece187fb56f496db6feac673e64786506e638",
+    "SCHEMA.md": "6f8a2bbcb33810ab1bf722c925d25b448f791ea29d7d2c23dba49f9abc1853e3",
+    "SETUP.md": "ed53445def267d3563c9ba38e4b9c15954e3bcbdd76939f5bdf4e34e07f7e64a",
+    "skills/ad-buyer/card.md": "f62238743e71e8a886614da660c030a0f40f9b49b33a41ee1c0d422a426043c9",
+    "skills/ad-buyer/SKILL.md": "2c37b487467fa486c50bb2a3dc36879baff5a5ab0fa0d2eec32ce61ca1c7b53a",
+    "skills/agy-cli/SKILL.md": "ab5ba416315fd7ef8a17305a2276da55452b08b6e7a45586152e58ffc20cf4f5",
+    "skills/agy-transcribe/SKILL.md": "6396019f1e485d31c355495434ecfa530593ec99fa4abed4c583d3a44f95058d",
+    "skills/analyst/card.md": "7b0be1635777700328bad8993b4b2da6fcd9095c52091ac892abf6873b84f06a",
+    "skills/analyst/SKILL.md": "d24a1618a1cd5808d6a10234113921703b63fe6c60b2900ea13ca0b8480c7eb2",
+    "skills/bookkeeper/card.md": "03228aae5912629ddbd2dd570d3c4cb62d2cdee886c4b3e0aa3c999aa0e31304",
+    "skills/bookkeeper/quote-template.html": "cd0b067c89e85ec2530a34a3768c8f767bcfe6825f9249ba8e671364f3fc4d4d",
+    "skills/bookkeeper/quote-template.md": "71f0d8494fc225639b4c8d0f221fc3d61f6e4e9f9de15b29db74bf05f57f23dc",
+    "skills/bookkeeper/SKILL.md": "9370d8239b87c1152a8ee2b3c4cebca1383ffbec30076cdafeff6644e26b3fe3",
+    "skills/brief/SKILL.md": "dbaca28b6c569114bbf73de644700dceed8f3d942c0ef9a8f322dc8f06733c75",
+    "skills/bug/scripts/collect.mjs": "39e84a4a008b01b961857d25d8ee81cdf149a67ad0179052da50037350422298",
+    "skills/bug/SKILL.md": "abc00606197e79bde97a326931e50e0c821478ce8595dd55452341413eb12547",
+    "skills/campaign/_template/campaign.template.md": "f46c396f32b89be9d8c57b1f5d999f6d1d65afb7f8ec6d0cc5634e6c6a24cb3b",
+    "skills/campaign/card.md": "6cf2610729804c914c17109ae4c4664010d40a3777ba80ec5caac64310e0b690",
+    "skills/campaign/SKILL.md": "ffdf49356b15acfc64403b86caf8a614b7e4c1c75f33252d88f17223de7d5f2d",
+    "skills/chief-of-staff/card.md": "fedc044f72cf15d481874a916b9c6e83dc44a3c5107590117e369fc5364775b8",
+    "skills/chief-of-staff/SKILL.md": "4f40f44a23516943e84833e3721f86cf682088309c18a1975daa5bf1048cd979",
+    "skills/chrome-render/chrome.mjs": "6d52e0fa6da7e8eb73442a809911834d18e2e9a65fe49a1e2ea5c6b83e43ff39",
+    "skills/chrome-render/SKILL.md": "7559cc8507db2b4895785ad154858effbc8a57d9ab63c48a9aaa652260c752d1",
+    "skills/codex-cli/SKILL.md": "5d258243e582067bff6aa59345b126efc13f492ab6289a06ccfea83fc002c923",
+    "skills/codex-cli-img/agents/openai.yaml": "8a608b608f1f9075b07022245d491f9dc29e9a11b84ffd50d4ba32b304dddab9",
+    "skills/codex-cli-img/references/batch-format.md": "eb948da06697bf2b93ee52f84943635b37da7bef81430ccc64356362ff30153b",
+    "skills/codex-cli-img/references/troubleshooting.md": "c4acf2f74b086cae586c6396ed564195f5f399896a3e2d353704f3a452d4ec4b",
+    "skills/codex-cli-img/scripts/run_batch.py": "0ea1c94e6d73e3918e273d8f1b33c3363259a842ebc7e3062fb2d0caec4d2119",
+    "skills/codex-cli-img/SKILL.md": "501e4ee4cfa65cc42b03d0b8434e710d3bec4296693535099bdd0346ae14a16e",
+    "skills/community-manager/card.md": "e84633a05909abf9ffdb93ccb8bc09eadc3c445e32a3fbc8edb73359c09a389e",
+    "skills/community-manager/SKILL.md": "3ff2edb55b3bec2e72f53d60a73c64f8cd9fdc9a232757ba3e954d6e01579dc7",
+    "skills/content-pipeline/pipeline/blog/blog.md": "2f8f561d832ad7ed8e8d2abd6d4e3aee9ce7f33565271871293e8fc8deb189cc",
+    "skills/content-pipeline/pipeline/blog/cover.md": "831d1ec25c461a825d742959d41402989197679d14cd3ce7b5cea0755c915733",
+    "skills/content-pipeline/pipeline/blog/publish-blog.md": "c053386afb47d275a37b5575f377f4e47d81243a0195526e180eea2408723a14",
+    "skills/content-pipeline/pipeline/blog/seo/_seo.profile.template.md": "c06847f8073cc2d9c89144b6144cf9369ea1f18a8a8e1eea852520860ae134cb",
+    "skills/content-pipeline/pipeline/blog/seo/diagnose.md": "467ae8718d114e2bc8c24c6b0b021063d756f4b4ef83e2845a7c47e476ba1682",
+    "skills/content-pipeline/pipeline/blog/seo/seo.md": "bc95930067899a1559cc03008c5f25db453234ebb32cd3f70bf5bfd443275707",
+    "skills/content-pipeline/pipeline/carousel/carousel.md": "284d1fbb55b77251fffdc4ba3719db07b9651c283a819cf3ef76014f11ad3d09",
+    "skills/content-pipeline/pipeline/carousel/generate-via-chrome.md": "0be1f73e56450849800ed9dd4896d85e08c1e19a511a3f4dd6e668a513329653",
+    "skills/content-pipeline/pipeline/carousel/publish-carousel.md": "e9c9a24b5f1688472aa1814b008cfff9eb6e4a0e521b06533d8a09de391c27b5",
+    "skills/content-pipeline/pipeline/carousel/to-caption.md": "1be8edd64337264b57ffac7c8badce68a6088d1586998275e611ed07d75142ee",
+    "skills/content-pipeline/pipeline/select-topic.md": "7ac4d91428e3ff0262515a8b045251e937e7068bfadb352894864016c788127e",
+    "skills/content-pipeline/pipeline/threads/publish-threads.md": "1eac59d8a24c920ed9e8e10a6b5cb3009f0a5da752d7b4190bc996f0be7144c7",
+    "skills/content-pipeline/pipeline/threads/threads.md": "bdec55fbbcc5c36670285d4c0b8f9fb7cce417f16cd148112f5794c1e081b4e8",
+    "skills/content-pipeline/pipeline/to-draft.md": "a74bb635eecfd300517c44559dcdabfbfcad86a052414b60cf5c1319fc9ef225",
+    "skills/content-pipeline/pipeline/to-outline.md": "ba204af5a80c66759910535c79abff286479f600a1d60dd683a9b2975456047c",
+    "skills/content-pipeline/pipeline/youtube/publish-yt.md": "5032e09b4f0929744f0bf8b9b9e6b6b922ff5bf15575f0241daab891df9ce08d",
+    "skills/content-pipeline/pipeline/youtube/to-storyboard.md": "75d7f1d85499a79b3c4dabfc1522b3ec1152db77a34e75eade6ab0568de178cd",
+    "skills/content-pipeline/pipeline/youtube/to-transcribe.md": "eb5a9b205d064e70174d53c1fc115b26092dfd79b423cea7925441b6b82994d7",
+    "skills/content-pipeline/pipeline/youtube/to-video.md": "c80eebd94c736f4f0d6a988864cb07a9fd60dac23186a41b72e2b27cb953b9ee",
+    "skills/content-pipeline/pipeline/youtube/youtube.md": "cfe5f9992f1f2f671f745abd5f4dbe39473d15d4190b301e4f312fd84b4f5919",
+    "skills/content-pipeline/pipeline/youtube/yt-caption.md": "46f4db753c2e35c2da3f9209ce95d4c1df655b0ee22bb764f3b106414d8b1661",
+    "skills/content-pipeline/SKILL.md": "73fa81978942f510921ca463d2a95b33719b42a1f35fec25a662293e1b966bee",
+    "skills/copywriter/card.md": "35f8497ed9069da108002b233a276878626a4da0d1432079f3ecebb409e4d26e",
+    "skills/copywriter/SKILL.md": "ddbbc3443ff546f9ceb228386e748f3c595c2f36906bce9853ca2612c5c46837",
+    "skills/d2/SKILL.md": "b74a2cb0682a9f51e0bfe191e5259348f5f2783430d3d155ebbf09d06c0ba97a",
+    "skills/daily-ship/SKILL.md": "87c792653589662a1a97eeb90ef3ff7d520b4d7d0b2b948d124242eb4f6b90d5",
+    "skills/deck-pipeline/card.md": "0027c43cb1650abe4df3fec4567ad0e5c6a8fd799b8571241fa526dcc98db998",
+    "skills/deck-pipeline/SKILL.md": "ebe193f90715e1b82fabc5dc347f4ea2b28a772047269678bc18aa6ae6aa76ba",
+    "skills/designer/card.md": "20784b4c196ccccc610c377b746398eaad74d6eb63bb2ea1c719199f180a19fc",
+    "skills/designer/designer-manual.md": "d2ff60855d503cb3f22ea568dac5c193ed0701d90b992bad5601a7c43f17b75a",
+    "skills/designer/import-cover-styles.mjs": "24a2422149446d7c1dada34d6c6e76d0561fad925f48d26c03f36a3ce44a99b5",
+    "skills/designer/layout-language.md": "f6b67a864cc3a5a54df92ffcfbe79204b3eb5fe9a0bc43c280b5eb55df7d5ec7",
+    "skills/designer/layouts/asymmetric-prose/_baseline.md": "758bc74233eea2cfeaa3d0aee21620bca966423a73930786d2f846a7807fabef",
+    "skills/designer/layouts/centered-ritual/_baseline.md": "68a04c68df3cb19559ae9f70f757a99e551dc11be92d484fa3495db3aa1e7c0f",
+    "skills/designer/meta-language.md": "7fb4a9c288c7d968d62fbb9e5f7f849bd2c0cbe854053ca978bd670b35972618",
+    "skills/designer/scripts/mesh-gen.mjs": "884c96d4538310010a97e849b4193ec88132a22176e5275e11570d7e6c766702",
+    "skills/designer/scripts/package-lock.json": "bf6e13de7c8e1325f6fb8a317e521bb98190ee133f51bc41708f822e83bb7bdc",
+    "skills/designer/scripts/package.json": "cf11b955c9d7161c768446c34b0ee390ad01ad18105f0b37ffa640bb983859ad",
+    "skills/designer/self-check.md": "83be511e59761dc66a1245d725f81a4981264038c00d6872218dd6344847aa81",
+    "skills/designer/SKILL.md": "56cd77dd9c4b6960c98e7b8125ad775ab2605771f00b51c94764bc8cee580d61",
+    "skills/designer/styles/candy-pop/_baseline.md": "6c03c5f0d6160caa31f80bf1506c4cdd88637716f4c3f513bffa8a436241197f",
+    "skills/designer/styles/candy-pop/cover-reference.svg": "4c16089fe347bd768f8dd12f576bae9bef258a6b0c550d17835142c94f21981a",
+    "skills/designer/styles/candy-pop/post-claude-designer.svg": "d7f4bbe7680c67e2d26e9b6b5dc1eec0ba73ec24c9f82c31367a49a6fb8b282a",
+    "skills/designer/styles/candy-pop/sample-slide-16x9.png": "97730faad118afc3f2be15134fe26e1070d8b508c5d72d967c7323339bd47224",
+    "skills/designer/styles/candy-pop/sample-slide-16x9.svg": "4c919e44f73a051dacc9167208eef47d4761a6dbdd76321f9aa6f8cd654ac2eb",
+    "skills/designer/styles/candy-pop/test-product-cutout.png": "581de6b1c2356f999d917d124e4ea6c958a3c16d112c00ae12724f23e0da2894",
+    "skills/designer/styles/candy-pop/test-product.png": "801031a5f6afbd8b87545fc6a4e7e38a5c5c5ed231d1d577cf20a340a71c08b7",
+    "skills/designer/styles/classic-sage-editorial/_baseline.md": "2069f49256ccd1bfed090587cedea8f31478ff31700f3836a6739e8006f8a225",
+    "skills/designer/styles/classic-sage-editorial/png-card.md": "7efbc0f789abb7e0ca284d03dd367cb07390545cc446348ffa052989a449c628",
+    "skills/designer/styles/cream-beige/_baseline.md": "06293cde75bbdb86b173a30f1258c2959cd9a11448ae3bbc5e84770846c7b841",
+    "skills/designer/styles/cream-beige/cover-img-01.png": "d8d764f59831ad67afca316564e9e21deb2af3ab02874fcca37481cefae4c3be",
+    "skills/designer/styles/cream-beige/cover-img-02.png": "656167e160122719ec6d63b45ecb5b03cdb4be8e3002aeed9e223b844b8aa187",
+    "skills/designer/styles/cream-beige/cover-reference.svg": "70a4a61a5e030a00619bb43faea67d1ded079c6fd5381c10f9ff641b9b633c82",
+    "skills/designer/styles/dark-tech-bold/_baseline.md": "cbfb79f0bef59c4936e4abcfb9c16b4c4a2f9dfe6d77952288141da7da515d1a",
+    "skills/designer/styles/dark-tech-bold/png-card.md": "12d3b4419135742898d54c7740cfa77e5c825a73b1a1cfd35ad3de93e901a642",
+    "skills/designer/styles/dark-tech-bold/refs/reference.png": "5818516d44e8010e9902e1c9e217a0072422459a959175ccdcede9cc1434bcc1",
+    "skills/designer/styles/dusk-haze/_baseline.md": "b3c24f35aadc38c09de66c8fa0d99695632dbe4c0d3825fddfef3e4b34fb9aa2",
+    "skills/designer/styles/dusk-haze/cover-reference.svg": "f8b67ed56b9d9c139cdc8d7bce864e4f9f3468caa5f92fb2ec756438a7846f4a",
+    "skills/designer/styles/forest-amber-editorial/_baseline.md": "ce4eb6a3116cf9608450ce798fa30e12c97736c886348773a1dc13c218f90f9a",
+    "skills/designer/styles/forest-amber-editorial/png-card.md": "6afd0564e750f9535ab450bf35c50a40752cbeda3e251e4b753ad332a0fbe7a4",
+    "skills/designer/styles/forest-amber-editorial/refs/README.md": "1824d24549590f21eeae5e8a54e6b114927db16decd1c57f93d0849eb772748a",
+    "skills/designer/styles/literary-warm-photo/_baseline.md": "c4085567eddeeb3132760630128cab098d18659f909b23189d512752e0f13bb4",
+    "skills/designer/styles/literary-warm-photo/png-card.md": "8ea7ca933001397914cf52828e750f4461e55f6668e9d734347955eb1b361b3a",
+    "skills/designer/styles/matsuri-summer/_baseline.md": "648fa25c500a079b4a9ddf8e2f4556015fde3040badf770ca29a1c49e963f1bc",
+    "skills/designer/styles/matsuri-summer/cover-reference.svg": "b09788aa8990eb177168fbe051a65d6765f33fb7dedc763b90bcfb5700205c30",
+    "skills/designer/styles/matsuri-summer/kakigori-hero.png": "15e4b05bb7c9f4997a73a3c65452cbd8991f253f3f57670fff3d974200bb8a6c",
+    "skills/designer/styles/neo-brutalism/_baseline.md": "8316694bf80be372655552593bbe84e809fdf724b496ed9d5b7c3df7cad5355e",
+    "skills/designer/styles/neo-brutalism/cover-reference.svg": "c688ee87984cf10e30b4aacc84313bce72cfe88bf7ad1a623b27622b87c7e23f",
+    "skills/designer/styles/obsidian-purple/_baseline.md": "6f80fd486d3e263f1026fcf8ec3d37200d415a9cf53c9fce724a8264f9a6748a",
+    "skills/designer/styles/obsidian-purple/png-card.md": "a9ec5f82e47579ea66f07a4cdba8e4637f57a27792549160f1496808815c7194",
+    "skills/designer/styles/purple-gradient-post/_baseline.md": "8cdf18de8b78c0aae5f48297989ac32bcb5245fc2f75b97f247a743e4a4b3ced",
+    "skills/designer/styles/quilt-press/_baseline.md": "1847fc2f4b952028f2cf5ffcdffe6ad7109254403aab70901267473ad9e954df",
+    "skills/designer/styles/quilt-press/cover-reference.svg": "345ee8e7078d67f76b2b179590dfb2f8bccac50b5d7fb626ca39adb8847f8865",
+    "skills/designer/styles/quilt-press/post-rereading.svg": "0ea829a171e2d95c8e38dbe6f16914800e1535312fe95be8d97eeea9286bc3e3",
+    "skills/designer/textures/_index.md": "24cad65f9b9a978ec3f604fd609dc76893896064580660f93ff745132480238a",
+    "skills/designer/textures/grid-dot.svg": "e7885973385dd32f6d02c772ac1b254bc8e0f8b79041e9521298212daf9f15e5",
+    "skills/designer/textures/halftone-dots.svg": "737e1d52db16b0a81796b11d6ebfc7aaf662bb11df0b53112a376f8adef5680f",
+    "skills/designer/textures/noise-fine.svg": "f98ca925bd9365b0c2030784e60122822e3e24b3696c2b3812d21641daedba63",
+    "skills/designer/textures/paper-grain.svg": "5ce4007d5d3bcd779a92c0f49551cf32072326b61c9130d3d3e7bc62a1869e44",
+    "skills/designer/toolbox/halftone.md": "396d69e0d182a2e1c9f1ee86dda02881297c945446adad4cb918b0e374216139",
+    "skills/designer/toolbox/logo-dev.md": "b3e5f26c151d860755094b083a7fc71e8704a0fa15cfd202f2382e135819269e",
+    "skills/designer/toolbox/mesh-gradient.md": "3bdbf4ba8edc7d24fe9e8cf673f222ee70605c22c5512adbdcfddd876ed12d63",
+    "skills/designer/toolbox/README.md": "6abb464995c30fdfdd11ad625119a995a4b7ff6b091a776f5130c79171bc0ce1",
+    "skills/developer/card.md": "b598f6faddeddd7b78779e4944b007f1ea1683dac7ae1946ca7d2a63d3192953",
+    "skills/developer/SKILL.md": "38086b894b0e7d4be0a931d8d20c655ea7d7eec8fc167427f160753910b441e7",
+    "skills/export-slides/SKILL.md": "ffef2b20c39adcb16ca8f468c574a4dd7131043caecb89e1f61e8797ee7e2371",
+    "skills/figma-console/SKILL.md": "a3981232f122b2a9ac6078e34863980853633cce12ccd1eaa2457a1d098ff33a",
+    "skills/figma-diagram/SKILL.md": "985b2dff17b5c79a207c1c1dbd4c914de24c098fcd7bc0ad8bc21f75fa767545",
+    "skills/figma-slides-mcp/SKILL.md": "d667cf9b615ade3e8d475f35c095eb5b2008aea2e8fcb9750ad974ecc5b1f475",
+    "skills/firehose/SKILL.md": "d3b7b6008336dbaaf14c19ae7cc59f8bd7277f9f0b1da78c25efc4fbf6ebe9dc",
+    "skills/ga4-mcp/SKILL.md": "c1af0145414f54847fd9ec5de6a54be9c466a7be4f8e8b68a61ed10c1afce9c1",
+    "skills/gpt-image/SKILL.md": "256ad3b12086c6b97e8800563d04db6c225e7271c2304bf85972b2361c6b9e5a",
+    "skills/hub/SKILL.md": "502bf2f3cd44de9940a057dc45413152fad1f38aa7762f900e4f789e85fe5299",
+    "skills/instagram-api/chrome-setup-codex.md": "39720f92651d8149284460ddb1f110650c3b3126126c231cd39148a4f1ae6ef6",
+    "skills/instagram-api/post-instagram.md": "1b286d6917c1d1b1cbeebde0087f12ddfd03dcd584a3c4d312259e3e46952981",
+    "skills/instagram-api/post-instagram.sh": "630907f2e9fd5016bf729e15d201b372db8510bde7dabf1c6c78dda9f172fd8c",
+    "skills/instagram-api/setup.md": "331c6f57725e2aad9ec7dabcc0de59bdccb42f6bd0b25006c7bd3f76817bd806",
+    "skills/instagram-api/SKILL.md": "342c0847252a8eff37d94264b75e0dfbe2c4a0b906ecdbd6c1d865eee68031eb",
+    "skills/librarian/card.md": "03c5935478ee93295a8f4519b54f1ea9d720ae43a34a801cfdfb43f692a48f31",
+    "skills/librarian/SKILL.md": "5d64584e239644a93ef57e2aa2724f7fad1eda859d40742cd021aa08efca13c5",
+    "skills/marp/SKILL.md": "a4ad8a8ed2d91fbb0b776040d2c367643c4e8a16b20c4601c2d39d4d38596325",
+    "skills/nightshift/SKILL.md": "b483ed5cb763a2d015567dd64bd5e6e3caacdb0a26152a8dd260d580f6609af5",
+    "skills/notebooklm/SKILL.md": "7dd78535b13fca909ed13a817bb99ca5f31dd9915a95151f90bee06aabf2fe91",
+    "skills/openslide/SKILL.md": "adfda771ebe6f036af47c082f465f957fef8266eb167fbdc221d9cee7da854c2",
+    "skills/quality-gate/SKILL.md": "5682c579e07193060f1fc7f3fda4f90f1a66366b927f77e8f22bb0c10596553c",
+    "skills/researcher/card.md": "b8739acaba129082a642a26bc9f80e43e0ca3ce6b654f539eb5c605682f86296",
+    "skills/researcher/SKILL.md": "ee34e4516c69f834c1b841428306372345e950b9445973bfea902c97f87193df",
+    "skills/review/SKILL.md": "f81d04a6eca30d32876d178d2047c3c9eb159ff72b846a2f9eb2a716b6c252f0",
+    "skills/salespage-pipeline/card.md": "dccdf2b412dd6f9557beec425de1e271a12edba7a46328a4020ea6aa288899ac",
+    "skills/salespage-pipeline/SKILL.md": "9f40d76803f1cd20a227dc26debb507216bad656646a4915f5a485a257f00822",
+    "skills/seo-specialist/card.md": "42621906ca22f020a68531b773ee484b42ad0350dac4af56a69e1e2833c90d01",
+    "skills/seo-specialist/SKILL.md": "97e42c0b87861a5cb960e8652e45bd7e9b47ae598e29c77b744040637b6322df",
+    "skills/sessionlog/SKILL.md": "c676ae8db994e6863b153317ccf19d78e4bbeb85732ba96ff0aa9cc807aba94f",
+    "skills/sessionlog/貼上式問卷.md": "6833155d449af690e2eae5d0734aa8879b5585e45cc7d8969d87b6d480cc2bd7",
+    "skills/social-post/scripts/outcomes.py": "2c09e2a59663e375c1ee948c806ab28decfe68d3648d83c582cf8b75b13bf805",
+    "skills/social-post/SKILL.md": "ef65b2bf36983e2d51fcece8e91627473267d4e66c9bb46097d70ecf48d31e9f",
+    "skills/social-post/tests/test_outcomes.py": "a60078ad1819b1e723ad50d9bdd0c21f20e41b0370a90f62fd43dd2d9bc0c4fc",
+    "skills/social-post/upstream/LICENSE": "0c06c0405b3d6f289800831dd68b329cb283c544cc1ee454d9b19e0e54b1e6d9",
+    "skills/social-post/upstream/manifest.json": "b3e321e2e43d2dedb6392b7488ff74e007b08501c16a46af87ab29f85b2dbc07",
+    "skills/social-post/upstream/scripts/log_outcome.py": "9b5cabe3e55a07f979025e6a0d7893eaa9d48fb64f29e096060cf51d2f234d84",
+    "skills/social-post/upstream/scripts/social_data.py": "0fb2578f0739779859971de357a94f7ba69977f435c5c24208f2cc5c332538bd",
+    "skills/social-post/upstream/scripts/social_post_analysis.py": "0b0536b0afc953ca24eec270c4036fb5cef3fd70cc618102993e4c164280c819",
+    "skills/social-post/upstream/scripts/social_store.py": "af3621a2eb362b7e64294a1fbab38303f767caffa16e9d0761631833ce196510",
+    "skills/social-post/upstream/scripts/social_validation.py": "cb0f07c6cd9cf60b42aeb26b4803bf34a850d44a0bd4a214eaf0f581d7f6c56a",
+    "skills/support-agent/card.md": "271c3eab721c5e4af414ee2f6a0ab6f00465d742f10a81de971a65e35a5a3c36",
+    "skills/support-agent/SKILL.md": "3b017d82d8f0f632d448ea35c0e645084a9030caa5dc27273de1013a79c0fdb2",
+    "skills/svg-diagram/SKILL.md": "1a53787d7603595f91a941313bafb373434526875ff652fcffa9697620e4fb6c",
+    "skills/svg-slide/SKILL.md": "23f619ecc0abad443002f77fd51e429f4dd44d9c93b20a95efaafb7d1ad5f3b2",
+    "skills/threads-api/chrome-setup-claude.md": "e9413e306cd5be1ce222746300ed8bcbe434e3a0097d1fa4e3bb8956e106bc3f",
+    "skills/threads-api/chrome-setup-codex.md": "ca12d4864981b0697ebe919b0f4a547cca78efb32f6590edeaf69a26f4560d70",
+    "skills/threads-api/post-thread.md": "9d5bf91d65bcd07a7ec98c25409cb9bf3e2fae31b2894330c384e5633031f9ee",
+    "skills/threads-api/post-thread.sh": "2f1ebcc41b0b67bddbf93f2e615b008baf9d9f758e724a949f5844d006865889",
+    "skills/threads-api/setup.md": "c2199bc0e5e2f76a321163946bf3001e336344564c75656685c604514c28a92d",
+    "skills/threads-api/SKILL.md": "f9b6f2eecd92f2eea1f7c56f8563e0f962b5aa4a86f1762478cc43a3b9d2d805",
+    "skills/ui-ux-designer/card.md": "bc79fda03b5baba540a7bb1949399f915e3a57eb47c67283947c42f64c5d23d8",
+    "skills/ui-ux-designer/SKILL.md": "b338f32e170776b6e00a9a439d4237ad4c42c33a08003f0361f04a8512cd1b4a",
+    "skills/update/scripts/update.mjs": "094fa0462412f65b34ffcc29a6d6d1fdc16c2ccd8e5aa3319fa1164b7b50ec39",
+    "skills/update/SKILL.md": "de5d075deb2e51f9b67fb9c1d64ff5ab3b085c9cffc4715ff2ea4ec7f715d3ea",
+    "skills/update/tests/update.test.mjs": "2c0f8d3af0a3e7749b336508acf00f68541dcfa5d0426d39f816af5755bef094",
+    "skills/vault-edit/SKILL.md": "88c2068710e1fc31e908211c604a308269fca625dbcae0d4c55e2a31733bb902",
+    "skills/video-editor/card.md": "6af4aef6d9679424a394da69d9c15b5df7f88fa455451856be33bf03936a1fab",
+    "skills/video-editor/SKILL.md": "c7d18f96670ee7d1275a2aa26e740d2baa768eadc4b1c276bb7c75c2ce66baf7",
+    "工具.md": "d28c0b4d2be9779a842cb2ae6f1e8760710b0038bfccccf42dc90ae585422d35",
+    "工具箱/README.md": "432374df7d31b66e55c5baa8ff1aa2b61dc44e69770b41a9d39bdeafe4c5c7b4",
+    "抓取紀錄/README.md": "1a566f185a022378141bfb2c68ed4429823769ddac15bf0a17f07933e743d2fa",
+    "晨報/README.md": "1679f9b2a84fcd2c648d51a2216c1c3a7063979b23da461c0903e51520fe4283",
+    "晨報/render.mjs": "fd5072dbf8dc9d3085a15d4ad9913f466b839dbf418507b73fabad409aac4c0d",
+    "晨報/render.test.mjs": "32bd568a95f2a12cb7b2e7a77fe4f87cbbd49a6db2fd472735e796ef277866f9",
+    "晨報/shell.html": "d89f0d88a70fa159c0ca9cd1dce2da564cf347632264a15cd4bea80c6be48a12",
+    "晨報/心法/Kick off.md": "f20e4dcc62cf54a20984a133b484a5a097fd2d111ffd152177d674fde8381aad",
+    "晨報/心法/今日優先任務.md": "bc7f41ce09a954f9453a11f9e2d30e1c25f0773833e94c96955774975f89f2d4",
+    "晨報/心法/今日建議選題.md": "8ca7c3ba8172220922894d4291383e8ddf9d92d46ff948a4e406f4cbab12f6e6",
+    "晨報/心法/營運數據.md": "b686308d2f68d8057ed4219c6d665bf956256db5435bc425f6611184828d78fb",
+    "機制.md": "0e4d2b01f941421f53f48ab0fa411bb67bdd1180864343f3b23a11af1c39fc91",
+    "流程/blog-seo.md": "eb98e4e102f1a19c9b334f3d26e10fddb78b31831c7929d593e5816268c3b3c2",
+    "流程/content-pipeline.md": "6df949a465947142a4d83fecf8ff624d8217ee4be62f9a51f645599237e8cfea",
+    "流程/deck-pipeline.md": "e92886466391d0ae852b8e38c03dd28793d4a37973ca2367903142c011e7cc4e",
+    "流程/ui-ux.md": "43271530943782354ea6b7fb65baaaf9b549d8926d6a0b837de663c3ed4765bb",
+    "流程/youtube.md": "4149415cc9c313c433dc9c1988f9a3a0c202df081b22c6cbdee541386d24b71f",
+    "知識/SEO-10維度框架.md": "4104ea3d9b708a64b7c522e1b9fd612ecb50721c83cfd1d52511aca02197f2b4",
+    "知識/SEO-GEO擷取寫法.md": "60b057290d212158def1ba911d62f452064c691cbc161a9d3b05238e16f1f599",
+    "知識/SEO-SERP判讀.md": "b57e4dd6fe5e5b94c143d011cd0e9dfccdd5bd4ae88777d9b8668c3dc1013311",
+    "知識/SEO-主題組合與需求路徑.md": "8a27c5ac2c3376ec98e65c4be9e571b6d9d6b44b0dca500b1067e63f941c0513",
+    "知識/SEO-成效診斷.md": "9d04627b8d329b7f653c13acad086b29080111f889d2859c4b0bf7dd8063ac62",
+    "知識/SEO-技術健檢判準.md": "1965971188dd76abfcf5e8b77672ca72613e17187b6804ae18c3e1237e68a081",
+    "知識/SEO-選題判斷.md": "27728dc326f8d320480f96729aa82c23c29abf61a0dec93e28ba4914414deb62",
+    "知識/SEO-關鍵字週期.md": "8db1b7443f0881ea81c494c43512ccb8d6cbbbb029b2269b552b5f5aa2f6c168",
+    "知識/UI-元件與響應式.md": "26a01ea4df817be4e7bc041a6581ba25d3da9efcfe005a5cc605ddfbb05f9c4f",
+    "知識/UX-互動與狀態.md": "dc57dd15be5e26c3ba6811eccd0be4039a87b9798309a4ab5cafd1e98cc32830",
+    "知識/UX-任務與資訊架構.md": "a8fe002cd90eb6d64637df02ff58e390f016bceac68751c7cb1fae53feb5ba5d",
+    "知識/UX-驗收與無障礙.md": "c3d6a4128190c975ac87cc381e996dab2b1670f3296199d2be267dc8ebdd8b0e",
+    "知識/分流路由心法.md": "5e3b44cb5250ba51b5233ddd2a444679965baef2c978adfa35fb6919b5f1eb94",
+    "知識/客服-FAQ.md": "ca1abffe56b7539f86e031ab99f0eccccc179f9e9034c6fcae078d259756825c",
+    "知識/客服-回信準則.md": "823d815646e8b771592cc52af48daca4d511bbb0bd0cfe4fa5ebf4af143e3d2f",
+    "知識/寫作-分析框架.md": "a983e6f81f784722c4c5239b6d40ca9f340ef9bd3b08b7ccb01421166fc0cce9",
+    "知識/寫作-品味.md": "10fa782a418923d4958cfe7477078f16b3bd68c899e8841a6b76be35e3f7a546",
+    "知識/寫作-單句文案.md": "43e8bfb1f8853efbb6ab82e8c5287c6f618b0d62d62284b9276424dd782a87e6",
+    "知識/寫作-標題模組.md": "e91a1873894c48dc04aa590fcf6397683d496dfd3f476d3848b97badc0e95453",
+    "知識/寫作-爆文公式拆解.md": "e430a04e679146114af818286263ac41ec538bc449d0fe93dda1671e0d874146",
+    "知識/寫作-爆文模板.md": "adec477fa462da000a029af3a2c5f89004660a4e77a8195fd5ff4879756f1411",
+    "知識/寫作-爆文生成方法.md": "38b6135b6300fc2fb333a09242435cb06346dc31d89837b118e8e0f66398b943",
+    "知識/寫作-語氣.md": "17fbf26896f9417ecce6afd3f7215608379de6f6a67b7e52865cd486fce37a63",
+    "知識/寫作-貼文寫作模組.md": "a9dc91d635450eb41fe6f2e72696aeb29c6d6fc30d0830c24a8d4f9e72e4d345",
+    "知識/寫作-銷售頁文案.md": "5028cea2ca79f0b621a6f0c4acb0dd901e42a5b22f7e6b64f5b15e207cfbb9e2",
+    "知識/幕僚-引導協議.md": "3dfa08a1866d340bcb2df5775026776d0503943a8fd398653c918398ca2e3e55",
+    "知識/幕僚-發售戰役檢查表.md": "6df81acc6bc4e61a387fedd90dbe2b0bbbce86902127adbd376e132e2d79d01c",
+    "知識/幕僚-通用專案三問.md": "cb8a4eb85192134c33cf09adfa915ccad3bceb3b1a551bc01690193acb9d4b8d",
+    "知識/廣告-切角發想.md": "0bde209ab268ddcd87c3774614cd7bf7411f66fc5071522fb021c5d7e5f715c0",
+    "知識/廣告-成效診斷.md": "d4557b677f1712fd0f16a299249722f3ff9895240be2d2f514f2a2c92360142b",
+    "知識/廣告-投放操盤.md": "0536e111702d939f84b8f5906343e798b20995330087c1e29d57f8b0a6d4e30f",
+    "知識/廣告-歸因與跨源驗證.md": "e846b728d8e515cd7806e9af476071428551be27bc993401a180dafea0f901f8",
+    "知識/廣告-獲客策略.md": "11f245e33afc1800090e55d5dd52c125f50d005107c03f17375b718c77208f6a",
+    "知識/廣告-素材製作.md": "2258e97d0d29c5d456b11d96f84f953c1c28d0d93d5ae23fb219b00ac94f5e43",
+    "知識/廣告-轉換文案.md": "6851acb7805ef09bdef6ecfeb0e98431d923eb96d05eed2a484fba349e1cfef6",
+    "知識/思維-切角思考.md": "494351f80df0ccf255b202229cce4512f478828a907bc421f71cb882679b120f",
+    "知識/材料判讀心法.md": "ce8abafe76afdda7191ab4e66b490cc0dc5e434b8d4a1f52ad25b40f34b3e070",
+    "知識/知識庫-索引維護.md": "4f864efa365a5b6bdafb6ab1f8fb51d8568710e1a5a644612d390a6674d08d92",
+    "知識/設計-品味.md": "46846015daf1f4ff6e1ba71fd245352d7bda5f5e309feaa156859c3a4d3ec26c",
+    "知識/設計-簡報視覺化.md": "9661b2d8475944504b5b0205dbf77b84ca53296d3ca61acaebef88e8aa0252ed",
+    "知識/財務-對帳流程.md": "2a00f695835ebc9668b7a53dc3ec4d5402f43d97d594681fd712cf2d28b05027",
+    "知識/財務-發票格式.md": "89b6bf1154ce742f220899378cc961216eb277f9328464d9aa1b702b91c45403",
+    "知識/載體-IG caption 模組.md": "009b66bc19e9918c7d18223ca6e82c98676d9a9fac040c1326da3b67920cbbb3",
+    "知識/載體-Threads 模組.md": "a44a8440bf1a1449ba705bbce85b35d6c7cc0d4fe791a1a01dda8f7bc10175eb",
+    "知識/載體-視覺規格.md": "10c0d21c81dd903b98bb82dc2419201178db81d16275e6c8397fbbc90d331bca",
+    "知識/連結器判讀心法.md": "e0b810454f3e06dbeac082444cc3e1f70c4267d89a25f2845370b0f9d71fd558",
+    "知識/銷售頁-功能列點.md": "88f642bd42037865bc720cbe0cf5489a934da315298b2b1f3ddd8e9af33662dd",
+    "知識/銷售頁-品味.md": "070f65775bd5df5ea7eb95d08ed4011df6c078b20d8ffb59089d4d42527cf04d",
+    "知識/銷售頁-寫作自檢.md": "6e51ebe163342dd851333209e2e128e0b478648cbf68abc282361aab95ae9fae",
+    "知識/銷售頁-攻防分位.md": "787f2ad639941437b0a36c168769036e8184599f969ade949dfd49a280db4e86",
+    "知識/銷售頁-結構清單.md": "e2652eedf479b911675da79b326289a397872a84b42a26a331da62216ca55f7b",
+    "知識/銷售頁-設計.md": "9dbf14e9ba6170d9b752d70889c17efb661a4415d35615ff40d232f4196080be",
+    "系統流程.md": "ca97d70bdba6b10a261ef4416e1ed7bcccc208a929d564857a1d0f334722a1b1",
+    "能力地圖.md": "8dc30db7e7cf2b495b8077dcdf08654b7aa618d4ef4159ca3bb67789eee43d81",
+    "週回顧/README.md": "84064cd86faf96ebee1895c4576d0cc95982fcebc43f95fd7bc6c99c0a52d2bf",
+    "風格/bulletin-red/ref.png": "4736a1bca32450ab836a01ad037ae79e89d56083b09579ba3e45a29255a9994d",
+    "風格/bulletin-red/sample.html": "0b87a95b4353a3948969a15a575ed01b6c82ee6dfdddeba03f676653d01eebdf",
+    "風格/bulletin-red/準則.md": "3a8cd5d4bbb3157e5e848657d1aac2cf1a961826f6ae17b1abff3d3188d6e515",
+    "風格/creative-mode/ref.png": "e55d3b8c3194a68a043377c561476136134b8d73a99cd399d8d169425c36f046",
+    "風格/creative-mode/sample.html": "8aa95831e0726b72f75418f8dd9c9c18134ee9ca2b70f9383d1b324bc3f86b6d",
+    "風格/creative-mode/準則.md": "421d0524fc5d201ac907e72f478737a040873522df95dd3c1c14d1b251f4b4b2",
+    "風格/daisy-days/ref.png": "75baca72c236560ec5a4495ae1e366dc745529927dbb3b62ef516365db77513f",
+    "風格/daisy-days/sample.html": "c6daca5a279863cc3e78a0a2f6f929347d53097f8ab539da3ba25ff88321e198",
+    "風格/daisy-days/準則.md": "70819b2ea51d8d94954bdca2acc919b375a3bf43827461a8fe6a0e50701c33b9",
+    "風格/dither-blue/ref.png": "0e5763a95955882f352b602619e0d05a1e9d7510ae239e5757cdc0fc752317f5",
+    "風格/dither-blue/sample.html": "b76da09397f2f81b0dbb80c109791e576b1a5e7e18865d99dd2a4b94983fb79c",
+    "風格/dither-blue/準則.md": "d3d564805aba4643f68eb35584f9824423593e6d81428c3a3e70eeffdb63718d",
+    "風格/harvest-orange/ref.png": "bae1ea128bfc1f5e8ebec1dcd0de5a7fbd98c92005cf562a14fd1a5ee783103c",
+    "風格/harvest-orange/sample.html": "92a1773923513f4eaa5db87b09ac4f8c54794929eceb5800332cdb56274b2819",
+    "風格/harvest-orange/準則.md": "608b63f59d07548383fffc35cae2a9949093864aba7d0a05b3d86554f326c045",
+    "風格/long-table/ref.png": "0e3e8f63445adec31437d1e5e9076e6811555f899f25ad988d22f79c2d804a8b",
+    "風格/long-table/sample.html": "e7ac0c236e0bbba30b4b8dae8264f5a55cb703866d33d3047900d780a50dec23",
+    "風格/long-table/準則.md": "90a421da0840f6b1c57e34f6a88ff05cfdb33339c1a5598bb114338c6f9ccd1a",
+    "風格/marker-hand/ref.png": "595cfc32df273ed30b760e660a64f43b0e4904e8d79ad910c35433d30489755a",
+    "風格/marker-hand/準則.md": "463dc600f9ddc634f7c120b8182849bbadfcd4ed079aa6eca4dde51f1956af6c",
+    "風格/neo-grid-bold/ref.png": "d4d8421d0816cfa500d50aab05c0d5e6596465b2547b62241b11267ae6b55bfa",
+    "風格/neo-grid-bold/sample.html": "e66baa604cf00d7c6d3e3d62b76fc85dcaddf4c84bd20b9eacdaa8c88bc238b5",
+    "風格/neo-grid-bold/準則.md": "e265a71f0565de3c1645689dd91c48abf2a707a4dc67474b715cf9bc939f0ab2",
+    "風格/pixel-quest/ref.png": "ff1a97acebcac8b6ca01142e3d466b13780eacff3b7c7ac74990f6856220d7b9",
+    "風格/pixel-quest/準則.md": "b35a7621156cd9230159a7e72f9914723b96860be53da0307e9c1a5d876c2fc2"
+  },
+  "origins": {
+    "迭代彙整.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "d7096c52e8a2c70d463b23328460eace3299486042158fdded05a287fa013cf3"
+    },
+    "memory/MEMORY.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "9bb50780e4fd5bab96a3212fb602fb30fb3c8b0e42d77fa084be45eb72d12141"
+    },
+    "北極星.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "06a3a97c5660df9616f287a2e174c5d8d3c60d0020258242c3942c3823e5db0a"
+    },
+    "input/README.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "3940c0be3d8b54c4ab7ce649d38d74b9ce5a19ecacd1e6f093b3fc4fee79fddb"
+    },
+    "帳本/收支流水.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "12011c6dc6f2e3b959c5c01548000b31b3e64f5263e61736cd7b5b013171d44b"
+    },
+    "帳本/未收款.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "286fdd9f95bde45e85b2acae3fb24e866aa431142e605e53f35d3023409a38e0"
+    },
+    "帳本/客服單.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "942c6a226f5153b9cd6095521a73429218f22ec61ac6abb7c13e30555d3742a2"
+    },
+    "抓取紀錄/README.md": {
+      "source": "current-worktree",
+      "sha256": "1a566f185a022378141bfb2c68ed4429823769ddac15bf0a17f07933e743d2fa"
+    },
+    "抓取紀錄/2026-01-01.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "04b94157fc6427e8975772d16ca0e7462d8344f92090f6ae07ce25818dd0f9eb"
+    },
+    "HUB-archive.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "b4a4d0e27119c94d2a02117e861f884bd50b5a302980797f584f26c7658d3ba1"
+    },
+    "更新紀錄.md": {
+      "source": "portable-overlay",
+      "sha256": "cdd98af09c9eca3266667731699f00caf421f4b59355ed31ab89207d4e61194c"
+    },
+    "Content/選題.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "路由.md": {
+      "source": "portable-overlay",
+      "sha256": "e268c09d54656c5bed5e0ded01454cb393ae76064bf514f2374be286520b5fc7"
+    },
+    "資訊源.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "961524649fc1c33dfcfe6495684dee9d17a6b4c72a51878816b6610b533c266a"
+    },
+    "專案.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "f3f00e2b106907893299700900d1d2e0195d5fc6b28e79ca449eb7ec790437ad"
+    },
+    "週回顧/README.md": {
+      "source": "current-worktree",
+      "sha256": "84064cd86faf96ebee1895c4576d0cc95982fcebc43f95fd7bc6c99c0a52d2bf"
+    },
+    "晨報/render.mjs": {
+      "source": "current-worktree",
+      "sha256": "fd5072dbf8dc9d3085a15d4ad9913f466b839dbf418507b73fabad409aac4c0d"
+    },
+    "晨報/shell.html": {
+      "source": "current-worktree",
+      "sha256": "d89f0d88a70fa159c0ca9cd1dce2da564cf347632264a15cd4bea80c6be48a12"
+    },
+    "晨報/心法/今日優先任務.md": {
+      "source": "current-worktree",
+      "sha256": "bc7f41ce09a954f9453a11f9e2d30e1c25f0773833e94c96955774975f89f2d4"
+    },
+    "晨報/心法/今日建議選題.md": {
+      "source": "current-worktree",
+      "sha256": "8ca7c3ba8172220922894d4291383e8ddf9d92d46ff948a4e406f4cbab12f6e6"
+    },
+    "晨報/心法/營運數據.md": {
+      "source": "current-worktree",
+      "sha256": "b686308d2f68d8057ed4219c6d665bf956256db5435bc425f6611184828d78fb"
+    },
+    "晨報/心法/Kick off.md": {
+      "source": "current-worktree",
+      "sha256": "f20e4dcc62cf54a20984a133b484a5a097fd2d111ffd152177d674fde8381aad"
+    },
+    "晨報/README.md": {
+      "source": "current-worktree",
+      "sha256": "1679f9b2a84fcd2c648d51a2216c1c3a7063979b23da461c0903e51520fe4283"
+    },
+    "HUB.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "56ea2d389f79b7dab8f736b72af458ca333f79fdb6dc4d206bbd0315aa0a7cc8"
+    },
+    "決策/決策索引.md": {
+      "source": "factory-2026.08.29.1",
+      "sha256": "4a697eb72a09552baa54243343c5b94e45a012d7756444317900ea0e79930bfa"
+    },
+    "資料地圖.md": {
+      "source": "portable-overlay",
+      "sha256": "efe039a751dd2cab78a40c52af71622b728b0e6300070d44ffe965e70ea11834"
+    },
+    ".claude/hooks/audit.py": {
+      "source": "current-worktree",
+      "sha256": "232d85050f0bdb350620c7cf9214aa853fb8e78b9bf7ddde6c2dc18e365357f2"
+    },
+    ".claude/hooks/extract.py": {
+      "source": "current-worktree",
+      "sha256": "ffcff6936d4ab6c173929ff0e4aabe4b1100b7fd5d5c4a10c6d6eb4153009213"
+    },
+    ".claude/hooks/install_claude_hook.py": {
+      "source": "current-worktree",
+      "sha256": "1b248c9e0dd254ce049b8ba9006bb8e837cea49d32ec1f93cee1957d087e83a4"
+    },
+    ".claude/hooks/install_codex_hook.py": {
+      "source": "current-worktree",
+      "sha256": "949fdd501664afa5dda272bb8e499d906fbec9730145cb30d161b4bad40096ee"
+    },
+    ".claude/hooks/run_hook.mjs": {
+      "source": "current-worktree",
+      "sha256": "2750ed0a825c9dc0e23a00cee34db1272f7cf19a1156b3e5a9aed0eb0d21c4f7"
+    },
+    ".claude/hooks/sessionend_hook.py": {
+      "source": "current-worktree",
+      "sha256": "5ee4e7bcb08ca156a4cdad559d3c1e3521c911248f2ca4d62ddb4af754f20fcd"
+    },
+    ".claude/hooks/sessionstart_hook.py": {
+      "source": "current-worktree",
+      "sha256": "1185cc69efb6367624f895b91291cce6638d68f8e9fa9289e10775895ed63300"
+    },
+    ".claude/hooks/tests/__init__.py": {
+      "source": "current-worktree",
+      "sha256": "c680ae95553077b6b883faf2641c4b82e64386d77e059d4e588f5e8254fd4408"
+    },
+    ".claude/hooks/tests/fixtures/hub_broken.md": {
+      "source": "current-worktree",
+      "sha256": "f6d805952db359793d976e067fea83e425b7b28e0b24d674077d762e69297f84"
+    },
+    ".claude/hooks/tests/fixtures/hub_green.md": {
+      "source": "current-worktree",
+      "sha256": "e71676de6d6f95d779777bfd3e3f130125a083b45864b4d74d1766b74cb6fda6"
+    },
+    ".claude/hooks/tests/fixtures/hub_overflow.md": {
+      "source": "current-worktree",
+      "sha256": "e215ff612172f16bb03158b26bfecf2f812402c557edad13235925d87b350c4a"
+    },
+    ".claude/hooks/tests/fixtures/hub_oversize.md": {
+      "source": "current-worktree",
+      "sha256": "484d859b6436777da390bf5aa9570d3346bbd5574b5213323c395f73572a57a9"
+    },
+    ".claude/hooks/tests/fixtures/hub_sample.md": {
+      "source": "current-worktree",
+      "sha256": "d2b0179629e8b4b31a7aeb19945463348fda105ed396d281e12785bdb2338734"
+    },
+    ".claude/hooks/tests/fixtures.py": {
+      "source": "current-worktree",
+      "sha256": "20881ea45000a391aa8fe49c61790a990180b3d3bcb1cd96eb9bd02e56f5b9a4"
+    },
+    ".claude/hooks/tests/test_audit.py": {
+      "source": "current-worktree",
+      "sha256": "510eaae62962c2453b8721b22944486e91d8ec73750c59da9886850bf19bc834"
+    },
+    ".claude/hooks/tests/test_extract.py": {
+      "source": "current-worktree",
+      "sha256": "c5669558e63121c19cd73990b8d34a62b7674b59d03e1ceccf0dd1dd28c06fe3"
+    },
+    ".claude/hooks/tests/test_install_codex_hook.py": {
+      "source": "current-worktree",
+      "sha256": "2e163b51ff4feaa538211a152a2344080bedfb96d52e80501a0447d571401818"
+    },
+    ".claude/hooks/tests/test_sessionstart_hook.py": {
+      "source": "current-worktree",
+      "sha256": "4a7b777b236123146663d04e034fac1404b25a7fabe995cd0a7d3f2efbbcfc46"
+    },
+    ".claude/settings.json": {
+      "source": "current-worktree",
+      "sha256": "e4dc651c91f94f30934565e1afad106010e1fa25c7628007b96afa9bb6fe9168"
+    },
+    ".gitattributes": {
+      "source": "current-worktree",
+      "sha256": "2b5ece81198078767fe4b07a806663f92306f91e87d05dedec096eabedbcebf7"
+    },
+    ".gitignore": {
+      "source": "current-worktree",
+      "sha256": "7487429a8a20f40d1e8ba9abe4f1222b199bc6bc47ccff385ba9f1e88d6783dc"
+    },
+    "AGENTS.md": {
+      "source": "current-worktree",
+      "sha256": "9a3163f4bfbbc4ca1fe9f8de8e28bed7f0f71c102a0ea4cc046e10194778712a"
+    },
+    "CLAUDE.md": {
+      "source": "current-worktree",
+      "sha256": "38082532d6bff995293992b0ee156e0c6a2de5937a62687d0f714ec2db5d5539"
+    },
+    "evaluations/check.py": {
+      "source": "current-worktree",
+      "sha256": "591fafe4c2286c44fe4309a60242148aeae43d2f861b5f40ba87373c9087033f"
+    },
+    "evaluations/developer/fixtures/checks.py": {
+      "source": "current-worktree",
+      "sha256": "b71558adfdc4d25abd1e12151e777cf273634ec8a7c0f3140864b939dc209736"
+    },
+    "evaluations/developer/fixtures/sample.py": {
+      "source": "current-worktree",
+      "sha256": "96610245212fa433d2bad49bc97c5f3827992cf7b4abd3287365303d2f8ff7ad"
+    },
+    "evaluations/developer/README.md": {
+      "source": "current-worktree",
+      "sha256": "536e4676990c4cf4504007dcf6ced52269944d22c1475e6cc3df47af5cc46463"
+    },
+    "evaluations/developer/scenarios.json": {
+      "source": "current-worktree",
+      "sha256": "13f5eede89dd64c15bbfd575a4cd93e3973ffc2ea8ab63bfeedb87c68a666703"
+    },
+    "evaluations/fixtures/research/source.md": {
+      "source": "current-worktree",
+      "sha256": "ee661bd78168e802f5bf4cafecc16b4606f08444ae8c6450f2b656c090330868"
+    },
+    "evaluations/fixtures/resume.md": {
+      "source": "current-worktree",
+      "sha256": "d8e76dab37bae98216b1f360cce60bd867ab8b4a2a2bceef4e49545ad273dc03"
+    },
+    "evaluations/README.md": {
+      "source": "portable-overlay",
+      "sha256": "2a32b37034a3624e9d25f0d4f7edd66fa472be9ec267b392f62dda41d4090060"
+    },
+    "evaluations/scenarios.json": {
+      "source": "current-worktree",
+      "sha256": "b2ecd25f0a6a0d66bf01f9e8b14c9a95330ee4eab0ddea4ef4835443e980f420"
+    },
+    "evaluations/test_check.py": {
+      "source": "current-worktree",
+      "sha256": "9c4c9fe807e5ae7e29c52b917b60fb29d9ef306cf8f369fc4ca623bb89394600"
+    },
+    "evaluations/ui-ux-designer/fixtures/requirements.md": {
+      "source": "current-worktree",
+      "sha256": "559ab0bcafd8bb46a5fed09666b20248ee9530b8b8cc400fed21389bc9f15f0e"
+    },
+    "evaluations/ui-ux-designer/fixtures/screen.html": {
+      "source": "current-worktree",
+      "sha256": "f7289938692fb59f9dc6688bad6168a6abfe68919b17ec29eb0ce764a79fb033"
+    },
+    "evaluations/ui-ux-designer/README.md": {
+      "source": "current-worktree",
+      "sha256": "17103ea7c7ce8bcef319766d7979f3c39b18a3af8e950ac681a15eb7c8df61a8"
+    },
+    "evaluations/ui-ux-designer/scenarios.json": {
+      "source": "current-worktree",
+      "sha256": "dedca6fbe6003434e868aec8bbb568f5e74500ce08d2c6b95118ed62ab874b78"
+    },
+    "offline/ability-references.test.mjs": {
+      "source": "current-worktree",
+      "sha256": "b761c9be8bdc75347294bc9609a5afca181b26bcbe0e5fb93316af18de899db0"
+    },
+    "offline/ai-one-person-company-logo-v2.png": {
+      "source": "current-worktree",
+      "sha256": "6e2509ced842f6e2fe48f0cf7e90e81c55f7339a009369f0eca963d2a05040d7"
+    },
+    "offline/build.mjs": {
+      "source": "current-worktree",
+      "sha256": "f3fb5a53948b5b43f10fca5e0db427d6edb1e0640348c3967fb0465fb67800c0"
+    },
+    "offline/doctor.mjs": {
+      "source": "current-worktree",
+      "sha256": "8fc1df20eb2c2361e5bec7818a9c8c17ac9cbd1ad27afda04a5a84d9d5c8ecc3"
+    },
+    "offline/setup-progress.mjs": {
+      "source": "current-worktree",
+      "sha256": "3b4860f1584c5b7848c6da8efc67484f7a40a9629ed88af1579f22743ebbdd02"
+    },
+    "offline/setup-progress.test.mjs": {
+      "source": "current-worktree",
+      "sha256": "3e921a1a936591765ea7adac0072432a5567ebfc29c37c26d493a31f55c3aadf"
+    },
+    "offline/sysflow-hover.test.mjs": {
+      "source": "current-worktree",
+      "sha256": "5d953adc504a011026cc0299762dac9b52650cf2d338b86c92aa9aaa07befa49"
+    },
+    "README.md": {
+      "source": "portable-overlay",
+      "sha256": "4b471173191c734435e4975a03fe3b681a4b8213905a0b0146ac1f7185debc5e"
+    },
+    "SCHEMA.md": {
+      "source": "current-worktree",
+      "sha256": "6f8a2bbcb33810ab1bf722c925d25b448f791ea29d7d2c23dba49f9abc1853e3"
+    },
+    "SETUP.md": {
+      "source": "portable-overlay",
+      "sha256": "567124447b44d44d2d31bb91420867fffa8c2a661b3d9d4ed343d3707714631f"
+    },
+    "skills/ad-buyer/card.md": {
+      "source": "current-worktree",
+      "sha256": "f62238743e71e8a886614da660c030a0f40f9b49b33a41ee1c0d422a426043c9"
+    },
+    "skills/ad-buyer/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "2c37b487467fa486c50bb2a3dc36879baff5a5ab0fa0d2eec32ce61ca1c7b53a"
+    },
+    "skills/agy-cli/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "ab5ba416315fd7ef8a17305a2276da55452b08b6e7a45586152e58ffc20cf4f5"
+    },
+    "skills/agy-transcribe/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "6396019f1e485d31c355495434ecfa530593ec99fa4abed4c583d3a44f95058d"
+    },
+    "skills/analyst/card.md": {
+      "source": "current-worktree",
+      "sha256": "7b0be1635777700328bad8993b4b2da6fcd9095c52091ac892abf6873b84f06a"
+    },
+    "skills/analyst/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "d24a1618a1cd5808d6a10234113921703b63fe6c60b2900ea13ca0b8480c7eb2"
+    },
+    "skills/bookkeeper/card.md": {
+      "source": "current-worktree",
+      "sha256": "03228aae5912629ddbd2dd570d3c4cb62d2cdee886c4b3e0aa3c999aa0e31304"
+    },
+    "skills/bookkeeper/quote-template.html": {
+      "source": "current-worktree",
+      "sha256": "cd0b067c89e85ec2530a34a3768c8f767bcfe6825f9249ba8e671364f3fc4d4d"
+    },
+    "skills/bookkeeper/quote-template.md": {
+      "source": "current-worktree",
+      "sha256": "71f0d8494fc225639b4c8d0f221fc3d61f6e4e9f9de15b29db74bf05f57f23dc"
+    },
+    "skills/bookkeeper/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "9370d8239b87c1152a8ee2b3c4cebca1383ffbec30076cdafeff6644e26b3fe3"
+    },
+    "skills/brief/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "dbaca28b6c569114bbf73de644700dceed8f3d942c0ef9a8f322dc8f06733c75"
+    },
+    "skills/bug/scripts/collect.mjs": {
+      "source": "current-worktree",
+      "sha256": "39e84a4a008b01b961857d25d8ee81cdf149a67ad0179052da50037350422298"
+    },
+    "skills/bug/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "abc00606197e79bde97a326931e50e0c821478ce8595dd55452341413eb12547"
+    },
+    "skills/campaign/_template/campaign.template.md": {
+      "source": "current-worktree",
+      "sha256": "f46c396f32b89be9d8c57b1f5d999f6d1d65afb7f8ec6d0cc5634e6c6a24cb3b"
+    },
+    "skills/campaign/card.md": {
+      "source": "current-worktree",
+      "sha256": "6cf2610729804c914c17109ae4c4664010d40a3777ba80ec5caac64310e0b690"
+    },
+    "skills/campaign/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "ffdf49356b15acfc64403b86caf8a614b7e4c1c75f33252d88f17223de7d5f2d"
+    },
+    "skills/chief-of-staff/card.md": {
+      "source": "current-worktree",
+      "sha256": "fedc044f72cf15d481874a916b9c6e83dc44a3c5107590117e369fc5364775b8"
+    },
+    "skills/chief-of-staff/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "4f40f44a23516943e84833e3721f86cf682088309c18a1975daa5bf1048cd979"
+    },
+    "skills/chrome-render/chrome.mjs": {
+      "source": "current-worktree",
+      "sha256": "6d52e0fa6da7e8eb73442a809911834d18e2e9a65fe49a1e2ea5c6b83e43ff39"
+    },
+    "skills/chrome-render/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "7559cc8507db2b4895785ad154858effbc8a57d9ab63c48a9aaa652260c752d1"
+    },
+    "skills/codex-cli/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "5d258243e582067bff6aa59345b126efc13f492ab6289a06ccfea83fc002c923"
+    },
+    "skills/codex-cli-img/agents/openai.yaml": {
+      "source": "current-worktree",
+      "sha256": "8a608b608f1f9075b07022245d491f9dc29e9a11b84ffd50d4ba32b304dddab9"
+    },
+    "skills/codex-cli-img/references/batch-format.md": {
+      "source": "current-worktree",
+      "sha256": "eb948da06697bf2b93ee52f84943635b37da7bef81430ccc64356362ff30153b"
+    },
+    "skills/codex-cli-img/references/troubleshooting.md": {
+      "source": "current-worktree",
+      "sha256": "c4acf2f74b086cae586c6396ed564195f5f399896a3e2d353704f3a452d4ec4b"
+    },
+    "skills/codex-cli-img/scripts/run_batch.py": {
+      "source": "current-worktree",
+      "sha256": "0ea1c94e6d73e3918e273d8f1b33c3363259a842ebc7e3062fb2d0caec4d2119"
+    },
+    "skills/codex-cli-img/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "501e4ee4cfa65cc42b03d0b8434e710d3bec4296693535099bdd0346ae14a16e"
+    },
+    "skills/community-manager/card.md": {
+      "source": "current-worktree",
+      "sha256": "e84633a05909abf9ffdb93ccb8bc09eadc3c445e32a3fbc8edb73359c09a389e"
+    },
+    "skills/community-manager/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "3ff2edb55b3bec2e72f53d60a73c64f8cd9fdc9a232757ba3e954d6e01579dc7"
+    },
+    "skills/content-pipeline/pipeline/blog/blog.md": {
+      "source": "current-worktree",
+      "sha256": "2f8f561d832ad7ed8e8d2abd6d4e3aee9ce7f33565271871293e8fc8deb189cc"
+    },
+    "skills/content-pipeline/pipeline/blog/cover.md": {
+      "source": "current-worktree",
+      "sha256": "831d1ec25c461a825d742959d41402989197679d14cd3ce7b5cea0755c915733"
+    },
+    "skills/content-pipeline/pipeline/blog/publish-blog.md": {
+      "source": "current-worktree",
+      "sha256": "c053386afb47d275a37b5575f377f4e47d81243a0195526e180eea2408723a14"
+    },
+    "skills/content-pipeline/pipeline/blog/seo/_seo.profile.template.md": {
+      "source": "current-worktree",
+      "sha256": "c06847f8073cc2d9c89144b6144cf9369ea1f18a8a8e1eea852520860ae134cb"
+    },
+    "skills/content-pipeline/pipeline/blog/seo/diagnose.md": {
+      "source": "current-worktree",
+      "sha256": "467ae8718d114e2bc8c24c6b0b021063d756f4b4ef83e2845a7c47e476ba1682"
+    },
+    "skills/content-pipeline/pipeline/blog/seo/seo.md": {
+      "source": "current-worktree",
+      "sha256": "bc95930067899a1559cc03008c5f25db453234ebb32cd3f70bf5bfd443275707"
+    },
+    "skills/content-pipeline/pipeline/carousel/carousel.md": {
+      "source": "current-worktree",
+      "sha256": "284d1fbb55b77251fffdc4ba3719db07b9651c283a819cf3ef76014f11ad3d09"
+    },
+    "skills/content-pipeline/pipeline/carousel/generate-via-chrome.md": {
+      "source": "current-worktree",
+      "sha256": "0be1f73e56450849800ed9dd4896d85e08c1e19a511a3f4dd6e668a513329653"
+    },
+    "skills/content-pipeline/pipeline/carousel/publish-carousel.md": {
+      "source": "current-worktree",
+      "sha256": "e9c9a24b5f1688472aa1814b008cfff9eb6e4a0e521b06533d8a09de391c27b5"
+    },
+    "skills/content-pipeline/pipeline/carousel/to-caption.md": {
+      "source": "current-worktree",
+      "sha256": "1be8edd64337264b57ffac7c8badce68a6088d1586998275e611ed07d75142ee"
+    },
+    "skills/content-pipeline/pipeline/select-topic.md": {
+      "source": "current-worktree",
+      "sha256": "7ac4d91428e3ff0262515a8b045251e937e7068bfadb352894864016c788127e"
+    },
+    "skills/content-pipeline/pipeline/threads/publish-threads.md": {
+      "source": "current-worktree",
+      "sha256": "1eac59d8a24c920ed9e8e10a6b5cb3009f0a5da752d7b4190bc996f0be7144c7"
+    },
+    "skills/content-pipeline/pipeline/threads/threads.md": {
+      "source": "current-worktree",
+      "sha256": "bdec55fbbcc5c36670285d4c0b8f9fb7cce417f16cd148112f5794c1e081b4e8"
+    },
+    "skills/content-pipeline/pipeline/to-draft.md": {
+      "source": "current-worktree",
+      "sha256": "a74bb635eecfd300517c44559dcdabfbfcad86a052414b60cf5c1319fc9ef225"
+    },
+    "skills/content-pipeline/pipeline/to-outline.md": {
+      "source": "current-worktree",
+      "sha256": "ba204af5a80c66759910535c79abff286479f600a1d60dd683a9b2975456047c"
+    },
+    "skills/content-pipeline/pipeline/youtube/publish-yt.md": {
+      "source": "current-worktree",
+      "sha256": "5032e09b4f0929744f0bf8b9b9e6b6b922ff5bf15575f0241daab891df9ce08d"
+    },
+    "skills/content-pipeline/pipeline/youtube/to-storyboard.md": {
+      "source": "current-worktree",
+      "sha256": "75d7f1d85499a79b3c4dabfc1522b3ec1152db77a34e75eade6ab0568de178cd"
+    },
+    "skills/content-pipeline/pipeline/youtube/to-transcribe.md": {
+      "source": "current-worktree",
+      "sha256": "eb5a9b205d064e70174d53c1fc115b26092dfd79b423cea7925441b6b82994d7"
+    },
+    "skills/content-pipeline/pipeline/youtube/to-video.md": {
+      "source": "current-worktree",
+      "sha256": "c80eebd94c736f4f0d6a988864cb07a9fd60dac23186a41b72e2b27cb953b9ee"
+    },
+    "skills/content-pipeline/pipeline/youtube/youtube.md": {
+      "source": "current-worktree",
+      "sha256": "cfe5f9992f1f2f671f745abd5f4dbe39473d15d4190b301e4f312fd84b4f5919"
+    },
+    "skills/content-pipeline/pipeline/youtube/yt-caption.md": {
+      "source": "current-worktree",
+      "sha256": "46f4db753c2e35c2da3f9209ce95d4c1df655b0ee22bb764f3b106414d8b1661"
+    },
+    "skills/content-pipeline/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "73fa81978942f510921ca463d2a95b33719b42a1f35fec25a662293e1b966bee"
+    },
+    "skills/copywriter/card.md": {
+      "source": "current-worktree",
+      "sha256": "35f8497ed9069da108002b233a276878626a4da0d1432079f3ecebb409e4d26e"
+    },
+    "skills/copywriter/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "ddbbc3443ff546f9ceb228386e748f3c595c2f36906bce9853ca2612c5c46837"
+    },
+    "skills/d2/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "b74a2cb0682a9f51e0bfe191e5259348f5f2783430d3d155ebbf09d06c0ba97a"
+    },
+    "skills/daily-ship/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "87c792653589662a1a97eeb90ef3ff7d520b4d7d0b2b948d124242eb4f6b90d5"
+    },
+    "skills/deck-pipeline/card.md": {
+      "source": "current-worktree",
+      "sha256": "0027c43cb1650abe4df3fec4567ad0e5c6a8fd799b8571241fa526dcc98db998"
+    },
+    "skills/deck-pipeline/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "ebe193f90715e1b82fabc5dc347f4ea2b28a772047269678bc18aa6ae6aa76ba"
+    },
+    "skills/designer/card.md": {
+      "source": "current-worktree",
+      "sha256": "20784b4c196ccccc610c377b746398eaad74d6eb63bb2ea1c719199f180a19fc"
+    },
+    "skills/designer/designer-manual.md": {
+      "source": "current-worktree",
+      "sha256": "d2ff60855d503cb3f22ea568dac5c193ed0701d90b992bad5601a7c43f17b75a"
+    },
+    "skills/designer/import-cover-styles.mjs": {
+      "source": "current-worktree",
+      "sha256": "24a2422149446d7c1dada34d6c6e76d0561fad925f48d26c03f36a3ce44a99b5"
+    },
+    "skills/designer/layout-language.md": {
+      "source": "current-worktree",
+      "sha256": "f6b67a864cc3a5a54df92ffcfbe79204b3eb5fe9a0bc43c280b5eb55df7d5ec7"
+    },
+    "skills/designer/layouts/asymmetric-prose/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "758bc74233eea2cfeaa3d0aee21620bca966423a73930786d2f846a7807fabef"
+    },
+    "skills/designer/layouts/centered-ritual/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "68a04c68df3cb19559ae9f70f757a99e551dc11be92d484fa3495db3aa1e7c0f"
+    },
+    "skills/designer/meta-language.md": {
+      "source": "current-worktree",
+      "sha256": "7fb4a9c288c7d968d62fbb9e5f7f849bd2c0cbe854053ca978bd670b35972618"
+    },
+    "skills/designer/scripts/mesh-gen.mjs": {
+      "source": "current-worktree",
+      "sha256": "884c96d4538310010a97e849b4193ec88132a22176e5275e11570d7e6c766702"
+    },
+    "skills/designer/scripts/package-lock.json": {
+      "source": "current-worktree",
+      "sha256": "bf6e13de7c8e1325f6fb8a317e521bb98190ee133f51bc41708f822e83bb7bdc"
+    },
+    "skills/designer/scripts/package.json": {
+      "source": "current-worktree",
+      "sha256": "cf11b955c9d7161c768446c34b0ee390ad01ad18105f0b37ffa640bb983859ad"
+    },
+    "skills/designer/self-check.md": {
+      "source": "current-worktree",
+      "sha256": "83be511e59761dc66a1245d725f81a4981264038c00d6872218dd6344847aa81"
+    },
+    "skills/designer/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "56cd77dd9c4b6960c98e7b8125ad775ab2605771f00b51c94764bc8cee580d61"
+    },
+    "skills/designer/styles/candy-pop/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "6c03c5f0d6160caa31f80bf1506c4cdd88637716f4c3f513bffa8a436241197f"
+    },
+    "skills/designer/styles/candy-pop/cover-reference.svg": {
+      "source": "current-worktree",
+      "sha256": "4c16089fe347bd768f8dd12f576bae9bef258a6b0c550d17835142c94f21981a"
+    },
+    "skills/designer/styles/candy-pop/post-claude-designer.svg": {
+      "source": "current-worktree",
+      "sha256": "d7f4bbe7680c67e2d26e9b6b5dc1eec0ba73ec24c9f82c31367a49a6fb8b282a"
+    },
+    "skills/designer/styles/candy-pop/sample-slide-16x9.png": {
+      "source": "current-worktree",
+      "sha256": "97730faad118afc3f2be15134fe26e1070d8b508c5d72d967c7323339bd47224"
+    },
+    "skills/designer/styles/candy-pop/sample-slide-16x9.svg": {
+      "source": "current-worktree",
+      "sha256": "4c919e44f73a051dacc9167208eef47d4761a6dbdd76321f9aa6f8cd654ac2eb"
+    },
+    "skills/designer/styles/candy-pop/test-product-cutout.png": {
+      "source": "current-worktree",
+      "sha256": "581de6b1c2356f999d917d124e4ea6c958a3c16d112c00ae12724f23e0da2894"
+    },
+    "skills/designer/styles/candy-pop/test-product.png": {
+      "source": "current-worktree",
+      "sha256": "801031a5f6afbd8b87545fc6a4e7e38a5c5c5ed231d1d577cf20a340a71c08b7"
+    },
+    "skills/designer/styles/classic-sage-editorial/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "2069f49256ccd1bfed090587cedea8f31478ff31700f3836a6739e8006f8a225"
+    },
+    "skills/designer/styles/classic-sage-editorial/png-card.md": {
+      "source": "current-worktree",
+      "sha256": "7efbc0f789abb7e0ca284d03dd367cb07390545cc446348ffa052989a449c628"
+    },
+    "skills/designer/styles/cream-beige/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "06293cde75bbdb86b173a30f1258c2959cd9a11448ae3bbc5e84770846c7b841"
+    },
+    "skills/designer/styles/cream-beige/cover-img-01.png": {
+      "source": "current-worktree",
+      "sha256": "d8d764f59831ad67afca316564e9e21deb2af3ab02874fcca37481cefae4c3be"
+    },
+    "skills/designer/styles/cream-beige/cover-img-02.png": {
+      "source": "current-worktree",
+      "sha256": "656167e160122719ec6d63b45ecb5b03cdb4be8e3002aeed9e223b844b8aa187"
+    },
+    "skills/designer/styles/cream-beige/cover-reference.svg": {
+      "source": "current-worktree",
+      "sha256": "70a4a61a5e030a00619bb43faea67d1ded079c6fd5381c10f9ff641b9b633c82"
+    },
+    "skills/designer/styles/dark-tech-bold/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "cbfb79f0bef59c4936e4abcfb9c16b4c4a2f9dfe6d77952288141da7da515d1a"
+    },
+    "skills/designer/styles/dark-tech-bold/png-card.md": {
+      "source": "current-worktree",
+      "sha256": "12d3b4419135742898d54c7740cfa77e5c825a73b1a1cfd35ad3de93e901a642"
+    },
+    "skills/designer/styles/dark-tech-bold/refs/reference.png": {
+      "source": "current-worktree",
+      "sha256": "5818516d44e8010e9902e1c9e217a0072422459a959175ccdcede9cc1434bcc1"
+    },
+    "skills/designer/styles/dusk-haze/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "b3c24f35aadc38c09de66c8fa0d99695632dbe4c0d3825fddfef3e4b34fb9aa2"
+    },
+    "skills/designer/styles/dusk-haze/cover-reference.svg": {
+      "source": "current-worktree",
+      "sha256": "f8b67ed56b9d9c139cdc8d7bce864e4f9f3468caa5f92fb2ec756438a7846f4a"
+    },
+    "skills/designer/styles/forest-amber-editorial/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "ce4eb6a3116cf9608450ce798fa30e12c97736c886348773a1dc13c218f90f9a"
+    },
+    "skills/designer/styles/forest-amber-editorial/png-card.md": {
+      "source": "current-worktree",
+      "sha256": "6afd0564e750f9535ab450bf35c50a40752cbeda3e251e4b753ad332a0fbe7a4"
+    },
+    "skills/designer/styles/forest-amber-editorial/refs/README.md": {
+      "source": "current-worktree",
+      "sha256": "1824d24549590f21eeae5e8a54e6b114927db16decd1c57f93d0849eb772748a"
+    },
+    "skills/designer/styles/literary-warm-photo/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "c4085567eddeeb3132760630128cab098d18659f909b23189d512752e0f13bb4"
+    },
+    "skills/designer/styles/literary-warm-photo/png-card.md": {
+      "source": "current-worktree",
+      "sha256": "8ea7ca933001397914cf52828e750f4461e55f6668e9d734347955eb1b361b3a"
+    },
+    "skills/designer/styles/matsuri-summer/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "648fa25c500a079b4a9ddf8e2f4556015fde3040badf770ca29a1c49e963f1bc"
+    },
+    "skills/designer/styles/matsuri-summer/cover-reference.svg": {
+      "source": "current-worktree",
+      "sha256": "b09788aa8990eb177168fbe051a65d6765f33fb7dedc763b90bcfb5700205c30"
+    },
+    "skills/designer/styles/matsuri-summer/kakigori-hero.png": {
+      "source": "current-worktree",
+      "sha256": "15e4b05bb7c9f4997a73a3c65452cbd8991f253f3f57670fff3d974200bb8a6c"
+    },
+    "skills/designer/styles/neo-brutalism/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "8316694bf80be372655552593bbe84e809fdf724b496ed9d5b7c3df7cad5355e"
+    },
+    "skills/designer/styles/neo-brutalism/cover-reference.svg": {
+      "source": "current-worktree",
+      "sha256": "c688ee87984cf10e30b4aacc84313bce72cfe88bf7ad1a623b27622b87c7e23f"
+    },
+    "skills/designer/styles/obsidian-purple/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "6f80fd486d3e263f1026fcf8ec3d37200d415a9cf53c9fce724a8264f9a6748a"
+    },
+    "skills/designer/styles/obsidian-purple/png-card.md": {
+      "source": "current-worktree",
+      "sha256": "a9ec5f82e47579ea66f07a4cdba8e4637f57a27792549160f1496808815c7194"
+    },
+    "skills/designer/styles/purple-gradient-post/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "8cdf18de8b78c0aae5f48297989ac32bcb5245fc2f75b97f247a743e4a4b3ced"
+    },
+    "skills/designer/styles/quilt-press/_baseline.md": {
+      "source": "current-worktree",
+      "sha256": "1847fc2f4b952028f2cf5ffcdffe6ad7109254403aab70901267473ad9e954df"
+    },
+    "skills/designer/styles/quilt-press/cover-reference.svg": {
+      "source": "current-worktree",
+      "sha256": "345ee8e7078d67f76b2b179590dfb2f8bccac50b5d7fb626ca39adb8847f8865"
+    },
+    "skills/designer/styles/quilt-press/post-rereading.svg": {
+      "source": "current-worktree",
+      "sha256": "0ea829a171e2d95c8e38dbe6f16914800e1535312fe95be8d97eeea9286bc3e3"
+    },
+    "skills/designer/textures/_index.md": {
+      "source": "current-worktree",
+      "sha256": "24cad65f9b9a978ec3f604fd609dc76893896064580660f93ff745132480238a"
+    },
+    "skills/designer/textures/grid-dot.svg": {
+      "source": "current-worktree",
+      "sha256": "e7885973385dd32f6d02c772ac1b254bc8e0f8b79041e9521298212daf9f15e5"
+    },
+    "skills/designer/textures/halftone-dots.svg": {
+      "source": "current-worktree",
+      "sha256": "737e1d52db16b0a81796b11d6ebfc7aaf662bb11df0b53112a376f8adef5680f"
+    },
+    "skills/designer/textures/noise-fine.svg": {
+      "source": "current-worktree",
+      "sha256": "f98ca925bd9365b0c2030784e60122822e3e24b3696c2b3812d21641daedba63"
+    },
+    "skills/designer/textures/paper-grain.svg": {
+      "source": "current-worktree",
+      "sha256": "5ce4007d5d3bcd779a92c0f49551cf32072326b61c9130d3d3e7bc62a1869e44"
+    },
+    "skills/designer/toolbox/halftone.md": {
+      "source": "current-worktree",
+      "sha256": "396d69e0d182a2e1c9f1ee86dda02881297c945446adad4cb918b0e374216139"
+    },
+    "skills/designer/toolbox/logo-dev.md": {
+      "source": "current-worktree",
+      "sha256": "b3e5f26c151d860755094b083a7fc71e8704a0fa15cfd202f2382e135819269e"
+    },
+    "skills/designer/toolbox/mesh-gradient.md": {
+      "source": "current-worktree",
+      "sha256": "3bdbf4ba8edc7d24fe9e8cf673f222ee70605c22c5512adbdcfddd876ed12d63"
+    },
+    "skills/designer/toolbox/README.md": {
+      "source": "current-worktree",
+      "sha256": "6abb464995c30fdfdd11ad625119a995a4b7ff6b091a776f5130c79171bc0ce1"
+    },
+    "skills/developer/card.md": {
+      "source": "current-worktree",
+      "sha256": "b598f6faddeddd7b78779e4944b007f1ea1683dac7ae1946ca7d2a63d3192953"
+    },
+    "skills/developer/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "38086b894b0e7d4be0a931d8d20c655ea7d7eec8fc167427f160753910b441e7"
+    },
+    "skills/export-slides/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "ffef2b20c39adcb16ca8f468c574a4dd7131043caecb89e1f61e8797ee7e2371"
+    },
+    "skills/figma-console/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "a3981232f122b2a9ac6078e34863980853633cce12ccd1eaa2457a1d098ff33a"
+    },
+    "skills/figma-diagram/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "985b2dff17b5c79a207c1c1dbd4c914de24c098fcd7bc0ad8bc21f75fa767545"
+    },
+    "skills/figma-slides-mcp/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "d667cf9b615ade3e8d475f35c095eb5b2008aea2e8fcb9750ad974ecc5b1f475"
+    },
+    "skills/firehose/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "d3b7b6008336dbaaf14c19ae7cc59f8bd7277f9f0b1da78c25efc4fbf6ebe9dc"
+    },
+    "skills/ga4-mcp/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "c1af0145414f54847fd9ec5de6a54be9c466a7be4f8e8b68a61ed10c1afce9c1"
+    },
+    "skills/gpt-image/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "256ad3b12086c6b97e8800563d04db6c225e7271c2304bf85972b2361c6b9e5a"
+    },
+    "skills/hub/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "502bf2f3cd44de9940a057dc45413152fad1f38aa7762f900e4f789e85fe5299"
+    },
+    "skills/instagram-api/chrome-setup-codex.md": {
+      "source": "current-worktree",
+      "sha256": "39720f92651d8149284460ddb1f110650c3b3126126c231cd39148a4f1ae6ef6"
+    },
+    "skills/instagram-api/post-instagram.md": {
+      "source": "current-worktree",
+      "sha256": "1b286d6917c1d1b1cbeebde0087f12ddfd03dcd584a3c4d312259e3e46952981"
+    },
+    "skills/instagram-api/post-instagram.sh": {
+      "source": "current-worktree",
+      "sha256": "630907f2e9fd5016bf729e15d201b372db8510bde7dabf1c6c78dda9f172fd8c"
+    },
+    "skills/instagram-api/setup.md": {
+      "source": "current-worktree",
+      "sha256": "331c6f57725e2aad9ec7dabcc0de59bdccb42f6bd0b25006c7bd3f76817bd806"
+    },
+    "skills/instagram-api/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "342c0847252a8eff37d94264b75e0dfbe2c4a0b906ecdbd6c1d865eee68031eb"
+    },
+    "skills/librarian/card.md": {
+      "source": "current-worktree",
+      "sha256": "03c5935478ee93295a8f4519b54f1ea9d720ae43a34a801cfdfb43f692a48f31"
+    },
+    "skills/librarian/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "5d64584e239644a93ef57e2aa2724f7fad1eda859d40742cd021aa08efca13c5"
+    },
+    "skills/marp/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "a4ad8a8ed2d91fbb0b776040d2c367643c4e8a16b20c4601c2d39d4d38596325"
+    },
+    "skills/nightshift/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "b483ed5cb763a2d015567dd64bd5e6e3caacdb0a26152a8dd260d580f6609af5"
+    },
+    "skills/notebooklm/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "7dd78535b13fca909ed13a817bb99ca5f31dd9915a95151f90bee06aabf2fe91"
+    },
+    "skills/openslide/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "adfda771ebe6f036af47c082f465f957fef8266eb167fbdc221d9cee7da854c2"
+    },
+    "skills/quality-gate/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "5682c579e07193060f1fc7f3fda4f90f1a66366b927f77e8f22bb0c10596553c"
+    },
+    "skills/researcher/card.md": {
+      "source": "current-worktree",
+      "sha256": "b8739acaba129082a642a26bc9f80e43e0ca3ce6b654f539eb5c605682f86296"
+    },
+    "skills/researcher/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "ee34e4516c69f834c1b841428306372345e950b9445973bfea902c97f87193df"
+    },
+    "skills/review/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "f81d04a6eca30d32876d178d2047c3c9eb159ff72b846a2f9eb2a716b6c252f0"
+    },
+    "skills/salespage-pipeline/card.md": {
+      "source": "current-worktree",
+      "sha256": "dccdf2b412dd6f9557beec425de1e271a12edba7a46328a4020ea6aa288899ac"
+    },
+    "skills/salespage-pipeline/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "9f40d76803f1cd20a227dc26debb507216bad656646a4915f5a485a257f00822"
+    },
+    "skills/seo-specialist/card.md": {
+      "source": "current-worktree",
+      "sha256": "42621906ca22f020a68531b773ee484b42ad0350dac4af56a69e1e2833c90d01"
+    },
+    "skills/seo-specialist/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "97e42c0b87861a5cb960e8652e45bd7e9b47ae598e29c77b744040637b6322df"
+    },
+    "skills/sessionlog/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "c676ae8db994e6863b153317ccf19d78e4bbeb85732ba96ff0aa9cc807aba94f"
+    },
+    "skills/sessionlog/貼上式問卷.md": {
+      "source": "current-worktree",
+      "sha256": "6833155d449af690e2eae5d0734aa8879b5585e45cc7d8969d87b6d480cc2bd7"
+    },
+    "skills/social-post/scripts/outcomes.py": {
+      "source": "current-worktree",
+      "sha256": "2c09e2a59663e375c1ee948c806ab28decfe68d3648d83c582cf8b75b13bf805"
+    },
+    "skills/social-post/SKILL.md": {
+      "source": "portable-overlay",
+      "sha256": "1ea919aa08e9acec88a46f11e87096af4a8308dee1e209e94150a5457f1218da"
+    },
+    "skills/social-post/tests/test_outcomes.py": {
+      "source": "portable-overlay",
+      "sha256": "c60c466019830bb88a5419afd89c147e8d6e2f1eb849b71b4e47e239abe6ee65"
+    },
+    "skills/social-post/upstream/LICENSE": {
+      "source": "current-worktree",
+      "sha256": "0c06c0405b3d6f289800831dd68b329cb283c544cc1ee454d9b19e0e54b1e6d9"
+    },
+    "skills/social-post/upstream/manifest.json": {
+      "source": "current-worktree",
+      "sha256": "b3e321e2e43d2dedb6392b7488ff74e007b08501c16a46af87ab29f85b2dbc07"
+    },
+    "skills/social-post/upstream/scripts/log_outcome.py": {
+      "source": "current-worktree",
+      "sha256": "9b5cabe3e55a07f979025e6a0d7893eaa9d48fb64f29e096060cf51d2f234d84"
+    },
+    "skills/social-post/upstream/scripts/social_data.py": {
+      "source": "current-worktree",
+      "sha256": "0fb2578f0739779859971de357a94f7ba69977f435c5c24208f2cc5c332538bd"
+    },
+    "skills/social-post/upstream/scripts/social_post_analysis.py": {
+      "source": "current-worktree",
+      "sha256": "0b0536b0afc953ca24eec270c4036fb5cef3fd70cc618102993e4c164280c819"
+    },
+    "skills/social-post/upstream/scripts/social_store.py": {
+      "source": "current-worktree",
+      "sha256": "af3621a2eb362b7e64294a1fbab38303f767caffa16e9d0761631833ce196510"
+    },
+    "skills/social-post/upstream/scripts/social_validation.py": {
+      "source": "current-worktree",
+      "sha256": "cb0f07c6cd9cf60b42aeb26b4803bf34a850d44a0bd4a214eaf0f581d7f6c56a"
+    },
+    "skills/support-agent/card.md": {
+      "source": "current-worktree",
+      "sha256": "271c3eab721c5e4af414ee2f6a0ab6f00465d742f10a81de971a65e35a5a3c36"
+    },
+    "skills/support-agent/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "3b017d82d8f0f632d448ea35c0e645084a9030caa5dc27273de1013a79c0fdb2"
+    },
+    "skills/svg-diagram/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "1a53787d7603595f91a941313bafb373434526875ff652fcffa9697620e4fb6c"
+    },
+    "skills/svg-slide/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "23f619ecc0abad443002f77fd51e429f4dd44d9c93b20a95efaafb7d1ad5f3b2"
+    },
+    "skills/threads-api/chrome-setup-claude.md": {
+      "source": "current-worktree",
+      "sha256": "e9413e306cd5be1ce222746300ed8bcbe434e3a0097d1fa4e3bb8956e106bc3f"
+    },
+    "skills/threads-api/chrome-setup-codex.md": {
+      "source": "current-worktree",
+      "sha256": "ca12d4864981b0697ebe919b0f4a547cca78efb32f6590edeaf69a26f4560d70"
+    },
+    "skills/threads-api/post-thread.md": {
+      "source": "current-worktree",
+      "sha256": "9d5bf91d65bcd07a7ec98c25409cb9bf3e2fae31b2894330c384e5633031f9ee"
+    },
+    "skills/threads-api/post-thread.sh": {
+      "source": "current-worktree",
+      "sha256": "2f1ebcc41b0b67bddbf93f2e615b008baf9d9f758e724a949f5844d006865889"
+    },
+    "skills/threads-api/setup.md": {
+      "source": "current-worktree",
+      "sha256": "c2199bc0e5e2f76a321163946bf3001e336344564c75656685c604514c28a92d"
+    },
+    "skills/threads-api/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "f9b6f2eecd92f2eea1f7c56f8563e0f962b5aa4a86f1762478cc43a3b9d2d805"
+    },
+    "skills/ui-ux-designer/card.md": {
+      "source": "current-worktree",
+      "sha256": "bc79fda03b5baba540a7bb1949399f915e3a57eb47c67283947c42f64c5d23d8"
+    },
+    "skills/ui-ux-designer/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "b338f32e170776b6e00a9a439d4237ad4c42c33a08003f0361f04a8512cd1b4a"
+    },
+    "skills/update/scripts/update.mjs": {
+      "source": "current-worktree",
+      "sha256": "094fa0462412f65b34ffcc29a6d6d1fdc16c2ccd8e5aa3319fa1164b7b50ec39"
+    },
+    "skills/update/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "de5d075deb2e51f9b67fb9c1d64ff5ab3b085c9cffc4715ff2ea4ec7f715d3ea"
+    },
+    "skills/update/tests/update.test.mjs": {
+      "source": "current-worktree",
+      "sha256": "2c0f8d3af0a3e7749b336508acf00f68541dcfa5d0426d39f816af5755bef094"
+    },
+    "skills/vault-edit/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "88c2068710e1fc31e908211c604a308269fca625dbcae0d4c55e2a31733bb902"
+    },
+    "skills/video-editor/card.md": {
+      "source": "current-worktree",
+      "sha256": "6af4aef6d9679424a394da69d9c15b5df7f88fa455451856be33bf03936a1fab"
+    },
+    "skills/video-editor/SKILL.md": {
+      "source": "current-worktree",
+      "sha256": "c7d18f96670ee7d1275a2aa26e740d2baa768eadc4b1c276bb7c75c2ce66baf7"
+    },
+    "工具.md": {
+      "source": "current-worktree",
+      "sha256": "d28c0b4d2be9779a842cb2ae6f1e8760710b0038bfccccf42dc90ae585422d35"
+    },
+    "工具箱/README.md": {
+      "source": "portable-overlay",
+      "sha256": "1566b7ace9f6cacb2761fab1b42d4070fabf72410c10f05dd32edc1ee02676eb"
+    },
+    "晨報/render.test.mjs": {
+      "source": "current-worktree",
+      "sha256": "32bd568a95f2a12cb7b2e7a77fe4f87cbbd49a6db2fd472735e796ef277866f9"
+    },
+    "機制.md": {
+      "source": "current-worktree",
+      "sha256": "0e4d2b01f941421f53f48ab0fa411bb67bdd1180864343f3b23a11af1c39fc91"
+    },
+    "流程/blog-seo.md": {
+      "source": "current-worktree",
+      "sha256": "eb98e4e102f1a19c9b334f3d26e10fddb78b31831c7929d593e5816268c3b3c2"
+    },
+    "流程/content-pipeline.md": {
+      "source": "current-worktree",
+      "sha256": "6df949a465947142a4d83fecf8ff624d8217ee4be62f9a51f645599237e8cfea"
+    },
+    "流程/deck-pipeline.md": {
+      "source": "current-worktree",
+      "sha256": "e92886466391d0ae852b8e38c03dd28793d4a37973ca2367903142c011e7cc4e"
+    },
+    "流程/ui-ux.md": {
+      "source": "current-worktree",
+      "sha256": "43271530943782354ea6b7fb65baaaf9b549d8926d6a0b837de663c3ed4765bb"
+    },
+    "流程/youtube.md": {
+      "source": "current-worktree",
+      "sha256": "4149415cc9c313c433dc9c1988f9a3a0c202df081b22c6cbdee541386d24b71f"
+    },
+    "知識/SEO-10維度框架.md": {
+      "source": "current-worktree",
+      "sha256": "4104ea3d9b708a64b7c522e1b9fd612ecb50721c83cfd1d52511aca02197f2b4"
+    },
+    "知識/SEO-GEO擷取寫法.md": {
+      "source": "current-worktree",
+      "sha256": "60b057290d212158def1ba911d62f452064c691cbc161a9d3b05238e16f1f599"
+    },
+    "知識/SEO-SERP判讀.md": {
+      "source": "current-worktree",
+      "sha256": "b57e4dd6fe5e5b94c143d011cd0e9dfccdd5bd4ae88777d9b8668c3dc1013311"
+    },
+    "知識/SEO-主題組合與需求路徑.md": {
+      "source": "current-worktree",
+      "sha256": "8a27c5ac2c3376ec98e65c4be9e571b6d9d6b44b0dca500b1067e63f941c0513"
+    },
+    "知識/SEO-成效診斷.md": {
+      "source": "current-worktree",
+      "sha256": "9d04627b8d329b7f653c13acad086b29080111f889d2859c4b0bf7dd8063ac62"
+    },
+    "知識/SEO-技術健檢判準.md": {
+      "source": "current-worktree",
+      "sha256": "1965971188dd76abfcf5e8b77672ca72613e17187b6804ae18c3e1237e68a081"
+    },
+    "知識/SEO-選題判斷.md": {
+      "source": "current-worktree",
+      "sha256": "27728dc326f8d320480f96729aa82c23c29abf61a0dec93e28ba4914414deb62"
+    },
+    "知識/SEO-關鍵字週期.md": {
+      "source": "current-worktree",
+      "sha256": "8db1b7443f0881ea81c494c43512ccb8d6cbbbb029b2269b552b5f5aa2f6c168"
+    },
+    "知識/UI-元件與響應式.md": {
+      "source": "current-worktree",
+      "sha256": "26a01ea4df817be4e7bc041a6581ba25d3da9efcfe005a5cc605ddfbb05f9c4f"
+    },
+    "知識/UX-互動與狀態.md": {
+      "source": "current-worktree",
+      "sha256": "dc57dd15be5e26c3ba6811eccd0be4039a87b9798309a4ab5cafd1e98cc32830"
+    },
+    "知識/UX-任務與資訊架構.md": {
+      "source": "current-worktree",
+      "sha256": "a8fe002cd90eb6d64637df02ff58e390f016bceac68751c7cb1fae53feb5ba5d"
+    },
+    "知識/UX-驗收與無障礙.md": {
+      "source": "current-worktree",
+      "sha256": "c3d6a4128190c975ac87cc381e996dab2b1670f3296199d2be267dc8ebdd8b0e"
+    },
+    "知識/分流路由心法.md": {
+      "source": "current-worktree",
+      "sha256": "5e3b44cb5250ba51b5233ddd2a444679965baef2c978adfa35fb6919b5f1eb94"
+    },
+    "知識/客服-FAQ.md": {
+      "source": "current-worktree",
+      "sha256": "ca1abffe56b7539f86e031ab99f0eccccc179f9e9034c6fcae078d259756825c"
+    },
+    "知識/客服-回信準則.md": {
+      "source": "current-worktree",
+      "sha256": "823d815646e8b771592cc52af48daca4d511bbb0bd0cfe4fa5ebf4af143e3d2f"
+    },
+    "知識/寫作-分析框架.md": {
+      "source": "current-worktree",
+      "sha256": "a983e6f81f784722c4c5239b6d40ca9f340ef9bd3b08b7ccb01421166fc0cce9"
+    },
+    "知識/寫作-品味.md": {
+      "source": "current-worktree",
+      "sha256": "10fa782a418923d4958cfe7477078f16b3bd68c899e8841a6b76be35e3f7a546"
+    },
+    "知識/寫作-單句文案.md": {
+      "source": "current-worktree",
+      "sha256": "43e8bfb1f8853efbb6ab82e8c5287c6f618b0d62d62284b9276424dd782a87e6"
+    },
+    "知識/寫作-標題模組.md": {
+      "source": "current-worktree",
+      "sha256": "e91a1873894c48dc04aa590fcf6397683d496dfd3f476d3848b97badc0e95453"
+    },
+    "知識/寫作-爆文公式拆解.md": {
+      "source": "current-worktree",
+      "sha256": "e430a04e679146114af818286263ac41ec538bc449d0fe93dda1671e0d874146"
+    },
+    "知識/寫作-爆文模板.md": {
+      "source": "current-worktree",
+      "sha256": "adec477fa462da000a029af3a2c5f89004660a4e77a8195fd5ff4879756f1411"
+    },
+    "知識/寫作-爆文生成方法.md": {
+      "source": "current-worktree",
+      "sha256": "38b6135b6300fc2fb333a09242435cb06346dc31d89837b118e8e0f66398b943"
+    },
+    "知識/寫作-語氣.md": {
+      "source": "current-worktree",
+      "sha256": "17fbf26896f9417ecce6afd3f7215608379de6f6a67b7e52865cd486fce37a63"
+    },
+    "知識/寫作-貼文寫作模組.md": {
+      "source": "current-worktree",
+      "sha256": "a9dc91d635450eb41fe6f2e72696aeb29c6d6fc30d0830c24a8d4f9e72e4d345"
+    },
+    "知識/寫作-銷售頁文案.md": {
+      "source": "current-worktree",
+      "sha256": "5028cea2ca79f0b621a6f0c4acb0dd901e42a5b22f7e6b64f5b15e207cfbb9e2"
+    },
+    "知識/幕僚-引導協議.md": {
+      "source": "current-worktree",
+      "sha256": "3dfa08a1866d340bcb2df5775026776d0503943a8fd398653c918398ca2e3e55"
+    },
+    "知識/幕僚-發售戰役檢查表.md": {
+      "source": "current-worktree",
+      "sha256": "6df81acc6bc4e61a387fedd90dbe2b0bbbce86902127adbd376e132e2d79d01c"
+    },
+    "知識/幕僚-通用專案三問.md": {
+      "source": "current-worktree",
+      "sha256": "cb8a4eb85192134c33cf09adfa915ccad3bceb3b1a551bc01690193acb9d4b8d"
+    },
+    "知識/廣告-切角發想.md": {
+      "source": "current-worktree",
+      "sha256": "0bde209ab268ddcd87c3774614cd7bf7411f66fc5071522fb021c5d7e5f715c0"
+    },
+    "知識/廣告-成效診斷.md": {
+      "source": "current-worktree",
+      "sha256": "d4557b677f1712fd0f16a299249722f3ff9895240be2d2f514f2a2c92360142b"
+    },
+    "知識/廣告-投放操盤.md": {
+      "source": "current-worktree",
+      "sha256": "0536e111702d939f84b8f5906343e798b20995330087c1e29d57f8b0a6d4e30f"
+    },
+    "知識/廣告-歸因與跨源驗證.md": {
+      "source": "current-worktree",
+      "sha256": "e846b728d8e515cd7806e9af476071428551be27bc993401a180dafea0f901f8"
+    },
+    "知識/廣告-獲客策略.md": {
+      "source": "current-worktree",
+      "sha256": "11f245e33afc1800090e55d5dd52c125f50d005107c03f17375b718c77208f6a"
+    },
+    "知識/廣告-素材製作.md": {
+      "source": "current-worktree",
+      "sha256": "2258e97d0d29c5d456b11d96f84f953c1c28d0d93d5ae23fb219b00ac94f5e43"
+    },
+    "知識/廣告-轉換文案.md": {
+      "source": "current-worktree",
+      "sha256": "6851acb7805ef09bdef6ecfeb0e98431d923eb96d05eed2a484fba349e1cfef6"
+    },
+    "知識/思維-切角思考.md": {
+      "source": "current-worktree",
+      "sha256": "494351f80df0ccf255b202229cce4512f478828a907bc421f71cb882679b120f"
+    },
+    "知識/材料判讀心法.md": {
+      "source": "current-worktree",
+      "sha256": "ce8abafe76afdda7191ab4e66b490cc0dc5e434b8d4a1f52ad25b40f34b3e070"
+    },
+    "知識/知識庫-索引維護.md": {
+      "source": "current-worktree",
+      "sha256": "4f864efa365a5b6bdafb6ab1f8fb51d8568710e1a5a644612d390a6674d08d92"
+    },
+    "知識/設計-品味.md": {
+      "source": "current-worktree",
+      "sha256": "46846015daf1f4ff6e1ba71fd245352d7bda5f5e309feaa156859c3a4d3ec26c"
+    },
+    "知識/設計-簡報視覺化.md": {
+      "source": "current-worktree",
+      "sha256": "9661b2d8475944504b5b0205dbf77b84ca53296d3ca61acaebef88e8aa0252ed"
+    },
+    "知識/財務-對帳流程.md": {
+      "source": "current-worktree",
+      "sha256": "2a00f695835ebc9668b7a53dc3ec4d5402f43d97d594681fd712cf2d28b05027"
+    },
+    "知識/財務-發票格式.md": {
+      "source": "current-worktree",
+      "sha256": "89b6bf1154ce742f220899378cc961216eb277f9328464d9aa1b702b91c45403"
+    },
+    "知識/載體-IG caption 模組.md": {
+      "source": "current-worktree",
+      "sha256": "009b66bc19e9918c7d18223ca6e82c98676d9a9fac040c1326da3b67920cbbb3"
+    },
+    "知識/載體-Threads 模組.md": {
+      "source": "current-worktree",
+      "sha256": "a44a8440bf1a1449ba705bbce85b35d6c7cc0d4fe791a1a01dda8f7bc10175eb"
+    },
+    "知識/載體-視覺規格.md": {
+      "source": "current-worktree",
+      "sha256": "10c0d21c81dd903b98bb82dc2419201178db81d16275e6c8397fbbc90d331bca"
+    },
+    "知識/連結器判讀心法.md": {
+      "source": "current-worktree",
+      "sha256": "e0b810454f3e06dbeac082444cc3e1f70c4267d89a25f2845370b0f9d71fd558"
+    },
+    "知識/銷售頁-功能列點.md": {
+      "source": "current-worktree",
+      "sha256": "88f642bd42037865bc720cbe0cf5489a934da315298b2b1f3ddd8e9af33662dd"
+    },
+    "知識/銷售頁-品味.md": {
+      "source": "current-worktree",
+      "sha256": "070f65775bd5df5ea7eb95d08ed4011df6c078b20d8ffb59089d4d42527cf04d"
+    },
+    "知識/銷售頁-寫作自檢.md": {
+      "source": "current-worktree",
+      "sha256": "6e51ebe163342dd851333209e2e128e0b478648cbf68abc282361aab95ae9fae"
+    },
+    "知識/銷售頁-攻防分位.md": {
+      "source": "current-worktree",
+      "sha256": "787f2ad639941437b0a36c168769036e8184599f969ade949dfd49a280db4e86"
+    },
+    "知識/銷售頁-結構清單.md": {
+      "source": "current-worktree",
+      "sha256": "e2652eedf479b911675da79b326289a397872a84b42a26a331da62216ca55f7b"
+    },
+    "知識/銷售頁-設計.md": {
+      "source": "current-worktree",
+      "sha256": "9dbf14e9ba6170d9b752d70889c17efb661a4415d35615ff40d232f4196080be"
+    },
+    "系統流程.md": {
+      "source": "current-worktree",
+      "sha256": "ca97d70bdba6b10a261ef4416e1ed7bcccc208a929d564857a1d0f334722a1b1"
+    },
+    "能力地圖.md": {
+      "source": "current-worktree",
+      "sha256": "8dc30db7e7cf2b495b8077dcdf08654b7aa618d4ef4159ca3bb67789eee43d81"
+    },
+    "風格/bulletin-red/ref.png": {
+      "source": "current-worktree",
+      "sha256": "4736a1bca32450ab836a01ad037ae79e89d56083b09579ba3e45a29255a9994d"
+    },
+    "風格/bulletin-red/sample.html": {
+      "source": "current-worktree",
+      "sha256": "0b87a95b4353a3948969a15a575ed01b6c82ee6dfdddeba03f676653d01eebdf"
+    },
+    "風格/bulletin-red/準則.md": {
+      "source": "current-worktree",
+      "sha256": "3a8cd5d4bbb3157e5e848657d1aac2cf1a961826f6ae17b1abff3d3188d6e515"
+    },
+    "風格/creative-mode/ref.png": {
+      "source": "current-worktree",
+      "sha256": "e55d3b8c3194a68a043377c561476136134b8d73a99cd399d8d169425c36f046"
+    },
+    "風格/creative-mode/sample.html": {
+      "source": "current-worktree",
+      "sha256": "8aa95831e0726b72f75418f8dd9c9c18134ee9ca2b70f9383d1b324bc3f86b6d"
+    },
+    "風格/creative-mode/準則.md": {
+      "source": "current-worktree",
+      "sha256": "421d0524fc5d201ac907e72f478737a040873522df95dd3c1c14d1b251f4b4b2"
+    },
+    "風格/daisy-days/ref.png": {
+      "source": "current-worktree",
+      "sha256": "75baca72c236560ec5a4495ae1e366dc745529927dbb3b62ef516365db77513f"
+    },
+    "風格/daisy-days/sample.html": {
+      "source": "current-worktree",
+      "sha256": "c6daca5a279863cc3e78a0a2f6f929347d53097f8ab539da3ba25ff88321e198"
+    },
+    "風格/daisy-days/準則.md": {
+      "source": "current-worktree",
+      "sha256": "70819b2ea51d8d94954bdca2acc919b375a3bf43827461a8fe6a0e50701c33b9"
+    },
+    "風格/dither-blue/ref.png": {
+      "source": "current-worktree",
+      "sha256": "0e5763a95955882f352b602619e0d05a1e9d7510ae239e5757cdc0fc752317f5"
+    },
+    "風格/dither-blue/sample.html": {
+      "source": "current-worktree",
+      "sha256": "b76da09397f2f81b0dbb80c109791e576b1a5e7e18865d99dd2a4b94983fb79c"
+    },
+    "風格/dither-blue/準則.md": {
+      "source": "current-worktree",
+      "sha256": "d3d564805aba4643f68eb35584f9824423593e6d81428c3a3e70eeffdb63718d"
+    },
+    "風格/harvest-orange/ref.png": {
+      "source": "current-worktree",
+      "sha256": "bae1ea128bfc1f5e8ebec1dcd0de5a7fbd98c92005cf562a14fd1a5ee783103c"
+    },
+    "風格/harvest-orange/sample.html": {
+      "source": "current-worktree",
+      "sha256": "92a1773923513f4eaa5db87b09ac4f8c54794929eceb5800332cdb56274b2819"
+    },
+    "風格/harvest-orange/準則.md": {
+      "source": "current-worktree",
+      "sha256": "608b63f59d07548383fffc35cae2a9949093864aba7d0a05b3d86554f326c045"
+    },
+    "風格/long-table/ref.png": {
+      "source": "current-worktree",
+      "sha256": "0e3e8f63445adec31437d1e5e9076e6811555f899f25ad988d22f79c2d804a8b"
+    },
+    "風格/long-table/sample.html": {
+      "source": "current-worktree",
+      "sha256": "e7ac0c236e0bbba30b4b8dae8264f5a55cb703866d33d3047900d780a50dec23"
+    },
+    "風格/long-table/準則.md": {
+      "source": "current-worktree",
+      "sha256": "90a421da0840f6b1c57e34f6a88ff05cfdb33339c1a5598bb114338c6f9ccd1a"
+    },
+    "風格/marker-hand/ref.png": {
+      "source": "current-worktree",
+      "sha256": "595cfc32df273ed30b760e660a64f43b0e4904e8d79ad910c35433d30489755a"
+    },
+    "風格/marker-hand/準則.md": {
+      "source": "current-worktree",
+      "sha256": "463dc600f9ddc634f7c120b8182849bbadfcd4ed079aa6eca4dde51f1956af6c"
+    },
+    "風格/neo-grid-bold/ref.png": {
+      "source": "current-worktree",
+      "sha256": "d4d8421d0816cfa500d50aab05c0d5e6596465b2547b62241b11267ae6b55bfa"
+    },
+    "風格/neo-grid-bold/sample.html": {
+      "source": "current-worktree",
+      "sha256": "e66baa604cf00d7c6d3e3d62b76fc85dcaddf4c84bd20b9eacdaa8c88bc238b5"
+    },
+    "風格/neo-grid-bold/準則.md": {
+      "source": "current-worktree",
+      "sha256": "e265a71f0565de3c1645689dd91c48abf2a707a4dc67474b715cf9bc939f0ab2"
+    },
+    "風格/pixel-quest/ref.png": {
+      "source": "current-worktree",
+      "sha256": "ff1a97acebcac8b6ca01142e3d466b13780eacff3b7c7ac74990f6856220d7b9"
+    },
+    "風格/pixel-quest/準則.md": {
+      "source": "current-worktree",
+      "sha256": "b35a7621156cd9230159a7e72f9914723b96860be53da0307e9c1a5d876c2fc2"
+    },
+    "START-HERE.md": {
+      "source": "portable-overlay",
+      "sha256": "f9123df1da5a32e02a63ebe4e8243d8d0dba034a9a629d59f0b45137add0e986"
+    },
+    ".agent/skills": {
+      "source": "portable-overlay",
+      "sha256": "c1aefaccb300698f4b7ae764e1fa857f93c0609ba47b078e4806d926f289c23b"
+    },
+    ".claude/skills": {
+      "source": "portable-overlay",
+      "sha256": "c1aefaccb300698f4b7ae764e1fa857f93c0609ba47b078e4806d926f289c23b"
+    }
+  }
+}

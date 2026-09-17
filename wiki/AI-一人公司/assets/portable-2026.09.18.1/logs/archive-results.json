@@ -1,0 +1,48 @@
+{
+  "root": "C:\\Users\\sanyo\\AppData\\Local\\Temp\\company-portable-20260918-fy78h6h_\\AI-一人公司",
+  "verified_payload_files": 335,
+  "checks": [
+    {
+      "name": "unzip-doctor-before",
+      "command": [
+        "node",
+        "offline/doctor.mjs",
+        "--check"
+      ],
+      "cwd": "C:\\Users\\sanyo\\AppData\\Local\\Temp\\company-portable-20260918-fy78h6h_\\AI-一人公司",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "name": "unzip-doctor-setup",
+      "command": [
+        "node",
+        "offline/doctor.mjs"
+      ],
+      "cwd": "C:\\Users\\sanyo\\AppData\\Local\\Temp\\company-portable-20260918-fy78h6h_\\AI-一人公司",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "name": "unzip-doctor-after",
+      "command": [
+        "node",
+        "offline/doctor.mjs",
+        "--check"
+      ],
+      "cwd": "C:\\Users\\sanyo\\AppData\\Local\\Temp\\company-portable-20260918-fy78h6h_\\AI-一人公司",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "name": "unzip-build",
+      "command": [
+        "node",
+        "offline/build.mjs"
+      ],
+      "cwd": "C:\\Users\\sanyo\\AppData\\Local\\Temp\\company-portable-20260918-fy78h6h_\\AI-一人公司",
+      "exit_code": 0,
+      "expected_exit": 0
+    }
+  ]
+}

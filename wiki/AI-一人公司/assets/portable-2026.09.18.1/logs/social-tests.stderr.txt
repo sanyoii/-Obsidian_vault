@@ -1,0 +1,15 @@
+test_cli_queries_and_invalid_store_exit (test_outcomes.OutcomesTest.test_cli_queries_and_invalid_store_exit) ... ok
+test_complete_post_exact_cohort_and_hash_invalidation (test_outcomes.OutcomesTest.test_complete_post_exact_cohort_and_hash_invalidation) ... ok
+test_correction_preserves_original_and_rejects_scope_change (test_outcomes.OutcomesTest.test_correction_preserves_original_and_rejects_scope_change) ... ok
+test_dry_run_does_not_create_store_and_write_preserves_caption (test_outcomes.OutcomesTest.test_dry_run_does_not_create_store_and_write_preserves_caption) ... ok
+test_duplicate_and_scope_errors_do_not_mutate (test_outcomes.OutcomesTest.test_duplicate_and_scope_errors_do_not_mutate) ... ok
+test_empty_and_pending_are_not_learning_evidence (test_outcomes.OutcomesTest.test_empty_and_pending_are_not_learning_evidence) ... ok
+test_manifest_hashes_match_vendored_bytes (test_outcomes.OutcomesTest.test_manifest_hashes_match_vendored_bytes) ... ok
+test_multiple_posts_same_account_and_wrong_source_rejected (test_outcomes.OutcomesTest.test_multiple_posts_same_account_and_wrong_source_rejected) ... ok
+test_resolved_scope_escape_rejected (test_outcomes.OutcomesTest.test_resolved_scope_escape_rejected) ... ok
+test_source_account_project_status_and_scope (test_outcomes.OutcomesTest.test_source_account_project_status_and_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.705s
+
+OK

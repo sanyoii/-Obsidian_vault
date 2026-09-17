@@ -1,0 +1,150 @@
+test_boundary_exactly_14_days_is_not_stale (test_audit.TestAnalyze.test_boundary_exactly_14_days_is_not_stale) ... ok
+test_boundary_exactly_char_limit_is_not_over (test_audit.TestAnalyze.test_boundary_exactly_char_limit_is_not_over) ... ok
+test_char_count_includes_heading_line (test_audit.TestAnalyze.test_char_count_includes_heading_line) ... ok
+test_entry_count (test_audit.TestAnalyze.test_entry_count) ... ok
+test_fresh_entry (test_audit.TestAnalyze.test_fresh_entry) ... ok
+test_no_date_entry_is_stale (test_audit.TestAnalyze.test_no_date_entry_is_stale) ... ok
+test_over_char_entry (test_audit.TestAnalyze.test_over_char_entry) ... ok
+test_stale_entry (test_audit.TestAnalyze.test_stale_entry) ... ok
+test_stale_sorted_no_date_first_then_oldest (test_audit.TestAnalyze.test_stale_sorted_no_date_first_then_oldest) ... ok
+test_bad_today_exits_zero (test_audit.TestCli.test_bad_today_exits_zero) ... ok
+test_json_degraded_shape_matches (test_audit.TestCli.test_json_degraded_shape_matches) ... ok
+test_json_fields (test_audit.TestCli.test_json_fields) ... ok
+test_missing_file_exits_zero (test_audit.TestCli.test_missing_file_exits_zero) ... ok
+test_text_output_exit_zero (test_audit.TestCli.test_text_output_exit_zero) ... ok
+test_default_hub_is_repo_root (test_audit.TestConstants.test_default_hub_is_repo_root) ... ok
+test_values (test_audit.TestConstants.test_values) ... ok
+test_cross_year_in_january (test_audit.TestDateParsing.test_cross_year_in_january) ... ok
+test_cross_year_mm_dd_in_january (test_audit.TestDateParsing.test_cross_year_mm_dd_in_january) ... ok
+test_illegal_dates_ignored (test_audit.TestDateParsing.test_illegal_dates_ignored) ... ok
+test_iso (test_audit.TestDateParsing.test_iso) ... ok
+test_iso_not_shredded_into_short_forms (test_audit.TestDateParsing.test_iso_not_shredded_into_short_forms) ... ok
+test_mm_dd (test_audit.TestDateParsing.test_mm_dd) ... ok
+test_mmdd_compact (test_audit.TestDateParsing.test_mmdd_compact) ... ok
+test_mmdd_in_parens (test_audit.TestDateParsing.test_mmdd_in_parens) ... ok
+test_no_date (test_audit.TestDateParsing.test_no_date) ... ok
+test_takes_max_date_in_block (test_audit.TestDateParsing.test_takes_max_date_in_block) ... ok
+test_today_itself_is_not_rolled_back (test_audit.TestDateParsing.test_today_itself_is_not_rolled_back) ... ok
+test_year_inference_current_year (test_audit.TestDateParsing.test_year_inference_current_year) ... ok
+test_year_inference_rolls_back_when_future (test_audit.TestDateParsing.test_year_inference_rolls_back_when_future) ... ok
+test_all_green (test_audit.TestGreen.test_all_green) ... ok
+test_green_render (test_audit.TestGreen.test_green_render) ... ok
+test_counts (test_audit.TestOverLimit.test_counts) ... ok
+test_render_marks_header_and_adds_action_line (test_audit.TestOverLimit.test_render_marks_header_and_adds_action_line) ... ok
+test_audit_text_never_raises (test_audit.TestResilience.test_audit_text_never_raises) ... ok
+test_broken_fixture_does_not_crash (test_audit.TestResilience.test_broken_fixture_does_not_crash) ... ok
+test_directory_instead_of_file_degrades (test_audit.TestResilience.test_directory_instead_of_file_degrades) ... ok
+test_empty_text (test_audit.TestResilience.test_empty_text) ... ok
+test_missing_file_degrades (test_audit.TestResilience.test_missing_file_degrades) ... ok
+test_no_headings_at_all (test_audit.TestResilience.test_no_headings_at_all) ... ok
+test_block_includes_heading_line (test_audit.TestSplitBlocks.test_block_includes_heading_line) ... ok
+test_empty_heading_gets_placeholder (test_audit.TestSplitBlocks.test_empty_heading_gets_placeholder) ... ok
+test_h3_is_not_an_entry (test_audit.TestSplitBlocks.test_h3_is_not_an_entry) ... ok
+test_header_note_not_counted (test_audit.TestSplitBlocks.test_header_note_not_counted) ... ok
+test_over_total_flagged (test_audit.TestTotalCharWarning.test_over_total_flagged) ... ok
+test_render_line (test_audit.TestTotalCharWarning.test_render_line) ... ok
+test_under_threshold_has_no_line (test_audit.TestTotalCharWarning.test_under_threshold_has_no_line) ... ok
+test_attachment_is_counted_not_inlined (test_extract.TestClaudeCleaning.test_attachment_is_counted_not_inlined) ... ok
+test_excluded_event_counters (test_extract.TestClaudeCleaning.test_excluded_event_counters) ... ok
+test_keeps_visible_messages_only (test_extract.TestClaudeCleaning.test_keeps_visible_messages_only) ... ok
+test_subagent_files_excluded (test_extract.TestClaudeCleaning.test_subagent_files_excluded) ... ok
+test_archived_sessions_discovered (test_extract.TestCodexCleaning.test_archived_sessions_discovered) ... ok
+test_duplicate_events_deduped (test_extract.TestCodexCleaning.test_duplicate_events_deduped) ... ok
+test_exec_and_subagent_excluded_by_default (test_extract.TestCodexCleaning.test_exec_and_subagent_excluded_by_default) ... ok
+test_include_exec_opt_in (test_extract.TestCodexCleaning.test_include_exec_opt_in) ... ok
+test_keeps_commentary_and_final (test_extract.TestCodexCleaning.test_keeps_commentary_and_final) ... ok
+test_collision_handling_is_idempotent (test_extract.TestCollisions.test_collision_handling_is_idempotent) ... ok
+test_same_session_in_two_projects_writes_once (test_extract.TestCollisions.test_same_session_in_two_projects_writes_once) ... ok
+test_two_sessions_sharing_sid8_both_written (test_extract.TestCollisions.test_two_sessions_sharing_sid8_both_written) ... ok
+test_doctor_after_extraction (test_extract.TestDoctorAndReadme.test_doctor_after_extraction) ... ok
+test_doctor_before_extraction (test_extract.TestDoctorAndReadme.test_doctor_before_extraction) ... ok
+test_doctor_writes_nothing (test_extract.TestDoctorAndReadme.test_doctor_writes_nothing) ... ok
+test_write_readme (test_extract.TestDoctorAndReadme.test_write_readme) ... ok
+test_force_rewrites (test_extract.TestIdempotency.test_force_rewrites) ... ok
+test_second_run_skips (test_extract.TestIdempotency.test_second_run_skips) ... ok
+test_auto_engine_runs_both (test_extract.TestOutputContract.test_auto_engine_runs_both) ... ok
+test_filename_format_and_engine_dirs (test_extract.TestOutputContract.test_filename_format_and_engine_dirs) ... ok
+test_output_is_private (test_extract.TestOutputContract.test_output_is_private) ... skipped 'Windows 沒有 POSIX 權限位元（chmod 0o600 只動唯讀旗標，st_mode 回 0o666）'
+test_pending_is_idempotent (test_extract.TestPending.test_pending_is_idempotent) ... ok
+test_pending_skips_still_active_sources (test_extract.TestPending.test_pending_skips_still_active_sources) ... ok
+test_pending_writes_only_missing (test_extract.TestPending.test_pending_writes_only_missing) ... ok
+test_backfill_month_stays_machine_wide (test_extract.TestScopeAndThrottle.test_backfill_month_stays_machine_wide) ... ok
+test_explicit_scope_beats_marker (test_extract.TestScopeAndThrottle.test_explicit_scope_beats_marker) ... ok
+test_pending_defaults_to_vault_scope (test_extract.TestScopeAndThrottle.test_pending_defaults_to_vault_scope) ... ok
+test_pending_scope_machine_takes_everything (test_extract.TestScopeAndThrottle.test_pending_scope_machine_takes_everything) ... ok
+test_scope_marker_makes_pending_machine_wide (test_extract.TestScopeAndThrottle.test_scope_marker_makes_pending_machine_wide) ... ok
+test_transcript_min_interval_throttles_rewrite (test_extract.TestScopeAndThrottle.test_transcript_min_interval_throttles_rewrite) ... ok
+test_recent_window (test_extract.TestSinceDays.test_recent_window) ... ok
+test_window_excludes_out_of_range (test_extract.TestSinceDays.test_window_excludes_out_of_range) ... ok
+test_engine_auto_is_rejected (test_extract.TestTranscriptMode.test_engine_auto_is_rejected) ... ok
+test_single_transcript (test_extract.TestTranscriptMode.test_single_transcript) ... ok
+test_check_does_not_write (test_install_codex_hook.TestCheck.test_check_does_not_write) ... ok
+test_install_backs_up_existing_file (test_install_codex_hook.TestInstall.test_install_backs_up_existing_file) ... ok
+test_install_preserves_unrelated_hooks (test_install_codex_hook.TestInstall.test_install_preserves_unrelated_hooks) ... ok
+test_install_then_idempotent (test_install_codex_hook.TestInstall.test_install_then_idempotent) ... ok
+test_install_updates_stale_vault_path (test_install_codex_hook.TestInstall.test_install_updates_stale_vault_path) ... ok
+test_refuses_invalid_json (test_install_codex_hook.TestInstall.test_refuses_invalid_json) ... ok
+test_uninstall_drops_empty_event_key (test_install_codex_hook.TestUninstall.test_uninstall_drops_empty_event_key) ... ok
+test_uninstall_keeps_foreign_hooks (test_install_codex_hook.TestUninstall.test_uninstall_keeps_foreign_hooks) ... ok
+test_uninstall_then_idempotent (test_install_codex_hook.TestUninstall.test_uninstall_then_idempotent) ... ok
+test_counts_marked_entries (test_sessionstart_hook.TestArchiveUnfinished.test_counts_marked_entries) ... ok
+test_silent_when_none_marked_or_no_archive (test_sessionstart_hook.TestArchiveUnfinished.test_silent_when_none_marked_or_no_archive) ... ok
+test_hub_yields_when_symlink_resolves_into_cwd (test_sessionstart_hook.TestDeferToProject.test_hub_yields_when_symlink_resolves_into_cwd) ... ERROR
+test_rules_carry_root_anchor_outside_home_vault (test_sessionstart_hook.TestDeferToProject.test_rules_carry_root_anchor_outside_home_vault) ... ok
+test_rules_yield_when_cwd_has_own_mechanism (test_sessionstart_hook.TestDeferToProject.test_rules_yield_when_cwd_has_own_mechanism) ... ok
+test_broken_extras_still_inject_hub (test_sessionstart_hook.TestExtrasNeverBreakHub.test_broken_extras_still_inject_hub) ... ok
+test_broken_footprint_never_breaks_hub (test_sessionstart_hook.TestFootprintLine.test_broken_footprint_never_breaks_hub) ... ok
+test_candidates_threshold (test_sessionstart_hook.TestFootprintLine.test_candidates_threshold) ... ok
+test_never_scanned_needs_volume (test_sessionstart_hook.TestFootprintLine.test_never_scanned_needs_volume) ... ok
+test_silent_without_datamap_or_sessionlog (test_sessionstart_hook.TestFootprintLine.test_silent_without_datamap_or_sessionlog) ... ok
+test_stale_scan_needs_both_conditions (test_sessionstart_hook.TestFootprintLine.test_stale_scan_needs_both_conditions) ... ok
+test_build_context_returns_none_when_missing (test_sessionstart_hook.TestHookDefaults.test_build_context_returns_none_when_missing) ... ok
+test_default_hub_matches_audit (test_sessionstart_hook.TestHookDefaults.test_default_hub_matches_audit) ... ok
+test_display_path (test_sessionstart_hook.TestHookDefaults.test_display_path) ... ok
+test_dashboard_before_full_text (test_sessionstart_hook.TestHookOutput.test_dashboard_before_full_text) ... ok
+test_envelope (test_sessionstart_hook.TestHookOutput.test_envelope) ... ok
+test_full_text_included (test_sessionstart_hook.TestHookOutput.test_full_text_included) ... ok
+test_not_ascii_escaped (test_sessionstart_hook.TestHookOutput.test_not_ascii_escaped) ... ok
+test_preamble_two_notes (test_sessionstart_hook.TestHookOutput.test_preamble_two_notes) ... ok
+test_empty_hub_is_silent (test_sessionstart_hook.TestHookSilence.test_empty_hub_is_silent) ... ok
+test_garbage_stdin_still_works (test_sessionstart_hook.TestHookSilence.test_garbage_stdin_still_works) ... ok
+test_missing_hub_is_silent (test_sessionstart_hook.TestHookSilence.test_missing_hub_is_silent) ... ok
+test_no_stdin_still_works (test_sessionstart_hook.TestHookSilence.test_no_stdin_still_works) ... ok
+test_attached_with_rules_only (test_sessionstart_hook.TestMemoryAttach.test_attached_with_rules_only) ... ok
+test_no_memory_file_is_silent (test_sessionstart_hook.TestMemoryAttach.test_no_memory_file_is_silent) ... ok
+test_absent_without_sessionlog_dir_or_session_id (test_sessionstart_hook.TestSessionLine.test_absent_without_sessionlog_dir_or_session_id) ... ok
+test_flows_through_subprocess_stdin (test_sessionstart_hook.TestSessionLine.test_flows_through_subprocess_stdin) ... ok
+test_with_note_and_without (test_sessionstart_hook.TestSessionLine.test_with_note_and_without) ... ok
+test_absent_without_sessionlog_dir (test_sessionstart_hook.TestSessionlogHealth.test_absent_without_sessionlog_dir) ... ok
+test_counts_unrecorded_since_install (test_sessionstart_hook.TestSessionlogHealth.test_counts_unrecorded_since_install) ... ok
+test_recorded_and_active_sessions_not_flagged (test_sessionstart_hook.TestSessionlogHealth.test_recorded_and_active_sessions_not_flagged) ... ok
+test_garbage_index_still_injects_hub (test_sessionstart_hook.TestUpdateCheckNeverBreaksHub.test_garbage_index_still_injects_hub) ... ok
+test_network_error_still_injects_hub (test_sessionstart_hook.TestUpdateCheckNeverBreaksHub.test_network_error_still_injects_hub) ... ok
+test_no_update_flag_skips_fetch (test_sessionstart_hook.TestUpdateCheckNeverBreaksHub.test_no_update_flag_skips_fetch) ... ok
+test_notice_sits_right_after_dashboard (test_sessionstart_hook.TestUpdateCheckNeverBreaksHub.test_notice_sits_right_after_dashboard) ... ok
+test_readonly_log_still_injects_hub (test_sessionstart_hook.TestUpdateCheckNeverBreaksHub.test_readonly_log_still_injects_hub) ... ok
+test_is_newer_ordering (test_sessionstart_hook.TestUpdateNotice.test_is_newer_ordering) ... ok
+test_new_version_returns_line_with_title (test_sessionstart_hook.TestUpdateNotice.test_new_version_returns_line_with_title) ... ok
+test_not_a_product_vault_is_silent_and_offline (test_sessionstart_hook.TestUpdateNotice.test_not_a_product_vault_is_silent_and_offline) ... ok
+test_older_channel_version_is_silent (test_sessionstart_hook.TestUpdateNotice.test_older_channel_version_is_silent) ... ok
+test_same_version_is_silent (test_sessionstart_hook.TestUpdateNotice.test_same_version_is_silent) ... ok
+test_skipped_version_is_silent (test_sessionstart_hook.TestUpdateNotice.test_skipped_version_is_silent) ... ok
+test_stamps_only_after_a_successful_fetch (test_sessionstart_hook.TestUpdateNotice.test_stamps_only_after_a_successful_fetch) ... ok
+test_throttled_within_24h_does_not_fetch (test_sessionstart_hook.TestUpdateNotice.test_throttled_within_24h_does_not_fetch) ... ok
+test_zero_row_index_is_silent (test_sessionstart_hook.TestUpdateNotice.test_zero_row_index_is_silent) ... ok
+
+======================================================================
+ERROR: test_hub_yields_when_symlink_resolves_into_cwd (test_sessionstart_hook.TestDeferToProject.test_hub_yields_when_symlink_resolves_into_cwd)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex\AI-一人公司\delivery\2026.09.18.1\staging\AI-一人公司\.claude\hooks\tests\test_sessionstart_hook.py", line 485, in test_hub_yields_when_symlink_resolves_into_cwd
+    link = g / "HUB.md"; link.symlink_to(vault / "HUB.md")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanyo\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1386, in symlink_to
+    os.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] 用戶端沒有這項特殊權限。: 'C:\\Users\\sanyo\\AppData\\Local\\Temp\\tmpw_bcl7zf\\vault\\HUB.md' -> 'C:\\Users\\sanyo\\AppData\\Local\\Temp\\tmpw_bcl7zf\\global\\HUB.md'
+
+----------------------------------------------------------------------
+Ran 134 tests in 7.833s
+
+FAILED (errors=1, skipped=1)

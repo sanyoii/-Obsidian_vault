@@ -1,0 +1,18 @@
+✔ Dashboard 不顯示能力表懸空引用 (2259.6904ms)
+✔ 明確不納入本次 SETUP 的待授權連結器不阻擋進度 (3.1473ms)
+✔ 已看過並登記的外部成品可完成第一件成品步驟 (0.299ms)
+✔ hover highlights every reused occurrence and its incoming/outgoing edges (3.9559ms)
+✔ highlight preserves the original path and dashed line semantics (1.3057ms)
+✔ moving between reused occurrences preserves the same highlighted relationships (1.0653ms)
+✔ moving to a different capability clears the old group and excludes unrelated edges (0.9842ms)
+✔ 解析完整晨報契約與派工口令 (6.1905ms)
+✔ 嵌入 HTML 前跳脫可能提前關閉 script 的內容 (0.6224ms)
+✔ HTML shell 缺少資料插槽時明確失敗 (0.9311ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2356.7003
