@@ -1,0 +1,11 @@
+ok   node  v24.19.0
+ok   python  py -3 → Python 3.14.2
+ok   git bash  C:\Program Files\Git\bin\bash.exe
+缺:   .claude/skills 不可用（是文字檔，不是連結）
+      → node ./offline/doctor.mjs（不帶 --check）會重建
+缺:   .agent/skills 不可用（是文字檔，不是連結）
+      → node ./offline/doctor.mjs（不帶 --check）會重建
+ok   行尾  LF
+ok   claude CLI  2.1.220 (Claude Code)
+
+缺 2 項，裝完重開 Claude Code 再跑一次。

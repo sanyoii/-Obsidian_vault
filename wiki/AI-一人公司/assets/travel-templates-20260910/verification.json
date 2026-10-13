@@ -1,0 +1,31 @@
+{
+  "result": "pass",
+  "copies": [
+    {
+      "file": "booklet.html",
+      "source_sha256": "abc936429d10cadb19daedd4ef539bd42f7fd7f210bc18c62b6b86a315fda89f",
+      "wiki_sha256": "ce89033f7975f53dd31536a7717af5629bf40e5b77dd70ae4177d88c1291f4d6",
+      "content_identical_after_CRLF_to_LF": true,
+      "bytes": 47777
+    },
+    {
+      "file": "dayguide.html",
+      "source_sha256": "38bb3b3ba2a2b2796a87d6f7c8e380cd7c0307d8813ba35dbdc135ed8b75dca4",
+      "wiki_sha256": "0adbb00703b5203d4db88b96d3f192c67df6d499efc3a62b173f066ef09c90b5",
+      "content_identical_after_CRLF_to_LF": true,
+      "bytes": 47778
+    },
+    {
+      "file": "weekboard.html",
+      "source_sha256": "e2e67d17ee59ba749db624e0c81643298a5088e662a9836bb40bb100d5b6a243",
+      "wiki_sha256": "dd2df8a5f0dc4fb84a3261b1d83d3237bd84245a651e7745dc45e9cd99b03d5c",
+      "content_identical_after_CRLF_to_LF": true,
+      "bytes": 47779
+    }
+  ],
+  "selected": "C",
+  "index_and_local_links": "pass",
+  "initial_byte_comparison": "failed due to CRLF versus LF; preserved content verified after normalization",
+  "visual_validation": "not_run; prior browser URL policy blocked file URLs",
+  "tests_106": "historical, not rerun during archiving"
+}

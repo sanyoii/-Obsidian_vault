@@ -1,6 +1,77 @@
 # 文章摘要總覽
 
-> 最後更新：2026-08-01
+## [[wiki/Claude/Codex子代理角色與來源|Codex 子代理角色與來源]]
+
+**摘要：** 區分 Codex 內建、Agency-Agents、addyosmani 工程角色及五個本機自訂角色；17 個 Agency 類本機兩端本文相符，五個自訂角色安裝 hash 相符。原始匯入日期／操作者未確認，未啟動代理。
+**建立：** 2026-09-29。
+
+## [[wiki/Web3-基礎/區塊鏈與QA課程/00-課程入口|區塊鏈與 Web3 QA：20 週課程]]
+
+**摘要：** 依 Python 基礎、不會 JavaScript、每週至少 6 小時規劃全面理解與 QA 主線。第 1 週涵蓋帳本、雙重支付、節點、驗證與共識，附 Python 順序實驗、課前診斷、作業、解答與補強門檻。後續 19 週尚為規劃。
+**建立：** 2026-09-29。教材程式已執行與檢查，學習者尚未作答。
+
+## [[AI-一人公司/一人旅遊公司 — 實作計畫|一人旅遊公司 — 實作計畫 v1]]
+
+**摘要：** 核准計畫已在 D:/Codex/一人旅遊公司 完成本機初版，依追加授權建立本機 Git repo，未提交、推送或設定遠端。主模型負責整合與最終驗收，Luna 完成小包試作。63＋19 Python tests、3 Node tests、隔離套件與更新還原通過。12 個 AI 判讀情境首輪 11 Pass／1 Fail，補強後重測該題通過；最新結果混合兩版規則，不當成同版完整重測。新上下文可產示範與建置；真人、畫面、手機、PDF、真旅程、人工比較與第二趟基準尚未驗證。
+
+## [[AI-一人公司/一人旅遊公司 — 架構與工作流程|一人旅遊公司 — 架構與工作流程 v2]]
+
+**摘要：** 自用旅遊管家本機初版已完成：16 角色作方法庫，由主模型按總管、研究、設計、覆核、交付責任派工。已實作行程／預訂／支付分離、來源重查、時間依賴驗證、重排候選、私人與分享離線頁面、Wiki 搜尋入口、AI 接入說明與更新還原。外部服務仍未設定；Wiki 真資料連接另需本機設定。合成工具與 AI 判讀已有證據，尚未證明真人手機可用或真實旅行成果；人工比較與第二趟重用保留為未驗收項。
+
+## [[AI-一人公司/一人旅遊公司 — 顧問團審查報告|一人旅遊公司 — 顧問團審查報告]]
+
+**摘要：** 保存五位獨立顧問、五份匿名互評、A–E 映射及主席結論，附原 HTML 副本。共識為先補可行性、訂單真相、途中可用性與投入效益；保留能力藍圖，以小案與真人理解驗證後擴大。歷史審查內容不被後續規劃改寫，採用情形見 v2。
+
+**建立：** 2026-09-09
+
+> 最後更新：2026-09-12
+
+---
+
+## [[Web3-基礎/Ch01-完整筆記|Web3 基礎 Ch01 完整筆記]]
+**標籤：** `#Web3` `#learning` `#ethereum`
+**摘要：** 第1章完整整理：互動地圖、dApp/RPC/mempool/出塊/驗證者/gas、Alice→Bob精修流程、成功/Pending/Revert、確認加深定義與常見誤解校正。主題是交易生命週期而非匯款專章。
+**建立：** 2026-09-12
+
+---
+
+## [[QA/Web3-Crypto-QA-互動教材|Web3／Crypto QA 互動教材]]
+**標籤：** `#QA` `#Web3` `#Crypto` `#learning` `#interactive`
+**摘要：** 由入門學習包改編的關卡制教材：開場心智模型＋7 關（不可變性、gas/finality、錢包簽章與 approve、風險地圖、ERC、橋/oracle/L2、測試分層與 QA vs Audit）＋Boss 五題。每關含精讀卡、選擇／填空／情境題、折疊參考答與迷思／最小補課；含進度表與停止條件。主張對齊 ethereum.org、EIP-20、MetaMask 簽章說明等一手來源。
+**來源：** [[Web3-Crypto-QA-入門學習包]] 及其中來源清單
+**建立：** 2026-09-12
+
+---
+
+## [[水球流軟體設計模式精通之旅/課程總覽與學習包|課程總覽與學習包]]
+**標籤：** `#設計模式` `#水球軟體學院` `#learning` `#OADP` `#Forces`
+**摘要：** Learning Assistant 合成層（不取代單篇模式筆記）。一句心智模型：OADP 疊代後在 OOD「再求好」依衝突 Forces 才套 Pattern。含白／黑段與支線地圖、行為／結構／創建型 Force→Intent→vs→挑戰快卡、路徑 A/B、8 題驗收。標明 5 支空逐字稿（1.9／1.12／2.16／6.1／9.1）與 Ch8／Ch10 無影片；DIP 完整手法指向 4.3。來源為 brain-docs 逐字稿合輯、Force 合輯與既有 wiki。
+**來源：** `D:/Claude/infra/brain-docs/course/`、`D:/軟體設計模式精通之旅`、wiki 水球流資料夾
+**建立：** 2026-09-12
+
+---
+
+## [[QA/Web3-Crypto-QA-入門學習包|Web3／Crypto QA 入門學習包]]
+**標籤：** `#QA` `#Web3` `#Crypto` `#learning` `#smart-contracts`
+**摘要：** Learning Assistant 整理的入門包：以不可逆、公開、真實資產與 gas、permissionless 對手為心智模型；含 Web2 vs Web3 QA 對照、七個核心觀念（不可變性、gas／finality、錢包簽章與 approve、風險地圖、ERC 標準、橋／oracle／L2、QA vs audit）、1–2 週學習路徑與五題驗收。來源以 ethereum.org、Solidity、OWASP SCS、EIP-20／721、Foundry invariant、MetaMask 簽章釣魚說明為主。僅防禦／QA 高層觀念，不含 exploit PoC；OWASP Top 10 頁曾抓取失敗，細節以官網為準。
+**來源：** ethereum.org Testing／Security、Solidity Security Considerations、OWASP Smart Contract Top 10／SCS Checklist、EIP-20／721 等（見文內來源清單）
+**建立：** 2026-09-12
+
+---
+
+## [[AI-一人公司/AI Hero — 兩家公司補強再審視|AI Hero — 兩家公司補強再審視]]
+
+**摘要：** 保存公开目錄盤點與重點深讀的再審視結果。優先驗證一句話交辦的真實行為；分開需求與品質，補上 Wiki 檢索品質、長文研究、安裝引導、Dashboard 證據與失敗分類。不是全站付費內容審核，未執行上游 Skills。
+
+## [[AI-一人公司/兩家一人公司 — AI Hero 補強計畫|兩家一人公司 — AI Hero 補強計畫 v1]]
+
+**摘要：** 六階段計畫已核准並完成本機補強，測試公司整合至獨立正式目錄。工具、檢查器、建置及隔離更新還原通過；Wiki 合成查詢 Top 3 由 8/11 提升至 11/11。48 次真模型比較因 CLI 憑證錯誤 Not Run，畫面驗收受瀏覽器政策阻擋，不能宣稱整體行為或真人可用性已通過。未提交、推送或發布。
+
+## [[QA/AI 測試案例 Prompt 的缺口 — Test Design Method 與 QA Decision Desk 補強|AI 測試案例 Prompt 的缺口 — Test Design Method 與 QA Decision Desk 補強]]
+**標籤：** `#QA` `#testing` `#test-design` `#prompt-engineering` `#oracle` `#evidence`
+**摘要：** 解讀敏捷三叔公 2026-08-24 對 test case generation prompts 的整理，核心不是增加第八個 prompt 欄位本身，而是把 Requirement Readiness、Risk／failure mode、技法選擇、oracle、human review、Test Case、Run evidence 與 coverage feedback 串成可審核決策鏈。現有 QA Decision Desk 已具備 requirement clarification、risk-first、部分 boundary／API 程序、Unknown 與 human authority boundary；真正缺口是通用 Test Design Decision、oracle hierarchy、testability／observability 與 stopping／feedback rule。2026-08-25 已核准 local implementation candidate：把欄位併入 02 Test Spec 與 04 Test Case v0.2.0，新增 template contract test 與真實需求 retrospective pilot；不新增 Dashboard 頁面、Playbook 或第十個核心模板，pilot 仍維持 needs-review。Portfolio 應展示 Risk→Method→Oracle→Evidence→Decision，而不是長 prompt。
+**來源：** 敏捷三叔公 — https://agile3uncles.com/2026/08/24/the-missing-piece-in-test-case-prompts/（發布 2026-08-24）
+**建立：** 2026-08-25
 
 ---
 
@@ -438,3 +509,156 @@
 **摘要：** 雷曼 *REPO MANUAL — Repo Sales Reference Guide*（Bates LBEX-LL 1175483–1175553，71 頁，封面標註 2005-11-08）全十一節中文精修，教材 M5 的原文層，104,110 字元／23 個實例區塊。核心觀念：Repo 是同一筆交易的兩張臉——經濟上是以證券擔保的借貸，法律上是「賣出＋承諾買回」，價差即利息；**破產那天你手上有什麼，取決於用哪一張臉解讀**。內容涵蓋六大用途（融資庫存／matched book 賺利差／借券補空頭／處理 settlement fail／客戶流動性／閒置券變現）如何牽動 Trading-Treasury-BalanceSheet-Collateral-Credit-Settlement 六個部門、完整生命週期十步、haircut 的三重作用（價格緩衝＋清算所需時間＋清算時的流動性折價，第三樣最常被漏）、Infinity 前台系統作為狀態機（Shell→Allocated→Approved→Released，且 Released 不可逆）、MTS 主機指令、CAMEO 盯市與 margin call、LBI/LBIE 雙法人的票據與交割差異。**最大的加值是 ⚠️ 標出原件 16 處缺陷**：haircut 有扣減式與倍數式兩種口徑但原件混用且從未定義（同一個「20%」兩種算法差 5% 擔保品）、殘餘風險完整清單七項而原件只涵蓋兩項半且缺的第四項 wrong-way risk 正是雷曼的死因、matched book 實際上交易員刻意錯配天期賺利差（資產鎖三個月、負債每天 roll）、業績表誘因偏向未評等抵押品長天期交易達公債的 30 倍、`Current Exposure` 不含新交易與 reprice 卻在同一手冊有三個名字、margin call 有三個互相衝突的期限且處置動詞是 could 不是 will、判斷 margin call 好壞的人是拿業績分的業務、全書從未問「雷曼自己借不到錢會怎樣」（2005 年一線教材的集體盲點）。**最犀利的一條：LBI（紐約／美國法／MRA）與 LBIE（倫敦／英國法／GMRA）的區分，在這份手冊裡的控制手段只是「Excel 上標一個顏色」——三年後這條線變成了 Repo 105。** 末章「這份手冊與 Repo 105 的關係」銜接 Examiner Vol 3。
 **來源：** 一手 PDF `raw/sources/lehman-manuals/LBEX-LL-1175483-1175553_Repo-Sales-Reference-Guide.pdf`
 **建立：** 2026-07-30
+
+---
+
+## [[求職/Web3-轉職計畫/00-總覽與定位|Web3 轉職計畫 — 總覽與定位]]
+**標籤：** `#求職` `#Web3` `#QA` `#Technical-Support` `#Remote`
+**摘要：** Web3求職系統的公開入口。核准Primary為Senior QA／Product Quality、Secondary為Senior Technical Support、Stretch為hands-on QA Lead／Test Lead；Fully Remote only、台灣時間09:00–24:00、travel不超過25%。分離QA/customer-engineering的12+年資與短期Web3 domain experience，保存work/portfolio、Degree、Career Break與confidential claims邊界。Current snapshot：Day1–14完成；LinkedIn與portfolio已更新；2份application為2026-08-14 user-confirmed dated state；CEX lab current public deterministic 39×Python3.12/3.14 passed，governance candidate本機40 deterministic＋5 live passed，manual／exploratory未執行。
+**來源：** `D:/Codex/Web3/PROJECT_MEMORY.md`、application／portfolio／CEX lab receipts
+**建立：** 2026-07-27；source-backed更新2026-08-15
+
+---
+
+## [[求職/Web3-轉職計畫/01-賽道地圖與資產缺口|Web3 轉職計畫 — 賽道地圖與資產缺口]]
+**標籤：** `#求職` `#Web3` `#role-taxonomy` `#evidence` `#gap-analysis`
+**摘要：** 以outcome ownership區分QA／Product Quality、Technical Support、hands-on Lead、Customer Success、Program Management與Compliance adjacency。逐柱記錄Trend Micro、ASML、BTSE與CEX lab能支撐什麼、不能延伸成什麼，並把market refresh、profile matrix、publication checklist、case studies、CEX journey、wallet design、trading edge cases、manual execution、mock interviews與application sample列為具gate的缺口。CEX lab evidence明確分成current public deterministic、historical public live、local governance candidate與designed-not-executed manual／exploratory。
+**來源：** `D:/Codex/Web3/WEB3_ROLE_TAXONOMY.md`、`JD_REQUIREMENT_EVIDENCE_GAP_ANALYSIS.md`、CEX lab evidence
+**建立：** 2026-07-27；source-backed更新2026-08-15
+
+---
+
+## [[求職/Web3-轉職計畫/02-35天執行計畫|Web3 轉職計畫 — 35天執行計畫]]
+**標籤：** `#求職` `#Web3` `#35天計畫` `#進度追蹤` `#QA`
+**摘要：** Day1–35的完整交付、current label與下一個gate。Day1–14 verified complete；Day15–20部分完成；Day22與scope-limited Day25已有artifact evidence；Day33為2/5 user-confirmed submitted；Day35因sample/time blocked。另記public head `8fd5081` deterministic run 31823105148、historical live `9ce65e0`、local 40＋5 governance candidate、manual MTC／exploratory未執行，以及application-first cadence與依序完成投遞、outreach、public evidence、publishing checklist、case studies、Day21/23/24與mocks的行動順序。
+**來源：** `D:/Codex/Web3/PROJECT_MEMORY.md`、`APPLICATION_FIRST_14_DAY_PLAN.md`、CEX lab receipts
+**建立：** 2026-07-27；source-backed更新2026-08-15
+
+---
+
+## [[求職/Web3-轉職計畫/03-投遞通路與冷啟動|Web3 轉職計畫 — 投遞通路與冷啟動]]
+**標籤：** `#求職` `#Web3` `#投遞` `#outreach` `#funnel`
+**摘要：** Application-first執行頁：每份submission以official active JD、Taiwan／APAC eligibility、Fully Remote、role-specific resume、unsupported-claim scan、schedule/travel unknowns與人工packet review為gate。14-day overlay顯示packets與兩筆submission完成，artifact部分完成，outreach／new-role sample／mocks pending，funnel diagnosis因2份樣本與等待時間不足blocked。2026-08-14 dated funnel為2 submitted／0 screen／0 HM／0 closed；current external stage unknown。以十份qualified applications或7–10 business days為第一輪review門檻。
+**來源：** `D:/Codex/Web3/APPLICATION_FIRST_14_DAY_PLAN.md`、application packet receipts
+**建立：** 2026-07-27；source-backed更新2026-08-15
+
+## Grok Bot（2026-09-12）
+
+### [[Grok Bot/01-官方資料與分析|官方資料與分析]]
+
+**摘要：** 八份官方來源、查核日期、閱讀分析與產品能力限制。 本機整理完成；Grok 帳號、部署與真實行為未驗證。
+
+### [[Grok Bot/02-團隊設計與工作流程|團隊設計與工作流程]]
+
+**摘要：** 八角色責任、固定交接、任務格式、工作量上限與待執行驗收。 本機整理完成；Grok 帳號、部署與真實行為未驗證。
+
+### [[Grok Bot/03-Bot完整設定|Bot完整設定]]
+
+**摘要：** 最後補強版的八個完整 description，另附短名稱與主要工作任務。 本機整理完成；Grok 帳號、部署與真實行為未驗證。
+
+### [[Grok Bot/04-討論沿革與資料準備|討論沿革與資料準備]]
+
+**摘要：** 六到八角色的演進、設定 review、About Me 修改與資料存取界線。 本機整理完成；Grok 帳號、部署與真實行為未驗證。
+
+### [[一人軟體測試公司/_index|一人軟體測試公司入口]]
+
+**摘要：** 集中公司架構、方法、委託與交付文件；新文件統一存入獨立分類，現有QA文件保留並連結。
+
+### [[一人軟體測試公司/PartyPiuPiu — 委託測試企劃]]
+
+**摘要：** 三端圖文測試企劃，32個未測情境、32–45人時預留及由我們負責的帳號與正式站復原方案。來源已保存；尚未建立帳號或執行正式測試；v0.2確認無額外環境，復原未演練，高影響專項暫緩。
+
+### [[一人軟體測試公司/PartyPiuPiu — 00-測試文件入口]]
+
+**摘要：** 企劃v0.2已核准；六類文件將32情境展開為78筆案例，全部未測。包括10項待確認判準、帳號與資料、五條復原程序、六次限時探索及Run/缺陷格式。
+
+- [[一人軟體測試公司/PartyPiuPiu — 01-需求與判準確認表]]
+
+- [[一人軟體測試公司/PartyPiuPiu — 02-測試案例與追溯表]]
+
+- [[一人軟體測試公司/PartyPiuPiu — 03-測試環境與資料準備表]]
+
+- [[一人軟體測試公司/PartyPiuPiu — 04-復原程序與進場檢查表]]
+
+- [[一人軟體測試公司/PartyPiuPiu — 05-探索式測試任務單]]
+
+- [[一人軟體測試公司/PartyPiuPiu — 06-執行與缺陷紀錄格式]]
+
+### [[一人軟體測試公司/PartyPiuPiu — 委託方測試說明]]
+
+委託方閱讀版：以六個短段落說明需要確認、協助及檢視的事項，包含登入後功能、正式站小量測試與復原責任。內部完整企劃保留；本稿未寄送，沒有新增測試結果。
+
+## 2026-09-22 課程影片重點整理匯入
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/00-設計流程圖與模式總整理|00-設計流程圖與模式總整理]]
+
+OOA、OOD 與行為型模式的流程圖說明。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/01-行雲流水的設計底層思路|01-行雲流水的設計底層思路]]
+
+需求分析、UML、OADP 與物件導向設計基礎。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/01-行雲流水的設計底層思路-補充|01-行雲流水的設計底層思路-補充]]
+
+需求分析、UML、OADP 與物件導向設計基礎。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/02-Christopher Alexander 與策略模式|02-Christopher Alexander 與策略模式]]
+
+Context、Forces、Problem、Solution 與策略模式案例；文字由 PDF 擷取。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/03-樣板方法與控制反轉|03-樣板方法與控制反轉]]
+
+學員分組案例中的共同行為、變動步驟與控制反轉。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/04-Big 2 複雜行為實戰|04-Big 2 複雜行為實戰]]
+
+策略與責任鏈的 Forces 差異，以及 Big 2 行為設計。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/04A-責任鏈與碰撞偵測|04A-責任鏈與碰撞偵測]]
+
+碰撞偵測與處理案例中的處理者串接。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/05-RPG 多重設計難題實戰|05-RPG 多重設計難題實戰]]
+
+多種行為約束與指令、觀察者、狀態模式的課程筆記。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/05A-觀察者與響應式行為|05A-觀察者與響應式行為]]
+
+響應式行為約束、訂閱與通知。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/05B-指令與行為綁定|05B-指令與行為綁定]]
+
+遙控器案例中的操作封裝與行為綁定。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/05C-狀態機與狀態模式|05C-狀態機與狀態模式]]
+
+購票機案例中的狀態、事件與行為切換。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/06-基礎架構與模組邊界|06-基礎架構與模組邊界]]
+
+變化封裝、模組邊界與依賴方向。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/06A-依賴反轉與轉接器|06A-依賴反轉與轉接器]]
+
+單字查詢案例中的介面相容、資料與例外轉換。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/06B-代理模式與存取控制|06B-代理模式與存取控制]]
+
+記帳系統案例中的延遲載入與功能存取控制。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/06C-複合模式與樹狀結構|06C-複合模式與樹狀結構]]
+
+檔案系統中的一致操作介面，以及透明度與安全性的取捨。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/07-裝飾者與行為組合|07-裝飾者與行為組合]]
+
+Messenger 案例中的行為組合與裝飾者串接。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/09-工廠方法與生命週期|09-工廠方法與生命週期]]
+
+聊天伺服器案例中的物件建立、生命週期與過度設計。
+
+## [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/09A-單體模式與計算模型|09A-單體模式與計算模型]]
+
+唯一實例、共享資源及依賴注入的取捨。
+

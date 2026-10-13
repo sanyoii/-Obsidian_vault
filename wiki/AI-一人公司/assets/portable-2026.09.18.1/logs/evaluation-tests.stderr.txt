@@ -1,0 +1,24 @@
+test_controlled_separate (test_check.CheckTests.test_controlled_separate) ... ok
+test_duplicate_ids (test_check.CheckTests.test_duplicate_ids) ... ok
+test_duplicate_run_id (test_check.CheckTests.test_duplicate_run_id) ... ok
+test_empty_requirements_rejected (test_check.CheckTests.test_empty_requirements_rejected) ... ok
+test_incomplete (test_check.CheckTests.test_incomplete) ... ok
+test_invalid_pass_not_counted (test_check.CheckTests.test_invalid_pass_not_counted) ... ok
+test_invalid_suite_never_counts_pass (test_check.CheckTests.test_invalid_suite_never_counts_pass) ... ok
+test_invalid_utf8 (test_check.CheckTests.test_invalid_utf8) ... ok
+test_malformed_scenario_id (test_check.CheckTests.test_malformed_scenario_id) ... ok
+test_malformed_status_returns_error (test_check.CheckTests.test_malformed_status_returns_error) ... ok
+test_missing_evidence (test_check.CheckTests.test_missing_evidence) ... ok
+test_no_records (test_check.CheckTests.test_no_records) ... ok
+test_path_escaping (test_check.CheckTests.test_path_escaping) ... ok
+test_positive (test_check.CheckTests.test_positive) ... ok
+test_record_link_rejected (test_check.CheckTests.test_record_link_rejected) ... ok
+test_requirement_order_not_significant (test_check.CheckTests.test_requirement_order_not_significant) ... ok
+test_tamper (test_check.CheckTests.test_tamper) ... ok
+test_unknown_suite_and_scenario (test_check.CheckTests.test_unknown_suite_and_scenario) ... ok
+test_windows_drive_path (test_check.CheckTests.test_windows_drive_path) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.163s
+
+OK

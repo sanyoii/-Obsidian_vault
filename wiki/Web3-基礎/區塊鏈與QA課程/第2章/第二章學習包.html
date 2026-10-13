@@ -1,0 +1,387 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第二章學習包｜Hash、簽章與錢包</title><style>
+:root{--ink:#18302e;--accent:#146354;--line:#d8e2dc}*{box-sizing:border-box}body{margin:0;background:#f2f4ee;color:var(--ink);font:17px/1.85 system-ui,"Microsoft JhengHei",sans-serif}.wrap{max-width:1050px;margin:auto;padding:40px 28px}h1{font-size:clamp(28px,4vw,42px);line-height:1.4}h2{font-size:25px}h3{font-size:20px}a{color:var(--accent);text-underline-offset:4px}nav{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}section,details.panel{padding:28px;background:#fffefa;border:1px solid var(--line);border-radius:10px;margin:24px 0;min-width:0}pre{background:#172e2a;color:#ecf5ef;padding:18px;border-radius:6px;overflow:auto;font:14px/1.7 Consolas,monospace}code{font-family:Consolas,monospace}.table-scroll{overflow:auto}table{border-collapse:collapse;min-width:500px;width:100%;font-size:15px}td,th{padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#eaf0e8}summary{cursor:pointer;font-size:21px;font-weight:700}button{font:inherit;padding:8px 14px;border:0;background:var(--accent);color:white;border-radius:5px;cursor:pointer}a:focus-visible,summary:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid #b76d10;outline-offset:4px}.small,footer{font-size:14px;color:#546865}footer{overflow-wrap:anywhere}.source pre{white-space:pre-wrap;overflow-wrap:anywhere}.source summary{font-size:14px}.skip{position:absolute;top:-100px}.skip:focus{top:0;background:white;padding:10px}@media(max-width:720px){.wrap{padding:24px 16px}section,details.panel{padding:20px 16px}body{font-size:16px}pre{font-size:13px}}@media print{nav,button,.source,.skip{display:none}.wrap{padding:0}body{background:white;font-size:11pt}section,details.panel{padding:0;border:0}details:not([open]){display:none}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee;color:black}table{min-width:0}.table-scroll{overflow:visible}}
+
+body{color:#18302e;font-family:system-ui,"Microsoft JhengHei",sans-serif}.course-diagram{margin:24px 0;border:1px solid #d8e2dc;border-radius:8px;padding:16px;background:#f4f7f0}.diagram-scroll{overflow-x:auto}.course-diagram svg{display:block;width:760px;max-width:none;height:auto}.course-diagram text{font-family:system-ui,"Microsoft JhengHei",sans-serif;font-size:17px;fill:#18302e}.course-diagram .box{fill:#fffefa;stroke:#146354;stroke-width:1.5}.course-diagram .key{fill:#e4eee5;stroke:#146354;stroke-width:1.5}.course-diagram .arrow{fill:none;stroke:#146354;stroke-width:2}.course-diagram .hint{font-size:15px;fill:#546865}.course-diagram figcaption{font-size:15px;color:#546865;margin-top:12px}@media print{.course-diagram svg{width:100%;max-width:100%}.diagram-scroll{overflow:visible}}
+</style></head><body><a class="skip" href="#workbook">跳到作業與診斷</a><div class="wrap"><header><p class="small">WEB3 × QA / CHAPTER 02</p><h1>內容沒改，就一定是本人同意嗎？</h1><p>從 Alice 付 7 點給 Bob 開始，看清資料、金鑰、簽章與付款意圖怎麼連起來。</p><p>約六小時，可分週；必修可離線閱讀。Python 在本機執行，簽章用作者實跑的固定樣本判讀。</p><p class="small">先保留診斷原答，再讀教材。答案預設收合；頁面不保存作答，也不自動評分。列印只包含展開的內容。</p><button id="print" type="button">列印／另存 PDF</button></header><nav aria-label="學習包目錄"><a href="#workbook">診斷與作業</a><a href="#lesson">教材與圖解</a><a href="#rubric">評分與補強</a><a href="#answers">參考解答</a></nav><main><section id="lesson"><h2>Web3 與 QA 教材</h2><p>Alice 要付 7 點給 Bob。螢幕上顯示這句話，送出去的資料卻可能變成付 70 點給 Eve。第一章教你檢查帳本及交易順序；這章往前一步，看「送出的內容」和「誰同意這份內容」。</p>
+<p>必修只需這份包與本機 Python，不必另讀文章、開錢包或買幣。預估六小時：診斷 15 分鐘、教材與示範 100 分鐘、Hash 操作 60 分鐘、簽章與地址 QA 70 分鐘、新情境 45 分鐘、補強與整理 70 分鐘。估時尚未試學，可拆成兩週。你需要會執行 Python 檔、呼叫函式及看懂字典；下面會補這次用到的語法。</p>
+<h2>先接回第一章</h2>
+<p>交易是提出變更帳本的要求；檢查通過才可能改帳。驗證和共識分別處理「這筆符合規則嗎」和「共同採用哪段歷史」。簽章是驗證的一部分。兩筆互相衝突的付款各自都可能簽得正確，仍須檢查可花費資產、順序及重複使用。本章沒有送鏈、改帳或實作共識。</p>
+<h2>1. Hash：核對的是哪些資料？</h2>
+<p>Bob 收到一份寫著「Alice pays Bob 7」的訊息。Alice 說自己送出的也是這份內容，Bob 想核對途中有沒有被改動。除了逐字比較，也可以把內容交給一個固定算法，算出一段固定長度、方便比對的摘要；這個運算叫 <strong>Hash</strong>。</p>
+<p>先看這次實際會觀察到什麼：</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動表格"><table>
+<thead>
+<tr>
+<th>送進算法的內容</th>
+<th>與原摘要比較</th>
+<th>這個結果告訴我們什麼？</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Alice pays Bob 7</td>
+<td>相同</td>
+<td>這次使用同一份內容重算，得到同一份摘要</td>
+</tr>
+<tr>
+<td>Alice pays Bob 70</td>
+<td>不同</td>
+<td>這次金額文字改了，算出的摘要也變了</td>
+</tr>
+<tr>
+<td>Alice pays Bob 7，末尾多一個空白</td>
+<td>不同</td>
+<td>電腦也把空白當成內容，不能只看畫面像不像</td>
+</tr>
+</tbody></table></div>
+<p>這章選用的算法叫 <strong>SHA-256</strong>。你先抓住「把內容算成摘要，再比較」這個用途，下面再把它接到 Python。這三個樣本的結果會實際重算，不要求你記住摘要字串。</p>
+<p>要讓電腦算，先把文字轉成數值資料，這些資料以 <strong>byte（位元組）</strong> 為單位；一個 byte 是 8 個位元。<strong>UTF-8</strong> 是文字轉成這類資料的編碼方式。本章兩邊都用 UTF-8，比較的是送進算法的精確資料，也就是程式裡的 bytes。</p>
+<p>Hash 不把內容藏起來，也沒有替內容背書。原文只有幾個候選時，人可以逐個算摘要來猜；兩份不同輸入也可能碰撞，不能說它保證唯一。驗證完整性時，你還需要可信的原摘要：如果 Eve 同時換掉檔案和旁邊的摘要，重新比較仍可能一致。</p>
+<h3>QA 從這裡切進：先把 bytes 看清楚</h3>
+<p><code>7</code>、<code>70</code>、結尾空白及換行會形成不同資料。這次每一個字元都保留，不自動刪掉空白，也不用 Python 內建的 <code>hash()</code> 代替 SHA-256。</p>
+<p>存成 <code>hash_lab.py</code>，在終端機執行 <code>python3 hash_lab.py</code>；Windows 可用 <code>py -3 hash_lab.py</code>。不用安裝套件。</p>
+<pre><code class="language-python">import hashlib
+
+def digest(text):
+    return hashlib.sha256(text.encode(&quot;utf-8&quot;)).hexdigest()
+
+original = &quot;Alice pays Bob 7&quot;
+changed = &quot;Alice pays Bob 70&quot;
+print(&quot;原文 bytes:&quot;, original.encode(&quot;utf-8&quot;))
+print(&quot;原摘要:&quot;, digest(original))
+print(&quot;再算一次:&quot;, digest(original))
+print(&quot;改金額:&quot;, digest(changed))
+print(&quot;加空白:&quot;, digest(original + &quot; &quot;))
+print(&quot;完全相同:&quot;, digest(original) == digest(original))
+print(&quot;內容改動:&quot;, digest(original) == digest(changed))
+</code></pre>
+<p><code>encode</code> 把字串轉成 bytes；<code>hexdigest</code> 把摘要顯示成十六進位文字；<code>==</code> 比較兩邊是否相等。最後兩行預期是 <code>True</code>、<code>False</code>。前面的摘要請保留完整值，再對照解答。測試紀錄要寫原文、bytes／編碼、算法、預期、實際及限制。「這三筆不同」不能推成「所有不同輸入永遠不同」。</p>
+<p>十六進位是用 <code>0–9、a–f</code> 這 16 種符號表示數值的方式。SHA-256 的摘要長度是 32 bytes，這裡每個 byte 顯示成兩個字元，所以你會看到 64 個字元；那段長字串是結果的顯示方式，不是另一項付款資料。<a href="https://docs.python.org/3/library/hashlib.html">Python hashlib</a></p>
+<details><summary>進一步核對：為什麼看起來相同的資料也可能有不同摘要？</summary>
+
+<p>JSON 是用文字表示欄位與值的資料格式。例如 <code>{&quot;to&quot;:&quot;Bob&quot;,&quot;amount&quot;:7}</code> 與 <code>{&quot;amount&quot;:7,&quot;to&quot;:&quot;Bob&quot;}</code>，欄位值相同，文字排列卻不同。把欄位資料轉成文字或 bytes 的步驟叫「序列化」。系統若要把這兩種排列視為同一筆資料，就得先訂一致的轉換規則，再做 Hash。這章不操作 JSON；先用固定文字把精確資料的比較練好。Python 的 <code>.strip()</code> 會刪去字串兩端的空白，本例不使用它，因為這次規格把空白也算進內容。</p>
+</details>
+
+<h2>2. 私鑰、公鑰與地址：哪一個用在哪裡？</h2>
+<p>Alice 不只要讓 Bob 看出內容有沒有變，還要能對這份內容留下別人可以核對的簽章。先把三種資料的用途分開：</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動表格"><table>
+<thead>
+<tr>
+<th>資料</th>
+<th>在本章做什麼？</th>
+<th>Bob 需要拿到嗎？</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Alice 私鑰</td>
+<td>Alice 用它產生簽章，必須保密</td>
+<td>不需要；驗證不能要求 Alice 交出它</td>
+</tr>
+<tr>
+<td>配對的 Alice 公鑰</td>
+<td>讓 Bob 核對相應簽章</td>
+<td>需要；也要確認它是這次授權規則所指定的公鑰</td>
+</tr>
+<tr>
+<td>Bob 的地址</td>
+<td>在付款資料裡指定收款目標</td>
+<td>需要指定；只看地址外形還不能判定選對收款人</td>
+</tr>
+</tbody></table></div>
+<p>由私鑰按算法算出公鑰的過程叫「推導」。選用安全算法與合適金鑰時，從公鑰反推私鑰在計算上不可行。公開公鑰不會因此把簽署能力交給 Bob。</p>
+<p>地址是系統用來定位收款目標或帳戶的標識，產生方式依鏈與地址類型決定。Ethereum 有由私鑰控制的外部帳戶，簡稱 <strong>EOA</strong>；也有由程式規則控制的合約帳戶。合約地址沒有對應的帳戶私鑰，因此不能說「每個地址都由一個人的私鑰控制」。本章先掌握這個差異，不計算真實鏈地址。<a href="https://ethereum.org/developers/docs/accounts/">Ethereum accounts</a></p>
+<figure class="course-diagram" id="diagram-keys">
+<div class="diagram-scroll" tabindex="0" role="region" aria-label="金鑰與地址關係圖，可橫向捲動">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 315" role="img" aria-labelledby="keys-title keys-desc">
+<title id="keys-title">私鑰、公鑰、地址的關係與用途</title><desc id="keys-desc">私鑰正向推導公鑰，公鑰依適用鏈與地址類型的規則產生地址。私鑰用來簽署，公鑰用來驗證，地址用來定位；這些推導箭頭不是交易。</desc>
+<defs><marker id="keys-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#146354"/></marker></defs>
+<rect class="key" x="25" y="75" width="190" height="85" rx="7"/><text x="120" y="109" text-anchor="middle">私鑰</text><text x="120" y="139" text-anchor="middle" class="hint">保密；提供簽署能力</text>
+<rect class="box" x="285" y="75" width="190" height="85" rx="7"/><text x="380" y="109" text-anchor="middle">配對公鑰</text><text x="380" y="139" text-anchor="middle" class="hint">可公開；驗證簽章</text>
+<rect class="box" x="545" y="75" width="190" height="85" rx="7"/><text x="640" y="109" text-anchor="middle">地址</text><text x="640" y="139" text-anchor="middle" class="hint">定位；不是簽署能力</text>
+<path class="arrow" d="M215 117 H285" marker-end="url(#keys-arrow)"/><text class="hint" x="250" y="58" text-anchor="middle">推導</text>
+<path class="arrow" d="M475 117 H545" marker-end="url(#keys-arrow)"/><text class="hint" x="510" y="32" text-anchor="middle">依鏈／類型規則</text><text class="hint" x="510" y="56" text-anchor="middle">產生（此分支指 EOA）</text>
+<text x="30" y="211">地址外形檢查 ≠ 收款人與付款意圖核對</text><text class="hint" x="30" y="247">Ethereum 合約地址由程式控制，不能套成「每個地址都有一個私鑰」。</text><text class="hint" x="30" y="280">箭頭表示資料推導；不是付款、確認或身分背書。</text>
+</svg></div><figcaption>關係示意：先分用途，再讀推導方向。Bitcoin 與 Ethereum 地址規則不同，本圖不計算地址。</figcaption></figure>
+
+<p>圖上的「推導」是密碼學運算，「依規則產生」是各鏈的地址規則；它們不是付款、簽署或鏈上確認。只有私鑰那條路徑提供簽署能力。圖刻意把地址畫成分支，避免誤以為地址就是公鑰或簽章。</p>
+<details><summary>進一步核對：Ethereum 與 Bitcoin 地址為什麼不能共用算法？</summary>
+
+<p>一般 Ethereum EOA 的地址取公鑰 <strong>Keccak-256</strong> 摘要的最後 20 bytes，再加 <code>0x</code>；Keccak-256 是這裡使用的 Hash 算法名稱。本章的 SHA-256，以及 Python <code>sha3_256</code>，都不能拿來冒充它。</p>
+<p>Bitcoin 舊式 <strong>P2PKH</strong> 是「付給公鑰摘要」這一類花費條件的名稱；其地址把公鑰摘要加上版本及校驗資料再編碼。其他 Bitcoin 地址類型各有規則。本章保留這個比較，不要求背算法；第三章會用 UTXO，也就是尚未花費的交易輸出，解釋資產與花費條件，該章仍待製作。<a href="https://developer.bitcoin.org/devguide/transactions.html">Bitcoin Developer Guide</a></p>
+</details>
+
+<h3>QA 從這裡切進：格式對，不代表對象對</h3>
+<p>假設收款指示寫的是 Bob 地址，你卻貼入 Eve 地址。兩個地址都可能長得合乎格式，程式仍要另查是否符合這次收款指示。接下來的函式只做第一件事：檢查外形。</p>
+<p>它只檢查 <code>0x</code> 加 40 個十六進位字元。<code>0x</code> 是這裡的十六進位前綴，後面的字元只允許 <code>0–9、a–f</code>，也接受大寫 <code>A–F</code>。它不查 checksum（依地址規則檢查拼寫的校驗資訊）、鏈、資產、收款意圖、帳戶存在與合約行為，因此不是完整 Ethereum 校驗器。</p>
+<pre><code class="language-python">def looks_like_address(value):
+    return (
+        isinstance(value, str)
+        and value.startswith(&quot;0x&quot;)
+        and len(value) == 42
+        and all(c in &quot;0123456789abcdefABCDEF&quot; for c in value[2:])
+    )
+
+print(looks_like_address(&quot;0x&quot; + &quot;1&quot; * 40))
+print(looks_like_address(&quot;0x&quot; + &quot;1&quot; * 39))
+print(looks_like_address(&quot;0x&quot; + &quot;g&quot; * 40))
+print(looks_like_address(None))
+</code></pre>
+<p><code>isinstance</code> 先確認輸入種類，後面的 <code>and</code> 只有前項通過才繼續；<code>all</code> 檢查每個字元。這裡預期 <code>True、False、False、False</code>。拿它當「收款人已驗證」會造成錯付風險；QA 需另外核對可信的收款指示與所選鏈／資產。</p>
+<h2>3. 簽章：誰對哪份內容同意？</h2>
+<p>Bob 要核對的是：「這份付 7 點給 Bob 的要求，有沒有符合 Alice 的簽署授權？」Hash 比較本身還答不了誰簽署。Alice 要用私鑰對特定內容產生簽章，Bob 才能拿相應公鑰核對。</p>
+<p>這次完整內容寫成 <code>course-v1|chain=lab-A|id=42|from=Alice|to=Bob|amount=7</code>：<code>course-v1</code> 指教學規格版本；<code>chain</code> 指教學環境；<code>id</code> 是付款編號；<code>from</code>／<code>to</code> 是付款人／收款人；<code>amount</code> 是點數。這些都是教學欄位，不是 Bitcoin 或 Ethereum 的交易格式。</p>
+<p>分隔符、大小寫及欄位順序都算內容，沒有換行。Alice 用自己的私鑰簽這份完整訊息，驗證者拿同一份 bytes、簽章及事先可信對應 Alice 的公鑰一起驗證。變更收款人、金額、環境或編號，原簽章應驗不過。</p>
+<figure class="course-diagram" id="diagram-signature">
+<div class="diagram-scroll" tabindex="0" role="region" aria-label="簽署與驗證資料圖，可橫向捲動">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 580" role="img" aria-labelledby="sig-title sig-desc">
+<title id="sig-title">簽署與驗證處理的資料</title><desc id="sig-desc">完整訊息與 Alice 私鑰輸入簽署，產出簽章。接收到的訊息、簽章、可信對應 Alice 的公鑰輸入驗證，產出通過或不通過；授權、餘額與重送規則仍需另查。</desc>
+<defs><marker id="sig-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#146354"/></marker></defs>
+<rect class="box" x="25" y="35" width="240" height="80" rx="7"/><text x="145" y="66" text-anchor="middle">完整訊息 bytes</text><text class="hint" x="145" y="94" text-anchor="middle">環境、編號、雙方、金額</text>
+<rect class="key" x="25" y="150" width="240" height="65" rx="7"/><text x="145" y="190" text-anchor="middle">Alice 私鑰（保密）</text>
+<rect class="box" x="335" y="80" width="160" height="80" rx="7"/><text x="415" y="115" text-anchor="middle">簽署 Sign</text><text class="hint" x="415" y="144" text-anchor="middle">依算法處理訊息</text>
+<rect class="box" x="565" y="80" width="160" height="80" rx="7"/><text x="645" y="127" text-anchor="middle">簽章</text>
+<path class="arrow" d="M265 75 H305 V105 H335" marker-end="url(#sig-arrow)"/><path class="arrow" d="M265 183 H305 V140 H335" marker-end="url(#sig-arrow)"/><path class="arrow" d="M495 120 H565" marker-end="url(#sig-arrow)"/>
+<rect class="box" x="25" y="285" width="240" height="70" rx="7"/><text x="145" y="327" text-anchor="middle">接收到的訊息 bytes</text>
+<rect class="key" x="25" y="395" width="240" height="80" rx="7"/><text x="145" y="429" text-anchor="middle">可信對應 Alice 的公鑰</text><text class="hint" x="145" y="457" text-anchor="middle">公鑰來源須另核對</text>
+<rect class="box" x="335" y="320" width="160" height="95" rx="7"/><text x="415" y="361" text-anchor="middle">驗證 Verify</text><text class="hint" x="415" y="392" text-anchor="middle">三項輸入一起核對</text>
+<rect class="box" x="565" y="320" width="160" height="95" rx="7"/><text x="645" y="374" text-anchor="middle">通過／不通過</text>
+<path class="arrow" d="M265 320 H305 V345 H335" marker-end="url(#sig-arrow)"/><path class="arrow" d="M265 435 H305 V390 H335" marker-end="url(#sig-arrow)"/><path class="arrow" d="M645 160 V245 H415 V320" marker-end="url(#sig-arrow)"/><text class="hint" x="532" y="230" text-anchor="middle">送給驗證者的簽章</text><path class="arrow" d="M495 368 H565" marker-end="url(#sig-arrow)"/>
+<text x="25" y="519">驗證通過後，還須查授權對應、可花費狀態與重送規則。</text><text class="hint" x="25" y="554">資料流程示意；不是交易送鏈、餘額更新或確認。改訊息不會沿用原簽章通過。</text>
+</svg></div><figcaption>簽章把特定訊息與金鑰綁在一起。這份教學樣本用 Ed25519，並未實作 Bitcoin／Ethereum 交易。</figcaption></figure>
+
+<p>先讀上排：訊息和私鑰送進簽署運算，產出簽章。再讀下排：接收到的訊息、簽章與公鑰送進驗證運算，產出通過／不通過。公鑰還需要可信的身分或花費權限對應；若 Eve 提供自己的公鑰與自己的有效簽章，密碼學運算可以通過，卻不能據此同意從 Alice 的資產付款。</p>
+<p>本包用名為 <strong>Ed25519</strong> 的簽章算法生成固定樣本，使用公開的教學測試金鑰。它不是 Bitcoin／Ethereum 的交易算法，也沒有送出真實交易。第一週白皮書圖用摘要說明資料綁定；本例把完整訊息交給簽章工具，算法內部如何處理資料由工具負責。不要自己把這兩個示例拼成「先 SHA-256，再加私鑰」的配方。</p>
+<h3>QA 從這裡切進：拆開運算結果與授權判斷</h3>
+<p>先把正常付款與換收款人的情況並排。原來 Alice 簽給 Bob，Eve 只改訊息裡的收款人，沒有拿到 Alice 私鑰，也沒有產生新簽章：</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動表格"><table>
+<thead>
+<tr>
+<th>驗證需要的資料</th>
+<th>原付款 C1</th>
+<th>換收款人 C3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>接收到的訊息</td>
+<td>原訊息，to=Bob</td>
+<td>只有 to 改成 Eve，其他欄位與排列不變</td>
+</tr>
+<tr>
+<td>驗證用的公鑰</td>
+<td>已按教學規格固定的 Alice 公鑰</td>
+<td>同一把 Alice 公鑰</td>
+</tr>
+<tr>
+<td>接收到的簽章</td>
+<td>Alice 對原訊息產生的原簽章</td>
+<td>同一份原簽章，未重新簽署</td>
+</tr>
+</tbody></table></div>
+<p>沿第二張圖逐步讀：① Alice 簽的是 Bob 那份內容；② 驗證者收到 Eve 那份內容；③ 驗證輸入的訊息已改，原簽章與它不相符；④ 所以這次應驗不過。下面結果由作者實跑，不是讓你從長字串猜答案。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="正常與改收款人的簽章結果"><div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動表格"><table><thead><tr><th>作者實跑案例</th><th>驗證結果</th><th>這次能判定什麼？</th></tr></thead><tbody><tr><td>C1：原訊息、Alice 公鑰、原簽章</td><td>True</td><td>這組資料的簽章驗過；付款合法性仍需其他檢查</td></tr><tr><td>C3：只把 Bob 改成 Eve，公鑰與簽章不改</td><td>False</td><td>原簽章驗不過改後訊息，符合這次應拒絕的預期</td></tr></tbody></table></div></div><details class="sample"><summary>完整簽章樣本與執行版本｜需要核對時展開</summary><p>本例的算法是 Ed25519。作者以 Node.js 的 crypto.sign／crypto.verify 簽署及驗證，學員不需安裝 Node.js。SPKI DER 是這裡公鑰的封裝格式名稱，hex 指十六進位顯示；下列長字串供完整核對，不要求背誦或手算。<a href="https://nodejs.org/api/crypto.html">算法與 API 說明</a></p><p>原訊息（UTF-8）：</p><pre>course-v1|chain=lab-A|id=42|from=Alice|to=Bob|amount=7</pre><p>C3 改後訊息（UTF-8）：</p><pre>course-v1|chain=lab-A|id=42|from=Alice|to=Eve|amount=7</pre><p>Alice 測試公鑰（SPKI DER hex）：</p><pre>302a300506032b65700321008a88e3dd7409f195fd52db2d3cba5d72ca6709bf1d94121bf3748801b40f6f5c</pre><p>原簽章（hex）：</p><pre>1586e25507a5f9fe18a867ed2f3869ac0a9901f17e0c8fa6eb0a4174b60c0680319cc7a8f52b05b745a01ad0870839c39231bcf9d3b3537501a9f50823f5f10e</pre><p>公開測試金鑰不能用來保管資產。作者執行環境：Node v24.19.0／OpenSSL 3.5.7。</p></details>
+
+<p>這裡 <strong>True／False 是簽章運算的通過／不通過</strong>。對 C3 而言，規格預期它被拒絕，實際也驗不過，所以這個負向測試可以判定符合規格；不能把「False」直接當成 QA 測試失敗。即使 C1 驗過，也還沒查餘額或已處理紀錄，不能因此核准實際付款。</p>
+<p>接著只換成 Eve 公鑰來驗原訊息與原簽章：訊息與簽章都沒改，但公鑰與原簽署金鑰不配對，這次也驗不過。最後看冒用身分：Eve 若用自己的私鑰產生新簽章，再用 Eve 公鑰驗，運算可以通過；付款資料即使寫著 from=Alice，也不能取代可信的 Alice 公鑰對應。作業 C8 就查這一層授權。</p>
+<p>這章要你預測結果、說出理由，再核對作者證據；Python 操作在 Hash 練習完成。看過固定結果不算你已執行密碼學工具。原始公鑰、簽章與版本仍完整留在同一包的可展開區，不需另開文章。</p>
+<p>測簽章至少包含原訊息、改金額、錯公鑰與冒用身分。另一個缺陷是「只簽金額，沒有簽收款人」：如果被簽資料只有 <code>amount=7</code>，把 Bob 改成 Eve 不影響那份 bytes，簽章仍可通過。要修的是被簽資料及授權規格，不能只在 UI 顯示一句「簽章有效」。</p>
+<p>重送完全相同的訊息，密碼學驗證仍會通過。這不等於能再付款；系統還需要防重送與狀態規則。本章的 <code>id</code> 是被簽的教學欄位，沒有實作「已處理 id」帳本。Ethereum nonce、Bitcoin 花費狀態與鏈上確認在後章教。簽章也不隱藏金額，不能證明餘額足夠、已打包或不可逆。</p>
+<h2>4. 錢包：使用者到底在確認什麼？</h2>
+<p>錢包是幫你管理帳戶、查看資產及與網路互動的工具；資產狀態記在鏈上。常見自託管錢包讓使用者控制簽署能力，託管服務則可能由服務方保管金鑰。助記詞是某些錢包的備份／恢復材料，不是公鑰，也不一定只恢復單一私鑰；本章不生成或輸入真實備份。<a href="https://ethereum.org/wallets/">Ethereum wallets</a></p>
+<p>網站提出要求，錢包顯示內容，使用者同意後才可能產生簽章。連接錢包、簽訊息、送交易是不同動作；簽訊息不一定是轉帳，但也可能授權後續權利，必須看實際內容。不能只憑按鈕叫「登入」就判定沒有資產影響。</p>
+<h3>QA 從這裡切進：看顯示、被簽 bytes 與取消結果</h3>
+<p>教學產品規格：畫面及被簽訊息都顯示 <code>lab-A、Bob、7、id=42</code>；點取消不產生簽章，也不送出交易。測試要比較畫面／訊息的收款人、金額、環境與編號，並核對取消後的呼叫紀錄。這是本課程假設，不冒充所有錢包的共通實作。</p>
+<p>例如畫面顯示 Bob，實際被簽內容是 Eve；即使 Eve 那份內容的簽章有效，產品仍不符合這份規格。缺少被簽 bytes 或呼叫紀錄時，結論是「證據不足」，不能只靠 UI 宣稱安全。</p>
+<h2>包內補課</h2>
+<h3>Hash 一致，為什麼還不能相信付款內容？</h3>
+<p>假設 Alice 透過你已信任的渠道，提供原訊息的 SHA-256 摘要。你把收到的訊息用同一算法重算，再比較摘要，可以檢查這次收到的內容是否與基準相符。如果基準只是放在訊息旁邊、同樣由 Eve 提供，Eve 可以把 7 改成 70，再算一份新的摘要放在旁邊；你重算也會一致。兩次比較的算法一樣，差別在原摘要的來源能不能信任。相符不會自行證明 Alice 同意。</p>
+<h3>公鑰與地址容易混淆時</h3>
+<p>想像你桌上有兩份資料：一份是教學規格事先指定的 Alice 公鑰，另一份是收款指示裡的 Bob 地址。公鑰拿來驗 Alice 的簽章；地址用來指定這次付給誰。把地址填得合格式，只完成外形檢查，沒有驗 Alice 簽章，也沒有確認地址符合原收款指示。沿第一張圖指出兩條用途，別把地址塞進私鑰的位置。</p>
+<h3>驗過了，為什麼還不能從 Alice 付款？</h3>
+<p>把兩個檢查分開讀。第一步問「這份簽章能否用這把公鑰對這份訊息驗過？」第二步問「這把公鑰符合付款資產所要求的授權嗎？」本章規格把 Alice 授權對應固定為 Alice 公鑰。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動表格"><table>
+<thead>
+<tr>
+<th>訊息上的付款人</th>
+<th>實際簽署者與驗證公鑰</th>
+<th>簽章結果</th>
+<th>本章 Alice 授權對應</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Alice</td>
+<td>Alice 簽，Alice 公鑰驗原訊息</td>
+<td>通過</td>
+<td>符合；但仍需查資產及重送規則</td>
+</tr>
+<tr>
+<td>Alice</td>
+<td>Alice 簽，Eve 公鑰驗原訊息</td>
+<td>不通過</td>
+<td>不能據此授權</td>
+</tr>
+<tr>
+<td>Alice</td>
+<td>Eve 簽，Eve 公鑰驗同一訊息</td>
+<td>通過</td>
+<td>不符合，因為驗的是 Eve 的金鑰，不是規格指定的 Alice</td>
+</tr>
+</tbody></table></div>
+<p>所以第一步通過不是第二步的答案。這也不是驗證真實姓名；Alice／Eve 是教學標籤，可信公鑰對應是這次明示的前提。不要因訊息自稱 Alice，就接受訊息一併帶來的任何公鑰。</p>
+<h3>錢包畫面與送出結果容易混淆時</h3>
+<p>把同一筆付款拆成三份證據：畫面說付 Bob 7 點；實際被簽訊息也應寫 Bob 7 點；送出呼叫紀錄則記是否真的送出。在這次產品規格下，畫面 Bob／訊息 Eve 是不一致；點取消後仍有送出紀錄，又違反取消不送出的規則。兩個問題各查自己的證據，不能用其中一份的「成功」代替另外兩份。</p>
+<p>讀完補課再做作業的 D2 新變式；它不沿用 D1 的數字。看過解答後重做要標明，不能當作第一次獨立過關。</p>
+<h2>本章範圍</h2>
+<p>必修來源的必要概念已寫在包內，連結只供核對。算法安全證明、密鑰推導細節、地址 checksum、UTXO、nonce、交易編碼與確認都不在這章的操作目標；後章尚待製作，不能視為已教。測試樣本不是錢包，沒有持幣、送鏈、真實身分確認或安全認證。</p>
+</section><section id="workbook"><h2>診斷、練習與新情境</h2><h2>課前診斷</h2>
+<p>不查答案，寫下你目前的理解：Hash 一致代表誰同意？公開公鑰會讓別人簽署嗎？地址格式通過代表收款人正確嗎？簽章有效代表款項已到帳嗎？不知道就留著，讀完再把修正寫在旁邊。</p>
+<h2>練習 A：自己跑 Hash</h2>
+<p>照教材執行 Python，把原文、改金額、加空白的完整摘要貼到自己的筆記。再自己測 <code>Alice pays Carol 7</code> 與 <code>Alice pays Bob 7\n</code>（<code>\n</code> 表示換行），先寫預期相等與否，才執行。</p>
+<p>記錄算法、編碼、輸入、預期、實際、判定及限制。回答：Eve 同時換掉檔案和摘要，為什麼你的比較可能通過？你還缺什麼可信證據？</p>
+<h2>練習 B：格式與收款人</h2>
+<p>沿用教材的格式函式，加上空字串、<code>0x</code> 加 40 個 <code>F</code>、整數 <code>123</code>。在筆記先填預期再跑，不能只抄 <code>True／False</code>。本課程可信收款指示是 <code>0x</code> 加 40 個 <code>1</code>，畫面及訊息卻是 <code>0x</code> 加 40 個 <code>2</code>。兩者都符合簡化格式；這筆符合收款指示嗎？寫一項格式測試與一項對象核對，說明各自證據及盲點。</p>
+<h2>練習 C：簽章判讀與 QA 紀錄</h2>
+<p>規格同教材：完整訊息都被簽，Alice 的公鑰已由可信來源固定。下面每列保留原簽章，只改指定項目；「錯公鑰」只改驗證用的公鑰。先預測通過／不通過並寫理由，之後才開解答。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動表格"><table>
+<thead>
+<tr>
+<th>案例</th>
+<th>與原樣本的差異</th>
+<th>你預測的密碼學結果</th>
+<th>是否足以核准付款？還缺什麼？</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C1</td>
+<td>原訊息、公鑰、簽章都不改</td>
+<td>自填</td>
+<td>自填</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>amount=7 改成 amount=70</td>
+<td>自填</td>
+<td>自填</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>to=Bob 改成 to=Eve</td>
+<td>自填</td>
+<td>自填</td>
+</tr>
+<tr>
+<td>C4</td>
+<td>換成 Eve 的公鑰驗原簽章</td>
+<td>自填</td>
+<td>自填</td>
+</tr>
+<tr>
+<td>C5</td>
+<td>chain=lab-A 改成 chain=lab-B</td>
+<td>自填</td>
+<td>自填</td>
+</tr>
+<tr>
+<td>C6</td>
+<td>id=42 改成 id=43</td>
+<td>自填</td>
+<td>自填</td>
+</tr>
+<tr>
+<td>C7</td>
+<td>原訊息送第二次，bytes 不改</td>
+<td>自填</td>
+<td>自填</td>
+</tr>
+</tbody></table></div>
+<p>另有 C8：Eve 用自己的私鑰簽 <code>from=Alice</code> 的完整訊息，接收方也用 Eve 公鑰驗。它可能驗過嗎？如果系統接受它從 Alice 付款，缺了哪個檢查？</p>
+<p>挑 C3 與 C8 各寫一份 QA 紀錄：規則依據、初始條件、輸入、預期、實際證據、判定、限制。若你只核對作者固定樣本，實際欄寫「包內作者實跑結果」，不要寫成自己跑過簽章或真實鏈測試。</p>
+<h2>練習 D1：沒看過的產品情境</h2>
+<p>某測試錢包畫面顯示 <code>lab-X、Dana、4、id=91</code>，被簽訊息卻是 <code>lab-X、Eve、4、id=91</code>，簽章對被簽訊息驗證通過。取消時沒有產生新簽章，但紀錄顯示送出了一筆先前暫存的交易。產品規格與教材一致：顯示必須與被簽資料相同，取消不送出。</p>
+<p>找出兩個違規，各寫預期、需要的證據及回歸案例。說明簽章有效不能否定哪個問題；目前無鏈上資料，哪些結果不能判定？先自行答，必要時讀包內補課。</p>
+<h2>練習 D2：補課後的新變式</h2>
+<p>另一筆畫面與訊息都顯示 <code>lab-Y、Frank、9、id=105</code>，兩次送出完全相同的已簽訊息；系統只核對簽章，兩次都顯示付款成功。沒有餘額、已處理編號或鏈上收據。這能證明第二次付款合法嗎？列出至少兩項缺失證據、需要測的重送規則及一項成功字樣不能證明的事。</p>
+<h2>課後驗收與交件</h2>
+<p>不看解答，回答六題：① Hash 比較需哪個可信基準？② 私鑰、公鑰、地址分別做什麼？③ 驗簽需要哪三項輸入，還需核對什麼授權對應？④ 只簽金額為何擋不住換收款人？⑤ 格式通過為何不等於付對人？⑥ 有效簽章為何不能證明未重送或已到帳？</p>
+<p>交診斷原答、A／B 的實際輸出、C 的預測及兩份 QA 紀錄、D1／D2 與六題答案。標「獨立完成／提示後完成／看答後重做」及實際用時；頁面不儲存答案，不自動評分。</p>
+</section><section id="rubric"><h2>評分與補強</h2>
+<p>A、B、C、D／六題各看兩項：操作／判讀正確一分，理由與證據界線清楚一分，共八分。七分以上且六題核心要點全對才建議往第三章；錯把 Hash 當授權、錯公鑰當 Alice、地址格式當對象、簽章當到帳，任一項未釐清都先補課。</p>
+<p>未過 A 回教材第 1 節，換字串重跑；未過 B 回第 2 節，另測 <code>0x</code> 加 40 個 <code>A</code> 與指定 <code>1</code> 地址；未過 C 回第 3 節，逐項指出被改的驗證輸入；未過 D／六題讀包內補課再做 D2。看答後重做保留原答，標明協助程度；分數只是自查，不代表獨立驗收已通過。實際操作、口頭解釋與新情境還需核對學員交件。</p>
+</section><details class="panel" id="answers"><summary>參考解答｜作答後再開啟</summary><h2>A 與 B</h2>
+<p>下面摘要由產生器對教材中的精確字串重算；不是從答案文字猜值。</p>
+<pre>"Alice pays Bob 7"
+bb384879cb16070de8b0142d97b0ef79d0c6a7f90d255b48032cc6af8d7b95e9
+
+"Alice pays Bob 70"
+673ec48ea1f11442f11335fae7b96234b4944c10d5ef7221a38f9aa414a18b08
+
+"Alice pays Bob 7 "
+5f7e3486efbbd92da882a77c8ec34ae323c4cf41da28fb5cf93a977c05b23d79
+
+"Alice pays Carol 7"
+75f785652f25157bc3ad04f994eae14dc1a9bd3676a4b989c12e98fe729f22d1
+
+"Alice pays Bob 7\n"
+b5884a5c8c3046e36e688542aeeae486b346bd57800416d0aced325d9b4481f7</pre>
+
+<p>同一字串兩次相同，改金額、加空白、換收款人、加換行在這些樣本都不同。需要可信來源提供的原摘要；同時替換原文與摘要的攻擊，光比較不能識別。</p>
+<p>B 三筆預期依序 <code>False、True、False</code>。<code>1</code> 與 <code>2</code> 那兩個地址都符合簡化格式，但後者不符合指定收款人。格式證據只覆蓋型別、長度、前綴與字元；收款對象核對要用可信指示比較，鏈、資產、checksum 與實際帳戶行為還未驗。</p>
+<h2>C 的實跑結果</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動表格"><table>
+<thead>
+<tr>
+<th>案例</th>
+<th>作者重算結果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C1</td>
+<td>True</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>False</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>False</td>
+</tr>
+<tr>
+<td>C4</td>
+<td>False</td>
+</tr>
+<tr>
+<td>C5</td>
+<td>False</td>
+</tr>
+<tr>
+<td>C6</td>
+<td>False</td>
+</tr>
+<tr>
+<td>C7</td>
+<td>True</td>
+</tr>
+<tr>
+<td>C8</td>
+<td>True；授權拒絕</td>
+</tr>
+</tbody></table></div>
+<p>C8 驗證公鑰（Eve／SPKI DER hex）：</p>
+<pre>302a300506032b65700321008139770ea87d175f56a35466c34c7ecccb8d8a91b4ee37a25df60f5b8fc9b394</pre>
+
+<p>C8 簽章（hex）：</p>
+<pre>447d082877cefb32d56869f7771ab3d9dbc87b7c9d811f616f7a61867edae793dc623f783dd99c484ef903a4aa185ed637c3a8223a89ec7be5ab464a58cfb70b</pre>
+
+
+<p>只簽 <code>amount=7</code> 的樣本也實跑為 True，收款人不在被簽資料內，不能用它核准 Bob 的完整付款要求。</p>
+<p>C1 通過仍需查資產／餘額、重送及適用協議。C2–C6 使用原簽章驗改過的資料或錯公鑰，都不通過；C7 bytes 相同所以仍通過，防重送不是這次的密碼學運算。C8 對 Eve 公鑰通過，但可信授權對應只允許 Alice 公鑰；系統必須拒絕冒用 Alice。</p>
+<p>C3 紀錄：依完整訊息規格，原樣本 to=Bob；換成 Eve、保留簽章與 Alice 公鑰；預期不通過；實際取包內作者實跑 False；本案例通過，未測真實鏈或所有交易格式。C8 紀錄：依可信 Alice 公鑰固定規格；Eve 私鑰簽 from=Alice，Eve 公鑰驗；預期密碼學通過但授權拒絕；作者實跑 True，公鑰與可信 Alice 不同；若產品接受付款則 Fail，尚未實作產品改帳。</p>
+<h2>D 與六題</h2>
+<p>D1：畫面 Dana／被簽 Eve 不一致；取消仍送暫存交易。證據分別是畫面與精確被簽 bytes、取消前後簽署／送出呼叫紀錄及暫存識別。回歸測顯示收款人與訊息一致，並測有暫存交易時取消仍不送出。有效簽章只驗了 Eve 那份訊息，不能證明畫面一致；缺鏈上資料，不能判定是否真的扣款、到帳或確認。</p>
+<p>D2：簽章可兩次通過，缺已處理 id／可花費狀態及鏈上結果。先訂重送規格，例如教學產品第二次應回傳已處理而不重複改帳，再用初始狀態、兩次相同輸入、回覆與前後快照核對；這是產品假設，不能套到所有鏈。「付款成功」字樣不能證明第二次合法或真的到帳。</p>
+<p>六題必要要點：① 可信原摘要與同算法／精確 bytes；② 私鑰簽、公鑰驗、地址定位且規則依系統；③ 訊息、簽章、公鑰與可信授權對應；④ 收款人未被綁定；⑤ 只驗外形沒有驗意圖／鏈；⑥ 簽章不查已花費狀態、不產生收據或共識。</p>
+</details></main><footer>第二章 · 2026-10-05 · 作者自查與技術驗證，不代表學員掌握或獨立安全審查。來源連結為選讀；完成必修不需外部文章。<details class="source"><summary>內容來源版本</summary><pre>01-教材.md: a60f40846b4da1ccd3ad7481ef2ece16b242c74f6398dbe03de4b4419dd8ae93
+02-作業.md: 1f59c839289f25ebe09817e669dda620a7473875990af4b2aada9e5dab90025d
+03-解答.md: a520dc20a7ec640e8eb03620942db712f70de67fd3b5bc5d2bc6828dac28c36a
+圖解.html: 24705046c241096648a9226a4d4688e123256cbdf55d7bfd8ca67ad4d8ebba1c
+signature-demo.mjs: 1a467f9661ff57417d0a3064237873d201053de5c84b52d418598d7d73a88f86
+build.mjs: e2b778f1462880860b0683b12d634cfcff4c1bb581debab6b2c7b1fa9c432e0e</pre></details></footer></div><script>document.getElementById('print').addEventListener('click',()=>window.print());</script></body></html>

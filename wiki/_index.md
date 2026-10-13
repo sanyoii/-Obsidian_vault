@@ -1,7 +1,7 @@
 # 知識庫主索引
 
-> 最後更新：2026-08-01
-> 文章數量：403 篇
+> 最後更新：2026-09-22
+> 文章數量：534 篇（沿用既有516篇，本次新增18篇課程筆記；入口不計文章，未重算全庫）
 > 原始文件：持續累積中
 
 ---
@@ -17,6 +17,24 @@
 
 ## 主題分類
 
+### Grok Bot
+
+- [[Grok Bot/_index|Grok Bot — 獨立分類]] — 官方來源、分析、八角色完整設定與修訂脈絡。
+- [[Grok Bot/01-官方資料與分析|官方資料與分析]] — 八份官方來源、查核日期、閱讀分析與產品能力限制。
+- [[Grok Bot/02-團隊設計與工作流程|團隊設計與工作流程]] — 八角色責任、固定交接、任務格式、工作量上限與待執行驗收。
+- [[Grok Bot/03-Bot完整設定|Bot完整設定]] — 最後補強版的八個完整 description，另附短名稱與主要工作任務。
+- [[Grok Bot/04-討論沿革與資料準備|討論沿革與資料準備]] — 六到八角色的演進、設定 review、About Me 修改與資料存取界線。
+
+
+### AI-一人公司
+
+- [[AI-一人公司/一人旅遊公司 — 實作計畫|一人旅遊公司 — 實作計畫 v1]] — 本機初版與 Git 初始化完成，未提交或推送；記錄 P0–P7 結果、測試證據與 12 情境 AI 判讀（含一題補強重測）。
+- [[AI-一人公司/一人旅遊公司 — 架構與工作流程|一人旅遊公司 — 架構與工作流程 v2]] — 16 角色、派工、Wiki、AI 接入、旅程檢查、重排、離線工作台與更新工具已實作；真人、畫面、手機、外部服務與重用基準尚未驗證。
+- [[AI-一人公司/一人旅遊公司 — 顧問團審查報告|一人旅遊公司 — 顧問團審查報告]] — 完整 5+5 審查與原 HTML 副本，現行採用情形連回 v2。
+- [[AI-一人公司/_index|AI-一人公司 — 研究與補強計畫]] — Repo 工具評估、AI Hero 再審視與兩家公司補強計畫；本機補強已實作，真模型與畫面驗收受阻。
+- [[AI-一人公司/AI Hero — 兩家公司補強再審視|AI Hero — 兩家公司補強再審視]] — 公司行為評測、雙項驗收、Wiki 搜尋、研究、入門與失敗改善。
+- [[AI-一人公司/兩家一人公司 — AI Hero 補強計畫|兩家一人公司 — AI Hero 補強計畫 v1]] — P0–P5、檔案所有權、48 次分批真模型評測與回復方式；本機已實作，48 次評測 Not Run。
+
 ### Claude
 
 #### 系統
@@ -25,6 +43,7 @@
 - [[Claude/Command Center Plugin — Obsidian 指揮中心|Command Center Plugin — Obsidian 指揮中心]] — 4 個 Ribbon 按鈕：Morning Briefing、Compile、Lint、Quick Capture；串接 social-monitor + job-crawler `#系統 #obsidian #automation`
 
 #### Agent 設計
+- [[wiki/Claude/Codex子代理角色與來源|Codex 子代理角色與來源]] — 已介紹角色、第三方來源、本機五角色安裝收據與載入方式；2026-09-29 查核。
 - [[Claude/Karpathy 最高遵守原則 — AI 行為準則|Karpathy 最高遵守原則 — AI 行為準則]] — 5 大原則，套用至 CLAUDE.md，/karpathy-audit 命令 `#agent-design #karpathy`
 - [[Claude/Karpathy program.md Skill 設計哲學 — 讓 Agent 可靠工作的六個原則|Karpathy program.md Skill 設計哲學 — 讓 Agent 可靠工作的六個原則]] — CAN/CANNOT 邊界、單一指標、品味量化 if-then、baseline 先行、Checkpoint、三段式結構 `#agent-design #skills #karpathy`
 - [[Claude/stitch-skills SKILL.md 結構分析 — Agent Skill 設計模式|stitch-skills SKILL.md 結構分析]] — 四種工作流模式、Gold Standard/Baton/驗證腳本三設計模式、Skill 目錄標準結構 `#agent-design #skills #google-stitch #design-patterns`
@@ -36,6 +55,8 @@
 ---
 
 ### 軟體設計模式精通之旅（水球軟體學院）
+
+- [[wiki/水球流軟體設計模式精通之旅/課程影片重點整理/課程影片重點整理|課程影片重點整理]] — 18 篇課程筆記，附 18 份 PDF 與 20 張圖解。
 
 #### 行為型模式
 - [[策略模式|策略模式]] — 原始型行為變動，依賴反轉三步驟 `#行為型`
@@ -69,6 +90,7 @@
 
 #### 課程索引
 - [[課程總覽|課程總覽]] — Ch 1–10 章節地圖與全模式索引
+- [[水球流軟體設計模式精通之旅/課程總覽與學習包|課程總覽與學習包]] — Learning Assistant 合成層：OADP＋Forces→Pattern 心智模型、主線／支線地圖、Force 快卡、考題與空逐字稿缺口 `#設計模式 #learning`
 
 ---
 
@@ -91,6 +113,33 @@
 
 ---
 
+### Web3 基礎
+
+- [[wiki/Web3-基礎/區塊鏈與QA課程/00-課程入口|區塊鏈與 Web3 QA：20 週課程]] — 每週 6 小時，第 1 週教材、作業與解答已建立；後續週次為規劃，尚未驗收學習成效。2026-09-29 手動加入，未重算頁首全庫文章數。
+
+- [[Web3-基礎/Ch01-完整筆記|Web3 基礎 Ch01 完整筆記]] — 互動／交易生命週期：名詞、RPC、出塊、gas、三種結局與精修流程 `#Web3 #learning`
+- [[Web3-基礎/_index|Web3 基礎資料夾索引]]
+
+### 一人軟體測試公司
+
+- [[一人軟體測試公司/PartyPiuPiu — 委託方測試說明]] — 客戶閱讀稿；先列確認與協助事項，說明測試範圍、時程與交付。尚未寄送。
+
+- [[一人軟體測試公司/PartyPiuPiu — 00-測試文件入口|PartyPiuPiu 測試文件包]] — 六類文件與78個未測詳細案例；企劃已核准，判準與復原尚待確認。
+
+- [[一人軟體測試公司/_index|一人軟體測試公司 — 獨立入口]] — 公司架構、工作方法、委託企劃與後續交付資料的統一入口。
+- [[一人軟體測試公司/PartyPiuPiu — 委託測試企劃]] — 3張圖、10項需求、8項風險、32個原始情境與環境帳號建置方案；企劃已核准、產品未測。
+
+### QA
+
+- [[QA/Web3-Crypto-QA-入門學習包|Web3／Crypto QA 入門學習包]] — 心智模型、Web2 vs Web3 對照、7 核心觀念、1–2 週路徑、一手來源與驗收題；求職向 Senior QA 入門 `#QA #Web3 #learning`
+- [[QA/Web3-Crypto-QA-互動教材|Web3／Crypto QA 互動教材]] — 關卡制：精讀→選擇／情境→自評；含 Boss 關與進度表 `#QA #Web3 #learning`
+- [[QA/一人軟體測試公司 — 架構與工作流程|一人軟體測試公司 — 架構與工作流程（現行）]] — 整合 Architect／PM 分工、五站交接、品質與資料邊界及首案規格；本機工具、工作台與合成示範已建立；真案與真人可用性未驗證。
+- [[QA/一人軟體測試公司 — 原始架構規劃|一人軟體測試公司 — 原始架構規劃（歷史）]] — 保留完整第一版；現況以整合規劃為準。
+- [[QA/一人軟體測試公司 — 顧問團架構審議與角色分工|一人軟體測試公司 — 顧問團架構審議與角色分工]] — 五視角與匿名互評，檢視缺口、Architect／PM 責任及最小試案。
+- [[QA/AI 測試案例 Prompt 的缺口 — Test Design Method 與 QA Decision Desk 補強|AI 測試案例 Prompt 的缺口 — Test Design Method 與 QA Decision Desk 補強]] — 分析 Test Case prompt 缺少的技法選擇與 oracle，對照現有 Risk-Based QA Evidence Pack，提出先 pilot、再決定是否升級 canonical templates 的補強路線 `#QA #test-design #oracle #evidence`
+
+---
+
 ### Tools（工具使用手冊）
 
 - [[Tools/ai-一手資訊源清單|AI 一手資訊源清單（12 個）]] — 12 個不看二手轉述的 AI 一手來源，五類分組 + 每日／每週／決策時的追蹤節奏建議 `#tools #ai #資訊源`
@@ -108,12 +157,16 @@
 ### 求職
 
 - [[求職/Ashby Support Engineer (APAC) — 求職進度|Ashby Support Engineer (APAC) — 求職進度]] — 已投遞(2026-06-10)等recruiter回覆；技術準備重點、SEG對照表、STAR案例庫 `#求職 #ashby #career`
+- [[求職/Web3-轉職計畫/00-總覽與定位|Web3 轉職計畫 — 總覽與定位]] — 核准角色、Remote條件、claim boundary與source-backed current status入口 `#求職 #Web3 #QA`
+- [[求職/Web3-轉職計畫/01-賽道地圖與資產缺口|Web3 轉職計畫 — 賽道地圖與資產缺口]] — Role taxonomy、work/portfolio evidence boundary、current gaps與CEX lab驗證層級 `#求職 #Web3 #evidence`
+- [[求職/Web3-轉職計畫/02-35天執行計畫|Web3 轉職計畫 — 35天執行計畫]] — Day 1–35完整進度、application-first cadence、artifact receipts與下一步順序 `#求職 #Web3 #計畫`
+- [[求職/Web3-轉職計畫/03-投遞通路與冷啟動|Web3 轉職計畫 — 投遞通路與冷啟動]] — Submission gate、14-day overlay、dated funnel、outreach與iteration thresholds `#求職 #Web3 #投遞`
 
 ---
 
 ### Github/Repos（已分析 Repos）
 
-- [[Github/_index|Github Repo 分析總索引]] — 109 篇 × 12 主題分類（🔬 16 深度分析 / 📎 93 簡單留存）`#github #index`
+- [[Github/_index|Github Repo 分析總索引]] — 238 篇，分類與分析深度依總索引現況 `#github #index`
 - [[Github/已安裝工具 — Github 分析索引|已安裝工具 × Wiki 交叉對照]] — 30 項已安裝工具的 Wiki 紀錄 `#github #installed`
 
 ---

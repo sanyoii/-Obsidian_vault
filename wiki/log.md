@@ -5,6 +5,21 @@
 
 ---
 
+## 2026-09
+
+### 2026-09-12 | COMPILE
+- `2026-09-12 23:56 | COMPILE | Tutor Web3 Ch1 對話細拆 → wiki/Web3-基礎/Ch01-完整筆記.md` | 名詞與 RPC／出塊／gas／三種結局／精修流程與圖一併入庫
+
+### 2026-09-12 | COMPILE
+- `2026-09-12 16:18 | COMPILE | Web3-Crypto-QA-入門學習包 → wiki/QA/Web3-Crypto-QA-互動教材.md` | 改寫為關卡制互動教材（精讀／題目／折疊答案／Boss）；_index 502→503
+
+### 2026-09-12 | COMPILE
+- `2026-09-12 16:11 | COMPILE | brain-docs course transcripts + wiki patterns → wiki/水球流軟體設計模式精通之旅/課程總覽與學習包.md` | Learning Assistant 合成層（心智模型／地圖／Force 快卡／考題）；標 5 支空逐字稿與 Ch8/Ch10 無影片；_index 501→502
+
+### 2026-09-12 | COMPILE
+- `2026-09-12 15:47 | COMPILE | Learning Assistant Web3／Crypto QA 入門包 → wiki/QA/Web3-Crypto-QA-入門學習包.md` | 補登入庫並更新 _index／_summaries；心智模型＋對照表＋7 觀念＋學習路徑＋驗收題；_index 500→501
+
+
 ## 2026-06
 
 ### 2026-06-06 | COMPILE
@@ -133,3 +148,35 @@
 - `YYYY-MM-DD HH:MM | QUERY | 問題關鍵字 → output/queries/日期_標題.md` | 補充來源
 - `YYYY-MM-DD HH:MM | LINT | wiki/ → output/lint_日期.md` | 發現的問題摘要
 ```
+
+## 2026-08-15 | COMPILE
+
+- `2026-08-15 02:27 | COMPILE | D:/Codex/Web3 canonical career records＋application/CEX evidence → wiki/求職/Web3-轉職計畫/（4頁）` | Source-backed更新核准角色、Day1–35完整進度、14-day application-first overlay、2026-08-14 dated funnel、Degree reconciliation、public head 8fd5081 deterministic 39×2、historical live 9ce65e0、local governance candidate 40＋5與manual/exploratory designed-not-executed boundary；同步更新_index／_summaries／_graph；未執行refresh-index.ps1。`
+
+## 2026-08-25 | COMPILE
+
+- `2026-08-25 | COMPILE | raw/sources/2026-08-24_test-case-prompts-missing-piece.md → wiki/QA/AI 測試案例 Prompt 的缺口 — Test Design Method 與 QA Decision Desk 補強.md` | 敏捷三叔公 test case prompt 文章來源記錄與適用性分析；public vault 未逐字轉載原文；對照現有 Requirement Readiness、Risk Assessment、Playbook authority 與 Test Case oracle 缺口，決定先做 release-specific Test Design Decision pilot，不直接新增 Dashboard 頁面、Playbook 或第十個核心模板；同步更新 _index 與 _summaries。
+- `2026-08-25 | IMPLEMENT | wiki/QA/AI 測試案例 Prompt 的缺口 — Test Design Method 與 QA Decision Desk 補強.md → D:/Codex/RiskQADemoSite` | 使用者核准系統補強；Test Spec／Test Case template contract 升至 v0.2.0，加入 method／oracle／coverage／residual-risk traceability、automated contract test 與 bilingual-navigation-overlap retrospective pilot；local candidate 尚未 commit／push，pilot 維持 needs-review。
+
+## 2026-09-12 | COMPILE
+
+- `2026-09-12 23:24 Asia/Taipei | COMPILE | 八份 Grok Bot 官方文件＋本段對話 → wiki/Grok Bot/（4 篇＋分類索引）` | 依使用者要求獨立分類；保存完整 description 與 raw/sources/2026-09-12-grok-bot-discussion.md，更新主索引、摘要與關聯圖。官方來源重新開啟；Grok 部署與真實行為未驗證。未執行全庫 refresh-index.ps1 或 gbrain 同步；沒有 Git 提交、推送或外部發布。
+
+- `2026-09-17 11:10 | COMPILE | PartyPiuPiu企劃 v0.1 → wiki/一人軟體測試公司/` | 依使用者要求建立獨立入口，收錄完整13節、3圖與來源快照；同步主索引、摘要、關聯及架構頁入口。未執行全庫索引刷新或gbrain同步；未測網站、未Git提交推送或發布。
+
+- `2026-09-17 | UPDATE | PartyPiuPiu企劃v0.2` | 使用者確認只有正式站、帳號自備；補操作別復原、停止與救援責任、暫緩範圍及4–6人時演練預留。v0.1快照保留。尚未建立帳號、測試網站或演練復原。
+
+- `2026-09-17 | UPDATE | PartyPiuPiu test-docs-v1.0` | 使用者要求先完成六類資料；32情境展開78案例、保留v0.2定義快照、同步公司獨立Wiki入口。本輪無網站操作、帳號建立或復原演練。
+
+- `2026-09-17 | UPDATE | PartyPiuPiu client-brief-v1.0` | 依使用者回饋建立委託方短版與獨立HTML，六節採確認／協助／了解／檢視標示；入口優先呈現客戶稿，保留完整內部文件。同步索引、摘要、關聯；未寄送、未發布、未執行網站測試，未刷新全庫索引或gbrain。
+
+### 2026-09-22 | COMPILE
+
+
+- `2026-09-22 | COMPILE | D:/軟體設計模式精通之旅/課程影片重點整理 → wiki/水球流軟體設計模式精通之旅/課程影片重點整理/` | 保存55個來源檔（17 Markdown、18 PDF、20 JPG）；新增18篇筆記與1個入口，連回既有概念；第2章文字由PDF擷取，9B空資料夾保留缺口。未重驗影片，未提交或發布。
+
+### 2026-09-29 | CREATE
+
+- `2026-09-29 | RESEARCH | Codex子代理角色與來源` | 保存已介紹角色用途與本機／上游來源；17個Agency類本機本文一致，五個自訂角色安裝hash相符。更新主索引、摘要與關聯；未修改全域設定、未啟動代理，原始匯入日期與執行者未知。
+
+- `2026-09-29 | CREATE | 區塊鏈與 Web3 QA 課程` | 新增20週規劃入口及第1週教材、診斷與作業、參考解答，共4檔；同步Web3分類、主索引、摘要與關聯。Python範例與錯誤情境檢查exit 0，16個教材連結可解析，4檔tone lint退0。學習者尚未作答，第2–20週尚為規劃；未刷新全庫索引或gbrain，未提交或發布。

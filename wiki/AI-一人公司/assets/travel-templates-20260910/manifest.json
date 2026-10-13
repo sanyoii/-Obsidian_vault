@@ -1,0 +1,11 @@
+{
+  "trip": "D:\\Codex\\一人旅遊公司\\旅程\\2026-11-關西四城親子五日-高雄\\trip.json",
+  "revision": 1,
+  "sha256": "f80841d7c48668553db942aa3c02fbad4d35b4620bd613c97c22e34c33a7da0d",
+  "pages": [
+    "booklet.html",
+    "dayguide.html",
+    "weekboard.html"
+  ],
+  "state": "local design prototype; not new travel research"
+}

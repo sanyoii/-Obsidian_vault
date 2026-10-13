@@ -1,0 +1,17 @@
+[map] 23 欄，全部引用解析成功
+[start] 安裝 0/7 節 · 預裝範本 8（已啟用 0）· 連結器已驗證 0
+[flow] 5 條 · 52 節點 · 全部引用解析成功
+[sysflow] 區域 3 · 節點 210 · 連線 216 · 未建/未決 22 · 部分 41 · 引用全部解析成功
+[sysflow] 使用者視角 17 列 · 引用節點 19 顆 · 背景 191 顆
+[sysflow-layout] zones top:onboarding → main:daily → feedback:iterate · frames 27 · edges 216 · unplaced frames 0 · unplaced nodes 0
+[data]
+assets: 30
+everyday: 8
+confirm: 14
+managed: 8
+planned: 5
+missing: 0
+unclassified: 0
+duplicate paths: 0
+[晨報設定] 10 區塊 · 心法 4
+built offline/index.html (16023037 bytes)

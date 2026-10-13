@@ -1,0 +1,101 @@
+[
+  {
+    "name": "python-version",
+    "command": [
+      "C:\\Users\\sanyo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "--version"
+    ],
+    "cwd": "D:\\Codex\\AI-一人公司\\delivery\\2026.09.18.1\\staging\\AI-一人公司",
+    "exit_code": 0
+  },
+  {
+    "name": "timezone",
+    "command": [
+      "C:\\Users\\sanyo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "-c",
+      "from zoneinfo import ZoneInfo; print(ZoneInfo(\"UTC\")); print(ZoneInfo(\"Asia/Taipei\"))"
+    ],
+    "cwd": "D:\\Codex\\AI-一人公司\\delivery\\2026.09.18.1\\staging\\AI-一人公司",
+    "exit_code": 0
+  },
+  {
+    "name": "build",
+    "command": [
+      "node",
+      "offline/build.mjs"
+    ],
+    "cwd": "D:\\Codex\\AI-一人公司\\delivery\\2026.09.18.1\\staging\\AI-一人公司",
+    "exit_code": 0
+  },
+  {
+    "name": "node-tests",
+    "command": [
+      "node",
+      "--test",
+      "offline/ability-references.test.mjs",
+      "offline/setup-progress.test.mjs",
+      "offline/sysflow-hover.test.mjs",
+      "晨報/render.test.mjs"
+    ],
+    "cwd": "D:\\Codex\\AI-一人公司\\delivery\\2026.09.18.1\\staging\\AI-一人公司",
+    "exit_code": 0
+  },
+  {
+    "name": "evaluation-tests",
+    "command": [
+      "C:\\Users\\sanyo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "evaluations",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "cwd": "D:\\Codex\\AI-一人公司\\delivery\\2026.09.18.1\\staging\\AI-一人公司",
+    "exit_code": 0
+  },
+  {
+    "name": "social-tests",
+    "command": [
+      "C:\\Users\\sanyo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "skills/social-post/tests",
+      "-v"
+    ],
+    "cwd": "D:\\Codex\\AI-一人公司\\delivery\\2026.09.18.1\\staging\\AI-一人公司",
+    "exit_code": 0
+  },
+  {
+    "name": "hook-tests",
+    "command": [
+      "C:\\Users\\sanyo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      ".claude/hooks/tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "cwd": "D:\\Codex\\AI-一人公司\\delivery\\2026.09.18.1\\staging\\AI-一人公司",
+    "exit_code": 1
+  }
+]

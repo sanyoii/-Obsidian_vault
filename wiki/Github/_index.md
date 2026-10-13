@@ -6,17 +6,48 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 209 篇 GitHub repo 分析文章，按 12 大主題分類（含 1 篇行銷類深度分析）
+> 238 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-08-09
+> 最後更新：2026-10-12
 
 ---
 
-## 🤖 AI Agent 框架（23 篇）
+## 🏢 AI-一人公司（19 篇）
+
+分類入口：[[AI-一人公司/_index|AI-一人公司]]。此處收錄19篇分析（含七個旅行專案總比較及第八案Migo），狀態為採用建議，所評估項目尚未整包安裝；舊版 Video 分析保留於原分類。
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[AI-一人公司/ai-travel-kit — 個人旅行訪談與旅後校準接入評估\|ai-travel-kit]] | 🔬 | 📌 | 2026-10-12：兩項方法已局部接入；6題主模型合成走查與本機檢查通過，未整包安裝、未驗真人效果。 |
+| [[AI-一人公司/useful-ai-prompts — 提示詞素材與公司知識接入評估\|useful-ai-prompts]] | 🔬 | ⏳ | 2026-09-20：679 prompts／259 Skills；基本結構通過不等於效果，按需取方法，不整包安裝。 |
+| [[AI-一人公司/jev-ultrafast — 瀏覽器代理與公司工作流接入評估\|jev-ultrafast]] | 🔬 | ⏳ | 2026-09-19：先取方法；驗收缺乘客數與艙等，沿用 Chrome profile，未安裝或實跑。 |
+| [[AI-一人公司/OpenCreator — 創作工作台與媒體工具接入評估\|OpenCreator]] | 🔬 | ⏳ | 2026-09-19：固定 commit 原碼抽查；優先媒體工序；未安裝，Repomix／上游測試未執行。 |
+| [[AI-一人公司/travel-plan-viz — Migo行程視覺化與展示層採用評估\|travel-plan-viz（Migo）]] | 🔬 | ⏳ | 2026-09-10：HTML展示層優先候選；21單測通過、4範例失敗，地理／日期／空頁校驗缺口已重現，未安裝。 |
+| [[AI-一人公司/七個旅行開源專案 — 一人旅遊公司採用比較\|七個旅行專案比較]] | 🔬 | ⏳ | 2026-09-10：7案固定原碼與6種合成失敗行為；先補閱讀與展示，不整包安裝。 |
+| [[AI-一人公司/travel-guidebook — 旅遊公司閱讀與列印交付評估\|geekjourneyx/travel-guidebook]] | 🔬 | ⏳ | 2026-09-10：優先參考每日章節、資訊層級與A4列印；仍有CDN與模型估算，未驗PDF。 |
+| [[AI-一人公司/trip-map-builder — 旅遊公司互動地圖與餐飲研究評估\|hiyeshu/trip-map-builder]] | 🔬 | ⏳ | 2026-09-10：按天地图與導航值得參考；座標連線不是交通查核，README MIT但缺完整LICENSE。 |
+| [[AI-一人公司/skills-travel-planner — 路書交付管線與品質判定評估\|huanyuzhilv/skills-travel-planner]] | 🔬 | ⏳ | 2026-09-10：資料到路書流程最完整；已重現內容補強失敗卻回strict，先修判定再導入。 |
+| [[AI-一人公司/AtlasAgent — 全球旅行方法包與日期工具評估\|wpfbcr/AtlasAgent]] | 🔬 | ⏳ | 2026-09-10：可參考方案比較；天氣不接旅行起日、節日未按國家過濾，不整包安裝。 |
+| [[AI-一人公司/berkyalkn AI-travel-agent — 微服務規劃與錯誤核准風險評估\|berkyalkn/AI-travel-agent]] | 🔬 | ❌ | 2026-09-10：不導入；合成案例重現評估錯誤即核准及缺航班崩潰，微服務成本高。 |
+| [[AI-一人公司/logmatter AI-Travel-Agent — 查詢與寄信確認流程評估\|logmatter/AI-Travel-Agent]] | 🔬 | ❌ | 2026-09-10：不導入；可參考寄信前中斷，但已重現供應商失敗後UI仍報成功。 |
+| [[AI-一人公司/MozartofCode travel-agent — CrewAI 分工範例與入口完整性評估\|MozartofCode/travel-agent]] | 🔬 | ❌ | 2026-09-10：不安裝；已archived，console入口指向不存在的run，主要只剩角色分工範例。 |
+| [[AI-一人公司/mcp-google-map — 旅遊公司地圖與路線查核評估\|mcp-google-map]] | 🔬 | ⏳ | 2026-09-10：地理查詢有價值；多站transit、部分失敗、圖資保存須先補，未安裝或付費呼叫。 |
+| [[AI-一人公司/claude-trip-skills — 旅遊服務方法與流程補強評估\|Claude Trip Skills]] | 🔬 | ❌ | 2026-09-10：不整包安裝；改寫興趣排程、研究續做與每日呈現，排除檔案存在驗收及全庫推送。 |
+| [[AI-一人公司/FlyAI — 旅遊公司查詢工具與補強評估\|FlyAI]] | 🔬 | ⏳ | 2026-09-10：參考專用查詢與參數文件；完整報價、多程及Windows待驗，不整包安裝。 |
+| [[AI-一人公司/claude-skill-code-cleanup — 稽核工具與整合評估\|Code Cleanup]] | 🔬 | 📌 | 2026-09-09：建議局部試用唯讀稽核器；不整套導入 R&D，未執行上游測試。 |
+| [[AI-一人公司/video-autopilot-kit — 影片 QA 與整合評估\|Video Autopilot Kit]] | 🔬 | ⏳ | 2026-09-09：先試成片 QA；完整 Editkin 路徑有公開 CLI 缺檔與環境待驗證。 |
+| [[AI-一人公司/qaskills — 測試公司能力素材與安裝評估\|qaskills]] | 🔬 | ⏳ | 2026-09-09：優先改寫測試資料、失敗診斷及發版證據素材；440 份 seed 品質不齊，CLI／MCP 不整包安裝，未跑上游測試。 |
+
+---
+
+## 🤖 AI Agent 框架（26 篇）
+
+| Repo | 深度 | 狀態 | 說明 |
+|------|------|------|------|
+| [[Github/repos/anysearch-skill — 雲端搜尋介面與採用評估\|anysearch-skill]] | 🔬 | ⏳ | 三 runtime 本機契約及三題匿名搜尋通過；旅遊結果混入反向入境規則，全批429仍exit 0；維持觀望。 |
+| [[Github/repos/council-of-high-intelligence — 多視角決策議會與替換評估\|council-of-high-intelligence]] | 🔬 | ⏳ | 18 種分析視角；可作 yongli 替換候選，需適配 Codex 工具、代理上限及模擬降級；名冊 166 檢查通過，未實跑議會。 |
+| [[Github/repos/openchatx-mcp — ChatGPT 本機執行平台與公司採用評估\|openchatx-mcp]] | 🔬 | ⏳ | 固定版本原碼抽查；暫不整套導入，Project 權限不是 OS 沙箱。 |
 | [[Github/repos/ChronicleCore-Architecture — 38人格多Agent治理架構白皮書\|ChronicleCore]] | 🔬 | 📌 | 49⭐ 純概念白皮書零程式碼；5 Pillars 治理與本環境 institution/ 殊途同歸；授權禁衍生 |
 | [[Github/repos/graphiti — 為 AI Agent 打造的即時時序知識圖譜框架\|graphiti]] | 🔬 | ⏳ | 28.4K⭐ 時序知識圖譜，硬依賴 Neo4j/FalkorDB；MCP Server 可掛 Claude Code |
 | [[Github/repos/honcho — 為 AI Agent 打造的使用者建模記憶基礎設施\|honcho]] | 🔬 | ⏳ | 5.8K⭐ peer 建模+背景推理記憶層；與 claude-mem 定位重疊，需 Postgres |
@@ -43,10 +74,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（58 篇）
+## 🛠️ Claude Code / Skills（60 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/NESA-SLIDE — 可編輯HTML與PPTX的AI簡報製作系統\|NESA-SLIDE]] | 🔬 | ⏳ | 73⭐ MIT；七個專案Skills、HTML editor與原生PPTX流程。三支Node回歸通過；完整生圖／瀏覽器／PowerPoint未驗，建議獨立試用。 |
 | [[Github/repos/AgentKey — Chainbase 的付費 MCP 資料閘道\|AgentKey]] | 🔬 | ⏳ | 582⭐ Apache-2.0；Chainbase（Web3 資料公司）的**訂閱制資料閘道**——一個訂閱涵蓋 web search/scraping/社群/鏈上/財經/電商，雲端自動 failover。⚠️ **repo 不是產品本體**：主語言僅 Shell+PowerShell，Top 5 大檔全是安裝腳本，零應用邏輯；服務閉源託管於 `api.agentkey.app/v1/mcp`，寫設定的 `@agentkey/cli` 宣告 repo 實測 **404 私有**。✅ **供應鏈檢查通過**：線上 install.sh/.ps1 與 repo 內 **SHA-256 完全相同**，對外端點無非預期主機。⚠️ **最該注意**：SKILL.md 明文「**Use INSTEAD OF built-in WebSearch/WebFetch**」「don't fall back to Claude's built-in Web Search」＝**用計費服務取代你免費的內建工具**，且工具名包裝成通用的 `find_tools`/`execute_tool` 不揭露付費性質；已有使用者開 issue「吃相太难看了」指 server 端會把誘導文字注回每個 session（改本機 SKILL.md 擋不住），**0 回覆**。做得好的三點：prompt-injection 防禦寫進 SKILL.md、成本閘門（≥3 呼叫或 ≥10 credits 前強制查餘額估價確認、失敗呼叫不計費）、7 條 CI＋週更 15+ release。判 ⏳ 三理由：**定價頁 JS SPA 兩種爬法都抓不到**、覆蓋內建工具行為未解、**582⭐ 只有 2 watcher** 缺第三方實測。🪟 **本環境專屬坑**：安裝器認 `%USERPROFILE%\.claude.json`、**完全不認 `CLAUDE_CONFIG_DIR`**，會觸發 config-drift 金絲雀第 [4] 項 → ✅ **改走 `.claude-plugin/marketplace.json` 的 plugin 路徑可完全繞過**。**📌 可單獨抽取**：`cost-aware.md` 花錢前確認規則、`protocol/skill-meta-v1` 版本廣播協定、`install.ps1` 40+ agent Windows 路徑對照表 |
 | [[Github/repos/i-have-adhd — ADHD 友善輸出 skill\|i-have-adhd]] | 🔬 | ❌ | 5.3K⭐ 10 條 ADHD 友善輸出規則；與 caveman hook 高度重疊＋全域觸發衝突；可吸收個別規則零安裝 |
 | [[Github/repos/fable-method — Fable 5 工作法蒸餾成任何模型可跑的 Skill＋Eval\|fable-method]] | 🔬 | ⏳ | 1.6K⭐ Fable 5 工作法四 skill（think/act/prove/grow）＋15 輪對抗 eval；與 institution 同哲學不整裝，但 trap-fixture 迴歸測試是 institution 缺的真增量，升級條件＝下次改規則先寫 trap 測 |
@@ -88,6 +120,7 @@ tags: [github, index, repos]
 | [[Github/repos/thedotmack-claude-mem — 85K⭐ 跨 Session 持久記憶\|claude-mem]] | 🔬 | ✅ | 85K⭐ SQLite+ChromaDB；worker 自 2026-05 運行；claude-mem@thedotmack plugin |
 | [[Github/repos/vercel-labs-skills — Agent Skills 生態系 CLI 套件管理器\|vercel-labs/skills]] | 🔬 | ⏳ | 25K⭐ Vercel官方 npx skills 套件管理器；內建 find-skills 已在本機生效中 |
 | [[Github/repos/claude-cache-guard — Claude Code 5小時額度自動交接工具\|claude-cache-guard]] | 🔬 | ⏳ | 9⭐ 5h額度門檻自動寫交接檔+/ccgresume；⚠️與本環境 hook 注入規則衝突恐靜默失效，常撞額度才考慮 |
+| [[Github/repos/QA-Skill.md-files — STLC QA Skills 參考包\|QA-Skill.md-files]] | 🔬 | ⏳ | 14 個 STLC Skills；不整包安裝，選擇性重寫成 QA Playbooks；保留九個 canonical templates |
 | [[Github/repos/archify — 用大白話生成架構圖的 Claude Skill\|archify]] | 🔬 | ✅ | 6.5K⭐（07-21 復盤翻倍）用大白話生成五種技術圖，JSON IR+Schema驗證+4×匯出+WebM；已裝**舊版**，v2.11 為升級候選（+語意互動/Story導覽/11-recipe guide） |
 | [[Github/repos/MengTo-Skills — 設計師視角 Codex×Claude×Cursor Agent Skill 合集\|MengTo/Skills]] | 🔬 | ⏳ | 1.3K⭐ Design+Code 創辦人個人庫，75 skills（62 個視覺風格卡+13 個原則/Codex工作流）；與已裝 design-taste-frontend 等高度重複，與 emilkowalski/skills 互補（決策層 vs 風格庫） |
 | [[Github/repos/laowangba-pmprototype-skill — B端C端產品原型生成 Codex Skill\|laowangba-pmprototype-skill]] | 🔬 | ⏳ | 38⭐ 1天新；PM 用 B/C 端 Figma 原型生成流水線+Anti-Slop 閘門，inherits frontend-design；本機無 Figma MCP 跑不到執行層，QA 用途低 |
@@ -142,11 +175,12 @@ tags: [github, index, repos]
 
 ---
 
-## 💼 求職（3 篇）
+## 💼 求職（4 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
 | [[Github/repos/career-ops — AI 驅動求職自動化指揮系統\|career-ops]] | 🔬 | ✅ | v1.13.0 A-F 評估 + Go TUI |
+| [[Github/repos/ResumeSkills — 履歷與求職提示技能集\|ResumeSkills]] | 🔬 | ⏳ | 22 skills 分類 2／9／11；已引入短答、改寫職缺篩選與面試，共 3 項安裝；其餘不整包引入，結構驗證通過／行為僅主模型走讀 |
 | [[Github/repos/jobsmith — 台灣求職 AI 多代理 Co-Pilot\|jobsmith]] | 📎 | ✅ | 14 Agent LangGraph |
 | [[Github/repos/ai-job-search — Claude Code 原生的本機求職應徵框架\|ai-job-search]] | 🔬 | ⏳ | 20.4K⭐ 4個月新；Claude Code 原生 Skills/Commands 求職模板，LaTeX PDF 校對+ATS驗證是差異化亮點；丹麥市場限定+需LaTeX工具鏈，先觀望 |
 
@@ -176,7 +210,7 @@ tags: [github, index, repos]
 ---
 | [[Github/repos/chatgpt-video-editing-skills — 繁中八步短影音剪輯安全 skill|chatgpt-video-editing-skills]] | 🔬 | ⏳ | 188⭐ MIT繁中；把「使用者自拍影片→ 9:16 直式短片」拆成兩 skill：setup（只檢查/裝/驗證環境，不上傳不剪）＋editor（八步：素材檢查→逐字轉寫→內容整理→剪輯策略（先給白話策略等核准）→粗剪→字幕→720p 預覽→QA 正式）。**賣點不是功能是安全工程**：逐檔讀 runbook/security 全清——來源全釘官方 HTTPS（字體 `curl -fL --proto '=https'`、LFS-skip、frozen-lockfile、隔離 npm cache）、憑證 check-ignore→拒 symlink→chmod 600→stat 複驗、非 git worktree 新檔一律 hard stop、每個 mutation/上傳/付費都要顯式核准、原檔零破壞、**未驗證不得稱完成**（R17 教科書級）——與 reverse-skill 強制自注入正好相反。判 ⏳：①需求不存在（已裝 HyperFrames 群＋claude-real-video＋hyperframes-media，但**剪真實素材成 Reels** 無在跡任務，R13）②硬依賴重：browser-use/video-use 完整 repo＋uv＋ElevenLabs Scribe v2 **付費**憑證，選用動畫還要 Node22＋Bun ③太新太小（2.7 週/單人/無 release/社群零訊號）。升級條件＝真出現剪自拍素材成繁中直式短片的重複任務（個人品牌/求職自介短片）且願設 video-use＋ElevenLabs；放棄＝上游持續静默（已 2 週無 commit）或 video-use 上游改動使 runbook 失效。**📌 可單抽**：security-and-verification 的憑證處理範式、output-contract 的「未驗證不得稱完成」契約，當安全 skill 範本 |
 
-## 🧰 開發工具 / CLI（22 篇）
+## 🧰 開發工具 / CLI（23 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -203,6 +237,7 @@ tags: [github, index, repos]
 | [[Github/repos/decimen-optical-transfer — 噴泉碼動畫 QR 螢幕對相機傳檔 PoC\|decimen-optical-transfer]] | 🔬 | ⏳ | 2.1K⭐ MIT；螢幕播動畫 QR、相機接收，LT 噴泉碼實作紮實正確（robust soliton CDF＋splitmix32＋partial Fisher–Yates）。最見功力：因 `Math.log` 在 JS 規範是「實作近似」，V8（發送）與 JavaScriptCore（iPhone 接收）差一個 ulp 就會讓 soliton 分布靜默 desync，作者自寫只含精確 IEEE-754 運算的確定性 log。✅ 供應鏈五項全綠（零 postinstall、6 顆 devDeps 實查存在、**全 repo 僅一處 `fetch()` 且參數是寫死的本地示範圖**）。⚠️ **最大落差：沒有檔案選擇器**——grep `type=file`/`FileReader` 全零命中，只能傳內建的兩張示範 PNG、接收端亦無下載連結，是傳輸層 demo 非可用工具。「2 天帳號 2,051 星」已查證為自然流量（r/vibecoding 5,622 讚貼文，作者自述 Claude Code 一晚 vibe-code），非灌量。可帶走的是 fountain.ts 參考實作＋README 的瀏覽器硬傷清單。對照 [[Github/repos/qrs — 用連續 QR Code 串流傳檔的離線傳輸工具\|qrs]] |
 | [[Github/repos/spec-kit — GitHub 官方的規格驅動開發工具組\|spec-kit]] | 🔬 | ⏳ | 125.7K⭐ MIT，GitHub 官方；把「寫程式前先產出可 review 的規格」做成一層外掛在既有 coding agent 之上的流程骨架——`specify` CLI 把 slash command 與 Markdown 模板注入專案，強制走 constitution → specify → plan → tasks → implement，每階段產出進 repo 的 .md 供人類 review。**流程本體是 Markdown 不是程式碼**，這是它一口氣支援 **37 個 agent 整合**（claude/copilot/codex/cursor/gemini/… + generic 逃生口）的原因，也是天花板——執行品質全靠下游 agent，spec-kit 自己不驗證。架構實料：`workflows/` 是真的編排 DSL（11 種 step：command·shell·prompt·gate·if_then·switch·while_loop·do_while·fan_out·fan_in·init + overlay 分層合併）、bundler 有 resolver/conflict/installer/validator、authentication 支援 GitHub＋Azure DevOps＋air-gapped。**測試投入罕見**：token 前三大檔全是測試（合計 18.2%），並有 `*_python_parity.py` 強制 bash/PowerShell/Python 三套腳本行為一致。社群 146 個擴充、近 8 週 commit 加速（59→112）、14 天發 8 個 release、Issue 關閉率 89.6%、YouTube 官方教學 58.9 萬觀看。判 ⏳ 非品質問題而是**需求重疊**：7-Agent 工廠＋writing-plans/executing-plans/spec-driven-development 已覆蓋同一段，增量只剩 workflow 引擎的 fan_out/gate 表達力；且使用者實測損益平衡點是「模糊到兩個工程師會做不同實作的需求」，與本環境近期以基建維護/單檔改動為主的工作型態不合。升級＝出現跨多階段、需求模糊、要把 spec 當 PR review 產物的實作型專案（先在 workspace/ 隔離試跑確認 `speckit.*` 不與 CLAUDE.md 路由打架）；放棄＝Claude Code 原生 plan mode 內建等能力／human commit 停滯>2 個月／隔離試跑證實與現有路由層無法共存。**📌 可單抽（逐字讀過 v0.16.0）**：①`speckit.bug.assess.md` 的 **URL Trust Policy**（拒抓 file:/RFC1918/metadata endpoint＋可疑指令引述進 `Unverified` 段落供人審而非執行——「注入不信」之上的「引述存證」增量）②`clarify.md` 機制（上限 5 問、答案回寫進 spec 檔非留對話）③`analyze.md` 跨產物一致性稽核（唯讀、constitution 衝突自動 CRITICAL）④spec-template 結構元素（story 優先級化＋獨立可測即 MVP＋Given/When/Then，diff 嫁接勿整抄）；註：三套腳本 parity 測試是「維持重複」的工具、與本環境「消滅重複」策略相反，僅「同腳本雙引擎」變體值得抄形 |
 | [[Github/repos/github-cheat-sheet — Git 與 GitHub 隱藏功能速查表\|github-cheat-sheet]] | 🔬 | ⏳ | 58.4K⭐ MIT；純 Markdown 的 Git/GitHub 隱藏功能速查表（五語系），無程式碼、無安裝物。內容凍結近 6 年（最後內容 commit 2020-10、之後僅贊助商連結變更），部分條目已過時（`git.io` 服務已關閉、`hub` CLI 已被 `gh` 取代文件未更新），但多數 URL 參數/分支比較/commit 語法技巧仍有效。社群口碑薄弱（僅十年前一則低分 Reddit 貼文），另抓到一則疑似農場帳號的 X 貼文誤稱其為「AI 工具」，已存證標注不採信。判 ⏳：文件性質不涉安裝，收錄為速查參考即可，但引用步驟前需自行驗證仍然有效 |
+| [[Github/repos/herdr — AI Coding Agent 終端執行環境\|Herdr]] | 🔬 | ⏳ | 29K⭐ Apache-2.0 Rust；persistent server 持有 PTY/process，TUI/JSON CLI/socket API 統一管理 workspace、pane 與 20 種 coding agent 狀態。架構、跨平台 CI 與 installer SHA-256 驗證扎實；但 Windows 仍 preview-only beta，Codex integration 會改 `~/.codex` hooks/config，plugin 無 sandbox，且與現有 wmux＋Codex collaboration 高度重疊。先 standalone 隔離試跑，出現 4+ 長任務或 Windows stable 再升級。 |
 ---
 
 ## 📊 AI/ML 模型（7 篇）
@@ -238,7 +273,7 @@ tags: [github, index, repos]
 ---
 | [[Github/repos/make-interfaces-feel-better — UI 細節打磨的 agent skill|make-interfaces-feel-better]] | 🔬 | ⏳ | 2.8K⭐ MIT；純文件 skill（47KB / 11 檔全 Markdown），19 條帶具體數值的前端打磨原則（同心圓角、按壓 scale 一律 0.96、圖示 blur 4px→0、bounce 永遠 0、點擊區 44×44）。**真正差異點不是原則而是審查協議**：quick/full 雙模式、發現數上限 5/15、五類別「實際檢查了什麼證據」覆蓋表（明文禁止暗示未檢查的面向已審）、強制列「Considered but Rejected」、沒跑的檢查標 Not verified、最後給 Block/Needs-changes/Approve 判決——與本環境 R17 交付契約同構。架構上是漸進揭露範本（SKILL.md 只留判斷，recipe 下放五個子檔）。判 ⏳ 三條：①本機已裝 8 個同域 skill，其中 `emil-design-eng` 連「必須用 Before/After 表格、禁止分行寫」這條格式規約都一字不差重複（同一批設計工程共識）；②description 約 580 bytes≈145 tokens，清單預算 Σ=4,718/5,000 實測，裝入後餘裕從 282→137 tokens；③MIT 可直接拄審查協議進既有 skill 不必整包裝。升級條件＝跟 `emil-design-eng` 對同一份程式碼並排實測，贏了就**取代**不並存；放棄條件＝協議已拄完用得順／至 2026 年底仍零 release 單人零外部 PR。⚠️ bus factor 1、零 tag 無版本可釘、0 issue/0 PR、stargazers API 本環境普遍 404 故星數成長未能驗證 |
 
-## 📚 學習 / 教程 / RAG（11 篇）
+## 📚 學習 / 教程 / RAG（12 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -253,13 +288,15 @@ tags: [github, index, repos]
 | [[Github/repos/easychenopc-methodology 《一人企业方法论》第二版，也适合做其他副业（比如自媒体、电商、数字商品）的非技术人群。\|一人企業方法論]] | 📎 | 📌 | 副業經營方法論 |
 | [[Github/repos/developer-roadmap — 互動式開發者職涯路線圖\|developer-roadmap]] | 🔬 | 📌 | 359K⭐ 18+ 職涯路線圖（含 QA） |
 | [[Github/repos/經典學習資源 Mega-Repo 合輯\|Mega-Repo 合輯]] | 🔬 | 📌 | build-your-own-x/awesome/freeCodeCamp 等 6 個 |
+| [[Github/repos/promptasy — 遊戲化 Prompt Engineering 學習世界\|promptasy]] | 🔬 | 📌 | 27⭐ 繁中離線 Prompt Engineering browser game；292 條 source-backed master list 值得留存，但 Windows CRLF 會使 rubric test cascade fail，且 npm audit 有 1 high |
 
 ---
 
-## 📖 知識管理 / Wiki（8 篇）
+## 📖 知識管理 / Wiki（9 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/filedig — Windows本機文件與圖片語意搜尋\|filedig]] | 🔬 | ⏳ | 30⭐ MIT；Tauri＋Rust 本機混合搜尋。固定 v0.1.0 原碼檢查；失敗索引可能不重試、PDF 跳頁未接、繁中 FTS5 有限制；App 未實跑。 |
 | [[Github/repos/graphify — 一指令把資料夾建成可查詢知識圖譜的多平台 Skill\|graphify]] | 🔬 | ⏳ | 89K⭐ Karpathy wiki 構想 48hr 實作；tree-sitter 零token建圖+圖遍歷查詢+信心標籤；--obsidian 出全 wikilink vault；升級條件＝jobsmith 試建圖驗分工 |
 | [[Github/repos/Vault-for-Founders — 創辦人 AI 知識庫建置框架\|Vault-for-Founders]] | 🔬 | 📌 | 225⭐ Obsidian+Git 創辦人 Vault 方法論；v2 索引分層/attention budget 兩條規則可借鏡，不建置 |
 | [[Github/repos/obsidian-wiki — 讓 AI Agent 維護 Obsidian 數位大腦的跨平台 Skill 框架\|obsidian-wiki]] | 🔬 | ⏳ | 2.6K⭐ Karpathy LLM Wiki 模式，跨 15+ Agent；與現有 gbrain/claude-mem 重疊需先釐清分工 |
@@ -271,10 +308,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🔒 安全 / 自動化 / 其他（27 篇）
+## 🔒 安全 / 自動化 / 其他（20 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/iFixAi — AI Agent 行為與治理稽核工具\|iFixAi]] | 🔬 | ⏳ | 23.4K⭐ Apache-2.0；60項治理測試、evidence與跨provider judge。暫不安裝：Plugin仍pin 3.3.0而引擎已4.1.0、CI未跑pytest、分數需連同coverage閱讀。固定c1741d7，僅原始碼分析，未執行模型評測 |
 | [[Github/repos/n8n — 視覺化工作流自動化平台（fair-code 非開源）\|n8n]] | 🔬 | ⏳ | 198.7K⭐ **非 OSI 開源**——Sustainable Use License「只能自用或非商業，對外提供須免費」＋`.ee` 檔需 Enterprise License（**實測 1,110 檔／全 repo 4.3%**）＋**master 以外分支不受任何授權涵蓋**。43 個 `feat:*` 付費旗標經 `LicenseState.isLicensed()` 執行期強制，自架免費版**沒有資料夾分類、沒有 Git 版控、沒有環境變數、沒有 workflow diff/版本、三個 AI 輔助全鎖**——核心執行不限次數，被關的是協作治理與 AI。26,031 檔／6,546 目錄（Trees API 全量，**repomix 引擎本輪失敗**：archive 停在 8.3MB→git clone→Windows EPERM rmdir，未取得 token 數）；`.ts` 佔 72%，54 個 `@n8n/*` 子套件含 vendor 的 TypeORM 分支 2,572 檔。**2026 已轉型 AI agent 平台**：MCP client+server 雙向（402 個 .ts）、`mcp-browser`（Playwright/BiDi）、`mcp-browser-extension`（CDP 控 Chrome）、⚠️ `computer-use`（AI 助手的**本機 filesystem/shell/截圖**閘道）。體質頂級：週 400 commit、一天多版、$180M 募資、Fireship 118.9 萬觀看教學。判 ⏳ 非因品質——**個人自架完全合規**，是成本效益：現有 schtasks+PowerShell 排程能動，加常駐 Docker ＝ R13「加複雜度換小改善」；且 `sourceControl` 被鎖會讓工作流變成唯一沒進 git 的資產。**📌 可單獨抽取**：43 旗標清單（免費/付費切線的產品決策教材）、`task-runner`+`task-runner-python` 隔離執行參考、`n8n.io/llms.txt` |
 | [[Github/repos/Panniantong-Agent-Reach — AI Agent 互聯網感知層\|Agent Reach]] | 🔬 | ✅ | 60.8K⭐ 15 渠道互聯網能力層（選型/安裝/體檢/路由，讀取由 Agent 直呼上游）；已裝 v1.5.0，實測 13/15 可用；⚠️ 小紅書/Twitter 有實證封號案例（issue #498），排程長跑須用拋棄帳號 |
 | [[Github/repos/mvanhorn-last30days-skill — AI 多平台社群研究引擎\|last30days]] | 📎 | ✅ | 社群研究引擎 |

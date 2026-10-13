@@ -1,0 +1,9 @@
+ok   node  v24.19.0
+ok   python  py -3 → Python 3.14.2
+ok   git bash  C:\Program Files\Git\bin\bash.exe
+已修: .claude/skills 不可用，已重新接到 skills/（junction）——要重開 Claude Code 一次 skills 才會載入
+已修: .agent/skills 不可用，已重新接到 skills/（junction）——要重開 Claude Code 一次 skills 才會載入
+ok   行尾  LF
+ok   claude CLI  2.1.220 (Claude Code)
+
+都好了。（若上面有「已修」，重開 Claude Code 一次。）

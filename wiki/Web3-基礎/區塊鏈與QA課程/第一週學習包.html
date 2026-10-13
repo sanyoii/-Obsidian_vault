@@ -1,0 +1,1135 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一章學習包｜Web3 與 QA</title>
+<style>
+:root{color-scheme:light;--ink:#18302e;--muted:#546865;--line:#d8e2dc;--paper:#fffefa;--accent:#146354}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:#f2f4ee;color:var(--ink);font:17px/1.85 system-ui,"Microsoft JhengHei",sans-serif}a{color:var(--accent);text-underline-offset:4px}a:hover{color:#0c4136}a:focus-visible,summary:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid #b76d10;outline-offset:5px}.skip{position:absolute;top:-100px}.skip:focus{top:10px;left:10px;background:white;padding:8px;z-index:9}.wrap{max-width:1180px;margin:auto;padding:48px 32px}.eyebrow{font-size:13px;letter-spacing:.14em;font-weight:700;color:var(--accent)}header{border-bottom:1px solid var(--line);padding-bottom:30px;margin-bottom:32px}h1{font-size:clamp(30px,4vw,48px);line-height:1.3;letter-spacing:-.03em;margin:12px 0}header p{color:var(--muted);max-width:760px}.badge{display:inline-block;padding:4px 12px;border:1px solid var(--line);border-radius:4px;font-size:14px;margin:4px 6px 4px 0}.layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:38px}nav{position:sticky;top:24px;align-self:start}nav a{display:block;text-decoration:none;padding:9px 12px;border-left:2px solid var(--line);font-size:15px}nav a:hover{background:#e6eee7;border-color:var(--accent)}main{min-width:0}section,details.panel{padding:30px 34px;background:var(--paper);border:1px solid var(--line);border-radius:10px;margin-bottom:24px}h2{font-size:25px;line-height:1.5;margin:1.7em 0 .7em}section>h2:first-child{margin-top:0}h3{font-size:20px;margin-top:1.6em}p{margin:.8em 0}li{margin:.3em 0}pre{background:#172e2a;color:#ecf5ef;padding:22px;border-radius:6px;overflow-x:auto;font-size:14px;line-height:1.65;tab-size:4}code{font-family:Consolas,monospace}p code,li code{background:#eaf0e8;padding:2px 5px;border-radius:3px}table{border-collapse:collapse;width:100%;font-size:15px;min-width:480px}th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{background:#eaf0e8}tr:last-child td{border-bottom:0}.table-scroll{overflow:auto;margin:20px 0}summary{cursor:pointer;font-weight:700;font-size:21px}summary::marker{color:var(--accent)}.note{border-left:3px solid var(--accent);padding:8px 16px;background:#edf3ed}.small,footer{font-size:14px;color:var(--muted)}button{font:inherit;padding:8px 14px;background:var(--accent);color:white;border:0;border-radius:5px;cursor:pointer}.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}footer{padding:24px 0;overflow-wrap:anywhere}details.source{font-size:13px}details.source summary{font-size:14px}details.source pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eaf0e8;color:var(--ink)}
+@media(max-width:720px){.wrap{padding:26px 16px}.layout{display:block}nav{position:static;display:flex;flex-wrap:wrap;gap:4px;margin-bottom:20px}nav a{padding:7px 10px;border:1px solid var(--line);border-radius:4px}section,details.panel{padding:22px 18px}body{font-size:16px}h2{font-size:22px}pre{font-size:13px;padding:16px}}
+@media print{body{background:white;font-size:11pt}.wrap{max-width:none;padding:0}.layout{display:block}nav,.actions,.skip,.source{display:none}section,details.panel{border:0;padding:0;margin:0 0 24px;break-inside:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere;color:black;background:#f3f3f3}table{min-width:0;font-size:10pt}h2,h3{break-after:avoid}.table-scroll{overflow:visible}a{color:inherit}details:not([open]){display:none}footer{font-size:9pt}}
+
+.course-diagram{margin:24px 0;padding:20px 0;border-top:1px solid #d8e2dc;border-bottom:1px solid #d8e2dc;color:#18302e;font-family:system-ui,"Microsoft JhengHei",sans-serif}.course-diagram h4{font-size:20px;line-height:1.5;margin:0 0 8px}.course-diagram p,.course-diagram figcaption{font-size:15px;line-height:1.8;margin:8px 0}.course-diagram .diagram-scroll{overflow-x:auto;max-width:100%;border:1px solid #d8e2dc;border-radius:6px;background:#fffefa}.course-diagram svg{display:block;min-width:760px;width:760px;height:auto}.course-diagram svg text{fill:#18302e;font-family:system-ui,"Microsoft JhengHei",sans-serif;font-size:18px}.course-diagram svg .label{font-size:16px;fill:#546865}.course-diagram svg .heading{font-weight:650;font-size:21px}.course-diagram svg .tech{font-family:Consolas,monospace;font-size:16px}.course-diagram svg .box{fill:#fffefa;stroke:#8da49c;stroke-width:1.5}.course-diagram svg .focus{fill:#edf3ed;stroke:#146354;stroke-width:2}.course-diagram svg .edge{fill:none;stroke:#546865;stroke-width:2}.course-diagram svg .active{stroke:#146354}.course-diagram svg .mask{fill:#fffefa}.course-diagram svg .key{fill:#f6f0e6;stroke:#ad8754;stroke-width:1.5}.course-diagram svg .rule{stroke:#d8e2dc;stroke-width:1}.course-diagram svg .line{stroke:#8da49c;stroke-width:1.5;stroke-dasharray:5 5}.course-diagram svg .failure{fill:#fffefa;stroke:#8da49c;stroke-width:1.5}.course-diagram .scroll-hint{color:#546865;font-size:13px}@media print{.course-diagram .diagram-scroll{overflow:visible;border:0}.course-diagram svg{min-width:0;width:100%;max-width:760px}.course-diagram .scroll-hint{display:none}.course-diagram{break-inside:avoid}}
+
+</style></head><body><a class="skip" href="#diagnostic">跳到課前診斷</a><div class="wrap">
+<header><div class="eyebrow">WEB3 × QA / CHAPTER 01</div><h1>同一筆錢，能花兩次嗎？</h1><p>Alice 只有 10 點，卻想付 7 點給 Bob、6 點給 Carol。一起算算看：哪筆能付？換個順序會怎樣？程式說付款失敗，錢有沒有真的留在原處？</p><span class="badge">約 6 小時，依實際用時調整</span><span class="badge">Python 基礎</span><span class="badge">包內解說、練習與補課</span><div class="actions"><a href="#diagnostic">第一次學：先做課前診斷</a><a href="#lesson">已做診斷：閱讀第一堂</a><button id="print" type="button">列印／另存 PDF</button></div><p class="small">作答寫在自己的筆記裡，再貼回對話討論；這個頁面不會儲存答案或自動評分。Python 程式請在自己的電腦執行。解答要點開才看得到，列印也只會印出已展開的內容。</p></header>
+<div class="layout"><nav aria-label="學習包目錄"><a href="#diagnostic">01 課前診斷</a><a href="#lesson">02 Web3 與 QA 教材</a><a href="#workbook">03 練習與驗收</a><a href="#rubric">04 評分規則</a><a href="#answers">05 參考解答</a><a href="#overview">課程路線</a><a href="#design">全課程設計與取材</a></nav><main>
+<section id="diagnostic"><h2>課前診斷</h2><p>這份作業表可以搭配自己的筆記使用。做過的題目留下答案，還沒做的就留白；下次從沒做完的地方接著寫。</p>
+<h2>課前診斷（15 分鐘，不計及格分）</h2>
+<p>每題寫 1–3 句，不會就寫「不知道」。不查資料、不看解答，保留原答供前後比較。</p>
+<ol>
+<li>銀行帳戶紀錄與區塊鏈帳本，誰有權決定更新？你覺得差在哪？</li>
+<li>Alice 有 10 點，同時要求付 7 點與 6 點。每筆單獨看夠付，為什麼仍有問題？</li>
+<li>複製同一份帳本到三台電腦，是否已解決上題？</li>
+<li>網頁顯示「轉帳成功」，你還想看什麼證據？</li>
+<li>Python 的兩個變數指向同一個 dict，修改其中一個會怎樣？要保留簡單餘額表的舊值可以怎麼做？</li>
+<li>你目前最難理解的一個區塊鏈問題是什麼？</li>
+</ol>
+<p>原答：</p>
+<p>（在此填寫）</p>
+</section>
+<section id="lesson"><h2>第一章 Web3 與 QA 教材</h2><p>這是新版課程第 1 章。保留既有第一週檔名，方便接續筆記；後續依章節先備安排，不把一章固定等同一週。</p>
+<p>本章完成後，要能推演兩種付款順序、區分驗證與共識、讀出交易圖的授權關係，並用轉帳前後資料指出違反規則的地方。Python 先備是能執行一個檔案、看懂變數與函式呼叫；本章補上 dict、copy、if 與 return 的用法。</p>
+<p>假設帳戶裡只有 10 點，卻同時送出兩筆付款：一筆 7 點，一筆 6 點。電腦該讓哪筆成功？如果三台電腦的答案不一樣，又該聽誰的？</p>
+<p>這週就從這件事開始。你會自己算一次，再用 Python 跑一次，最後檢查：該失敗的付款，有沒有偷偷改到餘額？帳本、交易、節點和共識這些名詞，都會放進同一個例子裡說明。</p>
+<p>開始前做 <a href="#diagnostic">課前診斷</a>。已經交過就接著讀，保留原答，之後才看得出哪些地方弄懂了。</p>
+<h2>第一堂：誰的帳本算數？（120 分鐘）</h2>
+<p>時間建議：診斷 15 分鐘、閱讀與推演 55 分鐘、練習 A 25 分鐘、讀圖練習與回顧 25 分鐘。這是估計；交易圖若需要多讀一次，就跨次接續，不跳過必要內容來湊時間。</p>
+<p>Alice 有 10 點，Bob 和 Carol 都有 0 點。Alice 發出兩個要求：T1 付給 Bob 7 點，T2 付給 Carol 6 點。兩個要求單獨看都不超過 10 點，合在一起卻要花 13 點。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>狀態</th>
+<th align="right">Alice</th>
+<th align="right">Bob</th>
+<th align="right">Carol</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>起點</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>執行 T1 後</td>
+<td align="right">3</td>
+<td align="right">7</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>再嘗試 T2</td>
+<td align="right">3</td>
+<td align="right">7</td>
+<td align="right">0</td>
+</tr>
+</tbody></table></div>
+<p>這個練習約定：錢不夠，這筆就不轉，任何人的餘額都不動。因此，付完 7 點後，Alice 只剩 3 點，接著想付 6 點就會失敗。表格最後一行才會跟上一行一樣。</p>
+<p>如果重來一次，讓付 6 點的那筆先發生呢？拿紙筆算算看，練習 A 會用到你的結果。</p>
+<p>Alice 的問題是：她把同一份可用的點數，拿去支應兩筆合起來付不起的款項。這個例子幫我們理解「雙重支付」的問題。處理第二筆時，要看第一筆處理後還剩多少，不能一直拿最初的 10 點來算。</p>
+<p>本章用「每人還有多少點」來記帳。Bitcoin 用另一種記法，叫 UTXO，第 3 章才會學到。</p>
+<p>把剛才的過程和名詞對起來：</p>
+<ul>
+<li>Alice 說「付 7 點給 Bob」，這個轉帳要求叫做<strong>交易</strong>。系統還要檢查她能不能付。</li>
+<li>付完後，Alice 有 3 點、Bob 有 7 點、Carol 有 0 點。這份「現在各有多少」叫做<strong>狀態</strong>。</li>
+<li>把發生過的轉帳依序記下來，留下可查的紀錄，就是<strong>帳本</strong>的用途。</li>
+</ul>
+<p>所以，收到轉帳要求後還要檢查，通過了才更新餘額。</p>
+<p>如果這是某家店的會員點數，大家都接受店家記帳、處理錯帳，那店家可以用一般資料庫管理。它需要把同一帳戶的扣款排好順序，避免兩筆付款都拿舊餘額來判斷，也要保留備份與查帳紀錄。</p>
+<p>這樣的需求可以先用資料庫解決。要不要用區塊鏈，得看大家願不願意交給同一個管理者，以及記錯時由誰處理。</p>
+<h2>三個節點看見不同順序</h2>
+<p>現在換個情境：有三台電腦一起記帳，每台都執行這個網路的軟體、按規則檢查交易。我們把它們叫做<strong>節點</strong>。</p>
+<p>Alice 送出的訊息經過網路，不一定同時到達。A 可能先收到付 7 點的要求，B 先收到付 6 點的要求，C 暫時只收到一筆。即使一開始的帳本完全相同，後面也可能算出不同結果。</p>
+<figure class="course-diagram" id="diagram-sequence">
+<h4>三節點時序：發出相同要求，收到的先後仍可能不同</h4><p>由上往下是時間。這是一個可能的網路到達順序，沒有宣稱訊息會按發出順序到達每個節點。</p>
+<div class="diagram-scroll" tabindex="0" role="region" aria-label="Alice 與三節點訊息時序圖，可橫向捲動"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 660" role="img" aria-labelledby="sequence-title sequence-desc"><title id="sequence-title">三個節點收到不同交易順序的時序</title><desc id="sequence-desc">A 先收到 T1 再收到 T2，B 先收到 T2 再收到 T1，C 暫時只收到 T1；各自驗證仍未形成共同歷史。</desc><defs><marker id="sequence-open" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#546865" stroke-width="1.5"/></marker></defs>
+<line class="line" x1="100" y1="100" x2="100" y2="460"/><line class="line" x1="284" y1="100" x2="284" y2="460"/><line class="line" x1="468" y1="100" x2="468" y2="460"/><line class="line" x1="652" y1="100" x2="652" y2="460"/>
+<path class="edge" stroke-dasharray="5 4" d="M100 172 H284" marker-end="url(#sequence-open)"/><path class="edge" stroke-dasharray="5 4" d="M100 240 H468" marker-end="url(#sequence-open)"/><path class="edge" stroke-dasharray="5 4" d="M100 308 H652" marker-end="url(#sequence-open)"/><path class="edge" stroke-dasharray="5 4" d="M100 376 H284" marker-end="url(#sequence-open)"/><path class="edge" stroke-dasharray="5 4" d="M100 444 H468" marker-end="url(#sequence-open)"/>
+<rect class="mask" x="124" y="124" width="136" height="32"/><text x="140" y="148">T1：給 Bob 7</text><rect class="mask" x="300" y="192" width="152" height="32"/><text x="312" y="216">T2：給 Carol 6</text><rect class="mask" x="492" y="260" width="144" height="32"/><text x="504" y="284">T1：給 Bob 7</text><rect class="mask" x="124" y="328" width="152" height="32"/><text x="136" y="352">T2：給 Carol 6</text><rect class="mask" x="300" y="396" width="144" height="32"/><text x="312" y="420">T1：給 Bob 7</text>
+<rect class="box" x="32" y="36" width="136" height="64" rx="6"/><text class="heading" x="64" y="76">Alice</text><rect class="box" x="216" y="36" width="136" height="64" rx="6"/><text class="heading" x="248" y="76">節點 A</text><rect class="box" x="400" y="36" width="136" height="64" rx="6"/><text class="heading" x="432" y="76">節點 B</text><rect class="box" x="584" y="36" width="136" height="64" rx="6"/><text class="heading" x="616" y="76">節點 C</text>
+<text class="label" x="220" y="500">A：T1 成功</text><text class="label" x="220" y="528">T2 餘額不足</text><text class="label" x="404" y="500">B：T2 成功</text><text class="label" x="404" y="528">T1 餘額不足</text><text class="label" x="588" y="500">C：T1 成功</text><text class="label" x="588" y="528">暫未收到 T2</text>
+<line class="rule" x1="24" y1="572" x2="736" y2="572"/><text class="label" x="24" y="604">虛線箭頭＝單向訊息；縱向虛線＝各參與者的時間線。</text><text class="label" x="24" y="636">三者仍需共同規則決定接受哪份歷史；本章程式尚未實作。</text></svg></div><p class="scroll-hint">窄螢幕可左右捲動，按每條箭頭的終點辨認接收者。</p><figcaption>三台電腦起點都是 Alice=10、Bob=0、Carol=0。此圖對照節點各自依最新餘額驗證的結果；收到訊息、驗證交易與網路確認是不同事件。</figcaption>
+</figure>
+
+
+<p>節點 A 問：「Alice 現在的餘額，夠付這一筆嗎？」這是在做<strong>驗證</strong>。驗證就是照規則檢查，這筆交易能不能接受。</p>
+<p>但 A 和 B 各自檢查通過的第一筆可能不同。它們還需要一套共同規則，處理「大家最後採用哪個交易順序、哪份紀錄」；這就涉及<strong>共識</strong>。</p>
+<p>把帳本複製成三份，只是讓三台電腦都有資料。要讓它們對交易紀錄取得一致，還得靠這套共同規則，以及規則能成立的條件。</p>
+<p>Bitcoin 白皮書提出的問題，可以拆成兩件事。第一，付款是否由有權使用這份資產的人授權？數位簽章用來核對這件事。第二，同一份資產是否已經花過？即使兩筆都有有效簽章，收款人仍要知道它們是否互相衝突，以及網路採用哪份交易歷史。單靠簽章，還沒解決雙重支付。</p>
+<p>白皮書以點對點網路與工作量證明提出解法，其安全性依賴誠實參與者掌握足夠算力等條件。第 2 章的學習包已提供 Hash、金鑰、地址與簽章解說；第 3 章的 Bitcoin 記帳與共識教材仍待製作。本章先把理解授權必需的交易圖教完，來源供選讀，無須另開文章完成練習。</p>
+<h3>白皮書交易圖：一份資產怎麼交給下一位？</h3>
+<p>剛才先問「Alice 的點數夠不夠付？」現在先不算餘額，改問「誰有權把這份資產交給下一個人？」這是同一筆付款要檢查的另一件事。餘額表處理數量，接下來的圖處理交接的授權；讀圖時先不考慮拆分金額或找零。</p>
+<p>白皮書第二節用一串簽章描述所有權的交接。原圖的 Owner 0、1、2、3 是前後持有人。以下依原圖重畫資料關係，先看中間那筆：Owner 1 把資產交給 Owner 2。暫時把 Owner 1 想成 Alice、Owner 2 想成 Bob：Alice 先前收到這份資產，現在要交給 Bob。這個對照只幫你讀中間那筆，不把整串交接當成前面的點數計算程式。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>讀中間交易時要問什麼？</th>
+<th>圖上到哪裡找？</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>誰要交出資產？</td>
+<td>Owner 1；本筆留下他的簽章</td>
+</tr>
+<tr>
+<td>要交給誰？</td>
+<td>Owner 2；本筆指定他的公鑰</td>
+</tr>
+<tr>
+<td>Owner 1 為什麼有權接著交？</td>
+<td>前筆交易指定 Owner 1 為接收者；核對他的本次簽章時，用前筆留下的 Owner 1 公鑰</td>
+</tr>
+</tbody></table></div>
+<p>最後一列是在追查前一次交接的資料，並不是只看交易文字寫了「Owner 1」就相信。下面四步會把被簽資料與驗證方式一起接起來。</p>
+<p>三個詞先夠用：<strong>私鑰</strong>是持有人保密、用來產生簽章的資料；<strong>公鑰</strong>讓別人核對相應簽章，驗證者不需要拿到私鑰。<strong>Hash</strong>把輸入算成固定長度的摘要，本圖用它把前筆交易與下一位的公鑰綁在一起；它不負責把資料藏起來。完整演算法留在第 2 章。</p>
+<figure class="course-diagram" id="diagram-ownership">
+<h4>交易總覽：交出者的簽章，連到下一位的公鑰</h4><p>由左往右讀。每筆交易留下接收者的公鑰與交出者的簽章；私鑰由持有人保密。</p>
+<div class="diagram-scroll" tabindex="0" role="region" aria-label="所有權交接圖，可橫向捲動"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-labelledby="ownership-title ownership-desc"><title id="ownership-title">三次所有權交接的交易關係</title><desc id="ownership-desc">Owner 0 交給 Owner 1，Owner 1 交給 Owner 2，再由 Owner 2 交給 Owner 3；每次簽署前筆交易與接收者公鑰的摘要。</desc><defs><marker id="ownership-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#546865"/></marker></defs>
+<path class="edge" d="M232 168 H276" marker-end="url(#ownership-arrow)"/><path class="edge" d="M484 168 H528" marker-end="url(#ownership-arrow)"/>
+<rect class="box" x="24" y="56" width="208" height="224" rx="6"/><rect class="focus" x="276" y="56" width="208" height="224" rx="6"/><rect class="box" x="528" y="56" width="208" height="224" rx="6"/>
+<text class="heading" x="40" y="92">前筆交易</text><text x="40" y="128">Owner 0 → Owner 1</text><line class="rule" x1="40" y1="148" x2="216" y2="148"/><text class="label" x="40" y="180">接收者公鑰</text><text x="40" y="208">Owner 1 公鑰</text><text class="label" x="40" y="240">簽章：Owner 0</text>
+<text class="heading" x="292" y="92">本筆交易</text><text x="292" y="128">Owner 1 → Owner 2</text><line class="rule" x1="292" y1="148" x2="468" y2="148"/><text class="label" x="292" y="180">接收者公鑰</text><text x="292" y="208">Owner 2 公鑰</text><text class="label" x="292" y="240">簽章：Owner 1</text>
+<text class="heading" x="544" y="92">下筆交易</text><text x="544" y="128">Owner 2 → Owner 3</text><line class="rule" x1="544" y1="148" x2="720" y2="148"/><text class="label" x="544" y="180">接收者公鑰</text><text x="544" y="208">Owner 3 公鑰</text><text class="label" x="544" y="240">簽章：Owner 2</text>
+<text class="label" x="24" y="320">箭頭＝本筆接續前筆；詳見下一張的 Hash、Sign、Verify。</text><line class="rule" x1="24" y1="348" x2="736" y2="348"/><text class="label" x="24" y="380">綠框＝接下來放大解說的交易；這串交接不是區塊串接圖。</text></svg></div><p class="scroll-hint">窄螢幕可左右捲動圖框；圖下解說可直接閱讀。</p><figcaption>中間交易的 Owner 2 公鑰指定接收者；核對 Owner 1 簽章用的是前筆留下的 Owner 1 公鑰。概念依 Bitcoin 白皮書第二節重畫，沒有加入實際 UTXO 的多輸入／輸出結構。</figcaption>
+</figure>
+
+
+<figure class="course-diagram" id="diagram-signature">
+<h4>單筆細解：Owner 1 怎麼交給 Owner 2？</h4><p>先讀上半部的簽署，再讀下半部的驗證。Sign 與 Verify 處理同一份被簽資料，但使用不同金鑰。</p>
+<div class="diagram-scroll" tabindex="0" role="region" aria-label="簽署與驗證資料圖，可橫向捲動"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 660" role="img" aria-labelledby="signature-title signature-desc"><title id="signature-title">本筆交易的簽署與驗證資料</title><desc id="signature-desc">前筆交易與 Owner 2 公鑰一起取 Hash，由 Owner 1 私鑰簽署；驗證者用相同資料摘要、簽章及前筆 Owner 1 公鑰核對。</desc><defs><marker id="signature-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#546865"/></marker></defs>
+<path class="edge" d="M304 128 H376" marker-end="url(#signature-arrow)"/><path class="edge" d="M304 252 H328 Q336 252 336 244 V192 Q336 184 344 184 H376" marker-end="url(#signature-arrow)"/><path class="edge" d="M448 216 V296" marker-end="url(#signature-arrow)"/>
+<path class="edge active" d="M560 152 H544 Q536 152 536 160 V328 Q536 336 528 336 H520" marker-end="url(#signature-arrow)"/>
+<path class="edge" d="M448 392 V472" marker-end="url(#signature-arrow)"/><path class="edge" d="M304 520 H376" marker-end="url(#signature-arrow)"/>
+<rect class="mask" x="456" y="248" width="64" height="28"/><text class="tech" x="464" y="268">摘要</text><rect class="mask" x="548" y="252" width="80" height="28"/><text class="tech" x="556" y="272">Sign</text>
+<rect class="box" x="24" y="80" width="280" height="104" rx="6"/><text class="heading" x="40" y="112">① 前筆交易</text><text class="label" x="40" y="144">已指定 Owner 1 為接收者</text><text class="label" x="40" y="168">包含公鑰、前次簽章等資料</text>
+<rect class="box" x="24" y="220" width="280" height="64" rx="6"/><text x="40" y="260">Owner 2 公鑰（本次接收者）</text>
+<rect class="focus" x="376" y="104" width="144" height="112" rx="6"/><text class="heading" x="392" y="140">② Hash</text><text class="label" x="392" y="172">把左側兩項</text><text class="label" x="392" y="196">綁成一個摘要</text>
+<rect class="key" x="560" y="112" width="176" height="88" rx="6"/><text x="576" y="148">Owner 1 私鑰</text><text class="label" x="576" y="180">保密；不放入交易</text>
+<rect class="focus" x="376" y="296" width="144" height="96" rx="6"/><text class="heading" x="392" y="328">③ 產生簽章</text><text class="label" x="392" y="356">Owner 1 簽章</text><text class="label" x="392" y="380">放入本筆交易</text>
+<rect class="box" x="24" y="472" width="280" height="88" rx="6"/><text x="40" y="508">前筆留下的 Owner 1 公鑰</text><text class="label" x="40" y="540">驗證者可取得，不需要私鑰</text>
+<rect class="box" x="376" y="472" width="360" height="88" rx="6"/><text class="heading" x="392" y="508">④ Verify：核對授權</text><text class="label" x="392" y="540">重新算相同資料的摘要，配合簽章與公鑰</text>
+<line class="rule" x1="24" y1="600" x2="736" y2="600"/><text class="label" x="24" y="632">箭頭＝資料供給；綠框＝摘要與簽章；米色框＝保密金鑰。</text></svg></div><p class="scroll-hint">窄螢幕可左右捲動；依 ①→②→③→④ 閱讀。</p><figcaption>驗證必須對應相同的被簽資料。改掉接收者公鑰後，不能沿用原簽章當成新資料已獲授權。即使簽章有效，仍需排除雙花並決定共同歷史。</figcaption>
+</figure>
+
+
+<p>讀中間交易時，按這四步走：</p>
+<ol>
+<li>前筆把接收者指定為 Owner 1，留下他的公鑰。這是核對下一次交接的依據。</li>
+<li>Owner 1 準備把資產交給 Owner 2，把「前筆交易」與「Owner 2 公鑰」一起取 Hash。資料同時指向要接續哪筆，以及要交給誰。</li>
+<li>Owner 1 用自己的私鑰簽這個摘要，把簽章放進本筆交易。原圖的 <strong>Sign</strong> 虛線從 Owner 1 私鑰指向本筆的 Owner 1 簽章。</li>
+<li>收款人可用前筆留下的 Owner 1 公鑰，核對本筆簽章與相應資料。原圖的 <strong>Verify</strong> 虛線連的是前筆公鑰與本筆簽章；本筆頂端的 Owner 2 公鑰指定下一位持有人，不能拿它來核對 Owner 1 的簽章。</li>
+</ol>
+<p>右邊同理：Owner 2 用自己的私鑰，把前筆交易與 Owner 3 公鑰的摘要簽下來；核對這次交接用的是中間交易留下的 Owner 2 公鑰。因此，每格頂端寫的是下一位的公鑰，下方簽章屬於交出資產的上一位。交易中不需要公開私鑰。</p>
+<p>如果有人把收款公鑰換成別人的，原簽章就無法通過對改後資料的核對；若改掉前筆資料，原簽章也不能照原樣證明那次交接。這說明簽章把授權連到特定資料，不能只檢查「有沒有簽章欄位」。</p>
+<p>但 Owner 1 仍可能簽出兩筆互相衝突的交接。兩份簽章都核對得過，也不能讓同一份資產同時有效交給兩人。第二節接著討論可信任的中央檢查者作法，以及取消該角色時，如何讓參與者知道交易並接受共同歷史；後續章節再教網路、工作量證明與確認條件。這串所有權交接與「區塊如何串接」不同，不能看到一串箭頭就當成區塊鏈結構。</p>
+<p>真實 Bitcoin 交易還有多個輸入／輸出、找零、費用及花費條件。上圖適合理解授權關係，不能直接拿來解碼所有實際交易；第 3 章須用 UTXO 樣本再教這些差異。此處依 <a href="https://bitcoin.org/bitcoin.pdf">Bitcoin 白皮書第二節</a> 與 <a href="https://developer.bitcoin.org/devguide/transactions.html">Bitcoin Developer Guide 的交易說明</a> 編寫，後者用於核對概念圖的適用範圍。</p>
+<h3>讀圖練習：先指線，再回答</h3>
+<p>先遮住上面的四步，指著中間交易回答：誰交出資產？誰接收？簽章綁住哪兩項資料？用誰的公鑰驗證，從哪筆找到？把答案寫在作業的讀圖欄，這是形成答案的練習，不另加分。</p>
+<p>再從 QA 角度想：如果程式只確認簽章非空，卻沒有核對簽署資料，能抓到換收款人的問題嗎？本章要求能指出缺少的檢查，尚未讓你執行密碼學驗證。答不出時回到步驟 2、4，再換右邊交易試一次。</p>
+<p>共識的做法因鏈而異，不能一律想成「電腦多的那邊贏」。誰能參與、誰的決定有多少分量、多久後可以把結果當成已確認，都要看那條鏈的規則。</p>
+<p>Bitcoin 的方案把交易放進區塊，讓區塊接續前一塊的 Hash，並以工作量證明累積可核對的計算工作。想改舊紀錄，還要重做後續工作並追上被接受的歷史；其可信程度依賴誠實算力等條件。比較的是累積工作量，不能只數節點或把最先收到的付款當成全網已確認。區塊、工作量及確認深度的完整推演在第 3 章待製作，本章只要求能說明簽章與共同歷史解決的問題不同。</p>
+<h2>第二堂：用程式看見差異（120 分鐘）</h2>
+<p>時間建議：獨立推演 20 分鐘、執行程式 30 分鐘、改資料與記錄 45 分鐘、整理疑問 25 分鐘。</p>
+<p>這堂用 Python 幫你重算剛才的點數。把程式貼進你已有的 Python 編輯器就能執行，會用到的都是內建功能。點數是虛構的，程式也不連接錢包；練習裡不需要真實金鑰。</p>
+<p>如果課前診斷第 5 題讓你卡住，花 15 分鐘做下面這段。這 15 分鐘從原本「整理疑問」的 25 分鐘挪過來，最後留 10 分鐘整理疑問，整堂仍是 120 分鐘。</p>
+<p><code>dict</code> 可以先想成一張表，例如 <code>{&quot;Alice&quot;: 10}</code> 就是記著 Alice 有 10 點。問題是：寫 <code>same = balances</code>，會得到第二張表嗎？</p>
+<p>這行只讓兩個名字指向同一張表；要保留修改前的內容，這裡可以用 <code>.copy()</code> 複製一張。程式裡的 <code>snapshot</code> 就是那張副本，我們也把這種留下當時資料的做法叫做「快照」。</p>
+<pre><code class="language-python">balances = {&quot;Alice&quot;: 10}
+same = balances
+snapshot = balances.copy()
+balances[&quot;Alice&quot;] = 3
+print(&quot;目前餘額&quot;, balances)
+print(&quot;另一個引用&quot;, same)
+print(&quot;先前快照&quot;, snapshot)
+</code></pre>
+<p>執行前，寫下你猜三行各會印出什麼；執行後，再核對哪一份還留著 10 點。本週的表裡只有姓名和整數餘額，用 <code>copy()</code> 就能保留要比較的舊值。</p>
+<p>後面檢查失敗交易時會用到它：轉帳前留一份，轉帳後拿來比較。若只寫 <code>same = balances</code>，兩個名字看到的都是修改後的資料，就看不出改過什麼。課前答不出來的原答照留，把現在弄懂的部分寫在旁邊。</p>
+<p>接著是轉帳程式。<code>balances</code> 記餘額，<code>sender</code> 是付款人，<code>receiver</code> 是收款人，<code>amount</code> 是點數。<code>apply_transfer</code> 會用這四項資料，決定這筆要不要轉。</p>
+<figure class="course-diagram" id="diagram-transfer">
+<h4>轉帳流程：先檢查，全部通過才改餘額</h4><p>對照正常版本的 apply_transfer。每一個「否」分支都立即回傳，三人的餘額保持原樣。</p>
+<div class="diagram-scroll" tabindex="0" role="region" aria-label="點數轉帳條件流程圖，可橫向捲動"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 960" role="img" aria-labelledby="transfer-title transfer-desc"><title id="transfer-title">正常點數轉帳函式的檢查與更新流程</title><desc id="transfer-desc">先檢查帳戶存在，再檢查金額為正整數，最後檢查餘額；任一失敗不改帳，全部通過才扣款與加款。</desc><defs><marker id="transfer-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#546865"/></marker></defs>
+<path class="edge" d="M240 96 V132" marker-end="url(#transfer-arrow)"/><path class="edge" d="M240 276 V320" marker-end="url(#transfer-arrow)"/><path class="edge" d="M240 464 V508" marker-end="url(#transfer-arrow)"/><path class="edge active" d="M240 652 V720" marker-end="url(#transfer-arrow)"/><path class="edge active" d="M240 808 V848" marker-end="url(#transfer-arrow)"/>
+<path class="edge" d="M392 204 H504" marker-end="url(#transfer-arrow)"/><path class="edge" d="M392 392 H504" marker-end="url(#transfer-arrow)"/><path class="edge" d="M392 580 H504" marker-end="url(#transfer-arrow)"/>
+<rect class="mask" x="256" y="288" width="40" height="24"/><text class="label" x="264" y="306">是</text><rect class="mask" x="256" y="476" width="40" height="24"/><text class="label" x="264" y="494">是</text><rect class="mask" x="256" y="672" width="40" height="24"/><text class="label" x="264" y="690">是</text>
+<rect class="mask" x="424" y="164" width="40" height="24"/><text class="label" x="432" y="182">否</text><rect class="mask" x="424" y="352" width="40" height="24"/><text class="label" x="432" y="370">否</text><rect class="mask" x="424" y="540" width="40" height="24"/><text class="label" x="432" y="558">否</text>
+<rect class="box" x="112" y="32" width="256" height="64" rx="20"/><text class="heading" x="132" y="72">收到轉帳要求</text>
+<path class="box" d="M240 132 L392 204 L240 276 L88 204 Z"/><text x="160" y="200">付款／收款帳戶</text><text x="180" y="228">都存在？</text><rect class="failure" x="504" y="164" width="232" height="80" rx="20"/><text class="tech" x="516" y="196">False: UNKNOWN_ACCOUNT</text><text class="label" x="520" y="224">停止；所有餘額不變</text>
+<path class="box" d="M240 320 L392 392 L240 464 L88 392 Z"/><text x="144" y="388">金額是 int 且大於 0？</text><text class="label" x="164" y="416">布林值不當成 int</text><rect class="failure" x="504" y="352" width="232" height="80" rx="20"/><text class="tech" x="516" y="384">False: INVALID_AMOUNT</text><text class="label" x="520" y="412">停止；所有餘額不變</text>
+<path class="box" d="M240 508 L392 580 L240 652 L88 580 Z"/><text x="144" y="576">付款人的目前餘額</text><text x="164" y="604">足以支付？</text><rect class="failure" x="504" y="540" width="232" height="80" rx="20"/><text class="tech" x="516" y="572">INSUFFICIENT_BALANCE</text><text class="label" x="520" y="600">回傳 False；所有餘額不變</text>
+<rect class="focus" x="112" y="720" width="256" height="88" rx="6"/><text class="heading" x="132" y="752">扣付款人，再加收款人</text><text class="label" x="132" y="784">兩項檢查與餘額檢查皆已通過</text>
+<rect class="focus" x="112" y="848" width="256" height="64" rx="20"/><text class="tech" x="144" y="888">True: APPLIED</text><text class="label" x="408" y="752">QA 切入：拒絕分支有沒有改帳？</text><text class="label" x="408" y="784">不能只看回覆，要比對前後快照。</text>
+<line class="rule" x1="24" y1="928" x2="736" y2="928"/><text class="label" x="24" y="952">菱形＝條件；矩形＝更新；圓角端點＝開始／回傳；箭頭＝下一步。</text></svg></div><p class="scroll-hint">窄螢幕可左右捲動；先沿「是」走，再逐一追「否」的出口。</p><figcaption>此圖只對應本章的免手續費點數模型。它沒有簽章、Nonce、UTXO、網路與共識；不能把「拒絕不改帳」直接套成真實鏈失敗交易完全不收費。</figcaption>
+</figure>
+
+
+<pre><code class="language-python">def apply_transfer(balances, sender, receiver, amount):
+    if sender not in balances or receiver not in balances:
+        return False, &quot;UNKNOWN_ACCOUNT&quot;
+    if type(amount) is not int or amount &lt;= 0:
+        return False, &quot;INVALID_AMOUNT&quot;
+    if balances[sender] &lt; amount:
+        return False, &quot;INSUFFICIENT_BALANCE&quot;
+    balances[sender] -= amount
+    balances[receiver] += amount
+    return True, &quot;APPLIED&quot;
+
+
+def run(order):
+    balances = {&quot;Alice&quot;: 10, &quot;Bob&quot;: 0, &quot;Carol&quot;: 0}
+    transfers = {
+        &quot;T1&quot;: (&quot;Alice&quot;, &quot;Bob&quot;, 7),
+        &quot;T2&quot;: (&quot;Alice&quot;, &quot;Carol&quot;, 6),
+    }
+    for name in order:
+        result = apply_transfer(balances, *transfers[name])
+        print(name, result, balances.copy())
+    return balances
+
+
+print(&quot;A:&quot;, run([&quot;T1&quot;, &quot;T2&quot;]))
+print(&quot;B:&quot;, run([&quot;T2&quot;, &quot;T1&quot;]))
+</code></pre>
+<p>讀 <code>apply_transfer</code> 時，可以把前三個 <code>if</code> 當成三道檢查：</p>
+<ol>
+<li>付款人和收款人都在餘額表裡嗎？找不到就回傳 <code>UNKNOWN_ACCOUNT</code>。</li>
+<li>點數是大於 0 的整數嗎？不符合就回傳 <code>INVALID_AMOUNT</code>。</li>
+<li>付款人有足夠點數嗎？不夠就回傳 <code>INSUFFICIENT_BALANCE</code>。</li>
+</ol>
+<p>只要其中一道沒過，<code>return</code> 就會結束這次函式，下面的扣款和加款不會執行。三道都通過，才從付款人扣除點數、加到收款人身上，最後回傳 <code>True, &quot;APPLIED&quot;</code>，表示已轉帳。</p>
+<p>本週用整數點數，例如 1 點、2 點，先不處理小數。<code>type(amount) is not int</code> 還會擋掉 <code>True</code>、<code>False</code>，避免把 Python 的布林值當成金額。</p>
+<p><code>run</code> 每次都從 Alice=10、Bob=0、Carol=0 開始。<code>[&quot;T1&quot;, &quot;T2&quot;]</code> 是指定執行順序；換成 <code>[&quot;T2&quot;, &quot;T1&quot;]</code> 就反過來。程式中的 <code>*transfers[name]</code> 會把那筆交易的付款人、收款人和點數，分別傳給 <code>apply_transfer</code>。這樣兩次比較都有相同起點。</p>
+<p>這段程式只模擬一台電腦按順序算餘額，還沒有組成區塊鏈。它不會查「真的是 Alice 授權嗎」（簽章），也不會辨認「這筆是否已處理過」（交易 ID 與重放保護）。它沒有區塊、電腦之間傳訊息的網路、共識機制，也還沒處理多筆要求同時修改餘額的情況。</p>
+<p>因此，跑對這個例子，只能說這段點數計算符合本週的規則。Bitcoin、Ethereum 各自還有其他交易規則。</p>
+<p>把兩種順序的預測寫下來，再執行程式。跑完後，把 T2 金額從 6 改為 3，看看你的預測會怎麼變。<a href="#workbook">本週作業</a> 還列了 0 點、負數、錢不夠、找不到帳戶和連續付款的情況，每題都保留「我原本猜什麼」和「實際印出什麼」。</p>
+<h2>第三堂：從結果追到規則（120 分鐘）</h2>
+<p>時間建議：複習 10 分鐘、QA 示範與錯誤版本實驗 25 分鐘、練習 C 的紀錄 20 分鐘、練習 D 的方案比較 15 分鐘、驗收題 25 分鐘、修正與新情境重測 25 分鐘。三堂合計六小時是估計；排錯或補課超出時，記下實際時間，下次從未完成處接續。</p>
+<p>假設程式印出「失敗」，你就能確定它沒扣錢嗎？要回答這件事，得把轉帳前後的餘額拿出來看。</p>
+<p>這個練習已經約定：付款人和收款人都要存在，點數要是大於 0 的整數，錢夠才轉。轉帳失敗時，所有人的餘額都應保持原樣。這裡不收手續費，也不會憑空增加點數。這些約定就是測試時的判斷依據，也常被叫作「規格」或「契約」。</p>
+<p>成功轉帳後，把三人的點數加起來，應該跟轉帳前一樣多。轉帳失敗時，則連每個人的餘額都不該變。</p>
+<p>只算總額還不夠。Alice 想付給 Bob，程式卻加到 Carol 身上，三人的總額照樣沒變。你還得逐一確認：誰少了多少、誰多了多少，沒參與付款的人有沒有被動到。</p>
+<p>例：Alice 只有 3 點，要求轉給 Carol 6 點。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>欄位</th>
+<th>應寫的內容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>規則</td>
+<td>不允許餘額不足的轉帳；拒絕不改帳</td>
+</tr>
+<tr>
+<td>初始狀態</td>
+<td>Alice=3、Bob=7、Carol=0</td>
+</tr>
+<tr>
+<td>輸入</td>
+<td>Alice → Carol，6 點</td>
+</tr>
+<tr>
+<td>預期</td>
+<td>False／INSUFFICIENT_BALANCE，三人餘額不變</td>
+</tr>
+<tr>
+<td>證據</td>
+<td>留下轉帳前的餘額副本、這次轉給誰及多少點、程式回覆，以及轉帳後的餘額</td>
+</tr>
+</tbody></table></div>
+<p>網頁顯示「成功」，也要核對錢是否到了指定對象、金額是否正確。本章用程式印出的餘額來查；第 5–6 章會學怎麼查真實交易的收據，以及交易確認到什麼程度。</p>
+<h2>QA 切入：程式說失敗，卻已經扣款</h2>
+<p>下面是刻意植入缺陷的教學版本，使用獨立的函式名稱，不取代第二堂的正常版本。貼到新的 Python 檔案執行即可，所需資料都在這段程式裡。</p>
+<pre><code class="language-python">def apply_transfer_buggy(balances, sender, receiver, amount):
+    if sender not in balances or receiver not in balances:
+        return False, &quot;UNKNOWN_ACCOUNT&quot;
+    if type(amount) is not int or amount &lt;= 0:
+        return False, &quot;INVALID_AMOUNT&quot;
+    balances[sender] -= amount
+    if balances[sender] &lt; 0:
+        return False, &quot;INSUFFICIENT_BALANCE&quot;
+    balances[receiver] += amount
+    return True, &quot;APPLIED&quot;
+
+
+balances = {&quot;Alice&quot;: 3, &quot;Bob&quot;: 7, &quot;Carol&quot;: 0}
+before = balances.copy()
+result = apply_transfer_buggy(balances, &quot;Alice&quot;, &quot;Carol&quot;, 6)
+print(&quot;轉帳前&quot;, before)
+print(&quot;程式回覆&quot;, result)
+print(&quot;轉帳後&quot;, balances)
+</code></pre>
+<p>這次回覆是 <code>(False, &#39;INSUFFICIENT_BALANCE&#39;)</code>，Alice 卻從 3 變成 -3，Bob 仍是 7、Carol 仍是 0。只檢查回覆會以為測試通過；逐帳戶核對才發現「拒絕不改帳」被破壞。扣款發生在餘額檢查之前，失敗時也沒有把它還原。</p>
+<p>第二堂正常版本在扣款前就檢查餘額。用那個版本、同一組初始資料再跑，應回覆相同的失敗原因，但餘額維持 Alice=3、Bob=7、Carol=0。先固定規則，再用同一輸入比較兩個版本，就是這個實驗的測試方法。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>QA 問題</th>
+<th>本章怎麼做</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>正確依據在哪？</td>
+<td>本章約定失敗不改任何帳戶，成功才依指定對象增減點數</td>
+</tr>
+<tr>
+<td>測什麼？</td>
+<td>正常付款、0 與負數、餘額不足、未知帳戶、連續付款；每個案例從指定起點開始</td>
+</tr>
+<tr>
+<td>看什麼？</td>
+<td>回覆及每個帳戶的前後值；總額只是其中一項檢查</td>
+</tr>
+<tr>
+<td>留什麼證據？</td>
+<td>函式版本、初始餘額、付款人／收款人／金額、預期、實際輸出與判定</td>
+</tr>
+<tr>
+<td>哪裡還沒驗？</td>
+<td>本機例子沒有簽章、網路或共識；兩筆相同金額是否算重送，要先有付款身分規則</td>
+</tr>
+</tbody></table></div>
+<p>「失敗不改帳」是這個免手續費點數模型的約定。後續真實鏈的練習，會另提供適用的費用與失敗規則。</p>
+<p>如果公司只是想管理午餐點數，該用什麼來記帳？練習 D 要你比較這幾種做法：</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>做法</th>
+<th>要先說好什麼</th>
+<th>要花心力處理什麼</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>交給一個管理者，用資料庫記帳</td>
+<td>大家接受誰來記帳、查帳與更正</td>
+<td>管理者也可能出錯，需要有人查核，故障時要能恢復</td>
+</tr>
+<tr>
+<td>幾個組織一起管理資料庫，或使用限定成員可加入的網路（許可制網路）</td>
+<td>誰能加入、誰能改資料，意見不同時怎麼決定</td>
+<td>規則變動或出問題時，要跨組織協調</td>
+</tr>
+<tr>
+<td>使用公有區塊鏈</td>
+<td>接受該鏈判斷交易與確認紀錄的規則，了解它在哪些條件下可靠</td>
+<td>費用能不能接受、資料是否適合公開、能等多久才確認</td>
+</tr>
+</tbody></table></div>
+<p>如果幾家公司願意一起管理資料庫，也可能解決問題。要選公有鏈，還得說清楚它適合在哪裡，並確認資料可不可以公開、誰能參與，以及大家願意負擔多少費用。</p>
+<h2>從餘額表理解狀態機</h2>
+<p>Alice=10、Bob=0、Carol=0 是原狀態。收到「Alice 付 Bob 7 點」，按規則檢查並計算後，得到 Alice=3、Bob=7、Carol=0。這種依輸入與規則從一個狀態走到下一個狀態的模型，叫做狀態機。</p>
+<pre><code class="language-text">原狀態 (10,0,0) + 付 Bob 7 點 + 本章規則
+                    |
+                    v
+               新狀態 (3,7,0)
+                    |
+           再付 Carol 6 點：拒絕
+                    v
+             狀態維持 (3,7,0)
+</code></pre>
+<p>Ethereum 技術簡介也用狀態轉移來說明系統運作；它處理的資料與規則比本章點數表多。本章的 QA 工作就是核對輸入、規則與狀態變化是否一致。Hash 如何串接區塊留到第 2–3 章，這章的作業不需要那項先備。</p>
+<h2>卡住時的包內補課</h2>
+<p>手算卡住時，拿 10 個物件代表 Alice 的點數。移出 7 個給 Bob，剩下 3 個；再要求移出 6 個時，整筆拒絕。重設 10 個，改成先移 6 個給 Carol，再判斷能否移 7 個給 Bob。</p>
+<p>把驗證與共識混在一起時，分別寫 A 的第一筆、B 的第一筆。兩台都依自己的當時餘額檢查，仍可能採用不同歷史；共同決定採用哪份歷史的規則是另一件事。本章沒有實作這套規則。</p>
+<p>證據只留下「失敗」時，把 <code>.copy()</code> 範例重跑，再替錯誤版本留下修改前副本，逐一比較 Alice、Bob、Carol。Python 顯示 <code>IndentationError</code> 時，把函式內每層縮排改成四個空白；顯示 <code>NameError</code> 時，確認整段函式定義已執行，再執行呼叫。保留完整錯誤訊息，無法執行的結果填「未執行」。</p>
+<p>補課後做作業中的 C2 新情境，不拿已看過的示範算獨立通過。這段與 C2 共用第三堂最後 25 分鐘；超出時接續完成，不把未做完算通過。</p>
+<h2>來源（選讀）</h2>
+<p>必要解說、程式、練習與補課都在本包。以下是作者核對用的來源，2026-10-05 讀取；完成本章不需要開啟外部文章。</p>
+<ul>
+<li><a href="https://bitcoin.org/bitcoin.pdf">Bitcoin 白皮書摘要與第 2 節</a>：支援本章授權與雙重支付的區分。本包為自行撰寫的必要重點，未收錄白皮書全文。</li>
+<li><a href="https://ethereum.org/developers/docs/intro-to-ethereum/">Ethereum 技術簡介</a>：支援狀態機的連結說明。</li>
+</ul>
+<h2>週末與下週回想</h2>
+<p>完成課後驗收後，關閉教材，用兩分鐘解釋三個節點為什麼可能不同意，以及這段程式少了什麼。第 2 章開始前，換成 Alice=15、T1=9、T2=8 重做，避免只記住本章答案。</p>
+<p>不熟悉的英文先記五個：ledger（帳本）、state（狀態）、transaction（交易）、node（節點）、consensus（共識）。能用案例解釋，比背定義重要。</p>
+</section>
+<section id="workbook"><h2>練習與課後驗收</h2><h2>練習 A：手算不同順序</h2>
+<p>起點 Alice=10、Bob=0、Carol=0；T1 是 Alice 付 Bob 7 點，T2 是 Alice 付 Carol 6 點。餘額不足就拒絕且不改帳。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>順序</th>
+<th>第一步結果與餘額</th>
+<th>第二步結果與餘額</th>
+<th>總額</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T1 → T2</td>
+<td>待填</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+<tr>
+<td>T2 → T1</td>
+<td>待填</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+</tbody></table></div>
+<p>寫下你的解釋：兩台電腦都有檢查錢夠不夠，為什麼最後餘額仍不同？要讓它們接受同一份結果，大家還需要約定什麼？</p>
+<h3>讀圖欄（不另計分）</h3>
+<p>依教材中間交易，記下交出者、接收者、被簽資料，以及驗證公鑰與所在交易。再說明「簽章欄非空」為什麼不足以證明收款資料已獲授權。先答再回頭核對四步。</p>
+<p>作答：待填。</p>
+<h2>練習 B：Python 實驗</h2>
+<p>使用 <a href="#lesson">教材程式</a>，每題都重新從 Alice=10、Bob=0、Carol=0 開始。執行前寫下你猜會發生什麼，再把實際輸出貼在旁邊比較。做完一題，記得把上題改過的資料還原，再做下一題。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>案例</th>
+<th>輸入與起點</th>
+<th>預測</th>
+<th>實際輸出／快照</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>B1</td>
+<td>原始 T1→T2 與反向順序</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+<tr>
+<td>B2</td>
+<td>T2 改為 3；測兩種順序</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+<tr>
+<td>B3</td>
+<td>Alice=10，轉給 Bob 0 點</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+<tr>
+<td>B4</td>
+<td>Alice=10，轉給 Bob -1 點</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+<tr>
+<td>B5</td>
+<td>Alice=10，轉給 Bob 11 點</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+<tr>
+<td>B6</td>
+<td>Alice=10，轉給未建立的 Dave 1 點</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+<tr>
+<td>B7</td>
+<td>Alice=10，連續兩次付 Bob 3 點</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+</tbody></table></div>
+<p>做 B1、B2 時，保留教材最後兩行 <code>print(&quot;A:&quot;, ...)</code> 與 <code>print(&quot;B:&quot;, ...)</code>。B2 只把 <code>transfers</code> 裡 T2 的金額從 6 改成 3，兩種順序都跑一次。</p>
+<p>做 B3–B6 時，保留 <code>apply_transfer</code> 與 <code>run</code> 的函式定義，把最後兩行 <code>print(&quot;A:&quot;, ...)</code> 與 <code>print(&quot;B:&quot;, ...)</code> 換成下面這段。這裡以 B3 的 0 點作為輸入；執行前先在表格寫預測。</p>
+<pre><code class="language-python">balances = {&quot;Alice&quot;: 10, &quot;Bob&quot;: 0, &quot;Carol&quot;: 0}
+before = balances.copy()
+result = apply_transfer(balances, &quot;Alice&quot;, &quot;Bob&quot;, 0)
+print(&quot;轉帳前&quot;, before)
+print(&quot;程式回覆&quot;, result)
+print(&quot;轉帳後&quot;, balances)
+</code></pre>
+<p>B4 把呼叫裡最後的 <code>0</code> 改成 <code>-1</code>；B5 改成 <code>11</code>。B6 把收款人 <code>&quot;Bob&quot;</code> 改成 <code>&quot;Dave&quot;</code>、金額改成 <code>1</code>，餘額表保持原樣。每題都重新執行這段，第一行會重設三人的起始餘額。比較「轉帳前」與「轉帳後」的每個人，再把程式回覆與餘額貼進表格。</p>
+<p>B7 回到教材原程式，把最後兩行 <code>print(&quot;A:&quot;, ...)</code> 與 <code>print(&quot;B:&quot;, ...)</code> 換成以下整段。起始餘額只在第一行設定一次，第二次付款沿用第一次之後的餘額。先預測每次付款的結果，再執行。</p>
+<pre><code class="language-python">balances = {&quot;Alice&quot;: 10, &quot;Bob&quot;: 0, &quot;Carol&quot;: 0}
+print(&quot;起點&quot;, balances.copy())
+result = apply_transfer(balances, &quot;Alice&quot;, &quot;Bob&quot;, 3)
+print(&quot;第一次回覆&quot;, result)
+print(&quot;第一次之後&quot;, balances.copy())
+result = apply_transfer(balances, &quot;Alice&quot;, &quot;Bob&quot;, 3)
+print(&quot;第二次回覆&quot;, result)
+print(&quot;第二次之後&quot;, balances.copy())
+</code></pre>
+<p>這兩段是原有 B3–B7 的操作方式，放在第二堂「改資料與記錄」的 45 分鐘內完成。</p>
+<p>B7 再想一想：使用者付了 3 點，因為沒看到回應，又把同一筆付款送了一次。這段程式能分辨嗎？如果他本來就想付兩次、每次 3 點，系統又該怎麼知道？請說明你還需要哪些資訊，才能決定要扣一次還是兩次。</p>
+<p>程式跑不動時，把錯誤訊息連同手算結果貼回對話即可。還沒跑的欄位寫「未執行」，這樣才能分清楚你預測的結果和電腦實際做的事。</p>
+<h2>練習 C：寫一個 QA 案例</h2>
+<p>C1 使用教材第三堂的錯誤版本，先保留示範輸出，再換回第二堂正常版本，用 Alice=3、Bob=7、Carol=0，Alice 付 Carol 6 點，留下兩個版本的比較。寫一份別人照著也能重做的測試紀錄：</p>
+<ul>
+<li><strong>規則依據</strong>：哪條規則告訴你，這筆應該成功或失敗？</li>
+<li><strong>初始狀態</strong>：操作前，每個人有多少點？</li>
+<li><strong>步驟與輸入</strong>：你改了哪個數字、執行哪個操作？</li>
+<li><strong>預期結果</strong>：你認為程式該回什麼，每個人的餘額該是多少？</li>
+<li><strong>實際結果與證據</strong>：電腦印出了什麼？貼上輸出或轉帳前後的餘額。</li>
+<li><strong>判定</strong>：結果有符合規則嗎？哪裡看得出來？</li>
+</ul>
+<p>如果題目沒說清楚該怎麼處理，就寫「規格待釐清」，再寫出你要問的問題。等規則確認，才有依據判斷是不是 Bug。</p>
+<p>作答：待填。</p>
+<h3>C2：補課後的新情境</h3>
+<p>在獨立的新檔案執行教材的 <code>apply_transfer_buggy</code> 函式定義，將呼叫部分改為 Alice=4、Bob=2、Carol=9，Alice 付 Bob 5 點。先寫正確規則要求的回覆與三人餘額，再執行並記錄實際結果，指出違反哪條規則。用第二堂正常函式以同一輸入重測。</p>
+<p>這次自行組合起始餘額、呼叫與前後快照，操作格式可參考 B3，但先不看解答。C1 的示範與 C2 的獨立重測分開記錄；C2 放在第三堂最後的補課與重測時間。</p>
+<h2>練習 D：不用區塊鏈可以嗎？</h2>
+<p>情境一：一間公司管理員工午餐點數，所有人接受公司負責更正錯帳。</p>
+<p>情境二：幾個互不隸屬的組織要一起記錄資產轉給了誰，但大家還沒同意把記帳權交給其中任何一方。</p>
+<p>每個情境各寫一段：你會選什麼系統？誰能改紀錄？記錯或有爭議時由誰決定？其他人要怎麼查帳？這個做法要付出什麼成本？</p>
+<p>情境二的資訊還不完整。把你想問的問題也寫出來，例如誰能加入、資料能否公開、規則由誰決定；再說明這些答案會怎麼影響你的選擇。</p>
+<h2>課後驗收</h2>
+<ol>
+<li>給一個例子，分別指出交易、狀態與帳本；再指出教材圖中誰是節點，以及節點收到與驗證什麼。</li>
+<li>用自己的話區分驗證與共識。</li>
+<li>本週程式成功執行，能證明它是一條安全區塊鏈嗎？指出至少三個缺少的部分。</li>
+<li>一段錯誤程式把 Alice 的 2 點付給 Carol，但使用者原本要付 Bob。總額仍為 10，哪個檢查會漏掉它？應補什麼？</li>
+<li>換成 Alice=12、T1=8、T2=7，獨立算兩種順序。</li>
+<li>看交易圖右邊 Owner 2 交給 Owner 3：誰用私鑰簽哪些資料？用誰的公鑰核對，從哪筆交易找到？兩筆衝突交易都有有效簽章，就能同時接受嗎？說明理由。</li>
+</ol>
+<h2>交作業</h2>
+<ul>
+<li>診斷原答：待填。</li>
+<li>A–D 與驗收答案：待填。</li>
+<li>實際輸出或錯誤：待填。</li>
+<li>哪些獨立完成／用過什麼提示：待填。</li>
+<li>最卡的地方與花費時間：待填。</li>
+</ul>
+</section>
+<section id="rubric"><h2>評分與補強</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th align="right">配分</th>
+<th>給分依據</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A 原題手算</td>
+<td align="right">20</td>
+<td>兩種順序各 10：第一步結果與完整餘額 3、第二步結果與完整餘額 3、拒絕理由 2、總額 2；變體只在驗收 5 計分</td>
+</tr>
+<tr>
+<td>B 操作與紀錄</td>
+<td align="right">25</td>
+<td>B1–B6 每題 3：事前預測 1、實際執行結果 1、可核對快照或輸出 1。B7 的兩次執行證據 3，重送與有意付款的區分 2，指出需要請求身分契約 2</td>
+</tr>
+<tr>
+<td>C QA 案例</td>
+<td align="right">20</td>
+<td>C1：規則 2、兩版本的可重現步驟 2、預期 2、實際證據 2、判定 2。C2：相同五項各 2 分，以新輸入獨立重測；用過提示註明。規格不足時明示缺口，不編造 Bug</td>
+</tr>
+<tr>
+<td>D 適用性</td>
+<td align="right">15</td>
+<td>情境一的管理者與選擇理由 5；情境二指出仍缺的治理等條件 5；比較方案代價 5</td>
+</tr>
+<tr>
+<td>課後驗收</td>
+<td align="right">20</td>
+<td>第 1、2、5 題各 4 分，第 3、4 題各 2 分，第 6 題 4 分；細項見下方，不與 A 重複計算</td>
+</tr>
+</tbody></table></div>
+<p>驗收 1：交易、狀態、帳本各 1 分，節點身分與收到／驗證的內容合計 1 分。驗收 2：驗證與共識各 2 分。驗收 3：指出模型不足以證明安全 1 分，列出三個缺少部分合計 1 分。驗收 4：指出總額檢查的盲點 1 分、提出逐帳戶差額檢查 1 分。驗收 5：兩種順序各 2 分，每種完整結果 1 分、第二筆拒絕理由 1 分。驗收 6：簽署者與私鑰 1 分、被簽資料 1 分、驗證公鑰及來源 1 分、簽章不能排除衝突花費及理由 1 分。</p>
+<p>預測錯了也保留原答，把實際結果寫在旁邊，再補上你改變想法的原因。B1、B2 都要做兩種順序；每個 1 分項目要兩種都完成才給分。實際結果與證據的分數，則要有執行紀錄才能拿到。用過提示的題目註明一下，之後才知道哪些已能自己做，哪些還要練。</p>
+<p>課前診斷不計分。總分達到 80 分，並且能說清楚下面四件事，才繼續往下學：轉帳被拒絕時，所有人的餘額都不動；自己檢查交易與大家接受同一份紀錄是兩回事；這段點數程式還缺了真實區塊鏈的哪些部分；交易圖的簽署者、被簽資料與驗證公鑰來源。有一項還不清楚，就把那部分補上再往下走。這個分數只用來安排學習，不是業界認證。</p>
+<p>補課內容放在教材第三堂「卡住時的包內補課」。C2 若看過解答或仍靠提示完成，就用上面的另一組資料再試，沿相同五項判準核對。交易圖卡住則回第一堂四步，把 Owner 3 再交給 Owner 4，重新說明簽署與驗證資料；四項核心觀念仍需能獨立說明。總分只用來安排學習，實際時間與協助情況一起看。</p>
+</section>
+<details class="panel" id="answers"><summary>參考解答｜做完再點開核對</summary><p class="note">原本的答案照留，把修正寫在旁邊。看過這份解答再做的題目，註明「看過解答後重做」，之後才知道哪些還需要自己練一次。</p><p>完成 <a href="#workbook">作業</a> 後，用這份解答核對。用自己的話說明就好，不需要跟這裡一字不差；要看的是你怎麼算、依據哪條規則，以及程式實際做了什麼。</p>
+<h2>診斷判讀</h2>
+<ol>
+<li>銀行管理自己的帳務系統；區塊鏈由參與者依該鏈的規則提出、檢查及接受交易紀錄。重點是分清誰能做什麼。使用區塊鏈仍要了解它的管理方式，以及哪些條件值得信任。</li>
+<li>Alice 只有 10 點，兩筆合計卻要付 13 點。處理第二筆時，要用第一筆處理後的餘額來檢查。</li>
+<li>多複製幾份，仍可能各自收到不同順序的付款要求。還需要規則，決定大家接受哪份紀錄。</li>
+<li>查指定收款人有沒有收到正確金額，再核對交易成功、失敗或待處理，以及是否達到要求的確認程度。第一週能想到「還要查實際紀錄」，就抓到了方向。</li>
+<li>兩個名字指向同一個 dict，透過哪個名字改它，看到的都是同一份改動。本週的簡單餘額表可以用 <code>copy()</code> 留下舊值；之後遇到表裡又包著其他表的資料，要再學怎麼複製。</li>
+<li>這題是讓你說出疑問，沒有標準答案。暫時想不到也可以。</li>
+</ol>
+<p>Python 引用觀念的補強步驟與時間替換安排已放在 <a href="#lesson">教材第二堂</a>，可在作答前使用。不熟名詞先回教材例子，不額外加大量閱讀。</p>
+<h2>A 與 B1</h2>
+<p>T1→T2：T1 成功得 (Alice=3, Bob=7, Carol=0)，T2 被拒，維持原狀。</p>
+<p>T2→T1：T2 成功得 (Alice=4, Bob=0, Carol=6)，T1 被拒，維持原狀。</p>
+<p>兩種算法的總額都還是 10 點，但付到的人不同。不能拿第一種的 Bob=7，再拿第二種的 Carol=6，拼成一份帳本，這樣就超過原本的 10 點了。兩台電腦要接受同一份結果，還需要共同決定交易順序的規則。</p>
+<p>教材程式的預期輸出：</p>
+<pre><code class="language-text">T1 (True, &#39;APPLIED&#39;) {&#39;Alice&#39;: 3, &#39;Bob&#39;: 7, &#39;Carol&#39;: 0}
+T2 (False, &#39;INSUFFICIENT_BALANCE&#39;) {&#39;Alice&#39;: 3, &#39;Bob&#39;: 7, &#39;Carol&#39;: 0}
+A: {&#39;Alice&#39;: 3, &#39;Bob&#39;: 7, &#39;Carol&#39;: 0}
+T2 (True, &#39;APPLIED&#39;) {&#39;Alice&#39;: 4, &#39;Bob&#39;: 0, &#39;Carol&#39;: 6}
+T1 (False, &#39;INSUFFICIENT_BALANCE&#39;) {&#39;Alice&#39;: 4, &#39;Bob&#39;: 0, &#39;Carol&#39;: 6}
+B: {&#39;Alice&#39;: 4, &#39;Bob&#39;: 0, &#39;Carol&#39;: 6}
+</code></pre>
+<h2>B2–B7</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>題目</th>
+<th>參考結果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>B2</td>
+<td>兩種順序都成功，最後 Alice=0、Bob=7、Carol=3；中間狀態不同</td>
+</tr>
+<tr>
+<td>B3</td>
+<td>INVALID_AMOUNT；狀態不變</td>
+</tr>
+<tr>
+<td>B4</td>
+<td>INVALID_AMOUNT；狀態不變</td>
+</tr>
+<tr>
+<td>B5</td>
+<td>INSUFFICIENT_BALANCE；狀態不變</td>
+</tr>
+<tr>
+<td>B6</td>
+<td>UNKNOWN_ACCOUNT；狀態不變</td>
+</tr>
+<tr>
+<td>B7</td>
+<td>兩次均成功，最後 Alice=4、Bob=6、Carol=0；模型沒有識別重送</td>
+</tr>
+</tbody></table></div>
+<p>B7 會扣兩次款，因為程式每收到一次要求，就再算一次。這是不是 Bug，要看系統答應使用者什麼。</p>
+<p>如果系統答應「同一筆付款重送，也只扣一次」，就得能辨認哪幾次要求屬於同一筆付款，例如使用可辨識的付款編號，再約定已處理的編號怎麼回覆。光看金額和收款人還不夠，因為使用者也可能有意付兩筆相同金額。</p>
+<p>這種讓同一次操作重送也不重複扣款的要求，會用到「冪等」這個詞。真實鏈上的 Nonce、UTXO 另有各自規則，後面會再學。本題能指出這段程式還分不出重送與另一筆付款，就抓到問題了。</p>
+<h2>C 參考結果</h2>
+<p>C1 的錯誤版本回覆 <code>False／INSUFFICIENT_BALANCE</code>，餘額卻成為 Alice=-3、Bob=7、Carol=0；正常版本回覆同樣的失敗原因，維持 Alice=3、Bob=7、Carol=0。規則是拒絕不改帳；回覆正確但餘額錯誤，仍判失敗。</p>
+<p>C2 的預期是拒絕且維持 Alice=4、Bob=2、Carol=9。錯誤版本回覆失敗，但實際 Alice=-1、Bob=2、Carol=9；正常版本維持原狀。缺陷在扣款早於餘額檢查，證據須保留兩個版本各自的起始值、呼叫、回覆與結果。看過此答後重做，改用 Alice=2、Bob=8、Carol=5，Alice 付 Carol 3 點；不要沿用前次已修改的餘額。</p>
+<p>以下保留原 B4 紀錄範例供比較：</p>
+<p>B4 一開始是 Alice=10、Bob=0、Carol=0，要求 Alice 付給 Bob -1 點。規則說點數必須大於 0，所以程式應該回覆 <code>False／INVALID_AMOUNT</code>，三人的餘額都維持原樣。</p>
+<p>你實際跑出什麼，就把輸出貼進紀錄。如果發現 Alice 反而多了點數、Bob 變成負數，就能用轉帳前後的資料指出哪裡違反規則。還沒執行時，那只是要檢查的可能問題。</p>
+<h2>D 與驗收</h2>
+<p>午餐點數可以考慮交給公司用資料庫管理，因為大家已接受公司記帳與更正。資料庫仍要防止重複扣款、留下可查的紀錄，出錯時也得能處理。</p>
+<p>幾個組織一起記帳的情境，還要問大家是否願意共同管理資料庫，或者接受限定成員參加的網路、公有鏈。誰決定規則、哪些資料能公開、要花多少錢，都會影響選擇；光靠題目這幾句話，還選不出唯一答案。</p>
+<ol>
+<li>Alice 要付給 Bob 的要求是交易；付完後每個人剩多少是狀態；依序留下的轉帳紀錄屬於帳本。圖中的 A、B、C 是節點，收到交易後會按當時餘額和規則檢查，但它們收到的順序可能不同。</li>
+<li>驗證像是在問「照現在的餘額與規則，這筆能付嗎？」共識則處理「大家接受哪份交易紀錄」，也要說清楚這套做法能成立的條件。</li>
+<li>這段程式還沒有確認付款人授權的簽章、節點之間的網路、共識或辨認重送的機制。它算對餘額，也還不足以證明是一條安全的區塊鏈。</li>
+<li>只加總所有人的錢，會漏掉付錯人的問題。還要逐一核對 Alice、Bob、Carol 各自應該增減多少。</li>
+<li>以下依 Alice、Bob、Carol 的順序寫餘額：先 T1 得 (4,8,0)，T2 被拒絕；先 T2 得 (5,0,7)，T1 被拒絕。</li>
+<li>Owner 2 用自己的私鑰簽「前筆交易與 Owner 3 公鑰」的摘要。用前筆，也就是圖中中間交易留下的 Owner 2 公鑰核對。有效簽章證明相應授權，仍需判斷資產是否已花費及採用哪份歷史，不能同時接受衝突花費。讀圖欄的中間交易則是 Owner 1 簽、Owner 2 收，以左邊交易的 Owner 1 公鑰核對；欄位非空沒有執行這些核對。</li>
+</ol>
+</details>
+<details class="panel" id="overview"><summary>課程入口與章節路線</summary><p>這份課程從「一筆錢怎麼轉出去」開始，每章先理解 Web3 的原理，再用同一個案例練習 QA 怎麼測、怎麼判斷及留下證據。以 Python 基礎、尚未學 JavaScript 為起點，每週六小時作為學習預算。</p>
+<p>2026-10-05 已完成全課程的章節設計及第一、二章學習包。第 3–20 章仍待製作；既有 Ch01 與 QA 筆記已列入取材對照，尚未逐章重製。完整的先備、QA 練習、來源去向與缺口見 <a href="#design">課程設計</a>。</p>
+<h2>現在開始</h2>
+<p><a href="%E7%AC%AC%E4%B8%80%E9%80%B1%E5%AD%B8%E7%BF%92%E5%8C%85.html">開啟第一週 HTML 學習包</a>：在同一頁閱讀教材、練習與評分，解答預設收合。作答請另存自己的筆記，頁面不儲存答案。</p>
+<p>教材修訂及驗證範圍見 <a href="04-%E7%AC%AC1%E9%80%B1%E5%AF%A9%E6%9F%A5%E7%B4%80%E9%8C%84.md">第一週審查紀錄（需原 Wiki 檔）</a>。</p>
+<p>本次補上白皮書交易圖的逐步解說、讀圖與 QA 練習、六題驗收。後續章節沿 <a href="#design">來源與任務雙向核對方法</a> 製作，作者負責對照來源；你完成必修只需讀學習包。第 3–20 章目前仍只有設計與來源核對要求。</p>
+<p>第一章圖解已改成可讀的 SVG：交易交接總覽、單筆簽署與驗證細解、三節點時序、正常轉帳流程，均直接放在學習包相應段落。後續需要圖解時，作者沿課程設計的圖型選用與驗收方法處理。</p>
+<p>先做 <a href="#diagnostic">課前診斷</a>，不查資料，保留不知道的答案。再讀 <a href="#lesson">第 1 週教材</a>，完成同一份作業。作答之後才打開 <a href="#answers">參考解答與評分</a>。</p>
+<p>這週做完後，把手算結果、Python 印出的內容、一份測試紀錄和課後題答案貼回目前對話。診斷原答也保留著；哪裡卡住，就在旁邊寫下來，批改時一起看。</p>
+<h2>章節安排</h2>
+<p>第一章核心觀念釐清後，開啟 <a href="%E7%AC%AC2%E7%AB%A0/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%AD%B8%E7%BF%92%E5%8C%85.html">第二章學習包：Hash、簽章與錢包</a>。它包含教材、兩張 SVG、Python 操作、固定簽章樣本、QA 判讀、新情境及包內補課。只需包內內容及 Python，沒有必讀外部文章；作者檢查見 <a href="%E7%AC%AC2%E7%AB%A0/04-%E5%AF%A9%E6%9F%A5%E7%B4%80%E9%8C%84.md">第二章審查紀錄（需原 Wiki 檔）</a>。兩章均未有學員驗收結果。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>章</th>
+<th>Web3 主題</th>
+<th>預定成果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>帳本、雙重支付、節點、驗證與共識</td>
+<td>模擬不同節點看到的交易順序；核對失敗是否改帳（未實作網路與共識）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hash、簽章、金鑰、地址與錢包</td>
+<td>Python Hash 實驗、簽章概念判讀</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bitcoin、UTXO、PoW、費用</td>
+<td>拆解公開 Bitcoin 交易</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ethereum、EVM、Gas、Nonce、PoS</td>
+<td>成功與失敗交易比較；第 1 次累積檢查</td>
+</tr>
+<tr>
+<td>5</td>
+<td>RPC、送出、打包、確認、重組</td>
+<td>交易生命週期觀察紀錄</td>
+</tr>
+<tr>
+<td>6</td>
+<td>事件、收據、UI 與鏈上狀態</td>
+<td>成功、失敗、待確認的測試設計</td>
+</tr>
+<tr>
+<td>7</td>
+<td>JavaScript 必要基礎、非同步、錯誤處理</td>
+<td>唯讀資料查詢程式</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Solidity、狀態、函式與事件</td>
+<td>小合約與解說；第 2 次累積檢查</td>
+</tr>
+<tr>
+<td>9</td>
+<td>權限、狀態轉移、代幣與授權</td>
+<td>正常、未授權與重複操作案例</td>
+</tr>
+<tr>
+<td>10</td>
+<td>單元測試、邊界與錯誤注入</td>
+<td>能抓到預先植入缺陷的測試集</td>
+</tr>
+<tr>
+<td>11</td>
+<td>AMM、流動性、價格衝擊與滑價</td>
+<td>簡化池子數值模型</td>
+</tr>
+<tr>
+<td>12</td>
+<td>LP、無常損失與費用</td>
+<td>比較模型；第 3 次累積檢查</td>
+</tr>
+<tr>
+<td>13</td>
+<td>借貸、清算、穩定幣、預言機</td>
+<td>風險與觸發條件表</td>
+</tr>
+<tr>
+<td>14</td>
+<td>閃電貸、重入、MEV、收益與協議依賴</td>
+<td>公開事故分析與依賴圖</td>
+</tr>
+<tr>
+<td>15</td>
+<td>L2、橋、多鏈、模組化、資料可用性</td>
+<td>跨鏈流程與失敗條件</td>
+</tr>
+<tr>
+<td>16</td>
+<td>NFT、Metadata、儲存與權利</td>
+<td>鏈上／鏈下檢查；第 4 次累積檢查</td>
+</tr>
+<tr>
+<td>17</td>
+<td>GameFi、Metaverse</td>
+<td>歷史案例的需求與獎勵循環</td>
+</tr>
+<tr>
+<td>18</td>
+<td>RWA、託管、發行與贖回</td>
+<td>區分代幣、底層資產與權利</td>
+</tr>
+<tr>
+<td>19</td>
+<td>託管付款合約及測試包</td>
+<td>限本機／測試網的作品初稿</td>
+</tr>
+<tr>
+<td>20</td>
+<td>陌生情境、協議分析、作品解說</td>
+<td>畢業驗收與模擬面試</td>
+</tr>
+</tbody></table></div>
+<p>DeFintek 大綱中的 DeFi 分類、衍生品與鏈上基金、CDO 結構類比、吸血鬼攻擊、流動性質押衍生品、Curve 治理，納入第 13–14 週案例閱讀。DID 納入第 16 週身分與權利延伸；零知識證明、定序器、RaaS 與 Layer 0 納入第 15 週。這些以能解釋依賴與風險為目標，不承諾在同一時數內達到各領域專家深度。</p>
+<h2>每週怎麼學</h2>
+<p>每章包含案例解說、QA 示範、獨立操作、新情境驗收與包內補課。章節依能力分組，週次依實際時間安排；一章可以跨週。原約 120 小時／20 週保留作為暫定預算，先完成第一章再校正估時；延伸主題不擠進必修時間。範例的來源、版本與操作入口在製作該章時重查。</p>
+<p>每四章檢查解釋、操作、陌生案例三項，任一核心觀念未過就補強。紀錄區分「獨立完成」「提示後完成」「參考答案後重做」，不把閱讀、AI 代做或看過答案當成已學會。可用 AI 詢問名詞，獨立驗收時先自行作答並揭露用過的提示。</p>
+<p>第一章保留「第1週」檔名與 HTML 入口，接續既有筆記。教材可讀、程式可跑與學員掌握分開核對；學習者作答與學習成效尚未驗收。</p>
+<h2>來源與比較範圍</h2>
+<ul>
+<li><a href="https://defintek.io/course-bundle/bundle-4-web3all/">DeFintek 公開大綱</a>：作為主題覆蓋參考。2026-09-29 讀取頁面顯示 NT$21,888；未購買或查閱付費影片、下載講義與答疑。本教材自行編寫，沒有複製付費教材。</li>
+<li><a href="../Web3-%E5%AD%B8%E7%BF%92%E8%B3%87%E6%BA%90%E6%94%B6%E8%97%8F.md">四個學習資源入口（需原 Wiki 檔）</a>：延伸收藏，只在主動加深時選讀。</li>
+<li><a href="../Ch01-%E5%AE%8C%E6%95%B4%E7%AD%86%E8%A8%98.md">既有交易生命週期筆記（需原 Wiki 檔）</a>：作者製作第 4–6 章時取材；必要內容會寫進該章包內，學習者不需要自行拼接筆記。</li>
+</ul>
+<p>比較以學習者能否獨立解釋、實作及處理陌生案例為準；目前沒有與付費課程的實際成效比較證據。</p>
+</details>
+<details class="panel" id="design"><summary>全課程設計、QA 練習與舊資料去向</summary><p>每章把「系統怎麼運作」接到「怎麼驗證它」，沿同一個案例練習。範圍包含現有 Web3 基礎、QA 入門與關卡、Python 練習計畫及學習收藏；求職追蹤、履歷與實際工作經驗不當成教材。所有來源都經過用途分類，外部收藏只有摘記，沒有取得的影片、付費講義或全文不算已納入。</p>
+<p>本次完成課程設計及第一、二章可讀包。第 3–20 章的教學、資料、程式與解答尚待製作，下表列出各章製作要求與缺口。第二章採六小時內容預算，尚未試學校時。</p>
+<h2>各章先備、內容與 QA 練習</h2>
+<p>章 1 估計 6 小時；章 2–20 暫以各 6 小時作預算，共 120 小時。這是內容取捨上限的起點，未經試學確認。完成一章後才依實際用時安排下週；超出預算要縮小必修範圍或說明跨週，不以刪掉補課掩蓋超時。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>章／先備</th>
+<th>Web3 完成目標</th>
+<th>QA 切入與測試方法</th>
+<th>需交的練習與新情境驗收</th>
+<th>來源與製作缺口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1／Python 變數、函式與執行檔案</td>
+<td>推演交易順序；區分交易、狀態、帳本、驗證與共識；讀出交易授權圖</td>
+<td>對照規格與逐帳戶快照，識別拒絕卻扣款；核對簽署資料與模型界線</td>
+<td>A–D、讀圖練習、C1 兩版本證據、C2 新輸入獨立重測、六題驗收</td>
+<td>已補交易圖、來源核對與 HTML；學員未驗</td>
+</tr>
+<tr>
+<td>2／章 1</td>
+<td>解釋 Hash 完整性、金鑰、地址及簽章授權各自用途</td>
+<td>修改訊息後比較結果；區分格式、運算與授權；取消及重送</td>
+<td>Python Hash／格式實驗、C1–C8 判讀、D1／D2 新情境及六題</td>
+<td>已建自足 HTML、兩張 SVG、實跑 Ed25519 固定教學樣本；學員未驗</td>
+</tr>
+<tr>
+<td>3／章 2</td>
+<td>依 UTXO 推演輸入、輸出、找零、費用與 PoW 信任條件</td>
+<td>依給定規則檢查已花費輸入、費用與確認假設</td>
+<td>帶註解的交易樣本與有效／無效案例；陌生樣本</td>
+<td>原大綱；需驗證交易樣本、區塊與共識來源</td>
+</tr>
+<tr>
+<td>4／章 3</td>
+<td>解釋 Ethereum 狀態轉移、EVM、Gas、Nonce 與 PoS</td>
+<td>比較成功／Revert 的回覆、餘額與費用，區分協議及產品規則</td>
+<td>狀態差異表；第一次累積驗收</td>
+<td>Ch01、QA 觀念 2；需固定環境與費用範例</td>
+</tr>
+<tr>
+<td>5／章 4</td>
+<td>追蹤簽章、送出、待處理、打包、確認與重組</td>
+<td>依注入的 RPC 逾時、延遲與替換案例檢查狀態提示</td>
+<td>交易時間線、錯誤處理案例與證據；新延遲情境</td>
+<td>Ch01、QA 關卡 2；需離線訊息序列與適用鏈規則</td>
+</tr>
+<tr>
+<td>6／章 5</td>
+<td>區分 UI、收據、事件與鏈上狀態各能證明什麼</td>
+<td>用同一交易多項資料交叉核對，排查看錯鏈／幣與付錯人</td>
+<td>一份差異調查紀錄；未見過的 UI／收據矛盾</td>
+<td>Ch01、QA 觀念 2；需去識別樣本、欄位說明與答案</td>
+</tr>
+<tr>
+<td>7／章 6、Python 基礎</td>
+<td>使用 JavaScript 變數、函式、JSON、async／await 做唯讀查詢</td>
+<td>檢查逾時、錯誤回覆、空資料與格式差異</td>
+<td>離線 JSON 查詢程式與測試；新壞資料</td>
+<td>原大綱、Python 題型 1–11；需 JS 教學、固定資料及執行指南</td>
+</tr>
+<tr>
+<td>8／章 7</td>
+<td>解釋 Solidity 狀態、函式與事件，執行本機小合約</td>
+<td>比較呼叫前後狀態與事件；測正常、邊界與拒絕</td>
+<td>小合約及測試結果；第二次累積驗收</td>
+<td>原大綱、QA 觀念 1；需固定編譯器／工具與本機指南</td>
+</tr>
+<tr>
+<td>9／章 8</td>
+<td>解釋權限、狀態轉移、ERC-20 與 approve／allowance</td>
+<td>換帳戶／鏈、拒絕簽章、額度／撤銷與異常 token 串接</td>
+<td>權限矩陣、授權案例；未授權／非法轉換驗收</td>
+<td>QA 觀念／關卡 1、3、5；需規範與產品決策分列、mock token</td>
+</tr>
+<tr>
+<td>10／章 9</td>
+<td>解釋單元、integration 與屬性測試適用範圍</td>
+<td>對已植入缺陷設計負向與邊界測試；將修正加入回歸</td>
+<td>可抓缺陷的測試集與失敗證據；新缺陷驗收</td>
+<td>QA 觀念／關卡 4、7；Python 12–19；需 fixture、錯誤版本與解答</td>
+</tr>
+<tr>
+<td>11／章 10</td>
+<td>計算簡化 AMM、流動性、價格衝擊與滑價</td>
+<td>依模型規則測交易量、捨入、最小可接受輸出與失敗</td>
+<td>數值表和模型測試；新交易量</td>
+<td>原大綱；需公式適用條件、樣本與重算</td>
+</tr>
+<tr>
+<td>12／章 11</td>
+<td>比較 LP 資產變化、無常損失與費用</td>
+<td>檢查比較基準、單位、捨入與模型假設</td>
+<td>對照持有／提供流動性的結果；第三次累積驗收</td>
+<td>原大綱；需包內計算示範及不同價格樣本</td>
+</tr>
+<tr>
+<td>13／章 12</td>
+<td>解釋借貸、清算、穩定幣與預言機依賴</td>
+<td>注入過期／缺失價格，測邊界與暫停／拒絕規則</td>
+<td>條件表、價格 fixture、測試證據；新清算邊界</td>
+<td>QA 觀念／關卡 6；需指定協議規格，不能自行假定必須暫停</td>
+</tr>
+<tr>
+<td>14／章 13</td>
+<td>解釋閃電貸、重入、MEV、收益與協議依賴</td>
+<td>本機驗證重複外部回呼及狀態屬性；分析交易排序的使用者影響</td>
+<td>合成回呼實驗、事故依賴圖；陌生風險分類</td>
+<td>QA 觀念／關卡 4、6；需核對事故來源與防禦教學樣本</td>
+</tr>
+<tr>
+<td>15／章 14</td>
+<td>解釋 L2、橋、多鏈與資料可用性的信任假設</td>
+<td>注入延遲、重複訊息、對端失敗與恢復，區分各環境確認條件</td>
+<td>跨域狀態圖、訊息 fixture 與失敗紀錄；新恢復情境</td>
+<td>QA 觀念／關卡 6；需指定鏈／橋版本及可用樣本</td>
+</tr>
+<tr>
+<td>16／章 9、章 15</td>
+<td>解釋 ERC-721／1155、Metadata、儲存及權利</td>
+<td>核對授權、轉移、接收回呼、metadata 失效；區分代幣所有權與其他權利</td>
+<td>token／metadata 檢查表；第四次累積驗收</td>
+<td>QA 觀念／關卡 5；需標準核對、mock 接收端與包內資料</td>
+</tr>
+<tr>
+<td>17／章 16</td>
+<td>描述 GameFi／Metaverse 的需求、獎勵與資產循環</td>
+<td>依產品規格核對獎勵重複領取、狀態同步與外部依賴</td>
+<td>合成遊戲狀態案例與測試；新獎勵條件</td>
+<td>原大綱；需明示案例假設，不以歷史宣傳當功能事實</td>
+</tr>
+<tr>
+<td>18／章 17</td>
+<td>區分 RWA 代幣、底層資產、託管及發行／贖回流程</td>
+<td>檢查文件、權限及帳務對應，辨認測試無法證明的鏈外事實</td>
+<td>權利與依賴表、流程測試；新缺文件案例</td>
+<td>原大綱；需具體文件樣本與版本，法律適用留待專業核對</td>
+</tr>
+<tr>
+<td>19／章 10、章 18</td>
+<td>在本機／測試網完成託管付款合約及說明</td>
+<td>建立風險測試計畫、負向測試、回歸與證據交接</td>
+<td>作品、可重現測試包與已知缺口；新交易序列</td>
+<td>Python 計畫、QA 觀念 7；需作品規格、環境與 fixture</td>
+</tr>
+<tr>
+<td>20／章 19</td>
+<td>分析陌生協議情境並解說作品及信任條件</td>
+<td>區分 QA、audit、形式化驗證的工作與限制；提出缺口及驗收策略</td>
+<td>陌生案例、作品演示、測試計畫與模擬面試</td>
+<td>QA Boss／觀念 7；需陌生題、評分與未通過補強方案</td>
+</tr>
+</tbody></table></div>
+<h2>延伸內容的去向</h2>
+<p>保留原大綱的主題覆蓋，必修深度以表中的行為目標為準。以下內容在基本模型通過後選讀，不計入目前 120 小時估計，也不作為必修過關條件：</p>
+<ul>
+<li>章 13–14：DeFi 分類、衍生品、鏈上基金、CDO 類比、吸血鬼攻擊、流動性質押衍生品、Curve 治理。</li>
+<li>章 15：零知識證明、定序器、RaaS、Layer 0 的延伸比較。</li>
+<li>章 16：DID 與身分／權利的延伸案例。</li>
+<li>QA 工具：Slither、Echidna、Foundry、Hardhat、OpenZeppelin 只在對應任務選用並教必要操作，不以工具名稱代替測試方法。實際選型在製作該章時核對，不預先安裝。</li>
+<li>Python 題型 20 generator 及計時英文面試練習作為選修。原轉職日期與每日練習量不沿用為本課程排程。</li>
+</ul>
+<h2>舊資料對照與重複內容處理</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>現有材料</th>
+<th>去向與處理</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>00 課程入口</td>
+<td>唯一正式閱讀入口，原大綱改按章排列；舊週次不當完成證據</td>
+</tr>
+<tr>
+<td>01 教材／02 作業／03 解答</td>
+<td>章 1 原地修訂，保留檔名、正常程式與既有 B 練習；C 改成兩版本比較與新輸入重測</td>
+</tr>
+<tr>
+<td>04 審查紀錄</td>
+<td>沿既有文件保存本輪修改與檢查，不另開學員帳本</td>
+</tr>
+<tr>
+<td>Ch01 完整筆記、簡版、精修補充</td>
+<td>章 4–6 取材，重複定義與圖只教一次；三張既有 PNG 保留。其「下一章」預告不代表第二章教材已存在</td>
+</tr>
+<tr>
+<td>QA 入門包七觀念</td>
+<td>1→章 8–10；2→章 4–6；3→章 2、9；4→章 10、14；5→章 9、16；6→章 13–15；7→章 10、19–20</td>
+</tr>
+<tr>
+<td>QA 互動教材開場／七關／Boss</td>
+<td>開場→章 1 的角色與證據界線；七關依同號觀念分配；Boss→章 20。改成包內補課與新變式，不把重答同題算掌握</td>
+</tr>
+<tr>
+<td>QA 入門包 D1–D7</td>
+<td>不另加一套七天必修；概念與產出併入各章。D8–14 及來源清單保留選讀</td>
+</tr>
+<tr>
+<td>Python 個人課程</td>
+<td>20 題型依章 7、10、19 任務取材；必要語法在使用前教。四階段時程及 AI 禁用規則是舊面試計畫，不移植成本課程通用規則</td>
+</tr>
+<tr>
+<td>Web3 學習資源收藏</td>
+<td>四筆入口全保留為選讀線索；需另查一手來源再編寫，未讀的課程與影片不算教材</td>
+</tr>
+<tr>
+<td>Web3 _index</td>
+<td>既有導覽保留，正式學習從 00 入口開始</td>
+</tr>
+</tbody></table></div>
+<p>舊 Ch01、QA、Python 與收藏原檔保留。此次完成用途對照，不宣稱舊資料已全部改寫或所有來源已重驗。OWASP 舊摘要與抓取失敗標記等，需要作者在對應章製作前核對；無法確認的排名、統計與主張不作教材判定依據。</p>
+<h2>每章的製作與驗收方法</h2>
+<pre><code class="language-text">能力目標與先備 → Web3 同一案例 → QA 規則／風險
+                                     |
+                                     v
+                           示範 → 少量提示 → 獨立練習
+                                     |
+                                     v
+                     新情境驗收 → 包內補課 → 新變式
+</code></pre>
+<p>必修內容、練習資料、規格、操作與補課都放進該章 HTML；只有來源與延伸閱讀可以連出去。外部網頁不作必修完成條件。需要本機工具的章節提供版本與操作指南；鏈上觀察另提供固定離線樣本，區分樣本推演與實際執行。用固定樣本通過不能寫成已做過真實鏈測試。</p>
+<p>每章 QA 題均列規則依據、初始狀態、輸入、預期、實際證據、判定及覆蓋限制。協議規則、範例假設與產品建議分開；不把免手續費點數模型套成真實鏈規則，也不將採用某安全模式視為已證明安全。</p>
+<p>製作者先實跑程式與核算答案，再檢查 HTML 包不依賴其他 Wiki 檔完成必修。技術檢查通過後，學員還需能解釋原理、完成操作並處理新情境；獨立、提示後、看答後的成果分開。章 4、8、12、16、20 做累積驗收，沿同一個人作答紀錄，不另建進度系統。</p>
+<h2>本輪方法修正</h2>
+<p>原做法逐份找必讀連結，再從任務倒推材料；作者若漏出題，重要圖與原理也可能一起漏掉。本輪加入來源與任務兩個方向的核對，逐章製作時必須執行：</p>
+<ol>
+<li>作者先讀本章採用的一手來源與版本，列出重要概念、圖、因果關係、前提及限制。每項標成「本章必修／後章必修／選讀／不採用」，寫理由與實際教材段落。後章只有大綱就標「待製作」，不能當成已有教學。</li>
+<li>再由每項必修操作與驗收倒推先備、資料、規格、示範、提示及補課，核對是否全在 HTML。先用具體案例說明用途，再逐步比較資料與結果，最後接上名詞；必要術語初次出現就解釋，切換資料模型時先交代兩者的關係。每個必修概念應能交代誰做什麼、處理哪些資料、步驟與理由；圖須解釋標籤及關鍵連線，不能只放圖或留下結論。核對用的長字串與進階細節可放同頁展開區，必要機制與限制保留在主文。</li>
+<li>分別核對來源是否漏教、說法是否準確、練習是否教過、答案是否可重算、HTML 是否可讀。補課須提供另一個具體例子或拆解方式，不能只叫學員重讀；驗收須含新情境與包內補課後的新變式，不能只靠作者自己出的題目或關鍵字掃描宣稱涵蓋完整。</li>
+<li>沿既有章節審查紀錄保存來源、落點、延後理由與證據，不另建學員帳本。若未由另一位審查者核對，明示作者自查；技術 PASS、來源涵蓋與真人理解分開回報。</li>
+<li>對後章先備先提供當前理解必需的最小內容。超出估計時間就調整時程、拆章或縮小已明示的學習目標；不把理解必需的圖與機制壓成一句，也不把來源全文照搬當成教學。</li>
+</ol>
+<p>讀者仍從一個 HTML 學習。來源分類與核對由作者負責，不要求讀者常回原文幫教材找缺漏。這套方法降低漏教風險，不能保證完全無遺漏。</p>
+<h2>第 2–20 章製作前的來源核對要求</h2>
+<h3>教材圖解的選用與驗收</h3>
+<p>需要靠流程、資料關係、時序或狀態理解的內容，由作者直接使用當前可用的 Diagram Design，讀對應圖型方法；不要求學員每次點名。條件分支用流程圖、角色訊息先後用時序圖、組件／資料關係用關係圖、狀態與轉移用狀態圖。文字或表格已足以表達時不用強制畫圖。</p>
+<p>圖先列來源必要節點、連線、條件及限制，再決定版面；不能為符合節點預算刪掉機制，太複雜就拆成總覽與細解。沿用學習包已確認的配色與中文字型，不因 Skill 預設而改整份教材。標明示意模型、實際協議及尚未實作的部分，圖與程式／解答逐項對照。不要把資料依賴箭頭當成已發生的交易或網路共識。</p>
+<p>圖解以獨立 HTML／內嵌 SVG 保存，透過既有產生器嵌入學習包；必要圖與解說能在同一頁離線閱讀。圖源納入版本 hash，來源更新後重建，不手動改生成的學習包。完成後跑 Skill 的自檢，實看桌面與手機、文字是否被裁切、箭頭是否錯接及局部捲動；結構／程式 PASS 不代替內容與真人理解。靜態優先，只有逐步顯示能改善理解且符合當次需求時才加互動，不強制動畫或多套外觀。</p>
+<p>以下列各章來源核對要求；第二章的實際來源、落點與延後項已寫入其審查紀錄，第三章以後尚待製作。所有章節均無學員通過證據。表中的規範與協議文件需在實際編寫時確認版本及適用範圍；收藏與舊摘要只作線索。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可橫向捲動的表格"><table>
+<thead>
+<tr>
+<th>章</th>
+<th>作者必須核對的來源與關係</th>
+<th>包內必需的教學與 QA 資料</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td>密碼學規格／官方教學：Hash、私公鑰、地址與簽署資料的關係</td>
+<td>改資料、錯金鑰案例及驗證步驟；接回第一章交易圖</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bitcoin 白皮書與 Developer Guide：UTXO、花費條件、輸出／找零、費用、PoW 與共同歷史</td>
+<td>多輸入輸出交易圖及逐欄樣本；雙花、費用、確認條件</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ethereum 協議文件：狀態、EVM、Gas、Nonce、PoS</td>
+<td>成功與 Revert 的狀態／費用差異；區分產品假設</td>
+</tr>
+<tr>
+<td>5</td>
+<td>適用鏈與 JSON-RPC 文件：送出至確認、替換及重組</td>
+<td>完整時間線、離線回覆及延遲／恢復案例</td>
+</tr>
+<tr>
+<td>6</td>
+<td>收據、事件與狀態查詢規格</td>
+<td>同一交易多份證據及矛盾樣本；各能證明什麼</td>
+</tr>
+<tr>
+<td>7</td>
+<td>JavaScript 與查詢 API 官方文件</td>
+<td>必要語法、async／await 因果、錯誤／空資料與離線 fixture</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Solidity 與 EVM 文件、固定編譯器版本</td>
+<td>狀態／事件示範、本機操作、拒絕與邊界樣本</td>
+</tr>
+<tr>
+<td>9</td>
+<td>ERC-20、權限及實際使用的 token 契約</td>
+<td>所有權／授權／allowance 關係、撤銷與非標準回覆</td>
+</tr>
+<tr>
+<td>10</td>
+<td>所選測試工具官方文件與已明示程式規格</td>
+<td>三類測試適用範圍、植入缺陷、回歸及測試盲點</td>
+</tr>
+<tr>
+<td>11</td>
+<td>指定 AMM 協議公式及實作</td>
+<td>單位、價格衝擊／滑價、捨入與最小輸出全程算例</td>
+</tr>
+<tr>
+<td>12</td>
+<td>同一 AMM 的 LP 與費用規則</td>
+<td>持有比較基準、資產變化圖及價格變式</td>
+</tr>
+<tr>
+<td>13</td>
+<td>指定借貸／穩定幣與預言機規格</td>
+<td>清算條件、價格時效、失敗／暫停規則及 fixture</td>
+</tr>
+<tr>
+<td>14</td>
+<td>指定協議、事故原始紀錄與程式</td>
+<td>回呼與狀態先後、交易排序、適用防禦及其限制</td>
+</tr>
+<tr>
+<td>15</td>
+<td>指定 L2／橋文件與訊息規格</td>
+<td>信任與資料可用性圖、延遲／重複／恢復樣本</td>
+</tr>
+<tr>
+<td>16</td>
+<td>ERC-721／1155、Metadata 及接收介面規範</td>
+<td>轉移、回呼、存取失敗與權利差異</td>
+</tr>
+<tr>
+<td>17</td>
+<td>明示的合成產品規格；引用產品時查官方版本</td>
+<td>資產／獎勵循環圖、重複領取及同步條件</td>
+</tr>
+<tr>
+<td>18</td>
+<td>指定發行、託管、贖回文件及適用條件</td>
+<td>鏈上代幣與鏈外權利的對應；無法由測試證明的部分</td>
+</tr>
+<tr>
+<td>19</td>
+<td>本課程付款作品規格與所用工具文件</td>
+<td>全狀態／權限圖、正常與拒絕案例、可重現證據</td>
+</tr>
+<tr>
+<td>20</td>
+<td>陌生案例來源與累積能力對照</td>
+<td>不洩漏答案的新案例、QA／audit／形式化驗證界線</td>
+</tr>
+</tbody></table></div>
+<p>這段是本課程後續製作的共用方法落點，00 入口與 HTML 均包含入口。未修改全域 AGENTS 或 Memory；公司外部 curriculum-designer 方法檔此次未同步。</p>
+<h2>閱讀入口</h2>
+<ul>
+<li><a href="#overview">課程入口</a></li>
+<li><a href="%E7%AC%AC%E4%B8%80%E9%80%B1%E5%AD%B8%E7%BF%92%E5%8C%85.html">第一章 HTML 學習包</a></li>
+</ul>
+</details>
+</main></div><footer>第一章學習包 · 2026-10-05 · 沿用第一週檔名。以同資料夾 Markdown 為內容來源；必修解說、練習與補課可離線閱讀。來源及延伸連結為選讀，開啟時需要網路或原 Wiki 檔。<details class="source"><summary>來源檔案版本</summary><pre>00-課程入口.md: 4b655b88691e6104a08272a0d9caa36fa87cbb345aafe560c4bc832bccbfd7d5
+01-第1週教材.md: 52fa99d39dfa02af922a6b5a928f062df8ba19affdb18d299119b867caca20fa
+02-第1週作業.md: 5e055eb712eb25ec59856437d7723335116e09f959b2c2a1279e56b0955fa501
+03-第1週解答.md: 69c5b3b7a1635964e8fb4a8abd0712cb335b96e96fd5dd426828dd487c1118c1
+06-Web3與QA課程設計.md: a16fce50a92cd1a4efc4372275c7b15e865aefb112cd9d3a92a08dc00f2eb775
+圖解/第一章圖解.html: d13355f5c882f18db05a4b35367f79f9c3a404541ba234cd5694e768aa722cbf</pre></details></footer></div>
+<script>document.getElementById('print').addEventListener('click',()=>window.print());</script></body></html>

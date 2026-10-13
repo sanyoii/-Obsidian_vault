@@ -1,0 +1,34 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第二章圖解</title>
+<style id="course-diagram-style">
+body{color:#18302e;font-family:system-ui,"Microsoft JhengHei",sans-serif}.course-diagram{margin:24px 0;border:1px solid #d8e2dc;border-radius:8px;padding:16px;background:#f4f7f0}.diagram-scroll{overflow-x:auto}.course-diagram svg{display:block;width:760px;max-width:none;height:auto}.course-diagram text{font-family:system-ui,"Microsoft JhengHei",sans-serif;font-size:17px;fill:#18302e}.course-diagram .box{fill:#fffefa;stroke:#146354;stroke-width:1.5}.course-diagram .key{fill:#e4eee5;stroke:#146354;stroke-width:1.5}.course-diagram .arrow{fill:none;stroke:#146354;stroke-width:2}.course-diagram .hint{font-size:15px;fill:#546865}.course-diagram figcaption{font-size:15px;color:#546865;margin-top:12px}@media print{.course-diagram svg{width:100%;max-width:100%}.diagram-scroll{overflow:visible}}
+</style></head><body>
+<figure class="course-diagram" id="diagram-keys">
+<div class="diagram-scroll" tabindex="0" role="region" aria-label="金鑰與地址關係圖，可橫向捲動">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 315" role="img" aria-labelledby="keys-title keys-desc">
+<title id="keys-title">私鑰、公鑰、地址的關係與用途</title><desc id="keys-desc">私鑰正向推導公鑰，公鑰依適用鏈與地址類型的規則產生地址。私鑰用來簽署，公鑰用來驗證，地址用來定位；這些推導箭頭不是交易。</desc>
+<defs><marker id="keys-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#146354"/></marker></defs>
+<rect class="key" x="25" y="75" width="190" height="85" rx="7"/><text x="120" y="109" text-anchor="middle">私鑰</text><text x="120" y="139" text-anchor="middle" class="hint">保密；提供簽署能力</text>
+<rect class="box" x="285" y="75" width="190" height="85" rx="7"/><text x="380" y="109" text-anchor="middle">配對公鑰</text><text x="380" y="139" text-anchor="middle" class="hint">可公開；驗證簽章</text>
+<rect class="box" x="545" y="75" width="190" height="85" rx="7"/><text x="640" y="109" text-anchor="middle">地址</text><text x="640" y="139" text-anchor="middle" class="hint">定位；不是簽署能力</text>
+<path class="arrow" d="M215 117 H285" marker-end="url(#keys-arrow)"/><text class="hint" x="250" y="58" text-anchor="middle">推導</text>
+<path class="arrow" d="M475 117 H545" marker-end="url(#keys-arrow)"/><text class="hint" x="510" y="32" text-anchor="middle">依鏈／類型規則</text><text class="hint" x="510" y="56" text-anchor="middle">產生（此分支指 EOA）</text>
+<text x="30" y="211">地址外形檢查 ≠ 收款人與付款意圖核對</text><text class="hint" x="30" y="247">Ethereum 合約地址由程式控制，不能套成「每個地址都有一個私鑰」。</text><text class="hint" x="30" y="280">箭頭表示資料推導；不是付款、確認或身分背書。</text>
+</svg></div><figcaption>關係示意：先分用途，再讀推導方向。Bitcoin 與 Ethereum 地址規則不同，本圖不計算地址。</figcaption></figure>
+<figure class="course-diagram" id="diagram-signature">
+<div class="diagram-scroll" tabindex="0" role="region" aria-label="簽署與驗證資料圖，可橫向捲動">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 580" role="img" aria-labelledby="sig-title sig-desc">
+<title id="sig-title">簽署與驗證處理的資料</title><desc id="sig-desc">完整訊息與 Alice 私鑰輸入簽署，產出簽章。接收到的訊息、簽章、可信對應 Alice 的公鑰輸入驗證，產出通過或不通過；授權、餘額與重送規則仍需另查。</desc>
+<defs><marker id="sig-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#146354"/></marker></defs>
+<rect class="box" x="25" y="35" width="240" height="80" rx="7"/><text x="145" y="66" text-anchor="middle">完整訊息 bytes</text><text class="hint" x="145" y="94" text-anchor="middle">環境、編號、雙方、金額</text>
+<rect class="key" x="25" y="150" width="240" height="65" rx="7"/><text x="145" y="190" text-anchor="middle">Alice 私鑰（保密）</text>
+<rect class="box" x="335" y="80" width="160" height="80" rx="7"/><text x="415" y="115" text-anchor="middle">簽署 Sign</text><text class="hint" x="415" y="144" text-anchor="middle">依算法處理訊息</text>
+<rect class="box" x="565" y="80" width="160" height="80" rx="7"/><text x="645" y="127" text-anchor="middle">簽章</text>
+<path class="arrow" d="M265 75 H305 V105 H335" marker-end="url(#sig-arrow)"/><path class="arrow" d="M265 183 H305 V140 H335" marker-end="url(#sig-arrow)"/><path class="arrow" d="M495 120 H565" marker-end="url(#sig-arrow)"/>
+<rect class="box" x="25" y="285" width="240" height="70" rx="7"/><text x="145" y="327" text-anchor="middle">接收到的訊息 bytes</text>
+<rect class="key" x="25" y="395" width="240" height="80" rx="7"/><text x="145" y="429" text-anchor="middle">可信對應 Alice 的公鑰</text><text class="hint" x="145" y="457" text-anchor="middle">公鑰來源須另核對</text>
+<rect class="box" x="335" y="320" width="160" height="95" rx="7"/><text x="415" y="361" text-anchor="middle">驗證 Verify</text><text class="hint" x="415" y="392" text-anchor="middle">三項輸入一起核對</text>
+<rect class="box" x="565" y="320" width="160" height="95" rx="7"/><text x="645" y="374" text-anchor="middle">通過／不通過</text>
+<path class="arrow" d="M265 320 H305 V345 H335" marker-end="url(#sig-arrow)"/><path class="arrow" d="M265 435 H305 V390 H335" marker-end="url(#sig-arrow)"/><path class="arrow" d="M645 160 V245 H415 V320" marker-end="url(#sig-arrow)"/><text class="hint" x="532" y="230" text-anchor="middle">送給驗證者的簽章</text><path class="arrow" d="M495 368 H565" marker-end="url(#sig-arrow)"/>
+<text x="25" y="519">驗證通過後，還須查授權對應、可花費狀態與重送規則。</text><text class="hint" x="25" y="554">資料流程示意；不是交易送鏈、餘額更新或確認。改訊息不會沿用原簽章通過。</text>
+</svg></div><figcaption>簽章把特定訊息與金鑰綁在一起。這份教學樣本用 Ed25519，並未實作 Bitcoin／Ethereum 交易。</figcaption></figure>
+</body></html>
