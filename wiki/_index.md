@@ -166,7 +166,7 @@
 
 ### Github/Repos（已分析 Repos）
 
-- [[Github/_index|Github Repo 分析總索引]] — 238 篇，分類與分析深度依總索引現況 `#github #index`
+- [[Github/_index|Github Repo 分析總索引]] — 251 篇，分類與分析深度依總索引現況 `#github #index`
 - [[Github/已安裝工具 — Github 分析索引|已安裝工具 × Wiki 交叉對照]] — 30 項已安裝工具的 Wiki 紀錄 `#github #installed`
 
 ---

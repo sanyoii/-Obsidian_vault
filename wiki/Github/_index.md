@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 238 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
+> 251 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-10-12
@@ -41,10 +41,12 @@ tags: [github, index, repos]
 
 ---
 
-## 🤖 AI Agent 框架（26 篇）
+## 🤖 AI Agent 框架（28 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/langchain — 模型工具抽象與Agent框架評估\|langchain]] | 🔬 | ⏳ | 147.8K⭐ HTML約數，MIT；現代1.4.5與classic分開，create_agent建於LangGraph；HITL需配置、trace可選，沒有現有缺口不加框架。 |
+| [[Github/repos/awesome-mcp-servers — MCP目錄與連接權限評估\|awesome-mcp-servers]] | 🔬 | ✅ | 96.3K⭐ HTML約數，MIT目錄；混合實驗／正式候選與明示廣告，Local／Cloud不是權限保證；收藏找工具，下游各自審核。 |
 | [[Github/repos/anysearch-skill — 雲端搜尋介面與採用評估\|anysearch-skill]] | 🔬 | ⏳ | 三 runtime 本機契約及三題匿名搜尋通過；旅遊結果混入反向入境規則，全批429仍exit 0；維持觀望。 |
 | [[Github/repos/council-of-high-intelligence — 多視角決策議會與替換評估\|council-of-high-intelligence]] | 🔬 | ⏳ | 18 種分析視角；可作 yongli 替換候選，需適配 Codex 工具、代理上限及模擬降級；名冊 166 檢查通過，未實跑議會。 |
 | [[Github/repos/openchatx-mcp — ChatGPT 本機執行平台與公司採用評估\|openchatx-mcp]] | 🔬 | ⏳ | 固定版本原碼抽查；暫不整套導入，Project 權限不是 OS 沙箱。 |
@@ -55,7 +57,7 @@ tags: [github, index, repos]
 | [[Github/repos/ruvnetruflo 🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, self-learning swarm intel\|Ruflo]] | 📎 | ✅ | Claude 多 Agent 協調 MCP |
 | [[Github/repos/activeloopaiHivemind — 跨 AI Coding Agent 共享記憶與 Skill 系統\|Hivemind]] | 📎 | ⏳ | 跨 Agent 共享記憶 |
 | [[Github/repos/crewAIInccrewAI Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks\|CrewAI]] | 📎 | ⏳ | 角色扮演 Agents 框架 |
-| [[Github/repos/langchain-ailanggraph Build resilient language agents as graphs. Available in TypeScript!\|LangGraph]] | 📎 | ⏳ | Graph-based Agent 框架 |
+| [[Github/repos/langchain-ailanggraph Build resilient language agents as graphs. Available in TypeScript!\|LangGraph]] | 🔬 | ⏳ | 10/14固定1.2.15覆核；持久化需backend/thread，resume重跑node需冪等；serializer strict需配置。470 Python AST與overwrite五案例通過，未驗DB/LLM/runtime。 |
 | [[Github/repos/datawhalechinahello-agents 📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程\|hello-agents]] | 📎 | 📌 | 中文智能體教程 |
 | [[Github/repos/Threads 推薦工具型 Repo 六選\|工具型 Repo 六選]] | 🔬 | 📌 | OpenHands/Continue/LangChain/n8n/awesome-selfhosted/awesome-claude-code |
 | [[Github/repos/From idea to AI MCP tools —APIs that power your workflow.快速串接、即時上手，為你的程式或 AI Agent 裝載超能力。支援各 AI Agent 與自動化主流平台，無需部署。\|Superior APIs]] | 📎 | 📌 | MCP 工具 API 平台 |
@@ -74,10 +76,12 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（60 篇）
+## 🛠️ Claude Code / Skills（62 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/awesome-claude-code — 資源目錄與下游驗收界線評估\|awesome-claude-code]] | 🔬 | ✅ | 55.7K⭐；CC BY-NC-ND4.0目錄，CSV252列/241active，curated不等於下游audited；收藏按缺口選候選，未裝維護hooks或任何下游。 |
+| [[Github/repos/awesome-distillhub-persona-skills — 人格技能目錄與交付證據評估\|awesome-distillhub-persona-skills]] | 🔬 | ❌ | 76⭐；固定版只有 README，零 Skill／CLI，70 個下游 GitHub 線索。授權口徑不清、七個抽樣連結公開 API 404，僅收藏目錄不安裝。 |
 | [[Github/repos/NESA-SLIDE — 可編輯HTML與PPTX的AI簡報製作系統\|NESA-SLIDE]] | 🔬 | ⏳ | 73⭐ MIT；七個專案Skills、HTML editor與原生PPTX流程。三支Node回歸通過；完整生圖／瀏覽器／PowerPoint未驗，建議獨立試用。 |
 | [[Github/repos/AgentKey — Chainbase 的付費 MCP 資料閘道\|AgentKey]] | 🔬 | ⏳ | 582⭐ Apache-2.0；Chainbase（Web3 資料公司）的**訂閱制資料閘道**——一個訂閱涵蓋 web search/scraping/社群/鏈上/財經/電商，雲端自動 failover。⚠️ **repo 不是產品本體**：主語言僅 Shell+PowerShell，Top 5 大檔全是安裝腳本，零應用邏輯；服務閉源託管於 `api.agentkey.app/v1/mcp`，寫設定的 `@agentkey/cli` 宣告 repo 實測 **404 私有**。✅ **供應鏈檢查通過**：線上 install.sh/.ps1 與 repo 內 **SHA-256 完全相同**，對外端點無非預期主機。⚠️ **最該注意**：SKILL.md 明文「**Use INSTEAD OF built-in WebSearch/WebFetch**」「don't fall back to Claude's built-in Web Search」＝**用計費服務取代你免費的內建工具**，且工具名包裝成通用的 `find_tools`/`execute_tool` 不揭露付費性質；已有使用者開 issue「吃相太难看了」指 server 端會把誘導文字注回每個 session（改本機 SKILL.md 擋不住），**0 回覆**。做得好的三點：prompt-injection 防禦寫進 SKILL.md、成本閘門（≥3 呼叫或 ≥10 credits 前強制查餘額估價確認、失敗呼叫不計費）、7 條 CI＋週更 15+ release。判 ⏳ 三理由：**定價頁 JS SPA 兩種爬法都抓不到**、覆蓋內建工具行為未解、**582⭐ 只有 2 watcher** 缺第三方實測。🪟 **本環境專屬坑**：安裝器認 `%USERPROFILE%\.claude.json`、**完全不認 `CLAUDE_CONFIG_DIR`**，會觸發 config-drift 金絲雀第 [4] 項 → ✅ **改走 `.claude-plugin/marketplace.json` 的 plugin 路徑可完全繞過**。**📌 可單獨抽取**：`cost-aware.md` 花錢前確認規則、`protocol/skill-meta-v1` 版本廣播協定、`install.ps1` 40+ agent Windows 路徑對照表 |
 | [[Github/repos/i-have-adhd — ADHD 友善輸出 skill\|i-have-adhd]] | 🔬 | ❌ | 5.3K⭐ 10 條 ADHD 友善輸出規則；與 caveman hook 高度重疊＋全域觸發衝突；可吸收個別規則零安裝 |
@@ -186,10 +190,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🎬 影片 / 媒體 / 音樂（17 篇）
+## 🎬 影片 / 媒體 / 音樂（18 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/kilnframe — 剪輯時間軸動畫與素材外送評估\|kilnframe]] | 🔬 | ⏳ | 16⭐ Apache2本體；Premiere/Resolve+HyperFrames時間軸動畫。雲端會送文字/frames，首次登入啟動變更；loopback六案例通過，未驗剪輯/render，不安裝。 |
 | [[Github/repos/capcut-mate — 開源剪映草稿自動化REST API\|capcut-mate]] | 🔬 | ⏳ | 1.4K⭐ 剪映草稿自動化 REST API（FastAPI，~35端點+雲渲染），建於 pyJianYingDraft；讓 LLM/Coze/n8n 程式化剪片；與 vak 互補（API vs 本機草稿）；綁剪映生態故觀望 |
 | [[Github/repos/seedance-2.0 — 導演式操作Seedance影片模型的Skill OS\|seedance-2.0]] | 🔬 | ⏳ | 5K⭐ 導演式操作 ByteDance Seedance 2.0 影片模型的 28-skill 包（MIT）；directing-engine+126 evals+6語詞彙；與 video-shotcraft 同構但強綁生成模型；版號治理不一致(gh v5.3 vs skill v6.6) |
 | [[Github/repos/video-autopilot-kit — 填自己資料的 YouTube 短影音自動化框架\|video-autopilot-kit]] | 🔬 | ⏳ | 1.6K⭐ MIT；**08-03 二次分析更新至 v0.11.0**。三條同構生產線（教學長片／直式 Shorts／線上訪談）：知識層→機械閘門→一鍵驅動；gate_core.py 統一 report/assert/selftest 外殼但判定規則不集中。115 檔 419K tokens，**53 支 .py 對 57 份 .md**（方法論是第一級交付物）。**供應鏈五項全清**：零網路呼叫（所有 http 字串皆為文獻出處）、無 eval/exec/pickle、subprocess 全指向 ffmpeg/ffprobe、**無 requirements/pyproject/CI 腳本**（無可被投毒的相依清單）。v0.11 主軸是「把借來的數字清出去」：詞表出貨即空、門檻標明為範例校準值、合規法源逐條標 [official]/[reported]/[speculative]。⚠ 風險：**單人維護 + 兩個月新專案 + 歷史僅 2 筆 issue**（1,580⭐ 與互動量落差大，多數人是收藏非使用）；WebSearch 查無任何第三方評測。star:watcher 527:1 依實測基準無鑑別力，不當紅旗。**📌 可單獨抽取**：gate_core.py 純 Python 可單檔複製；teardown.py 的節奏量測半邊；OCR 能力邊界寫死在原始碼防誤用的寫法 |
@@ -210,10 +215,11 @@ tags: [github, index, repos]
 ---
 | [[Github/repos/chatgpt-video-editing-skills — 繁中八步短影音剪輯安全 skill|chatgpt-video-editing-skills]] | 🔬 | ⏳ | 188⭐ MIT繁中；把「使用者自拍影片→ 9:16 直式短片」拆成兩 skill：setup（只檢查/裝/驗證環境，不上傳不剪）＋editor（八步：素材檢查→逐字轉寫→內容整理→剪輯策略（先給白話策略等核准）→粗剪→字幕→720p 預覽→QA 正式）。**賣點不是功能是安全工程**：逐檔讀 runbook/security 全清——來源全釘官方 HTTPS（字體 `curl -fL --proto '=https'`、LFS-skip、frozen-lockfile、隔離 npm cache）、憑證 check-ignore→拒 symlink→chmod 600→stat 複驗、非 git worktree 新檔一律 hard stop、每個 mutation/上傳/付費都要顯式核准、原檔零破壞、**未驗證不得稱完成**（R17 教科書級）——與 reverse-skill 強制自注入正好相反。判 ⏳：①需求不存在（已裝 HyperFrames 群＋claude-real-video＋hyperframes-media，但**剪真實素材成 Reels** 無在跡任務，R13）②硬依賴重：browser-use/video-use 完整 repo＋uv＋ElevenLabs Scribe v2 **付費**憑證，選用動畫還要 Node22＋Bun ③太新太小（2.7 週/單人/無 release/社群零訊號）。升級條件＝真出現剪自拍素材成繁中直式短片的重複任務（個人品牌/求職自介短片）且願設 video-use＋ElevenLabs；放棄＝上游持續静默（已 2 週無 commit）或 video-use 上游改動使 runbook 失效。**📌 可單抽**：security-and-verification 的憑證處理範式、output-contract 的「未驗證不得稱完成」契約，當安全 skill 範本 |
 
-## 🧰 開發工具 / CLI（23 篇）
+## 🧰 開發工具 / CLI（24 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/magpie — 跨Agent模型閘道與認證邊界評估\|magpie]] | 🔬 | ⏳ | 12.3K⭐ MIT；Windows 多 agent 模型閘道，預設認證探索、遙測與自動更新。固定原碼檢查；Windows 完整 tests 未跑，該 SHA Test cancelled；不接管 Codex 主環境。 |
 | [[Github/repos/claw-code — Claude Code 外洩事件催生的 Rust 重寫版\|claw-code]] | 🔬 | ❌ | 195K⭐ MIT；**Claude Code source map 外洩（逾 50 萬行）的衍生產物**——Sigrid Jin 用 Codex 依架構重寫、一天破 10 萬星，Anthropic 提 8,100+ 件 DMCA（後收斂近百件精準鎖定）；作者宣稱無專有檔案，但「重寫是否構成衍生著作」未經裁判。crate 真名仍是 `rusty-claude-cli`。**作者已親自封為「博物館展品」**：README 首段就要你改用 LazyCodex/Gajae-Code，06-26 起停更、近四週 commit 0、0 release、雙人貢獻者佔 70%。339 檔/1.21M tokens，11 crate（含 `claw-analog` 唯讀 CI 殼、`claw-rag-service` SQLite 語意檢索、`compat-harness` parity 對拍）；`main.rs` 75.6 萬字元＋第二大檔是 commit 進庫的 agent 對話 JSON（10.2%）＝**agent 生成程式碼的指紋**。判 ❌ 三獨立理由：作者自我下架／要 API key 計費不吃訂閱（對訂閱者嚴格更差）／**安全治理實質失效**（HIGH 揭露卡在關閉的 PVR 兩週無回應、Medium 越界讀取 main 上未修、0 advisory，而它會跑 bash＋掛 MCP＋存取整個工作區）。fork/star 56% 異常已解釋＝「趁還在趕快留一份」，抽樣 100 個 fork 全 0 星未修改且至今每天仍增 2–5 個。⚠️ `cargo install claw-code` 是廢棄 stub，指向的 `agent-code` 屬**另一個 org**（avala-ai）。**📌 真正該追的是活體後繼**：oh-my-openagent 66.8K⭐、oh-my-claudecode 38.2K⭐、clawhip 922⭐（通知路由推出 context window，與 R16 同題）；oh-my-codex 32.3K⭐ **無 LICENSE 先別碰** |
 | [[Github/repos/mimic — 攔截App流量AI生成Python client\|mimic]] | 🔬 | ⏳ | 1.4K⭐ Deno作者8天衝榜；抓App流量→claude生成可重放Python client；QA領域相關（手動→回歸腳本）；DPoP無解；限自己帳號/ToS |
 | [[Github/repos/crawl4ai — 開源 LLM 友善網頁爬蟲與擷取框架\|crawl4ai]] | 🔬 | ⏳ | 72.1K⭐ 自架開源網頁爬蟲，免 API Key，官方附 Claude Skill + MCP Bridge；與 firecrawl（SaaS）互補 |
@@ -254,10 +260,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🎨 設計 / UI / 前端（13 篇）
+## 🎨 設計 / UI / 前端（14 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/diagram-design — 品牌圖表方法與本機匯出驗證\|diagram-design]] | 🔬 | ⏳ | 54.3K⭐ MIT；45 種圖型規則。上游 2.6.98 自檢與 88 個 SVG tests 通過，CSS escape 引用斷鏈已重現；本機 2.6.90 保留，未升級或驗真人產圖。 |
 | [[Github/repos/awesome-design-skills — 67種美學風格的SKILL.md註冊庫\|awesome-design-skills]] | 🔬 | ⏳ | 1.9K⭐ 67 美學風格 SKILL.md/DESIGN.md 註冊庫（brutalism/glassmorphism/neon/retro…）；`npx typeui.sh pull`；與 awesome-design-md 互補（風格 vs 品牌）；靜態SKILL.md無法看codebase，按需pull即可 |
 | [[Github/repos/Open Design — 開源版Claude Design讓CLI agent變設計引擎\|Open Design]] | 🔬 | ⏳ | 80K⭐ 開源版 Claude Design 桌面 app（Electron）；接你已裝 CLI(BYOK)當設計引擎產原型/簡報/影片；71 DESIGN.md+19 skills；nexu-io 是 hyperframes/html-anything vendor；曾移除2GB+CLI-first重疊故觀望 |
 | [[Github/repos/awesome-design-md — 73 套品牌 DESIGN.md 設計系統收藏庫\|awesome-design-md]] | 🔬 | ✅ | **105K⭐**（07-29 回訪，初訪 93.5K／+12.5%）74 套品牌 DESIGN.md（檔名「73 套」為歷史遺留、內容本就 74）；每份 500–800 行十段結構，`Known Gaps`（自陳未覆蓋範圍）＋`Iteration Guide`（教 agent 往下推導）兩段是同類 token dump 沒有的。**回訪兩大發現**：①**已轉付費引流層**——README 品牌連結全改指 getdesign.md，官網 `/request` 私有 DESIGN.md **$59→$39**、LaunchKit **$299→$249**，宣稱「300+ 可請求」但那 300+ 不在免費 repo；**內容 commit 停在 06-08（7 週）而 300 張 open issue 幾乎全是無人處理的品牌請求**＝請求流被改道，別期待新品牌免費加入。②**`/design-fetch` 6 項對照失效（P1，**07-29 已修＋驗收 74/74→200**）**：`linear`/`opencode-ai`/`runway`/`the-verge`/`together-ai`/`xai` 全 404，正確為 `linear.app`/`opencode.ai`/`runwayml`/`theverge`/`together.ai`/`x.ai`（12 次實呼叫驗證），**linear 還是本頁第一推薦**——根因是上游用含點號真實網域名、skill 建立時寫慣用短名，屬淺探型盲區同族。**✅ 維持已裝但降預期**：免費 74 套 raw URL 實測仍 200、MIT 不變、與 awesome-design-skills（風格向）不重疊；放棄條件＝轉 archived／免費檔進付費牆（raw 開始 404）／授權改限制性。📌 十段結構可當「把視覺規範寫成 AI 可消費格式」的自用範本 |
@@ -273,10 +280,12 @@ tags: [github, index, repos]
 ---
 | [[Github/repos/make-interfaces-feel-better — UI 細節打磨的 agent skill|make-interfaces-feel-better]] | 🔬 | ⏳ | 2.8K⭐ MIT；純文件 skill（47KB / 11 檔全 Markdown），19 條帶具體數值的前端打磨原則（同心圓角、按壓 scale 一律 0.96、圖示 blur 4px→0、bounce 永遠 0、點擊區 44×44）。**真正差異點不是原則而是審查協議**：quick/full 雙模式、發現數上限 5/15、五類別「實際檢查了什麼證據」覆蓋表（明文禁止暗示未檢查的面向已審）、強制列「Considered but Rejected」、沒跑的檢查標 Not verified、最後給 Block/Needs-changes/Approve 判決——與本環境 R17 交付契約同構。架構上是漸進揭露範本（SKILL.md 只留判斷，recipe 下放五個子檔）。判 ⏳ 三條：①本機已裝 8 個同域 skill，其中 `emil-design-eng` 連「必須用 Before/After 表格、禁止分行寫」這條格式規約都一字不差重複（同一批設計工程共識）；②description 約 580 bytes≈145 tokens，清單預算 Σ=4,718/5,000 實測，裝入後餘裕從 282→137 tokens；③MIT 可直接拄審查協議進既有 skill 不必整包裝。升級條件＝跟 `emil-design-eng` 對同一份程式碼並排實測，贏了就**取代**不並存；放棄條件＝協議已拄完用得順／至 2026 年底仍零 release 單人零外部 PR。⚠️ bus factor 1、零 tag 無版本可釘、0 issue/0 PR、stargazers API 本環境普遍 404 故星數成長未能驗證 |
 
-## 📚 學習 / 教程 / RAG（12 篇）
+## 📚 學習 / 教程 / RAG（14 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/system-design-primer — 系統設計教材與練習完成度評估\|system-design-primer]] | 🔬 | ✅ | 374.2K⭐ HTML約數，CC BY4.0；四步系統設計、繁中與Anki，程式含pass練習骨架；適合用既有QA案例學習，非可部署系統。 |
+| [[Github/repos/ai-agents-for-beginners — Agent教材與範例驗收界線評估\|ai-agents-for-beginners]] | 🔬 | ✅ | 77.1K⭐ MIT，18課/MAF1.10；mock與smoke不等正式驗收，第16課跨客戶cache重用已離線重現；推薦閱讀，未跑Azure/模型。 |
 | [[Github/repos/graphrag — 微軟知識圖譜 RAG 管線\|graphrag]] | 🔬 | ⏳ | 34.7K⭐ 知識圖譜RAG（Leiden社群+分層摘要）；索引成本是頭號痛點；gbrain規模用不到，升級條件=全局問題痛點/LazyGraphRAG併入 |
 | [[Github/repos/ai-engineering-from-scratch\|ai-engineering（repos版）]] | 📎 | 📌 | 20 phase AI 工程課 |
 | [[Github/repos/(選讀)rohitg00ai-engineering-from-scratch — 從零開始 AI 工程師完整課程（20 phases）\|ai-engineering（選讀版）]] | 📎 | 📌 | 同上詳細版 |
@@ -308,10 +317,14 @@ tags: [github, index, repos]
 
 ---
 
-## 🔒 安全 / 自動化 / 其他（20 篇）
+## 🔒 安全 / 自動化 / 其他（24 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/blackbird — 帳號OSINT搜尋與結果可靠性評估\|blackbird]] | 🔬 | ⏳ | 9.1K⭐；username／email OSINT CLI，AI 只送站名。TLS 驗證關閉與 NONE 分類已離線重現；清單未固定、授權標示待釐清，不安裝或查真人帳號。 |
+| [[Github/repos/maigret — 使用者名稱OSINT與遞迴調查評估\|maigret]] | 🔬 | ⏳ | 39K⭐；MIT、活躍維護，附 8,144 筆網站資料與遞迴調查。主要 aiohttp TLS 驗證關閉與空標記誤報已離線重現；AI 外送完整報告，暫不安裝。 |
+| [[Github/repos/spiderfoot — OSINT事件框架與攻擊面盤點評估\|spiderfoot]] | 🔬 | ⏳ | 23.5K⭐；MIT、233 模組與 37 關聯規則。master tip 停在 2023 年；Passive 依標籤選模組、帳號模組關閉 TLS 驗證，收藏研究不安裝。 |
+| [[Github/repos/theharvester — 網域OSINT與查詢來源留證評估\|theharvester]] | 🔬 | ⏳ | 18K⭐；GPL-2.0-only、60 來源與 provenance。固定源 5.0.0／Python3.14，別混用 stable4.11.1；網域邊界六案例離線通過，授權盤點候選、暫不安裝。 |
 | [[Github/repos/iFixAi — AI Agent 行為與治理稽核工具\|iFixAi]] | 🔬 | ⏳ | 23.4K⭐ Apache-2.0；60項治理測試、evidence與跨provider judge。暫不安裝：Plugin仍pin 3.3.0而引擎已4.1.0、CI未跑pytest、分數需連同coverage閱讀。固定c1741d7，僅原始碼分析，未執行模型評測 |
 | [[Github/repos/n8n — 視覺化工作流自動化平台（fair-code 非開源）\|n8n]] | 🔬 | ⏳ | 198.7K⭐ **非 OSI 開源**——Sustainable Use License「只能自用或非商業，對外提供須免費」＋`.ee` 檔需 Enterprise License（**實測 1,110 檔／全 repo 4.3%**）＋**master 以外分支不受任何授權涵蓋**。43 個 `feat:*` 付費旗標經 `LicenseState.isLicensed()` 執行期強制，自架免費版**沒有資料夾分類、沒有 Git 版控、沒有環境變數、沒有 workflow diff/版本、三個 AI 輔助全鎖**——核心執行不限次數，被關的是協作治理與 AI。26,031 檔／6,546 目錄（Trees API 全量，**repomix 引擎本輪失敗**：archive 停在 8.3MB→git clone→Windows EPERM rmdir，未取得 token 數）；`.ts` 佔 72%，54 個 `@n8n/*` 子套件含 vendor 的 TypeORM 分支 2,572 檔。**2026 已轉型 AI agent 平台**：MCP client+server 雙向（402 個 .ts）、`mcp-browser`（Playwright/BiDi）、`mcp-browser-extension`（CDP 控 Chrome）、⚠️ `computer-use`（AI 助手的**本機 filesystem/shell/截圖**閘道）。體質頂級：週 400 commit、一天多版、$180M 募資、Fireship 118.9 萬觀看教學。判 ⏳ 非因品質——**個人自架完全合規**，是成本效益：現有 schtasks+PowerShell 排程能動，加常駐 Docker ＝ R13「加複雜度換小改善」；且 `sourceControl` 被鎖會讓工作流變成唯一沒進 git 的資產。**📌 可單獨抽取**：43 旗標清單（免費/付費切線的產品決策教材）、`task-runner`+`task-runner-python` 隔離執行參考、`n8n.io/llms.txt` |
 | [[Github/repos/Panniantong-Agent-Reach — AI Agent 互聯網感知層\|Agent Reach]] | 🔬 | ✅ | 60.8K⭐ 15 渠道互聯網能力層（選型/安裝/體檢/路由，讀取由 Agent 直呼上游）；已裝 v1.5.0，實測 13/15 可用；⚠️ 小紅書/Twitter 有實證封號案例（issue #498），排程長跑須用拋棄帳號 |
