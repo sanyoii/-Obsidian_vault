@@ -6,7 +6,7 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 251 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
+> 252 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
 > 最後更新：2026-10-12
@@ -76,10 +76,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（62 篇）
+## 🛠️ Claude Code / Skills（63 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/Understand-Anything — 程式知識圖譜與Wiki資料邊界評估\|Understand-Anything]] | 🔬 | ⏳ | 86.3K⭐ MIT；五檔419行隔離試用，圖譜／模糊搜尋／節點／導覽及11項HTTP檢查通過；12次搜尋比較確認semantic仍共用模糊引擎，10/15核對main與release均未接線。維持固定版，不全域安裝、不掃Wiki。 |
 | [[Github/repos/awesome-claude-code — 資源目錄與下游驗收界線評估\|awesome-claude-code]] | 🔬 | ✅ | 55.7K⭐；CC BY-NC-ND4.0目錄，CSV252列/241active，curated不等於下游audited；收藏按缺口選候選，未裝維護hooks或任何下游。 |
 | [[Github/repos/awesome-distillhub-persona-skills — 人格技能目錄與交付證據評估\|awesome-distillhub-persona-skills]] | 🔬 | ❌ | 76⭐；固定版只有 README，零 Skill／CLI，70 個下游 GitHub 線索。授權口徑不清、七個抽樣連結公開 API 404，僅收藏目錄不安裝。 |
 | [[Github/repos/NESA-SLIDE — 可編輯HTML與PPTX的AI簡報製作系統\|NESA-SLIDE]] | 🔬 | ⏳ | 73⭐ MIT；七個專案Skills、HTML editor與原生PPTX流程。三支Node回歸通過；完整生圖／瀏覽器／PowerPoint未驗，建議獨立試用。 |
