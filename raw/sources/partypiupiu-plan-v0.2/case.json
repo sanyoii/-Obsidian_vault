@@ -1,0 +1,830 @@
+{
+  "schema_version": 1,
+  "id": "partypiupiu",
+  "kind": "client",
+  "scope": {
+    "description": "PartyPiuPiu企劃v0.2：使用者確認無額外測試環境，帳號由我們準備；正式站操作以前置基準、操作別復原演練及範圍核對為門檻。hours_limit=0/retry_limit=0表示正式測試尚未開放，32–45人時為規劃預留。",
+    "included": [
+      "公開資料盤點",
+      "圖文測試企劃",
+      "32 個候選情境與追溯",
+      "正式環境復原計畫與帳號準備責任"
+    ],
+    "excluded": [
+      "未具備回復條件的正式站寫入",
+      "目前正式功能執行",
+      "未核准刪除及存取控制專項",
+      "容量、時間快轉、壓力與滲透測試",
+      "寄送客戶訊息及發布"
+    ],
+    "owner": "主模型編寫；使用者／委託方確認",
+    "hours_limit": 0,
+    "retry_limit": 0
+  },
+  "version": "Unknown-product-version; plan-v0.2",
+  "environment": "production-only; recovery-readiness-unverified; no-staging",
+  "authorization": {
+    "status": "authorized",
+    "reference": "2026-09-17 使用者要求先寫圖文完整測試企劃；同日使用者指定無額外環境、需可recover且帳號自行準備",
+    "allowed_actions": [
+      "讀取公開說明頁",
+      "本機企劃與候選案例建檔",
+      "Wiki及本機復原企劃更新",
+      "自備專用測試帳號與環境準備；仍須可控收信入口及就緒條件"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-01",
+      "source": "https://partypiupiu.com/terms",
+      "source_version": "public-snapshot-2026-09-17T10:56:43.986755+08:00",
+      "rule": "建立活動需帳號與 email 驗證；每帳號最多 10 個活動專案。",
+      "confirmed": false,
+      "questions": [
+        "驗證前允許操作、登入期限與第 11 個專案的拒絕規則？"
+      ]
+    },
+    {
+      "id": "REQ-02",
+      "source": "https://partypiupiu.com/guide",
+      "source_version": "public-snapshot-2026-09-17T10:56:43.986755+08:00",
+      "rule": "參加代碼串聯 QR、手機頁與大螢幕；後台可切換投影活動。",
+      "confirmed": false,
+      "questions": [
+        "舊 QR、複製專案、跨帳號及切場中提交的歸屬？"
+      ]
+    },
+    {
+      "id": "REQ-03",
+      "source": "https://partypiupiu.com/guide",
+      "source_version": "public-snapshot-2026-09-17T10:56:43.986755+08:00",
+      "rule": "來賓免註冊掃碼、自拍、自動去背，角色由選擇池隨機分配。",
+      "confirmed": false,
+      "questions": [
+        "支援的裝置、照片規格、空角色池與失敗復原規則？"
+      ]
+    },
+    {
+      "id": "REQ-04",
+      "source": "https://partypiupiu.com/guide",
+      "source_version": "public-snapshot-2026-09-17T10:56:43.986755+08:00",
+      "rule": "留言可呈現在大螢幕；未登場前可收回重打，收回後重新排隊。",
+      "confirmed": false,
+      "questions": [
+        "長度、速率、排序、上台瞬間撤回與內容管理規則？"
+      ]
+    },
+    {
+      "id": "REQ-05",
+      "source": "https://partypiupiu.com/",
+      "source_version": "public-snapshot-2026-09-17T10:56:43.986755+08:00",
+      "rule": "單場最多 400 人；人數到 85% 時後台提醒。",
+      "confirmed": false,
+      "questions": [
+        "人數是裝置、上傳者或同時在線數？留言者是否計數？85%是否含等於？"
+      ]
+    },
+    {
+      "id": "REQ-06",
+      "source": "https://partypiupiu.com/privacy",
+      "source_version": "public-snapshot-2026-09-17T10:56:43.986755+08:00",
+      "rule": "最後一次活動起保留 7 天；清除前 24 小時提醒；設定與場景保留。",
+      "confirmed": false,
+      "questions": [
+        "最後一次活動的定義、時區、排程誤差、重試與備份清除範圍？"
+      ]
+    },
+    {
+      "id": "REQ-07",
+      "source": "https://partypiupiu.com/guide",
+      "source_version": "public-snapshot-2026-09-17T10:56:43.986755+08:00",
+      "rule": "複製專案產生新代碼與 QR；原專案清除名單留言後保留設定場景。",
+      "confirmed": false,
+      "questions": [
+        "清除照片、舞台快取與進行中請求的範圍？可否復原？"
+      ]
+    },
+    {
+      "id": "REQ-08",
+      "source": "https://partypiupiu.com/guide",
+      "source_version": "public-snapshot-2026-09-17T10:56:43.986755+08:00",
+      "rule": "後台可切換畫面；提供螢幕比例、測試圖案與現場換算器。",
+      "confirmed": false,
+      "questions": [
+        "同步時限、斷線重連、重複提交、多控制端的權威狀態？"
+      ]
+    },
+    {
+      "id": "REQ-09",
+      "source": "https://partypiupiu.com/privacy",
+      "source_version": "public-snapshot-2026-09-17T10:56:43.986755+08:00",
+      "rule": "照片暱稱留言用於現場顯示；主辦可查看該場名單留言；裝置識別用於計數。",
+      "confirmed": false,
+      "questions": [
+        "活動代碼是否視為公開邀請？主辦跨帳號隔離與內容移除權限？"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "source": "https://partypiupiu.com/",
+      "source_version": "public-snapshot-2026-09-17T10:56:43.986755+08:00",
+      "rule": "公開提供教學、登入、建立活動、條款與隱私入口；需網路。",
+      "confirmed": false,
+      "questions": [
+        "正式支援矩陣、輔助使用需求與可接受等待時間？"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "RISK-01",
+      "description": "內容串場或跨帳號外洩",
+      "priority": "high",
+      "basis": "自拍與留言可能被不相干活動顯示，影響隱私與現場信任。",
+      "requirement_ids": [
+        "REQ-02",
+        "REQ-09"
+      ]
+    },
+    {
+      "id": "RISK-02",
+      "description": "來賓無法加入",
+      "priority": "high",
+      "basis": "相機權限、首次模型載入或容量判斷可能阻斷主要旅程。",
+      "requirement_ids": [
+        "REQ-03",
+        "REQ-05"
+      ]
+    },
+    {
+      "id": "RISK-03",
+      "description": "控制與大螢幕不同步",
+      "priority": "high",
+      "basis": "台上畫面失控、黑屏或舊內容再出現，活動期間難以補救。",
+      "requirement_ids": [
+        "REQ-02",
+        "REQ-08"
+      ]
+    },
+    {
+      "id": "RISK-04",
+      "description": "資料未按規則清除或誤刪",
+      "priority": "high",
+      "basis": "7 天規則、複製與清除交互作用會影響資料完整性。",
+      "requirement_ids": [
+        "REQ-06",
+        "REQ-07",
+        "REQ-09"
+      ]
+    },
+    {
+      "id": "RISK-05",
+      "description": "重複提交與計數錯誤",
+      "priority": "high",
+      "basis": "重送、同裝置與競態可能重複排隊或錯誤拒絕第 400 位。",
+      "requirement_ids": [
+        "REQ-04",
+        "REQ-05",
+        "REQ-08"
+      ]
+    },
+    {
+      "id": "RISK-06",
+      "description": "帳號或專案操作卡住",
+      "priority": "medium",
+      "basis": "email 驗證或 10 個專案邊界阻止主辦準備活動。",
+      "requirement_ids": [
+        "REQ-01"
+      ]
+    },
+    {
+      "id": "RISK-07",
+      "description": "不當留言無法控制",
+      "priority": "high",
+      "basis": "現場公開內容需要明確管理方式，功能存在與規則待確認。",
+      "requirement_ids": [
+        "REQ-04",
+        "REQ-09"
+      ]
+    },
+    {
+      "id": "RISK-08",
+      "description": "小螢幕與特殊投影不可用",
+      "priority": "medium",
+      "basis": "來賓手機、平板與 LED 牆各有不同互動與尺寸限制。",
+      "requirement_ids": [
+        "REQ-08",
+        "REQ-10"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "TC-01",
+      "requirement_ids": [
+        "REQ-10"
+      ],
+      "risk_ids": [
+        "RISK-08"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；瀏覽器／鍵盤",
+      "data": "公開入口與導覽",
+      "steps": [
+        "逐一走首頁、教學、登入、註冊、條款、隱私",
+        "返回上一頁與重整。"
+      ],
+      "expected": "連結到正確頁；不丟失必要上下文；實際互動須另測。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-10",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-02",
+      "requirement_ids": [
+        "REQ-01"
+      ],
+      "risk_ids": [
+        "RISK-06"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；測試信箱／功能",
+      "data": "註冊與信箱驗證",
+      "steps": [
+        "用核准測試信箱註冊",
+        "驗證前建活動",
+        "點有效／過期／重用連結。"
+      ],
+      "expected": "依核准驗證規則允許或拒絕；錯誤可恢復、不洩漏帳號資訊。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-01",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-03",
+      "requirement_ids": [
+        "REQ-01"
+      ],
+      "risk_ids": [
+        "RISK-06"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；功能／測試帳號",
+      "data": "登入、登出與工作階段",
+      "steps": [
+        "以自有測試帳號登入登出",
+        "重整、返回、session 過期。"
+      ],
+      "expected": "登出與過期後受保護操作不可沿用舊狀態。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-01",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-04",
+      "requirement_ids": [
+        "REQ-01"
+      ],
+      "risk_ids": [
+        "RISK-06"
+      ],
+      "preconditions": "v0.2：目前暫緩正式站執行；復原／隔離條件未具備，見recovery-plan.md。TC-27僅可另規劃自然到期觀察。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；邊界／授權建立",
+      "data": "專案數量 9／10／11",
+      "steps": [
+        "隔離環境準備 9 個專案",
+        "新增至 10，再嘗試第 11 個",
+        "查實際數量。"
+      ],
+      "expected": "10 個上限按規格執行；拒絕後沒有多建或部分寫入。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-01",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-05",
+      "requirement_ids": [
+        "REQ-02"
+      ],
+      "risk_ids": [
+        "RISK-01"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；三端 E2E",
+      "data": "QR 與活動身分",
+      "steps": [
+        "建立 A/B 測試活動，掃各自 QR",
+        "比對手機、控制端與舞台活動。"
+      ],
+      "expected": "每條旅程都屬於正確活動，內容不串場。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-02",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-06",
+      "requirement_ids": [
+        "REQ-02"
+      ],
+      "risk_ids": [
+        "RISK-01"
+      ],
+      "preconditions": "v0.2：須拆分，只允許可回復之本機或自建活動分支；先確認操作別回復路徑，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；負向／自有代碼",
+      "data": "錯誤與失效代碼",
+      "steps": [
+        "開自有錯碼、已停用代碼",
+        "重整與返回",
+        "不枚舉他人活動碼。"
+      ],
+      "expected": "依核准生命週期提示失效且不展示無關內容。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-02",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-07",
+      "requirement_ids": [
+        "REQ-03"
+      ],
+      "risk_ids": [
+        "RISK-02"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；iOS／Android 真機",
+      "data": "相機同意、拒絕與復原",
+      "steps": [
+        "真機首次允許／拒絕相機，再到設定允許",
+        "重開頁面。"
+      ],
+      "expected": "可拍照；拒絕時提供可操作說明，不永久卡住。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-03",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-08",
+      "requirement_ids": [
+        "REQ-03"
+      ],
+      "risk_ids": [
+        "RISK-02"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；真機／外部 App",
+      "data": "LINE 內建瀏覽器",
+      "steps": [
+        "自有 QR／連結從 LINE 開啟，再依教學改用 Safari／Chrome。"
+      ],
+      "expected": "受限時有可理解指引；外部瀏覽器仍指向原活动。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-03",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-09",
+      "requirement_ids": [
+        "REQ-03"
+      ],
+      "risk_ids": [
+        "RISK-02"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；冷暖快取／網路調節",
+      "data": "首次模型載入與弱網",
+      "steps": [
+        "冷快取開頁",
+        "記錄可拍照時間",
+        "中途斷網，恢復後重試。"
+      ],
+      "expected": "有載入與錯誤狀態；可重試；等待門檻由客戶確認。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-03",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-10",
+      "requirement_ids": [
+        "REQ-03"
+      ],
+      "risk_ids": [
+        "RISK-02"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；三端 E2E／素材授權",
+      "data": "自拍到舞者上台",
+      "steps": [
+        "使用有授權測試人像自拍、重拍、送出，再開演出。"
+      ],
+      "expected": "圖片與暱稱對應正確；角色來自所選池；成功狀態不誤報。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-03",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-11",
+      "requirement_ids": [
+        "REQ-03"
+      ],
+      "risk_ids": [
+        "RISK-02"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；真機／人工觀察",
+      "data": "照片品質與裝置方向",
+      "steps": [
+        "在核准支援範圍測低光、多臉、旋轉、前後鏡頭與重拍。"
+      ],
+      "expected": "去背或拍攝失敗可理解且可恢复；不以美觀主觀判 Fail。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-03",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-12",
+      "requirement_ids": [
+        "REQ-03"
+      ],
+      "risk_ids": [
+        "RISK-02"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；資料邊界",
+      "data": "角色池空／單一／多個",
+      "steps": [
+        "設定 0／1／多個可用角色，進行自拍與加入。"
+      ],
+      "expected": "空池行為待核准；有池時只分配池內角色；不要求少量樣本證明隨機均勻。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-03",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-13",
+      "requirement_ids": [
+        "REQ-04"
+      ],
+      "risk_ids": [
+        "RISK-07"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；隱私替代旅程",
+      "data": "只留言、不上傳照片",
+      "steps": [
+        "新來賓不自拍，嘗試留言並在舞台檢查。"
+      ],
+      "expected": "依隱私政策，來賓可不入鏡而使用留言；細部前提待确认。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-04",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-14",
+      "requirement_ids": [
+        "REQ-04"
+      ],
+      "risk_ids": [
+        "RISK-07"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；表單／邊界",
+      "data": "留言內容與輸入邊界",
+      "steps": [
+        "測空白、中文、emoji、換行、核准長度前後與無害特殊字元。"
+      ],
+      "expected": "長度和顯示依核准規則；內容當文字處理且不破壞畫面。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-04",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-15",
+      "requirement_ids": [
+        "REQ-04"
+      ],
+      "risk_ids": [
+        "RISK-05"
+      ],
+      "preconditions": "v0.2：須拆分，只允許可回復之本機或自建活動分支；先確認操作別回復路徑，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；雙來賓／舞台",
+      "data": "留言撤回與重新排隊",
+      "steps": [
+        "送兩則可辨識訊息",
+        "第一則未登場前收回、改字重送",
+        "對照隊列。"
+      ],
+      "expected": "撤回內容不上台；重送按核准規則重新排隊。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-04",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-16",
+      "requirement_ids": [
+        "REQ-04"
+      ],
+      "risk_ids": [
+        "RISK-05"
+      ],
+      "preconditions": "v0.2：須拆分，只允許可回復之本機或自建活動分支；先確認操作別回復路徑，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；受控競態",
+      "data": "登場瞬間撤回競態",
+      "steps": [
+        "在核准隔離環境對照即將展示、展示中、已展示三種狀態撤回。"
+      ],
+      "expected": "每種狀態結果明確；不出現幽靈訊息或反覆展示；邊界政策待確認。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-04",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-17",
+      "requirement_ids": [
+        "REQ-05"
+      ],
+      "risk_ids": [
+        "RISK-05"
+      ],
+      "preconditions": "v0.2：目前暫緩正式站執行；復原／隔離條件未具備，見recovery-plan.md。TC-27僅可另規劃自然到期觀察。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；隔離資料／非壓測",
+      "data": "85% 提醒門檻",
+      "steps": [
+        "以種子資料準備 339／340／341 人，觀察後台提醒。"
+      ],
+      "expected": "400×85%=340 是候選邊界；依核准计數定義與是否含等於判定。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-05",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-18",
+      "requirement_ids": [
+        "REQ-05"
+      ],
+      "risk_ids": [
+        "RISK-05"
+      ],
+      "preconditions": "v0.2：目前暫緩正式站執行；復原／隔離條件未具備，見recovery-plan.md。TC-27僅可另規劃自然到期觀察。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；邊界／受控競態",
+      "data": "容量 399／400／401",
+      "steps": [
+        "隔離環境預置 399 人",
+        "依序及兩人同時加入最後名額。"
+      ],
+      "expected": "不超過 400；成功人數、舞者編號與拒絕訊息一致。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-05",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-19",
+      "requirement_ids": [
+        "REQ-05"
+      ],
+      "risk_ids": [
+        "RISK-05"
+      ],
+      "preconditions": "v0.2：須拆分，只允許可回復之本機或自建活動分支；先確認操作別回復路徑，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；計數／測試裝置",
+      "data": "裝置識別與重複加入",
+      "steps": [
+        "同瀏覽器重開、同裝置多分頁，再換瀏覽器與清除測試識別。"
+      ],
+      "expected": "依核准裝置計數規則；不擅自假設一人永遠等於一裝置。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-05",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-20",
+      "requirement_ids": [
+        "REQ-08"
+      ],
+      "risk_ids": [
+        "RISK-03"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；三端同步",
+      "data": "後台控制與舞台切換",
+      "steps": [
+        "QR 歡迎頁→演出→QR→留言",
+        "控制端與舞台端分機同步記錄。"
+      ],
+      "expected": "命令到正確舞台，狀態可辨識；延遲以雙端時間戳量測。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-08",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-21",
+      "requirement_ids": [
+        "REQ-02"
+      ],
+      "risk_ids": [
+        "RISK-01"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；跨活動 E2E",
+      "data": "活動切場與舊手機",
+      "steps": [
+        "A 投影中切到 B，同時用仍開 A 的手機送測試內容。"
+      ],
+      "expected": "內容歸屬與畫面切場符合確認規則；A 內容不得無故進 B。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-02",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-22",
+      "requirement_ids": [
+        "REQ-08"
+      ],
+      "risk_ids": [
+        "RISK-08"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；投影／人工視覺",
+      "data": "16:9 與特殊比例",
+      "steps": [
+        "使用測試圖案、實際顯示設備及已知尺寸驗證比例和換算器。"
+      ],
+      "expected": "QR、標題、舞者與留言可見；真實 LED 顯示需現場確認。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-08",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-23",
+      "requirement_ids": [
+        "REQ-08"
+      ],
+      "risk_ids": [
+        "RISK-03"
+      ],
+      "preconditions": "v0.2：須拆分，只允許可回復之本機或自建活動分支；先確認操作別回復路徑，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；故障恢复／隔離環境",
+      "data": "網路中斷、重送與重連",
+      "steps": [
+        "分別中斷來賓／舞台／控制端",
+        "提交後失去回覆再重連。"
+      ],
+      "expected": "狀態能恢復；不以重送成功掩蓋重複資料；恢復門檻待核准。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-08",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-24",
+      "requirement_ids": [
+        "REQ-08"
+      ],
+      "risk_ids": [
+        "RISK-03"
+      ],
+      "preconditions": "v0.2：須拆分，只允許可回復之本機或自建活動分支；先確認操作別回復路徑，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；多端功能",
+      "data": "控制端接手與多視窗",
+      "steps": [
+        "主辦測試手機改由平板接手",
+        "同帳號兩控制端先後操作。"
+      ],
+      "expected": "以核准控制權規則保持一致，不能默默操控錯誤活動。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-08",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-25",
+      "requirement_ids": [
+        "REQ-07"
+      ],
+      "risk_ids": [
+        "RISK-04"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；授權資料建立",
+      "data": "複製專案隔離",
+      "steps": [
+        "含測試名單留言的 A 複製成 B",
+        "比較代碼、QR、設定與活動資料。"
+      ],
+      "expected": "新代碼與 QR；舊資料留 A；可複製項目依核准清單。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-07",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-26",
+      "requirement_ids": [
+        "REQ-07"
+      ],
+      "risk_ids": [
+        "RISK-04"
+      ],
+      "preconditions": "v0.2：目前暫緩正式站執行；復原／隔離條件未具備，見recovery-plan.md。TC-27僅可另規劃自然到期觀察。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；另需刪除授權",
+      "data": "手動清除與殘留",
+      "steps": [
+        "僅在可丟棄測試活動清除",
+        "檢查名單、照片、留言、舞台及已開手機。"
+      ],
+      "expected": "指定活動資料依規則清除，設定場景保留；不波及 B；後端可见性另證明。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-07",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-27",
+      "requirement_ids": [
+        "REQ-06"
+      ],
+      "risk_ids": [
+        "RISK-04"
+      ],
+      "preconditions": "v0.2：目前暫緩正式站執行；復原／隔離條件未具備，見recovery-plan.md。TC-27僅可另規劃自然到期觀察。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；後端協作／測試信箱",
+      "data": "7 天保留與24小時提醒",
+      "steps": [
+        "以測試時鐘核對到期前後與到期前24小時",
+        "再安排真實排程見證。"
+      ],
+      "expected": "提醒及清除依最後活動定義、時區和容差；設定保留；加速測試不冒充實際7天。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-06",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-28",
+      "requirement_ids": [
+        "REQ-09"
+      ],
+      "risk_ids": [
+        "RISK-01"
+      ],
+      "preconditions": "v0.2：目前暫緩正式站執行；復原／隔離條件未具備，見recovery-plan.md。TC-27僅可另規劃自然到期觀察。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；需核准存取控制測試",
+      "data": "主辦 A／B 資料隔離",
+      "steps": [
+        "兩個自有測試帳號各自建活動，檢查 B 是否能存取 A 的管理資料。"
+      ],
+      "expected": "未授權不可讀寫；公開來賓連結與管理權限分開判定。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-09",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-29",
+      "requirement_ids": [
+        "REQ-09"
+      ],
+      "risk_ids": [
+        "RISK-07"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；UX／隱私／授權移除",
+      "data": "同意告知與內容移除",
+      "steps": [
+        "核對自拍前告知、僅留言選項，演練主辦移除自有測試內容。"
+      ],
+      "expected": "告知一致且可讀；實際移除能力与范围待確認；不判法律合規。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-09",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-30",
+      "requirement_ids": [
+        "REQ-10"
+      ],
+      "risk_ids": [
+        "RISK-08"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；人工／鍵盤／讀屏抽查",
+      "data": "手機排版與基本無障礙",
+      "steps": [
+        "小螢幕、放大文字、鍵盤焦點、欄位標籤與錯誤提示抽查。"
+      ],
+      "expected": "核心操作可見可達；需人工確認讀屏；不以自動掃描當完整認證。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-10",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-31",
+      "requirement_ids": [
+        "REQ-08"
+      ],
+      "risk_ids": [
+        "RISK-03"
+      ],
+      "preconditions": "v0.2：目前暫緩正式站執行；復原／隔離條件未具備，見recovery-plan.md。TC-27僅可另規劃自然到期觀察。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；穩定性／選配時長",
+      "data": "持續演出與裝置負荷",
+      "steps": [
+        "在核准資料量跑60分鐘，記憶體、幀率、溫度與重連情況抽樣。"
+      ],
+      "expected": "沒有持續惡化到不可用；60分鐘及性能門檻皆是提案，不是既有 SLA。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-08",
+      "kind": "ordinary"
+    },
+    {
+      "id": "TC-32",
+      "requirement_ids": [
+        "REQ-10"
+      ],
+      "risk_ids": [
+        "RISK-08"
+      ],
+      "preconditions": "v0.2：僅有正式環境；只讀可先行，寫入限自有帳號與測試活動，先過操作別復原門檻，見recovery-plan.md。候選案例，未執行。已核准環境、判準、測試資料與所需操作授權；真人可用性研究",
+      "data": "新手依教學辦一場",
+      "steps": [
+        "由未用過產品的受測者按教學建活動、掃碼與投影，記錄卡點。"
+      ],
+      "expected": "量測完成率、求助與耗時；10分鐘宣稱作研究依據，樣本不代表所有人。（候選判準，委託方待確認）",
+      "oracle_ref": "REQ-10",
+      "kind": "ordinary"
+    }
+  ],
+  "runs": [],
+  "defects": [],
+  "delivery": {
+    "review": "draft",
+    "reviewer": "主模型自查；真人審查待指定",
+    "approval_ref": "",
+    "acceptance": "pending",
+    "release_decision": "Unknown",
+    "limitations": [
+      "尚無瀏覽器與真機操作證據",
+      "公開承諾未經委託方確認為正式判準",
+      "登入後功能未查看",
+      "估時非報價或已核准預算",
+      "沒有額外測試環境；測試活動不是基礎設施隔離",
+      "尚無演練證據，不能保證復原；後端備份與還原責任Unknown"
+    ],
+    "unmeasured": [
+      "所有32候選情境 Not Run",
+      "400人負載與真實7天排程",
+      "真人可用性／實體投影",
+      "操作別復原演練、帳號找回、後端還原與RTO/RPO"
+    ],
+    "actions": [
+      "確認我們可控的收信入口並準備QA-A/QA-B",
+      "建立自有測試活動基準並記錄操作別復原步驟",
+      "完成最小可回復設定pilot後才擴大；不可回復的分支暫緩",
+      "確認正式服務事故窗口及網站方的備份／還原責任"
+    ]
+  },
+  "operations": {
+    "effort_hours": null,
+    "waiting_hours": null,
+    "cost_rate": null,
+    "quoted": null,
+    "invoiced": null,
+    "received": null,
+    "currency": "Unknown",
+    "changes": [
+      "2026-09-17 plan-v0.2：無staging，帳號自備，復原先行；新增4–6人時準備預留，合計32–45人時。未執行網站操作。"
+    ],
+    "closure": "未結案；企劃待審"
+  }
+}

@@ -3,6 +3,9 @@
 > 所有 AI Prompt 收藏集中區，可直接複製使用
 > 新增收藏：建一個 .md 檔放這裡 → 更新快速查詢表即可
 
+> **Full Spectrum Soul Reading 靈魂解讀 PDF Prompt** — [[Full-Spectrum-Soul-Reading-靈魂解讀-Prompt]]
+> - 15 頁 A4 報告原文：HTML + Playwright、封面、章節、CSS／SVG 圖表與 Natalia 引文
+
 > [!tip]- 目錄（點擊展開／收合）
 > **旅遊插畫 Prompts** — [[旅遊插畫-Prompts]]
 > - T1 · Pastel 紙拼貼橫式插畫（Meta + Florence + Rome）
@@ -99,6 +102,12 @@
 ---
 
 ## 快速查詢表
+
+### Full Spectrum Soul Reading 靈魂解讀 PDF Prompt（1 個）
+
+| # | 用途 | 格式 | 工具 | 標籤 | 來源檔 |
+|---|------|------|------|------|--------|
+| #1 | 靈魂解讀報告（原文收藏，未執行） | A4 PDF，15 頁 | HTML + Playwright | #靈魂解讀 #PDF | [[Full-Spectrum-Soul-Reading-靈魂解讀-Prompt]] |
 
 ### 旅遊插畫 Prompts（5 套模板）
 
@@ -323,6 +332,9 @@
 
 ## 標籤索引
 
+- **#靈魂解讀**：[[Full-Spectrum-Soul-Reading-靈魂解讀-Prompt]]
+- **#PDF**：[[Full-Spectrum-Soul-Reading-靈魂解讀-Prompt]]
+
 - **#木刻／#版畫**：[[照片木刻版畫雙層海報-Prompts]]
 
 - **#旅遊**：T1–T6 全部、#6 日系雜誌封面、#8 LOST IN、旅遊書籤紙雕 Meta
@@ -436,6 +448,7 @@
 
 | 檔案 | 內容摘要 | 模板數 |
 |------|---------|--------|
+| [[Full-Spectrum-Soul-Reading-靈魂解讀-Prompt]] | 15 頁 A4 靈魂解讀 PDF 報告原文，含封面、章節、配色與 HTML／Playwright 規格 | 1 個 Prompt |
 | [[照片木刻版畫雙層海報-Prompts]] | 上半原始攝影、下半柔亮限色手工版畫，3:4 直式、上下各 50%、逐張獨立輸出 | 1 個 Prompt |
 | [[旅遊插畫-Prompts]] | 6 套旅遊插畫模板（T1–T6），每套含 Meta 模板 + Florence 版（T1 含 Rome，T6 僅 Meta）| 6 套 / 12 個 Prompt |
 | [[ChatGPT-Image2-Prompts]] | ChatGPT Image 2 爆款圖整理包，含快速索引 | 11 個 Prompt |

@@ -6,19 +6,20 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 252 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
+> 257 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-10-12
+> 最後更新：2026-10-23
 
 ---
 
-## 🏢 AI-一人公司（19 篇）
+## 🏢 AI-一人公司（20 篇）
 
-分類入口：[[AI-一人公司/_index|AI-一人公司]]。此處收錄19篇分析（含七個旅行專案總比較及第八案Migo），狀態為採用建議，所評估項目尚未整包安裝；舊版 Video 分析保留於原分類。
+分類入口：[[AI-一人公司/_index|AI-一人公司]]。此處收錄20篇分析（含七個旅行專案總比較及第八案Migo），狀態為採用建議，所評估項目尚未整包安裝；舊版 Video 分析保留於原分類。
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[AI-一人公司/ai-employees — 八角色排程工作包與公司採用評估\|ai-employees]] | 🔬 | ⏳ | 748⭐ MIT；固定7b0d076e，8角色60例行。兩子代理唯讀審核、六組離線檢查通過；TODO／日期變更／超時完成案例確認工具限制，未驗真模型或排程，不整包安裝。 |
 | [[AI-一人公司/ai-travel-kit — 個人旅行訪談與旅後校準接入評估\|ai-travel-kit]] | 🔬 | 📌 | 2026-10-12：兩項方法已局部接入；6題主模型合成走查與本機檢查通過，未整包安裝、未驗真人效果。 |
 | [[AI-一人公司/useful-ai-prompts — 提示詞素材與公司知識接入評估\|useful-ai-prompts]] | 🔬 | ⏳ | 2026-09-20：679 prompts／259 Skills；基本結構通過不等於效果，按需取方法，不整包安裝。 |
 | [[AI-一人公司/jev-ultrafast — 瀏覽器代理與公司工作流接入評估\|jev-ultrafast]] | 🔬 | ⏳ | 2026-09-19：先取方法；驗收缺乘客數與艙等，沿用 Chrome profile，未安裝或實跑。 |
@@ -41,10 +42,11 @@ tags: [github, index, repos]
 
 ---
 
-## 🤖 AI Agent 框架（28 篇）
+## 🤖 AI Agent 框架（29 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/odysseus — 自架AI工作區與跨平台執行邊界評估\|Odysseus]] | 🔬 | ⏳ | 93.5K⭐ AGPL；自架聊天／代理／郵件／模型工作區。固定dev已有containment但舊文件落後；Windows必要隔離不足時拒絕代理執行。16檔AST與3項Node測試通過，未安裝／啟動，不取代Codex或掃Wiki。 |
 | [[Github/repos/langchain — 模型工具抽象與Agent框架評估\|langchain]] | 🔬 | ⏳ | 147.8K⭐ HTML約數，MIT；現代1.4.5與classic分開，create_agent建於LangGraph；HITL需配置、trace可選，沒有現有缺口不加框架。 |
 | [[Github/repos/awesome-mcp-servers — MCP目錄與連接權限評估\|awesome-mcp-servers]] | 🔬 | ✅ | 96.3K⭐ HTML約數，MIT目錄；混合實驗／正式候選與明示廣告，Local／Cloud不是權限保證；收藏找工具，下游各自審核。 |
 | [[Github/repos/anysearch-skill — 雲端搜尋介面與採用評估\|anysearch-skill]] | 🔬 | ⏳ | 三 runtime 本機契約及三題匿名搜尋通過；旅遊結果混入反向入境規則，全批429仍exit 0；維持觀望。 |
@@ -76,10 +78,12 @@ tags: [github, index, repos]
 
 ---
 
-## 🛠️ Claude Code / Skills（63 篇）
+## 🛠️ Claude Code / Skills（65 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/arena-skill — 多策略答案淘汰賽與採用評估\|arena-skill]] | 🔬 | ⏳ | 846⭐ MIT；固定df07b8e，100人595呼叫。10檔30,380 tokens；Python語法與JSON通過，上游27測試未跑。裁判缺分仍晉級、失敗答辯可能覆蓋舊答案；先參考方法，不安裝或替換Council。 |
+| [[Github/repos/answer-me-with-html — Markdown轉單頁HTML的Agent Skill與採用評估\|answer-me-with-html]] | 🔬 | ⏳ | 3.6K⭐ MIT；固定4df04fd，bundle測試及繁中CLI驗證通過；重現Mermaid混用與BOM標題問題。按需CLI候選，未全域安裝或啟用always-on。 |
 | [[Github/repos/Understand-Anything — 程式知識圖譜與Wiki資料邊界評估\|Understand-Anything]] | 🔬 | ⏳ | 86.3K⭐ MIT；五檔419行隔離試用，圖譜／模糊搜尋／節點／導覽及11項HTTP檢查通過；12次搜尋比較確認semantic仍共用模糊引擎，10/15核對main與release均未接線。維持固定版，不全域安裝、不掃Wiki。 |
 | [[Github/repos/awesome-claude-code — 資源目錄與下游驗收界線評估\|awesome-claude-code]] | 🔬 | ✅ | 55.7K⭐；CC BY-NC-ND4.0目錄，CSV252列/241active，curated不等於下游audited；收藏按缺口選候選，未裝維護hooks或任何下游。 |
 | [[Github/repos/awesome-distillhub-persona-skills — 人格技能目錄與交付證據評估\|awesome-distillhub-persona-skills]] | 🔬 | ❌ | 76⭐；固定版只有 README，零 Skill／CLI，70 個下游 GitHub 線索。授權口徑不清、七個抽樣連結公開 API 404，僅收藏目錄不安裝。 |
@@ -247,10 +251,11 @@ tags: [github, index, repos]
 | [[Github/repos/herdr — AI Coding Agent 終端執行環境\|Herdr]] | 🔬 | ⏳ | 29K⭐ Apache-2.0 Rust；persistent server 持有 PTY/process，TUI/JSON CLI/socket API 統一管理 workspace、pane 與 20 種 coding agent 狀態。架構、跨平台 CI 與 installer SHA-256 驗證扎實；但 Windows 仍 preview-only beta，Codex integration 會改 `~/.codex` hooks/config，plugin 無 sandbox，且與現有 wmux＋Codex collaboration 高度重疊。先 standalone 隔離試跑，出現 4+ 長任務或 Windows stable 再升級。 |
 ---
 
-## 📊 AI/ML 模型（7 篇）
+## 📊 AI/ML 模型（8 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
+| [[Github/repos/heretic — 模型權重研究與評估指標界線\|Heretic]] | 🔬 | ⏳ | 35.5K⭐ AGPL；權重研究工具，master 2.0.0.dev0／release 1.4.0分開。拒答關鍵字與首token KL不等於能力驗收，#490匯出分數差異未解；22檔AST與5個隔離函式案例通過，未安裝／下載模型。 |
 | [[Github/repos/TimesFM — Google 時間序列基礎模型\|TimesFM]] | 📎 | ⏳ | Google 時間序列 |
 | [[Github/repos/RLM — 遞迴語言模型推理框架\|RLM]] | 🔬 | ⏳ | 遞迴推理 |
 | [[Github/repos/Breeze-ASR-25 — 台灣中文中英混用語音辨識模型\|Breeze-ASR-25]] | 📎 | ⏳ | 台灣中文語音辨識 |

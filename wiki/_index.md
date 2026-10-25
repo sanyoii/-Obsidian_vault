@@ -1,7 +1,7 @@
 # 知識庫主索引
 
-> 最後更新：2026-09-22
-> 文章數量：534 篇（沿用既有516篇，本次新增18篇課程筆記；入口不計文章，未重算全庫）
+> 最後更新：2026-10-23
+> 文章數量：537 篇（沿用既有536篇，本次新增1篇 repo 分析；入口不計文章，未重算全庫）
 > 原始文件：持續累積中
 
 ---
@@ -12,6 +12,7 @@
 - [[_graph|概念連結圖]]
 - [[log|操作日誌（Karpathy 模式）]]
 - [[課程總覽|課程總覽（入口）]]
+- [[wiki/神秘學/個人命盤/00-我的命盤與解讀|個人命盤與解讀（本機私人資料）]] — 五系統資料、原件及分析入口；私人資料不計入上方既有文章數。
 
 ---
 
@@ -137,6 +138,7 @@
 - [[QA/一人軟體測試公司 — 原始架構規劃|一人軟體測試公司 — 原始架構規劃（歷史）]] — 保留完整第一版；現況以整合規劃為準。
 - [[QA/一人軟體測試公司 — 顧問團架構審議與角色分工|一人軟體測試公司 — 顧問團架構審議與角色分工]] — 五視角與匿名互評，檢視缺口、Architect／PM 責任及最小試案。
 - [[QA/AI 測試案例 Prompt 的缺口 — Test Design Method 與 QA Decision Desk 補強|AI 測試案例 Prompt 的缺口 — Test Design Method 與 QA Decision Desk 補強]] — 分析 Test Case prompt 缺少的技法選擇與 oracle，對照現有 Risk-Based QA Evidence Pack，提出先 pilot、再決定是否升級 canonical templates 的補強路線 `#QA #test-design #oracle #evidence`
+- [[QA/QA Decision Desk (test-status) 底層架構檢討與三版 UI 改造方案|QA Decision Desk (test-status) 底層架構檢討與三版 UI 改造方案]] — 針對 `test-status/` 線上站 4 項底層問題（TTL 過期全 `?`、雙軌資料源與錨點錯配、缺少 Hold 對照、缺少導航）與 3 套視覺重構方案（Option A/B/C 含高解析設計圖） `#QA #dashboard #release-readiness #UI-UX`
 
 ---
 
@@ -166,7 +168,7 @@
 
 ### Github/Repos（已分析 Repos）
 
-- [[Github/_index|Github Repo 分析總索引]] — 252 篇，分類與分析深度依總索引現況 `#github #index`
+- [[Github/_index|Github Repo 分析總索引]] — 257 篇，分類與分析深度依總索引現況 `#github #index`
 - [[Github/已安裝工具 — Github 分析索引|已安裝工具 × Wiki 交叉對照]] — 30 項已安裝工具的 Wiki 紀錄 `#github #installed`
 
 ---

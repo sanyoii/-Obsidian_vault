@@ -40,6 +40,7 @@ tags: [QA, 一人軟體測試公司, index]
 
 - [[QA/Risk-Based QA Evidence Pack 模版規劃]]：風險、案例、Run與證據契約。
 - [[QA/QA Decision Desk Playbook 改造加強計畫]]：測試判斷與程序設計。
+- [[QA/QA Decision Desk (test-status) 底層架構檢討與三版 UI 改造方案]]：線上展示站底層資料鏈檢討與三版 UI 改造方案（附 A/B/C 設計圖）。
 - [[QA/Low-Tech Testing Dashboard 實做計畫]]：測試結果呈現與限制。
 
 以上是跨專案共用的 QA 參考，保留原位置；不是本公司已完成的客戶成果。

@@ -1,0 +1,48 @@
+{
+  "at": "2026-09-17T10:58:14.259534+08:00",
+  "scope": "企劃結構／來源完整性；不是網站測試或瀏覽器視覺驗收",
+  "checks": {
+    "html_links": "Pass",
+    "svg_xml": "Pass",
+    "source_hashes": 6,
+    "candidate_cases": 32,
+    "executed_cases": 0
+  },
+  "commands": [
+    {
+      "command": [
+        "py",
+        "-3",
+        "-X",
+        "utf8",
+        "scripts/validate.py",
+        "專案/partypiupiu/case.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"errors\": [],\n  \"warnings\": [\n    \"未取得本次有效 Pass/Fail: TC-01, TC-02, TC-03, TC-04, TC-05, TC-06, TC-07, TC-08, TC-09, TC-10, TC-11, TC-12, TC-13, TC-14, TC-15, TC-16, TC-17, TC-18, TC-19, TC-20, TC-21, TC-22, TC-23, TC-24, TC-25, TC-26, TC-27, TC-28, TC-29, TC-30, TC-31, TC-32\"\n  ],\n  \"coverage\": {\n    \"denominator\": 32,\n    \"current_executed\": 0,\n    \"uncovered\": [\n      \"TC-01\",\n      \"TC-02\",\n      \"TC-03\",\n      \"TC-04\",\n      \"TC-05\",\n      \"TC-06\",\n      \"TC-07\",\n      \"TC-08\",\n      \"TC-09\",\n      \"TC-10\",\n      \"TC-11\",\n      \"TC-12\",\n      \"TC-13\",\n      \"TC-14\",\n      \"TC-15\",\n      \"TC-16\",\n      \"TC-17\",\n      \"TC-18\",\n      \"TC-19\",\n      \"TC-20\",\n      \"TC-21\",\n      \"TC-22\",\n      \"TC-23\",\n      \"TC-24\",\n      \"TC-25\",\n      \"TC-26\",\n      \"TC-27\",\n      \"TC-28\",\n      \"TC-29\",\n      \"TC-30\",\n      \"TC-31\",\n      \"TC-32\"\n    ]\n  },\n  \"release_authorized\": false,\n  \"review\": \"draft\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "offline/build.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"roles\":15,\"capabilities\":89,\"humanExplanations\":89,\"cases\":3,\"validationErrors\":0,\"warnings\":1,\"output\":\"offline/index.html\"}\n",
+      "stderr": ""
+    }
+  ],
+  "not_run": [
+    "正式網站功能",
+    "真機及多端互動",
+    "瀏覽器實際排版",
+    "列印PDF分頁",
+    "真人覆核"
+  ],
+  "earlier_limitations": [
+    "web open safe-open restriction; search returned no results",
+    "curl exit 1: SEC_E_NO_CREDENTIALS",
+    "offline/doctor.mjs absent: MODULE_NOT_FOUND",
+    "earlier browser startup failed on sandbox ACL; not a website defect"
+  ]
+}
