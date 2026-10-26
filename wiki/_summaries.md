@@ -662,3 +662,6 @@ Messenger 案例中的行為組合與裝飾者串接。
 
 唯一實例、共享資源及依賴注入的取捨。
 
+## [[Templates/QA/README|QA 九份模板 v0.3.0]]
+
+**摘要：** Wiki 僅保存 RiskQADemoSite 固定版本參考副本；九份 Markdown、完整中英文 HTML 連結、QA-Lite brief/design／run ledger／decision 與歷史 Run 保留規則由同一正式來源維護。

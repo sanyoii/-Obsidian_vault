@@ -131,6 +131,8 @@
 
 ### QA
 
+- [[Templates/QA/README|QA 九份模板 v0.3.0 與中英文示例]] — RiskQADemoSite 固定版本參考副本；QA-Lite 三份紀錄與唯讀投影架構沿正式來源。
+
 - [[QA/Web3-Crypto-QA-入門學習包|Web3／Crypto QA 入門學習包]] — 心智模型、Web2 vs Web3 對照、7 核心觀念、1–2 週路徑、一手來源與驗收題；求職向 Senior QA 入門 `#QA #Web3 #learning`
 - [[QA/Web3-Crypto-QA-互動教材|Web3／Crypto QA 互動教材]] — 關卡制：精讀→選擇／情境→自評；含 Boss 關與進度表 `#QA #Web3 #learning`
 - [[QA/一人軟體測試公司 — 架構與工作流程|一人軟體測試公司 — 架構與工作流程（現行）]] — 整合 Architect／PM 分工、五站交接、品質與資料邊界及首案規格；本機工具、工作台與合成示範已建立；真案與真人可用性未驗證。
