@@ -9,7 +9,7 @@ tags: [github, index, repos]
 > 252 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-10-12
+> 最後更新：2026-11-12
 
 ---
 
@@ -87,7 +87,7 @@ tags: [github, index, repos]
 | [[Github/repos/AgentKey — Chainbase 的付費 MCP 資料閘道\|AgentKey]] | 🔬 | ⏳ | 582⭐ Apache-2.0；Chainbase（Web3 資料公司）的**訂閱制資料閘道**——一個訂閱涵蓋 web search/scraping/社群/鏈上/財經/電商，雲端自動 failover。⚠️ **repo 不是產品本體**：主語言僅 Shell+PowerShell，Top 5 大檔全是安裝腳本，零應用邏輯；服務閉源託管於 `api.agentkey.app/v1/mcp`，寫設定的 `@agentkey/cli` 宣告 repo 實測 **404 私有**。✅ **供應鏈檢查通過**：線上 install.sh/.ps1 與 repo 內 **SHA-256 完全相同**，對外端點無非預期主機。⚠️ **最該注意**：SKILL.md 明文「**Use INSTEAD OF built-in WebSearch/WebFetch**」「don't fall back to Claude's built-in Web Search」＝**用計費服務取代你免費的內建工具**，且工具名包裝成通用的 `find_tools`/`execute_tool` 不揭露付費性質；已有使用者開 issue「吃相太难看了」指 server 端會把誘導文字注回每個 session（改本機 SKILL.md 擋不住），**0 回覆**。做得好的三點：prompt-injection 防禦寫進 SKILL.md、成本閘門（≥3 呼叫或 ≥10 credits 前強制查餘額估價確認、失敗呼叫不計費）、7 條 CI＋週更 15+ release。判 ⏳ 三理由：**定價頁 JS SPA 兩種爬法都抓不到**、覆蓋內建工具行為未解、**582⭐ 只有 2 watcher** 缺第三方實測。🪟 **本環境專屬坑**：安裝器認 `%USERPROFILE%\.claude.json`、**完全不認 `CLAUDE_CONFIG_DIR`**，會觸發 config-drift 金絲雀第 [4] 項 → ✅ **改走 `.claude-plugin/marketplace.json` 的 plugin 路徑可完全繞過**。**📌 可單獨抽取**：`cost-aware.md` 花錢前確認規則、`protocol/skill-meta-v1` 版本廣播協定、`install.ps1` 40+ agent Windows 路徑對照表 |
 | [[Github/repos/i-have-adhd — ADHD 友善輸出 skill\|i-have-adhd]] | 🔬 | ❌ | 5.3K⭐ 10 條 ADHD 友善輸出規則；與 caveman hook 高度重疊＋全域觸發衝突；可吸收個別規則零安裝 |
 | [[Github/repos/fable-method — Fable 5 工作法蒸餾成任何模型可跑的 Skill＋Eval\|fable-method]] | 🔬 | ⏳ | 1.6K⭐ Fable 5 工作法四 skill（think/act/prove/grow）＋15 輪對抗 eval；與 institution 同哲學不整裝，但 trap-fixture 迴歸測試是 institution 缺的真增量，升級條件＝下次改規則先寫 trap 測 |
-| [[Github/repos/hallmark — 拒絕 AI 味的前端設計 Skill（結構多樣性＋防呆閘門）\|hallmark]] | 🔬 | ✅ | 17.7K⭐ Nutlope 反 AI-slop 設計 skill；一預設+三動詞（build/audit/redesign/study）；強制跨頁結構多樣性、study 抽 DNA→可攜 design.md、57 gate slop-test+六軸自評；**07-18 已裝**（指名調用限定避開 taste 群打架）；**07-26 回訪**：星數+40% 但上游 7 週零 commit、ROADMAP 全未動、本地已是最新版；復查判準改為「下次設計任務實測 vs design-taste-frontend，沒贏就移除」 |
+| [[Github/repos/hallmark — 拒絕 AI 味的前端設計 Skill（結構多樣性＋防呆閘門）\|hallmark]] | 🔬 | ✅ | 53K⭐ Nutlope 反 AI-slop 設計 skill；**11-12 回訪：07-26「停滯」判讀作廢**——10/21 發 v2.0.0、近 4 週 56 commits。v2＝16 條不可豁免 Floor＋Floor 39／Reflex 50 gates＋零相依 `sloplint.mjs --render`（真瀏覽器量對比度／首屏／focus）＋50 主題目錄；`study` 動詞被移除。第三方 ablation（issue #74）量到可測效果，但不點名不會自動觸發。**11-12 已升級 v2.0.0**（仍指名調用限定，未跑 `install-hook.mjs`；v1 `study.md` 留在 git 632b1ff3） |
 | [[Github/repos/emilkowalski-skills — Design Engineer 動效與 Apple 設計 Skill 合集\|emilkowalski/skills]] | 🔬 | ✅ | 6.8K⭐ Sonner/Vaul 作者的 4 個動效 Skill；決策層互補現有 css-animations/gsap 等技術層 skill；2026-07-10 已裝（雙位置+marketplace） |
 | [[Github/repos/guizang-material-illustration — 歸藏材質插畫 Claude Skill\|guizang-material-illustration]] | 🔬 | ⏳ | 463⭐ 3天新；純Prompt型配圖Skill，帶中文標籤材質插畫+圖表美化；op7418歸藏系列，與已裝guizang-ppt互補 |
 | [[Github/repos/claude-howto — Claude Code 視覺化互動教學指南\|claude-howto]] | 🔬 | ⏳ | 39.5K⭐ 視覺化教學網站+repo，10模組+可複製模板+互動自評/測驗Skill；內容價值高於程式碼、非安裝型工具 |
