@@ -112,7 +112,7 @@ tags: [QA, 一人軟體測試公司, PartyPiuPiu]
 
 - [[一人軟體測試公司/PartyPiuPiu — 委託測試企劃|完整內部企劃]]
 - [[一人軟體測試公司/PartyPiuPiu — 00-測試文件入口|內部測試文件包]]
-- [獨立閱讀版 HTML](file:///D:/Codex/一人軟體測試公司/專案/partypiupiu/委託方測試說明.html)
+- [獨立閱讀版 HTML](file:///D:/一人軟體測試公司/專案/partypiupiu/委託方測試說明.html)
 
 ## 反向連結
 

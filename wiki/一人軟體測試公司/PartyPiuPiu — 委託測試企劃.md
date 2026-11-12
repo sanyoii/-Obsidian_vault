@@ -20,7 +20,7 @@ source: "https://partypiupiu.com/"
 > 本頁為 v0.2 正式環境復原修訂版，包含10項候選需求、8項風險、32個尚未執行的情境。環境、帳號與資料由我們規劃及準備；目前帳號尚未建立，所有復原能力尚未驗證。32–45人時為提案估算，非已發生工時或已報價金額。
 
 > [!info] 版本與紀錄來源
-> Wiki 是企劃閱讀版；正式案件及後續 Run 以 `D:/Codex/一人軟體測試公司/專案/partypiupiu/case.json` 為準。附件 case.json 為此次入庫快照，不是第二份即時案件帳本。公開資料取得於2026-09-17；本次只轉存企劃，未重新測試網站。
+> Wiki 是企劃閱讀版；正式案件及後續 Run 以 `D:/一人軟體測試公司/專案/partypiupiu/case.json` 為準。附件 case.json 為此次入庫快照，不是第二份即時案件帳本。公開資料取得於2026-09-17；本次只轉存企劃，未重新測試網站。
 
 [[raw/sources/partypiupiu-plan-v0.2/測試企劃.html|v0.2完整 HTML 圖文版]] · [[raw/sources/partypiupiu-plan-v0.1/測試企劃.html|v0.1歷史版]] · [[raw/sources/partypiupiu-plan-v0.1/企劃檢查紀錄.json|v0.1歷史檢查紀錄]]
 
