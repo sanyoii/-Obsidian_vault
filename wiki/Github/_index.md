@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 252 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
+> 254 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-11-12
+> 最後更新：2026-11-14
 
 ---
 
@@ -216,7 +216,7 @@ tags: [github, index, repos]
 ---
 | [[Github/repos/chatgpt-video-editing-skills — 繁中八步短影音剪輯安全 skill|chatgpt-video-editing-skills]] | 🔬 | ⏳ | 188⭐ MIT繁中；把「使用者自拍影片→ 9:16 直式短片」拆成兩 skill：setup（只檢查/裝/驗證環境，不上傳不剪）＋editor（八步：素材檢查→逐字轉寫→內容整理→剪輯策略（先給白話策略等核准）→粗剪→字幕→720p 預覽→QA 正式）。**賣點不是功能是安全工程**：逐檔讀 runbook/security 全清——來源全釘官方 HTTPS（字體 `curl -fL --proto '=https'`、LFS-skip、frozen-lockfile、隔離 npm cache）、憑證 check-ignore→拒 symlink→chmod 600→stat 複驗、非 git worktree 新檔一律 hard stop、每個 mutation/上傳/付費都要顯式核准、原檔零破壞、**未驗證不得稱完成**（R17 教科書級）——與 reverse-skill 強制自注入正好相反。判 ⏳：①需求不存在（已裝 HyperFrames 群＋claude-real-video＋hyperframes-media，但**剪真實素材成 Reels** 無在跡任務，R13）②硬依賴重：browser-use/video-use 完整 repo＋uv＋ElevenLabs Scribe v2 **付費**憑證，選用動畫還要 Node22＋Bun ③太新太小（2.7 週/單人/無 release/社群零訊號）。升級條件＝真出現剪自拍素材成繁中直式短片的重複任務（個人品牌/求職自介短片）且願設 video-use＋ElevenLabs；放棄＝上游持續静默（已 2 週無 commit）或 video-use 上游改動使 runbook 失效。**📌 可單抽**：security-and-verification 的憑證處理範式、output-contract 的「未驗證不得稱完成」契約，當安全 skill 範本 |
 
-## 🧰 開發工具 / CLI（24 篇）
+## 🧰 開發工具 / CLI（25 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -245,6 +245,7 @@ tags: [github, index, repos]
 | [[Github/repos/spec-kit — GitHub 官方的規格驅動開發工具組\|spec-kit]] | 🔬 | ⏳ | 125.7K⭐ MIT，GitHub 官方；把「寫程式前先產出可 review 的規格」做成一層外掛在既有 coding agent 之上的流程骨架——`specify` CLI 把 slash command 與 Markdown 模板注入專案，強制走 constitution → specify → plan → tasks → implement，每階段產出進 repo 的 .md 供人類 review。**流程本體是 Markdown 不是程式碼**，這是它一口氣支援 **37 個 agent 整合**（claude/copilot/codex/cursor/gemini/… + generic 逃生口）的原因，也是天花板——執行品質全靠下游 agent，spec-kit 自己不驗證。架構實料：`workflows/` 是真的編排 DSL（11 種 step：command·shell·prompt·gate·if_then·switch·while_loop·do_while·fan_out·fan_in·init + overlay 分層合併）、bundler 有 resolver/conflict/installer/validator、authentication 支援 GitHub＋Azure DevOps＋air-gapped。**測試投入罕見**：token 前三大檔全是測試（合計 18.2%），並有 `*_python_parity.py` 強制 bash/PowerShell/Python 三套腳本行為一致。社群 146 個擴充、近 8 週 commit 加速（59→112）、14 天發 8 個 release、Issue 關閉率 89.6%、YouTube 官方教學 58.9 萬觀看。判 ⏳ 非品質問題而是**需求重疊**：7-Agent 工廠＋writing-plans/executing-plans/spec-driven-development 已覆蓋同一段，增量只剩 workflow 引擎的 fan_out/gate 表達力；且使用者實測損益平衡點是「模糊到兩個工程師會做不同實作的需求」，與本環境近期以基建維護/單檔改動為主的工作型態不合。升級＝出現跨多階段、需求模糊、要把 spec 當 PR review 產物的實作型專案（先在 workspace/ 隔離試跑確認 `speckit.*` 不與 CLAUDE.md 路由打架）；放棄＝Claude Code 原生 plan mode 內建等能力／human commit 停滯>2 個月／隔離試跑證實與現有路由層無法共存。**📌 可單抽（逐字讀過 v0.16.0）**：①`speckit.bug.assess.md` 的 **URL Trust Policy**（拒抓 file:/RFC1918/metadata endpoint＋可疑指令引述進 `Unverified` 段落供人審而非執行——「注入不信」之上的「引述存證」增量）②`clarify.md` 機制（上限 5 問、答案回寫進 spec 檔非留對話）③`analyze.md` 跨產物一致性稽核（唯讀、constitution 衝突自動 CRITICAL）④spec-template 結構元素（story 優先級化＋獨立可測即 MVP＋Given/When/Then，diff 嫁接勿整抄）；註：三套腳本 parity 測試是「維持重複」的工具、與本環境「消滅重複」策略相反，僅「同腳本雙引擎」變體值得抄形 |
 | [[Github/repos/github-cheat-sheet — Git 與 GitHub 隱藏功能速查表\|github-cheat-sheet]] | 🔬 | ⏳ | 58.4K⭐ MIT；純 Markdown 的 Git/GitHub 隱藏功能速查表（五語系），無程式碼、無安裝物。內容凍結近 6 年（最後內容 commit 2020-10、之後僅贊助商連結變更），部分條目已過時（`git.io` 服務已關閉、`hub` CLI 已被 `gh` 取代文件未更新），但多數 URL 參數/分支比較/commit 語法技巧仍有效。社群口碑薄弱（僅十年前一則低分 Reddit 貼文），另抓到一則疑似農場帳號的 X 貼文誤稱其為「AI 工具」，已存證標注不採信。判 ⏳：文件性質不涉安裝，收錄為速查參考即可，但引用步驟前需自行驗證仍然有效 |
 | [[Github/repos/herdr — AI Coding Agent 終端執行環境\|Herdr]] | 🔬 | ⏳ | 29K⭐ Apache-2.0 Rust；persistent server 持有 PTY/process，TUI/JSON CLI/socket API 統一管理 workspace、pane 與 20 種 coding agent 狀態。架構、跨平台 CI 與 installer SHA-256 驗證扎實；但 Windows 仍 preview-only beta，Codex integration 會改 `~/.codex` hooks/config，plugin 無 sandbox，且與現有 wmux＋Codex collaboration 高度重疊。先 standalone 隔離試跑，出現 4+ 長任務或 Windows stable 再升級。 |
+| [[Github/repos/prompt-optimizer — 提示詞最佳化與多模型對比測試工作台\|prompt-optimizer]] | 🔬 | ⏳ | 41.5K⭐ **AGPL-3.0-only（2025-10-30 由 MIT 遷移，第三方頁面多仍標 MIT）**；把草稿 prompt 交給另一個 LLM 改寫，再並排測試、評分、迭代的工作台，同一套 core 發佈成網頁／桌面版／Chrome 擴充／Docker／MCP 五種形態，金鑰自備、無後端資料庫。單人維護（近 90 天 100 筆 commit 中 97 筆）但發版與 Issue 回應紀律好（關閉率 98%）。npm 無自家套件（同名 `prompt-optimizer` 是別人的），採用度看 Docker 23.7 萬 pulls。**原始碼查到 README 沒講的風險**：Docker 的 `/mcp` 明寫 `auth_basic off`＋CORS `*`、`VITE_*` 金鑰寫進前端 `config.js`、compose 預設密碼 123456、金鑰疑似明文儲存。判 ⏳ 非品質問題而是**重疊且風格相反**：預設最佳化模板把任何輸入改成固定欄位角色卡並硬性規定各 5 點，與 prompt-master「零贅詞」相反；MCP 只有三個改寫工具且要另備金鑰。增量只在「多模型並排測試＋評分」。升級＝出現需在兩個以上非 Claude 模型 A/B 並留評分紀錄的工作（裝桌面版）；放棄＝換自訂模板仍無法取代現有流程／維護者停更三個月。**📌 可單抽（逐字讀過 v2.15.2，借觀念勿照抄）**：結構化對比的成對裁判規則（方向與泛化風險分判、邊界違例算真負面證據、分析—證據—結論一致）＋迭代模板的「改 prompt 而非執行需求」正誤示例 |
 ---
 
 ## 📊 AI/ML 模型（7 篇）
@@ -261,7 +262,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🎨 設計 / UI / 前端（14 篇）
+## 🎨 設計 / UI / 前端（15 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -278,6 +279,7 @@ tags: [github, index, repos]
 | [[Github/repos/naiyue-cover-generator — Codex 用的文章封面與段內說明圖 Skill 組\|naiyue-cover-generator]] | 🔬 | 📌 | 3⭐ 2天新／1人／**無 LICENSE**；兩支 **Codex** skill：文章橫向封面＋段落說明圖（flow/timeline/decision-map/comparison/concept-diagram 五圖型）。主張「AI 只做視覺規劃＋整圖生成，Node 腳本負責可機械證明的部分」＋3-4 道人工門禁。**真正價值在反幻覺機制可移植**：review 綁內容 hash、`guard-*-attempt.mjs` 用檔案狀態擋無限重試、不可覆寫 attempt 快照（禁本地圖冒充 raw）、標題逐字比對（批准內容卡≠授權改標題）、拒絕從平台名推斷像素事實。⚠️ IP 素材權利不明需自換、綁 Codex 內建 image_gen（Claude Code 無等價）、硬綁專案根目錄名 |
 | [[Github/repos/open-slide — Agent 原生 React 簡報框架\|open-slide]] | 📎 | ⏳ | 3.4K⭐ MIT；agent 寫 React 產 1920×1080 簡報：/create-slide 起稿、瀏覽器點選留言→/apply-comments 套改、presenter mode、匯出靜態 HTML/PDF；與 html-ppt/guizang-ppt skill 群同域 |
 | [[Github/repos/shadcn-admin — Shadcn UI + Vite 管理後台介面集合\|shadcn-admin]] | 🔬 | ⏳ | 13.3K⭐ MIT；Shadcn UI + Vite + TanStack Router 的管理後台**成品 UI**（10+ 頁：儀表板/任務表/使用者/五種錯誤頁/五個設定頁/兩套 Auth），作者明言「非 starter template」——無後端、無 API、faker 假資料。**真正可搬的三塊**：`components/data-table/` 泛型表格六件套、`hooks/use-table-url-state.ts`（分頁/搜尋/多欄篩選雙向序列化進 router search params，重整不掉狀態，少見的原創邏輯）、`main.tsx` 把 401→清 token→存網址→導登入的流程集中在 QueryCache 層。272 檔/2.0MB 但**三張 PNG 吃掉 57% 體積**，實際程式碼僅 597KB；repomix 打包 264 檔 **166,716 tokens**，分佈極平坦（最大檔 `routeTree.gen.ts` 僅 3.8%、前五合計 12.2%）；21 個測試跑 Vitest **browser mode**（真 Chromium）非 jsdom。⚠️ **活躍度陷阱**：首頁 `pushedAt` 顯示 2026-07-21 是 dependabot 分支，**main 停在 2026-06-11、最後人工 commit 2026-04-21、距上次 release 9 個月**，只看首頁時間戳會高估。⚠️ **安全**：`auth-store.ts` 用 `document.cookie` 存 token、名稱寫死 `'thisisjustarandomstring'`、`cookies.ts` 無 Secure/SameSite/HttpOnly——示範無害，沿用到真 JWT 就是 XSS 取 token 入口。bus factor=1（作者 87% commit）。⏳ 理由：價值一次性（用到再抄不必常駐）＋維護停滯＋不能當產品骨架。升級條件＝有 Vite+TanStack Router 的後台實案（ziwei/fate/jobsmith 加管理介面）；放棄條件＝archived／Shadcn 官方 blocks 補上資料表／2027-02 前仍零人工 commit。⚙️ 初次分析時本機 npx 遺失（nvm4w junction 指向殘缺的 node v24.19.0），走 Trees+Contents API；npx 修復後已補跑 repomix 回填 token 數 |
+| [[Github/repos/unslop — 把 AI 味介面修成有設計感的九道工序 UI Skill\|unslop]] | 🔬 | ⏳ | 15.7K⭐ CC BY 4.0；**介面**去 AI 味 skill（非寫作用的同名 unslop）。先照 64 條徵兆→修法稽核、寫五行 Direction 並停下確認，再跑九道固定順序工序；附 Playwright 單檔擷取與 10 秒故事影片腳本（影片硬寫作者浮水印）。判 ⏳：本機已有 10 個同域 skill，且與 `redesign-existing-projects` 在質感／陰影／動效／圖示／字重五處指令相反；零 tag、16 天大、單人合併、只有模型自評 Checklist 無可執行驗收；主檔約 7.3K tokens、description 約 170 est. tokens。字體與文案工序為英文導向，無 CJK 指引。**可單抽** `signs.md`／`tokens.md`／`visuals.md`（釘 `97daa3e`，須保留署名）。升級條件＝用內附 `examples/dashboard.html` 並排實測勝出則窄觸發安裝並取代 redesign-existing-projects，或上游發首個 tag；放棄條件＝實測無差／抽取已夠用／年底仍無 tag 且 #32 未修 |
 ---
 | [[Github/repos/make-interfaces-feel-better — UI 細節打磨的 agent skill|make-interfaces-feel-better]] | 🔬 | ⏳ | 2.8K⭐ MIT；純文件 skill（47KB / 11 檔全 Markdown），19 條帶具體數值的前端打磨原則（同心圓角、按壓 scale 一律 0.96、圖示 blur 4px→0、bounce 永遠 0、點擊區 44×44）。**真正差異點不是原則而是審查協議**：quick/full 雙模式、發現數上限 5/15、五類別「實際檢查了什麼證據」覆蓋表（明文禁止暗示未檢查的面向已審）、強制列「Considered but Rejected」、沒跑的檢查標 Not verified、最後給 Block/Needs-changes/Approve 判決——與本環境 R17 交付契約同構。架構上是漸進揭露範本（SKILL.md 只留判斷，recipe 下放五個子檔）。判 ⏳ 三條：①本機已裝 8 個同域 skill，其中 `emil-design-eng` 連「必須用 Before/After 表格、禁止分行寫」這條格式規約都一字不差重複（同一批設計工程共識）；②description 約 580 bytes≈145 tokens，清單預算 Σ=4,718/5,000 實測，裝入後餘裕從 282→137 tokens；③MIT 可直接拄審查協議進既有 skill 不必整包裝。升級條件＝跟 `emil-design-eng` 對同一份程式碼並排實測，贏了就**取代**不並存；放棄條件＝協議已拄完用得順／至 2026 年底仍零 release 單人零外部 PR。⚠️ bus factor 1、零 tag 無版本可釘、0 issue/0 PR、stargazers API 本環境普遍 404 故星數成長未能驗證 |
 
