@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 254 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
+> 255 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-11-15
+> 最後更新：2026-11-16
 
 ---
 
@@ -216,7 +216,7 @@ tags: [github, index, repos]
 ---
 | [[Github/repos/chatgpt-video-editing-skills — 繁中八步短影音剪輯安全 skill|chatgpt-video-editing-skills]] | 🔬 | ⏳ | 188⭐ MIT繁中；把「使用者自拍影片→ 9:16 直式短片」拆成兩 skill：setup（只檢查/裝/驗證環境，不上傳不剪）＋editor（八步：素材檢查→逐字轉寫→內容整理→剪輯策略（先給白話策略等核准）→粗剪→字幕→720p 預覽→QA 正式）。**賣點不是功能是安全工程**：逐檔讀 runbook/security 全清——來源全釘官方 HTTPS（字體 `curl -fL --proto '=https'`、LFS-skip、frozen-lockfile、隔離 npm cache）、憑證 check-ignore→拒 symlink→chmod 600→stat 複驗、非 git worktree 新檔一律 hard stop、每個 mutation/上傳/付費都要顯式核准、原檔零破壞、**未驗證不得稱完成**（R17 教科書級）——與 reverse-skill 強制自注入正好相反。判 ⏳：①需求不存在（已裝 HyperFrames 群＋claude-real-video＋hyperframes-media，但**剪真實素材成 Reels** 無在跡任務，R13）②硬依賴重：browser-use/video-use 完整 repo＋uv＋ElevenLabs Scribe v2 **付費**憑證，選用動畫還要 Node22＋Bun ③太新太小（2.7 週/單人/無 release/社群零訊號）。升級條件＝真出現剪自拍素材成繁中直式短片的重複任務（個人品牌/求職自介短片）且願設 video-use＋ElevenLabs；放棄＝上游持續静默（已 2 週無 commit）或 video-use 上游改動使 runbook 失效。**📌 可單抽**：security-and-verification 的憑證處理範式、output-contract 的「未驗證不得稱完成」契約，當安全 skill 範本 |
 
-## 🧰 開發工具 / CLI（25 篇）
+## 🧰 開發工具 / CLI（26 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -246,6 +246,7 @@ tags: [github, index, repos]
 | [[Github/repos/github-cheat-sheet — Git 與 GitHub 隱藏功能速查表\|github-cheat-sheet]] | 🔬 | ⏳ | 58.4K⭐ MIT；純 Markdown 的 Git/GitHub 隱藏功能速查表（五語系），無程式碼、無安裝物。內容凍結近 6 年（最後內容 commit 2020-10、之後僅贊助商連結變更），部分條目已過時（`git.io` 服務已關閉、`hub` CLI 已被 `gh` 取代文件未更新），但多數 URL 參數/分支比較/commit 語法技巧仍有效。社群口碑薄弱（僅十年前一則低分 Reddit 貼文），另抓到一則疑似農場帳號的 X 貼文誤稱其為「AI 工具」，已存證標注不採信。判 ⏳：文件性質不涉安裝，收錄為速查參考即可，但引用步驟前需自行驗證仍然有效 |
 | [[Github/repos/herdr — AI Coding Agent 終端執行環境\|Herdr]] | 🔬 | ⏳ | 29K⭐ Apache-2.0 Rust；persistent server 持有 PTY/process，TUI/JSON CLI/socket API 統一管理 workspace、pane 與 20 種 coding agent 狀態。架構、跨平台 CI 與 installer SHA-256 驗證扎實；但 Windows 仍 preview-only beta，Codex integration 會改 `~/.codex` hooks/config，plugin 無 sandbox，且與現有 wmux＋Codex collaboration 高度重疊。先 standalone 隔離試跑，出現 4+ 長任務或 Windows stable 再升級。 |
 | [[Github/repos/prompt-optimizer — 提示詞最佳化與多模型對比測試工作台\|prompt-optimizer]] | 🔬 | ⏳ | 41.5K⭐ **AGPL-3.0-only（2025-10-30 由 MIT 遷移，第三方頁面多仍標 MIT）**；把草稿 prompt 交給另一個 LLM 改寫，再並排測試、評分、迭代的工作台，同一套 core 發佈成網頁／桌面版／Chrome 擴充／Docker／MCP 五種形態，金鑰自備、無後端資料庫。單人維護（近 90 天 100 筆 commit 中 97 筆）但發版與 Issue 回應紀律好（關閉率 98%）。npm 無自家套件（同名 `prompt-optimizer` 是別人的），採用度看 Docker 23.7 萬 pulls。**原始碼查到 README 沒講的風險**：Docker 的 `/mcp` 明寫 `auth_basic off`＋CORS `*`、`VITE_*` 金鑰寫進前端 `config.js`、compose 預設密碼 123456、金鑰疑似明文儲存。判 ⏳ 非品質問題而是**重疊且風格相反**：預設最佳化模板把任何輸入改成固定欄位角色卡並硬性規定各 5 點，與 prompt-master「零贅詞」相反；MCP 只有三個改寫工具且要另備金鑰。增量只在「多模型並排測試＋評分」。升級＝出現需在兩個以上非 Claude 模型 A/B 並留評分紀錄的工作（裝桌面版）；放棄＝換自訂模板仍無法取代現有流程／維護者停更三個月。**📌 可單抽（逐字讀過 v2.15.2，借觀念勿照抄）**：結構化對比的成對裁判規則（方向與泛化風險分判、邊界違例算真負面證據、分析—證據—結論一致）＋迭代模板的「改 prompt 而非執行需求」正誤示例 |
+| [[Github/repos/agent-desktop — 讀無障礙樹操作桌面 App 的 AI Computer Use CLI\|agent-desktop]] | 🔬 | ⏳ | 24K⭐ Apache-2.0 Rust，Vercel Labs；不截圖、讀 OS 無障礙樹（Windows=UI Automation）把桌面 App 變 JSON＋ref，agent 對 ref 操作再讀回驗證；CLI＋MCP＋C 函式庫，npm 週下載 5.1 萬（已核對歸屬），v1.0 十月底公開、約每週一版。比已接的 Windows-MCP 多：ref 過期偵測、多數操作不搶游標、錯誤附可否重試、危險快捷鍵預設擋。判 ⏳＝能力重疊且無在跡任務；升級＝出現 Windows-MCP 做不好或需背景操作的桌面 App 任務；放棄＝2027-01-31 前沒出現 |
 ---
 
 ## 📊 AI/ML 模型（7 篇）
