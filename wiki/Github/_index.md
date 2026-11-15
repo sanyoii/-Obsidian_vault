@@ -9,7 +9,7 @@ tags: [github, index, repos]
 > 254 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-11-14
+> 最後更新：2026-11-15
 
 ---
 
@@ -123,7 +123,7 @@ tags: [github, index, repos]
 | [[Github/repos/JuliusBrussee-caveman — 用穴居人語法削減 65% output token\|caveman]] | 🔬 | ✅ | 78K⭐ 7 Skills + cavecrew 3-subagent；削 65% output token |
 | [[Github/repos/eugeniughelbur-obsidian-second-brain — Vault-first 研究與 Obsidian 架構筆記系統\|obsidian-second-brain]] | 🔬 | ✅ | 1.9K⭐ /research+/research-deep+/obsidian-architect；free+Perplexity paid |
 | [[Github/repos/thedotmack-claude-mem — 85K⭐ 跨 Session 持久記憶\|claude-mem]] | 🔬 | ✅ | 85K⭐ SQLite+ChromaDB；worker 自 2026-05 運行；claude-mem@thedotmack plugin |
-| [[Github/repos/vercel-labs-skills — Agent Skills 生態系 CLI 套件管理器\|vercel-labs/skills]] | 🔬 | ⏳ | 25K⭐ Vercel官方 npx skills 套件管理器；內建 find-skills 已在本機生效中 |
+| [[Github/repos/vercel-labs-skills — Agent Skills 生態系 CLI 套件管理器\|vercel-labs/skills]] | 🔬 | ✅ | 39K⭐ Vercel 官方 npx skills 套件管理器（v1.8.1、npm 週下載 513 萬、79 種 agent）；**11-15 回訪**：find-skills（skills.sh 榜首 440 萬安裝）本機落後上游一版（缺 `--owner`）→ 留用並更新；CLI 取代三位置 SOP 改判 ❌（第三方安裝器 vs 自製 skill 備份同步，用途不同）；lock 檔「來源 commit＋內容雜湊」可借鏡；`npx skills list` 本機辨識未實測 |
 | [[Github/repos/claude-cache-guard — Claude Code 5小時額度自動交接工具\|claude-cache-guard]] | 🔬 | ⏳ | 9⭐ 5h額度門檻自動寫交接檔+/ccgresume；⚠️與本環境 hook 注入規則衝突恐靜默失效，常撞額度才考慮 |
 | [[Github/repos/QA-Skill.md-files — STLC QA Skills 參考包\|QA-Skill.md-files]] | 🔬 | ⏳ | 14 個 STLC Skills；不整包安裝，選擇性重寫成 QA Playbooks；保留九個 canonical templates |
 | [[Github/repos/archify — 用大白話生成架構圖的 Claude Skill\|archify]] | 🔬 | ✅ | 6.5K⭐（07-21 復盤翻倍）用大白話生成五種技術圖，JSON IR+Schema驗證+4×匯出+WebM；已裝**舊版**，v2.11 為升級候選（+語意互動/Story導覽/11-recipe guide） |
