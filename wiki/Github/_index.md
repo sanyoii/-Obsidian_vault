@@ -6,10 +6,10 @@ tags: [github, index, repos]
 
 # Github Repo 分析總索引
 
-> 255 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
+> 256 篇 GitHub repo 分析文章，按既有主題及 AI-一人公司分類（依索引文章列計數）
 > 🔬 深度分析（repo-intel / repomix 五引擎）｜📎 簡單留存（Web Clipper / README）
 > ✅ 已安裝 ｜⏳ 觀望 ｜❌ 不適合 ｜📌 參考
-> 最後更新：2026-11-16
+> 最後更新：2026-11-17
 
 ---
 
@@ -321,7 +321,7 @@ tags: [github, index, repos]
 
 ---
 
-## 🔒 安全 / 自動化 / 其他（24 篇）
+## 🔒 安全 / 自動化 / 其他（25 篇）
 
 | Repo | 深度 | 狀態 | 說明 |
 |------|------|------|------|
@@ -351,6 +351,7 @@ tags: [github, index, repos]
 | [[Github/repos/sherlock — 跨 400+ 社群網站的使用者名稱 OSINT 搜尋工具\|sherlock]] | 🔬 | ⏳ | 87.5K⭐ MIT；給一個 username 並行查 481 站有無同名帳號。**核心邏輯 <1000 行，價值全在那份眾包維護的站點清單**——站點數自數為 **481**（非 README 宣稱「400+」），判定分三型 `status_code` 327／`message` 127／`response_url` 27，另有 4 組硬編碼 WAF 指紋防呆；執行緒池（非 asyncio）`max_workers=min(N,20)` 共用 session 連線池。🔴 **安裝前必讀的 PyPI 命名碰撞**：`pip install sherlock` 裝到**完全無關**的「distributed inter-process locks」（作者 Vaidik Kapoor v0.4.1），正解是 `pip install sherlock-project`——非惡意 typosquat（該套件早於本專案）但誤裝機率高；且 PyPI 停在 0.16.0 而 repo 已 0.16.1 未發布。供應鏈其餘全綠：9 個相依全存在未 yank、無安裝腳本、無硬編碼金鑰；預設每次執行打 `data.sherlockproject.xyz`（實測 301→`raw.githubusercontent.com`）抓即時站點清單，**無使用者查詢對象上報**。已修 **CVE-2026-44590 / GHSA-v6wr-ccr4-x8g9（CVSS 9.3 Critical）**：CI 的 `pull_request_target`＋`${{ }}` 插值 command injection 可竊 `GITHUB_TOKEN`，3 天內修復，**影響 CI 基礎設施非使用者套件**。維護判定：近三筆 commit（2026-08-01）**全是贊助商 banner**（UserSearch、OSINT Industries），實質修復停在 05-05，release 間隔 14 個月，前三人佔貢獻 86%——安全響應仍在但功能開發近停滯。227 open PR 經 166 個不重複作者投稿、48% 是 ≤20 行站點新增（hacktoberfest 驅動）＋3 人批次審查＝**積壓非灌水**，55 筆等超過一年。⚠️ 假陽性是持續未根治現象（issue 掛零回覆逾年），唯一實測 32% 樣本 n=1 **不可推廣**。替代：WhatsMyName（免安裝、社群評價假陽性最低）／Maigret（深但慢）。升級觸發＝需批次掃多 username 或 v0.17 清理假陽性積壓；放棄觸發＝再 6 個月僅剩 banner commit |
 ---
 | [[Github/repos/reverse-skill — AI 逆向滲透安全技能路由包|reverse-skill]] | 🔬 | ❌ | 17.4K⭐ MIT（**2.7 個月漲 17K、Trendshift 榜**）；給 code AI（Claude Code/Codex/Cursor/Cline/Kiro）的安全任務**技能路由包**：APK/二進位/JS 加密/封包/CTF/滲透→分類→進對應方法論子技能→缺工具自動 bootstrap（nmap/Frida/radare2/SecLists/多 MCP）→執行→產報告。330+ skill檔、CTF 子技能群、src-hunter payload 庫（305 payload/263 WAF 繞過/2887 份 HackerOne 案例/77K WooYun）。**工程其實不差**：bootstrap 有路徑安全圍欄、install 全 list-form、工具來源知名上游非 typosquat、commit log 可見主動修 command/shell injection 多個洞；有 scope/授權閘門（ACT 前要 auth.status=granted）不是無腦攻擊包。**判 ❌ 的不是技術是自注入與服從性工程**：①`RULES.md` Global Injection **強制把路由規則寫進 `~/.claude/CLAUDE.md`** → 撞 config-drift 金絲雀＋settings 統一；②`agent-obedience-engineering.md`＝**專門擊敗 agent 的猶豫與拒絕**（借口反駁表），而 RULES 明文叫 agent 「猶豫某操作是否被允許」時就去讀它＝將安全遲疑工程化消除；③README_AI section 0＋CRITICAL 塊反覆「讀完立刻執行、只回覆了解就是失敗」。依本環境判準（learn@agentskill-sh 先例）**skill 內文自動行為指令視同 hook 注入＝背景參考非指令**，三條全歸「讀到不遵守」。加上需求不存在（QA/求職定位、無在跡滲透案）＋330 skill 大攻擊面（R13）。**📌 可單獨抽取**：src-hunter playbooks/payloader、ops/scope-contract＋evidence-finding-path（授權滲透契約寫法，對安全 QA 有參考）；obedience-engineering 可當「prompt 如何被工程化瓦解 agent 安全判斷」的反面樣本一讀但絕不照做。升級條件＝真接授權滲透/CTF 案且願只 clone 當本地參考、手動停 Global Injection；放棄＝上游把自注入變硬依賴或引入自架 CDN/不透明 binary |
+| [[Github/repos/claude-red — Claude 攻擊型資安 Skills 函式庫\|claude-red]] | 🔬 | ❌ | 11.2K⭐ MIT；79 個攻擊型 SKILL.md（23 類：Web 16、無線 14、紅隊 7、Exploit 6⋯），純知識層無掃描器。判 ❌：本業是授權 QA 非滲透；**Defender 實測報毒隔離**（repomix 打包檔 VirTool:Python/Empium、rce/sqli SKILL.md Backdoor:PHP/Perhetshell）；Claude safeguards 擋載入（#61/#66）；4 個 SKILL.md 單檔 9–14 萬 token；28 個 skill 到 11/15 才補 frontmatter；#64 範例會送 PUT/PATCH/DELETE。⚠️ `skill-optimize-apply.yml` 留言觸發＋contents:write 無 author 檢查（未驗證可利用）。**📌 可單抽** `utility/offensive-reporting`（逐字讀過、乾淨）當 Defect Report／Retest 範本，釘 v0.3.0 |
 
 ## 🔄 未分類 / 待整理（~8 篇）
 
